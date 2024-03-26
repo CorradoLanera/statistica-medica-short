@@ -3,7 +3,7 @@ title: "BASI DI DIAGNOSTICA PER IMMAGINI, INFORMATICA, FISICA E STATISTICA MEDIC
 subtitle: "Corso di laurea in TECNICHE DI RADIOLOGIA MEDICA, PER IMMAGINI E RADIOTERAPIA"
 author: "[CorradoLanera](www.CorradoLanera.it)"
 date: "YYYY-MM-DD (last update: `r Sys.Date()`)"
-institute: "[Unità di Biostatistica, Epidemiologia e Salute Pubblicah](https://www.unipd-ubep.it/) --- University of Padova"
+institute: "[Unità di Biostatistica, Epidemiologia e Salute Pubblica](https://www.unipd-ubep.it/) --- University of Padova"
 output: 
   xaringan::moon_reader:
     seal: false  # no title slide! Do It Yourself here below

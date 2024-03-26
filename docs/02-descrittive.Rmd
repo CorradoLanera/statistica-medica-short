@@ -1,9 +1,9 @@
 ---
-title: "BASI DI DIAGNOSTICA PER IMMAGINI, INFORMATICA, FISICA E STATISTICA MEDICA"
-subtitle: "Corso di laurea in TECNICHE DI RADIOLOGIA MEDICA, PER IMMAGINI E RADIOTERAPIA"
+title: "Statistica Medica"
+subtitle: "Statistica Descrittiva"
 author: "[CorradoLanera](www.CorradoLanera.it)"
 date: "YYYY-MM-DD (last update: `r Sys.Date()`)"
-institute: "[Unità di Biostatistica, Epidemiologia e Salute Pubblicah](https://www.unipd-ubep.it/) --- University of Padova"
+institute: "[Unità di Biostatistica, Epidemiologia e Salute Pubblica](https://www.unipd-ubep.it/) --- University of Padova"
 output: 
   xaringan::moon_reader:
     seal: false  # no title slide! Do It Yourself here below
@@ -71,25 +71,6 @@ use_logo("img/bit.ly_statmed-cl-corsi.png")
 style_share_again(
   share_buttons = c("twitter", "linkedin", "pocket")
 )
-```
-
-
-```{r meta, echo=FALSE}
-meta() %>%
-  meta_general(
-    description = "Modulo di STATISTICA MEDICA del corso in BASI DI DIAGNOSTICA PER IMMAGINI, INFORMATICA, FISICA E STATISTICA MEDICA per il corso di laurea in TECNICHE DI RADIOLOGIA MEDICA, PER IMMAGINI E RADIOTERAPIA",
-    generator = "xaringan and remark.js"
-  ) %>% 
-  meta_name("github-repo" = "CorradoLanera/diagnostica-23") %>% 
-  meta_social(
-    title = "Informatica, Statistica, e Fisica Apllicata",
-    url = "https://corradolanera.github.io/diagnostica/#1",
-    image = "https://github.com/CorradoLanera/diagnostica-23/raw/main/docs/img/cover.jpg",
-    og_type = "website",
-    og_author = "UBEP",
-    twitter_card_type = "summary",
-    twitter_creator = "@CorradoLanera"
-  )
 ```
 
 ```{css, echo=FALSE}
@@ -165,15 +146,11 @@ style_duo_accent(
 <br>
 <br>
 
-# **BASI DI DIAGNOSTICA PER IMMAGINI, INFORMATICA, FISICA E STATISTICA MEDICA**<br>**.orange[STATISTICA MEDICA]**
+# **.orange[STATISTICA MEDICA]**
 
 -- Analisi esplorativa e statistiche descrittive --
 
-C.d.L. **Tecniche di Radiologia Medica, per Immagini e Radioterapia**
-
-Padova, a.a. 2023/2024 - 20 ore (2 crediti)
-
-Corrado Lanera | [**Unità di Biostatistica, Epidemiologia e Salute Pubblic**](https://www.unipd-ubep.it/)
+Corrado Lanera | [**Unità di Biostatistica, Epidemiologia e Salute Pubblica**](https://www.unipd-ubep.it/)
 
 
 
@@ -1369,7 +1346,7 @@ _Mathematical conventions are just that, conventions. They differ by field of ma
 
 
 
-Diapositive: <img src="img/bit.ly_statmed-cl-corsi.png" width="150px" style="vertical-align: middle"/> [bit.ly/statmed-cl-corsi](https://bit.ly/statmed-cl-corsi)
+Diapositive: [bit.ly/statmed-cl-corsi](https://bit.ly/statmed-cl-corsi)
 
 
 [`r fontawesome::fa("link")`](https://www.unipd-ubep.it/) [**www.unipd-ubep.it**](https://www.unipd-ubep.it/) | 

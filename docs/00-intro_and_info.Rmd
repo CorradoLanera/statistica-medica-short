@@ -3,7 +3,7 @@ title: "STATISTICA MEDICA"
 subtitle: "Introduzione"
 author: "[CorradoLanera](www.CorradoLanera.it)"
 date: "YYYY-MM-DD (last update: `r Sys.Date()`)"
-institute: "[Unità di Biostatistica, Epidemiologia e Salute Pubblicah](https://www.unipd-ubep.it/) --- University of Padova"
+institute: "[Unità di Biostatistica, Epidemiologia e Salute Pubblica](https://www.unipd-ubep.it/) --- University of Padova"
 output: 
   xaringan::moon_reader:
     seal: false  # no title slide! Do It Yourself here below
@@ -150,7 +150,7 @@ style_duo_accent(
 <br>
 <br>
 
-Corrado Lanera | [**Unità di Biostatistica, Epidemiologia e Salute Pubblic**](https://www.unipd-ubep.it/)
+Corrado Lanera | [**Unità di Biostatistica, Epidemiologia e Salute Pubblica**](https://www.unipd-ubep.it/)
 
 
 
@@ -449,7 +449,7 @@ _**Can** one be a .orange[good data analyst] **without** being a .orange[half-go
 
 
 
-Diapositive: <img src="img/bit.ly_statmed-cl-corsi.png" width="150px" style="vertical-align: middle"/> [bit.ly/statmed-cl-corsi](https://bit.ly/statmed-cl-corsi)
+Diapositive: [bit.ly/statmed-cl-corsi](https://bit.ly/statmed-cl-corsi)
 
 
 [`r fontawesome::fa("link")`](https://www.unipd-ubep.it/) [**www.unipd-ubep.it**](https://www.unipd-ubep.it/) | 
