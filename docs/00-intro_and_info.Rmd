@@ -1,0 +1,486 @@
+---
+title: "BASI DI DIAGNOSTICA PER IMMAGINI, INFORMATICA, FISICA E STATISTICA MEDICA"
+subtitle: "Corso di laurea in TECNICHE DI RADIOLOGIA MEDICA, PER IMMAGINI E RADIOTERAPIA"
+author: "[CorradoLanera](www.CorradoLanera.it)"
+date: "YYYY-MM-DD (last update: `r Sys.Date()`)"
+institute: "[Unità di Biostatistica, Epidemiologia e Salute Pubblicah](https://www.unipd-ubep.it/) --- University of Padova"
+output: 
+  xaringan::moon_reader:
+    seal: false  # no title slide! Do It Yourself here below
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+    css: xaringan-themer.css
+    self_contained: true
+---
+class: center, middle, bg_title, hide-count
+
+
+<img src="img/unipd_logo.png" width="120px"/>
+<img src="img/DCTV.png" width="50px"/>
+<img src="img/UBEP.png" width="50px"/>
+<img src="img/LAIMS.png" width="50px"/>
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.retina = 3,
+  warning = FALSE,
+  message = FALSE,
+  comment = "",
+  out.width = "100%"
+)
+library(knitr)
+library(xaringanExtra)
+library(xaringanthemer)
+
+library(tidyverse)
+library(here)
+library(gridExtra)
+
+library(countdown)
+library(metathis)
+library(DT)
+
+options(width = 59) # fit into the right-column slides
+
+```
+
+
+```{r xaringans, echo=FALSE}
+# https://github.com/gadenbuie/xaringanExtra
+use_tachyons()
+use_share_again()
+use_panelset()
+use_clipboard()
+use_editable(expires = 1)
+use_freezeframe()
+use_extra_styles(
+  hover_code_line = TRUE,         #<<
+  mute_unhighlighted_code = TRUE  #<<
+)
+use_progress_bar(color = "#0051BA", location = "top")
+use_logo("img/bit.ly_diagnostica-23-slide.png")
+```
+
+```{r style-share-again, echo=FALSE}
+style_share_again(
+  share_buttons = c("twitter", "linkedin", "pocket")
+)
+```
+
+
+```{r meta, echo=FALSE}
+meta() %>%
+  meta_general(
+    description = "Modulo di STATISTICA MEDICA del corso in BASI DI DIAGNOSTICA PER IMMAGINI, INFORMATICA, FISICA E STATISTICA MEDICA per il corso di laurea in TECNICHE DI RADIOLOGIA MEDICA, PER IMMAGINI E RADIOTERAPIA",
+    generator = "xaringan and remark.js"
+  ) %>% 
+  meta_name("github-repo" = "CorradoLanera/diagnostica-23") %>% 
+  meta_social(
+    title = "Informatica, Statistica, e Fisica Apllicata",
+    url = "https://bit.ly/diagnostica-23-slide",
+    image = "https://github.com/CorradoLanera/diagnostica-23/raw/main/docs/img/cover.jpg",
+    og_type = "website",
+    og_author = "UBEP",
+    twitter_card_type = "summary",
+    twitter_creator = "@CorradoLanera"
+  )
+```
+
+```{css, echo=FALSE}
+.left-code {
+  color: #777;
+  width: 38%;
+  height: 92%;
+  float: left;
+}
+.right-code {
+  color: #777;
+  width: 55%;
+  height: 92%;
+  float: right;
+  padding-top: 0.5em;
+}
+.left-plot {
+  width: 43%;
+  float: left;
+}
+.right-plot {
+  width: 60%;
+  float: right;
+}
+.hide-count .remark-slide-number {
+  display: none;
+}
+
+.bg_title {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_title::before {    
+      content: "";
+      background-image: url('img/bg1.png');
+      background-size: contain;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.3;
+      z-index: -1;
+}
+
+```
+
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+red <- "#f34213"
+purple <- "#3e2f5b"
+orange <- "#ff8811"
+green <- "#136f63"
+white <- "#FFFFFF"
+pastel_orange <- "#F97B64"
+blu_gray <- "#1F4257"
+style_duo_accent(
+    colors = c(
+        red = red,
+        purple = purple,
+        orange = orange,
+        green = green,
+        white = white,
+        pastel_orange = pastel_orange,
+        blu_gray = blu_gray
+    )
+)
+```
+
+
+<br>
+<br>
+<br>
+
+# **BASI DI DIAGNOSTICA PER IMMAGINI, INFORMATICA, FISICA E STATISTICA MEDICA**<br>**.orange[STATISTICA MEDICA]**
+
+-- Presentazione e informazioni generali --
+<br>
+<br>
+<br>
+
+C.d.L. **Tecniche di Radiologia Medica, per Immagini e Radioterapia**
+
+Padova, a.a. 2023/2024 - 20 ore (2 crediti)
+
+Corrado Lanera | [**Unità di Biostatistica, Epidemiologia e Salute Pubblic**](https://www.unipd-ubep.it/)
+
+
+
+
+
+---
+class: hide-count
+
+
+# .orange[Scopo]
+
+- apprendere le conoscenze teoriche di base della statistica medica
+
+- essere in grado di approcciarsi alla ricerca scientifica
+
+---
+class: hide-count
+
+
+# .orange[Obiettivi]
+
+- imparare le definizioni e gli operatori base della statistica medica,
+ in particolare riguardo:
+ 
+  + analisi descrittiva dei dati
+  + elementi di probabilità
+
+- imparare a comprendere e stimare i parametri di valutazione di un test
+  diagnostico, in particolare sensibilità, specificità
+  
+- conoscere e identificare le principali distribuzioni di probabilità
+  e i loro ambiti di utilità e applicabilità
+
+- acquisire le basi per la comprensione delle metriche
+  relative ai test statistici; Se rimane tempo, anche per il loro
+  calcolo nel caso di variabili continue e categoriche,
+  come il t-test (per campioni singoli o appaiati) e il test del
+  chi-quadrato
+  
+<!-- - imparare a comprendere e a condurre analisi di relazione tra più -->
+<!--   variabili, in particolare tramite la regressione e la correlazione. -->
+  
+
+
+---
+class: hide-count
+
+# .orange[Requisiti]
+
+- competenze di aritmetica di base e di _insiemistica_ (richiamate comunque durante il corso)
+
+- disponibilità a intervenire e partecipare attivamente alle lezioni
+
+- (autonomia nell'utilizzo di un computer)
+
+
+---
+class: hide-count
+
+
+# .orange[Lezioni]
+
+
+- Modalità: in presenza, 75% obbligatorio minimo
+
+- Materiale didattico: Moodle [bit.ly/diagnostica-23-moodle](https://bit.ly/diagnostica-23-moodle)
+
+- Portale accesso slide: [bit.ly/diagnostica-23-slide](https://bit.ly/diagnostica-23-slide)
+
+- Utilizzo del materiale del corso e suoi derivati: consentite e libero
+  sotto licenza 
+  [cc-by 4.0](https://creativecommons.org/licenses/by/4.0/deed.it).
+  
+<br>
+<small>
+In sintesi: potete condividere, modificare, utilizzare il materiale
+liberamente e gratuitamente per qualsiasi fine, a patto di attribuire
+adeguata paternalità al materiale che producete ma senza alcuna mia
+responsabilità o garanzia su di esso. Siete tenuti comunque a
+distribuirlo (incluse eventuali opere derivate) con analoga ed esplicita
+licenza, e senza ulteriori restrizioni.
+</small>
+
+
+
+---
+class: hide-count
+
+
+## .orange[Agenda]
+
+<small>
+<small>
+
+Cinque lezioni da 4 _ore_ ciascuna
+
+- Lezione 1: mercoledì 08 novembre 2023 - 14:30-18:30
+  + (60') intro al corso
+  + [15'] PAUSA
+  + (60') intro a R/RStudio (facoltativo, non oggetto di esame)
+  + [15'] PAUSA
+  + (60') statistica descrittiva - prerequisiti e definizioni
+
+- Lezione 2-5:
+ + (30') Revisione contenuti precedenti + domande, dubbi, perplessità
+ + (30') Lezione
+ + [15'] PAUSA
+ + (60') Lezione
+ + [15'] PAUSA
+ + (60') Lezione
+
+
+> La mezz'ora rimanente in generale alla fine; se lezione al mattino, potrebbe essere all'inizio (per questione di treni).
+</small>
+</small>
+
+
+
+---
+class: hide-count
+
+
+# .orange[R/Rstudio]
+
+
+Durante il corso saranno offerti esempi ottenuti tramite l'utilizzo dei 
+software R ed RStudio, i quali verranno introdotti brevemente all'inizio 
+del corso.
+
+Tali software **non sono oggetto di esame**. Non è richiesto 
+né necessario acquisire competenze nel loro utilizzo o comprensione. Al
+contrario, sarà necessario comprenderne e capirne i risultati (grafici,
+tabelle, o numeri di sintesi prodotti).
+
+Tutto quanto scritto (script) e prodotto (grafici) nel corso delle
+lezioni con tali software sarà aggiunto al materiale didattico a
+disposizione degli studenti.
+
+Detto questo, **.orange[l'utilizzo di tali software sarà comunque consentito]**,
+seppur non richiesto, come supporto per lo svolgimento dell'esame (o
+degli esercizi) per chi lo desiderasse. La scelta è lasciata agli
+studenti e non comporterà valutazioni né di merito né di demerito, e **in
+alcun caso influenzerà la valutazione finale** (se non in misura di un 
+loro utilizzo corretto o errato nel produrre i risultati).
+
+
+Un ambiente di lavoro per ciascuno di voi è attivabile e utilizzabile
+gratuitamente su RStudio Cloud collegandosi all'indirizzo: [bit.ly/diagnostica-rstudio](https://bit.ly/diagnostica-rstudio)
+
+
+
+
+
+---
+class: hide-count
+
+
+# .orange[Supporto]
+
+Tramite i link nella pagina Moodle del corso, sono state attivate e
+messe a disposizione le seguenti risorse:
+
+- **Forum**: spazio libero a disposizione degli studenti per interagire e 
+confrontarsi tra loro sui temi del corso e lo svolgimento degli esercizi
+
+> Utilizzare il forum è utile (al posto/prima) del ricevimento per
+domande (e risposte!) ai vostri dubbi, nell'interesse di ciascuno e tutti
+voi.
+
+- **Esercizi** svolti a fine di ogni lezione (tranne la prima) e inseriti
+altri di autoapprendimento: a disposizione su moodle
+
+
+- **Ricevimento**: i giovedì tra le 17:00 e le 19:00 e venerdì
+  dalle 9:00 alle 11:00, sono disponibile a 
+  ricevere gli studenti per 25 minuti a sessione, prenotabile con almeno 
+  tre giorni di anticipo, ed entro due settimane, tramite il link
+  (disponibile su Moodle e riservato esclusivamente agli studenti del
+  corso):
+  
+  [bit.ly/diagnostica-ricevimento](https://bit.ly/diagnostica-ricevimento).
+  
+> La settimana precedente le sessioni d'esame non è attivo il ricevimento.
+
+
+
+
+
+---
+class: hide-count
+
+
+# .orange[Esame finale]
+<small>
+L'esame finale sarà composto da **esercizi a risposta multipla**, su foglio di carta.
+
+> **Non avrà durata prestabilita**
+
+Durante lo svolgimento dell'esame sarà concesso l'utilizzo di **qualunque libro di testo cartaceo, appunti personali cartacei, e dei software R ed Rstudio** (messi a disposizione, per chiunque lo desideri, da me, con accesso tramite browser web).
+
+Sarà invece **.orange[proibita la navigazione e la ricerca on-line]**, così come **.orange[l'utilizzo di smartphone]** o la **.orange[comunicazione con terzi]**.
+
+Una risposta errata sommerà negativamente sul totale in misura pari al punteggio attribuito alla domanda, diviso per il numero di opzioni sbagliate selezionabili.
+
+Sarà presente una domanda "bonus" che varrà 6 punti (portanto il totale a 36). Tale domanda avrà valore (positivo o negativo che sia) solamente dopo aver raggiunto i 18/30 con le altre domande, e in alcun caso potrà togliere la sufficienza.
+
+Il punteggio totale dell'esame è dunque di 36/30. Superato totalizzandone
+almeno 18/30. La lode è assegnata solo (e sempre) in presenza di un
+esame perfetto, cioè privo di errori e con un totale di almeno 31/30 ottenuti.
+
+
+
+---
+class: hide-count
+
+# .orange[Suggerimenti]
+
+- Discutete tra voi (anche sul forum) punti di vista, dubbi, ed esercizi.
+
+- Utilizzate il ricevimento per chiarimenti che non siete riusciti a
+risolvere in gruppo.
+
+- Esplorate (e proponete) esercizi con dati anche sui vostri ambiti
+  di interesse.
+  
+> Non sottovalutate l'esame confondendo la mia disponibilità a darvi tutto il supporto che ritenete utile (prima dell'esame)!
+
+---
+class: hide-count
+
+# .orange[Riconoscimenti]
+
+- Le diapositive proposte sono state prodotte a partire anche da
+  materiale generato da/con le seguenti persone gravitanti attorno
+  l'UBEP*:
+  
+  + Danila Azzolina
+  + Dario Gregori
+  + Giulia Lorenzoni
+  + Ileana Baldi
+  + Luca Vedovelli
+  + Matteo Martinato
+  + Paola Berchialla
+
+<br><br>
+<small>
+.right[\* In ordine alfabetico.]
+</small>
+
+<br><br>
+
+> Un ringraziamento speciale a Cristiana Vettori per
+l'aiuto e il supporto logistico e amministrativo che mi ha sempre e ancora offerto.
+
+---
+class: inverse, bottom, right, hide-count
+
+
+```{r, echo=FALSE, out.width = "50%"}
+knitr::include_graphics("img/profilo_CL.jpg")
+```
+# Per trovarmi...
+
+
+[`r fontawesome::fa("link")`](https://www.unipd-ubep.it/) [**www.unipd-ubep.it**](https://www.unipd-ubep.it/)
+
+[`r fontawesome::fa("envelope")`](mailto:Corrado.Lanera@ubep.unipd.it) [**Corrado.Lanera**__.orange[@ubep.unipd.it]__](mailto:Corrado.Lanera@ubep.unipd.it)
+
+[`r fontawesome::fa("github")`](https://github.com/corradolanera)
+[`r fontawesome::fa("twitter")`](https://twitter.com/corradolanera)
+[`r fontawesome::fa("telegram")`](https://telegram.me/CorradoLanera)
+**@CorradoLanera**
+
+[`r fontawesome::fa("calendar-check")` ](https://bit.ly/diagnostica-ricevimento) [**bit.ly/diagnostica-ricevimento**](https://bit.ly/diagnostica-ricevimento)
+
+
+
+
+---
+class: inverse, center, middle, hide-count
+
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+.left[
+_**Can** one be a .orange[good data analyst] **without** being a .orange[half-good programmer]?<br>The short answer to that is, 'No.'<br>The long answer to that is, 'No.'_
+]
+
+.tr[
+—Frank Harrell<br>10/1999 - S-PLUS User Conference, New Orleans<br>
+]
+]
+
+
+# .orange[Domande?]
+
+
+
+Diapositive: <img src="img/bit.ly_diagnostica-23-slide.png" width="150px" style="vertical-align: middle"/> [bit.ly/diagnostica-23-slide](https://bit.ly/diagnostica-23-slide)
+
+
+[`r fontawesome::fa("link")`](https://www.unipd-ubep.it/) [**www.unipd-ubep.it**](https://www.unipd-ubep.it/) | 
+[`r fontawesome::fa("envelope")`](mailto:Corrado.Lanera@ubep.unipd.it) [**Corrado.Lanera@ubep.unipd.it**](mailto:Corrado.Lanera@ubep.unipd.it)
+
+[`r fontawesome::fa("github")`](https://github.com/corradolanera)
+[`r fontawesome::fa("twitter")`](https://twitter.com/corradolanera)
+[`r fontawesome::fa("telegram")`](https://telegram.me/CorradoLanera)
+**@CorradoLanera** |
+[`r fontawesome::fa("calendar-check")` ](https://bit.ly/diagnostica-ricevimento) [**bit.ly/diagnostica-ricevimento**](https://bit.ly/diagnostica-ricevimento)
+
+

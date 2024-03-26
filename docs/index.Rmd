@@ -1,0 +1,186 @@
+---
+title: "BASI DI DIAGNOSTICA PER IMMAGINI, INFORMATICA, FISICA E STATISTICA MEDICA"
+subtitle: "Corso di laurea in TECNICHE DI RADIOLOGIA MEDICA, PER IMMAGINI E RADIOTERAPIA"
+author: "[CorradoLanera](www.CorradoLanera.it)"
+date: "YYYY-MM-DD (last update: `r Sys.Date()`)"
+institute: "[Unità di Biostatistica, Epidemiologia e Salute Pubblicah](https://www.unipd-ubep.it/) --- University of Padova"
+output: 
+  xaringan::moon_reader:
+    seal: false  # no title slide! Do It Yourself here below
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+    css: xaringan-themer.css
+    self_contained: true
+---
+class: center, middle, bg_title, hide-count
+
+
+<img src="img/unipd_logo.png" width="120px"/>
+<img src="img/DCTV.png" width="50px"/>
+<img src="img/UBEP.png" width="50px"/>
+<img src="img/LAIMS.png" width="50px"/>
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.retina = 3,
+  warning = FALSE,
+  message = FALSE,
+  comment = "",
+  out.width = "100%"
+)
+library(knitr)
+library(xaringanExtra)
+library(xaringanthemer)
+
+library(tidyverse)
+library(here)
+library(gridExtra)
+
+library(countdown)
+library(metathis)
+library(DT)
+
+options(width = 59) # fit into the right-column slides
+
+```
+
+
+```{r xaringans, echo=FALSE}
+# https://github.com/gadenbuie/xaringanExtra
+use_tachyons()
+use_share_again()
+use_panelset()
+use_clipboard()
+use_editable(expires = 1)
+use_freezeframe()
+use_extra_styles(
+  hover_code_line = TRUE,         #<<
+  mute_unhighlighted_code = TRUE  #<<
+)
+use_progress_bar(color = "#0051BA", location = "top")
+use_logo("img/bit.ly_diagnostica-23-slide.png")
+```
+
+```{r style-share-again, echo=FALSE}
+style_share_again(
+  share_buttons = c("twitter", "linkedin", "pocket")
+)
+```
+
+
+```{r meta, echo=FALSE}
+meta() %>%
+  meta_general(
+    description = "Modulo di STATISTICA MEDICA del corso in BASI DI DIAGNOSTICA PER IMMAGINI, INFORMATICA, FISICA E STATISTICA MEDICA per il corso di laurea in TECNICHE DI RADIOLOGIA MEDICA, PER IMMAGINI E RADIOTERAPIA",
+    generator = "xaringan and remark.js"
+  ) %>% 
+  meta_name("github-repo" = "CorradoLanera/diagnostica-23") %>% 
+  meta_social(
+    title = "Informatica, Statistica, e Fisica Apllicata",
+    url = "bit.ly/diagnostica-23-slide",
+    image = "https://github.com/CorradoLanera/diagnostica-23/raw/main/docs/img/cover.jpg",
+    og_type = "website",
+    og_author = "UBEP",
+    twitter_card_type = "summary",
+    twitter_creator = "@CorradoLanera"
+  )
+```
+
+```{css, echo=FALSE}
+.left-code {
+  color: #777;
+  width: 38%;
+  height: 92%;
+  float: left;
+}
+.right-code {
+  color: #777;
+  width: 55%;
+  height: 92%;
+  float: right;
+  padding-top: 0.5em;
+}
+.left-plot {
+  width: 43%;
+  float: left;
+}
+.right-plot {
+  width: 60%;
+  float: right;
+}
+.hide-count .remark-slide-number {
+  display: none;
+}
+
+.bg_title {
+  position: relative;
+  z-index: 1;
+}
+
+.bg_title::before {    
+      content: "";
+      background-image: url('img/bg1.png');
+      background-size: contain;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.3;
+      z-index: -1;
+}
+
+```
+
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+red <- "#f34213"
+purple <- "#3e2f5b"
+orange <- "#ff8811"
+green <- "#136f63"
+white <- "#FFFFFF"
+pastel_orange <- "#F97B64"
+blu_gray <- "#1F4257"
+style_duo_accent(
+    colors = c(
+        red = red,
+        purple = purple,
+        orange = orange,
+        green = green,
+        white = white,
+        pastel_orange = pastel_orange,
+        blu_gray = blu_gray
+    )
+)
+```
+
+
+# **.orange[STATISTICA MEDICA]**
+
+C.d.L. **Tecniche di Radiologia Medica, per Immagini e Radioterapia**
+
+Padova, a.a. 2023/2024 - 20 ore (2 crediti)
+
+<small><small>
+
+**Giorno**    | **Tema**                 | **Diapositive**
+-------------:|:-------------------------|:--------------------
+2023/11/08    | Intro e info             | [Intro e info](00-intro_and_info.html)
+2023/11/08    | R e RStudio              | [R e RStudio](01-r_rstudio.html)
+2023/11/08    | Descrittive              | [Descrittive](02-descrittive.html)
+2023/11/09    | Descrittive              |
+2023/11/15    | Probabilità              | [Probabilità](03-probabilita.html)
+2023/11/16    | Probabilità              | 
+2024/01/24    | Distribuzioni            | [Distribuzionini](04-distribuzioni.html)
+2024/01/24    | Inferenza, IC e p-value  | [Inferenza, IC e p-value](05-ic_p.html)
+
+</small></small>
+
+Corrado Lanera | [**Unità di Biostatistica, Epidemiologia e Salute Pubblica**](https://www.unipd-ubep.it/)
+
+[`r fontawesome::fa("envelope")`](mailto:Corrado.Lanera@ubep.unipd.it) [**Corrado.Lanera**__.orange[@ubep.unipd.it]__](mailto:Corrado.Lanera@ubep.unipd.it) | 
+[`r fontawesome::fa("calendar-check")` ](https://bit.ly/diagnostica-ricevimento) [**bit.ly/diagnostica-ricevimento**](https://bit.ly/diagnostica-ricevimento)
+
