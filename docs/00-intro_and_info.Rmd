@@ -1,6 +1,6 @@
 ---
-title: "BASI DI DIAGNOSTICA PER IMMAGINI, INFORMATICA, FISICA E STATISTICA MEDICA"
-subtitle: "Corso di laurea in TECNICHE DI RADIOLOGIA MEDICA, PER IMMAGINI E RADIOTERAPIA"
+title: "STATISTICA MEDICA"
+subtitle: "Introduzione"
 author: "[CorradoLanera](www.CorradoLanera.it)"
 date: "YYYY-MM-DD (last update: `r Sys.Date()`)"
 institute: "[Unità di Biostatistica, Epidemiologia e Salute Pubblicah](https://www.unipd-ubep.it/) --- University of Padova"
@@ -61,32 +61,13 @@ use_extra_styles(
   mute_unhighlighted_code = TRUE  #<<
 )
 use_progress_bar(color = "#0051BA", location = "top")
-use_logo("img/bit.ly_diagnostica-23-slide.png")
+use_logo("img/bit.ly_statmed-cl-corsi.png")
 ```
 
 ```{r style-share-again, echo=FALSE}
 style_share_again(
   share_buttons = c("twitter", "linkedin", "pocket")
 )
-```
-
-
-```{r meta, echo=FALSE}
-meta() %>%
-  meta_general(
-    description = "Modulo di STATISTICA MEDICA del corso in BASI DI DIAGNOSTICA PER IMMAGINI, INFORMATICA, FISICA E STATISTICA MEDICA per il corso di laurea in TECNICHE DI RADIOLOGIA MEDICA, PER IMMAGINI E RADIOTERAPIA",
-    generator = "xaringan and remark.js"
-  ) %>% 
-  meta_name("github-repo" = "CorradoLanera/diagnostica-23") %>% 
-  meta_social(
-    title = "Informatica, Statistica, e Fisica Apllicata",
-    url = "https://bit.ly/diagnostica-23-slide",
-    image = "https://github.com/CorradoLanera/diagnostica-23/raw/main/docs/img/cover.jpg",
-    og_type = "website",
-    og_author = "UBEP",
-    twitter_card_type = "summary",
-    twitter_creator = "@CorradoLanera"
-  )
 ```
 
 ```{css, echo=FALSE}
@@ -162,16 +143,12 @@ style_duo_accent(
 <br>
 <br>
 
-# **BASI DI DIAGNOSTICA PER IMMAGINI, INFORMATICA, FISICA E STATISTICA MEDICA**<br>**.orange[STATISTICA MEDICA]**
+# **.orange[STATISTICA MEDICA]**
 
 -- Presentazione e informazioni generali --
 <br>
 <br>
 <br>
-
-C.d.L. **Tecniche di Radiologia Medica, per Immagini e Radioterapia**
-
-Padova, a.a. 2023/2024 - 20 ore (2 crediti)
 
 Corrado Lanera | [**Unità di Biostatistica, Epidemiologia e Salute Pubblic**](https://www.unipd-ubep.it/)
 
@@ -239,9 +216,9 @@ class: hide-count
 
 - Modalità: in presenza, 75% obbligatorio minimo
 
-- Materiale didattico: Moodle [bit.ly/diagnostica-23-moodle](https://bit.ly/diagnostica-23-moodle)
+- Materiale didattico: Moodle [bit.ly/statmed-cl-corsi](https://bit.ly/statmed-cl-corsi)
 
-- Portale accesso slide: [bit.ly/diagnostica-23-slide](https://bit.ly/diagnostica-23-slide)
+- Portale accesso slide: [bit.ly/statmed-cl-corsi](https://bit.ly/statmed-cl-corsi)
 
 - Utilizzo del materiale del corso e suoi derivati: consentite e libero
   sotto licenza 
@@ -268,25 +245,26 @@ class: hide-count
 <small>
 <small>
 
-Cinque lezioni da 4 _ore_ ciascuna
 
-- Lezione 1: mercoledì 08 novembre 2023 - 14:30-18:30
-  + (60') intro al corso
-  + [15'] PAUSA
-  + (60') intro a R/RStudio (facoltativo, non oggetto di esame)
-  + [15'] PAUSA
-  + (60') statistica descrittiva - prerequisiti e definizioni
+- Lezione 1: 
+  + intro al corso
+  + intro a R/RStudio (facoltativo, non oggetto di esame)
+  + statistica descrittiva - prerequisiti e definizioni
 
-- Lezione 2-5:
- + (30') Revisione contenuti precedenti + domande, dubbi, perplessità
- + (30') Lezione
- + [15'] PAUSA
- + (60') Lezione
- + [15'] PAUSA
- + (60') Lezione
+- Lezione 2:
+ + Revisione contenuti precedenti + domande, dubbi, perplessità
+ + fondamenti di probabilità
 
+- Lezione 3:
+ + Revisione contenuti precedenti + domande, dubbi, perplessità
+ + distribuzioni
 
-> La mezz'ora rimanente in generale alla fine; se lezione al mattino, potrebbe essere all'inizio (per questione di treni).
+- Lezione 4:
+ + Revisione contenuti precedenti + domande, dubbi, perplessità
+ + intervalli di confidenza (e p-value)
+
+> Ogni 4 ore di lezione previsti 60 minuti di pausa, di norma divisi in 3 pause da 20 minuti ciascuna ogni 45 minuti.
+
 </small>
 </small>
 
@@ -321,7 +299,7 @@ loro utilizzo corretto o errato nel produrre i risultati).
 
 
 Un ambiente di lavoro per ciascuno di voi è attivabile e utilizzabile
-gratuitamente su RStudio Cloud collegandosi all'indirizzo: [bit.ly/diagnostica-rstudio](https://bit.ly/diagnostica-rstudio)
+gratuitamente su RStudio Cloud collegandosi all'indirizzo: [bit.ly/statmed-cl-rstudio](https://bit.ly/statmed-cl-rstudio)
 
 
 
@@ -347,14 +325,15 @@ voi.
 altri di autoapprendimento: a disposizione su moodle
 
 
-- **Ricevimento**: i giovedì tra le 17:00 e le 19:00 e venerdì
-  dalle 9:00 alle 11:00, sono disponibile a 
-  ricevere gli studenti per 25 minuti a sessione, prenotabile con almeno 
-  tre giorni di anticipo, ed entro due settimane, tramite il link
-  (disponibile su Moodle e riservato esclusivamente agli studenti del
-  corso):
+- **Ricevimento**: 
+  - lunedì 9:30 - 11:00 + 17:00 - 19:00
+  - giovedì 17:00 - 19:00
+  - venerdì 9:30 - 11:00
   
-  [bit.ly/diagnostica-ricevimento](https://bit.ly/diagnostica-ricevimento).
+25 minuti a sessione, prenotabile con almeno 
+  2 giorni di anticipo, ed entro due settimane, tramite il link:
+  
+  [bit.ly/statmed-cl-ricevimento](https://bit.ly/statmed-cl-ricevimento).
   
 > La settimana precedente le sessioni d'esame non è attivo il ricevimento.
 
@@ -368,9 +347,9 @@ class: hide-count
 
 # .orange[Esame finale]
 <small>
-L'esame finale sarà composto da **esercizi a risposta multipla**, su foglio di carta.
+L'esame finale sarà composto da **esercizi a risposta multipla**
 
-> **Non avrà durata prestabilita**
+> Salvo vincoli con esami dopo il nostro, **non avrà durata prestabilita** (durata prevista per lo svolgimento 2 ore)
 
 Durante lo svolgimento dell'esame sarà concesso l'utilizzo di **qualunque libro di testo cartaceo, appunti personali cartacei, e dei software R ed Rstudio** (messi a disposizione, per chiunque lo desideri, da me, con accesso tramite browser web).
 
@@ -383,7 +362,6 @@ Sarà presente una domanda "bonus" che varrà 6 punti (portanto il totale a 36).
 Il punteggio totale dell'esame è dunque di 36/30. Superato totalizzandone
 almeno 18/30. La lode è assegnata solo (e sempre) in presenza di un
 esame perfetto, cioè privo di errori e con un totale di almeno 31/30 ottenuti.
-
 
 
 ---
@@ -426,7 +404,7 @@ class: hide-count
 <br><br>
 
 > Un ringraziamento speciale a Cristiana Vettori per
-l'aiuto e il supporto logistico e amministrativo che mi ha sempre e ancora offerto.
+l'aiuto e il supporto logistico e amministrativo che mi ha sempre offerto, e mi offre ancora.
 
 ---
 class: inverse, bottom, right, hide-count
@@ -447,7 +425,7 @@ knitr::include_graphics("img/profilo_CL.jpg")
 [`r fontawesome::fa("telegram")`](https://telegram.me/CorradoLanera)
 **@CorradoLanera**
 
-[`r fontawesome::fa("calendar-check")` ](https://bit.ly/diagnostica-ricevimento) [**bit.ly/diagnostica-ricevimento**](https://bit.ly/diagnostica-ricevimento)
+[`r fontawesome::fa("calendar-check")` ](https://bit.ly/statmed-cl-ricevimento) [**bit.ly/statmed-cl-ricevimento**](https://bit.ly/statmed-cl-ricevimento)
 
 
 
@@ -471,7 +449,7 @@ _**Can** one be a .orange[good data analyst] **without** being a .orange[half-go
 
 
 
-Diapositive: <img src="img/bit.ly_diagnostica-23-slide.png" width="150px" style="vertical-align: middle"/> [bit.ly/diagnostica-23-slide](https://bit.ly/diagnostica-23-slide)
+Diapositive: <img src="img/bit.ly_statmed-cl-corsi.png" width="150px" style="vertical-align: middle"/> [bit.ly/statmed-cl-corsi](https://bit.ly/statmed-cl-corsi)
 
 
 [`r fontawesome::fa("link")`](https://www.unipd-ubep.it/) [**www.unipd-ubep.it**](https://www.unipd-ubep.it/) | 
@@ -481,6 +459,6 @@ Diapositive: <img src="img/bit.ly_diagnostica-23-slide.png" width="150px" style=
 [`r fontawesome::fa("twitter")`](https://twitter.com/corradolanera)
 [`r fontawesome::fa("telegram")`](https://telegram.me/CorradoLanera)
 **@CorradoLanera** |
-[`r fontawesome::fa("calendar-check")` ](https://bit.ly/diagnostica-ricevimento) [**bit.ly/diagnostica-ricevimento**](https://bit.ly/diagnostica-ricevimento)
+[`r fontawesome::fa("calendar-check")` ](https://bit.ly/statmed-cl-ricevimento) [**bit.ly/statmed-cl-ricevimento**](https://bit.ly/statmed-cl-ricevimento)
 
 

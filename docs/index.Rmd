@@ -61,7 +61,7 @@ use_extra_styles(
   mute_unhighlighted_code = TRUE  #<<
 )
 use_progress_bar(color = "#0051BA", location = "top")
-use_logo("img/bit.ly_diagnostica-23-slide.png")
+use_logo("img/bit.ly_statmed-cl-corsi.png")
 ```
 
 ```{r style-share-again, echo=FALSE}
@@ -80,7 +80,7 @@ meta() %>%
   meta_name("github-repo" = "CorradoLanera/diagnostica-23") %>% 
   meta_social(
     title = "Informatica, Statistica, e Fisica Apllicata",
-    url = "bit.ly/diagnostica-23-slide",
+    url = "bit.ly/statmed-cl-corsi",
     image = "https://github.com/CorradoLanera/diagnostica-23/raw/main/docs/img/cover.jpg",
     og_type = "website",
     og_author = "UBEP",
@@ -182,5 +182,5 @@ Padova, a.a. 2023/2024 - 20 ore (2 crediti)
 Corrado Lanera | [**Unità di Biostatistica, Epidemiologia e Salute Pubblica**](https://www.unipd-ubep.it/)
 
 [`r fontawesome::fa("envelope")`](mailto:Corrado.Lanera@ubep.unipd.it) [**Corrado.Lanera**__.orange[@ubep.unipd.it]__](mailto:Corrado.Lanera@ubep.unipd.it) | 
-[`r fontawesome::fa("calendar-check")` ](https://bit.ly/diagnostica-ricevimento) [**bit.ly/diagnostica-ricevimento**](https://bit.ly/diagnostica-ricevimento)
+[`r fontawesome::fa("calendar-check")` ](https://bit.ly/statmed-cl-ricevimento) [**bit.ly/statmed-cl-ricevimento**](https://bit.ly/statmed-cl-ricevimento)
 

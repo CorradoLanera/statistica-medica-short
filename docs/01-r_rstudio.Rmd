@@ -1,6 +1,6 @@
 ---
-title: "BASI DI DIAGNOSTICA PER IMMAGINI, INFORMATICA, FISICA E STATISTICA MEDICA"
-subtitle: "Corso di laurea in TECNICHE DI RADIOLOGIA MEDICA, PER IMMAGINI E RADIOTERAPIA"
+title: "Statistica Medica"
+subtitle: "R e RStudio"
 author: "[CorradoLanera](www.CorradoLanera.it)"
 date: "YYYY-MM-DD (last update: `r Sys.Date()`)"
 institute: "[Unità di Biostatistica, Epidemiologia e Salute Pubblicah](https://www.unipd-ubep.it/) --- University of Padova"
@@ -63,7 +63,7 @@ use_extra_styles(
   mute_unhighlighted_code = TRUE  #<<
 )
 use_progress_bar(color = "#0051BA", location = "top")
-use_logo("img/bit.ly_diagnostica-23-slide.png")
+use_logo("img/bit.ly_statmed-cl-corsi.png")
 ```
 
 ```{r style-share-again, echo=FALSE}
@@ -72,24 +72,6 @@ style_share_again(
 )
 ```
 
-
-```{r meta, echo=FALSE}
-meta() %>%
-  meta_general(
-    description = "Modulo di STATISTICA MEDICA del corso in BASI DI DIAGNOSTICA PER IMMAGINI, INFORMATICA, FISICA E STATISTICA MEDICA per il corso di laurea in TECNICHE DI RADIOLOGIA MEDICA, PER IMMAGINI E RADIOTERAPIA",
-    generator = "xaringan and remark.js"
-  ) %>% 
-  meta_name("github-repo" = "CorradoLanera/diagnostica-23") %>% 
-  meta_social(
-    title = "Informatica, Statistica, e Fisica Apllicata",
-    url = "https://corradolanera.github.io/diagnostica/#1",
-    image = "https://github.com/CorradoLanera/diagnostica-23/raw/main/docs/img/cover.jpg",
-    og_type = "website",
-    og_author = "UBEP",
-    twitter_card_type = "summary",
-    twitter_creator = "@CorradoLanera"
-  )
-```
 
 ```{css, echo=FALSE}
 .left-code {
@@ -164,15 +146,11 @@ style_duo_accent(
 <br>
 <br>
 
-# **BASI DI DIAGNOSTICA PER IMMAGINI, INFORMATICA, FISICA E STATISTICA MEDICA**<br>**.orange[STATISTICA MEDICA]**
+# **.orange[STATISTICA MEDICA]**
 
 -- Introduzione a R/RStudio --
 
 (non soggetto a esame)
-
-C.d.L. **Tecniche di Radiologia Medica, per Immagini e Radioterapia**
-
-Padova, a.a. 2023/2024 - 20 ore (2 crediti)
 
 Corrado Lanera | [**Unità di Biostatistica, Epidemiologia e Salute Pubblic**](https://www.unipd-ubep.it/)
 
@@ -477,14 +455,14 @@ class: middle, center, hide-count, inverse
 
 # .orange[Vediamolo...<br>...sul _vostro_ cloud!]
 
-[https://bit.ly/diagnostica-rstudio](https://bit.ly/diagnostica-rstudio)
+[https://bit.ly/statmed-cl-rstudio](https://bit.ly/statmed-cl-rstudio)
 
 ---
 class: inverse
 
 # Risorse utili
 
-- [**RStudio Cloud**](https://bit.ly/diagnostica-rstudio): [https://bit.ly/diagnostica-rstudio](https://bit.ly/diagnostica-rstudio) gratis per voi per esplorare RStudio, le sue funzionalità, e allenarvi con R (link di iscrizione valido fino alla fine del corso). NOTA: a vostra scelta, è utilizzabile anche come _supporto_ durante l'esame.
+- [**RStudio Cloud**](https://bit.ly/statmed-cl-rstudio): [https://bit.ly/statmed-cl-rstudio](https://bit.ly/statmed-cl-rstudio) gratis per voi per esplorare RStudio, le sue funzionalità, e allenarvi con R (link di iscrizione valido fino alla fine del corso). NOTA: a vostra scelta, è utilizzabile anche come _supporto_ durante l'esame.
 
 - [**RStudio primers**](https://rstudio.cloud/learn/primers) ambiente gratuito dentro RStudio Cloud per l'apprendimento delle basi di analisi di dati con R tramite tutorial interattivi. Una volta registrati, oltre all'accesso al _nostro_ spazio di lavoro, avete accesso libero anche ai _Primers_.
 
@@ -533,7 +511,7 @@ _If you think the only acceptable performance is the ".orange[perfect performanc
 
 
 
-Diapositive: <img src="img/bit.ly_diagnostica-23-slide.png" width="150px" style="vertical-align: middle"/> [bit.ly/diagnostica-23-slide](https://bit.ly/diagnostica-23-slide)
+Diapositive: <img src="img/bit.ly_statmed-cl-corsi.png" width="150px" style="vertical-align: middle"/> [bit.ly/statmed-cl-corsi](https://bit.ly/statmed-cl-corsi)
 
 
 [`r fontawesome::fa("link")`](https://www.unipd-ubep.it/) [**www.unipd-ubep.it**](https://www.unipd-ubep.it/) | 
@@ -543,6 +521,6 @@ Diapositive: <img src="img/bit.ly_diagnostica-23-slide.png" width="150px" style=
 [`r fontawesome::fa("twitter")`](https://twitter.com/corradolanera)
 [`r fontawesome::fa("telegram")`](https://telegram.me/CorradoLanera)
 **@CorradoLanera** |
-[`r fontawesome::fa("calendar-check")` ](https://bit.ly/diagnostica-ricevimento) [**bit.ly/diagnostica-ricevimento**](https://bit.ly/diagnostica-ricevimento)
+[`r fontawesome::fa("calendar-check")` ](https://bit.ly/statmed-cl-ricevimento) [**bit.ly/statmed-cl-ricevimento**](https://bit.ly/statmed-cl-ricevimento)
 
 

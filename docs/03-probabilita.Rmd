@@ -62,7 +62,7 @@ use_extra_styles(
   mute_unhighlighted_code = TRUE  #<<
 )
 use_progress_bar(color = "#0051BA", location = "top")
-use_logo("img/bit.ly_diagnostica-23-slide.png")
+use_logo("img/bit.ly_statmed-cl-corsi.png")
 ```
 
 ```{r style-share-again, echo=FALSE}
@@ -1062,14 +1062,14 @@ class: middle, center, hide-count, inverse
 
 # .orange[link al _vostro_ cloud:]
 
-[https://bit.ly/diagnostica-rstudio](https://bit.ly/diagnostica-rstudio)
+[https://bit.ly/statmed-cl-rstudio](https://bit.ly/statmed-cl-rstudio)
 
 ---
 class: inverse
 
 # Risorse utili
 
-- [**RStudio Cloud**](https://bit.ly/diagnostica-rstudio): [https://bit.ly/diagnostica-rstudio](https://bit.ly/diagnostica-rstudio) gratis per voi per esplorare RStudio, le sue funzionalità, e allenarvi con R (link di iscrizione valido fino alla fine del corso). NOTA: a vostra scelta, è utilizzabile anche come _supporto_ durante l'esame.
+- [**RStudio Cloud**](https://bit.ly/statmed-cl-rstudio): [https://bit.ly/statmed-cl-rstudio](https://bit.ly/statmed-cl-rstudio) gratis per voi per esplorare RStudio, le sue funzionalità, e allenarvi con R (link di iscrizione valido fino alla fine del corso). NOTA: a vostra scelta, è utilizzabile anche come _supporto_ durante l'esame.
 
 - [**RStudio primers**](https://rstudio.cloud/learn/primers) ambiente gratuito dentro RStudio Cloud per l'apprendimento delle basi di analisi di dati con R tramite tutorial interattivi. Una volta registrati, oltre all'accesso al _nostro_ spazio di lavoro, avete accesso libero anche ai _Primers_.
 
@@ -1102,7 +1102,7 @@ _If you believe that witnessing **.orange[an additional white swan]** will bring
 
 # **.orange[Grazie]** per l'attenzione!
 
-Diapositive: [bit.ly/diagnostica-23-slide](https://bit.ly/diagnostica-23-slide)
+Diapositive: [bit.ly/statmed-cl-corsi](https://bit.ly/statmed-cl-corsi)
 
 
 [`r fontawesome::fa("link")`](https://www.unipd-ubep.it/) [**www.unipd-ubep.it**](https://www.unipd-ubep.it/) | 
@@ -1112,6 +1112,6 @@ Diapositive: [bit.ly/diagnostica-23-slide](https://bit.ly/diagnostica-23-slide)
 [`r fontawesome::fa("twitter")`](https://twitter.com/corradolanera)
 [`r fontawesome::fa("telegram")`](https://telegram.me/CorradoLanera)
 **@CorradoLanera** |
-[`r fontawesome::fa("calendar-check")` ](https://bit.ly/diagnostica-ricevimento) [**bit.ly/diagnostica-ricevimento**](https://bit.ly/diagnostica-ricevimento)
+[`r fontawesome::fa("calendar-check")` ](https://bit.ly/statmed-cl-ricevimento) [**bit.ly/statmed-cl-ricevimento**](https://bit.ly/statmed-cl-ricevimento)
 
 
