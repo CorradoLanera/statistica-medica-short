@@ -375,9 +375,10 @@ class: inverse, middle
 
 ## .orange[Sondaggio]
 
-Per me: [DIAGNOSTICAPRIMA](https://app.wooclap.com/events/DIAGNOSTICAPRIMA/0)
+Per me: [Tipi di variabile](https://app.wooclap.com/events/STATMEDTYPE/0)
 
-Per voi: <img src="img/bit.ly_diagnostica-primo-sondaggio.png" width="300px" style="vertical-align: middle"/> [https://bit.ly/diagnostica-primo-sondaggio](https://bit.ly/diagnostica-primo-sondaggio)
+Per voi: <img src="img/bit.ly_statmed-sondaggio-tipi-variabili.png", width="300px" style="vertical-align: middle"/>  [bit.ly/statmed-sondaggio-tipi-variabili](https://bit.ly/statmed-sondaggio-tipi-variabili)
+
 
 
 ---
@@ -809,9 +810,9 @@ class: inverse, middle
 
 ## .orange[Sondaggio]
 
-Per me: [DIAGNOSTICASECONDA](https://app.wooclap.com/events/DIAGNOSTICASECONDA/0)
+Per me: [Localizzazione](https://app.wooclap.com/events/STATMEDLOCALIZZAZIONE/0)
 
-Per voi:  <img src="img/bit.ly_diagnostica-secondo-sondaggio.png" width="300px" style="vertical-align: middle"/> [https://bit.ly/diagnostica-secondo-sondaggio](https://bit.ly/diagnostica-secondo-sondaggio)
+Per voi: <img src="img/bit.ly_statmed-sondaggio-localizzazione.png", width="300px" style="vertical-align: middle"/>  [bit.ly/statmed-sondaggio-localizzazione](https://bit.ly/statmed-sondaggio-localizzazione)
 
 
 ---
@@ -924,6 +925,17 @@ quantile(epic_10[["bmi"]][-10], probs = 0.2, type = 2)
 ```
 
 ]
+
+
+---
+class: inverse, middle
+
+## .orange[Sondaggio]
+
+Per me: [Percentili](https://app.wooclap.com/events/STATMEDPERCENTILI/0)
+
+Per voi: <img src="img/bit.ly_statmed-sondaggio-percentili.png", width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-percentili](https://bit.ly/statmed-sondaggio-percentili)
+
 
 
 
@@ -1295,6 +1307,18 @@ epic |>
 
 <!-- --- -->
 <!-- # Coppie di dati: categorici-categorici -->
+
+
+---
+class: inverse, middle
+
+## .orange[Sondaggio]
+
+Per me: [Grafici](https://app.wooclap.com/events/STATMEDGRAFICI/0)
+
+Per voi: <img src="img/bit.ly_statmed-sondaggio-grafici.png", width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-grafici](https://bit.ly/statmed-sondaggio-grafici)
+
+
 
 
 ---
