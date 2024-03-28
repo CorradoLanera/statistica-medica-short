@@ -829,7 +829,7 @@ class: inverse, middle
 
 - La probabilità di un errore di I specie ( $\alpha$, la _significatività_ ) è la probabilità di **rifiutare** l'ipotesi nulla $H_0$ quando è **vera**, si chiama .orange[livello di significatività] del test
 
-- La probabilità di un errore di II specie ($\beta$ ) è la probabilità di **accettare** l'ipotesi nulla $H_0$ dato che è **falsa**
+- La probabilità di un errore di II specie ( $\beta$ ) è la probabilità di **accettare** l'ipotesi nulla $H_0$ dato che è **falsa**
  
 
 
@@ -1007,7 +1007,7 @@ knitr::include_graphics("img/img3.2.png")
 ---
 # p-value: esempio
 
-Si supponga che in un campione di 10 bambini il livello di colesterolo sia pari a  $200\ mg/dL$ con una deviazione standard nota nella popolazione pari a $50\ mg/dL$. Lo studio intende verificare se il livello del colesterolo in questi bambini è più elevato del normale ($175\ mg/dL$), con un livello di significatività statistica $\alpha = 0.05$. Si testa quindi l'ipotesi 
+Si supponga che in un campione di 10 bambini il livello di colesterolo sia pari a  $200\ mg/dL$ con una deviazione standard nota nella popolazione pari a $50\ mg/dL$. Lo studio intende verificare se il livello del colesterolo in questi bambini è più elevato del normale ( $175\ mg/dL$ ), con un livello di significatività statistica $\alpha = 0.05$. Si testa quindi l'ipotesi 
 
 - $H_0:\mu=175$; $\sigma=50$
 - $H_1:\mu>175$; $\sigma=50$
