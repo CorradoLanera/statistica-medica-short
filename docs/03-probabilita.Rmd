@@ -233,9 +233,18 @@ class: inverse, middle
 
 Lo __spazio degli eventi__ $\Omega$ è l'insieme di tutti i possibili risultati di un esperimento probabilistico.
 
-Un __evento__ è un qualsiasi insieme dei risultati di un esperimento probabilistico.
+Un __evento__ è un qualsiasi insieme di risultati di un esperimento probabilistico (ovvero, un sottoinsieme di $\Omega$ ).
 
-La __probabilità__ di un evento è la .orange[frequenza relativa] dell'insieme di risultati di un esperimento probabilistico che lo definiscono, valutata su **infinite ripetizioni** dell'esperimento.
+Un __risultato__ di un esperimento probabilistico _verifica_ un evento se ne fa parte.
+
+La __probabilità__ di un evento è la .orange[frequenza relativa] dei risultati che lo definiscono, valutata su **infinite ripetizioni** dell'esperimento probabilistico.
+
+> Es.: 
+- Esperimento: misura della pressione diastolica (DBP) di una persona presa a caso, in un determinato momento, nella popolazione.
+- Spazio degli eventi $\Omega$: ogni possibile misura di DBP.
+- Evento $A$ : DBP $\geq 95$ mmHg.
+- Risultato (mio, ora): DBP $= 70$ mmHg. (Non fa parte dell'evento, quindi non lo verifica)
+- Probabilità di $A$ : misurando la DBP, ora, a tutta la popolazione, la porzione di persone con DBP $\geq 95$ mmHg.
 
 ---
 ## .orange[Proprietà]: eventi mutuamente esclusivi
@@ -435,9 +444,9 @@ include_graphics("img/venn4.png")
 $$P(A \cup B) = P(A)+P(B)-P(A\cap B)$$
 
 ---
-# .orange[Teorema della somma]: esempio
+# .orange[Teorema della somma]: es.
 
-Due medici, $A$ e $B$, diagnosticano tutti i pazienti afferenti ad un centro per le malattie a trasmissione sessuale.
+Due medici, $A$ e $B$, diagnosticano tutti i pazienti afferenti a un centro per le malattie a trasmissione sessuale.
 
 **Siano**:
 
@@ -487,11 +496,23 @@ Si considerino gli eventi
 - $P(A)=P(\{\mbox{DBP madre}\geq 95 \})=0.1$ 
 - $P(B)=P(\{\mbox{DBP padre}\geq 95 \})=0.2$
 
-Si definisca come **famiglia ipertesa** quella in cui .orange[almeno uno] dei coniugi è iperteso.
+Si definisca come **famiglia ipertesa** quella in cui .orange[almeno uno] dei genitori è iperteso.
 
-**Allora** (ipotizzadno $A$ e $B$ indipendenti):
+**Allora** (ipotizzando $A$ e $B$ indipendenti):
 
-$$\begin{split} P(\{\mbox{famiglia ipertesa}\})& = P(A \cup B)\\& = P(A) +  P(B)[1-P(A)]\\& = 0.1 + (0.2)[1-0.1]\\& = 0.28\end{split}$$
+$$\begin{split} P(\{\mbox{famiglia ipertesa}\})& = P(A \cup B)\\&= P(A) + P(B\cap\bar{A})\\&= P(A) + P(B)P(\bar{A})\\& = P(A) +  P(B)[1-P(A)]\\& = 0.1 + (0.2)[1-0.1]\\& = 0.28\end{split}$$
+
+---
+class: inverse, middle
+
+## .orange[Sondaggio]
+
+Per me: [Probabilità](https://app.wooclap.com/events/STATMEDPROB/0)
+
+Per voi: <img src="img/bit.ly_statmed-sondaggio-prob.png", width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-prob](https://bit.ly/statmed-sondaggio-prob)
+
+
+
 
 
 ---
@@ -566,9 +587,12 @@ $$P(A \cap B) = P(A|B)P(A)$$
 ---
 # .orange[Condizionamento]: esempio
 
-Si supponga che l'1\% della popolazione abbia SKT positivo
+Si ipotizzi che:
+- **1 persona su 100** con skin test (SKT) .orange[positivo] abbia la tubercolosi (TB)
+- **1 persona ogni 10000** con SKT .orange[negativo] abbia la TB
+- l'1\% della popolazione abbia SKT positivo
 
-**Si calcoli** la .orange[probabilità di tubercolosi (TB) nella popolazione] $P(TB)$
+**Si calcoli** la .orange[probabilità di tubercolosi (TB) nella popolazione] $P(TB)$, ovvero, si sitmi la porzione di malati di tubercolosi nella popolazione (chiamata: la **prevalenza** della malattia)
 
 **Soluzione**
 $$\begin{split}P(TB)& =P(TB|SKT^+)P(SKT^+) + P(TB|SKT^-)P(SKT^-)\\& = (0.01)(0.01) + (0.0001)(1-0.01)\\& = 0.000199\end{split}$$
@@ -582,10 +606,10 @@ Un insieme di eventi $\mathscr{A} = \{A_1, \ldots, A_k\}$ è detto **.orange[esa
 
 **Sia** $\mathscr{A} = \{A_1, \ldots, A_k\}$ un insieme .orange[esaustivo] di eventi .orange[mutuamente esclusivi].
 
-**Allora**, per qualunque evento $B$, la probabilità di $B$, $P(B)$, può essere scritta come la **somma pesata** delle probabilità condizionali di $B$ dato $A_i$, $P(B|A_i)$ per le corrispondenti probabilità degli $A_i$ al variare di $i$ tra $1$ e $k$:
+**Allora**, per qualunque evento $B$, la probabilità di $B$, $P(B)$, può essere scritta come:
 
 $$\begin{split}P(B)& =\sum_{i=1}^k P(B|A_i)P(A_i)\\&\\&=\sum_{A\in \mathscr{A}} P(B|A)P(A)\end{split}$$
-
+Ovvero, la **somma pesata** delle probabilità condizionali di $B$ dato $A_i$, $P(B|A_i)$ per le corrispondenti probabilità degli $A_i$ al variare di $i$ tra $1$ e $k$.
 
 
 
@@ -892,6 +916,16 @@ Sostituendo:
 
 $$(PV^+ = )\ P(M|T) = \frac{P(T|M)P(M)}{P(T|M)P(M)+P(T|\bar{M})P(\bar{M})}$$
 
+---
+class: inverse, middle
+
+## .orange[Sondaggio]
+
+Per me: [Bayes](https://app.wooclap.com/events/STATMEDBAYES/0)
+
+Per voi: <img src="img/bit.ly_statmed-sondaggio-bayes.png", width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-bayes](https://bit.ly/statmed-sondaggio-bayes)
+
+
 
 
 ---
@@ -1050,17 +1084,9 @@ class: inverse
 
 - [**RStudio Cloud**](https://bit.ly/statmed-cl-rstudio): [https://bit.ly/statmed-cl-rstudio](https://bit.ly/statmed-cl-rstudio) gratis per voi per esplorare RStudio, le sue funzionalità, e allenarvi con R (link di iscrizione valido fino alla fine del corso). NOTA: a vostra scelta, è utilizzabile anche come _supporto_ durante l'esame.
 
-- [**RStudio primers**](https://rstudio.cloud/learn/primers) ambiente gratuito dentro RStudio Cloud per l'apprendimento delle basi di analisi di dati con R tramite tutorial interattivi. Una volta registrati, oltre all'accesso al _nostro_ spazio di lavoro, avete accesso libero anche ai _Primers_.
-
-- [**R 4 Data Science**](https://r4ds.had.co.nz/): libro gratuito (on-line) di [**Hadley Wickham**](http://hadley.nz/) e [**Garrett Grolemund**](https://rstudio.com/speakers/garrett-grolemund/)
-
-- [**GGplot2 cheatsheet**](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-visualization.pdf) schema dei possibili grafici di base rappresentabili in R con il pacchetto `{ggplot2}`, molto utile anche per conoscere le tipologie di grafico, e il loro utilizzo.
-
 - [An Introduction to Medical Statistics](https://global.oup.com/academic/product/an-introduction-to-medical-statistics-9780199589920) di [**Martin Bland**](https://www.york.ac.uk/healthsciences/our-staff/honoraryemeritus/martin-bland/), suggeriti capitoli 4 e 5.
 
-- [Perché n − 1 nella formula della deviazione standard
-campionaria?](http://rdossena.altervista.org/Articoli/Book-Perch%E9%20n-1.pdf) di [Riccardo Dossena](http://rdossena.altervista.org) Traduzione dell'articolo **Book, S.A.**: _Why n − 1 in the formula for the sample standard deviation?_, The Two-Year College Mathematics Journal 10(5), 330–333 (1979
-
+- [Dimostrazione della Coerenza Bayesiana e Frequentista nella definizione del Valore Predittivo Positivo di un test](https://rpubs.com/CorradoLanera/vpp-freq-bayes-ita) di [**Corrado Lanera**](https://www.corradolanera.it/)
 
 
 ---
