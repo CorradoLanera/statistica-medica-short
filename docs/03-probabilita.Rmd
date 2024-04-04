@@ -944,7 +944,7 @@ countdown(minutes = 5, warn_when = 1, play_sound = TRUE,
 
 **Si ipotizzi** che:
 - la probabilità che un iperteso sia .orange[correttamente classificato] come tale da una macchina per la misurazione automatica della pressione sia pari a 0.84
-- la stessa sia pari a 0.23 per un normoteso.
+- la probabilità che un normopeso sia .orange[erroneamente classificato] come iperteso, sia pari a 0.23.
 - la prevalenza dell'ipertensione nella popolazione è del 20\%
 
 **Si calcolino**: i valori predittivi (positivo e negativo) della macchina.
