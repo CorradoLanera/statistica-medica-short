@@ -569,6 +569,7 @@ knitr::include_graphics("img/Algebra1_12_fig003.svg.png")
 ```
 
 
+
 ---
 # Distribuzione .orange[Binomiale]
 
@@ -918,6 +919,15 @@ Un valore sufficientemente piccolo da far pensare ad una suscettibilità genetic
 
 
 
+---
+class: inverse, middle
+
+## .orange[Sondaggio]
+
+Per me: [Discrete](https://app.wooclap.com/events/STATMEDDISCRETE/0)
+
+Per voi: <img src="img/bit.ly_statmed-sondaggio-discrete.png", width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-discrete](https://bit.ly/statmed-sondaggio-discrete)
+
 
 
 
@@ -1052,6 +1062,18 @@ La **varianza**, indicata con $\mbox{Var}(X)$ o $\sigma^2$, è la media della di
 <br>
 
 La **deviazione standard** è pari alla radice quadrata della varianza.
+
+
+<img src="img/mode-med-mean-normal-dist.png"/>
+
+---
+class: inverse, middle
+
+## .orange[Sondaggio]
+
+Per me: [Continue](https://app.wooclap.com/events/STATMEDCONTINUE/0)
+
+Per voi: <img src="img/bit.ly_statmed-sondaggio-continue.png", width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-continue](https://bit.ly/statmed-sondaggio-continue)
 
 
 
@@ -1495,6 +1517,17 @@ lines(c(1,1),c(-0.1,dnorm(1,mean=0, sqrt(1))),lty=2)
 ]
 ]
 
+
+---
+class: inverse, middle
+
+## .orange[Sondaggio]
+
+Per me: [Normale](https://app.wooclap.com/events/STATMEDNORMALE/0)
+
+Per voi: <img src="img/bit.ly_statmed-sondaggio-normale.png", width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-normale](https://bit.ly/statmed-sondaggio-normale)
+
+
 ---
 # Caso di studio: .orange[ipertensione]
 
@@ -1679,6 +1712,8 @@ countdown(minutes = 2, warn_when = 30, play_sound = TRUE,
 class: inverse, middle
 
 # .center[**.orange[Approssimazioni]** alla distribuzione normale]
+
+(OPZIONALE/AUTONOMO NON IN PROGRAMMA)
 
 
 ---
