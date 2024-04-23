@@ -279,16 +279,13 @@ Si dice che la media campionaria è uno **stimatore non distorto** della media d
 
 Riguardo alla **varianza** dello stimatore della media, abbiamo
 
-$$\mbox{var}(\bar{X}) = \frac{1}{n^2} \mbox{var}\left(\sum_{i=1}^n X_i\right) = \frac{1}{n^2} \sum_{i=1}^n \mbox{var}(X_i)$$
+$$\begin{split}\mbox{var}(\bar{X})&= \mbox{var}\left(\frac{\sum_{i=1}^n X_i}{n}\right) =* \frac{1}{n^2} \mbox{var}\left(\sum_{i=1}^n X_i\right) =* \frac{1}{n^2} \sum_{i=1}^n \mbox{var}(X_i)\\& \stackrel{\mbox{def}}{=} \frac{1}{n^2} \sum_{i=1}^n\sigma^2 = \frac{1}{n^2} n\sigma^2 = \frac{\sigma^2}{n}\end{split}$$
 
-che per definizione è $\sigma^2$!
 
-**Allora**:
+- $\frac{\sigma}{\sqrt{n}}$ è chiamato con .orange[errore standard della media], stimato da $\frac{s}{\sqrt{n}}$
 
-$$\mbox{var}(\bar{X}) = \frac{1}{n^2} \sum_{i=1}^n\sigma^2 = \frac{1}{n^2} n\sigma^2 = \frac{\sigma^2}{n}$$
 
-- la quantità $\frac{\sigma}{\sqrt{n}}$ è indicata come .orange[errore standard della media] e viene stimata da $\frac{s}{\sqrt{n}}$
-
+$$*)\begin{split}\mbox{var}(aX) &= \frac{\sum_1^n\left(ax_i-\frac{\sum_1^nax_j}{n}\right)^2}{n}= \frac{\sum_1^n\left(ax_i-\frac{a\sum_1^nx_j}{n}\right)^2}{n}\\&= \frac{\sum_1^n\left(a\left(x_i-\mu\right)\right)^2}{n}= \frac{\sum_1^na^2\left(x_i-\mu\right)^2}{n}\\&=\frac{a^2\sum_1^n\left(x_i-\mu\right)^2}{n}=a^ 2\mbox{var}(X)\end{split}$$ 
 
 
 ---
@@ -308,6 +305,14 @@ $$\bar{X} \sim N \left( \mu, \frac{\sigma^2}{n} \right)$$
 
 
 
+---
+class: inverse, middle
+
+## .orange[Sondaggio]
+
+Per me: [Stimatore della media](https://app.wooclap.com/events/STATMEDTLC/0)
+
+Per voi: <img src="img/bit.ly_statmed-sondaggio-tlc.png", width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-tlc](https://bit.ly/statmed-sondaggio-tlc)
 
 
 
@@ -334,7 +339,7 @@ Associare alla stima puntuale una misura della sua precisione
 
 .panelset[
 .panel[.panel-name[Passaggio a Z]
-Data una variabile casuale normale $X$ dal T.C.L. sappiamo che
+Data una variabile casuale normale $X$ dal T.L.C. sappiamo che
 
 $$Z =\frac{\bar{X}-\mu}{\frac{\sigma}{\sqrt{n}}}$$
 
@@ -415,6 +420,17 @@ Un intervallo di confidenza al 95% per $\mu$ **quando $\sigma^2$ è noto**
 
 $$\left ( \bar{X} - 1.96 \frac{\sigma}{\sqrt{n}}; \bar{X} + 1.96
 \frac{\sigma}{\sqrt{n}} \right )$$
+
+
+
+---
+class: inverse, middle
+
+## .orange[Sondaggio]
+
+Per me: [Intervalli di Confidenza](https://app.wooclap.com/events/STATMEDICP/0)
+
+Per voi: <img src="img/bit.ly_statmed-sondaggio-icp.png", width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-icp](https://bit.ly/statmed-sondaggio-icp)
 
 
 
@@ -741,6 +757,7 @@ $$\left (\bar{x} - t_{\frac{\alpha}{2}; n-1} \frac{s}{\sqrt{n}} \leq \mu \leq \b
 ]
 
 
+
 ---
 # IC: .orange[Esempio]
 
@@ -782,6 +799,16 @@ $$\left(207.2 - 1.96 \frac{30}{\sqrt{100}}; 207.2+1.96 \frac{30}{\sqrt{100}}\rig
 ]
 ]
 
+
+
+---
+class: inverse, middle
+
+## .orange[Sondaggio]
+
+Per me: [Distribuzione t-Student](https://app.wooclap.com/events/STATMEDTSTUDENT/0)
+
+Per voi: <img src="img/bit.ly_statmed-sondaggio-tstudent.png", width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-tstudent](https://bit.ly/statmed-sondaggio-tstudent)
 
 
 
@@ -905,9 +932,9 @@ Il peso medio dei 100 nati è di 115 oz con una deviazione standard campionaria 
 
 Ad un livello di significatività di 0.05, si ha $z_{\alpha}=-1.645$, e la regione critica è pari a 
 
-$$\bar{x}=120-1.645\frac{25}{10}=115.89$$
+$$c=120-1.645\frac{25}{10}=115.89$$
 
-quindi, poiché $\bar{X}<115.89$ si rifiuta $H_0$ ad un livello di significatività di 0.05
+quindi, poiché $\bar{X}=115<115.89=c$ si rifiuta $H_0$ ad un livello di significatività di 0.05
 
 ]
 .panel[.panel-name[Maggiore significatività]
@@ -916,9 +943,9 @@ Usando un livello di significatività pari a 0.01, si avrebbe che
 
 $z_{\alpha}=-2.326$ e che
 
-$$\bar{x}=120-2.326\frac{25}{10}=114.18$$
+$$c=120-2.326\frac{25}{10}=114.18$$
 
-e quindi **non si rifiuterebbe** l'ipotesi nulla
+e quindi **non si rifiuterebbe** l'ipotesi nulla dal momento che $\bar{x}=115\geq 114.18=c$
 
 ]
 
@@ -929,7 +956,7 @@ Per testare l'ipotesi:
 - $H_0:\mu=\mu_0$; $\sigma=\sigma_0$
 - $H_1:\mu<\mu_0$; $\sigma=\sigma_0$
 
-si calcola
+si può anche equivalentemente calcolare
 
 $$z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}$$
 
@@ -1019,7 +1046,6 @@ Visto che $1.58=z<z_{1-\alpha}=z_{.95}=1.645$ non si rifiuta $H_0$, con un $p-va
 $$p=1-\Phi(z)=1-\Phi(1.58)=1-0.9431=0.057$$
 
 
-zz
 ---
 # Test: due code
 
@@ -1036,7 +1062,7 @@ $$P(rifiutare\ H_0|H_0)=P(Z\leq X_1 \cup Z\geq X_2)=P(Z\leq X_1)+P(Z\geq X_2)=\a
 
 Ipotizzando equiprobabilità sulle due code, si ha che
 
-$$P(z\leq c_1|H_0)=P(Z\leq c_2)=\frac{\alpha}{2}$$
+$$P(z\leq c_1|H_0)=P(Z\geq c_2|H_0)=\frac{\alpha}{2}$$
 
 ]
 .panel[.panel-name[Procedura]
@@ -1069,7 +1095,7 @@ knitr::include_graphics("img/img4.png")
 #### Colesterolo negli immigrati asiatici
 
 Si sa che i livelli di colesterolo nelle donne americane di età tra i 20 ed i 40 anni è distribuito normalmente con media $190\ mg/dL$ e deviazione standard di $40\ mg/dL$. Si vuole testare l'ipotesi che i livelli di colesterolo nelle donne asiatiche di pari età sia eguale a quello delle donne americane. 
-Si considera quindi un campione di 100 donne con le caratteristiche specificate e di osserva un livello di colesterolo medio pari a $181.52\ mg/dL$. Si testa quindi l'ipotesi 
+Si considera quindi un campione di 100 donne con le caratteristiche specificate e si osserva un livello di colesterolo medio pari a $181.52\ mg/dL$. Si testa quindi l'ipotesi 
 
 - $H_0:\mu=190$; $\sigma=40$
 - $H_1:\mu\neq 190$; $\sigma=40$ 
@@ -1118,7 +1144,7 @@ $$p=2\Phi(-2.12)=2[1-\Phi(2.12)]=2[1-0.983]=0.034$$
 
 .panelset[
 .panel[.panel-name[t di Student]
-Se $X_1,...,X_n$ è un campione di osservazioni indipendenti distribuite normalmente $N(\mu,\sigma^2)$, allora la quantità $\frac{\bar{X}-\mu_0}{\frac{\sigma}{\sqrt{n}}}$ è distribuita seconda una $t$ di Student con $n-1$ gradi di libertà.
+Se $X_1,...,X_n$ è un campione di osservazioni indipendenti distribuite normalmente $N(\mu,\sigma^2)$, allora la quantità $\frac{\bar{X}-\mu_0}{\frac{s}{\sqrt{n}}}$ è distribuita seconda una $t$ di Student con $n-1$ gradi di libertà.
 Da questo deriva che sotto l'ipotesi nulla $\mu=\mu_0$
 
 $$P\left(t<t_{n-1;\frac{\alpha}{2}}\right)=P\left(t>t_{n-1;1-\frac{\alpha}{2}}\right)=\frac{\alpha}{2}$$
@@ -1197,6 +1223,18 @@ che contiene il valore $\mu_0=175$ usato precedentemente nei test di ipotesi, pe
 
 ]
 ]
+
+
+---
+class: inverse, middle
+
+## .orange[Sondaggio]
+
+Per me: [p-value](https://app.wooclap.com/events/STATMEDPVALUE/0)
+
+Per voi: <img src="img/bit.ly_statmed-sondaggio-pvalue.png", width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-pvalue](https://bit.ly/statmed-sondaggio-pvalue)
+
+
 
 ---
 class: middle, center, hide-count, inverse
