@@ -1209,7 +1209,7 @@ window.xaringanExtraClipboard = function (selector, text) {
 }
 </script>
     <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x554fbe6dc0045ac825bd6f7668192b8","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xf662fa134e14bacb1e37b163fc598bf","expires":1}</script>
     <script>(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.himalaya = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 'use strict';
 
@@ -3296,7 +3296,7 @@ Consigli:
 - bere
 - andare in bagno
 
-<div class="countdown" id="timer_543200d8" data-warn-when="3" data-update-every="1" data-play-sound="true" tabindex="0" style="bottom:5%;left:65%;">
+<div class="countdown" id="timer_dd4d6580" data-warn-when="3" data-update-every="1" data-play-sound="true" tabindex="0" style="bottom:5%;left:65%;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -3831,7 +3831,7 @@ Il `\(p-value\)` è quindi la probabilità di ottenere un risultato **eguale o p
 
 si calcola
 
-`$$Z=\frac{\bar{X}-\mu_0}{\frac{\sigma}{\sqrt{n}}}$$`
+`$$z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}$$`
 
 - se `\(z&lt;z_{\alpha}\)` si rifiuta `\(H_0\)`
 - se `\(z\geq z_{\alpha}\)` non si rifiuta `\(H_0\)`
@@ -3899,7 +3899,7 @@ Obiettivo è quello di rifiutare `\(H_0\)` se `\(Z\)` è **troppo piccolo o trop
 
 Ipotizzando equiprobabilità sulle due code, si ha che
 
-`$$P(z\leq c_1|H_0)=P(Z\geq c_2|H_0)=\frac{\alpha}{2}$$`
+`$$P(Z\leq c_1|H_0)=P(Z\geq c_2|H_0)=\frac{\alpha}{2}$$`
 
 ]
 .panel[.panel-name[Procedura]
@@ -3912,7 +3912,7 @@ si calcola
 
 `$$z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}$$`
 
-- se `\(z\leq Z_{\frac{\alpha}{2}}\)` o `\(z &gt; Z_{1-\frac{\alpha}{2}}\)` si rifiuta `\(H_0\)`
+- se `\(z\leq z_{\frac{\alpha}{2}}\)` o `\(z &gt; z_{1-\frac{\alpha}{2}}\)` si rifiuta `\(H_0\)`
 - se `\(z_{\frac{\alpha}{2}}&lt; z &lt; z_{1-\frac{\alpha}{2}}\)` non si rifiuta `\(H_0\)`
 
 
@@ -3935,7 +3935,7 @@ Si considera quindi un campione di 100 donne con le caratteristiche specificate 
 - `\(H_0:\mu=190\)`; `\(\sigma=40\)`
 - `\(H_1:\mu\neq 190\)`; `\(\sigma=40\)` 
 
-`$$z=\frac{\bar{X}-\mu_0}{\frac{\sigma}{\sqrt{n}}}=\frac{181.5-190}{\frac{40}{\sqrt{100}}}=-2.12$$`
+`$$z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}=\frac{181.5-190}{\frac{40}{\sqrt{100}}}=-2.12$$`
 
 Per un test a livello di significatività dello 0.05 i valori critici sono `\(Z_{0.975}=1.96\)` e `\(Z_{0.025}=-1.96\)`, per cui, visto che `\(Z=-2.12&lt;-1.96\)` rifiuto `\(H_0\)`.
 
@@ -3947,7 +3947,7 @@ Per un test a livello di significatività dello 0.05 i valori critici sono `\(Z_
 
 Avendo
 
-`$$Z=\frac{\bar{X}-\mu_0}{\frac{\sigma}{\sqrt{n}}}$$`
+`$$z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}$$`
 
 si ha che
 

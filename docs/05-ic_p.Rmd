@@ -990,7 +990,7 @@ Il $p-value$ è quindi la probabilità di ottenere un risultato **eguale o più 
 
 si calcola
 
-$$Z=\frac{\bar{X}-\mu_0}{\frac{\sigma}{\sqrt{n}}}$$
+$$z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}$$
 
 - se $z<z_{\alpha}$ si rifiuta $H_0$
 - se $z\geq z_{\alpha}$ non si rifiuta $H_0$
@@ -1062,7 +1062,7 @@ $$P(rifiutare\ H_0|H_0)=P(Z\leq X_1 \cup Z\geq X_2)=P(Z\leq X_1)+P(Z\geq X_2)=\a
 
 Ipotizzando equiprobabilità sulle due code, si ha che
 
-$$P(z\leq c_1|H_0)=P(Z\geq c_2|H_0)=\frac{\alpha}{2}$$
+$$P(Z\leq c_1|H_0)=P(Z\geq c_2|H_0)=\frac{\alpha}{2}$$
 
 ]
 .panel[.panel-name[Procedura]
@@ -1075,7 +1075,7 @@ si calcola
 
 $$z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}$$
 
-- se $z\leq Z_{\frac{\alpha}{2}}$ o $z > Z_{1-\frac{\alpha}{2}}$ si rifiuta $H_0$
+- se $z\leq z_{\frac{\alpha}{2}}$ o $z > z_{1-\frac{\alpha}{2}}$ si rifiuta $H_0$
 - se $z_{\frac{\alpha}{2}}< z < z_{1-\frac{\alpha}{2}}$ non si rifiuta $H_0$
 
 
@@ -1100,7 +1100,7 @@ Si considera quindi un campione di 100 donne con le caratteristiche specificate 
 - $H_0:\mu=190$; $\sigma=40$
 - $H_1:\mu\neq 190$; $\sigma=40$ 
 
-$$z=\frac{\bar{X}-\mu_0}{\frac{\sigma}{\sqrt{n}}}=\frac{181.5-190}{\frac{40}{\sqrt{100}}}=-2.12$$
+$$z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}=\frac{181.5-190}{\frac{40}{\sqrt{100}}}=-2.12$$
 
 Per un test a livello di significatività dello 0.05 i valori critici sono $Z_{0.975}=1.96$ e $Z_{0.025}=-1.96$, per cui, visto che $Z=-2.12<-1.96$ rifiuto $H_0$.
 
@@ -1112,7 +1112,7 @@ Per un test a livello di significatività dello 0.05 i valori critici sono $Z_{0
 
 Avendo
 
-$$Z=\frac{\bar{X}-\mu_0}{\frac{\sigma}{\sqrt{n}}}$$
+$$z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}$$
 
 si ha che
 
