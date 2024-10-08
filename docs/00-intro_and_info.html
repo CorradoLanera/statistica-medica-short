@@ -1209,7 +1209,7 @@ window.xaringanExtraClipboard = function (selector, text) {
 }
 </script>
     <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x200004e97b149189ef6903091e06271","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"ab13b92fd74b4f8e9477a358d226fe29","expires":1}</script>
     <script>(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.himalaya = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 'use strict';
 
@@ -2548,20 +2548,15 @@ class: hide-count
   + elementi di probabilità
 
 - imparare a comprendere e stimare i parametri di valutazione di un test
-  diagnostico, in particolare sensibilità, specificità
+  diagnostico, in particolare sensibilità, specificità, valori predittivi
+  positivo e negativo
   
 - conoscere e identificare le principali distribuzioni di probabilità
   e i loro ambiti di utilità e applicabilità
 
-- acquisire le basi per la comprensione delle metriche
-  relative ai test statistici; Se rimane tempo, anche per il loro
-  calcolo nel caso di variabili continue e categoriche,
-  come il t-test (per campioni singoli o appaiati) e il test del
-  chi-quadrato
-  
-&lt;!-- - imparare a comprendere e a condurre analisi di relazione tra più --&gt;
-&lt;!--   variabili, in particolare tramite la regressione e la correlazione. --&gt;
-  
+- acquisire le basi per la comprensione, il calcolo e l&#39;interpretazione delle
+  metriche relative ai test statistici per variabili continue,
+  come il t-test, del p-value e degli intervalli di confidenza per una stima.
 
 
 ---
@@ -2569,11 +2564,9 @@ class: hide-count
 
 # .orange[Requisiti]
 
-- competenze di aritmetica di base e di _insiemistica_ (richiamate comunque durante il corso)
+- competenze di aritmetica di base (somma, sottrazione, moltiplicazione, divisione, potenza, radice) e di _insiemistica_ (intersezione, unione, complemento; and, or, not).
 
 - disponibilità a intervenire e partecipare attivamente alle lezioni
-
-- (autonomia nell&#39;utilizzo di un computer)
 
 
 ---
@@ -2583,7 +2576,7 @@ class: hide-count
 # .orange[Lezioni]
 
 
-- Modalità: in presenza, 75% obbligatorio minimo
+- Modalità: in presenza, **75% obbligatorio** (minimo)
 
 - Materiale didattico: Moodle [bit.ly/statmed-cl-corsi](https://bit.ly/statmed-cl-corsi)
 
@@ -2597,7 +2590,7 @@ class: hide-count
 &lt;small&gt;
 In sintesi: potete condividere, modificare, utilizzare il materiale
 liberamente e gratuitamente per qualsiasi fine, a patto di attribuire
-adeguata paternalità al materiale che producete ma senza alcuna mia
+adeguata paternalità al materiale che producete, ma senza alcuna mia
 responsabilità o garanzia su di esso. Siete tenuti comunque a
 distribuirlo (incluse eventuali opere derivate) con analoga ed esplicita
 licenza, e senza ulteriori restrizioni.
@@ -2612,31 +2605,43 @@ class: hide-count
 ## .orange[Agenda]
 
 &lt;small&gt;
-&lt;small&gt;
-
-
-- Lezione 1: 
+.pull-left[
+- Lezione 1 (3 ore = 135 minuti): 
   + intro al corso
-  + intro a R/RStudio (facoltativo, non oggetto di esame)
-  + statistica descrittiva - prerequisiti e definizioni
+  + statistica descrittiva - prerequisiti, definizioni, localizzazione
+  + statistica descrittiva - dispersione / distribuzione, grafici
+  
+- Lezione 2 (3 ore = 135 minuti):
+  + fondamenti di probabilità
 
-- Lezione 2:
- + Revisione contenuti precedenti + domande, dubbi, perplessità
- + fondamenti di probabilità
+&gt; pre-esame 1: descrittive (30&#39;)
 
-- Lezione 3:
- + Revisione contenuti precedenti + domande, dubbi, perplessità
- + distribuzioni
+- Lezione 3 (3 ore = 135 minuti):
+  + rischio
+  + test di screening: sensibilità e specificità
+  + test di screening: valori predittivi positivo e negativo
+  + teorema di Bayes (base e generalizzato)
+]
+.pull-right[
+- Lezione 4 (3 ore = 135 minuti):
+  + distribuzioni: modelli discreti
 
-- Lezione 4:
- + Revisione contenuti precedenti + domande, dubbi, perplessità
- + intervalli di confidenza (e p-value)
+&gt; pre-esame 2: screening (30&#39;)
 
-&gt; Ogni 4 ore di lezione previsti 60 minuti di pausa, di norma divisi in 3 pause da 20 minuti ciascuna ogni 45 minuti.
+- Lezione 5 (3 ore = 135 minuti):
+  + distribuzioni: modelli continui
+
+- Lezione 6 (3 ore = 135 minuti):
+  + intervalli di confidenza e p-value
+  
+&gt; pre-esame 3: distribuzioni (30&#39;)
+
+- Lezione 7 (2 ore = 90 minuti):
+  + &gt; pre-esame 4: IC e p-value
+  + revisione e simulazione completa d&#39;esame
+]
 
 &lt;/small&gt;
-&lt;/small&gt;
-
 
 
 ---
@@ -2647,8 +2652,9 @@ class: hide-count
 
 
 Durante il corso saranno offerti esempi ottenuti tramite l&#39;utilizzo dei 
-software R ed RStudio, i quali verranno introdotti brevemente all&#39;inizio 
-del corso.
+software R ed RStudio, i quali NON verranno introdotti durante il corso, ma sarà
+presente nel materiale didattico del materiale introduttivo e di approfondimento
+per chi fosse interessato a studiarli in modo autonomo.
 
 Tali software **non sono oggetto di esame**. Non è richiesto 
 né necessario acquisire competenze nel loro utilizzo o comprensione. Al
@@ -2658,14 +2664,6 @@ tabelle, o numeri di sintesi prodotti).
 Tutto quanto scritto (script) e prodotto (grafici) nel corso delle
 lezioni con tali software sarà aggiunto al materiale didattico a
 disposizione degli studenti.
-
-Detto questo, **.orange[l&#39;utilizzo di tali software sarà comunque consentito]**,
-seppur non richiesto, come supporto per lo svolgimento dell&#39;esame (o
-degli esercizi) per chi lo desiderasse. La scelta è lasciata agli
-studenti e non comporterà valutazioni né di merito né di demerito, e **in
-alcun caso influenzerà la valutazione finale** (se non in misura di un 
-loro utilizzo corretto o errato nel produrre i risultati).
-
 
 Un ambiente di lavoro per ciascuno di voi è attivabile e utilizzabile
 gratuitamente su RStudio Cloud collegandosi all&#39;indirizzo: [bit.ly/statmed-cl-rstudio](https://bit.ly/statmed-cl-rstudio)
@@ -2683,15 +2681,9 @@ class: hide-count
 Tramite i link nella pagina Moodle del corso, sono state attivate e
 messe a disposizione le seguenti risorse:
 
-- **Forum**: spazio libero a disposizione degli studenti per interagire e 
-confrontarsi tra loro sui temi del corso e lo svolgimento degli esercizi
-
-&gt; Utilizzare il forum è utile (al posto/prima) del ricevimento per
-domande (e risposte!) ai vostri dubbi, nell&#39;interesse di ciascuno e tutti
-voi.
-
-- **Esercizi** svolti a fine di ogni lezione (tranne la prima) e inseriti
-altri di autoapprendimento: a disposizione su moodle
+- **Esercizi**:
+  - interattivi durante la lezione
+  - autoapprendimento a disposizione su moodle
 
 
 - **Ricevimento**: 
@@ -2699,12 +2691,12 @@ altri di autoapprendimento: a disposizione su moodle
   - giovedì 17:00 - 19:00
   - venerdì 9:30 - 11:00
   
-25 minuti a sessione, prenotabile con almeno 
-  2 giorni di anticipo, ed entro due settimane, tramite il link:
+25 minuti a sessione, prenotabile con almeno 2 giorni di anticipo,
+ed entro due settimane nel futuro, tramite il link:
   
   [bit.ly/statmed-cl-ricevimento](https://bit.ly/statmed-cl-ricevimento).
   
-&gt; La settimana precedente le sessioni d&#39;esame non è attivo il ricevimento.
+&gt; La settimana precedente le sessioni d&#39;esame NON è attivo il ricevimento.
 
 
 
@@ -2716,37 +2708,35 @@ class: hide-count
 
 # .orange[Esame finale]
 &lt;small&gt;
-L&#39;esame finale sarà composto da **esercizi a risposta multipla**
+L&#39;esame finale sarà composto da 10 **esercizi a risposta multipla** dal valore di 3 punti ciascuno.
 
-&gt; Salvo vincoli con esami dopo il nostro, **non avrà durata prestabilita** (durata prevista per lo svolgimento 2 ore)
+&gt; **non avrà durata prestabilita** (durata prevista per lo svolgimento 2 ore)
 
-Durante lo svolgimento dell&#39;esame sarà concesso l&#39;utilizzo di **qualunque libro di testo cartaceo, appunti personali cartacei, e dei software R ed Rstudio** (messi a disposizione, per chiunque lo desideri, da me, con accesso tramite browser web).
+Durante lo svolgimento è **.orange[concesso]** l&#39;utilizzo di **qualunque libro di testo cartaceo, o appunti personali cartacei**. Sono invece **.orange[proibiti] l&#39;utilizzo di smartphone** o la **comunicazione con terzi**.
 
-Sarà invece **.orange[proibita la navigazione e la ricerca on-line]**, così come **.orange[l&#39;utilizzo di smartphone]** o la **.orange[comunicazione con terzi]**.
+- Una risposta corretta varrà 3 punti.
+- Sarà presente una sola risposta corretta in ciascuna domanda.
+- Una risposta errata sommerà negativamente sul totale in misura pari al punteggio della domanda diviso il numero di opzioni sbagliate possibili (= 3 / (numero risposte - 1)).
+- Sarà presente una domanda &quot;bonus&quot; che varrà 6 punti (portanto il totale a 36). Tale domanda avrà valore (positivo o negativo che sia) solamente dopo aver raggiunto i 18/30 con le altre domande, e in alcun caso potrà dare o togliere la sufficienza.
 
-Una risposta errata sommerà negativamente sul totale in misura pari al punteggio attribuito alla domanda, diviso per il numero di opzioni sbagliate selezionabili.
+Il punteggio totale dell&#39;esame sarà dunque di 36/30. Superato totalizzandone
+almeno 18/30. La lode è assegnata con un totale di almeno 31/30 punti.
 
-Sarà presente una domanda &quot;bonus&quot; che varrà 6 punti (portanto il totale a 36). Tale domanda avrà valore (positivo o negativo che sia) solamente dopo aver raggiunto i 18/30 con le altre domande, e in alcun caso potrà togliere la sufficienza.
-
-Il punteggio totale dell&#39;esame è dunque di 36/30. Superato totalizzandone
-almeno 18/30. La lode è assegnata solo (e sempre) in presenza di un
-esame perfetto, cioè privo di errori e con un totale di almeno 31/30 ottenuti.
-
+#### .orange[Esami parziali]
+Ogni due lezioni (al termine della II, IV, e VI; e prima della VII, l&#39;ultima), sarà possibile (opzionale) eseguire una prova parziale sui contenuti della/e lezione/i precedente/i. Le prime tre prove dureranno 30 minuti, e avranno un valore di massimo 6 punti ciascuna, l&#39;ultima 60  minuti, per un valore massimo di 12 punti. Chi deciderà di svolgerle, tutte o in parte, al termine del corso potrà decidere se farsi riconoscere la somma dei punteggi totalizzati in luogo dell&#39;esame finale, o sostenerlo in maniera completa e tradizionale. (non sono previste soluzioni intermedie o ibride) 
 
 ---
 class: hide-count
 
 # .orange[Suggerimenti]
 
-- Discutete tra voi (anche sul forum) punti di vista, dubbi, ed esercizi.
+- Discutete tra voi punti di vista, dubbi, ed esercizi.
 
 - Utilizzate il ricevimento per chiarimenti che non siete riusciti a
-risolvere in gruppo.
+risolvere soli o in gruppo.
 
-- Esplorate (e proponete) esercizi con dati anche sui vostri ambiti
-  di interesse.
+- Esplorate esercizi con dati anche sui vostri ambiti di interesse.
   
-&gt; Non sottovalutate l&#39;esame confondendo la mia disponibilità a darvi tutto il supporto che ritenete utile (prima dell&#39;esame)!
 
 ---
 class: hide-count
