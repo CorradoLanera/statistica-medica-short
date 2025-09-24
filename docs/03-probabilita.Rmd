@@ -650,7 +650,7 @@ knitr::kable(catarrata)
 .panel[.panel-name[Soluzione]
 La percentuale di popolazione (o probabilità, su tale popolazione) $P(B)$ per l'evento $B$ di sviluppare catarrata a 5 anni equivale, per il teorema delle .orange[probabilità totali], alla somma delle probabilità di svilupparla per ciascuna classe di età (che rappresentano un insieme **esaustivo** a elementi **mutuamente disgiunti**) pesate per la probabilità di appartenere in tali classi.
 ]
-.panel[.panel-name[Conti Naturali]
+.panel[.panel-name[Conti]
 <small>
 ```{r, echo=FALSE}
 tibble::tibble(
@@ -673,9 +673,8 @@ $$\begin{split}P(B)& = \sum_{i=1}^4 P(B|A_i)P(A_i)\\& =
 e il numero stimato di persone con cataratta sarà: $5000 \times 0.052 \simeq 260$.
 persone.
 </small>
-].panel[.panel-name[R Code]
 
-```{r}
+```{r, include=FALSE}
 p_cataratta5y <- sum(
     catarrata$p_classe * catarrata$p_catarrata5y_classe
   ) |> 
@@ -684,8 +683,6 @@ p_cataratta5y
 
 5000 * p_cataratta5y
 ```
-
-
 ]
 ]
 
@@ -917,18 +914,6 @@ Sostituendo:
 $$(PV^+ = )\ P(M|T) = \frac{P(T|M)P(M)}{P(T|M)P(M)+P(T|\bar{M})P(\bar{M})}$$
 
 ---
-class: inverse, middle
-
-## .orange[Sondaggio]
-
-Per me: [Bayes](https://app.wooclap.com/events/STATMEDBAYES/0)
-
-Per voi: <img src="img/bit.ly_statmed-sondaggio-bayes.png", width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-bayes](https://bit.ly/statmed-sondaggio-bayes)
-
-
-
-
----
 # .orange[Teorema di Bayes]: esempio
 
 
@@ -977,6 +962,35 @@ $$\begin{split}PV^-& = \frac{SPEC\cdot(1 - prev)}{SPEC\cdot(1 - prev) + (1- SENS
 ]
 
 ---
+
+# Approfondimento
+
+La formula "tradizionale" frequentista per VPN (analoga VPN)
+
+$$VPP = \frac{VP}{VP + FP}$$
+
+Dove $VP$ è il numero di veri positivi (numero di volte che il test ha dato esito positivo correttamente) e $FP$ il numero di falsi positivi (numero di volte che il test ha dato esito positivo erroneamente). Questo, dunque, ipotizzando di avere il dato certo del numero di veri e falsi positivi. 
+
+Noi usiamo quella bayesiana, perchè:
+
+- esprime e mostra  bene il concetto di probabilità condizionata
+
+- opera un cambio di prospettiva: dal controllo dell'incertezza su una _predizione_ sul futuro, rispetta a una descrizione statica definita di dati già osservati.
+
+**SE** usati bene, in un certo senso, numericamente, sono equivalenti; per approfondire: https://rpubs.com/CorradoLanera/vpp-freq-bayes-ita
+
+
+---
+class: inverse, middle
+
+## .orange[Sondaggio]
+
+Per me: [Bayes](https://app.wooclap.com/events/STATMEDBAYES/0)
+
+Per voi: <img src="img/bit.ly_statmed-sondaggio-bayes.png", width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-bayes](https://bit.ly/statmed-sondaggio-bayes)
+
+
+---
 # .orange[Teorema di Bayes]: generalizzazione
 
 **Siano**
@@ -986,7 +1000,6 @@ $$\begin{split}PV^-& = \frac{SPEC\cdot(1 - prev)}{SPEC\cdot(1 - prev) + (1- SENS
 **Allora**, per ciascun $i \in \{1, \dots, k\}$:
 
 $$P(M_i|T) =\frac{P(T|M_i)P(M_i)}{\sum_{j=1}^k P(T|M_j)P(M_j)}$$
-
 
 
 ---
@@ -1067,15 +1080,6 @@ $$P(M_3|T) = \frac{0.9(0.005)}{0.001(0.98)+0.9(0.015)+0.9(0.005)}=0.237$$
 
 
 
-
-
-
----
-class: middle, center, hide-count, inverse
-
-# .orange[link al _vostro_ cloud:]
-
-[https://bit.ly/statmed-cl-rstudio](https://bit.ly/statmed-cl-rstudio)
 
 ---
 class: inverse

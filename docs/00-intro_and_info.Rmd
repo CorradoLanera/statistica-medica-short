@@ -160,33 +160,21 @@ Corrado Lanera | [**Unità di Biostatistica, Epidemiologia e Salute Pubblica**](
 class: hide-count
 
 
-# .orange[Scopo]
-
-- apprendere le conoscenze teoriche di base della statistica medica
-
-- essere in grado di approcciarsi alla ricerca scientifica
-
----
-class: hide-count
-
-
 # .orange[Obiettivi]
 
-- imparare le definizioni e gli operatori base della statistica medica,
+- imparare le **definizioni** e gli **operatori** base della statistica medica,
  in particolare riguardo:
  
-  + analisi descrittiva dei dati
-  + elementi di probabilità
+  + **analisi descrittiva** dei dati
+  + elementi di **probabilità**
 
-- imparare a comprendere e stimare i parametri di valutazione di un test
-  diagnostico, in particolare sensibilità, specificità, valori predittivi
-  positivo e negativo
+- imparare a comprendere e stimare i parametri di valutazione di un **test diagnostico**, in particolare **sensibilità**, **specificità**, **valori predittivi**, **positivo e negativo**
   
-- conoscere e identificare le principali distribuzioni di probabilità
+- conoscere e identificare le principali **distribuzioni di probabilità**
   e i loro ambiti di utilità e applicabilità
 
 - acquisire le basi per la comprensione, il calcolo e l'interpretazione delle
-  metriche relative ai test statistici per variabili continue,
+  metriche relative ai **test statistici** per variabili continue,
   come il t-test, del p-value e degli intervalli di confidenza per una stima.
 
 
@@ -195,9 +183,9 @@ class: hide-count
 
 # .orange[Requisiti]
 
-- competenze di aritmetica di base (somma, sottrazione, moltiplicazione, divisione, potenza, radice) e di _insiemistica_ (intersezione, unione, complemento; and, or, not).
+- **aritmetica** di base (somma, sottrazione, moltiplicazione, divisione, potenza, radice)
 
-- disponibilità a intervenire e partecipare attivamente alle lezioni
+- **operatori tra insiemi** (appartenenza, intersezione, unione, complemento; and, or, not).
 
 
 ---
@@ -213,9 +201,10 @@ class: hide-count
 
 - Portale accesso slide: [bit.ly/statmed-cl-corsi](https://bit.ly/statmed-cl-corsi)
 
-- Utilizzo del materiale del corso e suoi derivati: consentite e libero
-  sotto licenza 
-  [cc-by 4.0](https://creativecommons.org/licenses/by/4.0/deed.it).
+
+## Licenza
+
+Utilizzo del materiale e suoi derivati: consentito e libero sotto licenza  [cc-by 4.0](https://creativecommons.org/licenses/by/4.0/deed.it).
   
 <br>
 <small>
@@ -237,6 +226,7 @@ class: hide-count
 
 <small>
 .pull-left[
+
 - Lezione 1 (3 ore = 135 minuti): 
   + intro al corso
   + statistica descrittiva - prerequisiti, definizioni, localizzazione
@@ -245,19 +235,16 @@ class: hide-count
 - Lezione 2 (3 ore = 135 minuti):
   + fondamenti di probabilità
 
-> pre-esame 1: descrittive (30')
-
 - Lezione 3 (3 ore = 135 minuti):
   + rischio
   + test di screening: sensibilità e specificità
   + test di screening: valori predittivi positivo e negativo
   + teorema di Bayes (base e generalizzato)
 ]
+
 .pull-right[
 - Lezione 4 (3 ore = 135 minuti):
   + distribuzioni: modelli discreti
-
-> pre-esame 2: screening (30')
 
 - Lezione 5 (3 ore = 135 minuti):
   + distribuzioni: modelli continui
@@ -265,10 +252,7 @@ class: hide-count
 - Lezione 6 (3 ore = 135 minuti):
   + intervalli di confidenza e p-value
   
-> pre-esame 3: distribuzioni (30')
-
 - Lezione 7 (2 ore = 90 minuti):
-  + > pre-esame 4: IC e p-value
   + revisione e simulazione completa d'esame
 ]
 
@@ -279,53 +263,21 @@ class: hide-count
 class: hide-count
 
 
-# .orange[R/Rstudio]
-
-
-Durante il corso saranno offerti esempi ottenuti tramite l'utilizzo dei 
-software R ed RStudio, i quali NON verranno introdotti durante il corso, ma sarà
-presente nel materiale didattico del materiale introduttivo e di approfondimento
-per chi fosse interessato a studiarli in modo autonomo.
-
-Tali software **non sono oggetto di esame**. Non è richiesto 
-né necessario acquisire competenze nel loro utilizzo o comprensione. Al
-contrario, sarà necessario comprenderne e capirne i risultati (grafici,
-tabelle, o numeri di sintesi prodotti).
-
-Tutto quanto scritto (script) e prodotto (grafici) nel corso delle
-lezioni con tali software sarà aggiunto al materiale didattico a
-disposizione degli studenti.
-
-Un ambiente di lavoro per ciascuno di voi è attivabile e utilizzabile
-gratuitamente su RStudio Cloud collegandosi all'indirizzo: [bit.ly/statmed-cl-rstudio](https://bit.ly/statmed-cl-rstudio)
-
-
-
-
-
----
-class: hide-count
-
-
 # .orange[Supporto]
 
-Tramite i link nella pagina Moodle del corso, sono state attivate e
-messe a disposizione le seguenti risorse:
+In .orange[**Moodle**] ([bit.ly/infermieristica-25-moodle](https://bit.ly/infermieristica-25-moodle)), trovate:
 
 - **Esercizi**:
-  - interattivi durante la lezione
-  - autoapprendimento a disposizione su moodle
 
+- **Lavagne** scritte a lezione (ricordatemi di usare quella digitale!)
 
-- **Ricevimento**: 
+- Link per prenotare **ricevimento**  [bit.ly/statmed-cl-ricevimento](https://bit.ly/statmed-cl-ricevimento): 
   - lunedì 9:30 - 11:00 + 17:00 - 19:00
   - giovedì 17:00 - 19:00
   - venerdì 9:30 - 11:00
   
 25 minuti a sessione, prenotabile con almeno 2 giorni di anticipo,
 ed entro due settimane nel futuro, tramite il link:
-  
-  [bit.ly/statmed-cl-ricevimento](https://bit.ly/statmed-cl-ricevimento).
   
 > La settimana precedente le sessioni d'esame NON è attivo il ricevimento.
 
@@ -343,7 +295,13 @@ L'esame finale sarà composto da 10 **esercizi a risposta multipla** dal valore 
 
 > **non avrà durata prestabilita** (durata prevista per lo svolgimento 2 ore)
 
-Durante lo svolgimento è **.orange[concesso]** l'utilizzo di **qualunque libro di testo cartaceo, o appunti personali cartacei**. Sono invece **.orange[proibiti] l'utilizzo di smartphone** o la **comunicazione con terzi**.
+Durante lo svolgimento è **.orange[concesso]** l'utilizzo di:
+
+ - **qualunque libro di testo cartaceo**
+ - **appunti personali cartacei**. 
+ - **tavole statistiche cartacee**
+ - **calcolatrice non scientifica**
+ - **due penne**
 
 - Una risposta corretta varrà 3 punti.
 - Sarà presente una sola risposta corretta in ciascuna domanda.
@@ -353,21 +311,7 @@ Durante lo svolgimento è **.orange[concesso]** l'utilizzo di **qualunque libro 
 Il punteggio totale dell'esame sarà dunque di 36/30. Superato totalizzandone
 almeno 18/30. La lode è assegnata con un totale di almeno 31/30 punti.
 
-#### .orange[Esami parziali]
-Ogni due lezioni (al termine della II, IV, e VI; e prima della VII, l'ultima), sarà possibile (opzionale) eseguire una prova parziale sui contenuti della/e lezione/i precedente/i. Le prime tre prove dureranno 30 minuti, e avranno un valore di massimo 6 punti ciascuna, l'ultima 60  minuti, per un valore massimo di 12 punti. Chi deciderà di svolgerle, tutte o in parte, al termine del corso potrà decidere se farsi riconoscere la somma dei punteggi totalizzati in luogo dell'esame finale, o sostenerlo in maniera completa e tradizionale. (non sono previste soluzioni intermedie o ibride) 
 
----
-class: hide-count
-
-# .orange[Suggerimenti]
-
-- Discutete tra voi punti di vista, dubbi, ed esercizi.
-
-- Utilizzate il ricevimento per chiarimenti che non siete riusciti a
-risolvere soli o in gruppo.
-
-- Esplorate esercizi con dati anche sui vostri ambiti di interesse.
-  
 
 ---
 class: hide-count

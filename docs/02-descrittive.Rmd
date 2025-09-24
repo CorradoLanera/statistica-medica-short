@@ -32,6 +32,7 @@ knitr::opts_chunk$set(
   comment = "",
   out.width = "100%"
 )
+
 library(knitr)
 library(xaringanExtra)
 library(xaringanthemer)
@@ -235,7 +236,7 @@ class: inverse, middle
 
 **Notazioni di base**
 
-**.orange[Unità] statistica e .orange[tipologie] di dati**
+**.orange[tipologie] di dati**
 
 
 
@@ -288,13 +289,12 @@ Sia $C$ una generica costante numerica, allora
 
 $$\sum_{i\in I} (C * x_i) = C * \sum_{i\in I} x_i$$
 
+$$45=(5*2) + (5*3) + (5*4) = \sum_{i=2}^{4} (5 * i) = 5 * \sum_{i=2}^{4} i = 5*(2+3+4)=45$$
+
 
 $$\sum_{i = 1}^N C = N * C$$
 
-Se $a$ e $b$ identificano lo stesso indice, ovvero $a = b$, allora
-
-$$\sum_{i = a}^b x_i = x_a = x_b$$
-
+$$\sum_{i = 1}^3 5 = 5 + 5 + 5 = 3 * 5$$
 
 ---
 # Esempio sommatoria
@@ -326,21 +326,32 @@ cat(paste(ages, collapse = " + "))
 
 come $\sum_{i\in I} age_i =$ `r sum(ages)`.
 
-in R
-```{r}
-set_of_number <- c(
-  55.1, 62.9, 53.1, 76.3, 64.2, 53.3
-)
-sum(set_of_number)
-```
 
 
 ]
 
+
 ---
 # .orange[Unità] statistica
 
-Il soggetto,la _riga_, **.orange[su cui vengono misurate]** le informazioni rilevate (chiamate **variabili**, **features**,**covariate**, ...). 
+**Elemento di base** su cui si compie l’osservazione o la rilevazione dei dati.
+In altre parole, è ciò che si osserva, misura o registra in una ricerca statistica.
+
+📌 Caratteristiche principali:
+
+- È l’oggetto elementare dell’indagine (può essere una persona, una famiglia, un’impresa, un animale, un prodotto, un evento, ecc.).
+- È ben definita e distinguibile da altre unità della popolazione.
+- Su ciascuna unità si rilevano variabili (caratteristiche qualitative o quantitative).
+- L’insieme di tutte le unità statistiche considerate forma la popolazione statistica.
+
+👉 Esempi:
+
+- In un censimento della popolazione: l’unità statistica è l’individuo.
+- In un’indagine sui redditi familiari: l’unità statistica è la famiglia.
+- In uno studio clinico: l’unità statistica è il paziente arruolato.
+
+---
+# .orange[Unità] statistica
 
 <small>
 
@@ -348,26 +359,21 @@ Il soggetto,la _riga_, **.orange[su cui vengono misurate]** le informazioni rile
 kable(epic |> slice_head(n = 10), row.names = FALSE, caption = 'Portion of "EPIC-Norfolk cohort" (Bain et al. 2015)')
 ```
 
-</small>
-
-.orange[Spesso], ma non sempre, si tratta dei pazienti (ma potrebbe essere "un minuto di un paziente, per esempio per dati raccolti da sensori in terapia intensiva").
 
 
 ---
 # .orange[Tipologie] di dati
 
-- .orange[Continue] --- (BMI)
+```{r, echo=FALSE, out.width="90%"}
+include_graphics("img/condis.png")
+```
 
-- .orange[Discrete]
-    + Cardinali --- (Numero sigarette fumate in una settimana: {0, 1, 2, 3, ...})
-    + Categoriche
-    
-         - Binarie --- (Diabete: {"Si=1", "No=0"})
-    
-         - Ordinali --- (Attività fisica: {Mai, Una volta al mese, 1-2 volte a settimana, 3 Volte a                          settimana, Piu' di 3 volte a settimana})
-         - Nominali --- (Farmaci Anti-colesterolo: {No, Statine, Fibrati, Altro})
-    
+---
+# .orange[Tipologie] di dati
 
+```{r, echo=FALSE, out.width="90%"}
+include_graphics("img/distype.png")
+```
 
 
 ---
@@ -407,11 +413,10 @@ Data una variabile $x$, misurata su $n$ soggetti, la media aritmetica
 .orange[campionaria] è pari a
 $$\bar{x} = \frac{1}{N}\sum_{i=1}^N x_i$$
 
-È molto sensibile ai valori estremi, e in tal caso non è una buona
-misura di centralità.
+È molto sensibile ai valori estremi: se ce ne sono non è una buona misura di centralità.
 
-Essendo un operatore lineare, vale
-$$\mbox{se} \quad y_i = c_1x_i+c_2 \quad \forall i \quad \mbox{allora} \quad \bar{y} = c_1\bar{x} + c_2$$
+> Es.: se in questa stanza entra Elon Musk, quale sarebbe la media del saldo dei conti in banca dei presenti (ma anche di tutta Rovigo...)? Sarebbe una buona misura di _centralità_ per tale distribuzione di valori?
+
 
 ---
 class: hide_logo
@@ -428,27 +433,21 @@ ages_db |>
 
 .right-column[
 
-.panelset[
-.panel[.panel-name[Natural]
 $\frac{1}{6}\sum_{i=1}^6 age_i =$ **`r round(mean(ages), 2)`**
 
 <br><br>
-La media è molto sensibile ai .orange[dati estremi]: sostituendo, per esempio, anche solamente il primo valore (55.1) con 20, la media cambia sensibilmente e diviene **`r round(mean(c(20, ages[-1])), 2)`**.
-]
+La media è molto sensibile ai .orange[dati estremi]: sostituendo, per esempio, anche solamente il primo valore (55.1) con 5.51 (ipotizzando un errore di inserimento), la media cambia sensibilmente e diviene **`r round(mean(c(5.51, ages[-1])), 2)`**.
 
-.panel[.panel-name[R Code]
-```{r}
+```{r, include=FALSE}
 age <- c(55.1, 62.9, 53.1, 76.3, 64.2, 53.3)
 sum(age) / length(age)
 mean(age) |> round(2)
 
-# cambiando il primo valore da 55.1 a 20
-c(20, age[-1]) |> 
+# cambiando il primo valore da 5.51 a 20
+c(5.51, age[-1]) |> 
   mean() |> 
   round(2)
 ```
-]
-]
 ]
 
 
@@ -479,17 +478,12 @@ ages_db |>
 
 .right-column[
 
-.panelset[
-.panel[.panel-name[Natural]
-Siccome $n$ è pari (e uguale a 6), la mediana è la media la 3a ( $=6/2$ ) e 4a ( $(6+1)/2$ ) osservazione
-(ordinate!)
-$$\mbox{Mediana} = \frac{55.1 + 62.9}{2} = 59$$
-E anche modificando il primo valore (55.1) con 20, la mediana non cambia
-per nulla, e **resta 59**.
-]
+Siccome $n$ è pari (è 6), la mediana è la media tra la 3a e 4a osservazione (ordinate!)
+$$\mbox{Mediana} = \frac{53.3 + 62.9}{2} = 58.1$$
+E anche modificando il primo valore (55.1) con 5.51, la mediana cambia molto poco, diventando **resta 58.1** (invece di 59).
 
-.panel[.panel-name[R Code]
-```{r}
+```{r, include=FALSE}
+
 # age_sorted <- c(53.1, 53.3, 55.1, 62.9, 64.2, 76.3)
 age_sorted <- sort(age)
 n <- length(age_sorted)
@@ -498,8 +492,6 @@ n <- length(age_sorted)
 median(age)
 median(c(20, age_sorted[-1]))
 ```
-]
-]
 
 ]
 
@@ -521,15 +513,10 @@ ages_db_dispari |>
 
 .right-column[
 
-.panelset[
-.panel[.panel-name[Natural]
 Nel casi in cui N sia dispari (prendiamo per esempio $N = 7$ ), prendiamo
-direttamente il valore centrale (in posizione $4 = (7+1)/2 $ ), ovvero **62.9**.
+direttamente il valore centrale (in posizione $4 = (7+1)/2$ ), ovvero **62.9**.
 
-]
-
-.panel[.panel-name[R Code]
-```{r}
+```{r, include=FALSE}
 age <- c(55.1, 62.9, 53.1, 76.3, 64.2, 53.3, 65.7)
 age_sorted <- sort(age)
 age_sorted
@@ -538,8 +525,6 @@ age_sorted[(n + 1) / 2]
 median(age, type = 2) # default is `type = 7` (for continuity)
 ```
 
-]
-]
 
 ]
 
@@ -569,10 +554,8 @@ include_graphics("img/img2.png")
 
 ---
 # Misure di .orange[centralità]: Moda
-Una moda di una variabile, è ciascuno dei suoi valori che si osserva con
-**.orange[maggiore frequenza]** in un determinato campione.
-
-Una distribuzione può essere *unimodale*, *bimodale*, *trimodale*, ...
+le mode sono ciascuno di valori che si osservano con
+**.orange[massima frequenza]**.
 
 <small>
 
@@ -590,8 +573,6 @@ epic_sigarette |>
 
 .right-column[
 
-.panelset[
-.panel[.panel-name[Natural]
 
 Moda di sigarette fumate al giorno
 ```{r echo=FALSE}
@@ -599,10 +580,8 @@ epic_sigarette |>
   slice_max(n) |> 
   kable()
 ```
-]
 
-.panel[.panel-name[R code]
-```{r}
+```{r, include=FALSE}
 tab_siga <- rep(
     epic_sigarette$sigarette,
     times = epic_sigarette$n
@@ -612,11 +591,7 @@ tab_siga
 
 names(tab_siga)[tab_siga == max(tab_siga)]
 
-```
-]
 
-.panel[.panel-name[R code - bimodale]
-```{r}
 tab_siga <- rep(
     epic_sigarette$sigarette,
     times = epic_sigarette$n
@@ -627,8 +602,9 @@ tab_siga
 names(tab_siga)[tab_siga == max(tab_siga)]
 
 ```
-]
-]
+
+> NOTA: una distribuzione può essere *unimodale*, *bimodale*, *trimodale*, ...
+
 ]
 </small>
 
@@ -666,8 +642,7 @@ summarise(colesterolo, across(everything(), ~diff(range(.x)))) |>
   kable()
 ```
 
-È molto semplice da calcolare ma molto (e unicamente...) sensibile ai
-valori estremi.
+È molto semplice da calcolare ma molto sensibile ai valori estremi.
 
 > Dipende dall'ampiezza campionaria $N$, e **tende ad aumentare** all'aumentare di $N$! (un campione più grande della stessa popolazione avrà estremi più lontani e non più vicini)
 
@@ -719,7 +694,7 @@ summarise(colesterolo, across(everything(), mean)) |>
 .panel[.panel-name[Autoanalitica]
   $\begin{split}s^2& = \frac{(177-200)^2 + \ldots + (226-200)^2}{4}\\& = \frac{1360}{4} = 340\end{split}$
   
-```{r}
+```{r, include = FALSE}
 auto <- colesterolo[["autoanalitica"]]
 sum(
   (auto - mean(auto))^2
@@ -734,13 +709,13 @@ sum(
 .panel[.panel-name[Microenzimatica]
   $\begin{split}s^2& = \frac{(192-200)^2 + \ldots + (209-200)^2}{4}\\& = \frac{158}{4} = 39.5\end{split}$
   
-```{r}
+```{r, include = FALSE}
 micro <- colesterolo[["microenzimatica"]]
 var(micro)
 ```
   $s = \sqrt{39.5} = 6.3$
 
-```{r}
+```{r, include = FALSE}
 sd(micro)
 ```
 
@@ -759,7 +734,7 @@ $$s^2=\frac{(\sum_{i=1}^n x_i^2) - n\bar{x}^2}{n-1}$$
 Per la tecnica autoanalitica si ha
 $$\sum_{i=1}^5 x_i^2 = 177^2+\ldots+226^2=201360$$
 $$s^2 = \frac{201360 - 5 \times 200^2}{4}= 1360/4=340$$
-```{r}
+```{r, include = FALSE}
 n <- length(auto)
 mean_auto <- mean(auto)
 (sum(auto^2) - n * mean_auto^2) / (n - 1)
@@ -790,7 +765,7 @@ epic$cole.tot |>
 ```
 
 Partendo dai dati così espressi in mmol/L: $CV = 1.12/6.07 \times 100 \simeq 18\%$
-```{r}
+```{r, include=FALSE}
 100 * sd(epic$cole.tot) / mean(epic$cole.tot)
 ```
 
@@ -871,20 +846,14 @@ epic_10 |>
 
 2. (Sono valori interi, quindi posti uguale a $k$ e) si calcola la media tra le osservazioni (**ordinate**):
 
-.panelset[
-.panel[.panel-name[Naturale]
   - 10-imo: posizioni 1 e 2 $\frac{23.3 + 24.9}{2} =$ `r mean(c(23.3, 24.9))`
   
   - 90-esimo: posizioni 9 e 10 $\frac{41.6 + 42.6}{2} =$ `r mean(c(41.6, 42.6))`
   
-]
-.panel[.panel-name[R Code]
-```{r}
+```{r, include=FALSE}
 # default type = 7 (continuo in p)
 quantile(epic_10[["bmi"]], probs = c(0.1, 0.9), type = 2)
 ```
-]
-]
 
 ]
 
@@ -917,7 +886,7 @@ epic_bmi_p2 |>
 
 3. Il 20-esimo percentile è il $2$-esimo (secondo) valore (ordinato!); ovvero, **`r epic_bmi_p2$bmi[[2]]`**.
 
-```{r}
+```{r, include=FALSE}
 # default type = 7 (per continuità in p)
 quantile(epic_10[["bmi"]][-10], probs = 0.2, type = 2)
 ```
@@ -1000,7 +969,7 @@ $$\bar{x}_g = \frac{\sum_{i=1}^k f_im_i}{\sum_{i=1}^k f_i}$$
 
 Per il dataset accorpato sui dati di magnesio, è pari a
 $$\bar{x}_g = \frac{13(106)+\ldots+12(352)}{13+\ldots+12}= 26389.5/100 = 263.895$$
-```{r}
+```{r, include=FALSE}
 sum(dt$m * dt$Freq) / sum(dt$Freq)
 weighted.mean(x = dt$m, w = dt$Freq)
 ```
@@ -1017,15 +986,9 @@ $$s_g^2 = \frac{\sum_{i=1}^k f_i(m_i-\bar{x}_g)^2}{(\sum_{i=1}^k f_i)-1} \quad\r
 
 Per il caso del magnesio è pari a
 
-.panelset[
-.panel[.panel-name[Naturale]
 $$\begin{align*}\bar{s}_g^2& = \frac{13(106 - 263.895)^2+\ldots+12(352 - 263.895)^2}{13 + \cdots + 12 - 1}\\& = 611446.1/99 = 6176.224\end{align*}$$
 $$\begin{align*}\bar{s}_g^2& = \frac{[13(106)^2+\ldots+12(352)^2]-100(263.895^2)}{100-1}\\& = 611446.1/99 = 6176.224\end{align*}$$
-]
-.panel[.panel-name[R Code]
-
-.pull-left[
-```{r}
+```{r, include=FALSE}
 w_mean <- weighted.mean(
   x = dt$m,
   w = dt$Freq
@@ -1035,11 +998,6 @@ n <- sum(dt$Freq)
 sum(
   dt$Freq * (dt$m - w_mean)^2
 ) / (n - 1)
-```
-]
-
-.pull-rigth[
-```{r}
 #
 #
 #
@@ -1052,9 +1010,6 @@ sum(
 ) / (n - 1)
 ```
 
-]
-
-]
 ]
 
 ---
@@ -1080,8 +1035,7 @@ class: inverse, middle
 <small>
 L'istogramma è uno stimatore della distribuzione
 
-.panelset[
-```{r panelset = c(source = "ggplot2", output = "Plot"), out.width = "55%"}
+```{r, out.width = "55%", echo=FALSE}
 epic |> 
   slice(101:200) |> 
   ggplot(aes(x = mag, y = ..density..)) +
@@ -1094,7 +1048,6 @@ epic |>
   xlab("Mag [mg/day]")
 
 ```
-]
 </small>
 
 
@@ -1121,21 +1074,25 @@ Se ampiezze tutte uguali, la _forma_ standardizzata ad area unitaria è
 proporzionale a quella con barre di altezza le frequenze
 
 .panelset[
-```{r panelset = c(source = "ggplot2", output = "Plot"), out.width = "50%"}
-epic |> 
-  slice(101:200) |> 
-  ggplot(aes(x = mag, y = ..density..)) +
-  geom_histogram(fill = "royalblue") + 
-  xlab("Mag [mg/day]")
-```
-
-```{r panelset = c(source = "ggplot2", output = "Plot count"), out.width = "50%"}
+.panel[.panel-name[Count]
+```{r, out.width = "50%", echo = FALSE}
 epic |> 
   slice(101:200) |> 
   ggplot(aes(x = mag)) +
   geom_histogram(fill = "royalblue") + 
   xlab("Mag [mg/day]")
 ```
+]
+.panel[.panel-name[Hist]
+```{r, out.width = "50%", echo=FALSE}
+epic |> 
+  slice(101:200) |> 
+  ggplot(aes(x = mag, y = ..density..)) +
+  geom_histogram(fill = "royalblue") + 
+  xlab("Mag [mg/day]")
+```
+]
+
 ]
 </small>
 
@@ -1188,7 +1145,7 @@ sort(epic$mag[101:200])
 - $H$ è la media dell'osservazione $(100 * 3/4)$ª e la $((100 * 3/4) + 1)$ª, ovvero
   $(323.9+324) / 2 = 323.95$
 - i limiti per i valori estremi sono quindi:
-$$x > 323.95 + 1.5 (323.95 - 215.35) = 486.85$$
+$$x > 323.95 + 1.5 * (323.95 - 215.35) = 486.85$$
 $$x < 215.35 - 1.5 * (323.95 - 215.35) = 52.45$$
 - gli outlier sarebbero: 
 $$x > 323.95 + 3 * (323.95 - 215.35) = 649.75$$
@@ -1197,28 +1154,6 @@ $$x < 215.35 - 3 * (323.95 - 215.35) = 0$$
 </small>
 
 
-
----
-# Dati continui: box-plot (mag)
-
-.panelset[
-```{r panelset = c(source = "ggplot2", output = "Plot"), out.width = "60%"}
-epic |> 
-  slice(101:200) |> 
-  ggplot(aes(y = mag)) +
-  geom_boxplot() +
-  geom_point(aes(x = 0, y = mean(mag)), shape = "+", size = 6) +
-  labs(
-    x = "",
-    y = "Mag [mg/die]"
-  ) +
-  theme_bw() +
-  theme(
-    axis.ticks.x = element_blank(),
-    axis.text.x = element_blank()
-  )
-```
-]
 
 
 ---
@@ -1237,76 +1172,40 @@ barre.
   classici)
 
 ---
-# Dati categorici: plot
 
-.panelset[
-```{r panelset = c(source = "ggplot2", output = "Plot"), out.width = "50%"}
-epic |> 
-  ggplot(aes(att.fisica)) +
-  geom_bar() +
-  labs(
-    x = "Attività fisica",
-    y = "N (soggetti)"
-  )
-```
-]
+![](img/undato.png)
 
 ---
-# Dati categorici: grouped
 
-.panelset[
-```{r panelset = c(source = "ggplot2", output = "Plot"), out.width = "50%"}
-epic |> 
-  ggplot(aes(att.fisica, fill = gender)) +
-  coord_flip() +
-  geom_bar(position = "dodge") +
-  labs(
-    x = "Attività fisica",
-    y = "N (soggetti)",
-    fill = "Genere"
-  ) +
-  theme_bw()
-```
-]
+![](img/duedati.png)
+
+---
+
+![](img/tredati.png)
+
+---
+
+![](img/sesnsazionale1.png)
+
+---
+
+![](img/illusioni.png)
+
+---
+
+![](img/sensazionale-2.png)
+
+---
+
+![](img/sensazionale-3.png)
+
 
 
 ---
 
-# Dati categorici: correct
-.panelset[
-```{r panelset = c(source = "ggplot2", output = "Plot"), out.width = "50%"}
-epic |> 
-  mutate(
-    att.fisica = att.fisica |> 
-      fct_collapse(
-        `1-2/sett` = c("1-2 volte a sett.", "1-2 volte a sett"),
-        `3/sett` = c("3 Volte a settimana", "3 Volte a sett."),
-        `1/mese` = "Una volta al mese"
-      ) |> 
-      fct_infreq()
-  ) |> 
-  ggplot(aes(att.fisica)) +
-  coord_flip() +
-  geom_bar() +
-  geom_bar(aes(fill = gender), position = "dodge") +
-  labs(
-    x = "Attività fisica",
-    y = "N (soggetti)",
-    fill = "Genere"
-  ) +
-  theme_bw()
-```
-]
+![](img/sensazionale-4.png)
 
 
-<!-- --- -->
-<!-- # Coppie di dati: continui-continui -->
-
-<!-- --- -->
-<!-- # Coppie di dati: continui-categorici -->
-
-<!-- --- -->
-<!-- # Coppie di dati: categorici-categorici -->
 
 
 ---
@@ -1319,14 +1218,6 @@ Per me: [Grafici](https://app.wooclap.com/events/STATMEDGRAFICI/0)
 Per voi: <img src="img/bit.ly_statmed-sondaggio-grafici.png", width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-grafici](https://bit.ly/statmed-sondaggio-grafici)
 
 
-
-
----
-class: middle, center, hide-count, inverse
-
-# .orange[link al _vostro_ cloud:]
-
-[https://bit.ly/statmed-cl-rstudio](https://bit.ly/statmed-cl-rstudio)
 
 ---
 class: inverse
