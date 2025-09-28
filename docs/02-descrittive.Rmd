@@ -479,7 +479,7 @@ ages_db |>
 .right-column[
 
 Siccome $n$ è pari (è 6), la mediana è la media tra la 3a e 4a osservazione (ordinate!)
-$$\mbox{Mediana} = \frac{53.3 + 62.9}{2} = 58.1$$
+$$\mbox{Mediana} = \frac{55.1 + 62.9}{2} = 59$$
 E anche modificando il primo valore (55.1) con 5.51, la mediana cambia molto poco, diventando **resta 58.1** (invece di 59).
 
 ```{r, include=FALSE}
@@ -1205,7 +1205,28 @@ barre.
 
 ![](img/sensazionale-4.png)
 
+---
 
+# Prima
+
+<img src="img/rmsle-plot.jpg" style="height:55vh; width:auto;" />
+---
+
+# Prima
+
+<img src="img/smape-plot.jpg" style="height:55vh; width:auto;" />
+
+---
+
+# Prima
+
+<img src="img/mae-plot.jpg" style="height:55vh; width:auto;" />
+
+---
+
+# Dopo
+
+<img src="img/error_boxplots_highlight_with_iqr.png" style="height:55vh; width:auto;" />
 
 
 ---
