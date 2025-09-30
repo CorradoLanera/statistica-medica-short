@@ -965,20 +965,21 @@ $$\begin{split}PV^-& = \frac{SPEC\cdot(1 - prev)}{SPEC\cdot(1 - prev) + (1- SENS
 
 # Approfondimento
 
-La formula "tradizionale" frequentista per VPN (analoga VPN)
+La formula "tradizionale" frequentista per VPP (analoga VPN)
 
 $$VPP = \frac{VP}{VP + FP}$$
 
-Dove $VP$ è il numero di veri positivi (numero di volte che il test ha dato esito positivo correttamente) e $FP$ il numero di falsi positivi (numero di volte che il test ha dato esito positivo erroneamente). Questo, dunque, ipotizzando di avere il dato certo del numero di veri e falsi positivi. 
+Dove $VP$ è il numero di **V**eri **P**ositivi (numero di volte che il test ha dato esito positivo correttamente) e $FP$ il numero di **F**alsi **P**ositivi (numero di volte che il test ha dato esito positivo erroneamente). Questo, dunque, ipotizzando di avere il dato certo del numero di veri e falsi positivi su tutta la nostra popolazione. 
 
-Noi usiamo quella bayesiana, perchè:
+Noi usiamo quella bayesiana, perché:
 
 - esprime e mostra  bene il concetto di probabilità condizionata
 
-- opera un cambio di prospettiva: dal controllo dell'incertezza su una _predizione_ sul futuro, rispetta a una descrizione statica definita di dati già osservati.
+- opera un cambio di prospettiva: dal controllo dell'incertezza su una _predizione_ sul futuro, rispetto a una descrizione statica definita di dati già osservati.
 
 **SE** usati bene, in un certo senso, numericamente, sono equivalenti; per approfondire: https://rpubs.com/CorradoLanera/vpp-freq-bayes-ita
 
+> NOTA: se usati male i risultati sono sia diversi che fuorvianti. All'esame suggerisco di non prendere questa _scorciatoia_. (per quanto SE usata bene, porti comunque al risultato numericamente corretto)
 
 ---
 class: inverse, middle
