@@ -325,6 +325,7 @@ class: hide-count
   + Danila Azzolina
   + Dario Gregori
   + Giulia Lorenzoni
+  + Honoria Ocagli
   + Ileana Baldi
   + Luca Vedovelli
   + Matteo Martinato

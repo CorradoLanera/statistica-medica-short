@@ -187,6 +187,7 @@ class: hide-count
   + Danila Azzolina
   + Dario Gregori
   + Giulia Lorenzoni
+  + Honoria Ocagli
   + Ileana Baldi
   + Luca Vedovelli
   + Matteo Martinato
@@ -392,7 +393,7 @@ $$E(X)=0(0.008)+1(0.076)+2(0.265)+3(0.411)+4(0.240) = `r media_ipertensione`$$
 knitr::kable(ipertensione)
 ```
 
-```{r}
+```{r, include=FALSE}
 sum(
   ipertensione[["r"]] * ipertensione[["P(X=r)"]]
 )
@@ -437,14 +438,6 @@ il numero atteso di episodi di episodi di otite nei primi due anni di vita è:
 $$\begin{split}E(X) =\ &0(0.129)\ + \\&1(0.264)\ + \\& 2(0.271)\ + \\&3(0.185)\ + \\&4(0.095)\ + \\&5(0.039)\ + \\& 6(0.017) =\\& `r atteso_otiti` \end{split}$$
 
 ]
-
-.panel[.panel-name[R Code]
-
-```{r}
-sum(otiti[["r"]] * otiti[["P(X=r)"]])
-```
-
-]
 ]
 
 ```{r, echo = FALSE}
@@ -481,13 +474,6 @@ $$0^2(0.129)+\ldots+6^2(0.017)-2.038^2=`r round(var_otiti,3)`$$
 
 ]
 
-.panel[.panel-name[R Code]
-
-```{r}
-sum(otiti[["r"]]^2 * otiti[["P(X=r)"]]) - atteso_otiti^2
-```
-
-]
 ]
 
 
@@ -600,7 +586,7 @@ Si usa la distribuzione binomiale
 
 $$P(X=2)=\binom{5}{2}0.51^2(0.49)^{5-2}=\frac{5 \times 4}{2 \times 1}0.51^2(0.49)^{5-2}=`r round(pbin,3)`$$
 
-```{r}
+```{r, include=FALSE}
 dbinom(x = 2, size = 5, prob = 0.51)
 
 pbinom(q = 2, size = 5, prob = 0.51) -
@@ -640,8 +626,7 @@ $$var(S) = var\left(\sum_{i=1}^n X_i\right) = \sum_{i=1}^nvar(X_i) =^*  \sum_{i=
 ---
 ## .orange[Singolo esperimento]: grafico
 
-.panelset[
-```{r, panelset = TRUE, out.width="60%"}
+```{r, echo=FALSE, out.width="60%"}
 
 db <- tibble(
   p = seq(0, 1, by = 0.001),
@@ -657,15 +642,13 @@ ggplot(db, aes(x = p, y = pq)) +
 
 ```
 
-]
 
 
 
 ---
 ## .orange[10 esperimenti]: grafico
 
-.panelset[
-```{r, panelset = TRUE, out.width="60%"}
+```{r, echo=FALSE, out.width="60%"}
 n <- 10
 k <- seq_len(n)
 p <- c(0.05, 0.5, 0.95)
@@ -687,7 +670,6 @@ ggplot(db, aes(x = k, y = `P(S=k)`,fill = p)) +
 ```
 
 
-]
 
 
 
@@ -754,32 +736,6 @@ $$P(X=0) = e^{-2.3} = `r round(ppois(0, lambda=2.3),3)` \:\:\:\: P(X\geq6) = 1-P
 Su 3 mesi si ha allora che $\mu=4.6 \times 0.25 = `r round(4.6*0.25,3)`$
 
 $$P(X=0) = e^{-1.15} = `r round(ppois(0, lambda=1.15),3)` \:\:\:\: P(X\geq6) = 1-P(X<6)=`r round(1-sum(dpois(0:5, lambda=4.6*0.25)),3)`$$
-
-]
-
-.panel[.panel-name[R Code]
-```{r, eval=FALSE}
-lambda = 4.6
-mesi = c(3, 6)
-t <- mesi / 12
-mu <- lambda * t
-n <- 0:6
-
-db <- crossing(mu, n) |> 
-  mutate(
-    `P(X=n)` = dpois(n, mu),
-    mu = factor(mu)
-  )
-
-ggplot(db, aes(n, `P(X=n)`, fill = mu)) +
-  geom_col(alpha = 0.6) +
-  facet_grid(mu~., scales = "free") +
-  scale_fill_(
-    labels = paste0(lambda, " * ", t),
-    values = c("blue", "red")
-  ) +
-  theme_bw()
-```
 
 ]
 
@@ -852,9 +808,6 @@ Si cerca quindi la probabilità di osservare almeno 7 morti  secondo una Poisson
 
 $$\begin{align}P(X \geq 7) &= 1 - P(X\leq 6)\\& = 1-(e^{-5.8}5.8^0/0!)+ \ldots + (e^{-5.8}5.8^6/6!)\\& = `r round(1-sum(dpois(0:6, lambda=5.8)),3)`\end{align}$$
 
-```{r,echo=FALSE}
-1 - sum(dpois(0:6, lambda = 5.8))
-```
 
 
 per cui le morti non sembrano in eccesso in questo gruppo di lavoratori.
@@ -869,9 +822,7 @@ La motivazione è data dalla maggiore semplicità computazionale della distribuz
 
 Una regola approssimativa è di usare l'approssimazione quando $n\geq 100$ e $p\leq 0.01$
 
-.pull-left[
-
-```{r,eval=FALSE}
+```{r,include=FALSE}
 n <- 100
 p <- 0.01
 tibble(
@@ -881,9 +832,6 @@ tibble(
 )
 ```
 
-]
-
-.pull-right[
 
 ```{r,echo=FALSE}
 n <- 100
@@ -896,7 +844,6 @@ tibble(
   kable()
 ```
 
-]
 
 
 
@@ -1053,18 +1000,40 @@ text(67,0.0005,"P(X < 88)",cex=1.2)
 ---
 # Valore .orange[atteso] e .orange[varianza]
 
-Il valore atteso, indicato con $E(X)$, o $\mu$ è la **media** dei valori della variabile aleatoria $X$ (ovvero, la somma di prodotti tra i valori che può assumere e le corrispondenti probabilità)
+L’**atteso** $E(X)$ (o $\mu$) è la media dei valori di $X$: somma pesata nel discreto, integrale nel continuo
 
-<br>
+$$E(X)=\int_{-\infty}^{\infty} x f(x)\,dx.$$
 
-La **varianza**, indicata con $\mbox{Var}(X)$ o $\sigma^2$, è la media della distanza al quadrato di ogni valore della variabile aleatoria $X$ dal suo valore atteso.
+La **varianza** $\text{Var}(X)$ (o $\sigma^2$) è la media dello scarto quadratico dall’atteso:
 
-<br>
+$$\text{Var}(X)=\int_{-\infty}^{\infty} (x-E[X])^2 f(x)\,dx.$$
 
-La **deviazione standard** è pari alla radice quadrata della varianza.
+La **deviazione standard** è $\sqrt{\text{Var}(X)}$.
 
+La **moda** è il punto di densità massima
+
+La **mediana** divide in due la distribuzione, ovvero $P(X\leq m)=\frac{50}{100}=\frac{1}{2}$.
+
+I **percentili** generalizzano quest’idea, ovvero $P(X\leq p_k)=\frac{k}{100}$.
+
+---
 
 <img src="img/mode-med-mean-normal-dist.png"/>
+
+---
+
+# .orange[Parametri] vs .orange[Statistiche]
+
+| Simbolo | Nome                   | Popolazione             | Campione                    |
+|---------|------------------------|-------------------------|-----------------------------|
+| $\mu$   | Valore atteso / media  | centro teorico          | $\bar{x}$ = media campionaria |
+| $\sigma^2$ | Varianza             | variabilità teorica     | $s^2$ = varianza campionaria|
+| $\sigma$   | Deviazione standard | disp. media teorica     | $s$ = dev. std. campionaria |
+
+- **Parametri** ($\mu$, $\sigma^2$, $\sigma$): grandezze vere della popolazione (in genere ignote).  
+
+- **Statistiche** ($\bar{x}$, $s^2$, $s$): stime calcolate dai dati campionari.
+
 
 ---
 class: inverse, middle
@@ -1083,12 +1052,17 @@ class: inverse, middle
 
 # .center[Distribuzione **.orange[normale]**]
 
+.pull-left[
 - **localizzazione**
 - **forma**
 - **simmetria**
 - **percentili**
 - **trasformazioni**
-
+]
+.pull-right[
+<img src="img/not-normal.png"/>
+[Artwork by @allison_horst](https://twitter.com/allison_horst)
+]
 
 
 
@@ -1097,8 +1071,6 @@ class: inverse, middle
 ---
 # Distribuzione .orange[Normale]: definizione
 
-
-La distribuzione normale è definita dalla sua distribuzione di densità di probabilità, pari a:
 
 $$f(x) = \frac{1}{\sqrt{2\pi\sigma}}e^{-\frac{1}{2\sigma^2}(X-\mu)^2} \:\:\:\: -\infty<x<\infty$$
 
@@ -1125,14 +1097,23 @@ axis(1, at=1, expression(mu+sigma),cex.axis=1.5)
 
 ```
 
+La distribuzione normale è definita dalla sua distribuzione di densità di probabilità:
 
 
 ---
-# Distribuzione Normale: .orange[localizzazione]
+# Distribuzione Normale:<br>.orange[parametri]
+
+$$f(x) = \frac{1}{\sqrt{2\pi\sigma}}e^{-\frac{1}{2\sigma^2}(X-\mu)^2} \:\:\:\: -\infty<x<\infty$$
 
 Una distribuzione normale con media $\mu$ e varianza $\sigma^2$ si indica come $N(\mu, \sigma^2)$.
 
 I suoi parametri modellano la locazione e la forma della distribuzione
+
+---
+# Distribuzione Normale: .orange[localizzazione]
+
+$$f(x) = \frac{1}{\sqrt{2\pi\sigma}}e^{-\frac{1}{2\sigma^2}(X-\mu)^2} \:\:\:\: -\infty<x<\infty$$
+
 ```{r, echo=FALSE, fig.height=5, fig.width=12, fig.align='center', message=FALSE, warning=FALSE}
 x   <- seq(-7,3,length=1000)
 y   <- dnorm(x,mean=0, sqrt(1))
@@ -1159,9 +1140,9 @@ axis(1, at=-4, expression(mu[1]-sigma),cex.axis=1.5)
 
 
 ---
-# Distribuzione Normale: .orange[forma]
+# Distribuzione Normale:<br>.orange[forma]
 
-
+$$f(x) = \frac{1}{\sqrt{2\pi\sigma}}e^{-\frac{1}{2\sigma^2}(X-\mu)^2} \:\:\:\: -\infty<x<\infty$$
 
 ```{r, echo=FALSE, fig.height=5, fig.width=12, fig.align='center', message=FALSE, warning=FALSE}
 x   <- seq(-3,3,length=1000)
@@ -1250,13 +1231,8 @@ axis(1, at=-2.576,-2.576,cex.axis=1.5,col.axis="green")
 ---
 ## Distribuzone Standard: cumulativa
 
-La distribuzione cumulativa di una normale standard è indicata da
-
-$\Phi(x) = P(X\leq x)$
-
-dove $X$ segue una distribuzione $N(0,1)$
-
-```{r, echo=FALSE, fig.height=5, fig.width=12, fig.align='center', message=FALSE, warning=FALSE}
+La distribuzione cumulativa per $N(0, 1)$ è indicata da $\Phi(x) = P(X\leq x)$
+```{r, echo=FALSE, fig.height=4, fig.width=12, message=FALSE, warning=FALSE}
 x   <- seq(-3,3,length=1000)
 y   <- dnorm(x,mean=0, sqrt(1))
 plot(x,y, type="l", lwd=2,xlim=c(-3,3),ylab=expression(Density),xlab = "Standard Normal distributiion",xaxt="n")
@@ -1267,28 +1243,7 @@ polygon(cord.x,cord.y,col="grey90")
 text(0,0.2, "Pr(X <= x)",cex = 2)
 axis(1, at=1.2,"x",cex.axis=1.5)
 ```
-
-
----
-# Distribuzione cumulativa Standard: applicazione
-
-La rappresentazione cumulativa può aiutare a calcolare le probabilità di una $N(0,1)$
-
-Si calcoli $P(X \leq 1.96)$ e $P(\leq 1)$
-si ha che
-
-.pull-left[
-$$\Phi(1.96) = 0.975 \:\:\:\:  \Phi(1) = 0.8413$$
-
-]
-.pull-right[
-```{r}
-pnorm(c(1.96, 1))
-```
-]
-
-.center[
-```{r, echo=FALSE, fig.height=4, fig.width=12, fig.align='center', message=FALSE, warning=FALSE}
+```{r, echo=FALSE, fig.height=4, fig.width=12, message=FALSE, warning=FALSE}
 x   <- seq(-3,3,length=1000)
 y   <- pnorm(x,mean=0, sqrt(1))
 plot(x,y, type="l", lwd=2,xlim=c(-3,3), col="blue",ylab=expression(Phi[x]),xlab = " CDF Standard Normal distributiion",xaxt="n")
@@ -1315,7 +1270,16 @@ text(1.64,0.02,round(pnorm(1.96,mean=0, sqrt(1)),3),cex = 1.5)
 
 ```
 
-]
+---
+# Distribuzione cumulativa Standard: applicazione
+
+La cumulata $\Phi(x)$ può aiutare a calcolare le probabilità di una $N(0,1)$
+
+Trovare (non _calcolare_) $P(X \leq 1.96)$ e $P(X \leq 1)$... cerco i valori nelle tavole:
+
+$$\Phi(1.96) = 0.975$$
+
+$$\Phi(1) = 0.8413$$
 
 ---
 ### Distribuzione Standard: strategia simmetrica
@@ -1355,12 +1319,6 @@ Per calcolare $P(X \leq -1.96)$ si ha che:
 
 $$\Phi(-1.96) = P(X\geq 1.96) = 1 - P(X\leq 1.96) = 0.0250$$
 
-```{r}
-pnorm(1.96)
-1 - pnorm(1.96)
-pnorm(-1.96)
-```
-
 ---
 ### Normale Standard: .orange[FVC]
 <small>
@@ -1390,14 +1348,6 @@ Di prassi, un bambino sarà considerato con un sistema polmonare _normale_ se pr
 $$\begin{split}P(-1.5 \leq X \leq 1.5)& = 1 - (P(X \leq -1.5) + P(X \geq 1.5))\\& = 1 - 2*P(X \leq -1.5)\\& = 1 - 2 * 0.0668\\& = 0.8664\end{split}$$
 
 ]
-.panel[.panel-name[R Code]
-
-```{r}
-1 - 2 * pnorm(-1.5)
-```
-
-]
-
 ]
 
 
@@ -1518,15 +1468,6 @@ lines(c(1,1),c(-0.1,dnorm(1,mean=0, sqrt(1))),lty=2)
 ]
 
 
----
-class: inverse, middle
-
-## .orange[Sondaggio]
-
-Per me: [Normale](https://app.wooclap.com/events/STATMEDNORMALE/0)
-
-Per voi: <img src="img/bit.ly_statmed-sondaggio-normale.png", width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-normale](https://bit.ly/statmed-sondaggio-normale)
-
 
 ---
 # Caso di studio: .orange[ipertensione]
@@ -1542,14 +1483,6 @@ Si vuole la probabilità di essere borderline per un maschio in quella classe di
 $$\begin{split}P(90 \leq X \leq 95)& = P \left ( \frac{90-80}{12} \leq Z \leq \frac{95-80}{12}\right )\\& = \Phi[1.25]-\Phi[0.83]\\& = 0.8944-0.7967\\& = 0.098\end{split}$$
 ]
 
-.panel[.panel-name[R Code]
-```{r}
-pnorm(c(1.25, 0.83))
-
-pnorm(1.25) - pnorm(0.83)
-
-```
-]
 ]
 
 
@@ -1579,14 +1512,6 @@ $$\begin{split}P(X > 12)& = 1 - P \left ( Z < \frac{12-8}{2}\right )\\& = 1-\Phi
 \end{split}$$
 ]
 
-.panel[.panel-name[R Code]
-```{r}
-zp <- (12 - 8) / 2
-zp # > 0.5
-pnorm(zp)
-1 - pnorm(zp)
-```
-]
 ]
 
 ```{r, echo = FALSE}
@@ -1614,15 +1539,6 @@ La probabilità di essere a rischio è pari a?
 $$\begin{split}P(X < 40)& = P \left ( Z < \frac{40-75}{17}\right )\\&= \Phi[`r round((40-75)/17,3)`]\\& = 1-\Phi[`r round(-((40-75)/17),3)`]\\& = 1-`r round(pnorm(-((40-75)/17)),3)`\\& = `r round(1-pnorm(-((40-75)/17)),3)`\end{split}$$
 ]
 
-.panel[.panel-name[R Code]
-
-```{r}
-zp <- (40 - 75) / 17
-zp # < 0
-1 - pnorm(-zp)
-```
-
-]
 ]
 
 
@@ -1651,9 +1567,10 @@ Se il range di normalità è tra i 12 ed i 20 mm Hg, la probabilità di essere n
 $$\begin{split}P(12 < X < 20)& = P \left (\frac{12-16}{3}< Z < \frac{20-16}{3}\right )\\& = \Phi[4/3]-\Phi[-4/3]\\& = \Phi[1.33]-(1-\Phi[1.33])\\& = `r pnorm(4/3)-(1-pnorm(4/3))`\end{split}$$
 ]
 
-.panel[.panel-name[R Code]
 
-```{r}
+
+.panel[.panel-name[grafico]
+```{r, include=FALSE}
 zp_high <- (20 - 16) / 3
 zp_low <- (12 - 16) / 3
 zp_low # < 0 (zp_low = -zp_high)
@@ -1663,9 +1580,6 @@ pnorm(zp_high) - pnorm(zp_low)
 ```
 
 
-]
-
-.panel[.panel-name[grafico]
 ```{r, echo=FALSE, fig.height=7, fig.width=12, fig.align='center', message=FALSE, warning=FALSE}
 par(mfrow=c(2,1))
 x   <- seq(-3,3,length=1000)
@@ -1705,13 +1619,22 @@ countdown(minutes = 2, warn_when = 30, play_sound = TRUE,
 
 
 
+---
+class: inverse, middle
+
+## .orange[Sondaggio]
+
+Per me: [Normale](https://app.wooclap.com/events/STATMEDNORMALE/0)
+
+Per voi: <img src="img/bit.ly_statmed-sondaggio-normale.png", width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-normale](https://bit.ly/statmed-sondaggio-normale)
+
 
 
 
 ---
 class: inverse, middle
 
-# .center[**.orange[Approssimazioni]** alla distribuzione normale]
+# .center[**.orange[Approssimazioni]** alla distribuzione normale<br><br>(OPZIONALE - no esame)]
 
 
 ---
@@ -1797,7 +1720,8 @@ Si ha che $np = 25 * 0.4 = 10$, $npq = 25 * 0.4 * 0.6 = 6$, quindi la distribuzi
 
 $$\begin{split}P(6.5 \leq Y \leq 12.5)& = \Phi\left(\frac{12.5-10}{\sqrt{6}} \right)-\Phi\left(\frac{6.5-10}{\sqrt{6}} \right)\\& = \Phi(1.02)-\Phi(-1.43)\\& = \Phi(1.02)-[1-\Phi(1.43)]\\& = \Phi(1.02)+\Phi(1.43)-1\\& = 0.8463 + 0.9235 - 1\\& = 0.770\end{split}$$
 ]
-.panel[.panel-name[R Code]
+
+.panel[.panel-name[Grafico]
 
 ```{r}
 n <- 25
@@ -1816,9 +1740,6 @@ zp_low # < 0
 pnorm(zp_high) - (1 - pnorm(-zp_low))
 ```
 
-
-]
-.panel[.panel-name[Grafico]
 ```{r, echo=FALSE, fig.height=5, fig.width=13, fig.align='center', message=FALSE, warning=FALSE}
 
 x   <- seq(0,25,length=1000)
@@ -1876,25 +1797,6 @@ $$\begin{split}\Phi\left(\frac{75.5-60}{\sqrt{24}} \right)-\Phi\left(\frac{49.5-
 ]
 
 
-.panel[.panel-name[R Code]
-```{r}
-np <- 100 * 0.6 # 60
-npq <- np * (1 - 0.6)
-sigma <- sqrt(npq)
-
-yp_low <- 50 - 0.5 # 45
-yp_high <- 75 + 0.5
-
-zp_low <- (yp_low - np) / sigma # < 0
-zp_high <- (yp_high - np) / sigma
-
-pnorm(zp_high) - (1 - pnorm(-zp_low))
-```
-
-
-]
-
-
 ]
 
 
@@ -1934,7 +1836,11 @@ $$\Phi\left(\frac{49.5-60}{\sqrt{24}} \right)=\Phi(-2.14)=1-0.9840=0.016$$
 ]
 
 
-.panel[.panel-name[R Code]
+
+
+
+.panel[.panel-name[Grafico]
+
 ```{r}
 np <- 100 * 0.6 # 60
 npq <- np * (1 - 0.6)
@@ -1949,10 +1855,6 @@ zp_high <- (yp_high - np) / sigma
 (1 - pnorm(zp_high)) + (1 - pnorm(-zp_low))
 ```
 
-
-]
-
-.panel[.panel-name[Grafico]
 
 ```{r, echo=FALSE, fig.height=5, fig.width=14, fig.align='center', message=FALSE, warning=FALSE}
 
