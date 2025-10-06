@@ -1,0 +1,21 @@
+# Probabilità - Teorema della somma
+
+## **VALUTAZIONE DEL TASSO DI POSITIVITÀ COVID-19 NELL'OSPEDALE**
+
+Sei un membro del team di controllo infezioni di un grande ospedale e ti viene chiesto di stimare il tasso complessivo di positività al COVID-19 tra i pazienti ricoverati. Non tutti i reparti hanno la stessa incidenza di casi, a causa delle diverse tipologie di pazienti e procedure.
+
+Per facilitare l'analisi, l'ospedale è stato suddiviso in cinque macro-reparti principali, per i quali sono disponibili i seguenti dati:
+
+|  |  |  |
+|------------------------|------------------------|------------------------|
+| **Reparto** | **Porzione pazienti totali** | **Tasso positività CiViD-19 nel reparto** |
+| Medicina Interna | 35% (0.35) | 20% (0.20) |
+| Chirurgia | 25% (0.25) | 8% (0.08) |
+| Pediatria | 15% (0.15) | 12% (0.12) |
+| Terapie Intensive | 10% (0.10) | 40% (0.40) |
+| Altri Reparti | 15% (0.15) | 5% (0.05) |
+
+## Domande
+
+1.  Calcolare il tasso di positività complessivo al COVID-19 per l'intero ospedale, utilizzando il Teorema della Probabilità Totale.
+2.  Qual è la probabilità che un paziente scelto a caso nell'ospedale sia positivo al COVID-19?

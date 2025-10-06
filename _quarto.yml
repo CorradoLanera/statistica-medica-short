@@ -1,0 +1,45 @@
+project:
+  type: book
+  resources:
+    - docs/*.html
+    - docs/img/*
+    - docs/xaringan-themer.css
+    - docs/_config.yml
+
+toc: true
+number-sections: true
+bibliography: references.bib
+
+
+execute:
+  freeze: auto  # re-render only when source changes
+  cache: true
+
+book:
+  title: "Esercizi di Statistica Medica"
+  subtitle: "Materiale di supporto ai corsi per le Professioni Sanitarie – Università di Padova"
+  author: "Corrado Lanera"
+  date: ""
+  language: it
+  page-navigation: true
+  downloads: [pdf, epub]
+  sharing: [twitter, facebook]
+  chapters:
+    - index.qmd
+    - esercizi/descrittive_1.qmd
+    - esercizi/probabilita_somma.qmd
+    - esercizi/probabilita_condizionamento.qmd
+    - esercizi/probabilita_vpp.qmd
+    - references.qmd
+
+format:
+  html:
+    embed-resources: true
+    theme:
+      light: flatly
+      dark: darkly
+  pdf:
+    documentclass: scrreprt
+
+
+

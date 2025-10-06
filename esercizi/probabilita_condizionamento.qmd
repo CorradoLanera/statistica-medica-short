@@ -1,0 +1,14 @@
+# Probabilità - Condizionamento
+
+Uno studio basato sui dati raccolti dal Registro Medico delle Nascite della Norvegia ha esaminato i tassi di fertilità in base agli esiti di sopravvivenza delle nascite precedenti \[1\]. I dati sono presentati nella Tabella seguente.
+
+![](images/paste-2.png)
+
+## Domande
+
+1\. Qual è la probabilità di avere un parto vivo (L) in occasione di una seconda nascita, ipotizzando che l'esito della prima gravidanza sia stato un parto morto (D)?\
+2. Rispondere al Problema 1. ipotizzando l'esito della prima gravidanza sia stato un parto vivo.\
+3. Qual è la probabilità di 0, 1 e 2+ gravidanze aggiuntive se il primo parto è stato un parto vivo.\
+4. Rispondere al Problema 3. ipotizzando il primo parto sia stato un parto morto.
+
+[@Skjaerven1988]
