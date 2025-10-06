@@ -1,0 +1,9 @@
+---
+title: "Esercizi"
+sidebar: false       # attiva la sidebar definita in _quarto.yml su queste pagine
+listing:
+  contents: "*.qmd"     # prende tutti i qmd nella cartella 'esercizi'
+  type: table           # tabella semplice e compatta
+  fields: [title, description]
+  sort: "title"
+---

@@ -1,0 +1,28 @@
+---
+title: "Probabilità - Valori Predittivi"
+description: "Esercizi sui valori predittivi"
+---
+# Probabilità - Valori Predittivi
+
+## Contesto A
+
+È stato condotto uno studio per valutare l'accuratezza dell'esposizione autodichiarata al fumo di sigaretta in utero. È stato effettuato un confronto tra le dichiarazioni delle figlie sul fumo delle madri durante la gravidanza e le autodichiarazioni delle madri sul proprio fumo durante la gravidanza delle figlie. I risultati sono riportati nella Tabella seguente.
+
+![](images/paste-3.png)
+
+## Domande A
+
+1.  Se l'auto-rapporto della madre è considerato completamente accurata, allora qual è il PV+ del resoconto della figlia, in cui il positivo indica che fuma e il negativo indica che non fuma?
+2.  Se l'autodichiarazione di una madre è considerata completamente accurata, qual è il PV- del resoconto della figlia?
+
+## Contesto B
+
+Ulteriori dati sul fumo auto-riferito indicano che la madre non è sempre completamente accurata. La cotinina salivare è un marcatore biochimico che, se elevato, è un'indicazione accurata al 100% del fumo recente.\
+\
+Supponiamo che se la madre dichiara di non essere fumatrice durante la gravidanza, la cotinina salivare risulti elevata nel 5% dei casi, mentre se la madre dichiara di essere fumatrice durante la gravidanza, la cotinina salivare è elevata il 97% delle volte. Si supponga inoltre che la relazione della figlia non aggiunga ulteriori informazioni sulla probabilità di un livello elevato di cotinina una volta nota l'autodichiarazione della madre.\
+
+## Domande B
+
+3.  Qual è la probabilità che il livello di cotinina nella saliva di una madre sia elevato durante la gravidanza se la figlia riferisce che la madre fumava in gravidanza?
+
+4.  Qual è la probabilità che il livello di cotinina nella saliva della madre non sia elevato durante la gravidanza se la figlia riferisce che la madre fumava in gravidanza?

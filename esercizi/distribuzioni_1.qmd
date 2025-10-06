@@ -1,0 +1,13 @@
+---
+title: "Distribuzioni di probabilità 1"
+descrizione: "Esercizi sulle distribuzioni di probabilità discrete"
+---
+
+Si ipotizzi di avere due eventi indipendenti A e B, e di sapere che P(A) = 0.1 e P(B) = 0.2.
+
+Calcolare/ricavare/tracciare:
+
+La funzione di massa di probabilità
+Il valore atteso
+la varianza
+la funzione di distribuzione cumulata

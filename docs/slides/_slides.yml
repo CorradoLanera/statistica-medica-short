@@ -1,0 +1,27 @@
+- title: "00 — Intro & info"
+  path: "00-intro_and_info.html"
+  description: "Presentazione del corso e informazioni organizzative"
+
+- title: "01 — R e RStudio"
+  path: "01-r_studio.html"
+  description: "Ambiente di lavoro, script, oggetti, pacchetti"
+
+- title: "02 — Statistiche descrittive"
+  path: "02-descrittive.html"
+  description: "Misure di tendenza centrale e dispersione"
+
+- title: "03 — Probabilità"
+  path: "03-probabilita.html"
+  description: "Regole di base, eventi, probabilità condizionata"
+
+- title: "04 — Distribuzioni"
+  path: "04-distribuzioni.html"
+  description: "Binomiale, Normale, approssimazioni"
+
+- title: "05 — Intervalli di Confidenza"
+  path: "05-ic.html"
+  description: "Costruzione e interpretazione degli IC"
+
+- title: "Tavole di probabilità (PDF)"
+  path: "tavole_di_probabilita.pdf"
+  description: "Tabelle utili per gli esercizi e lo studio"

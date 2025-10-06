@@ -1,0 +1,27 @@
+---
+title: "Statistica descrittiva 1"
+descrizione: "Esercizi sulla statistica descrittiva"
+---
+# Statistica descrittiva 1
+
+I dati riportati nella tabella qui sotto sono un campione di un insieme più ampio di dati raccolti su persone dimesse da un ospedale selezionato della Pennsylvania nell'ambito di una revisione retrospettiva delle cartelle cliniche sull'uso degli antibiotici negli ospedali.
+
+![](images/paste-1.png)
+
+## Domande
+
+1.  Calcolare media, moda e mediana della durata di ospedalizzazione.
+
+2.  Calcolare il varianza, deviazione standard, coefficiente di variazione, range massimale e range interquartile (differenza tra il III e il IV quartile) della durata di ospedalizzazione. Descrivere a parole in linguaggio naturale tali dati sulla abse delle informazioni appena ricavate (un paragrafo).
+
+3.  I tempi riportati sono in giorni, supponiamo di volerli esprimere in ore, ovvero moltiplicandoli tutti per 24; che effetto avrebbe questa modifica nei valori di media, moda, mediana, varianza, deviazione standard, coefficiente di variazione, range massimale e range interquartile? Verificare la risposta eseguendo i conti.
+
+4.  Quali delle variabili riportate possono essere considerate continue, quali categoriche? Tra le categoriche, come sarebbe opportuno considerare Sex e Service (binarie, nominali o ordinali)? Motivare le risposte.
+
+5.  Possiamo dire che una riga della tabella rappresenta una unità statistica? Si, no, perchè?
+
+6.  Disegnare (a mano) un grafico a barre per le frequenze della variabile Sex, e un box-plot per il tempo di ospedalizzazione. Cosa si può dire guardando questi due grafici? (un paragrafo ciascuno)
+
+7.  Disegnare due box-plot sovrapposti/affiancati in uno stesso grafico (con un unico asse x (se orizzontale) o y (se verticali, scelta a piacere)) per i tempi di ospedalizzazione, separati per maschi e femmine. Cosa si può dire guardando questo grafico? (un paragrafo)
+
+[@Townsend1979]

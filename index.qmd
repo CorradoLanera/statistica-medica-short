@@ -1,0 +1,18 @@
+---
+title: ""
+subtitle: ""
+
+image: "img/logo-statmed.png"
+image-alt: "Logo StatMed"
+image-title: "Statistica Medica per le Professioni Sanitarie - Università di Padova"
+
+about:
+  id: hero-heading
+  template: marquee
+---
+
+::: {#hero-heading}
+## Scopo del corso
+
+_Fornire agli studenti delle Professioni Sanitarie le conoscenze di base di statistica medica per interpretare correttamente i dati clinici e scientifici, supportando decisioni informate nella pratica professionale._
+:::

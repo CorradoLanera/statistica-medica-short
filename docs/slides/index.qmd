@@ -1,0 +1,15 @@
+---
+title: "Slide del corso"
+sidebar: false
+listing:
+  type: table
+  contents:
+    - 00-intro_and_info.html
+    - 01-r_rstudio.html
+    - 02-descrittive.html
+    - 03-probabilita.html
+    - 04-distribuzioni.html
+    - 05-ic_p.html
+    - "Tavole di probabilità.pdf"
+---
+

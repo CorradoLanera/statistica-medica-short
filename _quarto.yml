@@ -1,0 +1,76 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - index.qmd
+    - slides/index.qmd
+    - esercizi/index.qmd
+    - esercizi/*.qmd
+  resources:
+    - slides/**     # copia tutte le slide e le loro risorse così come sono
+
+website:
+  title: "Statistica Medica — Corrado Lanera"
+  description: "Luree per le Professioni Sanitarie, Università di Padova"
+  site-url: https://CorradoLanera.github.io/statistica-medica-short
+  repo-url: https://github.com/CorradoLanera/statistica-medica-short
+  repo-actions: [edit, issue]
+  favicon: /img/logo-statmed.png
+  image: /img/logo-statmed.png
+  twitter-card:
+    creator: "@CorradoLanera"
+  reader-mode: true
+  page-navigation: true
+  search:
+    location: navbar
+    type: textbox  
+  back-to-top-navigation: true
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: slides/index.qmd
+        text: Slide
+      - text: Esercizi
+        menu:
+          - text: Indice (ricercabile)
+            href: esercizi/index.qmd
+          - text: Descrittive 1 (basi)
+            href: esercizi/descrittive_1.qmd
+          - text: Probabilità 1 (somma)
+            href: esercizi/probabilita_somma.qmd
+          - text: Probabilità 2 (condizionamento)
+            href: esercizi/probabilita_condizionamento.qmd
+          - text: Probabilità 3 (VPP)
+            href: esercizi/probabilita_vpp.qmd
+          - text: Distribuzioni 1 (basi)
+            href: esercizi/distribuzioni_1.qmd
+          - text: Distribuzioni 2 (discrete)
+            href: esercizi/distribuzioni_2.qmd
+  sidebar:
+    # Sidebar dedicata che appare automaticamente su tutte le pagine incluse sotto
+    - id: esercizi
+      title: "Esercizi"
+      style: "docked"
+      collapse-level: 1
+      contents:
+        - text: "Indice esercizi"
+          href: esercizi/index.qmd
+        - esercizi/*.qmd   # elenca automaticamente tutti i QMD nella cartella
+
+bibliography: references.bib
+
+execute:
+  freeze: auto
+  cache: true
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: superhero
+    css: styles.css
+    lang: it_IT
+    toc: true
+
+editor: visual
