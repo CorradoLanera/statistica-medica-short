@@ -1,3 +1,8 @@
+---
+title: "Probabilità - Condizionamento"
+description: "Esercizi sul condizionamento"
+---
+
 # Probabilità - Condizionamento
 
 Uno studio basato sui dati raccolti dal Registro Medico delle Nascite della Norvegia ha esaminato i tassi di fertilità in base agli esiti di sopravvivenza delle nascite precedenti \[1\]. I dati sono presentati nella Tabella seguente.

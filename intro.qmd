@@ -1,0 +1,44 @@
+# Introduzione {.unnumbered}
+
+Questo documento raccoglie una selezione di esercizi di **Statistica Medica** pensati per accompagnare lo studio teorico e le lezioni frontali dei corsi tenuti da Corrado Lanera e destinati alle *Professioni Sanitarie* dell’Università di Padova.
+
+Gli esercizi coprono i principali argomenti affrontati nel corso:
+
+-   **Statistica descrittiva**, con esempi di sintesi numerica e grafica dei dati.\
+-   **Concetti fondamentali di probabilità**, utili a comprendere il ragionamento diagnostico.\
+-   **Probabilità condizionata e teorema di Bayes**, applicati alla valutazione delle prestazioni dei test diagnostici.
+-   **Distribuzioni di probabilità**, per modellare variabili casuali discrete (Binomiale e Poisson) e continue (Normale e Normale Standard).\
+-   **Stima puntuale e intervalli di confidenza**, per quantificare l’incertezza delle stime.\
+-   **Test di ipotesi** per misure continue, per prendere decisioni basate sui dati osservati.\
+
+Ogni esercizio è pensato per favorire la comprensione intuitiva dei concetti, più che la semplice applicazione di formule. L’obiettivo è abituarsi a **leggere, interpretare e ragionare sui dati** in contesti clinici e di ricerca.
+
+Gran parte degli esercizi sono tratti da testi di riferimento, articoli scientifici o dataset reali. Si veda la bibliografia per i riferimenti completi.
+
+------------------------------------------------------------------------
+
+## Come utilizzare questo materiale {.unnumbered}
+
+Il materiale può essere usato in due modi complementari:
+
+1.  **In parallelo alle lezioni**, per consolidare i concetti appena introdotti.\
+2.  **Come preparazione all’esame**, selezionando gli argomenti di maggiore difficoltà o interesse.
+
+Ogni sezione presenta brevi richiami teorici, seguiti da esercizi guidati e talvolta da domande aperte per stimolare la discussione.\
+Alcuni esercizi fanno riferimento a **dataset reali o simulati** usati a lezione.
+
+------------------------------------------------------------------------
+
+## Suggerimenti per lo studio {.unnumbered}
+
+-   Leggi sempre **il testo dell’esercizio** con attenzione prima di passare ai calcoli.\
+-   Cerca di **interpretare il significato clinico** dei risultati numerici: la statistica non è solo calcolo, ma anche comprensione del contesto.\
+-   Confronta i tuoi risultati con quelli discussi a lezione; sopratutto, discutli con i colleghi.\
+-   Se utilizzi R, prova a **riprodurre le analisi passo per passo**, verificando come cambiano i risultati al variare dei dati.
+
+------------------------------------------------------------------------
+
+## Aggiornamenti {.unnumbered}
+
+Questo materiale è in **costante aggiornamento**.\
+Eventuali correzioni, estensioni o nuove versioni saranno rese disponibili attraverso i canali ufficiali del corso o tramite il profilo docente.

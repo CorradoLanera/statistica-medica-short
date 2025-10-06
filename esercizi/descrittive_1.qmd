@@ -1,3 +1,7 @@
+---
+title: "Statistica descrittiva 1"
+descrizione: "Esercizi sulla statistica descrittiva"
+---
 # Statistica descrittiva 1
 
 I dati riportati nella tabella qui sotto sono un campione di un insieme più ampio di dati raccolti su persone dimesse da un ospedale selezionato della Pennsylvania nell'ambito di una revisione retrospettiva delle cartelle cliniche sull'uso degli antibiotici negli ospedali.

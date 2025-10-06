@@ -1,3 +1,8 @@
+---
+title: "Probabilità - Teorema della somma"
+description: "Esercizi sul teorema della somma"
+---
+
 # Probabilità - Teorema della somma
 
 ## **VALUTAZIONE DEL TASSO DI POSITIVITÀ COVID-19 NELL'OSPEDALE**

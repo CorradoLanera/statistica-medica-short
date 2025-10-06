@@ -1,0 +1,16 @@
+---
+title: "Distribuzioni di probabilità 2"
+descrizione: "Esercizi sulle distribuzioni di probabilità discrete"
+---
+
+Supponiamo che, l'anno scorso, 6 di 15 studenti di una classe di scuola elementare (specifica e nota) abbiano sviluppato l'influenza, mentre sappiamo che, sempre l'anno scorso, il 20% degli studenti delle scuole elementari a livello nazionale si sia ammalato di influenza.
+
+1. C'è la prova di un numero eccessivo di casi nella classe in questione? Ovvero, qual è la probabilità di osservare almeno 6 casi in questa classe sapendo che il tasso nazionale è quello noto/osservato? (usare la distribuzione binomiale)
+
+2. Quale sarebbe stato il valore atteso di studenti che ci saremmo aspettati con l'influenza?
+
+3. Qual'è la probailità di osservare esattamente 6 eventi da una distribuzione di Poisson con parametro mu = 4?
+
+4. Quale di osservare almeno 6 eventi dalla medesima distribuzione?
+
+5. Quale il valore atteso?

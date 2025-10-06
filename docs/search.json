@@ -1,0 +1,138 @@
+[
+  {
+    "objectID": "esercizi/references.html",
+    "href": "esercizi/references.html",
+    "title": "Riferimenti",
+    "section": "",
+    "text": "References\n\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "esercizi/probabilita_somma.html",
+    "href": "esercizi/probabilita_somma.html",
+    "title": "Probabilità - Teorema della somma",
+    "section": "",
+    "text": "Sei un membro del team di controllo infezioni di un grande ospedale e ti viene chiesto di stimare il tasso complessivo di positività al COVID-19 tra i pazienti ricoverati. Non tutti i reparti hanno la stessa incidenza di casi, a causa delle diverse tipologie di pazienti e procedure.\nPer facilitare l’analisi, l’ospedale è stato suddiviso in cinque macro-reparti principali, per i quali sono disponibili i seguenti dati:\n\n\n\n\n\n\n\n\nReparto\nPorzione pazienti totali\nTasso positività CiViD-19 nel reparto\n\n\nMedicina Interna\n35% (0.35)\n20% (0.20)\n\n\nChirurgia\n25% (0.25)\n8% (0.08)\n\n\nPediatria\n15% (0.15)\n12% (0.12)\n\n\nTerapie Intensive\n10% (0.10)\n40% (0.40)\n\n\nAltri Reparti\n15% (0.15)\n5% (0.05)\n\n\n\n\n\n\n\nCalcolare il tasso di positività complessivo al COVID-19 per l’intero ospedale, utilizzando il Teorema della Probabilità Totale.\nQual è la probabilità che un paziente scelto a caso nell’ospedale sia positivo al COVID-19?"
+  },
+  {
+    "objectID": "esercizi/probabilita_somma.html#valutazione-del-tasso-di-positività-covid-19-nellospedale",
+    "href": "esercizi/probabilita_somma.html#valutazione-del-tasso-di-positività-covid-19-nellospedale",
+    "title": "Probabilità - Teorema della somma",
+    "section": "",
+    "text": "Sei un membro del team di controllo infezioni di un grande ospedale e ti viene chiesto di stimare il tasso complessivo di positività al COVID-19 tra i pazienti ricoverati. Non tutti i reparti hanno la stessa incidenza di casi, a causa delle diverse tipologie di pazienti e procedure.\nPer facilitare l’analisi, l’ospedale è stato suddiviso in cinque macro-reparti principali, per i quali sono disponibili i seguenti dati:\n\n\n\n\n\n\n\n\nReparto\nPorzione pazienti totali\nTasso positività CiViD-19 nel reparto\n\n\nMedicina Interna\n35% (0.35)\n20% (0.20)\n\n\nChirurgia\n25% (0.25)\n8% (0.08)\n\n\nPediatria\n15% (0.15)\n12% (0.12)\n\n\nTerapie Intensive\n10% (0.10)\n40% (0.40)\n\n\nAltri Reparti\n15% (0.15)\n5% (0.05)"
+  },
+  {
+    "objectID": "esercizi/probabilita_somma.html#domande",
+    "href": "esercizi/probabilita_somma.html#domande",
+    "title": "Probabilità - Teorema della somma",
+    "section": "",
+    "text": "Calcolare il tasso di positività complessivo al COVID-19 per l’intero ospedale, utilizzando il Teorema della Probabilità Totale.\nQual è la probabilità che un paziente scelto a caso nell’ospedale sia positivo al COVID-19?"
+  },
+  {
+    "objectID": "esercizi/distribuzioni_2.html",
+    "href": "esercizi/distribuzioni_2.html",
+    "title": "Distribuzioni di probabilità 2",
+    "section": "",
+    "text": "Supponiamo che, l’anno scorso, 6 di 15 studenti di una classe di scuola elementare (specifica e nota) abbiano sviluppato l’influenza, mentre sappiamo che, sempre l’anno scorso, il 20% degli studenti delle scuole elementari a livello nazionale si sia ammalato di influenza.\n\nC’è la prova di un numero eccessivo di casi nella classe in questione? Ovvero, qual è la probabilità di osservare almeno 6 casi in questa classe sapendo che il tasso nazionale è quello noto/osservato? (usare la distribuzione binomiale)\nQuale sarebbe stato il valore atteso di studenti che ci saremmo aspettati con l’influenza?\nQual’è la probailità di osservare esattamente 6 eventi da una distribuzione di Poisson con parametro mu = 4?\nQuale di osservare almeno 6 eventi dalla medesima distribuzione?\nQuale il valore atteso?\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "esercizi/descrittive_1.html",
+    "href": "esercizi/descrittive_1.html",
+    "title": "Statistica descrittiva 1",
+    "section": "",
+    "text": "I dati riportati nella tabella qui sotto sono un campione di un insieme più ampio di dati raccolti su persone dimesse da un ospedale selezionato della Pennsylvania nell’ambito di una revisione retrospettiva delle cartelle cliniche sull’uso degli antibiotici negli ospedali.\n\n\n\n\nCalcolare media, moda e mediana della durata di ospedalizzazione.\nCalcolare il varianza, deviazione standard, coefficiente di variazione, range massimale e range interquartile (differenza tra il III e il IV quartile) della durata di ospedalizzazione. Descrivere a parole in linguaggio naturale tali dati sulla abse delle informazioni appena ricavate (un paragrafo).\nI tempi riportati sono in giorni, supponiamo di volerli esprimere in ore, ovvero moltiplicandoli tutti per 24; che effetto avrebbe questa modifica nei valori di media, moda, mediana, varianza, deviazione standard, coefficiente di variazione, range massimale e range interquartile? Verificare la risposta eseguendo i conti.\nQuali delle variabili riportate possono essere considerate continue, quali categoriche? Tra le categoriche, come sarebbe opportuno considerare Sex e Service (binarie, nominali o ordinali)? Motivare le risposte.\nPossiamo dire che una riga della tabella rappresenta una unità statistica? Si, no, perchè?\nDisegnare (a mano) un grafico a barre per le frequenze della variabile Sex, e un box-plot per il tempo di ospedalizzazione. Cosa si può dire guardando questi due grafici? (un paragrafo ciascuno)\nDisegnare due box-plot sovrapposti/affiancati in uno stesso grafico (con un unico asse x (se orizzontale) o y (se verticali, scelta a piacere)) per i tempi di ospedalizzazione, separati per maschi e femmine. Cosa si può dire guardando questo grafico? (un paragrafo)\n\n(Townsend et al. 1979)"
+  },
+  {
+    "objectID": "esercizi/descrittive_1.html#domande",
+    "href": "esercizi/descrittive_1.html#domande",
+    "title": "Statistica descrittiva 1",
+    "section": "",
+    "text": "Calcolare media, moda e mediana della durata di ospedalizzazione.\nCalcolare il varianza, deviazione standard, coefficiente di variazione, range massimale e range interquartile (differenza tra il III e il IV quartile) della durata di ospedalizzazione. Descrivere a parole in linguaggio naturale tali dati sulla abse delle informazioni appena ricavate (un paragrafo).\nI tempi riportati sono in giorni, supponiamo di volerli esprimere in ore, ovvero moltiplicandoli tutti per 24; che effetto avrebbe questa modifica nei valori di media, moda, mediana, varianza, deviazione standard, coefficiente di variazione, range massimale e range interquartile? Verificare la risposta eseguendo i conti.\nQuali delle variabili riportate possono essere considerate continue, quali categoriche? Tra le categoriche, come sarebbe opportuno considerare Sex e Service (binarie, nominali o ordinali)? Motivare le risposte.\nPossiamo dire che una riga della tabella rappresenta una unità statistica? Si, no, perchè?\nDisegnare (a mano) un grafico a barre per le frequenze della variabile Sex, e un box-plot per il tempo di ospedalizzazione. Cosa si può dire guardando questi due grafici? (un paragrafo ciascuno)\nDisegnare due box-plot sovrapposti/affiancati in uno stesso grafico (con un unico asse x (se orizzontale) o y (se verticali, scelta a piacere)) per i tempi di ospedalizzazione, separati per maschi e femmine. Cosa si può dire guardando questo grafico? (un paragrafo)\n\n(Townsend et al. 1979)"
+  },
+  {
+    "objectID": "slides/index.html",
+    "href": "slides/index.html",
+    "title": "Slide del corso",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        File Name\n      \n      \n        Modified - Oldest\n      \n      \n        Modified - Newest\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nFile Name\n\n\n\nModified\n\n\n\n\n\n\n\n\n00-intro_and_info.html\n\n\n10/5/25, 11:59:57 PM\n\n\n\n\n\n\n01-r_rstudio.html\n\n\n10/5/25, 11:59:57 PM\n\n\n\n\n\n\n02-descrittive.html\n\n\n10/5/25, 11:59:57 PM\n\n\n\n\n\n\n03-probabilita.html\n\n\n10/5/25, 11:59:57 PM\n\n\n\n\n\n\n04-distribuzioni.html\n\n\n10/5/25, 11:59:57 PM\n\n\n\n\n\n\n05-ic_p.html\n\n\n10/5/25, 11:59:57 PM\n\n\n\n\n\n\nTavole di probabilità.pdf\n\n\n10/5/25, 11:59:57 PM\n\n\n\n\n\n\nNo matching items\n Back to top"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Statistica Medica — Corrado Lanera",
+    "section": "",
+    "text": "Fornire agli studenti delle Professioni Sanitarie le conoscenze di base di statistica medica per interpretare correttamente i dati clinici e scientifici, supportando decisioni informate nella pratica professionale."
+  },
+  {
+    "objectID": "index.html#scopo-del-corso",
+    "href": "index.html#scopo-del-corso",
+    "title": "Statistica Medica — Corrado Lanera",
+    "section": "",
+    "text": "Fornire agli studenti delle Professioni Sanitarie le conoscenze di base di statistica medica per interpretare correttamente i dati clinici e scientifici, supportando decisioni informate nella pratica professionale."
+  },
+  {
+    "objectID": "esercizi/index.html",
+    "href": "esercizi/index.html",
+    "title": "Esercizi",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\n\nDescription\n\n\n\n\n\n\n\n\nDistribuzioni di probabilità 1\n\n\n\n\n\n\n\n\n\nDistribuzioni di probabilità 2\n\n\n\n\n\n\n\n\n\nProbabilità - Condizionamento\n\n\nEsercizi sul condizionamento\n\n\n\n\n\n\nProbabilità - Teorema della somma\n\n\nEsercizi sul teorema della somma\n\n\n\n\n\n\nProbabilità - Valori Predittivi\n\n\nEsercizi sui valori predittivi\n\n\n\n\n\n\nRiferimenti\n\n\nRiferimenti bibliografici e risorse utili\n\n\n\n\n\n\nStatistica descrittiva 1\n\n\n\n\n\n\n\n\n\nNo matching items\n Back to top",
+    "crumbs": [
+      "Indice esercizi"
+    ]
+  },
+  {
+    "objectID": "esercizi/distribuzioni_1.html",
+    "href": "esercizi/distribuzioni_1.html",
+    "title": "Distribuzioni di probabilità 1",
+    "section": "",
+    "text": "Si ipotizzi di avere due eventi indipendenti A e B, e di sapere che P(A) = 0.1 e P(B) = 0.2.\nCalcolare/ricavare/tracciare:\nLa funzione di massa di probabilità Il valore atteso la varianza la funzione di distribuzione cumulata\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "esercizi/probabilita_condizionamento.html",
+    "href": "esercizi/probabilita_condizionamento.html",
+    "title": "Probabilità - Condizionamento",
+    "section": "",
+    "text": "Uno studio basato sui dati raccolti dal Registro Medico delle Nascite della Norvegia ha esaminato i tassi di fertilità in base agli esiti di sopravvivenza delle nascite precedenti [1]. I dati sono presentati nella Tabella seguente.\n\n\n\n1. Qual è la probabilità di avere un parto vivo (L) in occasione di una seconda nascita, ipotizzando che l’esito della prima gravidanza sia stato un parto morto (D)?\n2. Rispondere al Problema 1. ipotizzando l’esito della prima gravidanza sia stato un parto vivo.\n3. Qual è la probabilità di 0, 1 e 2+ gravidanze aggiuntive se il primo parto è stato un parto vivo.\n4. Rispondere al Problema 3. ipotizzando il primo parto sia stato un parto morto.\n(SKJÆRVEN et al. 1988)"
+  },
+  {
+    "objectID": "esercizi/probabilita_condizionamento.html#domande",
+    "href": "esercizi/probabilita_condizionamento.html#domande",
+    "title": "Probabilità - Condizionamento",
+    "section": "",
+    "text": "1. Qual è la probabilità di avere un parto vivo (L) in occasione di una seconda nascita, ipotizzando che l’esito della prima gravidanza sia stato un parto morto (D)?\n2. Rispondere al Problema 1. ipotizzando l’esito della prima gravidanza sia stato un parto vivo.\n3. Qual è la probabilità di 0, 1 e 2+ gravidanze aggiuntive se il primo parto è stato un parto vivo.\n4. Rispondere al Problema 3. ipotizzando il primo parto sia stato un parto morto.\n(SKJÆRVEN et al. 1988)"
+  },
+  {
+    "objectID": "esercizi/probabilita_vpp.html",
+    "href": "esercizi/probabilita_vpp.html",
+    "title": "Probabilità - Valori Predittivi",
+    "section": "",
+    "text": "È stato condotto uno studio per valutare l’accuratezza dell’esposizione autodichiarata al fumo di sigaretta in utero. È stato effettuato un confronto tra le dichiarazioni delle figlie sul fumo delle madri durante la gravidanza e le autodichiarazioni delle madri sul proprio fumo durante la gravidanza delle figlie. I risultati sono riportati nella Tabella seguente.\n\n\n\n\n\nSe l’auto-rapporto della madre è considerato completamente accurata, allora qual è il PV+ del resoconto della figlia, in cui il positivo indica che fuma e il negativo indica che non fuma?\nSe l’autodichiarazione di una madre è considerata completamente accurata, qual è il PV- del resoconto della figlia?\n\n\n\n\nUlteriori dati sul fumo auto-riferito indicano che la madre non è sempre completamente accurata. La cotinina salivare è un marcatore biochimico che, se elevato, è un’indicazione accurata al 100% del fumo recente.\n\nSupponiamo che se la madre dichiara di non essere fumatrice durante la gravidanza, la cotinina salivare risulti elevata nel 5% dei casi, mentre se la madre dichiara di essere fumatrice durante la gravidanza, la cotinina salivare è elevata il 97% delle volte. Si supponga inoltre che la relazione della figlia non aggiunga ulteriori informazioni sulla probabilità di un livello elevato di cotinina una volta nota l’autodichiarazione della madre.\n\n\n\n\n\nQual è la probabilità che il livello di cotinina nella saliva di una madre sia elevato durante la gravidanza se la figlia riferisce che la madre fumava in gravidanza?\nQual è la probabilità che il livello di cotinina nella saliva della madre non sia elevato durante la gravidanza se la figlia riferisce che la madre fumava in gravidanza?"
+  },
+  {
+    "objectID": "esercizi/probabilita_vpp.html#contesto-a",
+    "href": "esercizi/probabilita_vpp.html#contesto-a",
+    "title": "Probabilità - Valori Predittivi",
+    "section": "",
+    "text": "È stato condotto uno studio per valutare l’accuratezza dell’esposizione autodichiarata al fumo di sigaretta in utero. È stato effettuato un confronto tra le dichiarazioni delle figlie sul fumo delle madri durante la gravidanza e le autodichiarazioni delle madri sul proprio fumo durante la gravidanza delle figlie. I risultati sono riportati nella Tabella seguente."
+  },
+  {
+    "objectID": "esercizi/probabilita_vpp.html#domande-a",
+    "href": "esercizi/probabilita_vpp.html#domande-a",
+    "title": "Probabilità - Valori Predittivi",
+    "section": "",
+    "text": "Se l’auto-rapporto della madre è considerato completamente accurata, allora qual è il PV+ del resoconto della figlia, in cui il positivo indica che fuma e il negativo indica che non fuma?\nSe l’autodichiarazione di una madre è considerata completamente accurata, qual è il PV- del resoconto della figlia?"
+  },
+  {
+    "objectID": "esercizi/probabilita_vpp.html#contesto-b",
+    "href": "esercizi/probabilita_vpp.html#contesto-b",
+    "title": "Probabilità - Valori Predittivi",
+    "section": "",
+    "text": "Ulteriori dati sul fumo auto-riferito indicano che la madre non è sempre completamente accurata. La cotinina salivare è un marcatore biochimico che, se elevato, è un’indicazione accurata al 100% del fumo recente.\n\nSupponiamo che se la madre dichiara di non essere fumatrice durante la gravidanza, la cotinina salivare risulti elevata nel 5% dei casi, mentre se la madre dichiara di essere fumatrice durante la gravidanza, la cotinina salivare è elevata il 97% delle volte. Si supponga inoltre che la relazione della figlia non aggiunga ulteriori informazioni sulla probabilità di un livello elevato di cotinina una volta nota l’autodichiarazione della madre."
+  },
+  {
+    "objectID": "esercizi/probabilita_vpp.html#domande-b",
+    "href": "esercizi/probabilita_vpp.html#domande-b",
+    "title": "Probabilità - Valori Predittivi",
+    "section": "",
+    "text": "Qual è la probabilità che il livello di cotinina nella saliva di una madre sia elevato durante la gravidanza se la figlia riferisce che la madre fumava in gravidanza?\nQual è la probabilità che il livello di cotinina nella saliva della madre non sia elevato durante la gravidanza se la figlia riferisce che la madre fumava in gravidanza?"
+  }
+]

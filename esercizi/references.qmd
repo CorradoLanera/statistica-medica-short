@@ -1,0 +1,8 @@
+---
+title: "Riferimenti"
+description: "Riferimenti bibliografici e risorse utili"
+---
+# References {.unnumbered}
+
+::: {#refs}
+:::
