@@ -1,0 +1,11 @@
+# Contatti
+
+![](img/profilo_CL.jpg)
+
+**Corrado Lanera**
+
+E-mail: [**Corrado.Lanera\@ubep.unipd.it**](mailto:Corrado.Lanera@ubep.unipd.it)
+
+Ricevimento: [**bit.ly/statmed-cl-ricevimento**](https://bit.ly/statmed-cl-ricevimento)
+
+RStudio: [**bit.ly/statmed-cl-rstudio**](https://bit.ly/statmed-cl-rstudio)

@@ -53,7 +53,42 @@
     "href": "slides/index.html",
     "title": "Slide del corso",
     "section": "",
-    "text": "Order By\n      Default\n      \n        File Name\n      \n      \n        Modified - Oldest\n      \n      \n        Modified - Newest\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nFile Name\n\n\n\nModified\n\n\n\n\n\n\n\n\n00-intro_and_info.html\n\n\n10/5/25, 11:59:57 PM\n\n\n\n\n\n\n01-r_rstudio.html\n\n\n10/5/25, 11:59:57 PM\n\n\n\n\n\n\n02-descrittive.html\n\n\n10/5/25, 11:59:57 PM\n\n\n\n\n\n\n03-probabilita.html\n\n\n10/5/25, 11:59:57 PM\n\n\n\n\n\n\n04-distribuzioni.html\n\n\n10/5/25, 11:59:57 PM\n\n\n\n\n\n\n05-ic_p.html\n\n\n10/5/25, 11:59:57 PM\n\n\n\n\n\n\nTavole di probabilità.pdf\n\n\n10/5/25, 11:59:57 PM\n\n\n\n\n\n\nNo matching items\n Back to top"
+    "text": "Order By\n       Default\n         \n          File Name\n        \n         \n          Modified - Oldest\n        \n         \n          Modified - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nFile Name\n\n\nModified\n\n\n\n\n\n\n00-intro_and_info.html\n\n\n10/9/25, 1:45:21 PM\n\n\n\n\n01-r_rstudio.html\n\n\n10/9/25, 1:45:21 PM\n\n\n\n\n02-descrittive.html\n\n\n10/9/25, 1:45:21 PM\n\n\n\n\n03-probabilita.html\n\n\n10/9/25, 1:45:21 PM\n\n\n\n\n04-distribuzioni.html\n\n\n10/9/25, 1:45:21 PM\n\n\n\n\n05-ic_p.html\n\n\n10/9/25, 1:45:21 PM\n\n\n\n\nTavole di probabilità.pdf\n\n\n10/9/25, 1:45:21 PM\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "info.html",
+    "href": "info.html",
+    "title": "Contatti",
+    "section": "",
+    "text": "Contatti\n\nCorrado Lanera\nE-mail: Corrado.Lanera@ubep.unipd.it\nRicevimento: bit.ly/statmed-cl-ricevimento\nRStudio: bit.ly/statmed-cl-rstudio\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "Introduzione",
+    "section": "",
+    "text": "Questo portale raccoglie le slide e una selezione di esercizi di Statistica Medica pensati per accompagnare lo studio teorico e le lezioni frontali dei corsi tenuti da Corrado Lanera e destinati ai percorsi di laurea delle Professioni Sanitarie dell’Università di Padova per un corso da 20 ore (2 CFU).\nLe slide e gli esercizi coprono i principali argomenti affrontati nel corso:\n\nStatistica descrittiva, con esempi di sintesi numerica e grafica dei dati.\n\nConcetti fondamentali di probabilità, utili a comprendere il ragionamento diagnostico.\n\nProbabilità condizionata e teorema di Bayes, applicati alla valutazione delle prestazioni dei test diagnostici.\nDistribuzioni di probabilità, per modellare variabili casuali discrete (Binomiale e Poisson) e continue (Normale e Normale Standard).\n\nStima puntuale e intervalli di confidenza, per quantificare l’incertezza delle stime.\n\nTest di ipotesi per misure continue, per prendere decisioni basate sui dati osservati.\n\n\nOgni esercizio è pensato per favorire la comprensione intuitiva dei concetti, più che la semplice applicazione di formule. L’obiettivo è abituarsi a leggere, interpretare e ragionare sui dati in contesti clinici e di ricerca.\nGran parte degli esercizi sono tratti da testi di riferimento, articoli scientifici o dataset reali. Si veda la bibliografia per i riferimenti completi.\n\n\n\n\n\n\nNote\n\n\n\nSe fate o avete eserczi che desiderate venganon aggiunti all’elenco, contattatemi pure!\n\n\n\n\n\nIl materiale può essere usato in due modi complementari:\n\nIn parallelo alle lezioni, per consolidare i concetti appena introdotti.\n\nCome preparazione all’esame, selezionando gli argomenti di maggiore difficoltà o interesse.\n\n\n\n\n\n\n\nNote\n\n\n\nGli esercizi nelle slide sono tutti svolti, si suggerisce agli studenti di provare a risolverli autonomamente prima di guardare la soluzione.\n\n\n\n\n\n\n\nLeggi sempre il testo dell’esercizio con attenzione prima di passare ai calcoli.\n\nCerca di interpretare il significato clinico dei risultati numerici: la statistica non è solo calcolo, ma anche comprensione del contesto.\n\nRicorda che, in ambito didattico, se viene posto un problema vuol dire che:\n\nsi può risolvere\nsi può risolvere con gli strumenti che hai a disposizione Dunque, provare a individuare e scrivere bene i dati, considerare le formule affrontate e riportate nella sezione appena precedente e ragionare su come poter adattare e sfruttare gfi strumenti proposti, coi dati forniti, per risolvere il problema.\n\nConfronta i tuoi risultati con quelli discussi a lezione; sopratutto, discutili con i colleghi.\n\n[OPZIONALE] Se utilizzi R, prova a riprodurre le analisi passo per passo, verificando come cambiano i risultati al variare dei dati.\n\n\n\n\n\nQuesto materiale è in costante aggiornamento.\nEventuali correzioni, estensioni o nuove versioni saranno rese disponibili attraverso i canali ufficiali del corso o tramite il profilo docente.\nPer segnalare errori, suggerimenti o proposte di miglioramento, contattatemi pure via email (corrado.lanera@ubep.unipd.it), tramite i canali ufficiali del corso, o aprendo un issue dalla pagina di sviluppo del corso (https://github.com/CorradoLanera/statistica-medica-short)"
+  },
+  {
+    "objectID": "intro.html#come-utilizzare-questo-materiale",
+    "href": "intro.html#come-utilizzare-questo-materiale",
+    "title": "Introduzione",
+    "section": "",
+    "text": "Il materiale può essere usato in due modi complementari:\n\nIn parallelo alle lezioni, per consolidare i concetti appena introdotti.\n\nCome preparazione all’esame, selezionando gli argomenti di maggiore difficoltà o interesse.\n\n\n\n\n\n\n\nNote\n\n\n\nGli esercizi nelle slide sono tutti svolti, si suggerisce agli studenti di provare a risolverli autonomamente prima di guardare la soluzione."
+  },
+  {
+    "objectID": "intro.html#suggerimenti-per-lo-studio",
+    "href": "intro.html#suggerimenti-per-lo-studio",
+    "title": "Introduzione",
+    "section": "",
+    "text": "Leggi sempre il testo dell’esercizio con attenzione prima di passare ai calcoli.\n\nCerca di interpretare il significato clinico dei risultati numerici: la statistica non è solo calcolo, ma anche comprensione del contesto.\n\nRicorda che, in ambito didattico, se viene posto un problema vuol dire che:\n\nsi può risolvere\nsi può risolvere con gli strumenti che hai a disposizione Dunque, provare a individuare e scrivere bene i dati, considerare le formule affrontate e riportate nella sezione appena precedente e ragionare su come poter adattare e sfruttare gfi strumenti proposti, coi dati forniti, per risolvere il problema.\n\nConfronta i tuoi risultati con quelli discussi a lezione; sopratutto, discutili con i colleghi.\n\n[OPZIONALE] Se utilizzi R, prova a riprodurre le analisi passo per passo, verificando come cambiano i risultati al variare dei dati."
+  },
+  {
+    "objectID": "intro.html#aggiornamenti",
+    "href": "intro.html#aggiornamenti",
+    "title": "Introduzione",
+    "section": "",
+    "text": "Questo materiale è in costante aggiornamento.\nEventuali correzioni, estensioni o nuove versioni saranno rese disponibili attraverso i canali ufficiali del corso o tramite il profilo docente.\nPer segnalare errori, suggerimenti o proposte di miglioramento, contattatemi pure via email (corrado.lanera@ubep.unipd.it), tramite i canali ufficiali del corso, o aprendo un issue dalla pagina di sviluppo del corso (https://github.com/CorradoLanera/statistica-medica-short)"
   },
   {
     "objectID": "index.html",
@@ -74,7 +109,7 @@
     "href": "esercizi/index.html",
     "title": "Esercizi",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\n\nDescription\n\n\n\n\n\n\n\n\nDistribuzioni di probabilità 1\n\n\n\n\n\n\n\n\n\nDistribuzioni di probabilità 2\n\n\n\n\n\n\n\n\n\nProbabilità - Condizionamento\n\n\nEsercizi sul condizionamento\n\n\n\n\n\n\nProbabilità - Teorema della somma\n\n\nEsercizi sul teorema della somma\n\n\n\n\n\n\nProbabilità - Valori Predittivi\n\n\nEsercizi sui valori predittivi\n\n\n\n\n\n\nRiferimenti\n\n\nRiferimenti bibliografici e risorse utili\n\n\n\n\n\n\nStatistica descrittiva 1\n\n\n\n\n\n\n\n\n\nNo matching items\n Back to top",
+    "text": "Order By\n       Default\n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\nDistribuzioni di probabilità 1\n\n\n\n\n\n\n\nDistribuzioni di probabilità 2\n\n\n\n\n\n\n\nProbabilità - Condizionamento\n\n\nEsercizi sul condizionamento\n\n\n\n\nProbabilità - Teorema della somma\n\n\nEsercizi sul teorema della somma\n\n\n\n\nProbabilità - Valori Predittivi\n\n\nEsercizi sui valori predittivi\n\n\n\n\nRiferimenti\n\n\nRiferimenti bibliografici e risorse utili\n\n\n\n\nStatistica descrittiva 1\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top",
     "crumbs": [
       "Indice esercizi"
     ]

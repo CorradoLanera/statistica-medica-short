@@ -3,9 +3,11 @@ project:
   output-dir: docs
   render:
     - index.qmd
+    - intro.qmd
     - slides/index.qmd
     - esercizi/index.qmd
     - esercizi/*.qmd
+    - info.qmd
   resources:
     - slides/**     # copia tutte le slide e le loro risorse così come sono
 
@@ -23,12 +25,14 @@ website:
   page-navigation: true
   search:
     location: navbar
-    type: textbox  
+    type: textbox
   back-to-top-navigation: true
   navbar:
     left:
       - href: index.qmd
         text: Home
+      - href: intro.qmd
+        text: Informazioni
       - href: slides/index.qmd
         text: Slide
       - text: Esercizi
@@ -47,6 +51,8 @@ website:
             href: esercizi/distribuzioni_1.qmd
           - text: Distribuzioni 2 (discrete)
             href: esercizi/distribuzioni_2.qmd
+      - href: info.qmd
+        text: Contatti
   sidebar:
     # Sidebar dedicata che appare automaticamente su tutte le pagine incluse sotto
     - id: esercizi
