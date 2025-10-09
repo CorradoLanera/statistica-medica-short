@@ -7,9 +7,11 @@ project:
     - slides/index.qmd
     - esercizi/index.qmd
     - esercizi/*.qmd
+    - corsi/*.qmd
     - info.qmd
   resources:
     - slides/**     # copia tutte le slide e le loro risorse così come sono
+    - corsi/**
 
 website:
   title: "Statistica Medica — Corrado Lanera"
@@ -51,6 +53,10 @@ website:
             href: esercizi/distribuzioni_1.qmd
           - text: Distribuzioni 2 (discrete)
             href: esercizi/distribuzioni_2.qmd
+      - text: CdL
+        menu:
+          - text: 2025 - Infermieristica III anno (Rovigo)
+            href: corsi/2025_infermieristica_rovigo.qmd
       - href: info.qmd
         text: Contatti
   sidebar:

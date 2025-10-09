@@ -53,14 +53,21 @@
     "href": "slides/index.html",
     "title": "Slide del corso",
     "section": "",
-    "text": "Order By\n       Default\n         \n          File Name\n        \n         \n          Modified - Oldest\n        \n         \n          Modified - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nFile Name\n\n\nModified\n\n\n\n\n\n\n00-intro_and_info.html\n\n\n10/9/25, 1:45:21 PM\n\n\n\n\n01-r_rstudio.html\n\n\n10/9/25, 1:45:21 PM\n\n\n\n\n02-descrittive.html\n\n\n10/9/25, 1:45:21 PM\n\n\n\n\n03-probabilita.html\n\n\n10/9/25, 1:45:21 PM\n\n\n\n\n04-distribuzioni.html\n\n\n10/9/25, 1:45:21 PM\n\n\n\n\n05-ic_p.html\n\n\n10/9/25, 1:45:21 PM\n\n\n\n\nTavole di probabilità.pdf\n\n\n10/9/25, 1:45:21 PM\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Order By\n       Default\n         \n          File Name\n        \n         \n          Modified - Oldest\n        \n         \n          Modified - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nFile Name\n\n\nModified\n\n\n\n\n\n\n00-intro_and_info.html\n\n\n10/9/25, 1:45:21 PM\n\n\n\n\n01-r_rstudio.html\n\n\n10/9/25, 1:45:21 PM\n\n\n\n\n02-descrittive.html\n\n\n10/9/25, 1:45:21 PM\n\n\n\n\n03-probabilita.html\n\n\n10/9/25, 1:45:21 PM\n\n\n\n\n04-distribuzioni.html\n\n\n10/9/25, 2:10:29 PM\n\n\n\n\n05-ic_p.html\n\n\n10/9/25, 1:45:21 PM\n\n\n\n\nTavole di probabilità.pdf\n\n\n10/9/25, 1:45:21 PM\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "info.html",
     "href": "info.html",
-    "title": "Contatti",
+    "title": "Statistica Medica — Corrado Lanera",
     "section": "",
-    "text": "Contatti\n\nCorrado Lanera\nE-mail: Corrado.Lanera@ubep.unipd.it\nRicevimento: bit.ly/statmed-cl-ricevimento\nRStudio: bit.ly/statmed-cl-rstudio\n\n\n\n\n Back to top"
+    "text": "Corrado Lanera\nE-mail: Corrado.Lanera@ubep.unipd.it\nRicevimento: bit.ly/statmed-cl-ricevimento\nRStudio: bit.ly/statmed-cl-rstudio"
+  },
+  {
+    "objectID": "info.html#contatti",
+    "href": "info.html#contatti",
+    "title": "Statistica Medica — Corrado Lanera",
+    "section": "",
+    "text": "Corrado Lanera\nE-mail: Corrado.Lanera@ubep.unipd.it\nRicevimento: bit.ly/statmed-cl-ricevimento\nRStudio: bit.ly/statmed-cl-rstudio"
   },
   {
     "objectID": "intro.html",
@@ -89,6 +96,20 @@
     "title": "Introduzione",
     "section": "",
     "text": "Questo materiale è in costante aggiornamento.\nEventuali correzioni, estensioni o nuove versioni saranno rese disponibili attraverso i canali ufficiali del corso o tramite il profilo docente.\nPer segnalare errori, suggerimenti o proposte di miglioramento, contattatemi pure via email (corrado.lanera@ubep.unipd.it), tramite i canali ufficiali del corso, o aprendo un issue dalla pagina di sviluppo del corso (https://github.com/CorradoLanera/statistica-medica-short)"
+  },
+  {
+    "objectID": "corsi/2025_infermieristica_rovigo.html",
+    "href": "corsi/2025_infermieristica_rovigo.html",
+    "title": "Statistica Medica — Corrado Lanera",
+    "section": "",
+    "text": "Giorno\nTema\nDiapositive\n\n\n\n\n2025-09-25\nIntro e info\nIntro e info\n\n\n2025-09-25\nR e RStudio\nR e RStudio\n\n\n2025-09-25\nDescrittive (intro, notazioni, centralità)\nDescrittive\n\n\n2025-09-29\nDescrittive (Variabilità, grafici)\n\n\n\n2025-10-01\nProbabilità (definizioni, operazioni e teoremi fondamentali, sens, spec, vpp, vpn, Bayes)\nProbabilità\n\n\n2025-10-03\nDistribuzioni (massa di probabilità, valore atteso; binomiale, poisson)\nDistribuzioni\n\n\n2025-10-09\nDistribuzioni (normale, standard)\n\n\n\n\nInferenza, IC (e p-value)\n\n\n\n\nMoodle: bit.ly/infermieristica-25-moodle"
+  },
+  {
+    "objectID": "corsi/2025_infermieristica_rovigo.html#cdl-infermieristica-iii-anno-i-semestre-a.a.-2025-26---rovigo",
+    "href": "corsi/2025_infermieristica_rovigo.html#cdl-infermieristica-iii-anno-i-semestre-a.a.-2025-26---rovigo",
+    "title": "Statistica Medica — Corrado Lanera",
+    "section": "",
+    "text": "Giorno\nTema\nDiapositive\n\n\n\n\n2025-09-25\nIntro e info\nIntro e info\n\n\n2025-09-25\nR e RStudio\nR e RStudio\n\n\n2025-09-25\nDescrittive (intro, notazioni, centralità)\nDescrittive\n\n\n2025-09-29\nDescrittive (Variabilità, grafici)\n\n\n\n2025-10-01\nProbabilità (definizioni, operazioni e teoremi fondamentali, sens, spec, vpp, vpn, Bayes)\nProbabilità\n\n\n2025-10-03\nDistribuzioni (massa di probabilità, valore atteso; binomiale, poisson)\nDistribuzioni\n\n\n2025-10-09\nDistribuzioni (normale, standard)\n\n\n\n\nInferenza, IC (e p-value)\n\n\n\n\nMoodle: bit.ly/infermieristica-25-moodle"
   },
   {
     "objectID": "index.html",

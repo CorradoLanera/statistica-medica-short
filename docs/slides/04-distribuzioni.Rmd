@@ -1723,7 +1723,7 @@ $$\begin{split}P(6.5 \leq Y \leq 12.5)& = \Phi\left(\frac{12.5-10}{\sqrt{6}} \ri
 
 .panel[.panel-name[Grafico]
 
-```{r}
+```{r, include=FALSE}
 n <- 25
 p <- 0.4
 np <- n * p
@@ -1841,7 +1841,7 @@ $$\Phi\left(\frac{49.5-60}{\sqrt{24}} \right)=\Phi(-2.14)=1-0.9840=0.016$$
 
 .panel[.panel-name[Grafico]
 
-```{r}
+```{r, include=FALSE}
 np <- 100 * 0.6 # 60
 npq <- np * (1 - 0.6)
 sigma <- sqrt(npq)
@@ -1975,9 +1975,6 @@ _Mathematical conventions are just that, conventions. They differ by field of ma
 # **.orange[Grazie]** per l'attenzione!
 
 ... e buona settimana.
-
-<br>
-<br>
 
 
 
