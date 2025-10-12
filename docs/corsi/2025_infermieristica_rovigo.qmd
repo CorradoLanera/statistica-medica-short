@@ -1,6 +1,5 @@
 ## CdL Infermieristica, III anno, I semestre, a.a. 2025-26 - Rovigo
 
-
 | **Giorno** | **Tema** | **Diapositive** |
 |------------------:|:------------------|:---------------------------------|
 | 2025-09-25 | Intro e info | [Intro e info](../slides/00-intro_and_info.html) |
@@ -9,7 +8,8 @@
 | 2025-09-29 | Descrittive (Variabilità, grafici) |  |
 | 2025-10-01 | Probabilità (definizioni, operazioni e teoremi fondamentali, sens, spec, vpp, vpn, Bayes) | [Probabilità](../slides/03-probabilita.html) |
 | 2025-10-03 | Distribuzioni (massa di probabilità, valore atteso; binomiale, poisson) | [Distribuzioni](../slides/04-distribuzioni.html) |
-| 2025-10-09 | Distribuzioni (normale, standard) | |
+| 2025-10-09 | Distribuzioni (normale, standard) |  |
 |  | Inferenza, IC (e p-value) |  |
+: {tbl-colwidths="[15,70,15]"}
 
 Moodle: [bit.ly/infermieristica-25-moodle](bit.ly/infermieristica-25-moodle)

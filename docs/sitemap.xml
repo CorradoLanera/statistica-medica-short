@@ -1,55 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://CorradoLanera.github.io/statistica-medica-short/esercizi/references.html</loc>
-    <lastmod>2025-10-09T11:45:21.401Z</lastmod>
-  </url>
-  <url>
-    <loc>https://CorradoLanera.github.io/statistica-medica-short/esercizi/probabilita_somma.html</loc>
-    <lastmod>2025-10-09T11:45:21.401Z</lastmod>
-  </url>
-  <url>
-    <loc>https://CorradoLanera.github.io/statistica-medica-short/esercizi/distribuzioni_2.html</loc>
-    <lastmod>2025-10-09T11:45:21.396Z</lastmod>
-  </url>
-  <url>
-    <loc>https://CorradoLanera.github.io/statistica-medica-short/esercizi/descrittive_1.html</loc>
-    <lastmod>2025-10-09T11:45:21.395Z</lastmod>
-  </url>
-  <url>
-    <loc>https://CorradoLanera.github.io/statistica-medica-short/slides/index.html</loc>
-    <lastmod>2025-10-09T11:45:21.663Z</lastmod>
-  </url>
-  <url>
     <loc>https://CorradoLanera.github.io/statistica-medica-short/info.html</loc>
-    <lastmod>2025-10-09T12:19:06.608Z</lastmod>
-  </url>
-  <url>
-    <loc>https://CorradoLanera.github.io/statistica-medica-short/intro.html</loc>
-    <lastmod>2025-10-09T12:04:20.178Z</lastmod>
+    <lastmod>2025-10-09T20:37:47.065Z</lastmod>
   </url>
   <url>
     <loc>https://CorradoLanera.github.io/statistica-medica-short/corsi/2025_infermieristica_rovigo.html</loc>
-    <lastmod>2025-10-09T12:19:46.514Z</lastmod>
-  </url>
-  <url>
-    <loc>https://CorradoLanera.github.io/statistica-medica-short/index.html</loc>
-    <lastmod>2025-10-09T12:01:03.510Z</lastmod>
-  </url>
-  <url>
-    <loc>https://CorradoLanera.github.io/statistica-medica-short/esercizi/index.html</loc>
-    <lastmod>2025-10-09T11:45:21.400Z</lastmod>
-  </url>
-  <url>
-    <loc>https://CorradoLanera.github.io/statistica-medica-short/esercizi/distribuzioni_1.html</loc>
-    <lastmod>2025-10-09T11:45:21.395Z</lastmod>
-  </url>
-  <url>
-    <loc>https://CorradoLanera.github.io/statistica-medica-short/esercizi/probabilita_condizionamento.html</loc>
-    <lastmod>2025-10-09T11:45:21.400Z</lastmod>
+    <lastmod>2025-10-12T21:48:55.475Z</lastmod>
   </url>
   <url>
     <loc>https://CorradoLanera.github.io/statistica-medica-short/esercizi/probabilita_vpp.html</loc>
-    <lastmod>2025-10-09T11:45:21.401Z</lastmod>
+    <lastmod>2025-10-06T01:39:46.814Z</lastmod>
+  </url>
+  <url>
+    <loc>https://CorradoLanera.github.io/statistica-medica-short/esercizi/probabilita_condizionamento.html</loc>
+    <lastmod>2025-10-06T01:39:46.814Z</lastmod>
+  </url>
+  <url>
+    <loc>https://CorradoLanera.github.io/statistica-medica-short/esercizi/distribuzioni_1.html</loc>
+    <lastmod>2025-10-06T01:39:46.809Z</lastmod>
+  </url>
+  <url>
+    <loc>https://CorradoLanera.github.io/statistica-medica-short/esercizi/index.html</loc>
+    <lastmod>2025-10-06T01:39:46.813Z</lastmod>
+  </url>
+  <url>
+    <loc>https://CorradoLanera.github.io/statistica-medica-short/intro.html</loc>
+    <lastmod>2025-10-09T20:37:47.084Z</lastmod>
+  </url>
+  <url>
+    <loc>https://CorradoLanera.github.io/statistica-medica-short/index.html</loc>
+    <lastmod>2025-10-12T21:39:54.769Z</lastmod>
+  </url>
+  <url>
+    <loc>https://CorradoLanera.github.io/statistica-medica-short/slides/index.html</loc>
+    <lastmod>2025-10-06T01:39:47.011Z</lastmod>
+  </url>
+  <url>
+    <loc>https://CorradoLanera.github.io/statistica-medica-short/esercizi/descrittive_1.html</loc>
+    <lastmod>2025-10-06T01:39:46.809Z</lastmod>
+  </url>
+  <url>
+    <loc>https://CorradoLanera.github.io/statistica-medica-short/esercizi/distribuzioni_2.html</loc>
+    <lastmod>2025-10-06T01:39:46.809Z</lastmod>
+  </url>
+  <url>
+    <loc>https://CorradoLanera.github.io/statistica-medica-short/esercizi/probabilita_somma.html</loc>
+    <lastmod>2025-10-06T01:39:46.814Z</lastmod>
+  </url>
+  <url>
+    <loc>https://CorradoLanera.github.io/statistica-medica-short/esercizi/references.html</loc>
+    <lastmod>2025-10-06T01:39:46.815Z</lastmod>
+  </url>
+  <url>
+    <loc>https://CorradoLanera.github.io/statistica-medica-short/corsi/2025_ortottica_padova.html</loc>
+    <lastmod>2025-10-12T21:48:40.368Z</lastmod>
   </url>
 </urlset>

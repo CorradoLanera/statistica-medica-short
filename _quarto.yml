@@ -57,6 +57,8 @@ website:
         menu:
           - text: 2025 - Infermieristica III anno (Rovigo)
             href: corsi/2025_infermieristica_rovigo.qmd
+          - text: 2025 - Ortottica I anno (Padova)
+            href: corsi/2025_ortottica_padova.qmd
       - href: info.qmd
         text: Contatti
   sidebar:

@@ -14,5 +14,5 @@ about:
 ::: {#hero-heading}
 ## Scopo del corso
 
-_Fornire agli studenti delle Professioni Sanitarie le conoscenze di base di statistica medica per interpretare correttamente i dati clinici e scientifici, supportando decisioni informate nella pratica professionale._
+*Fornire agli studenti delle Professioni Sanitarie le conoscenze di base di statistica medica per interpretare correttamente i dati clinici e scientifici, supportando decisioni informate nella pratica professionale.*
 :::

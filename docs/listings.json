@@ -1,9 +1,5 @@
 [
   {
-    "listing": "/slides/index.html",
-    "items": []
-  },
-  {
     "listing": "/esercizi/index.html",
     "items": [
       "/esercizi/distribuzioni_1.html",
@@ -14,5 +10,9 @@
       "/esercizi/references.html",
       "/esercizi/descrittive_1.html"
     ]
+  },
+  {
+    "listing": "/slides/index.html",
+    "items": []
   }
 ]
