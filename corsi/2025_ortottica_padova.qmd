@@ -10,4 +10,4 @@
 |  | Inferenza (IC e p-value) |  |
 : {tbl-colwidths="[15,70,15]"}
 
-Moodle: [bit.ly/ortottica-25-moodle](bit.ly/ortottica-25-moodle)
+Moodle: [bit.ly/ortottica-25-moodle](https://bit.ly/ortottica-25-moodle)

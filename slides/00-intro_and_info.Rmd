@@ -61,7 +61,7 @@ use_extra_styles(
   mute_unhighlighted_code = TRUE  #<<
 )
 use_progress_bar(color = "#0051BA", location = "top")
-use_logo("img/bit.ly_statmed-cl-corsi.png")
+use_logo("img/bit.ly_cl-statmed.png")
 ```
 
 ```{r style-share-again, echo=FALSE}
@@ -197,9 +197,9 @@ class: hide-count
 
 - Modalità: in presenza, **75% obbligatorio** (minimo)
 
-- Materiale didattico: Moodle [bit.ly/statmed-cl-corsi](https://bit.ly/statmed-cl-corsi)
+- Materiale didattico: Moodle
 
-- Portale accesso slide: [bit.ly/statmed-cl-corsi](https://bit.ly/statmed-cl-corsi)
+- Portale accesso slide, esercizi e calendario: [bit.ly/cl-statmed](https://bit.ly/cl-statmed)
 
 
 ## Licenza
@@ -224,39 +224,27 @@ class: hide-count
 
 ## .orange[Agenda]
 
-<small>
 .pull-left[
 
-- Lezione 1 (3 ore = 135 minuti): 
-  + intro al corso
-  + statistica descrittiva - prerequisiti, definizioni, localizzazione
-  + statistica descrittiva - dispersione / distribuzione, grafici
-  
-- Lezione 2 (3 ore = 135 minuti):
-  + fondamenti di probabilità
++ intro al corso
 
-- Lezione 3 (3 ore = 135 minuti):
-  + rischio
-  + test di screening: sensibilità e specificità
-  + test di screening: valori predittivi positivo e negativo
-  + teorema di Bayes (base e generalizzato)
++ statistica descrittiva - prerequisiti, definizioni, localizzazione, dispersione / distribuzione, grafici
+  
++ fondamenti di probabilità
+
++ rischi, test di screening: sensibilità e specificità, valori predittivi positivo e negativo, teorema di Bayes (base e generalizzato)
 ]
 
 .pull-right[
-- Lezione 4 (3 ore = 135 minuti):
-  + distribuzioni: modelli discreti
++ distribuzioni: modelli discreti
 
-- Lezione 5 (3 ore = 135 minuti):
-  + distribuzioni: modelli continui
++ distribuzioni: modelli continui
 
-- Lezione 6 (3 ore = 135 minuti):
-  + intervalli di confidenza e p-value
++ intervalli di confidenza e p-value
   
-- Lezione 7 (2 ore = 90 minuti):
-  + revisione e simulazione completa d'esame
++ revisione e simulazione completa d'esame
 ]
 
-</small>
 
 
 ---
@@ -265,19 +253,17 @@ class: hide-count
 
 # .orange[Supporto]
 
-In .orange[**Moodle**] ([bit.ly/infermieristica-25-moodle](https://bit.ly/infermieristica-25-moodle)), trovate:
+In .orange[**Moodle**], trovate:
 
-- **Esercizi**:
+- Link al portale **slide** ed **Esercizi**
 
-- **Lavagne** scritte a lezione (ricordatemi di usare quella digitale!)
+- **Lavagne** scritte a lezione
 
 - Link per prenotare **ricevimento**  [bit.ly/statmed-cl-ricevimento](https://bit.ly/statmed-cl-ricevimento): 
-  - lunedì 9:30 - 11:00 + 17:00 - 19:00
-  - giovedì 17:00 - 19:00
-  - venerdì 9:30 - 11:00
   
-25 minuti a sessione, prenotabile con almeno 2 giorni di anticipo,
-ed entro due settimane nel futuro, tramite il link:
+  - 25 minuti a sessione
+  - prenotabile con almeno 2 giorni di anticipo,
+  - entro due settimane nel futuro
   
 > La settimana precedente le sessioni d'esame NON è attivo il ricevimento.
 
@@ -291,25 +277,28 @@ class: hide-count
 
 # .orange[Esame finale]
 <small>
-L'esame finale sarà composto da 10 **esercizi a risposta multipla** dal valore di 3 punti ciascuno.
-
-> **non avrà durata prestabilita** (durata prevista per lo svolgimento 2 ore)
+L'esame finale sarà composto da 10 **esercizi a risposta multipla** dal valore di 3 punti ciascuno, e **non avrà durata prestabilita** (durata prevista per lo svolgimento 2 ore).
 
 Durante lo svolgimento è **.orange[concesso]** l'utilizzo di:
 
  - **qualunque libro di testo cartaceo**
  - **appunti personali cartacei**. 
  - **tavole statistiche cartacee**
- - **calcolatrice non scientifica**
- - **due penne**
+ - **calcolatrice scientifica NON programmabile** (aritmetica base, radici, esponenti, parentesi)<br>(Casio fx220 Plus-2 (~10 euro), Texas Instruments TI-30XA (~13 euro), Sharp EL-501T (~17 euro))
+
+Punteggi:
 
 - Una risposta corretta varrà 3 punti.
 - Sarà presente una sola risposta corretta in ciascuna domanda.
 - Una risposta errata sommerà negativamente sul totale in misura pari al punteggio della domanda diviso il numero di opzioni sbagliate possibili (= 3 / (numero risposte - 1)).
 - Sarà presente una domanda "bonus" che varrà 6 punti (portanto il totale a 36). Tale domanda avrà valore (positivo o negativo che sia) solamente dopo aver raggiunto i 18/30 con le altre domande, e in alcun caso potrà dare o togliere la sufficienza.
 
-Il punteggio totale dell'esame sarà dunque di 36/30. Superato totalizzandone
-almeno 18/30. La lode è assegnata con un totale di almeno 31/30 punti.
+Il punteggio totale dell'esame sarà dunque di 36/36. Superato totalizzandone
+almeno 18/30. La lode è assegnata con un totale di almeno 31/36 punti.
+
+> Sarà possibile prenotare un'integrazione orale (solo) nei seguenti casi:
+> - punteggio tra 14 e 17 punti, per arrivare a 18/30 (non di più)
+> - punteggio tra 27 e 30 punti, per arrivare fino a 30/30, con eventuale lode.
 
 
 
@@ -384,7 +373,7 @@ _**Can** one be a .orange[good data analyst] **without** being a .orange[half-go
 
 
 
-Diapositive: [bit.ly/statmed-cl-corsi](https://bit.ly/statmed-cl-corsi)
+Diapositive: [bit.ly/cl-statmed](https://bit.ly/cl-statmed)
 
 
 [`r fontawesome::fa("link")`](https://www.unipd-ubep.it/) [**www.unipd-ubep.it**](https://www.unipd-ubep.it/) | 
