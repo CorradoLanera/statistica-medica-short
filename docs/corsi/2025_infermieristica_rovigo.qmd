@@ -1,7 +1,7 @@
 ## CdL Infermieristica, III anno, I semestre, a.a. 2025-26 - Rovigo
 
 | **Giorno** | **Tema** | **Diapositive** |
-|------------------:|:------------------|:---------------------------------|
+|---:|:---|:---|
 | 2025-09-25 | Intro e info | [Intro e info](../slides/00-intro_and_info.html) |
 | 2025-09-25 | R e RStudio | [R e RStudio](../slides/01-r_rstudio.html) |
 | 2025-09-25 | Descrittive (intro, notazioni, centralità) | [Descrittive](../slides/02-descrittive.html) |

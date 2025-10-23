@@ -38,12 +38,51 @@ Gli esercizi nelle slide sono tutti svolti, si suggerisce agli studenti di prova
 
 -   Leggi sempre **il testo dell’esercizio** con attenzione prima di passare ai calcoli.\
 -   Cerca di **interpretare il significato clinico** dei risultati numerici: la statistica non è solo calcolo, ma anche comprensione del contesto.\
-- Ricorda che, in ambito didattico, se viene posto un problema vuol dire che: 
-  + si può risolvere
-  + si può risolvere con gli strumenti che hai a disposizione
-  Dunque, provare a individuare e scrivere bene i dati, considerare le formule affrontate e riportate nella sezione appena precedente e ragionare su come poter adattare e sfruttare gfi strumenti proposti, coi dati forniti, per risolvere il problema.
+-   Ricorda che, in ambito didattico, se viene posto un problema vuol dire che:
+    -   si può risolvere
+    -   si può risolvere con gli strumenti che hai a disposizione Dunque, provare a individuare e scrivere bene i dati, considerare le formule affrontate e riportate nella sezione appena precedente e ragionare su come poter adattare e sfruttare gfi strumenti proposti, coi dati forniti, per risolvere il problema.
 -   Confronta i tuoi risultati con quelli discussi a lezione; sopratutto, discutili con i colleghi.\
--   [OPZIONALE] Se utilizzi R, prova a **riprodurre le analisi passo per passo**, verificando come cambiano i risultati al variare dei dati.
+-   \[OPZIONALE\] Se utilizzi R, prova a **riprodurre le analisi passo per passo**, verificando come cambiano i risultati al variare dei dati.
+
+------------------------------------------------------------------------
+
+## Suggerimenti e indicazioni per l'esame {.unnumbered}
+
+### Materiale **necessario**
+
+-   **Tavole delle distribuzioni** (Z e t di Student, non ne servono altre) - fornite dal docente in formato cartaceo durante il corso (vanno bene anche altre).
+
+-   **Calcolatrice scientifica base** (non è permesso l’uso di smartphone o tablet). La più semplice ed economica che trovate va benissimo, sufficiente che sia in grado di fare l'esponenziale ($e^x$); calcolatrici di esempio di varie marche che vanno bene sono (elenco non esaustivo solo esemplificativo):
+
+::: callout-note
+In ambito *calcolatrici* più costosa non vuol dire migliore! Se dovete comprarla, scegliete quella che vi trovate meglio, vanno bene tutte (anche di altre marche, queste forse solo le più famose e diffuse)
+:::
+
+```         
+-   Casio FX-220 Plus2 (10 euro circa) - doppia riga
+-   Casio FX-82 MS (15 euro circa) - doppia riga
+-   Casio FX-570 ES Plus (20 euro circa) - display naturale
+-   Sharp EL-501T (20 euro circa) - riga singola
+-   Sharp EL-531T (20 euro circa) - doppia riga
+-   Sharp EL-W531 (20 euro circa) - display naturale
+-   Texas Instruments TI-30 Xa (20 euro circa) - riga singola
+-   Texas Instruments TI-30X IIS (25 euro circa) - doppia riga
+-   Texas Instruments TI-30 X Plus (35 euro circa) - quadrupla riga
+-   Texas Instruments TI-30X Pro (40 euro circa) - display naturale
+```
+
+::: callout-tip
+Se dovete comprarla, e vi serve solo per l'esame, spendete meno possibile, non serve nulla di più complesso di una calcolatrice scientifica base (Se fa esponenziale, tutto il resto che serve lo fa di sicuro).
+:::
+
+### Materiale ammesso
+
+-   qualunque materiale cartaceo **personale** (appunti, libri, dispense, eccetera) - non è permesso condividere materiale cartaceo tra studenti durante l’esame.
+
+### Materiale non ammesso
+
+-   dispositivi elettronici connessi a internet (smartphone, tablet, computer portatili, eccetera);
+-   calcolatrici programmabili o con funzionalità avanzate (grafici, simboliche, eccetera);
 
 ------------------------------------------------------------------------
 
@@ -52,4 +91,4 @@ Gli esercizi nelle slide sono tutti svolti, si suggerisce agli studenti di prova
 Questo materiale è in **costante aggiornamento**.\
 Eventuali correzioni, estensioni o nuove versioni saranno rese disponibili attraverso i canali ufficiali del corso o tramite il profilo docente.
 
-Per segnalare errori, suggerimenti o proposte di miglioramento, contattatemi pure via email ([corrado.lanera@ubep.unipd.it](mailto:corrado.lanera@ubep.unipd.it)), tramite i canali ufficiali del corso, o aprendo un [issue](https://github.com/CorradoLanera/statistica-medica-short/issues) dalla pagina di sviluppo del corso ([https://github.com/CorradoLanera/statistica-medica-short](https://github.com/CorradoLanera/statistica-medica-short))
+Per segnalare errori, suggerimenti o proposte di miglioramento, contattatemi pure via email ([corrado.lanera\@ubep.unipd.it](mailto:corrado.lanera@ubep.unipd.it)), tramite i canali ufficiali del corso, o aprendo un [issue](https://github.com/CorradoLanera/statistica-medica-short/issues) dalla pagina di sviluppo del corso (<https://github.com/CorradoLanera/statistica-medica-short>)
