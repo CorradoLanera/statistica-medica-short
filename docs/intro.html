@@ -72,6 +72,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 <meta name="twitter:title" content="Statistica Medica — Corrado Lanera">
@@ -322,6 +351,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="./corsi/2025_ortottica_padova.html">
  <span class="dropdown-text">2025 - Ortottica I anno (Padova)</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./corsi/2025_terp_rovigo.html">
+ <span class="dropdown-text">2025 - TeRP I anno (Rovigo)</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item">
@@ -354,6 +387,12 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#come-utilizzare-questo-materiale" id="toc-come-utilizzare-questo-materiale" class="nav-link" data-scroll-target="#come-utilizzare-questo-materiale">Come utilizzare questo materiale</a></li>
   <li><a href="#suggerimenti-per-lo-studio" id="toc-suggerimenti-per-lo-studio" class="nav-link" data-scroll-target="#suggerimenti-per-lo-studio">Suggerimenti per lo studio</a></li>
+  <li><a href="#suggerimenti-e-indicazioni-per-lesame" id="toc-suggerimenti-e-indicazioni-per-lesame" class="nav-link" data-scroll-target="#suggerimenti-e-indicazioni-per-lesame">Suggerimenti e indicazioni per l’esame</a>
+  <ul class="collapse">
+  <li><a href="#materiale-necessario" id="toc-materiale-necessario" class="nav-link" data-scroll-target="#materiale-necessario">Materiale <strong>necessario</strong></a></li>
+  <li><a href="#materiale-ammesso" id="toc-materiale-ammesso" class="nav-link" data-scroll-target="#materiale-ammesso">Materiale ammesso</a></li>
+  <li><a href="#materiale-non-ammesso" id="toc-materiale-non-ammesso" class="nav-link" data-scroll-target="#materiale-non-ammesso">Materiale non ammesso</a></li>
+  </ul></li>
   <li><a href="#aggiornamenti" id="toc-aggiornamenti" class="nav-link" data-scroll-target="#aggiornamenti">Aggiornamenti</a></li>
   </ul></li>
   </ul>
@@ -440,11 +479,71 @@ Note
 </ul>
 <hr>
 </section>
+<section id="suggerimenti-e-indicazioni-per-lesame" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="suggerimenti-e-indicazioni-per-lesame">Suggerimenti e indicazioni per l’esame</h2>
+<section id="materiale-necessario" class="level3">
+<h3 class="anchored" data-anchor-id="materiale-necessario">Materiale <strong>necessario</strong></h3>
+<ul>
+<li><p><strong>Tavole delle distribuzioni</strong> (Z e t di Student, non ne servono altre) - fornite dal docente in formato cartaceo durante il corso (vanno bene anche altre).</p></li>
+<li><p><strong>Calcolatrice scientifica base</strong> (non è permesso l’uso di smartphone o tablet). La più semplice ed economica che trovate va benissimo, sufficiente che sia in grado di fare l’esponenziale (<span class="math inline">\(e^x\)</span>); calcolatrici di esempio di varie marche che vanno bene sono (elenco non esaustivo solo esemplificativo):</p></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In ambito <em>calcolatrici</em> più costosa non vuol dire migliore! Se dovete comprarla, scegliete quella che vi trovate meglio, vanno bene tutte (anche di altre marche, queste forse solo le più famose e diffuse)</p>
+</div>
+</div>
+<pre><code>-   Casio FX-220 Plus2 (10 euro circa) - doppia riga
+-   Casio FX-82 MS (15 euro circa) - doppia riga
+-   Casio FX-570 ES Plus (20 euro circa) - display naturale
+-   Sharp EL-501T (20 euro circa) - riga singola
+-   Sharp EL-531T (20 euro circa) - doppia riga
+-   Sharp EL-W531 (20 euro circa) - display naturale
+-   Texas Instruments TI-30 Xa (20 euro circa) - riga singola
+-   Texas Instruments TI-30X IIS (25 euro circa) - doppia riga
+-   Texas Instruments TI-30 X Plus (35 euro circa) - quadrupla riga
+-   Texas Instruments TI-30X Pro (40 euro circa) - display naturale</code></pre>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Se dovete comprarla, e vi serve solo per l’esame, spendete meno possibile, non serve nulla di più complesso di una calcolatrice scientifica base (Se fa esponenziale, tutto il resto che serve lo fa di sicuro).</p>
+</div>
+</div>
+</section>
+<section id="materiale-ammesso" class="level3">
+<h3 class="anchored" data-anchor-id="materiale-ammesso">Materiale ammesso</h3>
+<ul>
+<li>qualunque materiale cartaceo <strong>personale</strong> (appunti, libri, dispense, eccetera) - non è permesso condividere materiale cartaceo tra studenti durante l’esame.</li>
+</ul>
+</section>
+<section id="materiale-non-ammesso" class="level3">
+<h3 class="anchored" data-anchor-id="materiale-non-ammesso">Materiale non ammesso</h3>
+<ul>
+<li>dispositivi elettronici connessi a internet (smartphone, tablet, computer portatili, eccetera);</li>
+<li>calcolatrici programmabili o con funzionalità avanzate (grafici, simboliche, eccetera);</li>
+</ul>
+<hr>
+</section>
+</section>
 <section id="aggiornamenti" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="aggiornamenti">Aggiornamenti</h2>
 <p>Questo materiale è in <strong>costante aggiornamento</strong>.<br>
 Eventuali correzioni, estensioni o nuove versioni saranno rese disponibili attraverso i canali ufficiali del corso o tramite il profilo docente.</p>
-<p>Per segnalare errori, suggerimenti o proposte di miglioramento, contattatemi pure via email (<a href="mailto:corrado.lanera@ubep.unipd.it">corrado.lanera@ubep.unipd.it</a>), tramite i canali ufficiali del corso, o aprendo un <a href="https://github.com/CorradoLanera/statistica-medica-short/issues">issue</a> dalla pagina di sviluppo del corso (<a href="https://github.com/CorradoLanera/statistica-medica-short">https://github.com/CorradoLanera/statistica-medica-short</a>)</p>
+<p>Per segnalare errori, suggerimenti o proposte di miglioramento, contattatemi pure via email (<a href="mailto:corrado.lanera@ubep.unipd.it">corrado.lanera@ubep.unipd.it</a>), tramite i canali ufficiali del corso, o aprendo un <a href="https://github.com/CorradoLanera/statistica-medica-short/issues">issue</a> dalla pagina di sviluppo del corso (<a href="https://github.com/CorradoLanera/statistica-medica-short" class="uri">https://github.com/CorradoLanera/statistica-medica-short</a>)</p>
 
 
 </section>

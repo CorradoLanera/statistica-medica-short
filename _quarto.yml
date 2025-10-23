@@ -59,6 +59,8 @@ website:
             href: corsi/2025_infermieristica_rovigo.qmd
           - text: 2025 - Ortottica I anno (Padova)
             href: corsi/2025_ortottica_padova.qmd
+          - text: 2025 - TeRP I anno (Rovigo)
+            href: corsi/2025_terp_rovigo.qmd
       - href: info.qmd
         text: Contatti
   sidebar:
