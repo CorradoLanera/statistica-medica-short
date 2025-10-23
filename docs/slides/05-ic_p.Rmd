@@ -14,6 +14,7 @@ output:
     css: xaringan-themer.css
     self_contained: true
 ---
+
 class: center, middle, bg_title, hide-count
 
 
@@ -236,11 +237,11 @@ Dato un insieme di osservazioni definito **campione**, si vuole derivare una con
 ---
 # Inferenza: .orange[campioni] e .orange[popolazioni]
 
-- Un campione casuale è una .orange[selezione] di alcuni membri di una popolazione tale che ogni membro è scelto **indipendentemente** dagli altri ed ha una **probabilità non nulla** di essere selezionato
+- Un campione casuale è una **.orange[selezione]** di alcuni membri di una popolazione tale che ogni membro è scelto **indipendentemente** dagli altri ed ha una **probabilità non nulla** di essere selezionato
 
-- Un campione casuale **semplice** è un campione casuale in cui ogni membro ha la .orange[stessa probabilità] di essere selezionato
+- Un campione casuale **semplice** è un campione casuale in cui ogni membro ha la **.orange[stessa probabilità]** di essere selezionato
 
-- La .orange[popolazione target] è il gruppo di soggetti, **da cui è estratto** il campione, che si intende studiare e che .orange[si ipotizza essere infinita]
+- La **.orange[popolazione target]** è il gruppo di soggetti, **da cui è estratto** il campione, che si intende studiare e che **.orange[si ipotizza essere infinita]**
 
 
 

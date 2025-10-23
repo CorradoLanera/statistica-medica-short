@@ -9,7 +9,8 @@
 | 2025-10-01 | Probabilità (definizioni, operazioni e teoremi fondamentali, sens, spec, vpp, vpn, Bayes) | [Probabilità](../slides/03-probabilita.html) |
 | 2025-10-03 | Distribuzioni (massa di probabilità, valore atteso; binomiale, poisson) | [Distribuzioni](../slides/04-distribuzioni.html) |
 | 2025-10-09 | Distribuzioni (normale, standard) |  |
-|  | Inferenza, IC (e p-value) |  |
-: {tbl-colwidths="[15,70,15]"}
+| 2025-10-23 | Inferenza, IC (e p-value) | [Inferenza](../slides/05-ic_p.html) |
+
+: {tbl-colwidths="\[15,70,15\]"}
 
 Moodle: [bit.ly/infermieristica-25-moodle](https://bit.ly/infermieristica-25-moodle)
