@@ -1,5 +1,22 @@
 [
   {
+    "listing": "/esercizi/index.html",
+    "items": [
+      "/esercizi/distribuzioni_1.html",
+      "/esercizi/distribuzioni_2.html",
+      "/esercizi/probabilita_condizionamento.html",
+      "/esercizi/probabilita_somma.html",
+      "/esercizi/probabilita_vpp.html",
+      "/esercizi/quiz.html",
+      "/esercizi/references.html",
+      "/esercizi/descrittive_1.html"
+    ]
+  },
+  {
+    "listing": "/slides/index.html",
+    "items": []
+  },
+  {
     "listing": "/esercizi/quiz.html",
     "items": []
   }

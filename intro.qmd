@@ -55,16 +55,18 @@ Gli esercizi nelle slide sono tutti svolti, si suggerisce agli studenti di prova
 -   **Calcolatrice scientifica base** (non è permesso l’uso di smartphone o tablet). La più semplice ed economica che trovate va benissimo, sufficiente che sia in grado di fare l'esponenziale ($e^x$); calcolatrici di esempio di varie marche che vanno bene sono (elenco non esaustivo solo esemplificativo):
 
 ::: callout-note
-In ambito *calcolatrici* più costosa non vuol dire migliore! Se dovete comprarla, scegliete quella che vi trovate meglio, vanno bene tutte (anche di altre marche, queste forse solo le più famose e diffuse)
+In ambito *calcolatrici*, "più costosa" non vuol dire "migliore"! Se dovete comprarla, scegliete quella che vi trovate meglio, vanno bene tutte (anche di altre marche, queste sono solo una mia selezione di quelle che ritengo più diffuse)
 :::
 
 ```         
 -   Casio FX-220 Plus2 (10 euro circa) - doppia riga
--   Casio FX-82 MS (15 euro circa) - doppia riga
+-   Casio FX-82 MS 2 (15 euro circa) - doppia riga
 -   Casio FX-570 ES Plus (20 euro circa) - display naturale
+
 -   Sharp EL-501T (20 euro circa) - riga singola
--   Sharp EL-531T (20 euro circa) - doppia riga
--   Sharp EL-W531 (20 euro circa) - display naturale
+-   Sharp EL-531TH (20 euro circa) - doppia riga
+-   Sharp EL-W531XH (20 euro circa) - display naturale
+
 -   Texas Instruments TI-30 Xa (20 euro circa) - riga singola
 -   Texas Instruments TI-30X IIB (25 euro circa) - doppia riga
 -   Texas Instruments TI-30X Pro (40 euro circa) - display naturale
