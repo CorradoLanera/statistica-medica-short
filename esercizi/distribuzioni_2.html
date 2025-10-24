@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Esercizi sul teorema della somma">
 
-<title>Probabilità - Teorema della somma – Statistica Medica — Corrado Lanera</title>
+<title>Distribuzioni di probabilità 2 – Statistica Medica — Corrado Lanera</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -75,8 +74,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="styles.css">
-<meta name="twitter:title" content="Probabilità - Teorema della somma – Statistica Medica — Corrado Lanera">
-<meta name="twitter:description" content="Esercizi sul teorema della somma">
+<meta name="twitter:title" content="Distribuzioni di probabilità 2 – Statistica Medica — Corrado Lanera">
+<meta name="twitter:description" content="Luree per le Professioni Sanitarie, Università di Padova">
 <meta name="twitter:image" content="https://CorradoLanera.github.io/statistica-medica-short/img/logo-statmed.png">
 <meta name="twitter:creator" content="@CorradoLanera">
 <meta name="twitter:image-height" content="1024">
@@ -310,6 +309,10 @@ ul.task-list li input[type="checkbox"] {
   </li>  
     </ul>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../esercizi/quiz.html"> 
+<span class="menu-text">Quiz (visti a lezione)</span></a>
+  </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-cdl" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">CdL</span>
@@ -350,18 +353,8 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#probabilità---teorema-della-somma" id="toc-probabilità---teorema-della-somma" class="nav-link active" data-scroll-target="#probabilità---teorema-della-somma">Probabilità - Teorema della somma</a>
-  <ul class="collapse">
-  <li><a href="#valutazione-del-tasso-di-positività-covid-19-nellospedale" id="toc-valutazione-del-tasso-di-positività-covid-19-nellospedale" class="nav-link" data-scroll-target="#valutazione-del-tasso-di-positività-covid-19-nellospedale"><strong>VALUTAZIONE DEL TASSO DI POSITIVITÀ COVID-19 NELL’OSPEDALE</strong></a></li>
-  <li><a href="#domande" id="toc-domande" class="nav-link" data-scroll-target="#domande">Domande</a></li>
-  </ul></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/CorradoLanera/statistica-medica-short/edit/main/esercizi/probabilita_somma.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/CorradoLanera/statistica-medica-short/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -369,14 +362,9 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Probabilità - Teorema della somma</h1>
+<h1 class="title">Distribuzioni di probabilità 2</h1>
 </div>
 
-<div>
-  <div class="description">
-    Esercizi sul teorema della somma
-  </div>
-</div>
 
 
 <div class="quarto-title-meta">
@@ -391,62 +379,16 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="probabilità---teorema-della-somma" class="level1">
-<h1>Probabilità - Teorema della somma</h1>
-<section id="valutazione-del-tasso-di-positività-covid-19-nellospedale" class="level2">
-<h2 class="anchored" data-anchor-id="valutazione-del-tasso-di-positività-covid-19-nellospedale"><strong>VALUTAZIONE DEL TASSO DI POSITIVITÀ COVID-19 NELL’OSPEDALE</strong></h2>
-<p>Sei un membro del team di controllo infezioni di un grande ospedale e ti viene chiesto di stimare il tasso complessivo di positività al COVID-19 tra i pazienti ricoverati. Non tutti i reparti hanno la stessa incidenza di casi, a causa delle diverse tipologie di pazienti e procedure.</p>
-<p>Per facilitare l’analisi, l’ospedale è stato suddiviso in cinque macro-reparti principali, per i quali sono disponibili i seguenti dati:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><strong>Reparto</strong></td>
-<td><strong>Porzione pazienti totali</strong></td>
-<td><strong>Tasso positività CiViD-19 nel reparto</strong></td>
-</tr>
-<tr class="even">
-<td>Medicina Interna</td>
-<td>35% (0.35)</td>
-<td>20% (0.20)</td>
-</tr>
-<tr class="odd">
-<td>Chirurgia</td>
-<td>25% (0.25)</td>
-<td>8% (0.08)</td>
-</tr>
-<tr class="even">
-<td>Pediatria</td>
-<td>15% (0.15)</td>
-<td>12% (0.12)</td>
-</tr>
-<tr class="odd">
-<td>Terapie Intensive</td>
-<td>10% (0.10)</td>
-<td>40% (0.40)</td>
-</tr>
-<tr class="even">
-<td>Altri Reparti</td>
-<td>15% (0.15)</td>
-<td>5% (0.05)</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="domande" class="level2">
-<h2 class="anchored" data-anchor-id="domande">Domande</h2>
+<p>Supponiamo che, l’anno scorso, 6 di 15 studenti di una classe di scuola elementare (specifica e nota) abbiano sviluppato l’influenza, mentre sappiamo che, sempre l’anno scorso, il 20% degli studenti delle scuole elementari a livello nazionale si sia ammalato di influenza.</p>
 <ol type="1">
-<li>Calcolare il tasso di positività complessivo al COVID-19 per l’intero ospedale, utilizzando il Teorema della Probabilità Totale.</li>
-<li>Qual è la probabilità che un paziente scelto a caso nell’ospedale sia positivo al COVID-19?</li>
+<li><p>C’è la prova di un numero eccessivo di casi nella classe in questione? Ovvero, qual è la probabilità di osservare almeno 6 casi in questa classe sapendo che il tasso nazionale è quello noto/osservato? (usare la distribuzione binomiale)</p></li>
+<li><p>Quale sarebbe stato il valore atteso di studenti che ci saremmo aspettati con l’influenza?</p></li>
+<li><p>Qual’è la probailità di osservare esattamente 6 eventi da una distribuzione di Poisson con parametro mu = 4?</p></li>
+<li><p>Quale di osservare almeno 6 eventi dalla medesima distribuzione?</p></li>
+<li><p>Quale il valore atteso?</p></li>
 </ol>
 
 
-</section>
-</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -866,4 +808,4 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/CorradoLanera/statistica-medica-short/edit/main/esercizi/probabilita_somma.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/CorradoLanera/statistica-medica-short/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/CorradoLanera/statistica-medica-short/edit/main/esercizi/distribuzioni_2.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/CorradoLanera/statistica-medica-short/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

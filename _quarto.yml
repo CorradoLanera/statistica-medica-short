@@ -53,6 +53,8 @@ website:
             href: esercizi/distribuzioni_1.qmd
           - text: Distribuzioni 2 (discrete)
             href: esercizi/distribuzioni_2.qmd
+      - href: esercizi/quiz.qmd
+        text: Quiz (visti a lezione)
       - text: CdL
         menu:
           - text: 2025 - Infermieristica III anno (Rovigo)

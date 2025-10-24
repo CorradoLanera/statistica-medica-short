@@ -1,0 +1,15 @@
+---
+title: "Quiz (visti a lezione)"
+sidebar: false
+listing:
+  type: table
+  contents:
+    - Modulo: "Descrittive"
+      Link: "[https://bit.ly/cl-statmed-ex-descrittive](https://bit.ly/cl-statmed-ex-descrittive)"
+    - Modulo: "Probabilità"
+      Link: "[https://bit.ly/cl-statmed-ex-probabilita](https://bit.ly/cl-statmed-ex-probabilita)"
+    - Modulo: "Distribuzioni"
+      Link: "[https://bit.ly/cl-statmed-ex-distribuzioni](https://bit.ly/cl-statmed-ex-distribuzioni)"
+    - Modulo: "Inferenza"
+      Link: "[https://bit.ly/cl-statmed-ex-inferenza](https://bit.ly/cl-statmed-ex-inferenza)"
+---

@@ -66,8 +66,7 @@ In ambito *calcolatrici* più costosa non vuol dire migliore! Se dovete comprarl
 -   Sharp EL-531T (20 euro circa) - doppia riga
 -   Sharp EL-W531 (20 euro circa) - display naturale
 -   Texas Instruments TI-30 Xa (20 euro circa) - riga singola
--   Texas Instruments TI-30X IIS (25 euro circa) - doppia riga
--   Texas Instruments TI-30 X Plus (35 euro circa) - quadrupla riga
+-   Texas Instruments TI-30X IIB (25 euro circa) - doppia riga
 -   Texas Instruments TI-30X Pro (40 euro circa) - display naturale
 ```
 

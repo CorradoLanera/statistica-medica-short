@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Esercizi sul teorema della somma">
 
-<title>infermieristica_rovigo – Statistica Medica — Corrado Lanera</title>
+<title>Probabilità - Teorema della somma – Statistica Medica — Corrado Lanera</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -74,8 +75,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="styles.css">
-<meta name="twitter:title" content="Statistica Medica — Corrado Lanera">
-<meta name="twitter:description" content="Luree per le Professioni Sanitarie, Università di Padova">
+<meta name="twitter:title" content="Probabilità - Teorema della somma – Statistica Medica — Corrado Lanera">
+<meta name="twitter:description" content="Esercizi sul teorema della somma">
 <meta name="twitter:image" content="https://CorradoLanera.github.io/statistica-medica-short/img/logo-statmed.png">
 <meta name="twitter:creator" content="@CorradoLanera">
 <meta name="twitter:image-height" content="1024">
@@ -309,6 +310,10 @@ ul.task-list li input[type="checkbox"] {
   </li>  
     </ul>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../esercizi/quiz.html"> 
+<span class="menu-text">Quiz (visti a lezione)</span></a>
+  </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-cdl" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">CdL</span>
@@ -354,78 +359,97 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#cdl-infermieristica-iii-anno-i-semestre-a.a.-2025-26---rovigo" id="toc-cdl-infermieristica-iii-anno-i-semestre-a.a.-2025-26---rovigo" class="nav-link active" data-scroll-target="#cdl-infermieristica-iii-anno-i-semestre-a.a.-2025-26---rovigo">CdL Infermieristica, III anno, I semestre, a.a. 2025-26 - Rovigo</a></li>
+  <li><a href="#probabilità---teorema-della-somma" id="toc-probabilità---teorema-della-somma" class="nav-link active" data-scroll-target="#probabilità---teorema-della-somma">Probabilità - Teorema della somma</a>
+  <ul class="collapse">
+  <li><a href="#valutazione-del-tasso-di-positività-covid-19-nellospedale" id="toc-valutazione-del-tasso-di-positività-covid-19-nellospedale" class="nav-link" data-scroll-target="#valutazione-del-tasso-di-positività-covid-19-nellospedale"><strong>VALUTAZIONE DEL TASSO DI POSITIVITÀ COVID-19 NELL’OSPEDALE</strong></a></li>
+  <li><a href="#domande" id="toc-domande" class="nav-link" data-scroll-target="#domande">Domande</a></li>
+  </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/CorradoLanera/statistica-medica-short/edit/main/corsi/2025_infermieristica_rovigo.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/CorradoLanera/statistica-medica-short/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/CorradoLanera/statistica-medica-short/edit/main/esercizi/probabilita_somma.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/CorradoLanera/statistica-medica-short/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
 
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Probabilità - Teorema della somma</h1>
+</div>
+
+<div>
+  <div class="description">
+    Esercizi sul teorema della somma
+  </div>
+</div>
 
 
+<div class="quarto-title-meta">
 
-<section id="cdl-infermieristica-iii-anno-i-semestre-a.a.-2025-26---rovigo" class="level2">
-<h2 class="anchored" data-anchor-id="cdl-infermieristica-iii-anno-i-semestre-a.a.-2025-26---rovigo">CdL Infermieristica, III anno, I semestre, a.a. 2025-26 - Rovigo</h2>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="probabilità---teorema-della-somma" class="level1">
+<h1>Probabilità - Teorema della somma</h1>
+<section id="valutazione-del-tasso-di-positività-covid-19-nellospedale" class="level2">
+<h2 class="anchored" data-anchor-id="valutazione-del-tasso-di-positività-covid-19-nellospedale"><strong>VALUTAZIONE DEL TASSO DI POSITIVITÀ COVID-19 NELL’OSPEDALE</strong></h2>
+<p>Sei un membro del team di controllo infezioni di un grande ospedale e ti viene chiesto di stimare il tasso complessivo di positività al COVID-19 tra i pazienti ricoverati. Non tutti i reparti hanno la stessa incidenza di casi, a causa delle diverse tipologie di pazienti e procedure.</p>
+<p>Per facilitare l’analisi, l’ospedale è stato suddiviso in cinque macro-reparti principali, per i quali sono disponibili i seguenti dati:</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 15%">
-<col style="width: 70%">
-<col style="width: 15%">
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
 </colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: right;"><strong>Giorno</strong></th>
-<th style="text-align: left;"><strong>Tema</strong></th>
-<th style="text-align: left;"><strong>Diapositive</strong></th>
-</tr>
-</thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">2025-09-25</td>
-<td style="text-align: left;">Intro e info</td>
-<td style="text-align: left;"><a href="../slides/00-intro_and_info.html">Intro e info</a></td>
+<td><strong>Reparto</strong></td>
+<td><strong>Porzione pazienti totali</strong></td>
+<td><strong>Tasso positività CiViD-19 nel reparto</strong></td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2025-09-25</td>
-<td style="text-align: left;">R e RStudio</td>
-<td style="text-align: left;"><a href="../slides/01-r_rstudio.html">R e RStudio</a></td>
+<td>Medicina Interna</td>
+<td>35% (0.35)</td>
+<td>20% (0.20)</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">2025-09-25</td>
-<td style="text-align: left;">Descrittive (intro, notazioni, centralità)</td>
-<td style="text-align: left;"><a href="../slides/02-descrittive.html">Descrittive</a></td>
+<td>Chirurgia</td>
+<td>25% (0.25)</td>
+<td>8% (0.08)</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2025-09-29</td>
-<td style="text-align: left;">Descrittive (Variabilità, grafici)</td>
-<td style="text-align: left;"></td>
+<td>Pediatria</td>
+<td>15% (0.15)</td>
+<td>12% (0.12)</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">2025-10-01</td>
-<td style="text-align: left;">Probabilità (definizioni, operazioni e teoremi fondamentali, sens, spec, vpp, vpn, Bayes)</td>
-<td style="text-align: left;"><a href="../slides/03-probabilita.html">Probabilità</a></td>
+<td>Terapie Intensive</td>
+<td>10% (0.10)</td>
+<td>40% (0.40)</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2025-10-03</td>
-<td style="text-align: left;">Distribuzioni (massa di probabilità, valore atteso; binomiale, poisson)</td>
-<td style="text-align: left;"><a href="../slides/04-distribuzioni.html">Distribuzioni</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">2025-10-09</td>
-<td style="text-align: left;">Distribuzioni (normale, standard)</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2025-10-23</td>
-<td style="text-align: left;">Inferenza, IC (e p-value)</td>
-<td style="text-align: left;"><a href="../slides/05-ic_p.html">Inferenza</a></td>
+<td>Altri Reparti</td>
+<td>15% (0.15)</td>
+<td>5% (0.05)</td>
 </tr>
 </tbody>
 </table>
-<p>Moodle: <a href="https://bit.ly/infermieristica-25-moodle">bit.ly/infermieristica-25-moodle</a></p>
+</section>
+<section id="domande" class="level2">
+<h2 class="anchored" data-anchor-id="domande">Domande</h2>
+<ol type="1">
+<li>Calcolare il tasso di positività complessivo al COVID-19 per l’intero ospedale, utilizzando il Teorema della Probabilità Totale.</li>
+<li>Qual è la probabilità che un paziente scelto a caso nell’ospedale sia positivo al COVID-19?</li>
+</ol>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
@@ -846,4 +870,4 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/CorradoLanera/statistica-medica-short/edit/main/corsi/2025_infermieristica_rovigo.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/CorradoLanera/statistica-medica-short/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/CorradoLanera/statistica-medica-short/edit/main/esercizi/probabilita_somma.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/CorradoLanera/statistica-medica-short/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

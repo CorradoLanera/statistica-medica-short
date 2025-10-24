@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Esercizi – Statistica Medica — Corrado Lanera</title>
+<title>Statistica descrittiva 1 – Statistica Medica — Corrado Lanera</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -31,8 +51,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="..//img/logo-statmed.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -73,72 +91,15 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
-<meta name="twitter:title" content="Esercizi – Statistica Medica — Corrado Lanera">
-<meta name="twitter:image" content="https://CorradoLanera.github.io/statistica-medica-short/img/logo-statmed.png">
+<meta name="twitter:title" content="Statistica descrittiva 1 – Statistica Medica — Corrado Lanera">
+<meta name="twitter:description" content="Luree per le Professioni Sanitarie, Università di Padova">
+<meta name="twitter:image" content="https://CorradoLanera.github.io/statistica-medica-short/esercizi/images/paste-1.png">
 <meta name="twitter:creator" content="@CorradoLanera">
-<meta name="twitter:image-height" content="1024">
-<meta name="twitter:image-width" content="1024">
+<meta name="twitter:image-height" content="1129">
+<meta name="twitter:image-width" content="1454">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -412,8 +373,17 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#statistica-descrittiva-1" id="toc-statistica-descrittiva-1" class="nav-link active" data-scroll-target="#statistica-descrittiva-1">Statistica descrittiva 1</a>
+  <ul class="collapse">
+  <li><a href="#domande" id="toc-domande" class="nav-link" data-scroll-target="#domande">Domande</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/CorradoLanera/statistica-medica-short/edit/main/esercizi/descrittive_1.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/CorradoLanera/statistica-medica-short/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -421,7 +391,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Esercizi</h1>
+<h1 class="title">Statistica descrittiva 1</h1>
 </div>
 
 
@@ -438,127 +408,33 @@ window.Quarto = {
 </header>
 
 
+<section id="statistica-descrittiva-1" class="level1">
+<h1>Statistica descrittiva 1</h1>
+<p>I dati riportati nella tabella qui sotto sono un campione di un insieme più ampio di dati raccolti su persone dimesse da un ospedale selezionato della Pennsylvania nell’ambito di una revisione retrospettiva delle cartelle cliniche sull’uso degli antibiotici negli ospedali.</p>
+<p><img src="images/paste-1.png" class="img-fluid"></p>
+<section id="domande" class="level2">
+<h2 class="anchored" data-anchor-id="domande">Domande</h2>
+<ol type="1">
+<li><p>Calcolare media, moda e mediana della durata di ospedalizzazione.</p></li>
+<li><p>Calcolare il varianza, deviazione standard, coefficiente di variazione, range massimale e range interquartile (differenza tra il III e il IV quartile) della durata di ospedalizzazione. Descrivere a parole in linguaggio naturale tali dati sulla abse delle informazioni appena ricavate (un paragrafo).</p></li>
+<li><p>I tempi riportati sono in giorni, supponiamo di volerli esprimere in ore, ovvero moltiplicandoli tutti per 24; che effetto avrebbe questa modifica nei valori di media, moda, mediana, varianza, deviazione standard, coefficiente di variazione, range massimale e range interquartile? Verificare la risposta eseguendo i conti.</p></li>
+<li><p>Quali delle variabili riportate possono essere considerate continue, quali categoriche? Tra le categoriche, come sarebbe opportuno considerare Sex e Service (binarie, nominali o ordinali)? Motivare le risposte.</p></li>
+<li><p>Possiamo dire che una riga della tabella rappresenta una unità statistica? Si, no, perchè?</p></li>
+<li><p>Disegnare (a mano) un grafico a barre per le frequenze della variabile Sex, e un box-plot per il tempo di ospedalizzazione. Cosa si può dire guardando questi due grafici? (un paragrafo ciascuno)</p></li>
+<li><p>Disegnare due box-plot sovrapposti/affiancati in uno stesso grafico (con un unico asse x (se orizzontale) o y (se verticali, scelta a piacere)) per i tempi di ospedalizzazione, separati per maschi e femmine. Cosa si può dire guardando questo grafico? (un paragrafo)</p></li>
+</ol>
+<p><span class="citation" data-cites="Townsend1979">(<a href="#ref-Townsend1979" role="doc-biblioref">Townsend et al. 1979</a>)</span></p>
 
 
 
+</section>
+</section>
 
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title-sort" data-direction="asc">
-        Title
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-Townsend1979" class="csl-entry" role="listitem">
+Townsend, T. R., M. Shapiro, B. Rosner, e E. H. Kass. 1979. <span>«Use of Antimicrobial Drugs in General Hospitals. I. Description of Population and Definition of Methods»</span>. <em>Journal of Infectious Diseases</em> 139 (6): 688–97. <a href="https://doi.org/10.1093/infdis/139.6.688">https://doi.org/10.1093/infdis/139.6.688</a>.
 </div>
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-
-<th>
-<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
-</th>
-
-<th>
-Description
-</th>
-
-</tr>
-</thead>
-<tbody class="list">
-
-<tr data-index="0" data-listing-file-modified-sort="1759714786809" data-listing-reading-time-sort="1" data-listing-word-count-sort="33" data-listing-title-sort="Distribuzioni di probabilità 1" data-listing-filename-sort="distribuzioni_1.qmd">
-<td>
-<a href="../esercizi/distribuzioni_1.html" class="title listing-title">Distribuzioni di probabilità 1</a>
-</td>
-<td>
-<span class="listing-description"><!-- desc(5A0113B34292)[max=175]:esercizi/distribuzioni_1.html --></span>
-</td>
-
-</tr>
-
-<tr data-index="1" data-listing-file-modified-sort="1759714786809" data-listing-reading-time-sort="1" data-listing-word-count-sort="124" data-listing-title-sort="Distribuzioni di probabilità 2" data-listing-filename-sort="distribuzioni_2.qmd">
-<td>
-<a href="../esercizi/distribuzioni_2.html" class="title listing-title">Distribuzioni di probabilità 2</a>
-</td>
-<td>
-<span class="listing-description"><!-- desc(5A0113B34292)[max=175]:esercizi/distribuzioni_2.html --></span>
-</td>
-
-</tr>
-
-<tr data-index="2" data-listing-file-modified-sort="1759714786814" data-listing-reading-time-sort="1" data-listing-word-count-sort="112" data-listing-title-sort="Probabilità - Condizionamento" data-listing-filename-sort="probabilita_condizionamento.qmd">
-<td>
-<a href="../esercizi/probabilita_condizionamento.html" class="title listing-title">Probabilità - Condizionamento</a>
-</td>
-<td>
-<span class="listing-description">Esercizi sul condizionamento</span>
-</td>
-
-</tr>
-
-<tr data-index="3" data-listing-file-modified-sort="1759714786814" data-listing-reading-time-sort="1" data-listing-word-count-sort="169" data-listing-title-sort="Probabilità - Teorema della somma" data-listing-filename-sort="probabilita_somma.qmd">
-<td>
-<a href="../esercizi/probabilita_somma.html" class="title listing-title">Probabilità - Teorema della somma</a>
-</td>
-<td>
-<span class="listing-description">Esercizi sul teorema della somma</span>
-</td>
-
-</tr>
-
-<tr data-index="4" data-listing-file-modified-sort="1759714786814" data-listing-reading-time-sort="2" data-listing-word-count-sort="269" data-listing-title-sort="Probabilità - Valori Predittivi" data-listing-filename-sort="probabilita_vpp.qmd">
-<td>
-<a href="../esercizi/probabilita_vpp.html" class="title listing-title">Probabilità - Valori Predittivi</a>
-</td>
-<td>
-<span class="listing-description">Esercizi sui valori predittivi</span>
-</td>
-
-</tr>
-
-<tr data-index="5" data-listing-file-modified-sort="1761301510558" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Quiz (visti a lezione)" data-listing-filename-sort="quiz.qmd">
-<td>
-<a href="../esercizi/quiz.html" class="title listing-title">Quiz (visti a lezione)</a>
-</td>
-<td>
-<span class="listing-description"><!-- desc(5A0113B34292)[max=175]:esercizi/quiz.html --></span>
-</td>
-
-</tr>
-
-<tr data-index="6" data-listing-file-modified-sort="1759714786815" data-listing-reading-time-sort="1" data-listing-word-count-sort="2" data-listing-title-sort="Riferimenti" data-listing-filename-sort="references.qmd">
-<td>
-<a href="../esercizi/references.html" class="title listing-title">Riferimenti</a>
-</td>
-<td>
-<span class="listing-description">Riferimenti bibliografici e risorse utili</span>
-</td>
-
-</tr>
-
-<tr data-index="7" data-listing-file-modified-sort="1759714786809" data-listing-reading-time-sort="2" data-listing-word-count-sort="257" data-listing-title-sort="Statistica descrittiva 1" data-listing-filename-sort="descrittive_1.qmd">
-<td>
-<a href="../esercizi/descrittive_1.html" class="title listing-title">Statistica descrittiva 1</a>
-</td>
-<td>
-<span class="listing-description"><!-- desc(5A0113B34292)[max=175]:esercizi/descrittive_1.html --></span>
-</td>
-
-</tr>
-
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -976,4 +852,4 @@ Description
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/CorradoLanera/statistica-medica-short/edit/main/esercizi/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/CorradoLanera/statistica-medica-short/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/CorradoLanera/statistica-medica-short/edit/main/esercizi/descrittive_1.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/CorradoLanera/statistica-medica-short/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

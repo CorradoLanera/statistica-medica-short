@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Esercizi – Statistica Medica — Corrado Lanera</title>
+<title>Quiz (visti a lezione) – Statistica Medica — Corrado Lanera</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -83,9 +83,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      valueNames: ['listing-Modulo','listing-Link',{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: ["listing-title","listing-author"],
+      searchColumns: ["listing-Modulo","listing-Link"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -134,7 +134,7 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="styles.css">
-<meta name="twitter:title" content="Esercizi – Statistica Medica — Corrado Lanera">
+<meta name="twitter:title" content="Quiz (visti a lezione) – Statistica Medica — Corrado Lanera">
 <meta name="twitter:image" content="https://CorradoLanera.github.io/statistica-medica-short/img/logo-statmed.png">
 <meta name="twitter:creator" content="@CorradoLanera">
 <meta name="twitter:image-height" content="1024">
@@ -369,7 +369,7 @@ window.Quarto = {
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../esercizi/quiz.html"> 
+    <a class="nav-link active" href="../esercizi/quiz.html" aria-current="page"> 
 <span class="menu-text">Quiz (visti a lezione)</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -421,7 +421,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Esercizi</h1>
+<h1 class="title">Quiz (visti a lezione)</h1>
 </div>
 
 
@@ -449,8 +449,11 @@ window.Quarto = {
     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
       <option value="" disabled="" selected="" hidden="">Order By</option>
       <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title-sort" data-direction="asc">
-        Title
+      <option value="listing-Modulo" data-direction="asc">
+        Modulo
+      </option>
+      <option value="listing-Link" data-direction="asc">
+        Link
       </option>
     </select>
   </div>
@@ -464,93 +467,53 @@ window.Quarto = {
 <tr>
 
 <th>
-<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+<a class="sort" data-sort="listing-Modulo" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Modulo</a>
 </th>
 
 <th>
-Description
+<a class="sort" data-sort="listing-Link" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Link</a>
 </th>
 
 </tr>
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-file-modified-sort="1759714786809" data-listing-reading-time-sort="1" data-listing-word-count-sort="33" data-listing-title-sort="Distribuzioni di probabilità 1" data-listing-filename-sort="distribuzioni_1.qmd">
+<tr data-index="0">
 <td>
-<a href="../esercizi/distribuzioni_1.html" class="title listing-title">Distribuzioni di probabilità 1</a>
+<span class="listing-Modulo">Descrittive</span>
 </td>
 <td>
-<span class="listing-description"><!-- desc(5A0113B34292)[max=175]:esercizi/distribuzioni_1.html --></span>
-</td>
-
-</tr>
-
-<tr data-index="1" data-listing-file-modified-sort="1759714786809" data-listing-reading-time-sort="1" data-listing-word-count-sort="124" data-listing-title-sort="Distribuzioni di probabilità 2" data-listing-filename-sort="distribuzioni_2.qmd">
-<td>
-<a href="../esercizi/distribuzioni_2.html" class="title listing-title">Distribuzioni di probabilità 2</a>
-</td>
-<td>
-<span class="listing-description"><!-- desc(5A0113B34292)[max=175]:esercizi/distribuzioni_2.html --></span>
+<span class="listing-Link"><a href="https://bit.ly/cl-statmed-ex-descrittive">https://bit.ly/cl-statmed-ex-descrittive</a></span>
 </td>
 
 </tr>
 
-<tr data-index="2" data-listing-file-modified-sort="1759714786814" data-listing-reading-time-sort="1" data-listing-word-count-sort="112" data-listing-title-sort="Probabilità - Condizionamento" data-listing-filename-sort="probabilita_condizionamento.qmd">
+<tr data-index="1">
 <td>
-<a href="../esercizi/probabilita_condizionamento.html" class="title listing-title">Probabilità - Condizionamento</a>
+<span class="listing-Modulo">Probabilità</span>
 </td>
 <td>
-<span class="listing-description">Esercizi sul condizionamento</span>
-</td>
-
-</tr>
-
-<tr data-index="3" data-listing-file-modified-sort="1759714786814" data-listing-reading-time-sort="1" data-listing-word-count-sort="169" data-listing-title-sort="Probabilità - Teorema della somma" data-listing-filename-sort="probabilita_somma.qmd">
-<td>
-<a href="../esercizi/probabilita_somma.html" class="title listing-title">Probabilità - Teorema della somma</a>
-</td>
-<td>
-<span class="listing-description">Esercizi sul teorema della somma</span>
+<span class="listing-Link"><a href="https://bit.ly/cl-statmed-ex-probabilita">https://bit.ly/cl-statmed-ex-probabilita</a></span>
 </td>
 
 </tr>
 
-<tr data-index="4" data-listing-file-modified-sort="1759714786814" data-listing-reading-time-sort="2" data-listing-word-count-sort="269" data-listing-title-sort="Probabilità - Valori Predittivi" data-listing-filename-sort="probabilita_vpp.qmd">
+<tr data-index="2">
 <td>
-<a href="../esercizi/probabilita_vpp.html" class="title listing-title">Probabilità - Valori Predittivi</a>
+<span class="listing-Modulo">Distribuzioni</span>
 </td>
 <td>
-<span class="listing-description">Esercizi sui valori predittivi</span>
-</td>
-
-</tr>
-
-<tr data-index="5" data-listing-file-modified-sort="1761301510558" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Quiz (visti a lezione)" data-listing-filename-sort="quiz.qmd">
-<td>
-<a href="../esercizi/quiz.html" class="title listing-title">Quiz (visti a lezione)</a>
-</td>
-<td>
-<span class="listing-description"><!-- desc(5A0113B34292)[max=175]:esercizi/quiz.html --></span>
+<span class="listing-Link"><a href="https://bit.ly/cl-statmed-ex-distribuzioni">https://bit.ly/cl-statmed-ex-distribuzioni</a></span>
 </td>
 
 </tr>
 
-<tr data-index="6" data-listing-file-modified-sort="1759714786815" data-listing-reading-time-sort="1" data-listing-word-count-sort="2" data-listing-title-sort="Riferimenti" data-listing-filename-sort="references.qmd">
+<tr data-index="3">
 <td>
-<a href="../esercizi/references.html" class="title listing-title">Riferimenti</a>
+<span class="listing-Modulo">Inferenza</span>
 </td>
 <td>
-<span class="listing-description">Riferimenti bibliografici e risorse utili</span>
-</td>
-
-</tr>
-
-<tr data-index="7" data-listing-file-modified-sort="1759714786809" data-listing-reading-time-sort="2" data-listing-word-count-sort="257" data-listing-title-sort="Statistica descrittiva 1" data-listing-filename-sort="descrittive_1.qmd">
-<td>
-<a href="../esercizi/descrittive_1.html" class="title listing-title">Statistica descrittiva 1</a>
-</td>
-<td>
-<span class="listing-description"><!-- desc(5A0113B34292)[max=175]:esercizi/descrittive_1.html --></span>
+<span class="listing-Link"><a href="https://bit.ly/cl-statmed-ex-inferenza">https://bit.ly/cl-statmed-ex-inferenza</a></span>
 </td>
 
 </tr>
@@ -976,4 +939,4 @@ Description
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/CorradoLanera/statistica-medica-short/edit/main/esercizi/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/CorradoLanera/statistica-medica-short/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/CorradoLanera/statistica-medica-short/edit/main/esercizi/quiz.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/CorradoLanera/statistica-medica-short/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
