@@ -1,0 +1,29 @@
+---
+nocite: |
+  @*
+---
+
+# Libri suggeriti e utilizzati per preparare le lezioni
+
+**Statistica Medica**, Martin Bland: seconda edizione italiana (APOGEO; ISBN 8891629739), corrispondente alla quarta edizione inglese: **Introduction to Medical Statistics** (OXFORD; ISBN 9780199589920).
+
+**Fundamentals of Biostatistics**, Bernard Rosner: ottava edizione (CENGAGE; ISBN 9781305268920).
+
+**Biostatistica Essenziale, Una guida non matematica**, Harvey Motulsky: edizione italiana (PICCIN; ISBN 9788829931620).
+
+## Slide
+
+Descrittive: [@Bain2015]
+
+Probabilità: [@McGuinness1978]
+
+Distribuzioni: [@Ott1980]
+
+Inferenza:
+
+## Bibliografia
+
+Articoli, dati, ed esercizi citati nel materiale didattico.
+
+::: {#refs}
+:::

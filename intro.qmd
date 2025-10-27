@@ -86,7 +86,7 @@ Tutte le calcolatrici di questa lista — e molte altre analoghe di altre marche
 
 ::: {style="overflow-x: auto;"}
 | Marca | Modello | Display | `e^x` | Memorie | Distribuzioni Z/t | Alimentazione | Giudizio costruttivo | Note sintetiche | Immagine |
-|:---|:---|:--:|:--:|:--:|:--:|:--:|:--:|:---|:--:|
+|:-------|:-------|:------:|:------:|:------:|:------:|:------:|:------:|:-------|:------:|
 | **Casio** FX | Junior Plus | 1 riga | ❌ | ❌ | ❌ | batteria | 🟡 base | “Pre-scientifica” — minimalissima (per costante *e* usare approssimazione "a mano" 2.718, per il resto fa tutto! | ![](images/clipboard-4169263455.png) |
 |  | 220 Plus II | 2 righe | ✅ | ✅ (1) | ❌ | batteria | 🟡 media | Economica (\~9 €), semplice, completa “minima” | ![](images/clipboard-605525387.png) |
 |  | 82 MS 2 | 2 righe | ✅ | ✅ (A–D) | ❌ | batteria | 🟡 media | Standard universitaria, equilibrata | ![](images/clipboard-208392161.png) |

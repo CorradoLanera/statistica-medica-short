@@ -1,0 +1,187 @@
+---
+title: "Disegni di Studio Epidemiologico"
+format:
+  html:
+    toc: true
+    toc-title: "Contenuti"
+    embed-resources: true
+---
+
+## 🔬 Disegni di Studio Epidemiologico
+
+Questa sezione riassume i principali **disegni di studio** in biostatistica ed epidemiologia, organizzati per direzione temporale, modalità di arruolamento e finalità, con le **principali misure e statistiche** usate e la loro **interpretazione**.
+
+::: callout-note
+👉 I disegni sono raggruppati per categoria: descrittivi, analitici osservazionali, sperimentali, quasi-sperimentali e sintetici.
+:::
+
+------------------------------------------------------------------------
+
+### 📊 Tabella generale
+
+:::{.column-page-inset}
+::: table-responsive
+| **Tipo di disegno** | **Direzione temporale** | **Modalità di arruolamento / unità di analisi** | **Giustificazione d’uso / finalità tipica** | **Principali misure e statistiche** | **Interpretazione e note** |
+|------------|------------|------------|------------|------------|------------|
+| **Trasversale (cross-sectional)** | Nessuna (istantanea) | Campione rappresentativo della popolazione | Descrivere prevalenze e correlazioni istantanee | Prevalenza, OR, χ², t-test, ANOVA, regressione logistica | Utile per ipotesi esplorative, non per causalità (bias di simultaneità) |
+| **Caso–controllo (case-control)** | Retrospettiva | Si parte da outcome (casi) e controlli | Studi su malattie rare o a lunga latenza | Odds Ratio (OR), regressione logistica, test χ² | OR ≈ RR se outcome raro; attenzione a bias di selezione e recall bias |
+| **Coorte (prospettico)** | Prospettica | Esposti e non esposti seguiti nel tempo | Valutare rischio e causalità | Incidenza, RR, HR, modelli di Cox, log-rank test | Alta validità interna; costoso e lungo; perdita al follow-up |
+| **Coorte retrospettiva** | Retrospettiva | Dati storici (registri, cartelle cliniche) | Verificare ipotesi con dati già raccolti | RR, HR, regressione di Cox o Poisson | Meno costoso ma dipende dalla qualità dei dati |
+| **RCT (randomized controlled trial)** | Prospettica | Randomizzazione a trattamenti / controlli | Dimostrare causalità | Risk difference, RR, NNT, t-test, ANOVA, ANCOVA | Gold standard; richiede ITT analysis; limitata esternalità |
+| **Quasi-sperimentale (non randomizzato)** | Prospettica o retrospettiva | Intervento senza randomizzazione | Stimare effetto quando RCT non è possibile | DiD, PSM, regressione discontinuità | Rischio di confondimento; utile in *real-world evidence* |
+| **Ecologico (aggregato)** | Variabile | Unità = gruppo o popolazione | Analisi di relazioni aggregate | Correlazioni, regressione lineare/Poisson su dati aggregati | Rischio di *fallacia ecologica* |
+| **N-of-1 trial** | Prospettica individuale | Un solo soggetto con sequenze di trattamento | Valutare effetto individuale | Analisi crossover, modelli misti | Alta validità interna per il singolo |
+| **Coorte annidata caso–controllo** | Retrospettiva | Casi e controlli estratti da coorte | Efficienza per outcome rari in coorti grandi | OR, regressione logistica condizionale | Riduce bias rispetto al caso–controllo classico |
+| **Serie temporali interrotte (ITS)** | Retrospettiva / Prospettica | Osservazioni aggregate prima/dopo intervento | Valutare effetto di policy / interventi | Segmented regression, ARIMA, DiD time-series | Permette inferenze quasi-sperimentali |
+| **Studi diagnostici (accuracy)** | Trasversale / Prospettica | Test index + gold standard | Valutare accuratezza di test o algoritmi | Sensibilità, specificità, VPP, VPN, ROC, AUC | Attenzione a spectrum bias |
+| **Studi di prognosi / predizione** | Retrospettiva / Prospettica | Pazienti seguiti per outcome | Costruire o validare modelli predittivi | C-index, AUC, Brier score, HR | Validazione interna/esterna essenziale |
+| **Meta-analisi / review sistematica** | Nessuna | Studi come unità di analisi | Sintetizzare evidenze | Effect size (RR, OR, HR), I², τ², funnel plot | Dipende dalla qualità degli studi inclusi |
+:::
+:::
+------------------------------------------------------------------------
+
+### 🧩 Riepilogo per categoria
+
+#### 🔹 **Descrittivi**
+
+  -   **Esempi**: cross-sectional, serie di casi\
+  -   **Scopo**: stimare prevalenze, descrivere popolazione\
+  -   **Statistiche tipiche**: media, mediana, proporzioni, prevalenza\
+  -   **Limiti**: nessuna inferenza temporale o causale
+
+#### 🔹 **Analitici osservazionali**
+
+  -   **Esempi**: caso–controllo, coorte, ecologico\
+  -   **Scopo**: stimare associazioni esposizione–outcome\
+  -   **Statistiche tipiche**: OR, RR, HR\
+  -   **Limiti**: confondimento, bias di selezione o informazione
+
+#### 🔹 **Sperimentali**
+
+  -   **Esempi**: RCT, crossover, N-of-1\
+  -   **Scopo**: dimostrare causalità\
+  -   **Statistiche tipiche**: RD, RR, NNT, test parametrici\
+  -   **Note**: randomizzazione riduce confondimento
+
+#### 🔹 **Quasi-sperimentali / Real-world**
+
+  -   **Esempi**: DiD, PSM, ITS\
+  -   **Scopo**: valutare politiche o interventi in assenza di randomizzazione\
+  -   **Statistiche tipiche**: DiD estimator, β segment regression\
+  -   **Note**: ottimo compromesso per validità esterna
+
+#### 🔹 **Predittivi / Diagnostici**
+
+  -   **Esempi**: accuracy, prognostic studies\
+  -   **Scopo**: predire, classificare, validare modelli\
+  -   **Statistiche tipiche**: AUC, sens./spec., HR\
+  -   **Note**: attenzione a overfitting e calibratura
+
+#### 🔹 **Sintetici**
+
+  -   **Esempi**: meta-analisi, review sistematiche\
+  -   **Scopo**: integrare e sintetizzare evidenze\
+  -   **Statistiche tipiche**: pooled effect, I², τ²\
+  -   **Note**: bias di pubblicazione e qualità eterogenea degli studi
+
+------------------------------------------------------------------------
+
+### ⚠️ Bias comuni da considerare
+
+| **Tipo di bias** | **Disegni più esposti** | **Effetto principale** |
+|-------------------|---------------------------|--------------------------|
+| **Selection bias** | Caso–controllo, studi non randomizzati | Distorsione del campione |
+| **Recall bias** | Caso–controllo retrospettivi; trasversali con misure auto-riportate | Errata ricostruzione dell’esposizione |
+| **Confounding** | Tutti i non sperimentali | Associazione spuria |
+| **Loss to follow-up** | Coorte prospettica | Bias di sopravvivenza |
+| **Misclassification bias** | Diagnostici, coorte retrospettiva | Attenuazione o inversione effetto |
+| **Publication bias** | Meta-analisi | Sovrastima dell’effetto |
+
+------------------------------------------------------------------------
+
+### 💬 Suggerimenti interpretativi
+
+  -   **Direzione temporale → causalità**: solo i prospettici permettono di stabilire *temporality* tra esposizione e outcome.\
+  -   **Randomizzazione → validità interna**; **osservazione naturale → validità esterna**.\
+  -   **Statistica ≠ disegno di studio**: regressione logistica o Cox possono comparire in quasi tutti, con finalità diverse.
+
+
+
+## 📐 Principali Misure Epidemiologiche e Statistiche
+
+
+### 🧮 Legenda delle Notazioni
+
+Le seguenti variabili e simboli sono utilizzati nelle formule epidemiologiche e biostatistiche riportate sotto.
+
+:::{.column-page-inset}
+
+::: {.table-responsive}
+| **Simbolo / Sigla** | **Contesto** | **Significato / Definizione** | **Note d’uso e interpretazione** |
+|----------------------|---------------|--------------------------------|----------------------------------|
+| **a, b, c, d** | Tabella 2×2 esposizione–outcome | <table><tr><td>**a** = esposti con outcome (casi)</td></tr><tr><td>**b** = esposti senza outcome</td></tr><tr><td>**c** = non esposti con outcome</td></tr><tr><td>**d** = non esposti senza outcome</td></tr></table> | Matrice base per il calcolo di OR, RR e RD.<br>Totale = a+b+c+d |
+| **Iₑ (Ie)** | Studi di coorte | Incidenza (o rischio) negli **esposti** = a / (a+b) | Probabilità di evento nel gruppo esposto |
+| **Iᵤ (Iu)** | Studi di coorte | Incidenza (o rischio) nei **non esposti** = c / (c+d) | Probabilità di evento nel gruppo non esposto |
+| **h₁(t)** | Analisi di sopravvivenza | Funzione di rischio (hazard) nel gruppo trattato o esposto | Rappresenta il tasso istantaneo di evento al tempo *t* |
+| **h₀(t)** | Analisi di sopravvivenza | Funzione di rischio (hazard) nel gruppo controllo o non esposto | Rapporto h₁(t)/h₀(t) = **Hazard Ratio (HR)** |
+| **t** | Analisi di sopravvivenza | Tempo di osservazione o follow-up | Può essere continuo o discreto; usato in funzioni S(t), h(t) |
+| **TP (True Positive)** | Studi diagnostici | Malati correttamente identificati dal test | Contribuiscono alla **Sensibilità** e al **VPP** |
+| **TN (True Negative)** | Studi diagnostici | Sani correttamente identificati dal test | Contribuiscono alla **Specificità** e al **VPN** |
+| **FP (False Positive)** | Studi diagnostici | Sani erroneamente identificati come positivi | Aumentano la **falsa positività** del test |
+| **FN (False Negative)** | Studi diagnostici | Malati erroneamente identificati come negativi | Riduce la **Sensibilità** |
+| **VPP** *(valore predittivo positivo)* | Studi diagnostici | Frequentista: VPP = TP / (TP + FP) | Interpretabile come la **probabilità empirica** che un test positivo indichi un soggetto malato nel campione osservato |
+|  |  | Bayesiano: VPP = (Se × Prev) / [(Se × Prev) + ((1 − Sp) × (1 − Prev))] | Interpretabile come **P(Malattia | Test positivo)**; dipende fortemente dalla prevalenza nella popolazione |
+| **VPN** *(valore predittivo negativo)* | Studi diagnostici | Frequentista: VPN = TN / (TN + FN) | Probabilità empirica che un test negativo indichi un soggetto sano |
+|  |  | Bayesiano: VPN = (Sp × (1 − Prev)) / [(Sp × (1 − Prev)) + ((1 − Se) × Prev)] | Interpretabile come **P(Sano | Test negativo)**; aumenta se la malattia è rara |
+| **Q** | Meta-analisi | Statistica di eterogeneità di Cochran | Q = Σ wᵢ (θᵢ − θ̄)², dove wᵢ è il peso dello studio *i* e θᵢ la sua stima di effetto.<br>Usata per calcolare **I² = 100 × (Q − df) / Q** |
+:::
+:::
+
+### 📏 Misure Epidemiologiche e Statistiche
+
+:::{.column-page-inset}
+::: {.table-responsive}
+| **Sigla / Nome** | **Formula (concettuale)** | **Interpretazione** | **Disegni tipici** | **Note e limiti** |
+|------------------|----------------------------|----------------------|--------------------|-------------------|
+| **Prevalenza (P)** | P = Casi / Popolazione totale | Probabilità di essere malato in un dato momento | Cross-sectional | Misura di stato, non di rischio; dipende da incidenza e durata |
+| **Incidenza cumulativa (IC)** | IC = Nuovi casi / Popolazione a rischio | Probabilità di sviluppare malattia nel periodo | Coorte prospettica | Richiede follow-up completo; non gestisce censura |
+| **Densità di incidenza (ID)** | ID = Nuovi casi / Persona-tempo | Tasso di comparsa della malattia nel tempo | Coorte prospettica o retrospettiva | Gestisce censura e follow-up variabile |
+| **Rischio relativo (RR)** | RR = [a/(a+b)] / [c/(c+d)] | Quante volte più probabile l’outcome negli esposti | Coorte, RCT | RR > 1 → rischio ↑ con esposizione |
+| **Odds Ratio (OR)** | OR = (a/b) / (c/d) | Rapporto tra odds di esposizione nei casi vs controlli | Caso–controllo, cross-sectional | ≈ RR solo se outcome raro |
+| **Risk Difference (RD)** | RD = [a/(a+b)] − [c/(c+d)] | Differenza assoluta di rischio tra esposti e non esposti | RCT, coorte | Espressa in punti percentuali |
+| **Attributable Risk (AR)** | AR = (Ie − Iu) / Ie | Quota di casi attribuibile all’esposizione | Coorte | Interpretabile solo se associazione causale |
+| **Number Needed to Treat (NNT)** | NNT = 1 / RD | Numero di soggetti da trattare per prevenire un evento | RCT | Più basso = più efficace; interpretazione clinica |
+| **Hazard Ratio (HR)** | HR = h₁(t) / h₀(t) | Rischio istantaneo relativo tra due gruppi | Coorte, RCT | HR ≈ RR per piccoli intervalli; stima da modello di Cox |
+| **Sensibilità (Se)** | Se = TP / (TP + FN) | Probabilità che un malato risulti positivo al test | Studi diagnostici | Dipende dal cut-off scelto |
+| **Specificità (Sp)** | Sp = TN / (TN + FP) | Probabilità che un sano risulti negativo al test | Studi diagnostici | Complementare alla sensibilità |
+| **VPP / VPN** | VPP = TP / (TP + FP); VPN = TN / (TN + FN) | Probabilità di correttezza del risultato del test | Studi diagnostici | Dipendono dalla prevalenza |
+| **AUC (Area Under Curve)** | Area sotto la curva ROC | Capacità discriminante del modello/test | Diagnostici, predittivi | 0.5 = caso; 1 = perfetto |
+| **C-index (Concordance index)** | ≈ P(predizione corretta ordine temporale) | Accuratezza discriminante nei modelli di sopravvivenza | Prognostici | Estensione dell’AUC con censura |
+| **Brier score** | Media((pred − obs)²) | Accuratezza globale di un modello probabilistico | Predittivi | Misura calibrazione + discriminazione |
+| **I² (eterogeneità)** | I² = 100 × (Q−df)/Q | % di variabilità dovuta a eterogeneità tra studi | Meta-analisi | >50% indica eterogeneità sostanziale |
+| **τ² (varianza tra studi)** | τ² = Var(θ) tra studi | Quantifica la dispersione degli effetti | Meta-analisi | Usata nei modelli a effetti casuali |
+| **DiD (Difference-in-Differences)** | (ΔY_t,interv − ΔY_t,controllo) | Effetto medio di un intervento nel tempo | Quasi-sperimentali, ITS | Assume trend paralleli; sensibile a variazioni non parallele |
+:::
+:::
+
+### 📘 Riepilogo concettuale
+
+- **a–d** → definiscono le **frequenze osservate** in studi di coorte, caso–controllo o cross-sectional.  
+- **Ie, Iu** → definiscono i **rischi (incidenze)** in gruppi esposti/non esposti, da cui derivano **RR**, **RD**, **AR**.  
+- **h₁, h₀, t** → appartengono al dominio del **tempo-alla-comparsa dell’evento**; usati per **HR** e curve di **sopravvivenza**.  
+- **TP, TN, FP, FN** → definiscono la **matrice di confusione** diagnostica, base di **Se, Sp, VPP, VPN**.  
+- **VPP/VPN** → assumono significati diversi a seconda dell’approccio:  
+  - **frequentista** = proporzione osservata nei dati;  
+  - **bayesiano** = probabilità condizionata a posteriori, dipendente dalla **prevalenza**.  
+- **Q** → misura della **variabilità osservata tra studi** in una meta-analisi, alla base di **I²** e **τ²**.  
+
+
+---
+
+## 💬 Interpretazione generale
+
+  - Le **misure di frequenza** (prevalenza, incidenza) descrivono la distribuzione.  
+  - Le **misure di associazione** (RR, OR, HR) stimano relazioni esposizione–outcome.  
+  - Le **misure di impatto** (RD, NNT, AR) quantificano la rilevanza clinica o di sanità pubblica.  
+  - Le **misure di accuratezza** (Se, Sp, AUC, C-index) valutano test o modelli predittivi.  
+  - Le **misure di sintesi** (I², τ²) valutano la coerenza tra studi nella sintesi dell’evidenza.  
