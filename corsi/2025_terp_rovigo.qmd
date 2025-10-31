@@ -5,7 +5,8 @@
 | 2025-10-24 | Intro e info | [Intro e info](../slides/00-intro_and_info.html) |
 | 2025-10-24 | R e RStudio | [R e RStudio](../slides/01-r_rstudio.html) |
 | 2025-10-24 | Descrittive (intro, notazioni, centralità, variabilità) | [Descrittive](../slides/02-descrittive.html) |
-| 2025-10-29 | Descrittive (variabilità. grafici) |  |
+| 2025-10-29 | Descrittive (variabilità. percentili, dati raggruppati) |  |
+| 2025-10-31 | Descrittive (grafici) |  |
 | 2025-10-29 | Probabilità (definizioni, operazioni e teoremi fondamentali, sens, spec, vpp, vpn, Bayes) | [Probabilità](../slides/03-probabilita.html) |
 |  | Distribuzioni (massa di probabilità, valore atteso; binomiale, poisson, normale, standard) |  |
 |  | Inferenza (IC e p-value) |  |
