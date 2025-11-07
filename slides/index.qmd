@@ -10,5 +10,6 @@ listing:
     - 03-probabilita.html
     - 04-distribuzioni.html
     - 05-ic_p.html
-    - "Tavole di probabilità.pdf"
+    - "tavole_a_negpos.pdf"
+    - "tavole_abcd_pos.pdf"
 ---

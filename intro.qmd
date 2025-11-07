@@ -105,5 +105,5 @@ Se dovete comprarla, e vi serve solo per l'esame, spendete meno possibile, non s
 :::
 
 ::: callout-tip
-Per _tutti i giorni_ (non potete usare app all'esame...) una calcolatrice sceintifica molto valida che funziona su browser e anche come app da cellulare è CalcES (https://mathda.com/calculator/it/), gratuita e open source.
+Per *tutti i giorni* (non potete usare app all'esame...) una calcolatrice sceintifica molto valida che funziona su browser e anche come app da cellulare è CalcES (https://mathda.com/calculator/it/), gratuita e open source.
 :::
