@@ -1,7 +1,7 @@
 ## CdL Ortottica, I anno, I semestre, a.a. 2025-26 - Padova
 
 | **Giorno** | **Tema** | **Diapositive** |
-|-------------------:|:----------------------|:-----------------------------|
+|-------------------:|:----------------------|:----------------------------|
 | 2025-10-14 | Intro e info | [Intro e info](../slides/00-intro_and_info.html) |
 | 2025-10-14 | R e RStudio | [R e RStudio](../slides/01-r_rstudio.html) |
 | 2025-10-14 | Descrittive (intro, notazioni, centralità, variabilità (fino CV)) | [Descrittive](../slides/02-descrittive.html) |
@@ -9,7 +9,7 @@
 | 2025-10-17 | Probabilità (definizioni, operazioni e teoremi fondamentali) | [Probabilità](../slides/03-probabilita.html) |
 | 2025-10-28 | Probabilità (sens, spec, vpp, vpn, Bayes) |  |
 | 2025-11-07 | Distribuzioni (massa di probabilità, valore atteso; binomiale, poisson, normale, standard) | [Distribuzioni](../slides/04-distribuzioni.html) |
-|  | Inferenza (IC e p-value) |  |
+| 2025-11-18 | Inferenza (IC e p-value) | [Inferenza](../slides/05-ic_p.html) |
 
 : {tbl-colwidths="\[15,70,15\]"}
 
