@@ -7,9 +7,11 @@
 | 2025-10-24 | Descrittive (intro, notazioni, centralità, variabilità) | [Descrittive](../slides/02-descrittive.html) |
 | 2025-10-29 | Descrittive (variabilità. percentili, dati raggruppati) |  |
 | 2025-10-31 | Descrittive (grafici) |  |
-| 2025-11-07 | Probabilità (definizioni, operazioni e teoremi fondamentali, sens, spec, vpp, vpn, Bayes) | [Probabilità](../slides/03-probabilita.html) |
-|  | Distribuzioni (massa di probabilità, valore atteso; binomiale, poisson, normale, standard) |  |
-|  | Inferenza (IC e p-value) |  |
+| 2025-11-07 | Probabilità (definizioni, operazioni e teoremi fondamentali, sens, spec) | [Probabilità](../slides/03-probabilita.html) |
+| 2025-11-19 | Probabilità (vpp, vpn, Bayes) |  |
+| 2025-11-19 | Distribuzioni (massa di probabilità, valore atteso; binomiale, Poisson) | [Distribuzioni](../slides/04-distribuzioni.html) |
+| 2025-11-21 | Distribuzioni (normale, standard) |  |
+| 2025-11-21 | Inferenza (IC e p-value) |  |
 
 : {tbl-colwidths="\[15,70,15\]"}
 

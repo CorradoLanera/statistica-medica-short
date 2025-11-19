@@ -1,7 +1,7 @@
 ## CdL Ortottica, I anno, I semestre, a.a. 2025-26 - Padova
 
 | **Giorno** | **Tema** | **Diapositive** |
-|-------------------:|:----------------------|:----------------------------|
+|---:|:---|:---|
 | 2025-10-14 | Intro e info | [Intro e info](../slides/00-intro_and_info.html) |
 | 2025-10-14 | R e RStudio | [R e RStudio](../slides/01-r_rstudio.html) |
 | 2025-10-14 | Descrittive (intro, notazioni, centralità, variabilità (fino CV)) | [Descrittive](../slides/02-descrittive.html) |
