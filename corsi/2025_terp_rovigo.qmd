@@ -9,9 +9,9 @@
 | 2025-10-31 | Descrittive (grafici) |  |
 | 2025-11-07 | Probabilità (definizioni, operazioni e teoremi fondamentali, sens, spec) | [Probabilità](../slides/03-probabilita.html) |
 | 2025-11-19 | Probabilità (vpp, vpn, Bayes) |  |
-| 2025-11-19 | Distribuzioni (massa di probabilità, valore atteso; binomiale, Poisson) | [Distribuzioni](../slides/04-distribuzioni.html) |
-| 2025-11-21 | Distribuzioni (normale, standard) |  |
-| 2025-11-21 | Inferenza (IC e p-value) |  |
+| 2025-11-19 | Distribuzioni (massa di probabilità, valore atteso; binomiale) | [Distribuzioni](../slides/04-distribuzioni.html) |
+| 2025-11-21 | Distribuzioni (Poisson, normale, standard) |  |
+| 2025-11-21 | Inferenza (IC e p-value) | [Inferenza](../slides/05-ic_p.html) |
 
 : {tbl-colwidths="\[15,70,15\]"}
 
