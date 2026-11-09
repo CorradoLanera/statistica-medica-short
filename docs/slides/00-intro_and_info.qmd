@@ -19,10 +19,14 @@ format:
     footer: "Statistica Medica · [bit.ly/cl-statmed](https://bit.ly/cl-statmed)"
     embed-resources: true
     code-copy: true
+    code-line-numbers: false
     auto-stretch: false
+    fig-width: 7
+    fig-height: 5
     menu:
       side: left
 execute:
+  echo: true
   cache: false
 ---
 

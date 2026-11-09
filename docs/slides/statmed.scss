@@ -101,3 +101,18 @@ $code-block-font-size: 0.75em;
 .reveal .columns {
   justify-content: space-between;
 }
+
+// immagini alte (out.width 100% in 4:3): non oltre il fondo della slide
+.reveal section img {
+  max-height: 570px;
+  object-fit: contain;
+}
+
+// link e icone sulle slide "inverse": revealjs le tratta da fondo scuro e
+// schiarisce i link, che sul verde spariscono; come in xaringan restano blu
+.reveal section.inverse a,
+.reveal .slides section.has-dark-background a,
+.reveal section.inverse a svg {
+  color: $statmed-primary;
+  fill: $statmed-primary;
+}

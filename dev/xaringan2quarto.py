@@ -214,6 +214,26 @@ FENCE = re.compile(r"^:{3,}")
 LIST_ITEM = re.compile(r"^([ \t]*(?:>[ \t]*)*)([-+*]|\d+[.)])[ \t]+\S")
 
 
+def fix_nested_indent(text):
+    """Remark annida un elenco con qualunque rientro; Pandoc vuole il rientro
+    almeno fino alla colonna del testo della voce madre (3 spazi dopo "1. ")."""
+    out, stack = [], []  # (rientro, colonna del testo)
+    for ln in text.split("\n"):
+        m = re.match(r"^( *)([-+*]|\d+[.)])( +)\S", ln)
+        if m:
+            ind = len(m.group(1))
+            while stack and ind <= stack[-1][0]:
+                stack.pop()
+            if stack and ind < stack[-1][1]:
+                ln = " " * (stack[-1][1] - ind) + ln
+                ind = stack[-1][1]
+            stack.append((ind, ind + len(m.group(2)) + len(m.group(3))))
+        elif ln.strip() and not ln.startswith(" "):
+            stack = []
+        out.append(ln)
+    return "\n".join(out)
+
+
 def blank_before_lists(text):
     """Pandoc, a differenza di remark, vuole una riga vuota prima di un elenco."""
     out = []
@@ -328,11 +348,19 @@ def convert_slide(raw):
     # grassetto con __x__: Pandoc non lo riconosce attaccato ad altro grassetto
     text = re.sub(r"(?<![\w_])__(?=\S)(.+?)(?<=\S)__(?![\w_])", r"**\1**", text)
     text = text.replace("****", "")
+    text = fix_nested_indent(text)
     text = blank_before_lists(text)
     text = space_fences(text)
     text = re.sub(r"\n{4,}", "\n\n\n", text).strip("\n")
 
     if title is not None:
+        # un titolo avvolto in .center[...] (o left/right): nel titolo non ci
+        # puo' stare un div, quindi l'allineamento passa alla slide
+        mw = re.match(r"^\.(center|left|right)\[(.*)\]$", title.strip())
+        if mw:
+            title = mw.group(2)
+            cls = ALIGN[mw.group(1)]
+            attrs = ("{." + cls + " " + attrs[1:]) if attrs else "{." + cls + "}"
         head = "## " + convert_classes(title) + ((" " + attrs) if attrs else "")
     elif attrs:
         head = "## " + attrs
@@ -354,6 +382,15 @@ def clean_chunk(chunk):
     if re.search(r"\buse_(tachyons|share_again|panelset|clipboard|editable|freezeframe|extra_styles|progress_bar|logo)\(|style_(duo_accent|share_again|xaringan|mono_accent)\(", body):
         note("chunk di xaringan rimosso: %s" % header.strip())
         return ""
+    # evidenziazione delle righe di xaringan (#<<): con l'output intercalato Quarto
+    # spezza il chunk in piu' blocchi e la numerazione riparte, quindi si toglie
+    lines = body.split("\n")
+    marked = [i for i, ln in enumerate(lines[1:-1], start=1) if re.search(r"#<<\s*$", ln)]
+    if marked:
+        lines = [re.sub(r"\s*#<<\s*$", "", ln) if 0 < i < len(lines) - 1 else ln
+                 for i, ln in enumerate(lines)]
+        note("evidenziazione #<< tolta da %d righe (Quarto spezza il codice in blocchi)" % len(marked))
+        body = "\n".join(lines)
     new = []
     for ln in body.split("\n"):
         ml = re.match(r"^\s*library\((\w+)\)\s*$", ln)
@@ -393,10 +430,14 @@ def front_matter(yaml_text, subtitle):
         '    footer: "Statistica Medica · [bit.ly/cl-statmed](https://bit.ly/cl-statmed)"',
         "    embed-resources: true",
         "    code-copy: true",
+        "    code-line-numbers: false",
         "    auto-stretch: false",
+        "    fig-width: 7",
+        "    fig-height: 5",
         "    menu:",
         "      side: left",
         "execute:",
+        "  echo: true",
         "  cache: false",
         "---",
         "",
