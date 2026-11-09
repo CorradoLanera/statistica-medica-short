@@ -60,7 +60,7 @@ Gli esercizi nelle slide sono tutti svolti, si suggerisce agli studenti di prova
 
 ### Materiale non ammesso
 
-- dispositivi elettronici connessi a internet (smartphone, tablet, computer portatili, eccetera);
+- dispositivi elettronici (smartphone, tablet, computer portatili, eccetera), anche se non connessi a internet;
 - calcolatrici programmabili o con funzionalità avanzate (grafici, simboliche, eccetera);
 
 ------------------------------------------------------------------------
