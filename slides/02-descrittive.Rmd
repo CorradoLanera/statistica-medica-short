@@ -167,7 +167,7 @@ Prima di tutto richiameremo alcuni simboli, notazioni, oggetti
 dell'intero corso.
 
 Andremo quindi a identificare quali sono gli **.orange[oggetti]** che ci
-interessa analizzare, e di che **.orange[tipologie]** posso essere. 
+interessa analizzare, e di che **.orange[tipologie]** possono essere. 
 
 Quindi vedremo come **.orange[localizzarli]**; ovvero, come (numericamente) avere
 un'idea di dove si _collochino_ (rispetto a un dato riferimento o misura),
@@ -189,7 +189,7 @@ class: hide-count
 
 - Le diapositive proposte sono state prodotte a partire anche da
   materiale generato da/con le seguenti persone gravitanti attorno
-  l'UBEP*:
+  all'UBEP*:
   
   + Danila Azzolina
   + Dario Gregori
@@ -300,7 +300,7 @@ $$\sum_{i = 1}^3 5 = 5 + 5 + 5 = 3 * 5$$
 ---
 # Esempio sommatoria
 ```{r epic, include=FALSE}
-epic <- read_rds(here("docs/data/bain2015-epic.rds"))
+epic <- read_rds(here("slides/data/bain2015-epic.rds"))
 ages <- (epic$age |> set_names(seq_along(epic$age)))[1:6]
 ```
 
@@ -412,7 +412,7 @@ include_graphics("img/img1.png")
 
 Data una variabile $x$, misurata su $n$ soggetti, la media aritmetica
 .orange[campionaria] è pari a
-$$\bar{x} = \frac{1}{N}\sum_{i=1}^N x_i$$
+$$\bar{x} = \frac{1}{n}\sum_{i=1}^n x_i$$
 
 È molto sensibile ai valori estremi: se ce ne sono non è una buona misura di centralità.
 
@@ -444,7 +444,7 @@ age <- c(55.1, 62.9, 53.1, 76.3, 64.2, 53.3)
 sum(age) / length(age)
 mean(age) |> round(2)
 
-# cambiando il primo valore da 5.51 a 20
+# cambiando il primo valore da 55.1 a 5.51
 c(5.51, age[-1]) |> 
   mean() |> 
   round(2)
@@ -455,17 +455,17 @@ c(5.51, age[-1]) |>
 ---
 # Misure di .orange[centralità]: mediana
 
-Ordiniamo ora le $N$ osservazioni. La mediana .orange[campionaria] è
+Ordiniamo ora le $n$ osservazioni. La mediana .orange[campionaria] è
 
-- la $(\frac{N+1}{2})$-ma osservazione se $N$ è dispari (ovvero, **ha un centro**)
-  > Se prendo $k=N/2$ ottengo una "posizione" con la virgola, quindi prendo la prima (intera) successiva.
+- la $(\frac{n+1}{2})$-ma osservazione se $n$ è dispari (ovvero, **ha un centro**)
+  > Se prendo $k=n/2$ ottengo una "posizione" con la virgola, quindi prendo la prima (intera) successiva.
   
-- la media aritmetica della $(\frac{N}{2})$-ma e la $(\frac{N}{2}+1)$-ma
-osservazione se $N$ è pari (ovvero, **non ha un centro**)
-  > Se prendo $k=N/2$ ottengo un numero intero, e prendo allroa la media tra la $k$-esima e la $k+1$-esima osservazione
+- la media aritmetica della $(\frac{n}{2})$-ma e la $(\frac{n}{2}+1)$-ma
+osservazione se $n$ è pari (ovvero, **non ha un centro**)
+  > Se prendo $k=n/2$ ottengo un numero intero, e prendo allora la media tra la $k$-esima e la $k+1$-esima osservazione
 
 ---
-# .orange[Mediana] (N pari)
+# .orange[Mediana] (n pari)
 
 Nel nostro esempio
 
@@ -481,7 +481,7 @@ ages_db |>
 
 Siccome $n$ è pari (è 6), la mediana è la media tra la 3a e 4a osservazione (ordinate!)
 $$\mbox{Mediana} = \frac{55.1 + 62.9}{2} = 59$$
-E anche modificando il primo valore (55.1) con 5.51, la mediana cambia molto poco, diventando **resta 58.1** (invece di 59).
+E anche modificando il primo valore (55.1) con 5.51, la mediana cambia molto poco, diventando **58.1** (invece di 59).
 
 ```{r, include=FALSE}
 
@@ -491,13 +491,13 @@ n <- length(age_sorted)
 1/2 * (age_sorted[n / 2] + age_sorted[n / 2 + 1])
 
 median(age)
-median(c(20, age_sorted[-1]))
+median(c(5.51, age[-1]))
 ```
 
 ]
 
 ---
-# .orange[Mediana] (N dispari)
+# .orange[Mediana] (n dispari)
 
 .left-column[
 ```{r median_odd, echo=FALSE}
@@ -514,7 +514,7 @@ ages_db_dispari |>
 
 .right-column[
 
-Nel casi in cui N sia dispari (prendiamo per esempio $N = 7$ ), prendiamo
+Nel caso in cui $n$ sia dispari (prendiamo per esempio $n = 7$ ), prendiamo
 direttamente il valore centrale (in posizione $4 = (7+1)/2$ ), ovvero **62.9**.
 
 ```{r, include=FALSE}
@@ -533,18 +533,19 @@ median(age, type = 2) # default is `type = 7` (for continuity)
 ---
 # .orange[Confronto] media e mediana
 
-Definiamo l'indice di .orange[asimmetria] (**skewness**)
+Come indicatore semplice di .orange[asimmetria] (_skewness_) usiamo la
+differenza
 
-    Skewness = Media - Mediana
+    Asimmetria = Media - Mediana
 
 .pull-left[
 La distribuzione dei dati sarà considerata:
 
-- **simmetrica** se $Skewness \simeq 0$
+- **simmetrica** se $Asimmetria \simeq 0$ (rispetto alla scala dei dati)
 
-- **asimmetrica** (sbilanciata) a destra se $Skewness > 0$ (la media è più grande, .orange[distorta in eccesso])
+- **asimmetrica** (sbilanciata) a destra se $Asimmetria > 0$ (la media è più grande, .orange[distorta in eccesso])
 
-- **asimmetrica** (sbilanciata) a sinistra se $Skewness < 0$ (la media è più piccola, .orange[distorta in difetto])
+- **asimmetrica** (sbilanciata) a sinistra se $Asimmetria < 0$ (la media è più piccola, .orange[distorta in difetto])
 ]
 .pull-right[
 ```{r, echo=FALSE, out.width="100%", fig.cap = "\'EPIC-Norfolk cohort\' (Bain et al. 2015)"}
@@ -555,7 +556,7 @@ include_graphics("img/img2.png")
 
 ---
 # Misure di .orange[centralità]: Moda
-le mode sono ciascuno di valori che si osservano con
+le mode sono ciascuno dei valori che si osservano con
 **.orange[massima frequenza]**.
 
 <small>
@@ -624,7 +625,7 @@ colesterolo <- tibble(
 kable(colesterolo)
 ```
 
-Le media campionaria (nonostante la differenza di variabilità) resta identica:
+Le medie campionarie (nonostante la differenza di variabilità) restano identiche:
 ```{r, echo=FALSE}
 summarise(colesterolo, across(everything(), mean)) |> 
   kable()
@@ -645,7 +646,7 @@ summarise(colesterolo, across(everything(), ~diff(range(.x)))) |>
 
 È molto semplice da calcolare ma molto sensibile ai valori estremi.
 
-> Dipende dall'ampiezza campionaria $N$, e **tende ad aumentare** all'aumentare di $N$! (un campione più grande della stessa popolazione avrà estremi più lontani e non più vicini)
+> Dipende dall'ampiezza campionaria $n$, e **tende ad aumentare** all'aumentare di $N$! (un campione più grande della stessa popolazione avrà estremi più lontani e non più vicini)
 
 
 
@@ -658,10 +659,10 @@ La varianza campionaria è definita come
 
 $$s^2 = \frac{\sum_{i=1}^n (x_i-\bar{x})^2}{n-1}$$
 
-Questa è una misura di quanto, in media, gli elementi del campione si 
-discostano dalla loro media.
+Questa è una misura di quanto, in media, sono grandi i **quadrati** degli
+scarti dei dati dalla loro media.
 
-E un valore non confrontabile con i dati stessi in quanto con un altra
+È un valore non confrontabile con i dati stessi in quanto con un'altra
 unità di misura. Si definisce quindi la **.orange[deviazione standard]** campionaria, come
 
 $$s = \sqrt{s^2} = \sqrt{\frac{\sum_{i=1}^n (x_i-\bar{x})^2}{n-1}}$$
@@ -751,7 +752,7 @@ dati, non permette di confrontare tra loro le variabilità di variabili con unit
 
 Il **coefficiente di variazione** $CV$ è definito come
 $$CV = \frac{100s}{\bar{x}}$$
-È una misura adimensionale, e quindi utilizzabile anche per confrontare variabili di natura differente. È anche insensibile alla scala, ovvero a trasformazioni del tipo $cx$
+È una misura adimensionale, e quindi utilizzabile anche per confrontare variabili di natura differente (purché positive e con zero assoluto). È anche insensibile alla scala, ovvero a trasformazioni del tipo $cx$
 
 ---
 ### .orange[CV] (non-effetto scala)
@@ -803,27 +804,26 @@ class: inverse, middle
 ---
 # .orange[Percentili]
 
-Il **percentile** $p$-esimo è un valore $V_p$ tale che il $p$\% del campione assume valori inferiori a esso.
+Il **percentile** $p$-esimo è un valore $V_p$ tale che almeno il $p$\% dei valori è minore o uguale a esso e almeno il $(100-p)$\% è maggiore o uguale.
 
-Per un calcolo _a mano_, posto $k=\frac{p}{100}n$*", il percentile $p$-esimo è definito come
+Per un calcolo _a mano_, posto $k=\frac{p}{100}n$, il percentile $p$-esimo è definito come
 
-- Se $k$ è un intero, la media delle osservazioni $k$-ma e $k + 1$-ma osservazione
+- Se $k$ è un intero, la media tra la $k$-ma e la $(k + 1)$-ma osservazione
 (ordinata).
 
 - Se $k$ non è un intero, l'osservazione alla prima posizione (intera) superiore a $k$ (ordinata).
 
-I **quartili** sono valori che dividono i dati in quattro gruppi contenenti un numero approssimativamente uguale di osservazioni. Il totale di 100% è diviso in quattro parti uguali: 25%, 50%, 75% 100%.
+I **quartili** sono tre valori che dividono i dati in quattro gruppi contenenti un numero approssimativamente uguale di osservazioni. Il totale di 100% è diviso in quattro parti uguali: 25%, 50%, 75%, 100%.
 
-  + .orange[Primo] **quartile** (Q1) il minimo valore osservato tale che almeno il $25\% (=1/4)$ dei dati è minore o uguale a questo
+  + .orange[Primo] **quartile** (Q1) è il $25$° percentile ($25\% = 1/4$), calcolato con la regola precedente
   
-  + .orange[Terzo] **quartile** (Q3) il minimo valore osservato tale che almeno il $75\% (=3/4)$ dei dati è minore o
-  uguale a questo 
+  + .orange[Terzo] **quartile** (Q3) è il $75$° percentile ($75\% = 3/4$), calcolato con la regola precedente
 
 
 ---
 ## .orange[Percentili] (esempio _intero_)
 <small>
-Si calcoli il $10$-mo e $90$-mo percentile del campione del BMI su 10 soggetti.
+Si calcoli il $10$° e il $90$° percentile del campione del BMI su 10 soggetti.
 
 .left-column[
 
@@ -841,15 +841,15 @@ epic_10 |>
 .right-column[
 
 1. Si calcola $np/100$, pari a:
-  - 10-imo percentile (p/100 = 0.1): $10 \times 0.1 = 1$
+  - 10° percentile (p/100 = 0.1): $10 \times 0.1 = 1$
   
-  - 90-esimo percentile (p/100 = 0.9): $10 \times 0.9 = 9$
+  - 90° percentile (p/100 = 0.9): $10 \times 0.9 = 9$
 
 2. (Sono valori interi, quindi posti uguale a $k$ e) si calcola la media tra le osservazioni (**ordinate**):
 
-  - 10-imo: posizioni 1 e 2 $\frac{23.3 + 24.9}{2} =$ `r mean(c(23.3, 24.9))`
+  - 10°: posizioni 1 e 2 $\frac{23.3 + 24.9}{2} =$ `r mean(c(23.3, 24.9))`
   
-  - 90-esimo: posizioni 9 e 10 $\frac{41.6 + 42.6}{2} =$ `r mean(c(41.6, 42.6))`
+  - 90°: posizioni 9 e 10 $\frac{41.6 + 42.6}{2} =$ `r mean(c(41.6, 42.6))`
   
 ```{r, include=FALSE}
 # default type = 7 (continuo in p)
@@ -862,7 +862,7 @@ quantile(epic_10[["bmi"]], probs = c(0.1, 0.9), type = 2)
 
 ---
 # .orange[Percentili] (esempio _decimale_)
-Si calcoli il $20$-mo percentile del campione del BMI su 9 soggetti.
+Si calcoli il $20$° percentile del campione del BMI su 9 soggetti.
 
 .left-column[
 
@@ -881,15 +881,15 @@ epic_bmi_p2 |>
 .right-column[
 
 1. Si calcola $k=np/100$, pari a:
-  - 20-imo percentile (p/100 = 0.2): $9 \times 0.2 = 1.8$
+  - 20° percentile (p/100 = 0.2): $9 \times 0.2 = 1.8$
 
 2. (È un valore decimale, quindi) Si trova il primo numero intero superiore a 1.8: che è 2
 
-3. Il 20-esimo percentile è il $2$-esimo (secondo) valore (ordinato!); ovvero, **`r epic_bmi_p2$bmi[[2]]`**.
+3. Il 20° percentile è il $2$° (secondo) valore (ordinato!); ovvero, **`r epic_bmi_p2$bmi[[2]]`**.
 
 ```{r, include=FALSE}
 # default type = 7 (per continuità in p)
-quantile(epic_10[["bmi"]][-10], probs = 0.2, type = 2)
+quantile(epic_bmi_p2$bmi, probs = 0.2, type = 2)
 ```
 
 ]
@@ -913,7 +913,7 @@ Per voi: <img src="img/bit.ly_statmed-sondaggio-percentili.png", width="300px" s
 La struttura generale dei dati raggruppati è simile a
 
 
-|Gruppi            | Media                       | Frequenza
+|Gruppi            | Punto medio $m_i$           | Frequenza
 |:----------------:|:---------------------------:|:---------:
 | $[y_1, y_2)$     | $\frac{y_1+y_2}{2}$         | $f_1$ 
 | $\vdots$         | $\vdots$                    | $\vdots$
@@ -926,7 +926,7 @@ class: hide_logo
 
 # .orange[Accorpamenti]: Epic - magnesio
 
-Intake giornaliero di magnesio (mg/day) per $N = 100$ soggetti
+Intake giornaliero di magnesio (mg/day) per $n = 100$ soggetti
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 sort(epic$mag[101:200]) |> 
@@ -943,8 +943,8 @@ Accorpati in 8 gruppi con approssimativamente la stessa quantità di
 soggetti in ciascun gruppo:
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-discr <- cut2(epic$mag[101:200], g = 8)
-matches <- regmatches(names(table(discr)), gregexpr("[[:digit:]]+", names(table(discr))))
+discr <- cut2(epic$mag[101:200], g = 8, digits = 4)
+matches <- regmatches(names(table(discr)), gregexpr("[[:digit:].]+", names(table(discr))))
 
 ind <- sapply(matches, function(x) mean(as.numeric(x)))
 
@@ -963,13 +963,13 @@ kable(dt, row.names = FALSE, caption = "\'EPIC-Norfolk cohort\' (Bain et al. 201
 
 
 ---
-# misure .orange[ponderate]: media artimetica ponderata
+# misure .orange[ponderate]: media aritmetica ponderata
 
 La media aritmetica campionaria ponderata è pari a
 $$\bar{x}_g = \frac{\sum_{i=1}^k f_im_i}{\sum_{i=1}^k f_i}$$
 
 Per il dataset accorpato sui dati di magnesio, è pari a
-$$\bar{x}_g = \frac{13(106)+\ldots+12(352)}{13+\ldots+12}= 26389.5/100 = 263.895$$
+$$\bar{x}_g = \frac{13(105.95)+\ldots+12(352.05)}{13+\ldots+12}= 26387.55/100 = 263.8755$$
 ```{r, include=FALSE}
 sum(dt$m * dt$Freq) / sum(dt$Freq)
 weighted.mean(x = dt$m, w = dt$Freq)
@@ -981,14 +981,14 @@ weighted.mean(x = dt$m, w = dt$Freq)
 class: hide_logo
 ## misure .orange[ponderate]: varianza ponderata
 
-La varianza campionaria ponderata è pari a
+La varianza campionaria ponderata, con $n = \sum_{i=1}^k f_i$, è pari a
 $$s_g^2 = \frac{\sum_{i=1}^k f_i(m_i-\bar{x}_g)^2}{(\sum_{i=1}^k f_i)-1} \quad\rm{ovvero}\quad s_g^2 = \frac{(\sum_{i=1}^k f_im_i^2)-n\bar{x}_g^2}{n-1}$$
 
 
 Per il caso del magnesio è pari a
 
-$$\begin{align*}\bar{s}_g^2& = \frac{13(106 - 263.895)^2+\ldots+12(352 - 263.895)^2}{13 + \cdots + 12 - 1}\\& = 611446.1/99 = 6176.224\end{align*}$$
-$$\begin{align*}\bar{s}_g^2& = \frac{[13(106)^2+\ldots+12(352)^2]-100(263.895^2)}{100-1}\\& = 611446.1/99 = 6176.224\end{align*}$$
+$$\begin{align*}s_g^2& = \frac{13(105.95 - 263.8755)^2+\ldots+12(352.05 - 263.8755)^2}{13 + \cdots + 12 - 1}\\& = 611233.5/99 = 6174.075\end{align*}$$
+$$\begin{align*}s_g^2& = \frac{[13(105.95)^2+\ldots+12(352.05)^2]-100(263.8755^2)}{100-1}\\& = 611233.5/99 = 6174.075\end{align*}$$
 ```{r, include=FALSE}
 w_mean <- weighted.mean(
   x = dt$m,
@@ -1010,8 +1010,6 @@ sum(
   n * w_mean^2
 ) / (n - 1)
 ```
-
-]
 
 ---
 class: inverse, middle
@@ -1059,11 +1057,11 @@ Per il calcolo dell'istogramma, la tabella delle frequenze deve essere
 estesa
 
 
-|Gruppi            | Media                       | Frequenza| Ampiezza            | Densità
+|Gruppi            | Punto medio $m_i$           | Frequenza| Ampiezza            | Densità
 |:----------------:|:---------------------------:|:--------:|:-------------------:|:-------
 | $[y_1, y_2)$     | $\frac{y_1+y_2}{2}$         | $f_1$    | $a_1 = y_2-y_1$     | $\frac{f_1}{n*a_1}$
 | $\vdots$         | $\vdots$                    | $\vdots$ | $\vdots$            | $\vdots$
-| $[y_k, y_{k+1})$ | $\frac{y_k+y_{k+1}}{2}$     | $f_k$    | $a_k = y_{k+1}-y_k$ | $\frac{f_{k+1}}{n*a_k}$
+| $[y_k, y_{k+1})$ | $\frac{y_k+y_{k+1}}{2}$     | $f_k$    | $a_k = y_{k+1}-y_k$ | $\frac{f_k}{n*a_k}$
 
 
 
@@ -1112,27 +1110,28 @@ include_graphics("img/bxp.png")
 # Dati continui: box-plot
 
 Il .orange[box-plot] è un modo per rappresentare graficamente una distribuzione
-rispetto a __centralità e variabilità__. Per un campione di ampiezza $N$
+rispetto a __centralità e variabilità__. Per un campione di ampiezza $n$
 
 - Il segmento all'interno del box è la mediana.
 
-- il __baffo inferiore__ (h) **.orange[parte]** dal primo quartile (o 25º percentile)
+- il __primo quartile__ (h, o 25º percentile) è il bordo inferiore della scatola (box)
 
-- il __baffo superiore__ (H) **.orange[parte]** dal terzo quartile (o 75º percentile)
+- il __terzo quartile__ (H, o 75º percentile) è il bordo superiore della scatola
 
-- l'ampiezza della scatola (box) è il **.orange[Range Inter-Quartile] (IQR)**, ovvero la differenza tra il III e il I quartile.
+- l'ampiezza della scatola (box) è il **.orange[Range Inter-Quartile] (IQR)**, ovvero la differenza tra il III e il I quartile ($H - h$).
 
-- un valore __estremo__ è: un valore che si allontana dai baffi più di una volta
-  e mezza la loro distanza (distanza inter-quartile), cioè
+- i __baffi__ arrivano fino al valore più lontano dalla scatola ma entro una volta e mezza l'IQR dai suoi bordi; i limiti $h - 1.5 \times (H-h)$ e $H + 1.5 \times (H-h)$ sono il baffo inferiore e superiore dello schema
+
+- un __outlier__ è: un valore oltre i baffi, cioè che si allontana dai bordi della scatola più di una volta
+  e mezza l'IQR, cioè
 $$x > H + 1.5 \times (H-h)  \quad o \quad x < h - 1.5 \times (H-h)$$
 
-- un __outlier__ è: un valore che si allontana dai baffi più di tre volte la
-  loro distanza, cioè
+- un __outlier estremo__ è: un valore che si allontana dai bordi della scatola più di tre volte l'IQR, cioè
 $$x > H + 3 \times (H-h)  \quad o \quad x < h - 3 \times (H-h)$$
 
 ---
 # Box-plot (calcolo)
-Un' assunzione giornaliera di 43 mg/die di magnesio rappresenta un dato estremo
+Un'assunzione giornaliera di 43 mg/die di magnesio rappresenta un outlier
 
 <small>
 <small>
@@ -1145,12 +1144,13 @@ sort(epic$mag[101:200])
   $(215.3+215.4) / 2 = 215.35$
 - $H$ è la media dell'osservazione $(100 * 3/4)$ª e la $((100 * 3/4) + 1)$ª, ovvero
   $(323.9+324) / 2 = 323.95$
-- i limiti per i valori estremi sono quindi:
+- i limiti per gli outlier sono quindi:
 $$x > 323.95 + 1.5 * (323.95 - 215.35) = 486.85$$
 $$x < 215.35 - 1.5 * (323.95 - 215.35) = 52.45$$
-- gli outlier sarebbero: 
+- gli outlier estremi sarebbero: 
 $$x > 323.95 + 3 * (323.95 - 215.35) = 649.75$$
-$$x < 215.35 - 3 * (323.95 - 215.35) = 0$$
+$$x < 215.35 - 3 * (323.95 - 215.35) = -110.45$$
+(valore negativo: un'assunzione non può essere negativa, quindi nessun outlier estremo inferiore)
 </small>
 </small>
 
@@ -1169,7 +1169,7 @@ barre.
 
 > ATTENZIONE 2: in un grafico a barre, la base delle barre DEVE essere 
   sempre (ben!!) definita, ovvero deve SEMPRE iniziare dall'opportuno
-  "zero" (per esempio da 1 per scale logaritimiche, da 0 per i conteggi
+  "zero" (per esempio da 1 per scale logaritmiche, da 0 per i conteggi
   classici)
 
 ---
@@ -1257,7 +1257,7 @@ class: inverse
 - [Statistica medica](https://www.maggiolieditore.it/statistica-medica.html) di [**Martin Bland**](https://www.york.ac.uk/healthsciences/our-staff/honoraryemeritus/martin-bland/), suggeriti capitoli 1, 4 e 5.
 
 - [Perché n − 1 nella formula della deviazione standard
-campionaria?](http://rdossena.altervista.org/Articoli/Book-Perch%E9%20n-1.pdf) di [Riccardo Dossena](http://rdossena.altervista.org) Traduzione dell'articolo **Book, S.A.**: _Why n − 1 in the formula for the sample standard deviation?_, The Two-Year College Mathematics Journal 10(5), 330–333 (1979
+campionaria?](http://rdossena.altervista.org/Articoli/Book-Perch%E9%20n-1.pdf) di [Riccardo Dossena](http://rdossena.altervista.org) Traduzione dell'articolo **Book, S.A.**: _Why n − 1 in the formula for the sample standard deviation?_, The Two-Year College Mathematics Journal 10(5), 330–333 (1979)
 
 ---
 class: inverse, center, middle, hide-count
