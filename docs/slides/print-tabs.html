@@ -1,0 +1,20 @@
+<script>
+// In modalità stampa (tasto E, o ?print-pdf nell'indirizzo) le schede di un
+// riquadro a schede si stampano tutte, una dopo l'altra: qui si aggiunge a
+// ciascuna il suo titolo, che altrimenti starebbe solo nella barra delle schede.
+(function () {
+  if (!/print-pdf|view=print/.test(window.location.search)) return;
+  document.querySelectorAll(".panel-tabset").forEach(function (ts) {
+    var names = Array.prototype.map.call(
+      ts.querySelectorAll(".panel-tabset-tabby a, .nav-tabs .nav-link"),
+      function (a) { return a.textContent.trim(); }
+    );
+    ts.querySelectorAll(":scope > .tab-content > div").forEach(function (pane, i) {
+      var p = document.createElement("p");
+      p.className = "tab-print-title";
+      p.textContent = names[i] || "";
+      pane.insertBefore(p, pane.firstChild);
+    });
+  });
+})();
+</script>

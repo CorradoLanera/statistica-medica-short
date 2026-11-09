@@ -252,7 +252,7 @@
     "href": "slides/index.html",
     "title": "Slide del corso",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nNov 9, 2026\n\n\nSTATISTICA MEDICA\n\n\nCorrado Lanera\n\n\n\n\n\n\nNov 9, 2026\n\n\nStatistica Medica\n\n\nCorrado Lanera\n\n\n\n\n\n\nNov 9, 2026\n\n\nStatistica Medica\n\n\nCorrado Lanera\n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\nNo matching items\n Back to top"
+    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\n9 nov 2026\n\n\nSTATISTICA MEDICA\n\n\nCorrado Lanera\n\n\n\n\n\n\n9 nov 2026\n\n\nStatistica Medica\n\n\nCorrado Lanera\n\n\n\n\n\n\n9 nov 2026\n\n\nStatistica Medica\n\n\nCorrado Lanera\n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\nNo matching items\n Back to top"
   },
   {
     "objectID": "index.html",
@@ -406,28 +406,28 @@
     "href": "slides/02-descrittive.html#notazioni-sommatoria-fino-a-n",
     "title": "Statistica Medica",
     "section": "Notazioni: Sommatoria fino a N",
-    "text": "Notazioni: Sommatoria fino a N\nSia \\(I\\) un insieme di indici \\(i\\) con \\(N\\) elementi, utile a identificare (in modo univoco) ciascun elemento \\(x\\) di un insieme \\(X\\) composto da \\(N\\) numeri. Allora, indichiamo in modo generico con \\(x_i\\) l’i-esimo elemento di \\(X\\).\nPer esempio, quando consideriamo \\(i = 1\\), allora \\(x_i\\) è \\(x_1\\), ovvero il primo elemento di \\(X\\).\nCon tale notazione, utilizzando il simbolo \\(\\Sigma\\) (Sigma, maiuscola: la “S” greca), indichiamo brevemente con\n\\[\\sum_{i = 1}^N x_i = x_1 + x_2 + \\cdots + x_{N-1} + x_{N}\\]\nla somma di tutti gli \\(x_i\\), e lo leggiamo “Sommatoria per i che va da 1 a N degli x-con-i”."
+    "text": "Notazioni: Sommatoria fino a N\nSia II un insieme di indici ii con NN elementi, utile a identificare (in modo univoco) ciascun elemento xx di un insieme XX composto da NN numeri. Allora, indichiamo in modo generico con xix_i l’i-esimo elemento di XX.\nPer esempio, quando consideriamo i=1i = 1, allora xix_i è x1x_1, ovvero il primo elemento di XX.\nCon tale notazione, utilizzando il simbolo Σ\\Sigma (Sigma, maiuscola: la “S” greca), indichiamo brevemente con\n∑i=1Nxi=x1+x2+⋯+xN−1+xN\\sum_{i = 1}^N x_i = x_1 + x_2 + \\cdots + x_{N-1} + x_{N}\nla somma di tutti gli xix_i, e lo leggiamo “Sommatoria per i che va da 1 a N degli x-con-i”."
   },
   {
     "objectID": "slides/02-descrittive.html#notazioni-sommatoria-su-i",
     "href": "slides/02-descrittive.html#notazioni-sommatoria-su-i",
     "title": "Statistica Medica",
     "section": "Notazioni: Sommatoria su I",
-    "text": "Notazioni: Sommatoria su I\nIn modo analogo, se \\(I\\) non fosse numerico ma, per esempio, l’insieme dei codici identificativi dei pazienti in uno studio, e \\(X\\) fosse l’insieme dei pesi di tali pazienti, ipotizzando che \\(R43\\) sia l’id di un paziente, allora quando \\(i = R43\\) abbiamo che \\(x_i = x_{R43}\\) è il peso del paziente identificato dal codice \\(R43\\).\nRicordando inoltre che indichiamo con \\(x\\in X\\) la relazione di appartenenza insiemistica per l’elemento \\(x\\) nell’insieme \\(X\\), possiamo scrivere\n\\[\\sum_{i\\in I} x_i\\]\nCon il medesimo significato di prima, ovvero la somma di tutti i pesi di tutti i pazienti i cui indici (ovvero ID) stanno nell’insieme considerato \\(I\\), e lo leggiamo “Sommatoria per gli i in I degli x-con-i”."
+    "text": "Notazioni: Sommatoria su I\nIn modo analogo, se II non fosse numerico ma, per esempio, l’insieme dei codici identificativi dei pazienti in uno studio, e XX fosse l’insieme dei pesi di tali pazienti, ipotizzando che R43R43 sia l’id di un paziente, allora quando i=R43i = R43 abbiamo che xi=xR43x_i = x_{R43} è il peso del paziente identificato dal codice R43R43.\nRicordando inoltre che indichiamo con x∈Xx\\in X la relazione di appartenenza insiemistica per l’elemento xx nell’insieme XX, possiamo scrivere\n∑i∈Ixi\\sum_{i\\in I} x_i\nCon il medesimo significato di prima, ovvero la somma di tutti i pesi di tutti i pazienti i cui indici (ovvero ID) stanno nell’insieme considerato II, e lo leggiamo “Sommatoria per gli i in I degli x-con-i”."
   },
   {
     "objectID": "slides/02-descrittive.html#proprietà-della-sommatoria",
     "href": "slides/02-descrittive.html#proprietà-della-sommatoria",
     "title": "Statistica Medica",
     "section": "Proprietà della sommatoria",
-    "text": "Proprietà della sommatoria\nSia \\(C\\) una generica costante numerica, allora\n\\[\\sum_{i\\in I} (C * x_i) = C * \\sum_{i\\in I} x_i\\]\n\\[45=(5*2) + (5*3) + (5*4) = \\sum_{i=2}^{4} (5 * i) = 5 * \\sum_{i=2}^{4} i = 5*(2+3+4)=45\\]\n\\[\\sum_{i = 1}^N C = N * C\\]\n\\[\\sum_{i = 1}^3 5 = 5 + 5 + 5 = 3 * 5\\]"
+    "text": "Proprietà della sommatoria\nSia CC una generica costante numerica, allora\n∑i∈I(C*xi)=C*∑i∈Ixi\\sum_{i\\in I} (C * x_i) = C * \\sum_{i\\in I} x_i\n45=(5*2)+(5*3)+(5*4)=∑i=24(5*i)=5*∑i=24i=5*(2+3+4)=4545=(5*2) + (5*3) + (5*4) = \\sum_{i=2}^{4} (5 * i) = 5 * \\sum_{i=2}^{4} i = 5*(2+3+4)=45\n∑i=1NC=N*C\\sum_{i = 1}^N C = N * C\n∑i=135=5+5+5=3*5\\sum_{i = 1}^3 5 = 5 + 5 + 5 = 3 * 5"
   },
   {
     "objectID": "slides/02-descrittive.html#esempio-sommatoria",
     "href": "slides/02-descrittive.html#esempio-sommatoria",
     "title": "Statistica Medica",
     "section": "Esempio sommatoria",
-    "text": "Esempio sommatoria\nPer esempio considerando\n\n\n\n\n\nPortion of ‘EPIC-Norfolk cohort’ (Bain et al. 2015)\n\n\nI\nage\n\n\n\n\n1\n55.1\n\n\n2\n62.9\n\n\n3\n53.1\n\n\n4\n76.3\n\n\n5\n64.2\n\n\n6\n53.3\n\n\n\n\n\n\nPossiamo scrivere la somma di tutte le età\n\n\n55.1 + 62.9 + 53.1 + 76.3 + 64.2 + 53.3\n\n\ncome \\(\\sum_{i\\in I} age_i =\\) 364.9."
+    "text": "Esempio sommatoria\nPer esempio considerando\n\n\n\n\n\nPortion of ‘EPIC-Norfolk cohort’ (Bain et al. 2015)\n\n\nI\nage\n\n\n\n\n1\n55.1\n\n\n2\n62.9\n\n\n3\n53.1\n\n\n4\n76.3\n\n\n5\n64.2\n\n\n6\n53.3\n\n\n\n\n\n\nPossiamo scrivere la somma di tutte le età\n\n\n55.1 + 62.9 + 53.1 + 76.3 + 64.2 + 53.3\n\n\ncome ∑i∈Iagei=\\sum_{i\\in I} age_i = 364.9."
   },
   {
     "objectID": "slides/02-descrittive.html#unità-statistica",
@@ -462,7 +462,7 @@
     "href": "slides/02-descrittive.html#sondaggio",
     "title": "Statistica Medica",
     "section": "Sondaggio",
-    "text": "Sondaggio\nPer me: Tipi di variabile\nPer voi: &lt;img src=“img/bit.ly_statmed-sondaggio-tipi-variabili.png”, width=“300px” style=“vertical-align: middle”/&gt; bit.ly/statmed-sondaggio-tipi-variabili"
+    "text": "Sondaggio\nPer me: Tipi di variabile\nPer voi:  bit.ly/statmed-sondaggio-tipi-variabili"
   },
   {
     "objectID": "slides/02-descrittive.html#localizzazione-dati-continui",
@@ -476,42 +476,42 @@
     "href": "slides/02-descrittive.html#misure-di-centralità-media",
     "title": "Statistica Medica",
     "section": "Misure di centralità: media",
-    "text": "Misure di centralità: media\nData una variabile \\(x\\), misurata su \\(n\\) soggetti, la media aritmetica campionaria è pari a \\[\\bar{x} = \\frac{1}{n}\\sum_{i=1}^n x_i\\]\nÈ molto sensibile ai valori estremi: se ce ne sono non è una buona misura di centralità.\n\nEs.: se in questa stanza entra Elon Musk, quale sarebbe la media del saldo dei conti in banca dei presenti (ma anche di tutta Rovigo…)? Sarebbe una buona misura di centralità per tale distribuzione di valori?"
+    "text": "Misure di centralità: media\nData una variabile xx, misurata su nn soggetti, la media aritmetica campionaria è pari a x‾=1n∑i=1nxi\\bar{x} = \\frac{1}{n}\\sum_{i=1}^n x_i\nÈ molto sensibile ai valori estremi: se ce ne sono non è una buona misura di centralità.\n\nEs.: se in questa stanza entra Elon Musk, quale sarebbe la media del saldo dei conti in banca dei presenti (ma anche di tutta Rovigo…)? Sarebbe una buona misura di centralità per tale distribuzione di valori?"
   },
   {
     "objectID": "slides/02-descrittive.html#media-estremamente-sensibile",
     "href": "slides/02-descrittive.html#media-estremamente-sensibile",
     "title": "Statistica Medica",
     "section": "Media (estremamente sensibile)",
-    "text": "Media (estremamente sensibile)\nRiprendendo le età del nostro sotto-campione di soggetti, la loro media è\n\n\n\n\n\nPortion of ‘EPIC-Norfolk cohort’ (Bain et al. 2015)\n\n\nI\nage\n\n\n\n\n1\n55.1\n\n\n2\n62.9\n\n\n3\n53.1\n\n\n4\n76.3\n\n\n5\n64.2\n\n\n6\n53.3\n\n\n\n\n\n\n\\(\\frac{1}{6}\\sum_{i=1}^6 age_i =\\) 60.82\n La media è molto sensibile ai dati estremi: sostituendo, per esempio, anche solamente il primo valore (55.1) con 5.51 (ipotizzando un errore di inserimento), la media cambia sensibilmente e diviene 52.55."
+    "text": "Media (estremamente sensibile)\nRiprendendo le età del nostro sotto-campione di soggetti, la loro media è\n\n\n\n\n\nPortion of ‘EPIC-Norfolk cohort’ (Bain et al. 2015)\n\n\nI\nage\n\n\n\n\n1\n55.1\n\n\n2\n62.9\n\n\n3\n53.1\n\n\n4\n76.3\n\n\n5\n64.2\n\n\n6\n53.3\n\n\n\n\n\n\n16∑i=16agei=\\frac{1}{6}\\sum_{i=1}^6 age_i = 60.82\n La media è molto sensibile ai dati estremi: sostituendo, per esempio, anche solamente il primo valore (55.1) con 5.51 (ipotizzando un errore di inserimento), la media cambia sensibilmente e diviene 52.55."
   },
   {
     "objectID": "slides/02-descrittive.html#misure-di-centralità-mediana",
     "href": "slides/02-descrittive.html#misure-di-centralità-mediana",
     "title": "Statistica Medica",
     "section": "Misure di centralità: mediana",
-    "text": "Misure di centralità: mediana\nOrdiniamo ora le \\(n\\) osservazioni. La mediana campionaria è\n\nla \\((\\frac{n+1}{2})\\)-ma osservazione se \\(n\\) è dispari (ovvero, ha un centro) &gt; Se prendo \\(k=n/2\\) ottengo una “posizione” con la virgola, quindi prendo la prima (intera) successiva.\nla media aritmetica della \\((\\frac{n}{2})\\)-ma e la \\((\\frac{n}{2}+1)\\)-ma osservazione se \\(n\\) è pari (ovvero, non ha un centro) &gt; Se prendo \\(k=n/2\\) ottengo un numero intero, e prendo allora la media tra la \\(k\\)-esima e la \\(k+1\\)-esima osservazione"
+    "text": "Misure di centralità: mediana\nOrdiniamo ora le nn osservazioni. La mediana campionaria è\n\nla (n+12)(\\frac{n+1}{2})-ma osservazione se nn è dispari (ovvero, ha un centro) &gt; Se prendo k=n/2k=n/2 ottengo una “posizione” con la virgola, quindi prendo la prima (intera) successiva.\nla media aritmetica della (n2)(\\frac{n}{2})-ma e la (n2+1)(\\frac{n}{2}+1)-ma osservazione se nn è pari (ovvero, non ha un centro) &gt; Se prendo k=n/2k=n/2 ottengo un numero intero, e prendo allora la media tra la kk-esima e la k+1k+1-esima osservazione"
   },
   {
     "objectID": "slides/02-descrittive.html#mediana-n-pari",
     "href": "slides/02-descrittive.html#mediana-n-pari",
     "title": "Statistica Medica",
     "section": "Mediana (n pari)",
-    "text": "Mediana (n pari)\nNel nostro esempio\n\n\n\n\n\nPortion of ‘EPIC-Norfolk cohort’ (Bain et al. 2015)\n\n\n\nI\nage\n\n\n\n\n1\n3\n53.1\n\n\n2\n6\n53.3\n\n\n3\n1\n55.1\n\n\n4\n2\n62.9\n\n\n5\n5\n64.2\n\n\n6\n4\n76.3\n\n\n\n\n\n\nSiccome \\(n\\) è pari (è 6), la mediana è la media tra la 3a e 4a osservazione (ordinate!) \\[\\mbox{Mediana} = \\frac{55.1 + 62.9}{2} = 59\\] E anche modificando il primo valore (55.1) con 5.51, la mediana cambia molto poco, diventando 58.1 (invece di 59)."
+    "text": "Mediana (n pari)\nNel nostro esempio\n\n\n\n\n\nPortion of ‘EPIC-Norfolk cohort’ (Bain et al. 2015)\n\n\n\nI\nage\n\n\n\n\n1\n3\n53.1\n\n\n2\n6\n53.3\n\n\n3\n1\n55.1\n\n\n4\n2\n62.9\n\n\n5\n5\n64.2\n\n\n6\n4\n76.3\n\n\n\n\n\n\nSiccome nn è pari (è 6), la mediana è la media tra la 3a e 4a osservazione (ordinate!) Mediana=55.1+62.92=59\\mbox{Mediana} = \\frac{55.1 + 62.9}{2} = 59 E anche modificando il primo valore (55.1) con 5.51, la mediana cambia molto poco, diventando 58.1 (invece di 59)."
   },
   {
     "objectID": "slides/02-descrittive.html#mediana-n-dispari",
     "href": "slides/02-descrittive.html#mediana-n-dispari",
     "title": "Statistica Medica",
     "section": "Mediana (n dispari)",
-    "text": "Mediana (n dispari)\n\n\n\n\n\nPortion of ‘EPIC-Norfolk cohort’ (Bain et al. 2015)\n\n\n\nI\nage\n\n\n\n\n1\n3\n53.1\n\n\n2\n6\n53.3\n\n\n3\n1\n55.1\n\n\n4\n2\n62.9\n\n\n5\n5\n64.2\n\n\n6\n7\n65.7\n\n\n7\n4\n76.3\n\n\n\n\n\n\nNel caso in cui \\(n\\) sia dispari (prendiamo per esempio \\(n = 7\\) ), prendiamo direttamente il valore centrale (in posizione \\(4 = (7+1)/2\\) ), ovvero 62.9."
+    "text": "Mediana (n dispari)\n\n\n\n\n\nPortion of ‘EPIC-Norfolk cohort’ (Bain et al. 2015)\n\n\n\nI\nage\n\n\n\n\n1\n3\n53.1\n\n\n2\n6\n53.3\n\n\n3\n1\n55.1\n\n\n4\n2\n62.9\n\n\n5\n5\n64.2\n\n\n6\n7\n65.7\n\n\n7\n4\n76.3\n\n\n\n\n\n\nNel caso in cui nn sia dispari (prendiamo per esempio n=7n = 7 ), prendiamo direttamente il valore centrale (in posizione 4=(7+1)/24 = (7+1)/2 ), ovvero 62.9."
   },
   {
     "objectID": "slides/02-descrittive.html#confronto-media-e-mediana",
     "href": "slides/02-descrittive.html#confronto-media-e-mediana",
     "title": "Statistica Medica",
     "section": "Confronto media e mediana",
-    "text": "Confronto media e mediana\nCome indicatore semplice di asimmetria (skewness) usiamo la differenza\nAsimmetria = Media - Mediana\n\n\nLa distribuzione dei dati sarà considerata:\n\nsimmetrica se \\(Asimmetria \\simeq 0\\) (rispetto alla scala dei dati)\nasimmetrica (sbilanciata) a destra se \\(Asimmetria &gt; 0\\) (la media è più grande, distorta in eccesso)\nasimmetrica (sbilanciata) a sinistra se \\(Asimmetria &lt; 0\\) (la media è più piccola, distorta in difetto)\n\n\n\n\n\n\n\n‘EPIC-Norfolk cohort’ (Bain et al. 2015)"
+    "text": "Confronto media e mediana\nCome indicatore semplice di asimmetria (skewness) usiamo la differenza\nAsimmetria = Media - Mediana\n\n\nLa distribuzione dei dati sarà considerata:\n\nsimmetrica se Asimmetria≃0Asimmetria \\simeq 0 (rispetto alla scala dei dati)\nasimmetrica (sbilanciata) a destra se Asimmetria&gt;0Asimmetria &gt; 0 (la media è più grande, distorta in eccesso)\nasimmetrica (sbilanciata) a sinistra se Asimmetria&lt;0Asimmetria &lt; 0 (la media è più piccola, distorta in difetto)\n\n\n\n\n\n\n\n‘EPIC-Norfolk cohort’ (Bain et al. 2015)"
   },
   {
     "objectID": "slides/02-descrittive.html#misure-di-centralità-moda",
@@ -532,49 +532,49 @@
     "href": "slides/02-descrittive.html#misure-di-variabilità-range-massimale",
     "title": "Statistica Medica",
     "section": "Misure di variabilità: range (massimale)",
-    "text": "Misure di variabilità: range (massimale)\nIl range massimale è la differenza tra il valore massimo osservato e quello minimo.\nSimbolicamente: \\[range = max(x_i)-min(x_i)\\]\n\n\n\n\n\nautoanalitica\nmicroenzimatica\n\n\n\n\n49\n17\n\n\n\n\n\nÈ molto semplice da calcolare ma molto sensibile ai valori estremi.\n\nDipende dall’ampiezza campionaria \\(n\\), e tende ad aumentare all’aumentare di \\(N\\)! (un campione più grande della stessa popolazione avrà estremi più lontani e non più vicini)"
+    "text": "Misure di variabilità: range (massimale)\nIl range massimale è la differenza tra il valore massimo osservato e quello minimo.\nSimbolicamente: range=max(xi)−min(xi)range = max(x_i)-min(x_i)\n\n\n\n\n\nautoanalitica\nmicroenzimatica\n\n\n\n\n49\n17\n\n\n\n\n\nÈ molto semplice da calcolare ma molto sensibile ai valori estremi.\n\nDipende dall’ampiezza campionaria nn, e tende ad aumentare all’aumentare di NN! (un campione più grande della stessa popolazione avrà estremi più lontani e non più vicini)"
   },
   {
     "objectID": "slides/02-descrittive.html#misure-di-variabilità-varianza-campionaria",
     "href": "slides/02-descrittive.html#misure-di-variabilità-varianza-campionaria",
     "title": "Statistica Medica",
     "section": "Misure di variabilità: varianza campionaria",
-    "text": "Misure di variabilità: varianza campionaria\nLa varianza campionaria è definita come\n\\[s^2 = \\frac{\\sum_{i=1}^n (x_i-\\bar{x})^2}{n-1}\\]\nQuesta è una misura di quanto, in media, sono grandi i quadrati degli scarti dei dati dalla loro media.\nÈ un valore non confrontabile con i dati stessi in quanto con un’altra unità di misura. Si definisce quindi la deviazione standard campionaria, come\n\\[s = \\sqrt{s^2} = \\sqrt{\\frac{\\sum_{i=1}^n (x_i-\\bar{x})^2}{n-1}}\\]\n\nSi noti che \\(\\sum_{i=1}^n (x_i-\\bar{x}) = 0\\)"
+    "text": "Misure di variabilità: varianza campionaria\nLa varianza campionaria è definita come\ns2=∑i=1n(xi−x‾)2n−1s^2 = \\frac{\\sum_{i=1}^n (x_i-\\bar{x})^2}{n-1}\nQuesta è una misura di quanto, in media, sono grandi i quadrati degli scarti dei dati dalla loro media.\nÈ un valore non confrontabile con i dati stessi in quanto con un’altra unità di misura. Si definisce quindi la deviazione standard campionaria, come\ns=s2=∑i=1n(xi−x‾)2n−1s = \\sqrt{s^2} = \\sqrt{\\frac{\\sum_{i=1}^n (x_i-\\bar{x})^2}{n-1}}\n\nSi noti che ∑i=1n(xi−x‾)=0\\sum_{i=1}^n (x_i-\\bar{x}) = 0"
   },
   {
     "objectID": "slides/02-descrittive.html#varianza-campionaria-esempio",
     "href": "slides/02-descrittive.html#varianza-campionaria-esempio",
     "title": "Statistica Medica",
     "section": "Varianza campionaria: esempio",
-    "text": "Varianza campionaria: esempio\n\n\n\n\n\n\n\nautoanalitica\nmicroenzimatica\n\n\n\n\n177\n192\n\n\n193\n197\n\n\n195\n200\n\n\n209\n202\n\n\n226\n209\n\n\n\n\n\nMedie:\n\n\n\n\n\nautoanalitica\nmicroenzimatica\n\n\n\n\n200\n200\n\n\n\n\n\n\n\nAutoanaliticaMicroenzimatica\n\n\n\\(\\begin{split}s^2& = \\frac{(177-200)^2 + \\ldots + (226-200)^2}{4}\\\\& = \\frac{1360}{4} = 340\\end{split}\\)\n\\(s = \\sqrt{340} = 18.4\\)\n\n\n\\(\\begin{split}s^2& = \\frac{(192-200)^2 + \\ldots + (209-200)^2}{4}\\\\& = \\frac{158}{4} = 39.5\\end{split}\\)\n\\(s = \\sqrt{39.5} = 6.3\\)"
+    "text": "Varianza campionaria: esempio\n\n\n\n\n\n\n\nautoanalitica\nmicroenzimatica\n\n\n\n\n177\n192\n\n\n193\n197\n\n\n195\n200\n\n\n209\n202\n\n\n226\n209\n\n\n\n\n\nMedie:\n\n\n\n\n\nautoanalitica\nmicroenzimatica\n\n\n\n\n200\n200\n\n\n\n\n\n\n\nAutoanaliticaMicroenzimatica\n\n\ns2=(177−200)2+…+(226−200)24=13604=340\\begin{split}s^2& = \\frac{(177-200)^2 + \\ldots + (226-200)^2}{4}\\\\& = \\frac{1360}{4} = 340\\end{split}\ns=340=18.4s = \\sqrt{340} = 18.4\n\n\ns2=(192−200)2+…+(209−200)24=1584=39.5\\begin{split}s^2& = \\frac{(192-200)^2 + \\ldots + (209-200)^2}{4}\\\\& = \\frac{158}{4} = 39.5\\end{split}\ns=39.5=6.3s = \\sqrt{39.5} = 6.3"
   },
   {
     "objectID": "slides/02-descrittive.html#varianza-formula-alternativa",
     "href": "slides/02-descrittive.html#varianza-formula-alternativa",
     "title": "Statistica Medica",
     "section": "Varianza (formula alternativa)",
-    "text": "Varianza (formula alternativa)\nSe la media è già calcolata, allora può essere utile usare \\[s^2=\\frac{(\\sum_{i=1}^n x_i^2) - n\\bar{x}^2}{n-1}\\]\nPer la tecnica autoanalitica si ha \\[\\sum_{i=1}^5 x_i^2 = 177^2+\\ldots+226^2=201360\\] \\[s^2 = \\frac{201360 - 5 \\times 200^2}{4}= 1360/4=340\\]"
+    "text": "Varianza (formula alternativa)\nSe la media è già calcolata, allora può essere utile usare s2=(∑i=1nxi2)−nx‾2n−1s^2=\\frac{(\\sum_{i=1}^n x_i^2) - n\\bar{x}^2}{n-1}\nPer la tecnica autoanalitica si ha ∑i=15xi2=1772+…+2262=201360\\sum_{i=1}^5 x_i^2 = 177^2+\\ldots+226^2=201360 s2=201360−5×20024=1360/4=340s^2 = \\frac{201360 - 5 \\times 200^2}{4}= 1360/4=340"
   },
   {
     "objectID": "slides/02-descrittive.html#misure-di-variabilità-coefficiente-di-variazione",
     "href": "slides/02-descrittive.html#misure-di-variabilità-coefficiente-di-variazione",
     "title": "Statistica Medica",
     "section": "Misure di variabilità: coefficiente di variazione",
-    "text": "Misure di variabilità: coefficiente di variazione\nSebbene la deviazione standard sia della stessa unità di misura dei dati, non permette di confrontare tra loro le variabilità di variabili con unità di misura differenti.\nIl coefficiente di variazione \\(CV\\) è definito come \\[CV = \\frac{100s}{\\bar{x}}\\] È una misura adimensionale, e quindi utilizzabile anche per confrontare variabili di natura differente (purché positive e con zero assoluto). È anche insensibile alla scala, ovvero a trasformazioni del tipo \\(cx\\)"
+    "text": "Misure di variabilità: coefficiente di variazione\nSebbene la deviazione standard sia della stessa unità di misura dei dati, non permette di confrontare tra loro le variabilità di variabili con unità di misura differenti.\nIl coefficiente di variazione CVCV è definito come CV=100sx‾CV = \\frac{100s}{\\bar{x}} È una misura adimensionale, e quindi utilizzabile anche per confrontare variabili di natura differente (purché positive e con zero assoluto). È anche insensibile alla scala, ovvero a trasformazioni del tipo cxcx"
   },
   {
     "objectID": "slides/02-descrittive.html#cv-non-effetto-scala",
     "href": "slides/02-descrittive.html#cv-non-effetto-scala",
     "title": "Statistica Medica",
     "section": "CV (non-effetto scala)",
-    "text": "CV (non-effetto scala)\n\nI valori di Colesterolo raccolti dai 200 pazienti del database Epic sono i seguenti:\n\n\n5.2, 4.6, 4.8, 8.4, 7.7, 6.6, 6, 5.3, 5.1, 6.7, 7.3, 5.1, 5, 5.4, 6.4, \n6.6, 4.7, 5.7, 4.8, 5.9, 5.2, 5.6, 7.2, 5.9, 6.1, 5.5, 4.8, 7.6, 4.8, 5.4, \n5.9, 5.6, 6.9, 6.9, 5, 9.1, 5.8, 5.5, 7.4, 6.4, 6.2, 7.2, 4.9, 6.7, 6.8, \n5.4, 7.1, 5.9, 5.9, 5.3, 7, 6.8, 6.1, 5.5, 6.3, 5.3, 6.1, 5.6, 8, 4.9, \n6, 6.7, 5.1, 6.8, 4.8, 4.9, 4.7, 5.8, 5.9, 6.2, 4.8, 5, 10.5, 6.9, 6, \n5.4, 6.8, 5.4, 5.3, 5.5, 5.5, 7.4, 6.4, 6.9, 5.2, 6.2, 6.4, 4.9, 8.6, 4.6, \n5.2, 5.7, 6, 8.5, 5.4, 5.1, 8.4, 6, 6.7, 5.4, 7.3, 6.4, 7.1, 5.3, 7.1, \n4.9, 5.1, 7, 4.7, 6.5, 8.7, 7, 6.2, 5.5, 5.7, 4.6, 5.1, 7, 5.4, 6.3, \n6.3, 5.9, 5.4, 4.6, 5.8, 5.5, 6.2, 7.6, 6.4, 5.9, 7.7, 6.4, 8.4, 6.9, 5.2, \n5.8, 4.7, 4.8, 7.5, 6, 8.5, 8.4, 4.9, 4.8, 5, 6.7, 7.3, 5.4, 6.7, 4.7, \n5.5, 6.8, 11.3, 4.7, 5.8, 5.4, 5.4, 5.8, 5.2, 7, 6.4, 6.8, 7.5, 5, 6.3, \n6.6, 5.6, 5.7, 5.6, 7.1, 5.1, 5, 4.6, 5.2, 4.9, 6.7, 7.1, 6.6, 5.3, 6, \n4.7, 7.1, 5.3, 5.8, 6.7, 6.1, 7.9, 6.2, 5.7, 6.1, 5.1, 5.7, 5.4, 5.2, 6.7, \n6, 4.6, 4.7, 8.3, 5.2\n\n\nPartendo dai dati così espressi in mmol/L: \\(CV = 1.12/6.07 \\times 100 \\simeq 18\\%\\)\ne per gli stessi valori espressi in mg/dl (massa molare colesterolo: 386.65 g/mol) abbiamo: \\[CV = 43.35/234.83 \\times 100 \\simeq 18\\%\\]"
+    "text": "CV (non-effetto scala)\n\nI valori di Colesterolo raccolti dai 200 pazienti del database Epic sono i seguenti:\n\n\n5.2, 4.6, 4.8, 8.4, 7.7, 6.6, 6, 5.3, 5.1, 6.7, 7.3, 5.1, 5, 5.4, 6.4, \n6.6, 4.7, 5.7, 4.8, 5.9, 5.2, 5.6, 7.2, 5.9, 6.1, 5.5, 4.8, 7.6, 4.8, 5.4, \n5.9, 5.6, 6.9, 6.9, 5, 9.1, 5.8, 5.5, 7.4, 6.4, 6.2, 7.2, 4.9, 6.7, 6.8, \n5.4, 7.1, 5.9, 5.9, 5.3, 7, 6.8, 6.1, 5.5, 6.3, 5.3, 6.1, 5.6, 8, 4.9, \n6, 6.7, 5.1, 6.8, 4.8, 4.9, 4.7, 5.8, 5.9, 6.2, 4.8, 5, 10.5, 6.9, 6, \n5.4, 6.8, 5.4, 5.3, 5.5, 5.5, 7.4, 6.4, 6.9, 5.2, 6.2, 6.4, 4.9, 8.6, 4.6, \n5.2, 5.7, 6, 8.5, 5.4, 5.1, 8.4, 6, 6.7, 5.4, 7.3, 6.4, 7.1, 5.3, 7.1, \n4.9, 5.1, 7, 4.7, 6.5, 8.7, 7, 6.2, 5.5, 5.7, 4.6, 5.1, 7, 5.4, 6.3, \n6.3, 5.9, 5.4, 4.6, 5.8, 5.5, 6.2, 7.6, 6.4, 5.9, 7.7, 6.4, 8.4, 6.9, 5.2, \n5.8, 4.7, 4.8, 7.5, 6, 8.5, 8.4, 4.9, 4.8, 5, 6.7, 7.3, 5.4, 6.7, 4.7, \n5.5, 6.8, 11.3, 4.7, 5.8, 5.4, 5.4, 5.8, 5.2, 7, 6.4, 6.8, 7.5, 5, 6.3, \n6.6, 5.6, 5.7, 5.6, 7.1, 5.1, 5, 4.6, 5.2, 4.9, 6.7, 7.1, 6.6, 5.3, 6, \n4.7, 7.1, 5.3, 5.8, 6.7, 6.1, 7.9, 6.2, 5.7, 6.1, 5.1, 5.7, 5.4, 5.2, 6.7, \n6, 4.6, 4.7, 8.3, 5.2\n\n\nPartendo dai dati così espressi in mmol/L: CV=1.12/6.07×100≃18%CV = 1.12/6.07 \\times 100 \\simeq 18\\%\ne per gli stessi valori espressi in mg/dl (massa molare colesterolo: 386.65 g/mol) abbiamo: CV=43.35/234.83×100≃18%CV = 43.35/234.83 \\times 100 \\simeq 18\\%"
   },
   {
     "objectID": "slides/02-descrittive.html#sondaggio-1",
     "href": "slides/02-descrittive.html#sondaggio-1",
     "title": "Statistica Medica",
     "section": "Sondaggio",
-    "text": "Sondaggio\nPer me: Localizzazione\nPer voi: &lt;img src=“img/bit.ly_statmed-sondaggio-localizzazione.png”, width=“300px” style=“vertical-align: middle”/&gt; bit.ly/statmed-sondaggio-localizzazione"
+    "text": "Sondaggio\nPer me: Localizzazione\nPer voi:  bit.ly/statmed-sondaggio-localizzazione"
   },
   {
     "objectID": "slides/02-descrittive.html#domande-fin-qui",
@@ -588,42 +588,42 @@
     "href": "slides/02-descrittive.html#percentili",
     "title": "Statistica Medica",
     "section": "Percentili",
-    "text": "Percentili\nIl percentile \\(p\\)-esimo è un valore \\(V_p\\) tale che almeno il \\(p\\)% dei valori è minore o uguale a esso e almeno il \\((100-p)\\)% è maggiore o uguale.\nPer un calcolo a mano, posto \\(k=\\frac{p}{100}n\\), il percentile \\(p\\)-esimo è definito come\n\nSe \\(k\\) è un intero, la media tra la \\(k\\)-ma e la \\((k + 1)\\)-ma osservazione (ordinata).\nSe \\(k\\) non è un intero, l’osservazione alla prima posizione (intera) superiore a \\(k\\) (ordinata).\n\nI quartili sono tre valori che dividono i dati in quattro gruppi contenenti un numero approssimativamente uguale di osservazioni. Il totale di 100% è diviso in quattro parti uguali: 25%, 50%, 75%, 100%.\n\nPrimo quartile (Q1) è il \\(25\\)° percentile (\\(25\\% = 1/4\\)), calcolato con la regola precedente\nTerzo quartile (Q3) è il \\(75\\)° percentile (\\(75\\% = 3/4\\)), calcolato con la regola precedente"
+    "text": "Percentili\nIl percentile pp-esimo è un valore VpV_p tale che almeno il pp% dei valori è minore o uguale a esso e almeno il (100−p)(100-p)% è maggiore o uguale.\nPer un calcolo a mano, posto k=p100nk=\\frac{p}{100}n, il percentile pp-esimo è definito come\n\nSe kk è un intero, la media tra la kk-ma e la (k+1)(k + 1)-ma osservazione (ordinata).\nSe kk non è un intero, l’osservazione alla prima posizione (intera) superiore a kk (ordinata).\n\nI quartili sono tre valori che dividono i dati in quattro gruppi contenenti un numero approssimativamente uguale di osservazioni. Il totale di 100% è diviso in quattro parti uguali: 25%, 50%, 75%, 100%.\n\nPrimo quartile (Q1) è il 2525° percentile (25%=1/425\\% = 1/4), calcolato con la regola precedente\nTerzo quartile (Q3) è il 7575° percentile (75%=3/475\\% = 3/4), calcolato con la regola precedente"
   },
   {
     "objectID": "slides/02-descrittive.html#percentili-esempio-intero",
     "href": "slides/02-descrittive.html#percentili-esempio-intero",
     "title": "Statistica Medica",
     "section": "Percentili (esempio intero)",
-    "text": "Percentili (esempio intero)\n\nSi calcoli il \\(10\\)° e il \\(90\\)° percentile del campione del BMI su 10 soggetti.\n\n\n\n\n\n\n\n\nid\nbmi\n\n\n\n\n1\n4\n23.3\n\n\n2\n9\n24.9\n\n\n3\n7\n26.4\n\n\n4\n1\n30.4\n\n\n5\n10\n30.5\n\n\n6\n8\n31.4\n\n\n7\n6\n31.7\n\n\n8\n5\n32.9\n\n\n9\n3\n41.6\n\n\n10\n2\n42.6\n\n\n\n\n\n\n\nSi calcola \\(np/100\\), pari a:\n\n10° percentile (p/100 = 0.1): \\(10 \\times 0.1 = 1\\)\n90° percentile (p/100 = 0.9): \\(10 \\times 0.9 = 9\\)\n\n(Sono valori interi, quindi posti uguale a \\(k\\) e) si calcola la media tra le osservazioni (ordinate):\n\n10°: posizioni 1 e 2 \\(\\frac{23.3 + 24.9}{2} =\\) 24.1\n90°: posizioni 9 e 10 \\(\\frac{41.6 + 42.6}{2} =\\) 42.1"
+    "text": "Percentili (esempio intero)\n\nSi calcoli il 1010° e il 9090° percentile del campione del BMI su 10 soggetti.\n\n\n\n\n\n\n\n\nid\nbmi\n\n\n\n\n1\n4\n23.3\n\n\n2\n9\n24.9\n\n\n3\n7\n26.4\n\n\n4\n1\n30.4\n\n\n5\n10\n30.5\n\n\n6\n8\n31.4\n\n\n7\n6\n31.7\n\n\n8\n5\n32.9\n\n\n9\n3\n41.6\n\n\n10\n2\n42.6\n\n\n\n\n\n\n\nSi calcola np/100np/100, pari a:\n\n10° percentile (p/100 = 0.1): 10×0.1=110 \\times 0.1 = 1\n90° percentile (p/100 = 0.9): 10×0.9=910 \\times 0.9 = 9\n\n(Sono valori interi, quindi posti uguale a kk e) si calcola la media tra le osservazioni (ordinate):\n\n10°: posizioni 1 e 2 23.3+24.92=\\frac{23.3 + 24.9}{2} = 24.1\n90°: posizioni 9 e 10 41.6+42.62=\\frac{41.6 + 42.6}{2} = 42.1"
   },
   {
     "objectID": "slides/02-descrittive.html#percentili-esempio-decimale",
     "href": "slides/02-descrittive.html#percentili-esempio-decimale",
     "title": "Statistica Medica",
     "section": "Percentili (esempio decimale)",
-    "text": "Percentili (esempio decimale)\nSi calcoli il \\(20\\)° percentile del campione del BMI su 9 soggetti.\n\n\n\n\n\n\n\n\nid\nbmi\n\n\n\n\n1\n4\n23.3\n\n\n2\n9\n24.9\n\n\n3\n7\n26.4\n\n\n4\n1\n30.4\n\n\n5\n8\n31.4\n\n\n6\n6\n31.7\n\n\n7\n5\n32.9\n\n\n8\n3\n41.6\n\n\n9\n2\n42.6\n\n\n\n\n\n\n\nSi calcola \\(k=np/100\\), pari a:\n\n20° percentile (p/100 = 0.2): \\(9 \\times 0.2 = 1.8\\)\n\n(È un valore decimale, quindi) Si trova il primo numero intero superiore a 1.8: che è 2\nIl 20° percentile è il \\(2\\)° (secondo) valore (ordinato!); ovvero, 24.9."
+    "text": "Percentili (esempio decimale)\nSi calcoli il 2020° percentile del campione del BMI su 9 soggetti.\n\n\n\n\n\n\n\n\nid\nbmi\n\n\n\n\n1\n4\n23.3\n\n\n2\n9\n24.9\n\n\n3\n7\n26.4\n\n\n4\n1\n30.4\n\n\n5\n8\n31.4\n\n\n6\n6\n31.7\n\n\n7\n5\n32.9\n\n\n8\n3\n41.6\n\n\n9\n2\n42.6\n\n\n\n\n\n\n\nSi calcola k=np/100k=np/100, pari a:\n\n20° percentile (p/100 = 0.2): 9×0.2=1.89 \\times 0.2 = 1.8\n\n(È un valore decimale, quindi) Si trova il primo numero intero superiore a 1.8: che è 2\nIl 20° percentile è il 22° (secondo) valore (ordinato!); ovvero, 24.9."
   },
   {
     "objectID": "slides/02-descrittive.html#sondaggio-2",
     "href": "slides/02-descrittive.html#sondaggio-2",
     "title": "Statistica Medica",
     "section": "Sondaggio",
-    "text": "Sondaggio\nPer me: Percentili\nPer voi: &lt;img src=“img/bit.ly_statmed-sondaggio-percentili.png”, width=“300px” style=“vertical-align: middle”/&gt; bit.ly/statmed-sondaggio-percentili"
+    "text": "Sondaggio\nPer me: Percentili\nPer voi:  bit.ly/statmed-sondaggio-percentili"
   },
   {
     "objectID": "slides/02-descrittive.html#accorpamenti",
     "href": "slides/02-descrittive.html#accorpamenti",
     "title": "Statistica Medica",
     "section": "Accorpamenti",
-    "text": "Accorpamenti\nLa struttura generale dei dati raggruppati è simile a\n\n\n\nGruppi\nPunto medio \\(m_i\\)\nFrequenza\n\n\n\n\n\\([y_1, y_2)\\)\n\\(\\frac{y_1+y_2}{2}\\)\n\\(f_1\\)\n\n\n\\(\\vdots\\)\n\\(\\vdots\\)\n\\(\\vdots\\)\n\n\n\\([y_k, y_{k+1})\\)\n\\(\\frac{y_k+y_{k+1}}{2}\\)\n\\(f_k\\)"
+    "text": "Accorpamenti\nLa struttura generale dei dati raggruppati è simile a\n\n\n\nGruppi\nPunto medio mim_i\nFrequenza\n\n\n\n\n[y1,y2)[y_1, y_2)\ny1+y22\\frac{y_1+y_2}{2}\nf1f_1\n\n\n⋮\\vdots\n⋮\\vdots\n⋮\\vdots\n\n\n[yk,yk+1)[y_k, y_{k+1})\nyk+yk+12\\frac{y_k+y_{k+1}}{2}\nfkf_k"
   },
   {
     "objectID": "slides/02-descrittive.html#accorpamenti-epic---magnesio",
     "href": "slides/02-descrittive.html#accorpamenti-epic---magnesio",
     "title": "Statistica Medica",
     "section": "Accorpamenti: Epic - magnesio",
-    "text": "Accorpamenti: Epic - magnesio\nIntake giornaliero di magnesio (mg/day) per \\(n = 100\\) soggetti\n\n\n43, 84.2, 100.4, 102.2, 113, 116.7, 118.9, 128.8, 130.1, 144.3, 151.5, \n152.3, 163, 168.9, 169.4, 181.1, 189.5, 197.5, 198.3, 198.3, 198.7, 202.2, \n204.6, 212, 215.3, 215.4, 219.6, 222, 226.2, 228, 234.3, 234.4, 236.4, \n239.9, 241.7, 245.9, 250, 251.8, 255.8, 257.9, 263.7, 264.5, 267.7, 269.6, \n277.7, 279.7, 281.1, 285.3, 285.8, 288.9, 295.5, 297.6, 297.8, 299, 300.8, \n302.9, 304.2, 304.9, 305.1, 306, 307.1, 307.4, 309, 312.3, 317.1, 317.8, \n318.4, 320.1, 320.2, 320.4, 320.5, 321.1, 322.4, 323.7, 323.9, 324, 325.3, \n326.4, 329.1, 329.2, 331.1, 332.6, 333, 334.3, 338.1, 340.3, 341.3, 343.4, \n343.8, 344.9, 349.4, 349.6, 350.5, 351.4, 355.9, 357.6, 359.1, 359.8, 359.8, \n360.3"
+    "text": "Accorpamenti: Epic - magnesio\nIntake giornaliero di magnesio (mg/day) per n=100n = 100 soggetti\n\n\n43, 84.2, 100.4, 102.2, 113, 116.7, 118.9, 128.8, 130.1, 144.3, 151.5, \n152.3, 163, 168.9, 169.4, 181.1, 189.5, 197.5, 198.3, 198.3, 198.7, 202.2, \n204.6, 212, 215.3, 215.4, 219.6, 222, 226.2, 228, 234.3, 234.4, 236.4, \n239.9, 241.7, 245.9, 250, 251.8, 255.8, 257.9, 263.7, 264.5, 267.7, 269.6, \n277.7, 279.7, 281.1, 285.3, 285.8, 288.9, 295.5, 297.6, 297.8, 299, 300.8, \n302.9, 304.2, 304.9, 305.1, 306, 307.1, 307.4, 309, 312.3, 317.1, 317.8, \n318.4, 320.1, 320.2, 320.4, 320.5, 321.1, 322.4, 323.7, 323.9, 324, 325.3, \n326.4, 329.1, 329.2, 331.1, 332.6, 333, 334.3, 338.1, 340.3, 341.3, 343.4, \n343.8, 344.9, 349.4, 349.6, 350.5, 351.4, 355.9, 357.6, 359.1, 359.8, 359.8, \n360.3"
   },
   {
     "objectID": "slides/02-descrittive.html#accorpamenti-epic---magnesio-1",
@@ -637,14 +637,14 @@
     "href": "slides/02-descrittive.html#misure-ponderate-media-aritmetica-ponderata",
     "title": "Statistica Medica",
     "section": "misure ponderate: media aritmetica ponderata",
-    "text": "misure ponderate: media aritmetica ponderata\nLa media aritmetica campionaria ponderata è pari a \\[\\bar{x}_g = \\frac{\\sum_{i=1}^k f_im_i}{\\sum_{i=1}^k f_i}\\]\nPer il dataset accorpato sui dati di magnesio, è pari a \\[\\bar{x}_g = \\frac{13(105.95)+\\ldots+12(352.05)}{13+\\ldots+12}= 26387.55/100 = 263.8755\\]"
+    "text": "misure ponderate: media aritmetica ponderata\nLa media aritmetica campionaria ponderata è pari a x‾g=∑i=1kfimi∑i=1kfi\\bar{x}_g = \\frac{\\sum_{i=1}^k f_im_i}{\\sum_{i=1}^k f_i}\nPer il dataset accorpato sui dati di magnesio, è pari a x‾g=13(105.95)+…+12(352.05)13+…+12=26387.55/100=263.8755\\bar{x}_g = \\frac{13(105.95)+\\ldots+12(352.05)}{13+\\ldots+12}= 26387.55/100 = 263.8755"
   },
   {
     "objectID": "slides/02-descrittive.html#misure-ponderate-varianza-ponderata",
     "href": "slides/02-descrittive.html#misure-ponderate-varianza-ponderata",
     "title": "Statistica Medica",
     "section": "misure ponderate: varianza ponderata",
-    "text": "misure ponderate: varianza ponderata\nLa varianza campionaria ponderata, con \\(n = \\sum_{i=1}^k f_i\\), è pari a \\[s_g^2 = \\frac{\\sum_{i=1}^k f_i(m_i-\\bar{x}_g)^2}{(\\sum_{i=1}^k f_i)-1} \\quad\\rm{ovvero}\\quad s_g^2 = \\frac{(\\sum_{i=1}^k f_im_i^2)-n\\bar{x}_g^2}{n-1}\\]\nPer il caso del magnesio è pari a\n\\[\\begin{align*}s_g^2& = \\frac{13(105.95 - 263.8755)^2+\\ldots+12(352.05 - 263.8755)^2}{13 + \\cdots + 12 - 1}\\\\& = 611233.5/99 = 6174.075\\end{align*}\\] \\[\\begin{align*}s_g^2& = \\frac{[13(105.95)^2+\\ldots+12(352.05)^2]-100(263.8755^2)}{100-1}\\\\& = 611233.5/99 = 6174.075\\end{align*}\\]"
+    "text": "misure ponderate: varianza ponderata\nLa varianza campionaria ponderata, con n=∑i=1kfin = \\sum_{i=1}^k f_i, è pari a sg2=∑i=1kfi(mi−x‾g)2(∑i=1kfi)−1ovverosg2=(∑i=1kfimi2)−nx‾g2n−1s_g^2 = \\frac{\\sum_{i=1}^k f_i(m_i-\\bar{x}_g)^2}{(\\sum_{i=1}^k f_i)-1} \\quad\\mathrm{ovvero}\\quad s_g^2 = \\frac{(\\sum_{i=1}^k f_im_i^2)-n\\bar{x}_g^2}{n-1}\nPer il caso del magnesio è pari a\nsg2=13(105.95−263.8755)2+…+12(352.05−263.8755)213+⋯+12−1=611233.5/99=6174.075\\begin{align*}s_g^2& = \\frac{13(105.95 - 263.8755)^2+\\ldots+12(352.05 - 263.8755)^2}{13 + \\cdots + 12 - 1}\\\\& = 611233.5/99 = 6174.075\\end{align*} sg2=[13(105.95)2+…+12(352.05)2]−100(263.87552)100−1=611233.5/99=6174.075\\begin{align*}s_g^2& = \\frac{[13(105.95)^2+\\ldots+12(352.05)^2]-100(263.8755^2)}{100-1}\\\\& = 611233.5/99 = 6174.075\\end{align*}"
   },
   {
     "objectID": "slides/02-descrittive.html#rappresentazione",
@@ -665,7 +665,7 @@
     "href": "slides/02-descrittive.html#dati-continui-istogramma",
     "title": "Statistica Medica",
     "section": "Dati continui: istogramma",
-    "text": "Dati continui: istogramma\nPer il calcolo dell’istogramma, la tabella delle frequenze deve essere estesa\n\n\n\n\n\n\n\n\n\n\nGruppi\nPunto medio \\(m_i\\)\nFrequenza\nAmpiezza\nDensità\n\n\n\n\n\\([y_1, y_2)\\)\n\\(\\frac{y_1+y_2}{2}\\)\n\\(f_1\\)\n\\(a_1 = y_2-y_1\\)\n\\(\\frac{f_1}{n*a_1}\\)\n\n\n\\(\\vdots\\)\n\\(\\vdots\\)\n\\(\\vdots\\)\n\\(\\vdots\\)\n\\(\\vdots\\)\n\n\n\\([y_k, y_{k+1})\\)\n\\(\\frac{y_k+y_{k+1}}{2}\\)\n\\(f_k\\)\n\\(a_k = y_{k+1}-y_k\\)\n\\(\\frac{f_k}{n*a_k}\\)"
+    "text": "Dati continui: istogramma\nPer il calcolo dell’istogramma, la tabella delle frequenze deve essere estesa\n\n\n\n\n\n\n\n\n\n\nGruppi\nPunto medio mim_i\nFrequenza\nAmpiezza\nDensità\n\n\n\n\n[y1,y2)[y_1, y_2)\ny1+y22\\frac{y_1+y_2}{2}\nf1f_1\na1=y2−y1a_1 = y_2-y_1\nf1n*a1\\frac{f_1}{n*a_1}\n\n\n⋮\\vdots\n⋮\\vdots\n⋮\\vdots\n⋮\\vdots\n⋮\\vdots\n\n\n[yk,yk+1)[y_k, y_{k+1})\nyk+yk+12\\frac{y_k+y_{k+1}}{2}\nfkf_k\nak=yk+1−yka_k = y_{k+1}-y_k\nfkn*ak\\frac{f_k}{n*a_k}"
   },
   {
     "objectID": "slides/02-descrittive.html#istogramma-autocalcolato",
@@ -686,14 +686,14 @@
     "href": "slides/02-descrittive.html#dati-continui-box-plot",
     "title": "Statistica Medica",
     "section": "Dati continui: box-plot",
-    "text": "Dati continui: box-plot\nIl box-plot è un modo per rappresentare graficamente una distribuzione rispetto a centralità e variabilità. Per un campione di ampiezza \\(n\\)\n\nIl segmento all’interno del box è la mediana.\nil primo quartile (h, o 25º percentile) è il bordo inferiore della scatola (box)\nil terzo quartile (H, o 75º percentile) è il bordo superiore della scatola\nl’ampiezza della scatola (box) è il Range Inter-Quartile (IQR), ovvero la differenza tra il III e il I quartile (\\(H - h\\)).\ni baffi arrivano fino al valore più lontano dalla scatola ma entro una volta e mezza l’IQR dai suoi bordi; i limiti \\(h - 1.5 \\times (H-h)\\) e \\(H + 1.5 \\times (H-h)\\) sono il baffo inferiore e superiore dello schema\nun outlier è: un valore oltre i baffi, cioè che si allontana dai bordi della scatola più di una volta e mezza l’IQR, cioè \\[x &gt; H + 1.5 \\times (H-h)  \\quad o \\quad x &lt; h - 1.5 \\times (H-h)\\]\nun outlier estremo è: un valore che si allontana dai bordi della scatola più di tre volte l’IQR, cioè \\[x &gt; H + 3 \\times (H-h)  \\quad o \\quad x &lt; h - 3 \\times (H-h)\\]"
+    "text": "Dati continui: box-plot\nIl box-plot è un modo per rappresentare graficamente una distribuzione rispetto a centralità e variabilità. Per un campione di ampiezza nn\n\nIl segmento all’interno del box è la mediana.\nil primo quartile (h, o 25º percentile) è il bordo inferiore della scatola (box)\nil terzo quartile (H, o 75º percentile) è il bordo superiore della scatola\nl’ampiezza della scatola (box) è il Range Inter-Quartile (IQR), ovvero la differenza tra il III e il I quartile (H−hH - h).\ni baffi arrivano fino al valore più lontano dalla scatola ma entro una volta e mezza l’IQR dai suoi bordi; i limiti h−1.5×(H−h)h - 1.5 \\times (H-h) e H+1.5×(H−h)H + 1.5 \\times (H-h) sono il baffo inferiore e superiore dello schema\nun outlier è: un valore oltre i baffi, cioè che si allontana dai bordi della scatola più di una volta e mezza l’IQR, cioè x&gt;H+1.5×(H−h)ox&lt;h−1.5×(H−h)x &gt; H + 1.5 \\times (H-h)  \\quad o \\quad x &lt; h - 1.5 \\times (H-h)\nun outlier estremo è: un valore che si allontana dai bordi della scatola più di tre volte l’IQR, cioè x&gt;H+3×(H−h)ox&lt;h−3×(H−h)x &gt; H + 3 \\times (H-h)  \\quad o \\quad x &lt; h - 3 \\times (H-h)"
   },
   {
     "objectID": "slides/02-descrittive.html#box-plot-calcolo",
     "href": "slides/02-descrittive.html#box-plot-calcolo",
     "title": "Statistica Medica",
     "section": "Box-plot (calcolo)",
-    "text": "Box-plot (calcolo)\nUn’assunzione giornaliera di 43 mg/die di magnesio rappresenta un outlier\n\n\n\n\n  [1]  43.0  84.2 100.4 102.2 113.0 116.7 118.9 128.8 130.1\n [10] 144.3 151.5 152.3 163.0 168.9 169.4 181.1 189.5 197.5\n [19] 198.3 198.3 198.7 202.2 204.6 212.0 215.3 215.4 219.6\n [28] 222.0 226.2 228.0 234.3 234.4 236.4 239.9 241.7 245.9\n [37] 250.0 251.8 255.8 257.9 263.7 264.5 267.7 269.6 277.7\n [46] 279.7 281.1 285.3 285.8 288.9 295.5 297.6 297.8 299.0\n [55] 300.8 302.9 304.2 304.9 305.1 306.0 307.1 307.4 309.0\n [64] 312.3 317.1 317.8 318.4 320.1 320.2 320.4 320.5 321.1\n [73] 322.4 323.7 323.9 324.0 325.3 326.4 329.1 329.2 331.1\n [82] 332.6 333.0 334.3 338.1 340.3 341.3 343.4 343.8 344.9\n [91] 349.4 349.6 350.5 351.4 355.9 357.6 359.1 359.8 359.8\n[100] 360.3\n\n\n\n\\(h\\) è la media tra l’osservazione \\((100 * 1/4)\\)ª e la \\(((100 * 1/4) + 1)\\)ª, ovvero \\((215.3+215.4) / 2 = 215.35\\)\n\\(H\\) è la media dell’osservazione \\((100 * 3/4)\\)ª e la \\(((100 * 3/4) + 1)\\)ª, ovvero \\((323.9+324) / 2 = 323.95\\)\ni limiti per gli outlier sono quindi: \\[x &gt; 323.95 + 1.5 * (323.95 - 215.35) = 486.85\\] \\[x &lt; 215.35 - 1.5 * (323.95 - 215.35) = 52.45\\]\ngli outlier estremi sarebbero: \\[x &gt; 323.95 + 3 * (323.95 - 215.35) = 649.75\\] \\[x &lt; 215.35 - 3 * (323.95 - 215.35) = -110.45\\] (valore negativo: un’assunzione non può essere negativa, quindi nessun outlier estremo inferiore)"
+    "text": "Box-plot (calcolo)\nUn’assunzione giornaliera di 43 mg/die di magnesio rappresenta un outlier\n\n\n\n\n  [1]  43.0  84.2 100.4 102.2 113.0 116.7 118.9 128.8 130.1\n [10] 144.3 151.5 152.3 163.0 168.9 169.4 181.1 189.5 197.5\n [19] 198.3 198.3 198.7 202.2 204.6 212.0 215.3 215.4 219.6\n [28] 222.0 226.2 228.0 234.3 234.4 236.4 239.9 241.7 245.9\n [37] 250.0 251.8 255.8 257.9 263.7 264.5 267.7 269.6 277.7\n [46] 279.7 281.1 285.3 285.8 288.9 295.5 297.6 297.8 299.0\n [55] 300.8 302.9 304.2 304.9 305.1 306.0 307.1 307.4 309.0\n [64] 312.3 317.1 317.8 318.4 320.1 320.2 320.4 320.5 321.1\n [73] 322.4 323.7 323.9 324.0 325.3 326.4 329.1 329.2 331.1\n [82] 332.6 333.0 334.3 338.1 340.3 341.3 343.4 343.8 344.9\n [91] 349.4 349.6 350.5 351.4 355.9 357.6 359.1 359.8 359.8\n[100] 360.3\n\n\n\nhh è la media tra l’osservazione (100*1/4)(100 * 1/4)ª e la ((100*1/4)+1)((100 * 1/4) + 1)ª, ovvero (215.3+215.4)/2=215.35(215.3+215.4) / 2 = 215.35\nHH è la media dell’osservazione (100*3/4)(100 * 3/4)ª e la ((100*3/4)+1)((100 * 3/4) + 1)ª, ovvero (323.9+324)/2=323.95(323.9+324) / 2 = 323.95\ni limiti per gli outlier sono quindi: x&gt;323.95+1.5*(323.95−215.35)=486.85x &gt; 323.95 + 1.5 * (323.95 - 215.35) = 486.85 x&lt;215.35−1.5*(323.95−215.35)=52.45x &lt; 215.35 - 1.5 * (323.95 - 215.35) = 52.45\ngli outlier estremi sarebbero: x&gt;323.95+3*(323.95−215.35)=649.75x &gt; 323.95 + 3 * (323.95 - 215.35) = 649.75 x&lt;215.35−3*(323.95−215.35)=−110.45x &lt; 215.35 - 3 * (323.95 - 215.35) = -110.45 (valore negativo: un’assunzione non può essere negativa, quindi nessun outlier estremo inferiore)"
   },
   {
     "objectID": "slides/02-descrittive.html#dati-categorici-barre",
@@ -735,7 +735,7 @@
     "href": "slides/02-descrittive.html#sondaggio-3",
     "title": "Statistica Medica",
     "section": "Sondaggio",
-    "text": "Sondaggio\nPer me: Grafici\nPer voi: &lt;img src=“img/bit.ly_statmed-sondaggio-grafici.png”, width=“300px” style=“vertical-align: middle”/&gt; bit.ly/statmed-sondaggio-grafici"
+    "text": "Sondaggio\nPer me: Grafici\nPer voi:  bit.ly/statmed-sondaggio-grafici"
   },
   {
     "objectID": "slides/02-descrittive.html#risorse-utili",

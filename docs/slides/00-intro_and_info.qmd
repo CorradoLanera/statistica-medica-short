@@ -21,6 +21,9 @@ format:
     code-copy: true
     code-line-numbers: false
     auto-stretch: false
+    html-math-method: mathml
+    pdf-max-pages-per-slide: 4
+    include-after-body: print-tabs.html
     fig-width: 7
     fig-height: 5
     menu:

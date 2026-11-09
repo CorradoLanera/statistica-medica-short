@@ -116,3 +116,31 @@ $code-block-font-size: 0.75em;
   color: $statmed-primary;
   fill: $statmed-primary;
 }
+
+// stampa (tasto E): tutte le schede di un riquadro, ciascuna col suo titolo
+// (aggiunto da print-tabs.html); la barra delle schede non serve
+html.print-pdf .reveal .panel-tabset .panel-tabset-tabby,
+html.reveal-print .reveal .panel-tabset .panel-tabset-tabby {
+  display: none;
+}
+html.print-pdf .reveal .panel-tabset .tab-content > div,
+html.reveal-print .reveal .panel-tabset .tab-content > div {
+  display: block !important;
+  opacity: 1 !important;
+}
+.reveal .tab-print-title {
+  font-weight: 700;
+  color: $statmed-primary;
+  border-bottom: 1px solid #d7dbe1;
+  margin-top: 0.8em;
+}
+
+// formule in MathML (niente MathJax: le slide si aprono anche offline)
+.reveal math {
+  font-size: 1.1em;
+}
+// nelle formule su piu' righe (split, aligned) le frazioni restano a grandezza piena
+.reveal math mtd,
+.reveal math mtable {
+  math-style: normal;
+}

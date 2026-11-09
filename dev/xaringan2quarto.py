@@ -57,6 +57,13 @@ def note(msg):
 # Mascheramento: codice, formule e commenti non devono essere toccati.
 # --------------------------------------------------------------------------
 
+def math_for_mathml(tex):
+    """Comandi che MathJax accetta e la conversione in MathML di Pandoc no."""
+    tex = re.sub(r"\\rm\{", r"\\mathrm{", tex)
+    tex = re.sub(r"\\bf\{", r"\\mathbf{", tex)
+    return tex
+
+
 class Masker:
     def __init__(self):
         self.store = []
@@ -73,8 +80,9 @@ class Masker:
             re.compile(r"`[^`\n]+`"),                                 # codice inline
             re.compile(r"(?<![\\$])\$(?![\s$])(?:\\.|[^$\n\\])+?(?<!\s)\$(?!\d)"),  # inline math
         ]
-        for p in pats:
-            text = p.sub(lambda m: self._put(m.group(0)), text)
+        for i, p in enumerate(pats):
+            fix = math_for_mathml if i in (2, 4) else (lambda s: s)
+            text = p.sub(lambda m: self._put(fix(m.group(0))), text)
         return text
 
     def unmask(self, text):
@@ -335,6 +343,8 @@ def convert_slide(raw):
             body.append(ln)
     text = "\n".join(body)
     text = convert_classes(text)
+    # <img src="...", width="..."> con la virgola: il browser lo tollera, Pandoc no
+    text = re.sub(r"<img\b[^>]*>", lambda m: re.sub(r'"\s*,\s*', '" ', m.group(0)), text)
     text = re.sub(r"^[ \t]*<small>[ \t]*$", "::: {.small}", text, flags=re.M)
     text = re.sub(r"^[ \t]*</small>[ \t]*$", ":::", text, flags=re.M)
     # un <small> senza </small> in xaringan finiva con la slide: qui va chiuso
@@ -432,6 +442,9 @@ def front_matter(yaml_text, subtitle):
         "    code-copy: true",
         "    code-line-numbers: false",
         "    auto-stretch: false",
+        "    html-math-method: mathml",
+        "    pdf-max-pages-per-slide: 4",
+        "    include-after-body: print-tabs.html",
         "    fig-width: 7",
         "    fig-height: 5",
         "    menu:",

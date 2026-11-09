@@ -21,6 +21,9 @@ format:
     code-copy: true
     code-line-numbers: false
     auto-stretch: false
+    html-math-method: mathml
+    pdf-max-pages-per-slide: 4
+    include-after-body: print-tabs.html
     fig-width: 7
     fig-height: 5
     menu:
@@ -256,7 +259,7 @@ include_graphics("img/distype.png")
 
 Per me: [Tipi di variabile](https://app.wooclap.com/events/STATMEDTYPE/0)
 
-Per voi: <img src="img/bit.ly_statmed-sondaggio-tipi-variabili.png", width="300px" style="vertical-align: middle"/>  [bit.ly/statmed-sondaggio-tipi-variabili](https://bit.ly/statmed-sondaggio-tipi-variabili)
+Per voi: <img src="img/bit.ly_statmed-sondaggio-tipi-variabili.png" width="300px" style="vertical-align: middle"/>  [bit.ly/statmed-sondaggio-tipi-variabili](https://bit.ly/statmed-sondaggio-tipi-variabili)
 
 ## **[Localizzazione]{.orange} (dati continui)** {.text-center .inverse .center background-color="#03A696"}
 
@@ -662,7 +665,7 @@ $$CV = 43.35/234.83 \times 100 \simeq 18\%$$
 
 Per me: [Localizzazione](https://app.wooclap.com/events/STATMEDLOCALIZZAZIONE/0)
 
-Per voi: <img src="img/bit.ly_statmed-sondaggio-localizzazione.png", width="300px" style="vertical-align: middle"/>  [bit.ly/statmed-sondaggio-localizzazione](https://bit.ly/statmed-sondaggio-localizzazione)
+Per voi: <img src="img/bit.ly_statmed-sondaggio-localizzazione.png" width="300px" style="vertical-align: middle"/>  [bit.ly/statmed-sondaggio-localizzazione](https://bit.ly/statmed-sondaggio-localizzazione)
 
 ## [Domande fin qui?]{.orange} {.inverse .center background-color="#03A696"}
 
@@ -776,7 +779,7 @@ quantile(epic_bmi_p2$bmi, probs = 0.2, type = 2)
 
 Per me: [Percentili](https://app.wooclap.com/events/STATMEDPERCENTILI/0)
 
-Per voi: <img src="img/bit.ly_statmed-sondaggio-percentili.png", width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-percentili](https://bit.ly/statmed-sondaggio-percentili)
+Per voi: <img src="img/bit.ly_statmed-sondaggio-percentili.png" width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-percentili](https://bit.ly/statmed-sondaggio-percentili)
 
 ## [Accorpamenti]{.orange}
 
@@ -837,7 +840,7 @@ weighted.mean(x = dt$m, w = dt$Freq)
 ## misure [ponderate]{.orange}: varianza ponderata
 
 La varianza campionaria ponderata, con $n = \sum_{i=1}^k f_i$, è pari a
-$$s_g^2 = \frac{\sum_{i=1}^k f_i(m_i-\bar{x}_g)^2}{(\sum_{i=1}^k f_i)-1} \quad\rm{ovvero}\quad s_g^2 = \frac{(\sum_{i=1}^k f_im_i^2)-n\bar{x}_g^2}{n-1}$$
+$$s_g^2 = \frac{\sum_{i=1}^k f_i(m_i-\bar{x}_g)^2}{(\sum_{i=1}^k f_i)-1} \quad\mathrm{ovvero}\quad s_g^2 = \frac{(\sum_{i=1}^k f_im_i^2)-n\bar{x}_g^2}{n-1}$$
 
 
 Per il caso del magnesio è pari a
@@ -1077,7 +1080,7 @@ barre.
 
 Per me: [Grafici](https://app.wooclap.com/events/STATMEDGRAFICI/0)
 
-Per voi: <img src="img/bit.ly_statmed-sondaggio-grafici.png", width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-grafici](https://bit.ly/statmed-sondaggio-grafici)
+Per voi: <img src="img/bit.ly_statmed-sondaggio-grafici.png" width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-grafici](https://bit.ly/statmed-sondaggio-grafici)
 
 ## Risorse utili {.inverse background-color="#03A696"}
 
