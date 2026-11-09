@@ -985,63 +985,63 @@
   {
     "objectID": "slides/00-intro_and_info.html#obiettivi",
     "href": "slides/00-intro_and_info.html#obiettivi",
-    "title": "STATISTICA MEDICA",
+    "title": "Statistica Medica",
     "section": "Obiettivi",
     "text": "Obiettivi\n\nimparare le definizioni e gli operatori base della statistica medica, in particolare riguardo:\n\nanalisi descrittiva dei dati\nelementi di probabilità\n\nimparare a comprendere e stimare i parametri di valutazione di un test diagnostico, in particolare sensibilità, specificità, valori predittivi, positivo e negativo\nconoscere e identificare le principali distribuzioni di probabilità e i loro ambiti di utilità e applicabilità\nacquisire le basi per la comprensione, il calcolo e l’interpretazione delle metriche relative ai test statistici per variabili continue, come il t-test, il p-value e gli intervalli di confidenza per una stima."
   },
   {
     "objectID": "slides/00-intro_and_info.html#requisiti",
     "href": "slides/00-intro_and_info.html#requisiti",
-    "title": "STATISTICA MEDICA",
+    "title": "Statistica Medica",
     "section": "Requisiti",
     "text": "Requisiti\n\naritmetica di base (somma, sottrazione, moltiplicazione, divisione, potenza, radice)\noperatori tra insiemi (appartenenza, intersezione, unione, complemento; and, or, not)."
   },
   {
     "objectID": "slides/00-intro_and_info.html#lezioni",
     "href": "slides/00-intro_and_info.html#lezioni",
-    "title": "STATISTICA MEDICA",
+    "title": "Statistica Medica",
     "section": "Lezioni",
     "text": "Lezioni\n\nModalità: in presenza, 75% obbligatorio (minimo)\nMateriale didattico: Moodle\nPortale accesso slide, esercizi e calendario: bit.ly/cl-statmed\n\nLicenza\nUtilizzo del materiale e suoi derivati: consentito e libero sotto licenza cc-by 4.0.\n\n\nIn sintesi: potete condividere, modificare, utilizzare il materiale liberamente e gratuitamente per qualsiasi fine, a patto di attribuire adeguata paternità al materiale che producete, ma senza alcuna mia responsabilità o garanzia su di esso. Siete tenuti comunque a distribuirlo (incluse eventuali opere derivate) con analoga ed esplicita licenza, e senza ulteriori restrizioni."
   },
   {
     "objectID": "slides/00-intro_and_info.html#agenda",
     "href": "slides/00-intro_and_info.html#agenda",
-    "title": "STATISTICA MEDICA",
+    "title": "Statistica Medica",
     "section": "Agenda",
     "text": "Agenda\n\n\n\nintro al corso\nstatistica descrittiva - prerequisiti, definizioni, localizzazione, dispersione / distribuzione, grafici\nfondamenti di probabilità\nrischi, test di screening: sensibilità e specificità, valori predittivi positivo e negativo, teorema di Bayes (base e generalizzato)\n\n\n\ndistribuzioni: modelli discreti\ndistribuzioni: modelli continui\nintervalli di confidenza e p-value\nrevisione e simulazione completa d’esame"
   },
   {
     "objectID": "slides/00-intro_and_info.html#supporto",
     "href": "slides/00-intro_and_info.html#supporto",
-    "title": "STATISTICA MEDICA",
+    "title": "Statistica Medica",
     "section": "Supporto",
     "text": "Supporto\nIn Moodle, trovate:\n\nLink al portale slide ed Esercizi\nLavagne scritte a lezione\nLink per prenotare ricevimento bit.ly/statmed-cl-ricevimento:\n\n25 minuti a sessione\nprenotabile con almeno 2 giorni di anticipo,\nentro due settimane nel futuro\n\n\n\nLa settimana precedente le sessioni d’esame NON è attivo il ricevimento."
   },
   {
     "objectID": "slides/00-intro_and_info.html#esame-finale",
     "href": "slides/00-intro_and_info.html#esame-finale",
-    "title": "STATISTICA MEDICA",
+    "title": "Statistica Medica",
     "section": "Esame finale",
     "text": "Esame finale\nL’esame finale sarà composto da 10 esercizi a risposta multipla dal valore di 3 punti ciascuno, e non avrà durata prestabilita (durata prevista per lo svolgimento 2 ore).\nDurante lo svolgimento è concesso l’utilizzo di:\n\nqualunque libro di testo cartaceo\nappunti personali cartacei\ntavole statistiche cartacee\ncalcolatrice scientifica NON programmabile, né grafica né simbolica, che calcoli l’esponenziale (ex); smartphone, tablet e computer NON sono ammessi(Casio 220 Plus II (~9 euro), Texas Instruments TI-30XA (~13 euro), Sharp EL-501T (~17 euro))\n\nPunteggi:\n\nUna risposta corretta varrà 3 punti.\nSarà presente una sola risposta corretta in ciascuna domanda.\nUna risposta errata sommerà negativamente sul totale in misura pari al punteggio della domanda diviso il numero di opzioni sbagliate possibili (= 3 / (numero risposte - 1)).\nSarà presente una domanda “bonus” da 6 punti (totale 36), che conta solo dopo aver raggiunto 18/30 con le altre: se giusta aggiunge 6 punti, se sbagliata toglie punti come le altre, ma senza scendere sotto 18. Non può quindi né dare né togliere la sufficienza.\nI punteggi si arrotondano sempre per eccesso.\n\nIl punteggio totale dell’esame sarà dunque di 36/36. Superato totalizzandone almeno 18/30. La lode è assegnata con un totale di almeno 31/36 punti.\n\nSarà possibile prenotare un’integrazione orale (solo) nei seguenti casi:\n\npunteggio tra 14 e 17 punti, per arrivare a 18/30 (non di più)\npunteggio tra 27 e 30 punti, per arrivare fino a 30/30, con eventuale lode."
   },
   {
     "objectID": "slides/00-intro_and_info.html#riconoscimenti",
     "href": "slides/00-intro_and_info.html#riconoscimenti",
-    "title": "STATISTICA MEDICA",
+    "title": "Statistica Medica",
     "section": "Riconoscimenti",
     "text": "Riconoscimenti\n\nLe diapositive proposte sono state prodotte a partire anche da materiale generato da/con le seguenti persone gravitanti attorno all’UBEP*:\n\nDanila Azzolina\nDario Gregori\nGiulia Lorenzoni\nHonoria Ocagli\nIleana Baldi\nLuca Vedovelli\nMatteo Martinato\nPaola Berchialla\n\n\n\n\n\n* In ordine alfabetico.\n\n\n\n\nUn ringraziamento speciale a Cristiana Vettori per l’aiuto e il supporto logistico e amministrativo che mi ha sempre offerto, e mi offre ancora."
   },
   {
     "objectID": "slides/00-intro_and_info.html#section",
     "href": "slides/00-intro_and_info.html#section",
-    "title": "STATISTICA MEDICA",
+    "title": "Statistica Medica",
     "section": "",
     "text": "Per trovarmi…\n www.unipd-ubep.it\n Corrado.Lanera@ubep.unipd.it\n   @CorradoLanera\n bit.ly/statmed-cl-ricevimento"
   },
   {
     "objectID": "slides/00-intro_and_info.html#section-1",
     "href": "slides/00-intro_and_info.html#section-1",
-    "title": "STATISTICA MEDICA",
+    "title": "Statistica Medica",
     "section": "",
     "text": "Can one be a good data analyst without being a half-good programmer?The short answer to that is, ‘No.’The long answer to that is, ‘No.’\n\n\n—Frank Harrell10/1999 - S-PLUS User Conference, New Orleans\n\n\nDomande?\nDiapositive: bit.ly/cl-statmed\n www.unipd-ubep.it |  Corrado.Lanera@ubep.unipd.it\n   @CorradoLanera |  bit.ly/statmed-cl-ricevimento"
   },
@@ -1106,7 +1106,7 @@
     "href": "slides/index.html",
     "title": "Slide del corso",
     "section": "",
-    "text": "Ordinare per\n      Predefinito\n      \n        Data - Meno recente\n      \n      \n        Data - Più recente\n      \n      \n        Titolo\n      \n      \n        Autore/Autrice\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nData\n\n\n\nTitolo\n\n\n\nSottotitolo\n\n\n\nAutore/Autrice\n\n\n\n\n\n\n\n\n9 nov 2026\n\n\nSTATISTICA MEDICA\n\n\nPresentazione e informazioni generali\n\n\nCorrado Lanera\n\n\n\n\n\n\n9 nov 2026\n\n\nStatistica Medica\n\n\nIntroduzione a R/RStudio\n\n\nCorrado Lanera\n\n\n\n\n\n\n9 nov 2026\n\n\nStatistica Medica\n\n\nAnalisi esplorativa e statistiche descrittive\n\n\nCorrado Lanera\n\n\n\n\n\n\n9 nov 2026\n\n\nStatistica Medica\n\n\nBasi di probabilità\n\n\nCorrado Lanera\n\n\n\n\n\n\n9 nov 2026\n\n\nStatistica Medica\n\n\nDistribuzioni di probabilità\n\n\nCorrado Lanera\n\n\n\n\n\n\n9 nov 2026\n\n\nStatistica Medica\n\n\nInferenza, intervalli di confidenza, introduzione ai test d’ipotesi\n\n\nCorrado Lanera\n\n\n\n\n\n\n \n\n\nTavole statistiche\n\n\nNormale standardizzata, t di Student, Chi-quadrato, F (PDF)\n\n\n \n\n\n\n\n\n\n \n\n\nTavole statistiche (Rosner)\n\n\nAppendice di Fundamentals of Biostatistics (PDF, in inglese)\n\n\n \n\n\n\n\n\n\nNessun risultato\n Torna in cima"
+    "text": "Ordinare per\n      Predefinito\n      \n        Data - Meno recente\n      \n      \n        Data - Più recente\n      \n      \n        Titolo\n      \n      \n        Autore/Autrice\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nData\n\n\n\nTitolo\n\n\n\nSottotitolo\n\n\n\nAutore/Autrice\n\n\n\n\n\n\n\n\n9 nov 2026\n\n\nStatistica Medica\n\n\nPresentazione e informazioni generali\n\n\nCorrado Lanera\n\n\n\n\n\n\n9 nov 2026\n\n\nStatistica Medica\n\n\nIntroduzione a R/RStudio\n\n\nCorrado Lanera\n\n\n\n\n\n\n9 nov 2026\n\n\nStatistica Medica\n\n\nAnalisi esplorativa e statistiche descrittive\n\n\nCorrado Lanera\n\n\n\n\n\n\n9 nov 2026\n\n\nStatistica Medica\n\n\nBasi di probabilità\n\n\nCorrado Lanera\n\n\n\n\n\n\n9 nov 2026\n\n\nStatistica Medica\n\n\nDistribuzioni di probabilità\n\n\nCorrado Lanera\n\n\n\n\n\n\n9 nov 2026\n\n\nStatistica Medica\n\n\nInferenza, intervalli di confidenza, introduzione ai test d’ipotesi\n\n\nCorrado Lanera\n\n\n\n\n\n\n \n\n\nTavole statistiche\n\n\nNormale standardizzata, t di Student, Chi-quadrato, F (PDF)\n\n\n \n\n\n\n\n\n\n \n\n\nTavole statistiche (Rosner)\n\n\nAppendice di Fundamentals of Biostatistics (PDF, in inglese)\n\n\n \n\n\n\n\n\n\nNessun risultato\n Torna in cima"
   },
   {
     "objectID": "slides/01-r_rstudio.html#cosa-faremo",

@@ -1,5 +1,5 @@
 ---
-title: "STATISTICA MEDICA"
+title: "Statistica Medica"
 subtitle: "Presentazione e informazioni generali"
 author: "Corrado Lanera"
 institute: "[Unità di Biostatistica, Epidemiologia e Salute Pubblica](https://www.unipd-ubep.it/), Università di Padova"
