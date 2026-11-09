@@ -4,12 +4,12 @@ Questo portale raccoglie le slide e una selezione di esercizi di **Statistica Me
 
 Le slide e gli esercizi coprono i principali argomenti affrontati nel corso:
 
--   **Statistica descrittiva**, con esempi di sintesi numerica e grafica dei dati.\
--   **Concetti fondamentali di probabilità**, utili a comprendere il ragionamento diagnostico.\
--   **Probabilità condizionata e teorema di Bayes**, applicati alla valutazione delle prestazioni dei test diagnostici.
--   **Distribuzioni di probabilità**, per modellare variabili casuali discrete (Binomiale e Poisson) e continue (Normale e Normale Standard).\
--   **Stima puntuale e intervalli di confidenza**, per quantificare l’incertezza delle stime.\
--   **Test di ipotesi** per misure continue, per prendere decisioni basate sui dati osservati.\
+- **Statistica descrittiva**, con esempi di sintesi numerica e grafica dei dati.\
+- **Concetti fondamentali di probabilità**, utili a comprendere il ragionamento diagnostico.\
+- **Probabilità condizionata e teorema di Bayes**, applicati alla valutazione delle prestazioni dei test diagnostici.
+- **Distribuzioni di probabilità**, per modellare variabili casuali discrete (Binomiale e Poisson) e continue (Normale e Normale Standard).\
+- **Stima puntuale e intervalli di confidenza**, per quantificare l’incertezza delle stime.\
+- **Test di ipotesi** per misure continue, per prendere decisioni basate sui dati osservati.\
 
 Ogni esercizio è pensato per favorire la comprensione intuitiva dei concetti, più che la semplice applicazione di formule. L’obiettivo è abituarsi a **leggere, interpretare e ragionare sui dati** in contesti clinici e di ricerca.
 
@@ -36,13 +36,13 @@ Gli esercizi nelle slide sono tutti svolti, si suggerisce agli studenti di prova
 
 ## Suggerimenti per lo studio {.unnumbered}
 
--   Leggi sempre **il testo dell’esercizio** con attenzione prima di passare ai calcoli.\
--   Cerca di **interpretare il significato clinico** dei risultati numerici: la statistica non è solo calcolo, ma anche comprensione del contesto.\
--   Ricorda che, in ambito didattico, se viene posto un problema vuol dire che:
-    -   si può risolvere
-    -   si può risolvere con gli strumenti che hai a disposizione Dunque, provare a individuare e scrivere bene i dati, considerare le formule affrontate e riportate nella sezione appena precedente e ragionare su come poter adattare e sfruttare gfi strumenti proposti, coi dati forniti, per risolvere il problema.
--   Confronta i tuoi risultati con quelli discussi a lezione; sopratutto, discutili con i colleghi.\
--   \[OPZIONALE\] Se utilizzi R, prova a **riprodurre le analisi passo per passo**, verificando come cambiano i risultati al variare dei dati.
+- Leggi sempre **il testo dell’esercizio** con attenzione prima di passare ai calcoli.\
+- Cerca di **interpretare il significato clinico** dei risultati numerici: la statistica non è solo calcolo, ma anche comprensione del contesto.\
+- Ricorda che, in ambito didattico, se viene posto un problema vuol dire che:
+  - si può risolvere
+  - si può risolvere con gli strumenti che hai a disposizione Dunque, provare a individuare e scrivere bene i dati, considerare le formule affrontate e riportate nella sezione appena precedente e ragionare su come poter adattare e sfruttare gfi strumenti proposti, coi dati forniti, per risolvere il problema.
+- Confronta i tuoi risultati con quelli discussi a lezione; sopratutto, discutili con i colleghi.\
+- \[OPZIONALE\] Se utilizzi R, prova a **riprodurre le analisi passo per passo**, verificando come cambiano i risultati al variare dei dati.
 
 ------------------------------------------------------------------------
 
@@ -50,18 +50,18 @@ Gli esercizi nelle slide sono tutti svolti, si suggerisce agli studenti di prova
 
 ### Materiale **necessario**
 
--   **Tavole delle distribuzioni** (Z e t di Student, non ne servono altre) - fornite dal docente in formato cartaceo durante il corso (vanno bene anche altre).
+- **Tavole delle distribuzioni** (Z e t di Student, non ne servono altre) - fornite dal docente in formato cartaceo durante il corso (vanno bene anche altre).
 
--   **Calcolatrice scientifica base** (non è permesso l’uso di smartphone o tablet). La più semplice ed economica che trovate e che sia in grado di fare l'esponenziale ($e^x$) va benissimo ed è sicuro sufficiente. Una mia rassegna di calcolatrici di esempio di varie marche che vanno sicuramente bene sono elencate in fondo a questa pagina.
+- **Calcolatrice scientifica base** (non è permesso l’uso di smartphone o tablet). La più semplice ed economica che trovate e che sia in grado di fare l'esponenziale ($e^x$) va benissimo ed è sicuro sufficiente. Una mia rassegna di calcolatrici di esempio di varie marche che vanno sicuramente bene sono elencate in fondo a questa pagina.
 
 ### Materiale ammesso
 
--   qualunque materiale cartaceo **personale** (appunti, libri, dispense, eccetera) - non è permesso condividere materiale cartaceo tra studenti durante l’esame.
+- qualunque materiale cartaceo **personale** (appunti, libri, dispense, eccetera) - non è permesso condividere materiale cartaceo tra studenti durante l’esame.
 
 ### Materiale non ammesso
 
--   dispositivi elettronici connessi a internet (smartphone, tablet, computer portatili, eccetera);
--   calcolatrici programmabili o con funzionalità avanzate (grafici, simboliche, eccetera);
+- dispositivi elettronici connessi a internet (smartphone, tablet, computer portatili, eccetera);
+- calcolatrici programmabili o con funzionalità avanzate (grafici, simboliche, eccetera);
 
 ------------------------------------------------------------------------
 
@@ -86,7 +86,7 @@ Tutte le calcolatrici di questa lista — e molte altre analoghe di altre marche
 
 ::: {style="overflow-x: auto;"}
 | Marca | Modello | Display | `e^x` | Memorie | Distribuzioni Z/t | Alimentazione | Giudizio costruttivo | Note sintetiche | Immagine |
-|:-------|:-------|:------:|:------:|:------:|:------:|:------:|:------:|:-------|:------:|
+|:------|:------|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:------|:-----:|
 | **Casio** FX | Junior Plus | 1 riga | ❌ | ❌ | ❌ | batteria | 🟡 base | “Pre-scientifica” — minimalissima (per costante *e* usare approssimazione "a mano" 2.718, per il resto fa tutto! | ![](images/clipboard-4169263455.png) |
 |  | 220 Plus II | 2 righe | ✅ | ✅ (1) | ❌ | batteria | 🟡 media | Economica (\~9 €), semplice, completa “minima” | ![](images/clipboard-605525387.png) |
 |  | 82 MS 2 | 2 righe | ✅ | ✅ (A–D) | ❌ | batteria | 🟡 media | Standard universitaria, equilibrata | ![](images/clipboard-208392161.png) |
