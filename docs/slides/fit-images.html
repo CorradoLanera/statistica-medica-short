@@ -7,7 +7,10 @@
   function fit(s) {
     if (!s || s.dataset.fitted) return;
     var imgs = Array.prototype.filter.call(s.querySelectorAll("img"), function (i) {
-      return !i.closest(".title-logos");
+      // solo le immagini visibili e fuori dai riquadri a schede: le schede si
+      // compongono dopo, e prima risultano tutte aperte una sotto l'altra
+      return !i.closest(".title-logos") && !i.closest(".panel-tabset") &&
+        i.getBoundingClientRect().height > 0;
     });
     if (!imgs.length) return;
     var H = Reveal.getConfig().height;
@@ -15,7 +18,7 @@
     var top = s.getBoundingClientRect().top;
     var bottom = 0;
     s.querySelectorAll("*").forEach(function (e) {
-      if (e.closest(".countdown")) return;
+      if (e.closest(".countdown") || e.closest(".panel-tabset")) return;
       var r = e.getBoundingClientRect();
       if (r.height) bottom = Math.max(bottom, (r.bottom - top) / sc);
     });
