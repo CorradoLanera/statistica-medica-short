@@ -103,7 +103,6 @@ format:
     theme:
       light: cosmo
       dark: superhero
-    css: styles.css
     lang: it
     toc: true
 
