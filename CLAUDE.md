@@ -7,6 +7,7 @@ Portale Quarto dei corsi di Statistica Medica per le Professioni Sanitarie (UniP
 | voce | valore |
 |---|---|
 | commit | automatici, deciso il 2026-11-09; il push lo fa [cl] |
+| slug del vault | statistica-medica-short (ricavato dal nome della cartella il 2026-11-09, da confermare) |
 
 ## Convenzioni
 
