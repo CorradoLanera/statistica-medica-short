@@ -1755,7 +1755,7 @@ window.xaringanExtraClipboard = function (selector, text) {
 }
 </script>
     <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"e14afd9515bb43629712780e07c59a64","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"ecf58fc86efc4e60a4c006f7e47eb098","expires":1}</script>
     <script>(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.himalaya = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 'use strict';
 
@@ -2865,102 +2865,383 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 })()
 </script>
-    <style type="text/css">.countdown {background: inherit;position: absolute;cursor: pointer;font-size: 3rem;line-height: 1;border-color: #ddd;border-width: 3px;border-style: solid;border-radius: 15px;box-shadow: 0px 4px 10px 0px rgba(50, 50, 50, 0.4);-webkit-box-shadow: 0px 4px 10px 0px rgba(50, 50, 50, 0.4);margin: 0.6em;padding: 10px 15px;text-align: center;z-index: 10;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}.countdown {display: flex;align-items: center;justify-content: center;}.countdown .countdown-time {background: none;font-size: 100%;padding: 0;}.countdown-digits {color: inherit;}.countdown.running {border-color: #2A9B59FF;background-color: #43AC6A;}.countdown.running .countdown-digits {color: #002F14FF;}.countdown.finished {border-color: #DE3000FF;background-color: #F04124;}.countdown.finished .countdown-digits {color: #4A0900FF;}.countdown.running.warning {border-color: #CEAC04FF;background-color: #E6C229;}.countdown.running.warning .countdown-digits {color: #3A2F02FF;}.countdown.running.blink-colon .countdown-digits.colon {opacity: 0.1;}.countdown:not(.running) .countdown-controls {display: none;}.countdown-controls {position: absolute;top: -0.5rem;right: -0.5rem;left: -0.5rem;display: flex;justify-content: space-between;margin: 0;padding: 0;}.countdown-controls > button {font-size: 1.5rem;width: 1rem;height: 1rem;display: inline-block;display: flex;flex-direction: column;align-items: center;justify-content: center;font-family: monospace;padding: 10px;margin: 0;background: inherit;border: 2px solid;border-radius: 100%;transition: 50ms transform ease-in-out, 150ms opacity ease-in;--countdown-transition-distance: 10px;}.countdown .countdown-controls > button:last-child {transform: translate(calc(-1 * var(--countdown-transition-distance)), var(--countdown-transition-distance));opacity: 0;color: #002F14FF;background-color: #43AC6A;border-color: #2A9B59FF;}.countdown .countdown-controls > button:first-child {transform: translate(var(--countdown-transition-distance), var(--countdown-transition-distance));opacity: 0;color: #4A0900FF;background-color: #F04124;border-color: #DE3000FF;}.countdown.running:hover .countdown-controls > button,.countdown.running:focus-within .countdown-controls > button{transform: translate(0, 0);opacity: 1;}.countdown.running:hover .countdown-controls > button:hover,.countdown.running:focus-within .countdown-controls > button:hover{transform: translate(0, calc(var(--countdown-transition-distance) / -2));box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.4);-webkit-box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.4);}.countdown.running:hover .countdown-controls > button:active,.countdown.running:focus-within .countdown-controls > button:active{transform: translate(0, calc(var(--coutndown-transition-distance) / -5));}.countdown.countdown-fullscreen {z-index: 0;}.countdown-fullscreen.running .countdown-controls {top: 1rem;left: 0;right: 0;justify-content: center;}.countdown-fullscreen.running .countdown-controls > button + button {margin-left: 1rem;}</style>
-    <script>/* globals Shiny,Audio */
-class CountdownTimer {
-  constructor (el, opts) {
-    if (typeof el === 'string' || el instanceof String) {
-      el = document.querySelector(el)
+    <style type="text/css">
+.countdown {
+--_margin: 0.6em;
+--_running-color: var(--countdown-color-running-text, rgba(0, 0, 0, 0.8));
+--_running-background: var(--countdown-color-running-background, #43AC6A);
+--_running-border-color: var(--countdown-color-running-border, rgba(0, 0, 0, 0.1));
+--_finished-color: var(--countdown-color-finished-text, rgba(0, 0, 0, 0.7));
+--_finished-background: var(--countdown-color-finished-background, #F04124);
+--_finished-border-color: var(--countdown-color-finished-border, rgba(0, 0, 0, 0.1));
+position: absolute;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+background: var(--countdown-color-background, inherit);
+font-size: var(--countdown-font-size, 3rem);
+line-height: var(--countdown-line-height, 1);
+border-color: var(--countdown-color-border, #ddd);
+border-width: var(--countdown-border-width, 0.1875rem);
+border-style: solid;
+border-radius: var(--countdown-border-radius, 0.9rem);
+box-shadow: var(--countdown-box-shadow, 0px 4px 10px 0px rgba(50, 50, 50, 0.4));
+margin: var(--countdown-margin, var(--_margin, 0.6em));
+padding: var(--countdown-padding, 0.625rem 0.9rem);
+text-align: center;
+z-index: 10;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+countdown-timer[position="static"],
+countdown-timer[position="relative"] {
+position: relative;
+}
+.countdown.inline {
+position: relative;
+width: max-content;
+max-width: 100%;
+}
+.countdown .countdown-time {
+background: none;
+font-size: 100%;
+padding: 0;
+color: currentColor;
+}
+.countdown-digits {
+color: var(--countdown-color-text);
+}
+.countdown.running {
+border-color: var(--_running-border-color);
+background-color: var(--_running-background);
+}
+.countdown.running .countdown-digits {
+color: var(--_running-color);
+}
+.countdown.finished {
+border-color: var(--_finished-border-color);
+background-color: var(--_finished-background);
+}
+.countdown.finished .countdown-digits {
+color: var(--_finished-color);
+}
+.countdown.running.warning {
+border-color: var(--countdown-color-warning-border, rgba(0, 0, 0, 0.1));
+background-color: var(--countdown-color-warning-background, #E6C229);
+}
+.countdown.running.warning .countdown-digits {
+color: var(--countdown-color-warning-text, rgba(0, 0, 0, 0.7));
+}
+.countdown.running.blink-colon .countdown-digits.colon {
+opacity: 0.1;
+}
+
+.countdown:not(.running) .countdown-controls,
+.countdown.no-controls .countdown-controls {
+display: none;
+}
+.countdown-controls {
+position: absolute;
+top: -0.5rem;
+right: -0.5rem;
+left: -0.5rem;
+display: flex;
+justify-content: space-between;
+margin: 0;
+padding: 0;
+}
+.countdown-controls>button {
+position: relative;
+font-size: 1.5rem;
+width: 1rem;
+height: 1rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+font-family: monospace;
+padding: 10px;
+margin: 0;
+background: inherit;
+border: 2px solid;
+border-radius: 100%;
+transition: 50ms transform ease-in-out, 150ms opacity ease-in;
+box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.4);
+-webkit-box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.4);
+--_button-bump: 0;
+opacity: var(--_opacity, 0);
+transform: translate(0, var(--_button-bump));
+}
+
+.countdown .countdown-controls > button::after {
+content: "";
+height: 200%;
+width: 200%;
+position: absolute;
+border-radius: 50%;
+}
+.countdown .countdown-controls>button:last-child {
+color: var(--_running-color);
+background-color: var(--_running-background);
+border-color: var(--_running-border-color);
+}
+.countdown .countdown-controls>button:first-child {
+color: var(--_finished-color);
+background-color: var(--_finished-background);
+border-color: var(--_finished-border-color);
+}
+.countdown.running:hover, .countdown.running:focus-within {
+--_opacity: 1;
+}
+.countdown.running:hover .countdown-controls>button,
+.countdown.running:focus-within .countdown-controls>button {
+--_button-bump: -3px;
+}
+.countdown.running:hover .countdown-controls>button:active,
+.countdown.running:focus-within .countdown-controls>button:active {
+--_button-bump: 0;
+}
+
+.reveal .countdown {
+--_margin: 0;
+}
+
+.countdown.countdown-fullscreen {
+z-index: 0;
+}
+.countdown-fullscreen.running .countdown-controls {
+top: 1rem;
+left: 0;
+right: 0;
+justify-content: center;
+}
+.countdown-fullscreen.running .countdown-controls>button+button {
+margin-left: 1rem;
+}
+</style>
+    <script>/* countdown
+ * countdown timer for slides and HTML docs in Quarto, R Markdown, and Shiny
+ *
+ * https://pkg.garrickadenbuie.com/countdown
+ *
+ * Copyright (c) 2025 countdown authors
+ *
+ * This software is released under the MIT License.
+ * https://opensource.org/licenses/MIT
+ */
+
+/* globals Shiny,Audio */
+class CountdownTimer extends window.HTMLElement {
+  constructor () {
+    super()
+
+    // Initialize properties without DOM access
+    this._end = null
+    this._isRunning = false
+    this._timeout = null
+    this._remaining = null
+    this._display = { minutes: 0, seconds: 0 }
+    this._srcLocation = null
+    this._lastTouchTime = null
+
+    // Element references (will be set when DOM is created)
+    this._elements = {
+      controls: null,
+      bumpDown: null,
+      bumpUp: null,
+      timeCode: null,
+      minutes: null,
+      colon: null,
+      seconds: null
     }
 
-    if (el.counter) {
-      return el.counter
+    // For backward compatibility
+    this.countdown = this
+  }
+
+  static get observedAttributes () {
+    return [
+      'warn-when',
+      'update-every',
+      'play-sound',
+      'blink-colon',
+      'start-immediately',
+      'minutes',
+      'seconds'
+    ]
+  }
+
+  connectedCallback () {
+    // Ensure countdown class is present for backward compatibility
+    if (!this.classList.contains('countdown')) {
+      this.classList.add('countdown')
     }
 
-    const minutes = parseInt(el.querySelector('.minutes').innerText || '0')
-    const seconds = parseInt(el.querySelector('.seconds').innerText || '0')
-    const duration = minutes * 60 + seconds
-
-    function attrIsTrue (x) {
-      if (x === true) return true
-      return !!(x === 'true' || x === '' || x === '1')
+    // Make the element focusable
+    if (!this.hasAttribute('tabindex')) {
+      this.setAttribute('tabindex', '0')
     }
 
-    this.element = el
-    this.duration = duration
-    this.end = null
-    this.is_running = false
-    this.warn_when = parseInt(el.dataset.warnWhen) || -1
-    this.update_every = parseInt(el.dataset.updateEvery) || 1
-    this.play_sound = attrIsTrue(el.dataset.playSound)
-    this.blink_colon = attrIsTrue(el.dataset.blinkColon)
-    this.startImmediately = attrIsTrue(el.dataset.startImmediately)
-    this.timeout = null
-    this.display = { minutes, seconds }
-
-    if (opts.src_location) {
-      this.src_location = opts.src_location
-    }
-
+    this.initializeFromDOM()
     this.addEventListeners()
+
+    if (this.start_immediately) {
+      document.addEventListener('DOMContentLoaded', () => this.handleStartImmediately())
+    }
+  }
+
+  disconnectedCallback () {
+    this.cleanup()
+  }
+
+  attributeChangedCallback (name, oldValue, newValue) {
+    if (oldValue === newValue) return
+
+    switch (name) {
+      case 'warn-when':
+        this.warn_when = parseInt(newValue) || -1
+        break
+      case 'update-every':
+        this.update_every = parseInt(newValue) || 1
+        break
+      case 'play-sound':
+        this.play_sound = this.attrIsTrue(newValue) || newValue
+        break
+      case 'blink-colon':
+        this.blink_colon = this.attrIsTrue(newValue)
+        if (!this.blink_colon) {
+          this.classList.remove('blink-colon')
+        }
+        break
+      case 'start-immediately':
+        this.start_immediately = this.attrIsTrue(newValue)
+        break
+      case 'minutes':
+      case 'seconds':
+        // Re-initialize when minutes or seconds change
+        /* eslint-disable-next-line no-case-declarations */
+        const minutes = parseInt(this.getAttribute('minutes') || '0')
+        /* eslint-disable-next-line no-case-declarations */
+        const seconds = parseInt(this.getAttribute('seconds') || '0')
+        this._duration = minutes * 60 + seconds
+        this._display = { minutes, seconds }
+
+        // Update the display if DOM exists
+        if (this._elements.minutes && this._elements.seconds) {
+          this.update(true)
+        }
+        break
+    }
+  }
+
+  createInnerDOM () {
+    // Clear existing content
+    this.innerHTML = ''
+
+    // Controls ----
+    this._elements.controls = document.createElement('div')
+    this._elements.controls.className = 'countdown-controls'
+
+    this._elements.bumpDown = document.createElement('button')
+    this._elements.bumpDown.className = 'countdown-bump-down'
+    this._elements.bumpDown.innerHTML = '&minus;'
+
+    this._elements.bumpUp = document.createElement('button')
+    this._elements.bumpUp.className = 'countdown-bump-up'
+    this._elements.bumpUp.innerHTML = '&plus;'
+
+    this._elements.controls.appendChild(this._elements.bumpDown)
+    this._elements.controls.appendChild(this._elements.bumpUp)
+
+    // Time ----
+    this._elements.timeCode = document.createElement('code')
+    this._elements.timeCode.className = 'countdown-time'
+
+    this._elements.minutes = document.createElement('span')
+    this._elements.minutes.className = 'countdown-digits minutes'
+    this._elements.minutes.innerText = String(this._display.minutes).padStart(2, '0')
+
+    this._elements.colon = document.createElement('span')
+    this._elements.colon.className = 'countdown-digits colon'
+    this._elements.colon.innerText = ':'
+
+    this._elements.seconds = document.createElement('span')
+    this._elements.seconds.className = 'countdown-digits seconds'
+    this._elements.seconds.innerText = String(this._display.seconds).padStart(2, '0')
+
+    this._elements.timeCode.appendChild(this._elements.minutes)
+    this._elements.timeCode.appendChild(this._elements.colon)
+    this._elements.timeCode.appendChild(this._elements.seconds)
+
+    // Assemble ----
+    this.appendChild(this._elements.controls)
+    this.appendChild(this._elements.timeCode)
+  }
+
+  #normalizeTime (minutes, seconds) {
+    minutes = Math.floor(Number(minutes) || 0)
+    seconds = Math.floor(Number(seconds) || 0)
+
+    const totalSeconds = minutes * 60 + seconds
+
+    return {
+      minutes: Math.floor(totalSeconds / 60),
+      seconds: totalSeconds % 60,
+      totalSeconds
+    }
+  }
+
+  initializeFromDOM () {
+    // Get minutes and seconds from attributes, defaulting to 0
+    const { minutes, seconds, totalSeconds } = this.#normalizeTime(
+      this.getAttribute('minutes'),
+      this.getAttribute('seconds')
+    )
+
+    this._duration = totalSeconds
+    this._display = { minutes, seconds }
+
+    // Create the inner DOM structure
+    this.createInnerDOM()
+
+    // Initialize properties from attributes
+    this.warn_when = parseInt(this.getAttribute('warn-when')) || -1
+    this.update_every = parseInt(this.getAttribute('update-every')) || 1
+    this.play_sound =
+      this.attrIsTrue(this.getAttribute('play-sound')) ||
+      this.getAttribute('play-sound')
+    this.blink_colon = this.attrIsTrue(this.getAttribute('blink-colon'))
+    this.start_immediately = this.attrIsTrue(
+      this.getAttribute('start-immediately')
+    )
+
+    // Get source location from script tag if available
+    const currentScript = document.currentScript ||
+      (document.querySelector('script[src*="countdown"]') ?? '')
+    if (currentScript) {
+      this._srcLocation = currentScript.getAttribute('src')
+    }
+  }
+
+  cleanup () {
+    if (this._timeout) {
+      clearTimeout(this._timeout)
+      this._timeout = null
+    }
+    this._isRunning = false
+  }
+
+  attrIsTrue (x) {
+    if (typeof x === 'undefined') return false
+    if (x === true) return true
+    return !!(x === 'true' || x === '' || x === '1')
   }
 
   addEventListeners () {
     const self = this
-
-    if (this.startImmediately) {
-      if (window.remark && window.slideshow) {
-        // Remark (xaringan) support
-        const isOnVisibleSlide = () => {
-          return document.querySelector('.remark-visible').contains(self.element)
-        }
-        if (isOnVisibleSlide()) {
-          self.start()
-        } else {
-          let started_once = 0
-          window.slideshow.on('afterShowSlide', function () {
-            if (started_once > 0) return
-            if (isOnVisibleSlide()) {
-              self.start()
-              started_once = 1
-            }
-          })
-        }
-      } else if (window.Reveal) {
-        // Revealjs (quarto) support
-        const isOnVisibleSlide = () => {
-          const currentSlide = document.querySelector('.reveal .slide.present')
-          return currentSlide ? currentSlide.contains(self.element) : false
-        }
-        if (isOnVisibleSlide()) {
-          self.start()
-        } else {
-          const revealStartTimer = () => {
-            if (isOnVisibleSlide()) {
-              self.start()
-              window.Reveal.off('slidechanged', revealStartTimer)
-            }
-          }
-          window.Reveal.on('slidechanged', revealStartTimer)
-        }
-      } else if (window.IntersectionObserver) {
-        // All other situtations use IntersectionObserver
-        const onVisible = (element, callback) => {
-          new window.IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-              if (entry.intersectionRatio > 0) {
-                callback(element)
-                observer.disconnect()
-              }
-            })
-          }).observe(element)
-        }
-        onVisible(this.element, el => el.countdown.start())
-      } else {
-        // or just start the timer as soon as it's initialized
-        this.start()
-      }
-    }
 
     function haltEvent (ev) {
       ev.preventDefault()
@@ -2973,25 +3254,48 @@ class CountdownTimer {
       return ev.code === 'ArrowUp' || ev.code === 'ArrowDown'
     }
 
-    ;['click', 'touchend'].forEach(function (eventType) {
-      self.element.addEventListener(eventType, function (ev) {
-        haltEvent(ev)
-        self.is_running ? self.stop() : self.start()
-      })
+    // Handle click events (desktop)
+    self.addEventListener('click', function (ev) {
+      haltEvent(ev)
+      self._isRunning ? self.stop({ manual: true }) : self.start()
     })
-    this.element.addEventListener('keydown', function (ev) {
-      if (ev.code === "Escape") {
+
+    // Handle touch events (mobile) with double-tap detection
+    self.addEventListener('touchend', function (ev) {
+      haltEvent(ev)
+
+      const now = Date.now()
+      const DOUBLE_TAP_THRESHOLD = 300 // milliseconds
+
+      // Check for double-tap
+      if (self._lastTouchTime && (now - self._lastTouchTime) < DOUBLE_TAP_THRESHOLD) {
+        // Double-tap detected
+        self._lastTouchTime = null
+        if (!self._isRunning) {
+          // Double tap while *running* resets the timer, but the first tap
+          // stops the timer and the second tap resets it
+          self.reset()
+        }
+      } else {
+        // Single tap - update timestamp and toggle start/stop
+        self._lastTouchTime = now
+        self._isRunning ? self.stop({ manual: true }) : self.start()
+      }
+    })
+
+    this.addEventListener('keydown', function (ev) {
+      if (ev.code === 'Escape') {
         self.reset()
         haltEvent(ev)
       }
       if (!isSpaceOrEnter(ev) && !isArrowUpOrDown(ev)) return
       haltEvent(ev)
       if (isSpaceOrEnter(ev)) {
-        self.is_running ? self.stop() : self.start()
+        self._isRunning ? self.stop({ manual: true }) : self.start()
         return
       }
 
-      if (!self.is_running) return
+      if (!self._isRunning) return
 
       if (ev.code === 'ArrowUp') {
         self.bumpUp()
@@ -2999,46 +3303,109 @@ class CountdownTimer {
         self.bumpDown()
       }
     })
-    this.element.addEventListener('dblclick', function (ev) {
-      haltEvent(ev)
-      if (self.is_running) self.reset()
-    })
-    this.element.addEventListener('touchmove', haltEvent)
 
-    const btnBumpDown = this.element.querySelector('.countdown-bump-down')
-    ;['click', 'touchend'].forEach(function (eventType) {
-      btnBumpDown.addEventListener(eventType, function (ev) {
-        haltEvent(ev)
-        if (self.is_running) self.bumpDown()
-      })
-    })
-    btnBumpDown.addEventListener('keydown', function (ev) {
-      if (!isSpaceOrEnter(ev) || !self.is_running) return
+    this.addEventListener('dblclick', function (ev) {
       haltEvent(ev)
-      self.bumpDown()
+      if (self._isRunning) self.reset()
     })
 
-    const btnBumpUp = this.element.querySelector('.countdown-bump-up')
-    ;['click', 'touchend'].forEach(function (eventType) {
-      btnBumpUp.addEventListener(eventType, function (ev) {
-        haltEvent(ev)
-        if (self.is_running) self.bumpUp()
+    this.addEventListener('touchmove', haltEvent)
+
+    if (this._elements.bumpDown) {
+      ['click', 'touchend'].forEach(function (eventType) {
+        self._elements.bumpDown.addEventListener(eventType, function (ev) {
+          haltEvent(ev)
+          if (self._isRunning) self.bumpDown()
+        })
       })
-    })
-    btnBumpUp.addEventListener('keydown', function (ev) {
-      if (!isSpaceOrEnter(ev) || !self.is_running) return
-      haltEvent(ev)
-      self.bumpUp()
-    })
-    this.element.querySelector('.countdown-controls').addEventListener('dblclick', function (ev) {
-      haltEvent(ev)
-    })
+      this._elements.bumpDown.addEventListener('keydown', function (ev) {
+        if (!isSpaceOrEnter(ev) || !self._isRunning) return
+        haltEvent(ev)
+        self.bumpDown()
+      })
+    }
+
+    if (this._elements.bumpUp) {
+      ['click', 'touchend'].forEach(function (eventType) {
+        self._elements.bumpUp.addEventListener(eventType, function (ev) {
+          haltEvent(ev)
+          if (self._isRunning) self.bumpUp()
+        })
+      })
+      this._elements.bumpUp.addEventListener('keydown', function (ev) {
+        if (!isSpaceOrEnter(ev) || !self._isRunning) return
+        haltEvent(ev)
+        self.bumpUp()
+      })
+    }
+
+    if (this._elements.controls) {
+      this._elements.controls.addEventListener('dblclick', function (ev) {
+        haltEvent(ev)
+      })
+    }
+  }
+
+  handleStartImmediately () {
+    const self = this
+
+    if (window.remark && window.slideshow) {
+      // Remark (xaringan) support
+      const isOnVisibleSlide = () => {
+        return document.querySelector('.remark-visible').contains(self)
+      }
+      if (isOnVisibleSlide()) {
+        self.start()
+      } else {
+        let startedOnce = 0
+        window.slideshow.on('afterShowSlide', function () {
+          if (startedOnce > 0) return
+          if (isOnVisibleSlide()) {
+            self.start()
+            startedOnce = 1
+          }
+        })
+      }
+    } else if (window.Reveal) {
+      // Revealjs (quarto) support
+      const isOnVisibleSlide = () => {
+        const currentSlide = document.querySelector('.reveal .slide.present')
+        return currentSlide ? currentSlide.contains(self) : false
+      }
+      if (isOnVisibleSlide()) {
+        self.start()
+      } else {
+        const revealStartTimer = () => {
+          if (isOnVisibleSlide()) {
+            self.start()
+            window.Reveal.off('slidechanged', revealStartTimer)
+          }
+        }
+        window.Reveal.on('slidechanged', revealStartTimer)
+      }
+    } else if (window.IntersectionObserver) {
+      // All other situations use IntersectionObserver
+      const onVisible = (element, callback) => {
+        new window.IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.intersectionRatio > 0) {
+              callback(element)
+              observer.disconnect()
+            }
+          })
+        }).observe(element)
+      }
+      onVisible(this, (el) => el.countdown.start())
+    } else {
+      // or just start the timer as soon as it's initialized
+      this.start()
+    }
   }
 
   remainingTime () {
-    const remaining = this.is_running
-      ? (this.end - Date.now()) / 1000
-      : this.remaining || this.duration
+    const remaining = this._isRunning
+      ? (this._end - Date.now()) / 1000
+      : this._remaining || this._duration
 
     let minutes = Math.floor(remaining / 60)
     let seconds = Math.ceil(remaining - minutes * 60)
@@ -3052,40 +3419,40 @@ class CountdownTimer {
   }
 
   start () {
-    if (this.is_running) return
+    if (this._isRunning) return
 
-    this.is_running = true
+    this._isRunning = true
 
-    if (this.remaining) {
+    if (this._remaining) {
       // Having a static remaining time indicates timer was paused
-      this.end = Date.now() + this.remaining * 1000
-      this.remaining = null
+      this._end = Date.now() + this._remaining * 1000
+      this._remaining = null
     } else {
-      this.end = Date.now() + this.duration * 1000
+      this._end = Date.now() + this._duration * 1000
     }
 
-    this.reportStateToShiny('start')
+    this.emitStateEvent('start')
 
-    this.element.classList.remove('finished')
-    this.element.classList.add('running')
+    this.classList.remove('finished')
+    this.classList.add('running')
     this.update(true)
     this.tick()
   }
 
-  tick (run_again) {
-    if (typeof run_again === 'undefined') {
-      run_again = true
+  tick (runAgain) {
+    if (typeof runAgain === 'undefined') {
+      runAgain = true
     }
 
-    if (!this.is_running) return
+    if (!this._isRunning) return
 
-    const { seconds: secondsWas } = this.display
+    const { seconds: secondsWas } = this._display
     this.update()
 
-    if (run_again) {
-      const delay = (this.end - Date.now() > 10000) ? 1000 : 250
+    if (runAgain) {
+      const delay = this._end - Date.now() > 10000 ? 1000 : 250
       this.blinkColon(secondsWas)
-      this.timeout = setTimeout(this.tick.bind(this), delay)
+      this._timeout = setTimeout(this.tick.bind(this), delay)
     }
   }
 
@@ -3093,13 +3460,13 @@ class CountdownTimer {
     // don't blink unless option is set
     if (!this.blink_colon) return
     // warn_when always updates the seconds
-    if (this.warn_when > 0 && Date.now() + this.warn_when > this.end) {
-      this.element.classList.remove('blink-colon')
+    if (this.warn_when > 0 && Date.now() + this.warn_when > this._end) {
+      this.classList.remove('blink-colon')
       return
     }
-    const { seconds: secondsIs } = this.display
+    const { seconds: secondsIs } = this._display
     if (secondsIs > 10 || secondsWas !== secondsIs) {
-      this.element.classList.toggle('blink-colon')
+      this.classList.toggle('blink-colon')
     }
   }
 
@@ -3110,55 +3477,61 @@ class CountdownTimer {
 
     const { remaining, minutes, seconds } = this.remainingTime()
 
-    const setRemainingTime = (selector, time) => {
-      const timeContainer = this.element.querySelector(selector)
-      if (!timeContainer) return
+    const setRemainingTime = (element, time) => {
+      if (!element) return
       time = Math.max(time, 0)
-      timeContainer.innerText = String(time).padStart(2, 0)
+      element.innerText = String(time).padStart(2, 0)
     }
 
-    if (this.is_running && remaining < 0.25) {
+    if (this._isRunning && remaining < 0.25) {
       this.stop()
-      setRemainingTime('.minutes', 0)
-      setRemainingTime('.seconds', 0)
+      setRemainingTime(this._elements.minutes, 0)
+      setRemainingTime(this._elements.seconds, 0)
       this.playSound()
       return
     }
 
-    const should_update = force ||
+    const shouldUpdate =
+      force ||
       Math.round(remaining) < this.warn_when ||
       Math.round(remaining) % this.update_every === 0
 
-    if (should_update) {
-      this.element.classList.toggle('warning', remaining <= this.warn_when)
-      this.display = { minutes, seconds }
-      setRemainingTime('.minutes', minutes)
-      setRemainingTime('.seconds', seconds)
+    if (shouldUpdate) {
+      const isWarning = remaining <= this.warn_when
+      if (isWarning && !this.classList.contains('warning')) {
+        this.emitStateEvent('warning')
+      }
+      this.classList.toggle('warning', isWarning)
+      this._display = { minutes, seconds }
+      setRemainingTime(this._elements.minutes, minutes)
+      setRemainingTime(this._elements.seconds, seconds)
     }
   }
 
-  stop () {
+  stop ({ manual = false } = {}) {
     const { remaining } = this.remainingTime()
     if (remaining > 1) {
-      this.remaining = remaining
+      this._remaining = remaining
     }
-    this.element.classList.remove('running')
-    this.element.classList.remove('warning')
-    this.element.classList.remove('blink-colon')
-    this.element.classList.add('finished')
-    this.is_running = false
-    this.end = null
-    this.reportStateToShiny('stop')
-    this.timeout = clearTimeout(this.timeout)
+    this.classList.remove('running')
+    this.classList.remove('warning')
+    this.classList.remove('blink-colon')
+    this.classList.add('finished')
+    this._isRunning = false
+    this._end = null
+    this.emitStateEvent(manual ? 'stop' : 'finished')
+    this._timeout = clearTimeout(this._timeout)
   }
 
   reset () {
-    this.stop()
-    this.remaining = null
+    this.stop({ manual: true })
+    this._remaining = null
     this.update(true)
-    this.reportStateToShiny('reset')
-    this.element.classList.remove('finished')
-    this.element.classList.remove('warning')
+
+    this.classList.remove('finished')
+    this.classList.remove('warning')
+    this._emitEvents = true
+    this.emitStateEvent('reset')
   }
 
   setValues (opts) {
@@ -3171,20 +3544,20 @@ class CountdownTimer {
     if (typeof opts.blink_colon !== 'undefined') {
       this.blink_colon = opts.blink_colon
       if (!opts.blink_colon) {
-        this.element.classList.remove('blink-colon')
+        this.classList.remove('blink-colon')
       }
     }
     if (typeof opts.play_sound !== 'undefined') {
       this.play_sound = opts.play_sound
     }
     if (typeof opts.duration !== 'undefined') {
-      this.duration = opts.duration
-      if (this.is_running) {
+      this._duration = opts.duration
+      if (this._isRunning) {
         this.reset()
         this.start()
       }
     }
-    this.reportStateToShiny('update')
+    this.emitStateEvent('update')
     this.update(true)
   }
 
@@ -3201,12 +3574,12 @@ class CountdownTimer {
       newRemaining = Math.round(newRemaining / 5) * 5
     }
     this.setRemaining(newRemaining)
-    this.reportStateToShiny(val > 0 ? 'bumpUp' : 'bumpDown')
+    this.emitStateEvent(val > 0 ? 'bumpUp' : 'bumpDown')
     this.update(true)
   }
 
   bumpUp (val) {
-    if (!this.is_running) {
+    if (!this._isRunning) {
       console.error('timer is not running')
       return
     }
@@ -3217,7 +3590,7 @@ class CountdownTimer {
   }
 
   bumpDown (val) {
-    if (!this.is_running) {
+    if (!this._isRunning) {
       console.error('timer is not running')
       return
     }
@@ -3228,20 +3601,20 @@ class CountdownTimer {
   }
 
   setRemaining (val) {
-    if (!this.is_running) {
+    if (!this._isRunning) {
       console.error('timer is not running')
       return
     }
-    this.end = Date.now() + val * 1000
+    this._end = Date.now() + val * 1000
     this.update(true)
   }
 
   playSound () {
     let url = this.play_sound
-    if (!url) return
+    if (!url || url === 'false') return
     if (typeof url === 'boolean') {
-      const src = this.src_location
-        ? this.src_location.replace('/countdown.js', '')
+      const src = this._srcLocation
+        ? this._srcLocation.replace('/countdown.js', '')
         : 'libs/countdown'
       url = src + '/smb_stage_clear.mp3'
     }
@@ -3262,85 +3635,96 @@ class CountdownTimer {
     }
   }
 
-  reportStateToShiny (action) {
-    if (!window.Shiny) return
-
-    const inputId = this.element.id
+  emitStateEvent (action) {
     const data = {
-      event: {
-        action,
-        time: new Date().toISOString()
-      },
+      action,
+      time: new Date().toISOString(),
       timer: {
-        is_running: this.is_running,
-        end: this.end ? new Date(this.end).toISOString() : null,
+        is_running: this._isRunning,
+        end: this._end ? new Date(this._end).toISOString() : null,
         remaining: this.remainingTime()
       }
     }
 
-    function shinySetInputValue () {
-      if (!window.Shiny.setInputValue) {
-        setTimeout(shinySetInputValue, 100)
-        return
-      }
-      window.Shiny.setInputValue(inputId, data)
+    this.reportStateToShiny(data)
+    this.dispatchEvent(
+      new CustomEvent('countdown', { detail: data, bubbles: true })
+    )
+  }
+
+  reportStateToShiny (data) {
+    if (!window.Shiny) return
+
+    if (!window.Shiny.setInputValue) {
+      // We're in Shiny but it isn't ready for input updates yet
+      setTimeout(() => this.reportStateToShiny(data), 100)
+      return
     }
 
-    shinySetInputValue()
+    const { action, time, timer } = data
+
+    const shinyData = { event: { action, time }, timer }
+
+    window.Shiny.setInputValue(this.id, shinyData)
   }
 }
 
-(function () {
-  const CURRENT_SCRIPT = document.currentScript.getAttribute('src')
+if (!window.customElements.get('countdown-timer')) {
+  window.customElements.define('countdown-timer', CountdownTimer)
+}
 
-  document.addEventListener('DOMContentLoaded', function () {
-    const els = document.querySelectorAll('.countdown')
-    if (!els || !els.length) {
+(function () {
+  if (!window.Shiny) {
+    return
+  }
+  Shiny.addCustomMessageHandler('countdown:update', function (x) {
+    if (!x.id) {
+      console.error('No `id` provided, cannot update countdown')
       return
     }
-    els.forEach(function (el) {
-      el.countdown = new CountdownTimer(el, { src_location: CURRENT_SCRIPT })
-    })
+    const el = document.getElementById(x.id)
+    if (el && el.setValues) {
+      el.setValues(x)
+    }
+  })
 
-    if (window.Shiny) {
-      Shiny.addCustomMessageHandler('countdown:update', function (x) {
-        if (!x.id) {
-          console.error('No `id` provided, cannot update countdown')
-          return
-        }
-        const el = document.getElementById(x.id)
-        el.countdown.setValues(x)
-      })
+  Shiny.addCustomMessageHandler('countdown:start', function (id) {
+    const el = document.getElementById(id)
+    if (!el) return
+    if (el.start) {
+      el.start()
+    }
+  })
 
-      Shiny.addCustomMessageHandler('countdown:start', function (id) {
-        const el = document.getElementById(id)
-        if (!el) return
-        el.countdown.start()
-      })
+  Shiny.addCustomMessageHandler('countdown:stop', function (id) {
+    const el = document.getElementById(id)
+    if (!el) return
+    if (el.stop) {
+      el.stop({ manual: true })
+    }
+  })
 
-      Shiny.addCustomMessageHandler('countdown:stop', function (id) {
-        const el = document.getElementById(id)
-        if (!el) return
-        el.countdown.stop()
-      })
+  Shiny.addCustomMessageHandler('countdown:reset', function (id) {
+    const el = document.getElementById(id)
+    if (!el) return
+    if (el.reset) {
+      el.reset()
+    }
+  })
 
-      Shiny.addCustomMessageHandler('countdown:reset', function (id) {
-        const el = document.getElementById(id)
-        if (!el) return
-        el.countdown.reset()
-      })
+  Shiny.addCustomMessageHandler('countdown:bumpUp', function (id) {
+    const el = document.getElementById(id)
+    if (!el) return
+    if (el.bumpUp) {
+      el.bumpUp()
+    }
+  })
 
-      Shiny.addCustomMessageHandler('countdown:bumpUp', function (id) {
-        const el = document.getElementById(id)
-        if (!el) return
-        el.countdown.bumpUp()
-      })
-
-      Shiny.addCustomMessageHandler('countdown:bumpDown', function (id) {
-        const el = document.getElementById(id)
-        if (!el) return
-        el.countdown.bumpDown()
-      })
+  Shiny.addCustomMessageHandler('countdown:bumpDown', function (id) {
+    const el = document.getElementById(id)
+    if (!el) return
+    if (el.bumpDown) {
+      el.bumpDown()
     }
   })
 })()
@@ -3557,7 +3941,7 @@ class: inverse, hide-count
 
 Inizieremo richiamando alcune definizioni e proprietà base della probabilità come il concetto di **.orange[evento]** e **.orange[probabilità]** stessa. 
 
-Vedremo come questi elementi si combinano tra loro con le operazioni di base quali **.orange[somma]**,**.orange[prodotto]**, e **.orange[complemento]** (corrispondenti agli analoghi insiemistici di _unione_, _intersezione_, e _complementare_). In particolare introdurremo il concetto di **.orange[indipendenza]** e vedremo come questo interagisce con le operazioni base.
+Vedremo come questi elementi si combinano tra loro con le operazioni di base quali **.orange[somma]**, **.orange[prodotto]**, e **.orange[complemento]** (corrispondenti agli analoghi insiemistici di _unione_, _intersezione_, e _complementare_). In particolare introdurremo il concetto di **.orange[indipendenza]** e vedremo come questo interagisce con le operazioni base.
 
 A questo punto saremo pronti per introdurre la parte interessante della probabilità, ovvero come la conoscenza del verificarsi di un dato evento **.orange[condizioni]** la nostra conoscenza sulla probabilità del verificarsi di un altro. Ne vedremo una prima applicazione al caso dei **.orange[rischi relativi]** e alle misure di valutazione per i **.orange[test di screening]**.
 
@@ -3649,15 +4033,15 @@ La probabilità di un evento `\(E\)`, indicata come `\(P(E)\)`, soddisfa .orange
 
 `$$0 \leq P(E) \leq 1$$`
 
-Se i risultati di un esperimento probabilistico, indicati come `\(A\)` e `\(B\)` sono due eventi che .orange[non possono] verificarsi .orange[contemporaneamente], allora si ha che
+Se `\(A\)` e `\(B\)` sono due eventi che .orange[non possono] verificarsi .orange[contemporaneamente], allora si ha che
 
 `$$P(\textrm{si verifichi } A \textrm{ o che si verifichi } B) = P(A) + P(B)$$`
 
 #### Esempio:
 
 - `\(A\)` l&#39;evento DBP normale ( `\(\mbox{DBP} &lt; 90\)` )
-- `\(B\)` l&#39;evento DBP borderline ( `\(90\leq \mbox{DBP} \leq 95\)` )
-- `\(C\)` l&#39;evento DBP `\(\leq 95\)`.
+- `\(B\)` l&#39;evento DBP borderline ( `\(90\leq \mbox{DBP} &lt; 95\)` )
+- `\(C\)` l&#39;evento DBP `\(&lt; 95\)`.
 
 **Se**:
 - `\(P(A)=0.7\)`
@@ -3674,7 +4058,7 @@ Due eventi `\(A\)` e `\(B\)` si dicono **mutuamente esclusivi** se .orange[non p
 
 **Siano**:
 - `\(x\)` la DBP.
-- `\(C\)` l&#39;evento ( `\(x &gt; 90\)` )
+- `\(C\)` l&#39;evento ( `\(x \geq 90\)` )
 - `\(D\)` l&#39;evento ( `\(75\leq x\leq 100\)` ).
 
 **Allora** in questo caso:
@@ -3695,7 +4079,7 @@ verificano quando `\(90 \leq x \leq 100\)`.
 **Sia** ( `\(x\)` la DBP): 
 - `\(A = \{x &lt; 90 \}\)`
 - `\(B = \{90 \leq x &lt; 95 \}\)`
-- `\(C = \{ \geq 90 \}\)`
+- `\(C = \{ x \geq 90 \}\)`
 - `\(D = \{75 \leq x \leq 100 \}\)`
 
 **Allora**:
@@ -3707,7 +4091,7 @@ verificano quando `\(90 \leq x \leq 100\)`.
 ---
 # .orange[Eventi e spazio] `\(\Omega\)`
 
-&lt;img src=&quot;data:image/png;base64,#img/venn1.png&quot; width=&quot;100%&quot; /&gt;
+&lt;img src=&quot;data:image/png;base64,#img/venn1.png&quot; alt=&quot;&quot; width=&quot;100%&quot; /&gt;
 
 
 ---
@@ -3730,7 +4114,7 @@ Il simbolo `\(\cap\)` indica l&#39;evento `\(A \cap B\)`, per cui sia `\(A\)` ch
 ---
 # .orange[Intersezione] di eventi
 
-&lt;img src=&quot;data:image/png;base64,#img/venn2.png&quot; width=&quot;100%&quot; /&gt;
+&lt;img src=&quot;data:image/png;base64,#img/venn2.png&quot; alt=&quot;&quot; width=&quot;100%&quot; /&gt;
 
 
 ---
@@ -3747,7 +4131,7 @@ Vale **sempre**:
 
 
 **Dati** ( `\(x\)` la DBP):
-- `\(A = \{x &lt; 90 \}\)`
+- `\(A = \{x &lt; 90 \}\)`, con `\(P(A) = 0.7\)`
 - `\(C =\{x \geq 90 \}\)`
 
 **Allora**:
@@ -3763,7 +4147,7 @@ Vale **sempre**:
 ---
 # Evento .orange[complementare]
 
-&lt;img src=&quot;data:image/png;base64,#img/venn3.png&quot; width=&quot;100%&quot; /&gt;
+&lt;img src=&quot;data:image/png;base64,#img/venn3.png&quot; alt=&quot;&quot; width=&quot;100%&quot; /&gt;
 
 
 
@@ -3803,13 +4187,13 @@ Si considerino gli eventi
 - `\(B=\{\mbox{DBP padre}\geq 95\}\)`
 
 con probabilità
-- `\(P(A \cap B) = 0.5\)`
+- `\(P(A \cap B) = 0.05\)`
 - `\(P(A) = 0.1\)`
 - `\(P(B) = 0.2\)`
 
 **Allora**:
 
-`$$P(A \cap B) = 0.5 &gt; 0.02 = P(A)P(B)$$`
+`$$P(A \cap B) = 0.05 &gt; 0.02 = P(A)P(B)$$`
 
 Per cui gli eventi **non sono indipendenti**, ovvero sono .orange[dipendenti].
 
@@ -3817,7 +4201,7 @@ Per cui gli eventi **non sono indipendenti**, ovvero sono .orange[dipendenti].
 ---
 # .orange[indipendenza]
 
-&lt;img src=&quot;data:image/png;base64,#img/venn4.png&quot; width=&quot;60%&quot; /&gt;
+&lt;img src=&quot;data:image/png;base64,#img/venn4.png&quot; alt=&quot;&quot; width=&quot;60%&quot; /&gt;
 
 
 ---
@@ -3827,7 +4211,7 @@ Per cui gli eventi **non sono indipendenti**, ovvero sono .orange[dipendenti].
 **Siano**:
 - `\(A\)` e `\(B\)` due eventi .orange[qualsiasi]
 
-**Allora*:
+**Allora**:
 
 `$$P(A \cup B) = P(A)+P(B)-P(A\cap B)$$`
 
@@ -3856,13 +4240,13 @@ La .orange[probabilità che] un paziente .orange[venga riferito] ai laboratori �
 ---
 # .orange[Somma]
 
-&lt;img src=&quot;data:image/png;base64,#img/venn5.png&quot; width=&quot;100%&quot; /&gt;
+&lt;img src=&quot;data:image/png;base64,#img/venn5.png&quot; alt=&quot;&quot; width=&quot;100%&quot; /&gt;
 
 
 ---
 # .orange[Somma]: indipendenza
 
-**Siano**: `\(A\)` e `\(B\)` due eventi **.orange[indipendenti]**
+**Siano**: `\(A\)` e `\(B\)` due eventi **.orange[indipendenti]** (allora lo sono anche `\(\bar{A}\)` e `\(B\)`)
 
 **Allora**:
 
@@ -3871,7 +4255,7 @@ La .orange[probabilità che] un paziente .orange[venga riferito] ai laboratori �
 ---
 # Somma .orange[indipendente]
 
-&lt;img src=&quot;data:image/png;base64,#img/venn6.png&quot; width=&quot;80%&quot; /&gt;
+&lt;img src=&quot;data:image/png;base64,#img/venn6.png&quot; alt=&quot;&quot; width=&quot;80%&quot; /&gt;
 
 
 ---
@@ -3910,10 +4294,7 @@ class: inverse, center, middle, hide-count
 - andare in bagno
 ]
 
-<div class="countdown" id="timer_6080e3be" data-warn-when="3" data-update-every="1" data-play-sound="true" tabindex="0" style="bottom:20%;left:70%;">
-<div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
+<countdown-timer class="countdown" id="timer_21eb402e" minutes="15" seconds="0" warn-when="3" update-every="1" play-sound="true" tabindex="0" style="bottom:20%;left:70%;"></countdown-timer>
 
 
 ---
@@ -3932,7 +4313,7 @@ class: inverse, middle
 ---
 # .orange[Condizionamento]: definizione
 
-La **.orange[probabilità condizionata]** `\(P(B|A)\)` è definita come
+La **.orange[probabilità condizionata]** `\(P(B|A)\)` (con `\(P(A) &gt; 0\)`) è definita come
 
 `$$P(B|A)=\frac{P(A \cap B)}{P(A)}$$`
 
@@ -3954,7 +4335,7 @@ Al contrario, **se** due eventi sono .orange[dipendenti], **allora**
 ---
 # .orange[Condizionamento]: proprietà
 
-Per qualsiasi evento `\(A\)` e `\(B\)`, si ha che
+Per qualsiasi evento `\(A\)` e `\(B\)` (con `\(0 &lt; P(A) &lt; 1\)`), si ha che
 
 `$$P(B) = P(B|A)P(A)+P(B|\bar{A})P(\bar{A})$$`
 
@@ -3967,7 +4348,7 @@ e ricordando la definizione
 
 da cui
 
-`$$P(A \cap B) = P(A|B)P(A)$$`
+`$$P(A \cap B) = P(B|A)P(A)$$`
 ---
 # .orange[Condizionamento]: esempio
 
@@ -3976,7 +4357,7 @@ Si ipotizzi che:
 - **1 persona ogni 10000** con SKT .orange[negativo] abbia la TB
 - l&#39;1\% della popolazione abbia SKT positivo
 
-**Si calcoli** la .orange[probabilità di tubercolosi (TB) nella popolazione] `\(P(TB)\)`, ovvero, si sitmi la porzione di malati di tubercolosi nella popolazione (chiamata: la **prevalenza** della malattia)
+**Si calcoli** la .orange[probabilità di tubercolosi (TB) nella popolazione] `\(P(TB)\)`, ovvero, si stimi la porzione di malati di tubercolosi nella popolazione (chiamata: la **prevalenza** della malattia)
 
 **Soluzione**
 `$$\begin{split}P(TB)&amp; =P(TB|SKT^+)P(SKT^+) + P(TB|SKT^-)P(SKT^-)\\&amp; = (0.01)(0.01) + (0.0001)(1-0.01)\\&amp; = 0.000199\end{split}$$`
@@ -4000,10 +4381,7 @@ Ovvero, la **somma pesata** delle probabilità condizionali di `\(B\)` dato `\(A
 ---
 ## .orange[Probabilità totali]: esempio problema
 
-<div class="countdown" id="timer_1f8bd7b9" data-warn-when="1" data-update-every="1" data-play-sound="true" tabindex="0" style="bottom:10%;left:70%;">
-<div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
+<countdown-timer class="countdown" id="timer_a631493a" minutes="3" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:10%;left:70%;"></countdown-timer>
 
 
 .panelset[
@@ -4020,7 +4398,7 @@ Dal Framingham Eye Study è noto che la probabilità di sviluppare una cataratta
 Si vuole conoscere **la percentuale di persone che potrebbe sviluppare una cataratta nei prossimi 5 anni**, e una stima del loro numero.
 
 
-|classe | p_classe| p_catarrata5y_classe|
+|classe | p_classe| p_cataratta5y_classe|
 |:------|--------:|--------------------:|
 |60-64  |     0.45|                0.024|
 |65-69  |     0.28|                0.046|
@@ -4031,12 +4409,12 @@ Si vuole conoscere **la percentuale di persone che potrebbe sviluppare una catar
 
 ]
 .panel[.panel-name[Soluzione]
-La percentuale di popolazione (o probabilità, su tale popolazione) `\(P(B)\)` per l&#39;evento `\(B\)` di sviluppare catarrata a 5 anni equivale, per il teorema delle .orange[probabilità totali], alla somma delle probabilità di svilupparla per ciascuna classe di età (che rappresentano un insieme **esaustivo** a elementi **mutuamente disgiunti**) pesate per la probabilità di appartenere in tali classi.
+La percentuale di popolazione (o probabilità, su tale popolazione) `\(P(B)\)` per l&#39;evento `\(B\)` di sviluppare cataratta a 5 anni equivale, per il teorema delle .orange[probabilità totali], alla somma delle probabilità di svilupparla per ciascuna classe di età (che rappresentano un insieme **esaustivo** a elementi **mutuamente disgiunti**) pesate per la probabilità di appartenere a tali classi.
 ]
 .panel[.panel-name[Conti]
 &lt;small&gt;
 
-|insieme |classe | p_classe| p_catarrata5y_classe|
+|insieme |classe | p_classe| p_cataratta5y_classe|
 |:-------|:------|--------:|--------------------:|
 |A_1     |60-64  |     0.45|                0.024|
 |A_2     |65-69  |     0.28|                0.046|
@@ -4051,8 +4429,7 @@ Per esempio:
 `$$\begin{split}P(B)&amp; = \sum_{i=1}^4 P(B|A_i)P(A_i)\\&amp; =
 (0.024)(0.45)+\ldots+(0.153)(0.07)\\&amp; \simeq 0.052\end{split}$$`
 
-e il numero stimato di persone con cataratta sarà: `\(5000 \times 0.052 \simeq 260\)`.
-persone.
+e il numero stimato di persone con cataratta sarà: `\(5000 \times 0.052 \simeq 260\)` persone.
 &lt;/small&gt;
 
 
@@ -4081,7 +4458,7 @@ Il rischio relativo (**RR**) di osservare, in una data popolazione, un evento `\
  
 &gt; NOTA 2:
 &gt;
-&gt; Definiamo **Rischio assoluto** il rapporto tra i casi osservati e i casi osservabili (osservabili vuol, dire: che sono sottoposti al rischio con una probabilità positiva che si possa verificare l&#39;evento di interesse), ovvero la probabilità che un certo evento accada sotto determinate condizioni in una data popolazione.
+&gt; Definiamo **Rischio assoluto** il rapporto tra il numero di casi osservati e il numero di persone a rischio (a rischio vuol dire: che sono sottoposte al rischio con una probabilità positiva che si possa verificare l&#39;evento di interesse), ovvero la probabilità che un certo evento accada sotto determinate condizioni in una data popolazione.
 &gt;
 
 ---
@@ -4101,17 +4478,14 @@ dove abbiamo indicato con `\(B\)` l&#39;evento di avere la TB, e con `\(A\)` que
 ---
 ## .orange[Rischio relativo]: esempio problema
 
-<div class="countdown" id="timer_62d55095" data-warn-when="1" data-update-every="1" data-play-sound="true" tabindex="0" style="bottom:5%;left:70%;">
-<div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
+<countdown-timer class="countdown" id="timer_fd710ab9" minutes="3" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:70%;"></countdown-timer>
 
 .panelset[
 .panel[.panel-name[Problema]
 
 Per i dati sul centro delle malattie a trasmissione sessuale, si è 
 interessati a calcolare:
-- la probabilità che il medico `\(B\)` faccia diagnosi positiva data la diagnosi del medico `\(A\)`
+- la probabilità che il medico `\(B\)` faccia diagnosi positiva data la diagnosi positiva del medico `\(A\)`
 - il corrispondente rischio relativo.
 
 Ricordando che
@@ -4123,7 +4497,7 @@ Ricordando che
 ]
 
 .panel[.panel-name[Soluzione `\(P(B^+|A^+)\)` ]
-Partendo da `\(P(A \cap B) = P(A|B)P(B)\)` otteniamo:
+Partendo da `\(P(A \cap B) = P(B|A)P(A)\)` otteniamo:
 
 
 .left-column[
@@ -4134,7 +4508,7 @@ Partendo da `\(P(A \cap B) = P(A|B)P(B)\)` otteniamo:
 
 ]
 
-.rigth-column[.right[
+.right-column[.right[
 
 `$$\begin{split}P(B^+|A^+)&amp; = \frac{P(B^+\cap A^+)}{P(A^+)}\\&amp; = 0.08/0.1\\&amp; = 0.8\end{split}$$`
 ]]
@@ -4158,7 +4532,7 @@ Partendo da `\(P(A \cap B) = P(A|B)P(B)\)` otteniamo:
 
 ]]
 
-.rigth-column[.rigth[
+.right-column[.right[
 
 `$$\begin{split}P(B^+|A^-)&amp; = \frac{P(B^+\cap A^-)}{P(A^-)}\\&amp; = \frac{P(B^+)-P(B^+\cap A^+)}
 {P(A^-)}\\&amp; =\frac{0.17-0.08}{0.9}\\&amp; = 0.1\end{split}$$`
@@ -4176,7 +4550,7 @@ Partendo da `\(P(A \cap B) = P(A|B)P(B)\)` otteniamo:
 # .orange[Test di screening]: valori predittivi
 
 
-Il **valore predittivo positivo** (o anche **precisione**) `\(PV^+\)` di un test di screening è la probabilià che la persona abbia la malattia dato un test positivo
+Il **valore predittivo positivo** (o anche **precisione**) `\(PV^+\)` di un test di screening è la probabilità che la persona abbia la malattia dato un test positivo
 
 `$$PV^+ = P(\mbox{malattia}|\mbox{test}^+)$$`
 
@@ -4290,10 +4664,7 @@ Sostituendo:
 # .orange[Teorema di Bayes]: esempio
 
 
-<div class="countdown" id="timer_26cb0674" data-warn-when="1" data-update-every="1" data-play-sound="true" tabindex="0" style="bottom:5%;left:70%;">
-<div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
+<countdown-timer class="countdown" id="timer_0d56da43" minutes="5" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:70%;"></countdown-timer>
 
 
 
@@ -4302,7 +4673,7 @@ Sostituendo:
 
 **Si ipotizzi** che:
 - la probabilità che un iperteso sia .orange[correttamente classificato] come tale da una macchina per la misurazione automatica della pressione sia pari a 0.84
-- la probabilità che un normopeso sia .orange[erroneamente classificato] come iperteso, sia pari a 0.23.
+- la probabilità che un normoteso sia .orange[erroneamente classificato] come iperteso, sia pari a 0.23.
 - la prevalenza dell&#39;ipertensione nella popolazione è del 20\%
 
 **Si calcolino**: i valori predittivi (positivo e negativo) della macchina.
@@ -4317,7 +4688,7 @@ Dai dati:
 Dal teorema di Bayes:
 
 
-`$$\begin{split}PV+&amp; = \frac{SENS\cdot prev}{(SENS\cdot prev) + (1- SPEC)\cdot(1 - prev)}\\&amp; =  \frac{(0.84)0.2}{(0.84)0.2 + (0.23)0.8}\\&amp; = \frac{0.162}{0.352}\\&amp; = 0.48\end{split}$$`
+`$$\begin{split}PV^+&amp; = \frac{SENS\cdot prev}{(SENS\cdot prev) + (1- SPEC)\cdot(1 - prev)}\\&amp; =  \frac{(0.84)0.2}{(0.84)0.2 + (0.23)0.8}\\&amp; = \frac{0.168}{0.352}\\&amp; = 0.48\end{split}$$`
 
 ]
 .panel[.panel-name[Soluzione PV-]
@@ -4379,10 +4750,7 @@ Per voi: &lt;img src=&quot;data:image/png;base64,#img/bit.ly_statmed-sondaggio-b
 ---
 # .orange[Bayes generalizzato]: esempio
 
-<div class="countdown" id="timer_3350371c" data-warn-when="1" data-update-every="1" data-play-sound="true" tabindex="0" style="bottom:0%;left:70%;">
-<div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
+<countdown-timer class="countdown" id="timer_95fd4486" minutes="3" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:0%;left:70%;"></countdown-timer>
 
 
 
@@ -4391,11 +4759,11 @@ Per voi: &lt;img src=&quot;data:image/png;base64,#img/bit.ly_statmed-sondaggio-b
 &lt;small&gt;
 Si supponga che un uomo di età pari a 60 anni, **non fumatore**, presenti dei sintomi come **tosse cronica** e **affanno occasionale**.
 
-Il medico prescrive una biopsia polmonare, il cui risultato è consistente con varie patologie, quali:
+Il medico prescrive una biopsia polmonare, il cui risultato è consistente con vari stati, quali:
 
-1. una malattia polmonare .orange[non fatale]
+1. nessuna malattia (.orange[normale])
 2. il .orange[tumore polmonare],
-3. la .orange[sarcoidosi]
+3. la .orange[sarcoidosi] (malattia polmonare di solito non fatale)
 
 `$$\mbox{sintomi}=T=\{\mbox{tosse cronica},\mbox{affanno occasionale}, \mbox{biopsia}\}$$`
 
@@ -4405,7 +4773,7 @@ sia inoltre
 
 $$ P(T|M_1)=0.001 \:\:\: P(T|M_2)=0.9 \:\:\: P(T|M_3)=0.9$$
 `$$P(M_1)=0.99 \:\:\: P(M_2)=0.001 \:\:\: P(M_3)=0.009$$`
-Si vuole conoscere le probabilità degli stati patologici dati i sintomi
+Si vogliono conoscere le probabilità degli stati patologici dati i sintomi
 
 &lt;/small&gt;
 
@@ -4427,7 +4795,7 @@ Si supponga ora che lo stesso paziente sia fumatore di due pacchetti di
 sigarette al giorno per 40 anni. Si abbia quindi che in questo gruppo di persone
 
 `$$P(M_1)=0.98 \:\:\: P(M_2)=0.015 \:\:\: P(M_3)=0.005$$`
-Sempre cnsiderando le stesse probabilità di avere i sintomi in evidenza se soggetti ai vari stati patologici in esame:
+Sempre considerando le stesse probabilità di avere i sintomi in evidenza se soggetti ai vari stati patologici in esame:
 
 `$$P(T|M_1) = 0.001 \:\:\: P(T|M_2)=0.9 \:\:\: P(T|M_3)=0.9$$`
 La probabilità degli stati patologici è?
@@ -4473,7 +4841,7 @@ class: inverse, center, middle, hide-count
 
 .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
 .left[
-_If you believe that witnessing **.orange[an additional white swan]** will bring **confirmation** that there are **.orange[no black swans]**, than you should also accept the statement, on purely logical ground, that the sighting of a **.orange[red Mini Cooper]** **should confirm** that there are **.orange[no black swans]**. [...] &quot;**all** swans **are** white&quot; implies that &quot;all **nonwhite** objects are **not swans**&quot;._
+_If you believe that witnessing **.orange[an additional white swan]** will bring **confirmation** that there are **.orange[no black swans]**, then you should also accept the statement, on purely logical grounds, that the sighting of a **.orange[red Mini Cooper]** **should confirm** that there are **.orange[no black swans]**. [...] &quot;**all** swans **are** white&quot; implies that &quot;all **nonwhite** objects are **not swans**&quot;._
 ]
 
 .tr[

@@ -162,7 +162,7 @@ class: inverse, hide-count
 
 Inizieremo richiamando alcune definizioni e proprietà base della probabilità come il concetto di **.orange[evento]** e **.orange[probabilità]** stessa. 
 
-Vedremo come questi elementi si combinano tra loro con le operazioni di base quali **.orange[somma]**,**.orange[prodotto]**, e **.orange[complemento]** (corrispondenti agli analoghi insiemistici di _unione_, _intersezione_, e _complementare_). In particolare introdurremo il concetto di **.orange[indipendenza]** e vedremo come questo interagisce con le operazioni base.
+Vedremo come questi elementi si combinano tra loro con le operazioni di base quali **.orange[somma]**, **.orange[prodotto]**, e **.orange[complemento]** (corrispondenti agli analoghi insiemistici di _unione_, _intersezione_, e _complementare_). In particolare introdurremo il concetto di **.orange[indipendenza]** e vedremo come questo interagisce con le operazioni base.
 
 A questo punto saremo pronti per introdurre la parte interessante della probabilità, ovvero come la conoscenza del verificarsi di un dato evento **.orange[condizioni]** la nostra conoscenza sulla probabilità del verificarsi di un altro. Ne vedremo una prima applicazione al caso dei **.orange[rischi relativi]** e alle misure di valutazione per i **.orange[test di screening]**.
 
@@ -254,15 +254,15 @@ La probabilità di un evento $E$, indicata come $P(E)$, soddisfa .orange[sempre]
 
 $$0 \leq P(E) \leq 1$$
 
-Se i risultati di un esperimento probabilistico, indicati come $A$ e $B$ sono due eventi che .orange[non possono] verificarsi .orange[contemporaneamente], allora si ha che
+Se $A$ e $B$ sono due eventi che .orange[non possono] verificarsi .orange[contemporaneamente], allora si ha che
 
 $$P(\textrm{si verifichi } A \textrm{ o che si verifichi } B) = P(A) + P(B)$$
 
 #### Esempio:
 
 - $A$ l'evento DBP normale ( $\mbox{DBP} < 90$ )
-- $B$ l'evento DBP borderline ( $90\leq \mbox{DBP} \leq 95$ )
-- $C$ l'evento DBP $\leq 95$.
+- $B$ l'evento DBP borderline ( $90\leq \mbox{DBP} < 95$ )
+- $C$ l'evento DBP $< 95$.
 
 **Se**:
 - $P(A)=0.7$
@@ -279,7 +279,7 @@ Due eventi $A$ e $B$ si dicono **mutuamente esclusivi** se .orange[non possono] 
 
 **Siano**:
 - $x$ la DBP.
-- $C$ l'evento ( $x > 90$ )
+- $C$ l'evento ( $x \geq 90$ )
 - $D$ l'evento ( $75\leq x\leq 100$ ).
 
 **Allora** in questo caso:
@@ -300,7 +300,7 @@ verificano quando $90 \leq x \leq 100$.
 **Sia** ( $x$ la DBP): 
 - $A = \{x < 90 \}$
 - $B = \{90 \leq x < 95 \}$
-- $C = \{ \geq 90 \}$
+- $C = \{ x \geq 90 \}$
 - $D = \{75 \leq x \leq 100 \}$
 
 **Allora**:
@@ -356,7 +356,7 @@ $$P(\bar{A}) = 1-P(A)$$
 
 
 **Dati** ( $x$ la DBP):
-- $A = \{x < 90 \}$
+- $A = \{x < 90 \}$, con $P(A) = 0.7$
 - $C =\{x \geq 90 \}$
 
 **Allora**:
@@ -414,13 +414,13 @@ Si considerino gli eventi
 - $B=\{\mbox{DBP padre}\geq 95\}$
 
 con probabilità
-- $P(A \cap B) = 0.5$
+- $P(A \cap B) = 0.05$
 - $P(A) = 0.1$
 - $P(B) = 0.2$
 
 **Allora**:
 
-$$P(A \cap B) = 0.5 > 0.02 = P(A)P(B)$$
+$$P(A \cap B) = 0.05 > 0.02 = P(A)P(B)$$
 
 Per cui gli eventi **non sono indipendenti**, ovvero sono .orange[dipendenti].
 
@@ -440,7 +440,7 @@ include_graphics("img/venn4.png")
 **Siano**:
 - $A$ e $B$ due eventi .orange[qualsiasi]
 
-**Allora*:
+**Allora**:
 
 $$P(A \cup B) = P(A)+P(B)-P(A\cap B)$$
 
@@ -477,7 +477,7 @@ include_graphics("img/venn5.png")
 ---
 # .orange[Somma]: indipendenza
 
-**Siano**: $A$ e $B$ due eventi **.orange[indipendenti]**
+**Siano**: $A$ e $B$ due eventi **.orange[indipendenti]** (allora lo sono anche $\bar{A}$ e $B$)
 
 **Allora**:
 
@@ -549,7 +549,7 @@ class: inverse, middle
 ---
 # .orange[Condizionamento]: definizione
 
-La **.orange[probabilità condizionata]** $P(B|A)$ è definita come
+La **.orange[probabilità condizionata]** $P(B|A)$ (con $P(A) > 0$) è definita come
 
 $$P(B|A)=\frac{P(A \cap B)}{P(A)}$$
 
@@ -571,7 +571,7 @@ $$P(A \cap B) \neq P(A)P(B)$$
 ---
 # .orange[Condizionamento]: proprietà
 
-Per qualsiasi evento $A$ e $B$, si ha che
+Per qualsiasi evento $A$ e $B$ (con $0 < P(A) < 1$), si ha che
 
 $$P(B) = P(B|A)P(A)+P(B|\bar{A})P(\bar{A})$$
 
@@ -584,7 +584,7 @@ $$P(B|A)=\frac{P(A \cap B)}{P(A)}$$
 
 da cui
 
-$$P(A \cap B) = P(A|B)P(A)$$
+$$P(A \cap B) = P(B|A)P(A)$$
 ---
 # .orange[Condizionamento]: esempio
 
@@ -593,7 +593,7 @@ Si ipotizzi che:
 - **1 persona ogni 10000** con SKT .orange[negativo] abbia la TB
 - l'1\% della popolazione abbia SKT positivo
 
-**Si calcoli** la .orange[probabilità di tubercolosi (TB) nella popolazione] $P(TB)$, ovvero, si sitmi la porzione di malati di tubercolosi nella popolazione (chiamata: la **prevalenza** della malattia)
+**Si calcoli** la .orange[probabilità di tubercolosi (TB) nella popolazione] $P(TB)$, ovvero, si stimi la porzione di malati di tubercolosi nella popolazione (chiamata: la **prevalenza** della malattia)
 
 **Soluzione**
 $$\begin{split}P(TB)& =P(TB|SKT^+)P(SKT^+) + P(TB|SKT^-)P(SKT^-)\\& = (0.01)(0.01) + (0.0001)(1-0.01)\\& = 0.000199\end{split}$$
@@ -637,19 +637,19 @@ Dal Framingham Eye Study è noto che la probabilità di sviluppare una cataratta
 Si vuole conoscere **la percentuale di persone che potrebbe sviluppare una cataratta nei prossimi 5 anni**, e una stima del loro numero.
 
 ```{r, echo=FALSE}
-catarrata <- tibble::tibble(
+cataratta <- tibble::tibble(
   classe = c("60-64", "65-69", "70-74", "75+"),
   p_classe = c(0.45, 0.28, 0.20, 0.07),
-  p_catarrata5y_classe = c(0.024, 0.046, 0.088, 0.153)
+  p_cataratta5y_classe = c(0.024, 0.046, 0.088, 0.153)
 )
-knitr::kable(catarrata)
+knitr::kable(cataratta)
 ```
 </small>
 
 
 ]
 .panel[.panel-name[Soluzione]
-La percentuale di popolazione (o probabilità, su tale popolazione) $P(B)$ per l'evento $B$ di sviluppare catarrata a 5 anni equivale, per il teorema delle .orange[probabilità totali], alla somma delle probabilità di svilupparla per ciascuna classe di età (che rappresentano un insieme **esaustivo** a elementi **mutuamente disgiunti**) pesate per la probabilità di appartenere in tali classi.
+La percentuale di popolazione (o probabilità, su tale popolazione) $P(B)$ per l'evento $B$ di sviluppare cataratta a 5 anni equivale, per il teorema delle .orange[probabilità totali], alla somma delle probabilità di svilupparla per ciascuna classe di età (che rappresentano un insieme **esaustivo** a elementi **mutuamente disgiunti**) pesate per la probabilità di appartenere a tali classi.
 ]
 .panel[.panel-name[Conti]
 <small>
@@ -658,7 +658,7 @@ tibble::tibble(
   insieme = paste0("A_", 1:4),
   classe = c("60-64", "65-69", "70-74", "75+"),
   p_classe = c(0.45, 0.28, 0.20, 0.07),
-  p_catarrata5y_classe = c(0.024, 0.046, 0.088, 0.153)
+  p_cataratta5y_classe = c(0.024, 0.046, 0.088, 0.153)
 ) |> 
   knitr::kable()
 ```
@@ -671,13 +671,12 @@ Per esempio:
 $$\begin{split}P(B)& = \sum_{i=1}^4 P(B|A_i)P(A_i)\\& =
 (0.024)(0.45)+\ldots+(0.153)(0.07)\\& \simeq 0.052\end{split}$$
 
-e il numero stimato di persone con cataratta sarà: $5000 \times 0.052 \simeq 260$.
-persone.
+e il numero stimato di persone con cataratta sarà: $5000 \times 0.052 \simeq 260$ persone.
 </small>
 
 ```{r, include=FALSE}
 p_cataratta5y <- sum(
-    catarrata$p_classe * catarrata$p_catarrata5y_classe
+    cataratta$p_classe * cataratta$p_cataratta5y_classe
   ) |> 
   round(3)
 p_cataratta5y
@@ -709,7 +708,7 @@ $$\frac{P(B|A)}{P(B|\bar{A})}$$
  
 > NOTA 2:
 >
-> Definiamo **Rischio assoluto** il rapporto tra i casi osservati e i casi osservabili (osservabili vuol, dire: che sono sottoposti al rischio con una probabilità positiva che si possa verificare l'evento di interesse), ovvero la probabilità che un certo evento accada sotto determinate condizioni in una data popolazione.
+> Definiamo **Rischio assoluto** il rapporto tra il numero di casi osservati e il numero di persone a rischio (a rischio vuol dire: che sono sottoposte al rischio con una probabilità positiva che si possa verificare l'evento di interesse), ovvero la probabilità che un certo evento accada sotto determinate condizioni in una data popolazione.
 >
 
 ---
@@ -739,7 +738,7 @@ countdown(minutes = 3, warn_when = 1, play_sound = TRUE,
 
 Per i dati sul centro delle malattie a trasmissione sessuale, si è 
 interessati a calcolare:
-- la probabilità che il medico $B$ faccia diagnosi positiva data la diagnosi del medico $A$
+- la probabilità che il medico $B$ faccia diagnosi positiva data la diagnosi positiva del medico $A$
 - il corrispondente rischio relativo.
 
 Ricordando che
@@ -751,7 +750,7 @@ Ricordando che
 ]
 
 .panel[.panel-name[Soluzione $P(B^+|A^+)$ ]
-Partendo da $P(A \cap B) = P(A|B)P(B)$ otteniamo:
+Partendo da $P(A \cap B) = P(B|A)P(A)$ otteniamo:
 
 
 .left-column[
@@ -762,7 +761,7 @@ Partendo da $P(A \cap B) = P(A|B)P(B)$ otteniamo:
 
 ]
 
-.rigth-column[.right[
+.right-column[.right[
 
 $$\begin{split}P(B^+|A^+)& = \frac{P(B^+\cap A^+)}{P(A^+)}\\& = 0.08/0.1\\& = 0.8\end{split}$$
 ]]
@@ -786,7 +785,7 @@ $$\begin{split}P(B^+|A^+)& = \frac{P(B^+\cap A^+)}{P(A^+)}\\& = 0.08/0.1\\& = 0.
 
 ]]
 
-.rigth-column[.rigth[
+.right-column[.right[
 
 $$\begin{split}P(B^+|A^-)& = \frac{P(B^+\cap A^-)}{P(A^-)}\\& = \frac{P(B^+)-P(B^+\cap A^+)}
 {P(A^-)}\\& =\frac{0.17-0.08}{0.9}\\& = 0.1\end{split}$$
@@ -804,7 +803,7 @@ $$\begin{split}P(B^+|A^-)& = \frac{P(B^+\cap A^-)}{P(A^-)}\\& = \frac{P(B^+)-P(B
 # .orange[Test di screening]: valori predittivi
 
 
-Il **valore predittivo positivo** (o anche **precisione**) $PV^+$ di un test di screening è la probabilià che la persona abbia la malattia dato un test positivo
+Il **valore predittivo positivo** (o anche **precisione**) $PV^+$ di un test di screening è la probabilità che la persona abbia la malattia dato un test positivo
 
 $$PV^+ = P(\mbox{malattia}|\mbox{test}^+)$$
 
@@ -930,7 +929,7 @@ countdown(minutes = 5, warn_when = 1, play_sound = TRUE,
 
 **Si ipotizzi** che:
 - la probabilità che un iperteso sia .orange[correttamente classificato] come tale da una macchina per la misurazione automatica della pressione sia pari a 0.84
-- la probabilità che un normopeso sia .orange[erroneamente classificato] come iperteso, sia pari a 0.23.
+- la probabilità che un normoteso sia .orange[erroneamente classificato] come iperteso, sia pari a 0.23.
 - la prevalenza dell'ipertensione nella popolazione è del 20\%
 
 **Si calcolino**: i valori predittivi (positivo e negativo) della macchina.
@@ -945,7 +944,7 @@ Dai dati:
 Dal teorema di Bayes:
 
 
-$$\begin{split}PV+& = \frac{SENS\cdot prev}{(SENS\cdot prev) + (1- SPEC)\cdot(1 - prev)}\\& =  \frac{(0.84)0.2}{(0.84)0.2 + (0.23)0.8}\\& = \frac{0.162}{0.352}\\& = 0.48\end{split}$$
+$$\begin{split}PV^+& = \frac{SENS\cdot prev}{(SENS\cdot prev) + (1- SPEC)\cdot(1 - prev)}\\& =  \frac{(0.84)0.2}{(0.84)0.2 + (0.23)0.8}\\& = \frac{0.168}{0.352}\\& = 0.48\end{split}$$
 
 ]
 .panel[.panel-name[Soluzione PV-]
@@ -1019,11 +1018,11 @@ countdown(minutes = 3, warn_when = 1, play_sound = TRUE,
 <small>
 Si supponga che un uomo di età pari a 60 anni, **non fumatore**, presenti dei sintomi come **tosse cronica** e **affanno occasionale**.
 
-Il medico prescrive una biopsia polmonare, il cui risultato è consistente con varie patologie, quali:
+Il medico prescrive una biopsia polmonare, il cui risultato è consistente con vari stati, quali:
 
-1. una malattia polmonare .orange[non fatale]
+1. nessuna malattia (.orange[normale])
 2. il .orange[tumore polmonare],
-3. la .orange[sarcoidosi]
+3. la .orange[sarcoidosi] (malattia polmonare di solito non fatale)
 
 $$\mbox{sintomi}=T=\{\mbox{tosse cronica},\mbox{affanno occasionale}, \mbox{biopsia}\}$$
 
@@ -1033,7 +1032,7 @@ sia inoltre
 
 $$ P(T|M_1)=0.001 \:\:\: P(T|M_2)=0.9 \:\:\: P(T|M_3)=0.9$$
 $$P(M_1)=0.99 \:\:\: P(M_2)=0.001 \:\:\: P(M_3)=0.009$$
-Si vuole conoscere le probabilità degli stati patologici dati i sintomi
+Si vogliono conoscere le probabilità degli stati patologici dati i sintomi
 
 </small>
 
@@ -1055,7 +1054,7 @@ Si supponga ora che lo stesso paziente sia fumatore di due pacchetti di
 sigarette al giorno per 40 anni. Si abbia quindi che in questo gruppo di persone
 
 $$P(M_1)=0.98 \:\:\: P(M_2)=0.015 \:\:\: P(M_3)=0.005$$
-Sempre cnsiderando le stesse probabilità di avere i sintomi in evidenza se soggetti ai vari stati patologici in esame:
+Sempre considerando le stesse probabilità di avere i sintomi in evidenza se soggetti ai vari stati patologici in esame:
 
 $$P(T|M_1) = 0.001 \:\:\: P(T|M_2)=0.9 \:\:\: P(T|M_3)=0.9$$
 La probabilità degli stati patologici è?
@@ -1101,7 +1100,7 @@ class: inverse, center, middle, hide-count
 
 .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
 .left[
-_If you believe that witnessing **.orange[an additional white swan]** will bring **confirmation** that there are **.orange[no black swans]**, than you should also accept the statement, on purely logical ground, that the sighting of a **.orange[red Mini Cooper]** **should confirm** that there are **.orange[no black swans]**. [...] "**all** swans **are** white" implies that "all **nonwhite** objects are **not swans**"._
+_If you believe that witnessing **.orange[an additional white swan]** will bring **confirmation** that there are **.orange[no black swans]**, then you should also accept the statement, on purely logical grounds, that the sighting of a **.orange[red Mini Cooper]** **should confirm** that there are **.orange[no black swans]**. [...] "**all** swans **are** white" implies that "all **nonwhite** objects are **not swans**"._
 ]
 
 .tr[

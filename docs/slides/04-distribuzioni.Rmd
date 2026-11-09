@@ -214,7 +214,7 @@ class: inverse, middle
 
 Distribuzione **binomiale** (ovvero per variabili con due soli possibili esiti)
 
-Distribuzione di **Poisson** (ovvero per varibili _conteggio_) e approssimazione della binomiale
+Distribuzione di **Poisson** (ovvero per variabili _conteggio_) e approssimazione della binomiale
 
 **Modello** probabilistico per variabili continue: densità
 
@@ -249,7 +249,7 @@ class: inverse, middle
 
 Una variabile casuale è una quantità che assume **valori differenti** con **specifiche probabilità**
 
-- una variabile casuale che assume un .orange[insieme discreto] di valori con probabilità specificata à detta variabile casuale **discreta**
+- una variabile casuale che assume un .orange[insieme discreto] di valori con probabilità specificata è detta variabile casuale **discreta**
 
 - una variabile casuale che assume un .orange[insieme continuo] (e infinito) di valori, in modo che **gli intervalli** di tali valori abbiano probabilità specificata è detta variabile casuale continua
 
@@ -353,7 +353,7 @@ ipertensione |>
   geom_point(aes(y = .data[["P(X=r)"]]), colour = "red") +
   theme_bw() +
   ggtitle(
-    "Distribuzione Cumulativa Empirica",
+    "Distribuzione Cumulativa",
     subtitle = "In rosso la massa di probabilità per ciascun corrispondente possibile valore."
   )
 ```
@@ -432,7 +432,7 @@ atteso_otiti <- sum(
 )
 ```
 
-il numero atteso di episodi di episodi di otite nei primi due anni di vita è:
+il numero atteso di episodi di otite nei primi due anni di vita è:
 
 
 $$\begin{split}E(X) =\ &0(0.129)\ + \\&1(0.264)\ + \\& 2(0.271)\ + \\&3(0.185)\ + \\&4(0.095)\ + \\&5(0.039)\ + \\& 6(0.017) =\\& `r atteso_otiti` \end{split}$$
@@ -458,7 +458,7 @@ $$\mbox{var}(X)=\sum_r(x_r-\mu)^2P(X=x_r)=\sigma^2$$
 
 vale anche
 
-$$\sigma^2=E(X-\mu)=\left(\sum_rx_r^2P(X=x_r)\right)-\mu^2$$
+$$\sigma^2=E[(X-\mu)^2]=\left(\sum_r x_r^2P(X=x_r)\right)-\mu^2$$
 ]
 .panel[.panel-name[Esempio]
 
@@ -499,7 +499,7 @@ class: inverse, middle
 ---
 # .orange[Binomiale]: struttura
 
-Una variabile binomiale rapresenta la **.orange[quantità]** di esiti **positivi** di un possibile esperimento con due soli risultati possibili (**dicotomico**), che possono avvenire con date **.orange[probabilità costanti]** (complementari a 1).
+Una variabile binomiale rappresenta la **.orange[quantità]** di esiti **positivi** di un possibile esperimento con due soli risultati possibili (**dicotomico**), che possono avvenire con date **.orange[probabilità costanti]** (complementari a 1).
 
 Si caratterizza quindi da:
 
@@ -509,7 +509,7 @@ Si caratterizza quindi da:
 
 - la probabilità di successo, $p$ è .orange[costante] in ogni prova (quella di insuccesso è pari a $1-p = q$)
 
-Ed è utile Utile per:
+Ed è utile per:
 
 - valutare la probabilità di $k$ successi in $n$ prove
 
@@ -535,11 +535,11 @@ $$_nC_k=\binom{n}{k}=\frac{n!}{k!(n-k)!}$$
 ---
 ## Distribuzione .orange[Binomiale]: probabilità
 
-la probabilità che $k$ successi avvengano in $n$ prove, con le rimantenti $n-k$ tutte insuccessi è pari a
+la probabilità che $k$ successi avvengano in $n$ prove, con le rimanenti $n-k$ tutte insuccessi è pari a
 
 $$p^k(1-p)^{n-k}$$
 
-Tenendo conto che i $k$ successi posso ottenerli in $_nC_k$ modi diversi, si ha che
+Tenendo conto che i $k$ successi si possono ottenere in $_nC_k$ modi diversi, si ha che
 
 $$P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}$$
 
@@ -560,7 +560,7 @@ knitr::include_graphics("img/Algebra1_12_fig003.svg.png")
 # Distribuzione .orange[Binomiale]
 
 .panelset[
-.panel[.panel-name[Descrizone]
+.panel[.panel-name[Descrizione]
 
 La distribuzione binomiale, di parametri $n$ e $p$ si indica come
 
@@ -604,17 +604,17 @@ pbinom(q = 2, size = 5, prob = 0.51) -
 ---
 ## .orange[Binomiale]: Valore atteso e varianza
 
-Per definizione si ha che: $E(S) = \sum_{i\in I}x_iP(X=x_i)$
+Per definizione si ha che: $E(S) = \sum_{k} k\,P(S=k)$
 
 Da cui: $E(S) =\sum_{k=0}^n k\binom{n}{k}p^kq^{n-k}$
 
-Del resto, Se $S$ è la somma degli esiti dei singoli lanci (che possimo indicare come variabile casuale $X$), allora per linearità
+Del resto, se $S$ è la somma degli esiti delle singole prove (che possiamo indicare come variabili casuali $X_1,\ldots,X_n$), allora per linearità
 
 $$E(S) = E\left(\sum_{i=1}^n X_i\right) = \sum_{i=1}^nE(X_i) = \sum_{i=1}^np=np$$
 
 Sempre per definizione, la varianza sarà: $\mbox{var}(S)=\sum_{k=0}^n (k-np)^2 \binom{n}{k}p^kq^{n-k}$
 
-Che possiamo calcolare per linearità più semplicemente come
+Che, essendo le prove indipendenti, possiamo calcolare più semplicemente come
 
 $$var(S) = var\left(\sum_{i=1}^n X_i\right) = \sum_{i=1}^nvar(X_i) =^*  \sum_{i=1}^npq=npq$$
 <br>
@@ -637,8 +637,8 @@ db <- tibble(
 ggplot(db, aes(x = p, y = pq)) +
   geom_point() +
   theme_bw() +
-  ggtitle("Attesa e Varianza per distribuzione Binomiale con n = 1",
-        subtitle = "(Nota anche come distribuzione Bernulli)")
+  ggtitle("Varianza per distribuzione Binomiale con n = 1",
+        subtitle = "(Nota anche come distribuzione Bernoulli)")
 
 ```
 
@@ -650,7 +650,7 @@ ggplot(db, aes(x = p, y = pq)) +
 
 ```{r, echo=FALSE, out.width="60%"}
 n <- 10
-k <- seq_len(n)
+k <- 0:n
 p <- c(0.05, 0.5, 0.95)
 
 
@@ -692,7 +692,7 @@ class: inverse, middle
 ---
 # .orange[Poisson]: struttura
 
-Dato un intervallo di tempo $\Delta t$, si ha che
+Dato un intervallo di tempo $\Delta t$ molto piccolo, si ha che
 
 - la probabilità di osservare un evento è direttamente proporzionale alla lunghezza dell'intervallo di tempo $\Delta t$, ovvero, per una qualche costante $\lambda$, abbiamo:
 
@@ -704,19 +704,19 @@ $$P(\mbox{1 evento})\sim \lambda\,\Delta t$$
 
 - la probabilità di osservare più di un evento nell'intervallo è sostanzialmente $0$
 
-- .orange[Stazionarietà]: il numero di eventi per unità di tempo è lo stesso in tutto l'intervallo di tempo $t$ (no trend)
+- .orange[Stazionarietà]: il numero _atteso_ di eventi per unità di tempo ( $\lambda$ ) è lo stesso in tutto l'intervallo di tempo $t$ (no trend)
 
-- .orange[Indipendenza]: se si verifica un evento nell'intervallo di tempo considerato, questa non modifica la probabilità di osservarne un secondo nell'intervallo successivo.
+- .orange[Indipendenza]: se si verifica un evento nell'intervallo di tempo considerato, questo non modifica la probabilità di osservarne un secondo nell'intervallo successivo.
 
 
 ---
 ## Distribuzione di .orange[Poisson]: probabilità
 
-La probabilità di osservare $k$ eventi in un periodo di tempo $t$ per una variabile aleatoria di Poisson di parametro $\lambda$ è pari a
+La probabilità di osservare $k$ eventi in un periodo di tempo $t$ per una variabile aleatoria di Poisson di tasso $\lambda$ (parametro $\mu=\lambda t$) è pari a
 
-$$P(X=k)=\frac{e^{-\mu}\mu^k}{k!}$$
+$$P(X=k)=\frac{e^{-\mu}\mu^k}{k!} \:\:\:\: k=0,1,2,\ldots$$
 
-dove $\mu=\lambda t$ ed $e$ è pari approssimativamente a 2.71828 è la costante di Nepero.
+dove $e$, pari a circa 2.71828, è la costante di Nepero.
 
 ---
 ## Distribuzione di .orange[Poisson]
@@ -770,7 +770,7 @@ ggplot(db, aes(n, `P(X=n)`, fill = mu)) +
 ---
 # .orange[Poisson]: valore atteso e varianza
 
-Per una distribuzione di Poisson con parametro $\mu$, la media e la varianza sono entrambi pari a $\mu$
+Per una distribuzione di Poisson con parametro $\mu$, la media e la varianza sono entrambe pari a $\mu$
 
 
 ---
@@ -800,13 +800,13 @@ Probabilmente vi è un effetto di clustering rispetto a certi periodi temporali 
 # .orange[Poisson]: cibo cancerogeno
 
 
-In uno studio sul possibile effetto cancerogneo di EDB (etilene dibromide), osservando la mortalità di 161 operai bianchi, occupati presso due fabbriche, Texas e Michigan, 1940-1975 [Ott \em et al., B J Ind Med, 1980:37, 163-8]
+In uno studio sul possibile effetto cancerogeno di EDB (etilene dibromide), osservando la mortalità di 161 operai bianchi, occupati presso due fabbriche, Texas e Michigan, 1940-1975 [Ott _et al._, B J Ind Med, 1980:37, 163-8]
 
 Si sono osservate 7 morti per cancro. In base ai dati di mortalità degli USA, si sarebbero attese in quel periodo 5.8 morti per cancro.
 
 Si cerca quindi la probabilità di osservare almeno 7 morti  secondo una Poisson di parametro $\mu=5.8$.
 
-$$\begin{align}P(X \geq 7) &= 1 - P(X\leq 6)\\& = 1-(e^{-5.8}5.8^0/0!)+ \ldots + (e^{-5.8}5.8^6/6!)\\& = `r round(1-sum(dpois(0:6, lambda=5.8)),3)`\end{align}$$
+$$\begin{align}P(X \geq 7) &= 1 - P(X\leq 6)\\& = 1-\left[(e^{-5.8}5.8^0/0!)+ \ldots + (e^{-5.8}5.8^6/6!)\right]\\& = `r round(1-sum(dpois(0:6, lambda=5.8)),3)`\end{align}$$
 
 
 
@@ -814,7 +814,7 @@ per cui le morti non sembrano in eccesso in questo gruppo di lavoratori.
 
 
 ---
-# .orange[Poisson]: Approssimazone
+# .orange[Poisson]: Approssimazione
 
 La distribuzione Binomiale con $n$ grande e $p$ piccolo può essere accuratamente approssimata da una distribuzione di Poisson con parametro $\mu=np$
 
@@ -856,7 +856,7 @@ In base a studi di popolazione, si pensa che in queste classi di età si dovrebb
 
 Secondo la probabilità binomiale, con $n=1000$ e $p=1/1000$ si ha che
 $$\begin{split}
-P(X\geq 4)& = 1 - P(X\leq 3)\\& = 1- \left [\binom{1000}{0} (.001)^0(.9999)^{1000}+\ldots+\binom{1000}{3} (.001)^3(.9999)^{997}  \right ]\\&\end{split}$$
+P(X\geq 4)& = 1 - P(X\leq 3)\\& = 1- \left [\binom{1000}{0} (.001)^0(.999)^{1000}+\ldots+\binom{1000}{3} (.001)^3(.999)^{997}  \right ]\\& = `r round(1-pbinom(3, size = 1000, prob = 0.001),3)`\end{split}$$
 
 Secondo la probabilità di Poisson, con $\mu = 1$, si ha che
 
@@ -922,7 +922,7 @@ La distribuzione di .orange[densità] di probabilità di una variabile casuale $
 .panel[.panel-name[Ipertensione]
 
 <small>
-Densità di probabilità per la DBP in un uomo di età 35-44. A, B, C sono rispettivamente Borderline, Moderatamente iperteso e Iperteso.
+Densità di probabilità per la DBP in un uomo di età 35-44. A (90-95), B (95-100), C (> 100) sono rispettivamente Borderline, Moderatamente iperteso e Iperteso.
 
 ```{r, echo=FALSE, fig.height=6, fig.width=12, fig.align='center', message=FALSE, warning=FALSE}
 
@@ -935,10 +935,10 @@ lines(c(80,80),c(-0.1, dnorm(80,mean=80, sqrt(144))),lty=2)
 lines(c(90,90),c(-0.1, dnorm(90,mean=80, sqrt(144))),lty=2)
 
 lines(c(95,95),c(-0.1, dnorm(95,mean=80, sqrt(144))),lty=2)
-lines(c(95,95),c(-0.1, dnorm(95,mean=80, sqrt(144))),lty=2)
-text(85,0.005,"A",cex=2)
-text(93,0.005,"B",cex=2)
-text(97,0.005,"C",cex=2)
+lines(c(100,100),c(-0.1, dnorm(100,mean=80, sqrt(144))),lty=2)
+text(92.5,0.005,"A",cex=2)
+text(97.5,0.005,"B",cex=2)
+text(103,0.0015,"C",cex=2)
 
 ```
 
@@ -947,21 +947,21 @@ text(97,0.005,"C",cex=2)
 ]
 .panel[.panel-name[Trigliceridi]
 
-La ditribuzione dei trigliceridi è asimmetrica, con skewness positivo
+La distribuzione dei trigliceridi è asimmetrica, con skewness positivo
 
 ```{r, echo=FALSE, fig.height=6, fig.width=12, fig.align='center', message=FALSE, warning=FALSE}
 
 plotGamma <- function(shape=2, rate=0.5, to=0.99, p=c(0.1, 0.9), cex=1, ...){
   to <- qgamma(p=to, shape=shape, rate=rate)
   curve(dgamma(x, shape, rate), from=0, to=to, n=500, type="l", 
-        main=sprintf("Serum Tryglicerides (mg/dl)", shape, rate),yaxt="n",
+        main=sprintf("Serum Triglycerides (mg/dl)", shape, rate),yaxt="n",
         bty="n", xaxs="i", yaxs="i", col="blue", xlab="", ylab="", 
         las=1, lwd=2, cex=cex, cex.axis=cex, cex.main=cex, ...)
   gx <- qgamma(p=p,  shape=shape, rate=rate)
   gy <- dgamma(x=gx, shape=shape, rate=rate)
   
 }
-plotGamma(2, 0.1)
+plotGamma(2, 0.015)
 
 ```
 
@@ -973,21 +973,21 @@ plotGamma(2, 0.1)
 ---
 # .orange[Probabilità **cumulativa**]
 
-La distribuzione di probabilità cumulativa di una variabile casuale $X$ valutata in un punto $a$ è pari alla probabilità che $X$ prenda valori in $\leq a$.
+La distribuzione di probabilità cumulativa di una variabile casuale $X$ valutata in un punto $a$ è pari alla probabilità che $X$ prenda valori $\leq a$.
 
 Rappresenta l'area sotto la curva alla sinistra di $a$
 
 
 ### Esempio
 <small>
-La distribuzione cumulativa del peso alla nascita (once) valutata in 0.88 once è pari a $P(X\leq 88)$ ed è pari all'area sotto la curva a sinistra di 88 once.
+La distribuzione cumulativa del peso alla nascita (once) valutata in 88 once è pari a $P(X\leq 88)$ ed è pari all'area sotto la curva a sinistra di 88 once.
 Questo valore è usato come limite per possibili outcomes sfavorevoli nel primo anno di vita
 
 ```{r, echo=FALSE, fig.height=3.5, fig.width=12, fig.align='center', message=FALSE, warning=FALSE}
 
 x   <- seq(0,250,length=1000)
 y   <- dnorm(x,mean=120, 30)
-plot(x,y, type="l", lwd=2,xlim=c(0,250), col="blue",ylab=expression(Density),xlab = "Birt weigth")
+plot(x,y, type="l", lwd=2,xlim=c(0,250), col="blue",ylab=expression(Density),xlab = "Birth weight")
 
 lines(c(88,88),c(-0.1, dnorm(88,mean=120, 30)),lty=2)
 
@@ -1072,14 +1072,14 @@ class: inverse, middle
 # Distribuzione .orange[Normale]: definizione
 
 
-$$f(x) = \frac{1}{\sqrt{2\pi\sigma}}e^{-\frac{1}{2\sigma^2}(X-\mu)^2} \:\:\:\: -\infty<x<\infty$$
+$$f(x) = \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2\sigma^2}(x-\mu)^2} \:\:\:\: -\infty<x<\infty$$
 
 
 ```{r, echo=FALSE, fig.height=5, fig.width=12, fig.align='center', message=FALSE, warning=FALSE}
 
 x   <- seq(-3,3,length=1000)
 y   <- dnorm(x,mean=0, sqrt(1))
-plot(x,y, type="l", lwd=2,xlim=c(-3,3), col="blue",ylab=expression(Density),xlab = "Normal distributiion",xaxt="n")
+plot(x,y, type="l", lwd=2,xlim=c(-3,3), col="blue",ylab=expression(Density),xlab = "Normal distribution",xaxt="n")
 
 lines(c(-1,-1),c(-0.1, dnorm(-1,mean=0, sqrt(1))),lty=2)
 
@@ -1103,7 +1103,7 @@ La distribuzione normale è definita dalla sua distribuzione di densità di prob
 ---
 # Distribuzione Normale:<br>.orange[parametri]
 
-$$f(x) = \frac{1}{\sqrt{2\pi\sigma}}e^{-\frac{1}{2\sigma^2}(X-\mu)^2} \:\:\:\: -\infty<x<\infty$$
+$$f(x) = \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2\sigma^2}(x-\mu)^2} \:\:\:\: -\infty<x<\infty$$
 
 Una distribuzione normale con media $\mu$ e varianza $\sigma^2$ si indica come $N(\mu, \sigma^2)$.
 
@@ -1112,7 +1112,7 @@ I suoi parametri modellano la locazione e la forma della distribuzione
 ---
 # Distribuzione Normale: .orange[localizzazione]
 
-$$f(x) = \frac{1}{\sqrt{2\pi\sigma}}e^{-\frac{1}{2\sigma^2}(X-\mu)^2} \:\:\:\: -\infty<x<\infty$$
+$$f(x) = \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2\sigma^2}(x-\mu)^2} \:\:\:\: -\infty<x<\infty$$
 
 ```{r, echo=FALSE, fig.height=5, fig.width=12, fig.align='center', message=FALSE, warning=FALSE}
 x   <- seq(-7,3,length=1000)
@@ -1120,7 +1120,7 @@ y   <- dnorm(x,mean=0, sqrt(1))
 y1   <- dnorm(x,mean=-3, sqrt(1))
 
 
-plot(x,y, type="l", lwd=2,xlim=c(-6,3), col="blue",ylab=expression(Density),xlab = "Normal distributiion",xaxt="n")
+plot(x,y, type="l", lwd=2,xlim=c(-6,3), col="blue",ylab=expression(Density),xlab = "Normal distribution",xaxt="n")
 points (x, y1, type="l", lwd=2, col="blue")
 
 
@@ -1142,7 +1142,7 @@ axis(1, at=-4, expression(mu[1]-sigma),cex.axis=1.5)
 ---
 # Distribuzione Normale:<br>.orange[forma]
 
-$$f(x) = \frac{1}{\sqrt{2\pi\sigma}}e^{-\frac{1}{2\sigma^2}(X-\mu)^2} \:\:\:\: -\infty<x<\infty$$
+$$f(x) = \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2\sigma^2}(x-\mu)^2} \:\:\:\: -\infty<x<\infty$$
 
 ```{r, echo=FALSE, fig.height=5, fig.width=12, fig.align='center', message=FALSE, warning=FALSE}
 x   <- seq(-3,3,length=1000)
@@ -1150,23 +1150,23 @@ y   <- dnorm(x,mean=0, sqrt(1))
 y1   <- dnorm(x,mean=0, sqrt(0.4))
 
 
-plot(x,y1, type="l", lwd=2,xlim=c(-3,3), col="blue",ylab=expression(Density),xlab = "Normal distributiion",xaxt="n")
+plot(x,y1, type="l", lwd=2,xlim=c(-3,3), col="blue",ylab=expression(Density),xlab = "Normal distribution",xaxt="n")
 points (x, y, type="l", lwd=2, col="blue")
 
 
 lines(c(1,1),c(-0.1, dnorm(-1,mean=0, sqrt(1))),lty=2)
 lines(c(-1,-1),c(-0.1, dnorm(-1,mean=0, sqrt(1))),lty=2)
 lines(c(0,0),c(-0.1, dnorm(0,mean=0, sqrt(0.4))),lty=2)
-lines(c(0.4,0.4),c(-0.1, dnorm(0.4,mean=0, sqrt(0.4))),lty=2)
-lines(c(-0.4,-0.4),c(-0.1, dnorm(-0.4,mean=0, sqrt(0.4))),lty=2)
+lines(c(sqrt(0.4),sqrt(0.4)),c(-0.1, dnorm(sqrt(0.4),mean=0, sqrt(0.4))),lty=2)
+lines(c(-sqrt(0.4),-sqrt(0.4)),c(-0.1, dnorm(-sqrt(0.4),mean=0, sqrt(0.4))),lty=2)
 
 
 
 axis(1, at=0, expression(mu),cex.axis=1.5)
 axis(1, at=-1, expression(mu-sigma[2]),cex.axis=1.5)
 axis(1, at=1, expression(mu+sigma[2]),cex.axis=1.5)
-axis(1, at=-0.4, expression(mu-sigma[1]),cex.axis=1.5)
-axis(1, at=0.4, expression(mu-sigma[1]),cex.axis=1.5)
+axis(1, at=-sqrt(0.4), expression(mu-sigma[1]),cex.axis=1.5, padj=1.2)
+axis(1, at=sqrt(0.4), expression(mu+sigma[1]),cex.axis=1.5, padj=1.2)
 ```
 
 
@@ -1185,7 +1185,7 @@ $$f(x) = \frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}x^2} \:\:\:\: -\infty<x<\infty$$
 
 > Memo: distribuzione Normale (generale):
 >
-> $$f(x) = \frac{1}{\sqrt{2\pi\sigma}}e^{-\frac{1}{2\sigma^2}(X-\mu)^2} \:\:\:\: -\infty<x<\infty$$
+> $$f(x) = \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2\sigma^2}(x-\mu)^2} \:\:\:\: -\infty<x<\infty$$
 
 
 ---
@@ -1198,7 +1198,7 @@ x   <- seq(-3,3,length=1000)
 y   <- dnorm(x,mean=0, sqrt(1))
 
 
-plot(x,y, type="l", lwd=2,xlim=c(-3,3), col="blue",ylab=expression(Density),xlab = "Standard Normal distributiion",xaxt="n")
+plot(x,y, type="l", lwd=2,xlim=c(-3,3), col="blue",ylab=expression(Density),xlab = "Standard Normal distribution",xaxt="n")
 axis(1, at=0, expression(0),cex.axis=1.5)
 lines(c(0,0),c(-0.1, dnorm(0,mean=0, sqrt(1))),lty=2)
 
@@ -1216,7 +1216,7 @@ lines(c(0,0),c(-0.1, dnorm(0,mean=0, sqrt(1))),lty=2)
 - circa il 99% dell'area cade tra circa $-2.5$ e $2.5$
 
 ```{r, echo=FALSE, fig.height=5, fig.width=12, fig.align='center', message=FALSE, warning=FALSE}
-plot(x,y, type="l", lwd=2,xlim=c(-3,3), col="blue",ylab=expression(Density),xlab = "Standard Normal distributiion",xaxt="n")
+plot(x,y, type="l", lwd=2,xlim=c(-3,3), col="blue",ylab=expression(Density),xlab = "Standard Normal distribution",xaxt="n")
 axis(1, at=0, expression(0),cex.axis=1.5)
 axis(1, at=-1,-1,cex.axis=1.5,col.axis="blue")
 axis(1, at=1,1,cex.axis=1.5,col.axis="blue")
@@ -1229,24 +1229,24 @@ axis(1, at=-2.576,-2.576,cex.axis=1.5,col.axis="green")
 > (Spoiler: percentili?...)
 
 ---
-## Distribuzone Standard: cumulativa
+## Distribuzione Standard: cumulativa
 
-La distribuzione cumulativa per $N(0, 1)$ è indicata da $\Phi(x) = P(X\leq x)$
+La distribuzione cumulativa per $N(0, 1)$ è indicata da $\Phi(x) = P(Z\leq x)$
 ```{r, echo=FALSE, fig.height=4, fig.width=12, message=FALSE, warning=FALSE}
 x   <- seq(-3,3,length=1000)
 y   <- dnorm(x,mean=0, sqrt(1))
-plot(x,y, type="l", lwd=2,xlim=c(-3,3),ylab=expression(Density),xlab = "Standard Normal distributiion",xaxt="n")
+plot(x,y, type="l", lwd=2,xlim=c(-3,3),ylab=expression(Density),xlab = "Standard Normal distribution",xaxt="n")
 cord.x <- c(1.2,seq(1.2,-3,-0.01),-3) 
 cord.y <- c(0,dnorm(seq(1.2,-3,-0.01)),0) 
 polygon(cord.x,cord.y,col="grey90")
 
-text(0,0.2, "Pr(X <= x)",cex = 2)
+text(0,0.2, "Pr(Z <= x)",cex = 2)
 axis(1, at=1.2,"x",cex.axis=1.5)
 ```
 ```{r, echo=FALSE, fig.height=4, fig.width=12, message=FALSE, warning=FALSE}
 x   <- seq(-3,3,length=1000)
 y   <- pnorm(x,mean=0, sqrt(1))
-plot(x,y, type="l", lwd=2,xlim=c(-3,3), col="blue",ylab=expression(Phi[x]),xlab = " CDF Standard Normal distributiion",xaxt="n")
+plot(x,y, type="l", lwd=2,xlim=c(-3,3), col="blue",ylab=expression(Phi[x]),xlab = " CDF Standard Normal distribution",xaxt="n")
 axis(1, at=0, 0,cex.axis=1.5)
 axis(1, at=-1,-1,cex.axis=1.5)
 axis(1, at=1,1,cex.axis=1.5)
@@ -1275,7 +1275,7 @@ text(1.64,0.02,round(pnorm(1.96,mean=0, sqrt(1)),3),cex = 1.5)
 
 La cumulata $\Phi(x)$ può aiutare a calcolare le probabilità di una $N(0,1)$
 
-Trovare (non _calcolare_) $P(X \leq 1.96)$ e $P(X \leq 1)$... cerco i valori nelle tavole:
+Trovare (non _calcolare_) $P(Z \leq 1.96)$ e $P(Z \leq 1)$... cerco i valori nelle tavole:
 
 $$\Phi(1.96) = 0.975$$
 
@@ -1286,14 +1286,14 @@ $$\Phi(1) = 0.8413$$
 
 Per la simmetria si ha che
 
-$$\Phi(-x)=P(X\leq -x) = P(X \geq x) = 1-P(X\leq x) = 1-\Phi(x)$$
+$$\Phi(-x)=P(Z\leq -x) = P(Z \geq x) = 1-P(Z\leq x) = 1-\Phi(x)$$
 
 ```{r, echo=FALSE, fig.height=6, fig.width=12, fig.align='center', message=FALSE, warning=FALSE}
 x   <- seq(-3,3,length=1000)
 y   <- dnorm(x,mean=0, sqrt(1))
 
 
-plot(x,y, type="l", lwd=2,xlim=c(-3,3), col="blue",ylab=expression(f(x)),xlab = "Standard Normal distributiion",xaxt="n")
+plot(x,y, type="l", lwd=2,xlim=c(-3,3), col="blue",ylab=expression(f(x)),xlab = "Standard Normal distribution",xaxt="n")
 axis(1, at=0, expression(0),cex.axis=1.5)
 axis(1, at=-1,"-x",cex.axis=1.5)
 axis(1, at=1,"x",cex.axis=1.5)
@@ -1314,10 +1314,10 @@ polygon(cord.x,cord.y,col="grey90")
 ---
 ### Strategia: esempio
 
-Per calcolare $P(X \leq -1.96)$ si ha che:
+Per calcolare $P(Z \leq -1.96)$ si ha che:
 
 
-$$\Phi(-1.96) = P(X\geq 1.96) = 1 - P(X\leq 1.96) = 0.0250$$
+$$\Phi(-1.96) = P(Z\geq 1.96) = 1 - P(Z\leq 1.96) = 0.0250$$
 
 ---
 ### Normale Standard: .orange[FVC]
@@ -1327,11 +1327,11 @@ La **capacità vitale forzata** (FVC) è una misura di funzionalità polmonare e
 
 Si fa riferimento ad una FVC standard per ovviare a elementi di confondimento (età, fumo, ...).
 
-Un bambino è considerato a rischio se con un a FVC a più di 1.5 deviazioni standard inferiore alla media.
+Un bambino è considerato a rischio se ha una FVC inferiore alla media di più di 1.5 deviazioni standard.
 
-Allora, **sotto l'ipotesi che lo scarto dalla FVC si distribuisca come una Normale Standard**, possiamo calcolare con quel probabilità posiamo trovare valori più estremi, ovvero:
+Allora, **sotto l'ipotesi che lo scarto dalla FVC si distribuisca come una Normale Standard**, possiamo calcolare con quale probabilità possiamo trovare valori più estremi, ovvero:
 
-$$P(X \leq -1.5) = P(X \geq 1.5) = 0.0668$$
+$$P(Z \leq -1.5) = P(Z \geq 1.5) = 0.0668$$
 
 Ovvero, possiamo ipotizzare che circa il 7% dei bambini siano in condizioni polmonari compromesse
 
@@ -1345,7 +1345,7 @@ Di prassi, un bambino sarà considerato con un sistema polmonare _normale_ se pr
 
 ]
 .panel[.panel-name[Soluzione]
-$$\begin{split}P(-1.5 \leq X \leq 1.5)& = 1 - (P(X \leq -1.5) + P(X \geq 1.5))\\& = 1 - 2*P(X \leq -1.5)\\& = 1 - 2 * 0.0668\\& = 0.8664\end{split}$$
+$$\begin{split}P(-1.5 \leq Z \leq 1.5)& = 1 - (P(Z \leq -1.5) + P(Z \geq 1.5))\\& = 1 - 2*P(Z \leq -1.5)\\& = 1 - 2 * 0.0668\\& = 0.8664\end{split}$$
 
 ]
 ]
@@ -1366,16 +1366,16 @@ countdown(minutes = 2, warn_when = 30, play_sound = TRUE,
 ---
 # Distribuzione Normale: .orange[percentili]
 
-Il $100-p$ percentile di una normale standard è indicato con $z_p$ ed è definito dalla relazione
+Il $100p$-esimo percentile di una normale standard è indicato con $z_p$ ed è definito dalla relazione
 
-$$P(X < z_p)=p$$
+$$P(Z < z_p)=p$$
 
 ```{r, echo=FALSE, fig.height=5, fig.width=12, fig.align='center', message=FALSE, warning=FALSE}
 x   <- seq(-3,3,length=1000)
 y   <- dnorm(x,mean=0, sqrt(1))
 
 
-plot(x,y, type="l", lwd=2,xlim=c(-3,3), col="blue",ylab=expression(f(x)),xlab = "Standard Normal distributiion",xaxt="n")
+plot(x,y, type="l", lwd=2,xlim=c(-3,3), col="blue",ylab=expression(f(x)),xlab = "Standard Normal distribution",xaxt="n")
 axis(1, at=1,expression(z[p]),cex.axis=1.5)
 axis(1, at=0,0,cex.axis=1.5)
 lines(c(1,1),c(-0.1,dnorm(1,mean=0, sqrt(1))),lty=2)
@@ -1430,13 +1430,13 @@ x   <- seq(-3,3,length=1000)
 y   <- dnorm(x,mean=1, sqrt(0.31))
 
 
-plot(x,y, type="l", lwd=2,xlim=c(-3,3), col="blue",ylab=expression(f(x)),xlab = "Normal distributiion",xaxt="n")
+plot(x,y, type="l", lwd=2,xlim=c(-3,3), col="blue",ylab=expression(f(x)),xlab = "Normal distribution",xaxt="n")
 axis(1, at=1.5,expression(a),cex.axis=1.5)
 axis(1, at=1,expression(mu),cex.axis=1.5)
 axis(1, at=2.5,expression(b),cex.axis=1.5)
 text(1.96,0.55,expression(P(paste(a<X)<b)),cex = 1.5)
 
-text(2.0,0.65,expression(X%~%N(mu,sigma)),cex = 1.5)
+text(2.0,0.65,expression(X%~%N(mu,sigma^2)),cex = 1.5)
 
 
 cord.x <- c(1.5,seq(1.5,2.5,0.01),2.5) 
@@ -1448,9 +1448,11 @@ x   <- seq(-3,3,length=1000)
 y   <- dnorm(x,mean=0, sqrt(1))
 
 par(mgp = c(0, 2.5, 0))
-plot(x,y, type="l", lwd=2,xlim=c(-3,3), col="blue",ylab=expression(f(x)),xlab = "Standard Normal distributiion",xaxt="n")
-axis(1, at=1,expression(frac((a-mu),sigma)),cex.axis=1)
-axis(1, at=1.5,expression(frac((b-mu),sigma)),cex.axis=1)
+plot(x,y, type="l", lwd=2,xlim=c(-3,3), col="blue",ylab=expression(f(x)),xlab = "Standard Normal distribution",xaxt="n")
+za <- (1.5 - 1) / sqrt(0.31)
+zb <- (2.5 - 1) / sqrt(0.31)
+axis(1, at=za,expression(frac((a-mu),sigma)),cex.axis=1)
+axis(1, at=zb,expression(frac((b-mu),sigma)),cex.axis=1)
 
 axis(1, at=0,expression(0),cex.axis=1.5)
 # text(1.96,0.2,expression(P(paste(frac(a-mu,sigma)<X)>frac(b-mu,sigma))),cex = 1.5)
@@ -1458,10 +1460,10 @@ text(2.2,0.2,expression(P~bgroup("(",paste(frac((a-mu),sigma)<Z)<frac((b-mu),sig
 
 text(1.3,0.34,expression(Z%~%N(0,1)),cex = 1.5)
 
-cord.x <- c(1,seq(1,1.5,0.01),1.5) 
-cord.y <- c(0,dnorm(seq(1,1.5,0.01)),0) 
+cord.x <- c(za,seq(za,zb,0.01),zb)
+cord.y <- c(0,dnorm(seq(za,zb,0.01)),0)
 polygon(cord.x,cord.y,col="grey90",lty=2)
-lines(c(1,1),c(-0.1,dnorm(1,mean=0, sqrt(1))),lty=2)
+lines(c(0,0),c(-0.1,dnorm(0,mean=0, sqrt(1))),lty=2)
 
 ```
 ]
@@ -1526,11 +1528,11 @@ countdown(minutes = 2, warn_when = 30, play_sound = TRUE,
 
 
 ---
-# Caso di studio: .orange[pressione vascolare cerebrale]
+# Caso di studio: .orange[flusso ematico cerebrale]
 
 .panelset[
 .panel[.panel-name[Problema]
-Nella popolazione generale la pressione vascolare cerebrale CBF é distribuita con media 75 e deviazione standard 17. Un paziente é definito a rischio di stroke se ha una CBF $<$ 40.
+Nella popolazione generale il flusso ematico cerebrale (CBF) è distribuito normalmente con media 75 e deviazione standard 17. Un paziente è definito a rischio di stroke se ha una CBF $<$ 40.
 
 La probabilità di essere a rischio è pari a?
 ]
@@ -1558,13 +1560,13 @@ countdown(minutes = 2, warn_when = 30, play_sound = TRUE,
 .panelset[
 .panel[.panel-name[Problema]
 
-Il glaucoma è una malattia che si presenta con una pressione intraoculare eccessiva. Nella popolazione generale, la pressione intraoculare è normale con media 16 mm Hg e dieviazione standard 3 mm Hg.
+Il glaucoma è una malattia che si presenta con una pressione intraoculare eccessiva. Nella popolazione generale, la pressione intraoculare è normale con media 16 mm Hg e deviazione standard 3 mm Hg.
 
 Se il range di normalità è tra i 12 ed i 20 mm Hg, la probabilità di essere normali è pari a?
 ]
 
 .panel[.panel-name[Soluzione]
-$$\begin{split}P(12 < X < 20)& = P \left (\frac{12-16}{3}< Z < \frac{20-16}{3}\right )\\& = \Phi[4/3]-\Phi[-4/3]\\& = \Phi[1.33]-(1-\Phi[1.33])\\& = `r pnorm(4/3)-(1-pnorm(4/3))`\end{split}$$
+$$\begin{split}P(12 < X < 20)& = P \left (\frac{12-16}{3}< Z < \frac{20-16}{3}\right )\\& = \Phi[4/3]-\Phi[-4/3]\\& = \Phi[1.33]-(1-\Phi[1.33])\\& = `r round(pnorm(1.33)-(1-pnorm(1.33)),3)`\end{split}$$
 ]
 
 
@@ -1587,20 +1589,20 @@ y   <- dnorm(x,mean=0, sqrt(1))
 
 par(mgp = c(0, 1, 0))
 
-plot(x,y, type="l", lwd=2,xlim=c(-3,3), col="blue",ylab=expression(f(x)),main = "Normal distributiion",xaxt="n")
-axis(1, at=2.2,expression(20),cex.axis=1.5)
+plot(x,y, type="l", lwd=2,xlim=c(-3,3), col="blue",ylab=expression(f(x)),main = "Normal distribution",xaxt="n")
+axis(1, at=4/3,expression(20),cex.axis=1.5)
 axis(1, at=0,expression(16),cex.axis=1.5)
-axis(1, at=-2.2,expression(12),cex.axis=1.5)
-text(0,0.1,expression(P(paste(12<X)<20)==0.818),cex = 1.5)
+axis(1, at=-4/3,expression(12),cex.axis=1.5)
+text(0,0.1,expression(P(paste(12<X)<20)==0.816),cex = 1.5)
 
 
 
 
-plot(x,y, type="l", lwd=2,xlim=c(-3,3), col="blue",ylab=expression(f(x)),main = " Standard Normal distributiion",xaxt="n")
-axis(1, at=2.2,expression(1.33),cex.axis=1.5)
+plot(x,y, type="l", lwd=2,xlim=c(-3,3), col="blue",ylab=expression(f(x)),main = " Standard Normal distribution",xaxt="n")
+axis(1, at=4/3,expression(1.33),cex.axis=1.5)
 axis(1, at=0,expression(0),cex.axis=1.5)
-axis(1, at=-2.2,expression(-1.33),cex.axis=1.5)
-text(0,0.1,expression(P(paste(-1.33<Z)<1.33)==0.818),cex = 1.5)
+axis(1, at=-4/3,expression(-1.33),cex.axis=1.5)
+text(0,0.1,expression(P(paste(-1.33<Z)<1.33)==0.816),cex = 1.5)
 
 ```
 ]
@@ -1644,7 +1646,7 @@ class: inverse, middle
 .panelset[
 .panel[.panel-name[Approssimazione]
 
-Se $X$ è una variabile aleatoria binomiale di parametri $n$ (successi) e $p$ (probabilità di successo), allora $P(a \leq X\leq b)$ è approssimata dall'area sotto una curva normale $N(np, npq)$ tra $a-1/2$ e $b+1/2$.
+Se $X$ è una variabile aleatoria binomiale di parametri $n$ (numero di prove) e $p$ (probabilità di successo), allora $P(a \leq X\leq b)$ è approssimata dall'area sotto una curva normale $N(np, npq)$ tra $a-1/2$ e $b+1/2$.
 
 
 La regola implica che per il caso speciale $P(X=a)$ la probabilità binomiale è approssimata dall'area sotto la curva normale tra $a-1/2$ e $a+1/2$.
@@ -1686,7 +1688,7 @@ plot(0:25,y3,type ="h",main="p=0.4, n=25",ylab=expression(P(X==x)),lwd=2,col="bl
 ---
 # Approssimazione alla Normale: somma di v.a.
 
-Se $N$ è grande, allora la somma di $N$ v.a. qualsiasi è .orange[approssimativamente normale]
+Se $N$ è grande, allora la somma di $N$ v.a. indipendenti e con la stessa distribuzione (con varianza finita) è .orange[approssimativamente normale]
 
 ### Esempio
 
@@ -1696,8 +1698,8 @@ In questo caso, $X_1, \ldots, X_n$ sono il risultato di $n$ prove di Bernoulli. 
 
 $$E(X)=E(\sum_{i=1}^n X_i)= p+\ldots+p=np$$
 
-$$\mbox{var}(X_i)=pq+\ldots+pq=npq$$
-Ovvero attesa e varianza della binomiale (si distribuisce come una $N(np, npq)$)
+$$\mbox{var}(X)=\mbox{var}(\sum_{i=1}^n X_i)=pq+\ldots+pq=npq \:\:\:\: \mbox{(prove indipendenti)}$$
+Ovvero attesa e varianza della binomiale (si distribuisce approssimativamente come una $N(np, npq)$)
 
 
 
@@ -1718,7 +1720,7 @@ Ovvero attesa e varianza della binomiale (si distribuisce come una $N(np, npq)$)
 
 Si ha che $np = 25 * 0.4 = 10$, $npq = 25 * 0.4 * 0.6 = 6$, quindi la distribuzione approssimante è una normale $N(10,6)$. Si vuole allora calcolare l'area sotto la curva da $6.5$ a $12.5$.
 
-$$\begin{split}P(6.5 \leq Y \leq 12.5)& = \Phi\left(\frac{12.5-10}{\sqrt{6}} \right)-\Phi\left(\frac{6.5-10}{\sqrt{6}} \right)\\& = \Phi(1.02)-\Phi(-1.43)\\& = \Phi(1.02)-[1-\Phi(1.43)]\\& = \Phi(1.02)+\Phi(1.43)-1\\& = 0.8463 + 0.9235 - 1\\& = 0.770\end{split}$$
+$$\begin{split}P(6.5 \leq Y \leq 12.5)& = \Phi\left(\frac{12.5-10}{\sqrt{6}} \right)-\Phi\left(\frac{6.5-10}{\sqrt{6}} \right)\\& = \Phi(1.02)-\Phi(-1.43)\\& = \Phi(1.02)-[1-\Phi(1.43)]\\& = \Phi(1.02)+\Phi(1.43)-1\\& = 0.8461 + 0.9236 - 1\\& = 0.770\end{split}$$
 ]
 
 .panel[.panel-name[Grafico]
@@ -1793,7 +1795,7 @@ che può essere approssimata da una distribuzione normale di parametro
 
 $np=100 * 0.6 = 60$ e $npq = 100 * 0.6 * 0.4 = 24$ tra 49.5 e 75.5.
 
-$$\begin{split}\Phi\left(\frac{75.5-60}{\sqrt{24}} \right)-\Phi\left(\frac{49.5-60}{\sqrt{24}} \right)& = \Phi(3.6)-\Phi(-2.14)\\& = \Phi(3.16)-\Phi(2.14)-1\\& = 0.992 - 0.984 - 1\\& = 0.983\end{split}$$
+$$\begin{split}\Phi\left(\frac{75.5-60}{\sqrt{24}} \right)-\Phi\left(\frac{49.5-60}{\sqrt{24}} \right)& = \Phi(3.16)-\Phi(-2.14)\\& = \Phi(3.16)+\Phi(2.14)-1\\& = 0.9992 + 0.9838 - 1\\& = 0.983\end{split}$$
 ]
 
 
@@ -1830,8 +1832,10 @@ Stimare la percentuale di soggetti anormali
 La percentuale di soggetti anormali può essere stimata con la approssimazione normale
 
 
-$$1-\Phi\left(\frac{75.5-60}{\sqrt{24}} \right)=1-\Phi(3.16)=0.01$$
-$$\Phi\left(\frac{49.5-60}{\sqrt{24}} \right)=\Phi(-2.14)=1-0.9840=0.016$$
+$$1-\Phi\left(\frac{75.5-60}{\sqrt{24}} \right)=1-\Phi(3.16)=1-0.9992=0.0008$$
+$$\Phi\left(\frac{49.5-60}{\sqrt{24}} \right)=\Phi(-2.14)=1-0.9838=0.016$$
+$$0.0008 + 0.016 = 0.017$$
+ovvero circa l'1.7% dei soggetti.
 
 ]
 
@@ -1846,7 +1850,7 @@ np <- 100 * 0.6 # 60
 npq <- np * (1 - 0.6)
 sigma <- sqrt(npq)
 
-yp_low <- 50 - 0.5 # 45
+yp_low <- 50 - 0.5 # 49.5
 yp_high <- 75 + 0.5
 
 zp_low <- (yp_low - np) / sigma # < 0
@@ -1860,7 +1864,7 @@ zp_high <- (yp_high - np) / sigma
 
 x   <- seq(40,80,length=1000)
 y   <- dnorm(x,mean=60, sqrt(24))
-plot(x,y, type="l", lwd=2,xlim=c(40,80), col="blue",ylab=expression(f(y)),xlab = "Normal distributiion",xaxt="n")
+plot(x,y, type="l", lwd=2,xlim=c(40,80), col="blue",ylab=expression(f(y)),xlab = "Normal distribution",xaxt="n")
 
 lines(c(49.5,49.5),c(-0.1, dnorm(49.5,mean=60, sqrt(24))),lty=2)
 
