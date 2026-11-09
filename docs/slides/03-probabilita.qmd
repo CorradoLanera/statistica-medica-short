@@ -952,7 +952,7 @@ _If you believe that witnessing **[an additional white swan]{.orange}** will bri
 
 ### **[Grazie]{.orange}** per l'attenzione! {.big}
 
-Diapositive: [bit.ly/statmed-cl-corsi](https://bit.ly/statmed-cl-corsi)
+Diapositive: [bit.ly/cl-statmed](https://bit.ly/cl-statmed)
 
 
 [`r fontawesome::fa("link")`](https://www.unipd-ubep.it/) [**www.unipd-ubep.it**](https://www.unipd-ubep.it/) | 

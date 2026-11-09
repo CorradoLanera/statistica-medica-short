@@ -602,7 +602,7 @@
     "href": "slides/04-distribuzioni.html#section",
     "title": "Statistica Medica",
     "section": "",
-    "text": "Mathematical conventions are just that, conventions. They differ by field of mathematics. Don’t ask us why matrix rows are numbered down but graphs are numbered up the y axis, nor why x comes before y but row before column. But the matrix layout has always seemed illogical to me.\n\n\n—Brian D. Ripley08/2004 - R-help\n\n\n\nGrazie per l’attenzione!\n… e buona settimana.\nDiapositive: bit.ly/statmed-cl-corsi\n www.unipd-ubep.it |  Corrado.Lanera@ubep.unipd.it\n   @CorradoLanera |  bit.ly/statmed-cl-ricevimento"
+    "text": "Mathematical conventions are just that, conventions. They differ by field of mathematics. Don’t ask us why matrix rows are numbered down but graphs are numbered up the y axis, nor why x comes before y but row before column. But the matrix layout has always seemed illogical to me.\n\n\n—Brian D. Ripley08/2004 - R-help\n\n\n\nGrazie per l’attenzione!\n… e buona settimana.\nDiapositive: bit.ly/cl-statmed\n www.unipd-ubep.it |  Corrado.Lanera@ubep.unipd.it\n   @CorradoLanera |  bit.ly/statmed-cl-ricevimento"
   },
   {
     "objectID": "slides/02-descrittive.html#cosa-faremo",
@@ -980,7 +980,7 @@
     "href": "slides/02-descrittive.html#section",
     "title": "Statistica Medica",
     "section": "",
-    "text": "Mathematical conventions are just that, conventions. They differ by field of mathematics. Don’t ask us why matrix rows are numbered down but graphs are numbered up the y axis, nor why x comes before y but row before column. But the matrix layout has always seemed illogical to me.\n\n\n—Brian D. Ripley08/2004 - R-help\n\n\nGrazie per l’attenzione!\nDiapositive: bit.ly/statmed-cl-corsi\n www.unipd-ubep.it |  Corrado.Lanera@ubep.unipd.it\n   @CorradoLanera |  bit.ly/statmed-cl-ricevimento"
+    "text": "Mathematical conventions are just that, conventions. They differ by field of mathematics. Don’t ask us why matrix rows are numbered down but graphs are numbered up the y axis, nor why x comes before y but row before column. But the matrix layout has always seemed illogical to me.\n\n\n—Brian D. Ripley08/2004 - R-help\n\n\nGrazie per l’attenzione!\nDiapositive: bit.ly/cl-statmed\n www.unipd-ubep.it |  Corrado.Lanera@ubep.unipd.it\n   @CorradoLanera |  bit.ly/statmed-cl-ricevimento"
   },
   {
     "objectID": "slides/00-intro_and_info.html#obiettivi",
@@ -1106,7 +1106,7 @@
     "href": "slides/index.html",
     "title": "Slide del corso",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nSubtitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nNov 9, 2026\n\n\nSTATISTICA MEDICA\n\n\nPresentazione e informazioni generali\n\n\nCorrado Lanera\n\n\n\n\n\n\nNov 9, 2026\n\n\nStatistica Medica\n\n\nIntroduzione a R/RStudio\n\n\nCorrado Lanera\n\n\n\n\n\n\nNov 9, 2026\n\n\nStatistica Medica\n\n\nAnalisi esplorativa e statistiche descrittive\n\n\nCorrado Lanera\n\n\n\n\n\n\nNov 9, 2026\n\n\nStatistica Medica\n\n\nBasi di probabilità\n\n\nCorrado Lanera\n\n\n\n\n\n\nNov 9, 2026\n\n\nStatistica Medica\n\n\nDistribuzioni di probabilità\n\n\nCorrado Lanera\n\n\n\n\n\n\nNov 9, 2026\n\n\nStatistica Medica\n\n\nInferenza, intervalli di confidenza, introduzione ai test d’ipotesi\n\n\nCorrado Lanera\n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\nNo matching items\n Back to top"
+    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nSubtitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\n9 nov 2026\n\n\nSTATISTICA MEDICA\n\n\nPresentazione e informazioni generali\n\n\nCorrado Lanera\n\n\n\n\n\n\n9 nov 2026\n\n\nStatistica Medica\n\n\nIntroduzione a R/RStudio\n\n\nCorrado Lanera\n\n\n\n\n\n\n9 nov 2026\n\n\nStatistica Medica\n\n\nAnalisi esplorativa e statistiche descrittive\n\n\nCorrado Lanera\n\n\n\n\n\n\n9 nov 2026\n\n\nStatistica Medica\n\n\nBasi di probabilità\n\n\nCorrado Lanera\n\n\n\n\n\n\n9 nov 2026\n\n\nStatistica Medica\n\n\nDistribuzioni di probabilità\n\n\nCorrado Lanera\n\n\n\n\n\n\n9 nov 2026\n\n\nStatistica Medica\n\n\nInferenza, intervalli di confidenza, introduzione ai test d’ipotesi\n\n\nCorrado Lanera\n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\nNo matching items\n Back to top"
   },
   {
     "objectID": "slides/01-r_rstudio.html#cosa-faremo",
@@ -1547,7 +1547,7 @@
     "href": "slides/03-probabilita.html#section",
     "title": "Statistica Medica",
     "section": "",
-    "text": "If you believe that witnessing an additional white swan will bring confirmation that there are no black swans, then you should also accept the statement, on purely logical grounds, that the sighting of a red Mini Cooper should confirm that there are no black swans. […] “all swans are white” implies that “all nonwhite objects are not swans”.\n\n\n—Nassim Nicholas TalebThe black swan - “Saw Another Red Mini”, p.59\n\n\nGrazie per l’attenzione!\nDiapositive: bit.ly/statmed-cl-corsi\n www.unipd-ubep.it |  Corrado.Lanera@ubep.unipd.it\n   @CorradoLanera |  bit.ly/statmed-cl-ricevimento"
+    "text": "If you believe that witnessing an additional white swan will bring confirmation that there are no black swans, then you should also accept the statement, on purely logical grounds, that the sighting of a red Mini Cooper should confirm that there are no black swans. […] “all swans are white” implies that “all nonwhite objects are not swans”.\n\n\n—Nassim Nicholas TalebThe black swan - “Saw Another Red Mini”, p.59\n\n\nGrazie per l’attenzione!\nDiapositive: bit.ly/cl-statmed\n www.unipd-ubep.it |  Corrado.Lanera@ubep.unipd.it\n   @CorradoLanera |  bit.ly/statmed-cl-ricevimento"
   },
   {
     "objectID": "slides/05-ic_p.html#cosa-faremo",
@@ -1855,7 +1855,7 @@
     "href": "slides/05-ic_p.html#section",
     "title": "Statistica Medica",
     "section": "",
-    "text": "Mathematical conventions are just that, conventions. They differ by field of mathematics. Don’t ask us why matrix rows are numbered down but graphs are numbered up the y axis, nor why x comes before y but row before column. But the matrix layout has always seemed illogical to me.\n\n\n—Brian D. Ripley08/2004 - R-help\n\n\n\nGrazie per l’attenzione!\nDiapositive: bit.ly/statmed-cl-corsi\n www.unipd-ubep.it |  Corrado.Lanera@ubep.unipd.it\n   @CorradoLanera |  bit.ly/statmed-cl-ricevimento"
+    "text": "Mathematical conventions are just that, conventions. They differ by field of mathematics. Don’t ask us why matrix rows are numbered down but graphs are numbered up the y axis, nor why x comes before y but row before column. But the matrix layout has always seemed illogical to me.\n\n\n—Brian D. Ripley08/2004 - R-help\n\n\n\nGrazie per l’attenzione!\nDiapositive: bit.ly/cl-statmed\n www.unipd-ubep.it |  Corrado.Lanera@ubep.unipd.it\n   @CorradoLanera |  bit.ly/statmed-cl-ricevimento"
   },
   {
     "objectID": "esercizi/descrittive_1.html",
