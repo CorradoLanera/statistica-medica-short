@@ -349,7 +349,7 @@ $$\begin{split}\left(\bar{X} - 1.96 \frac{\sigma}{\sqrt{n}}; \bar{X}+1.96 \frac{
 
 ### Graficamente
 
-```{r ic-trigliceridi, echo=FALSE, fig.align='center', out.width="90%", fig.width=8, fig.height=5}
+```{r ic-trigliceridi, echo=FALSE, fig.align='center', out.width="80%", fig.width=8, fig.height=5}
 # stessi numeri della scheda IC: sigma nota (20), n = 10, quindi +-12.4
 m <- c(116.9, 132.8, 117.0, 106.7, 111.9)
 h <- 1.96 * 20 / sqrt(10)
