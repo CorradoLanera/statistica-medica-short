@@ -1755,7 +1755,7 @@ window.xaringanExtraClipboard = function (selector, text) {
 }
 </script>
     <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x3347ac9dfff4666b1e45d546abf8a18","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x058e1e96f834e6699a6040074015bf8","expires":1}</script>
     <script>(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.himalaya = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 'use strict';
 
@@ -2865,102 +2865,383 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 })()
 </script>
-    <style type="text/css">.countdown {background: inherit;position: absolute;cursor: pointer;font-size: 3rem;line-height: 1;border-color: #ddd;border-width: 3px;border-style: solid;border-radius: 15px;box-shadow: 0px 4px 10px 0px rgba(50, 50, 50, 0.4);-webkit-box-shadow: 0px 4px 10px 0px rgba(50, 50, 50, 0.4);margin: 0.6em;padding: 10px 15px;text-align: center;z-index: 10;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}.countdown {display: flex;align-items: center;justify-content: center;}.countdown .countdown-time {background: none;font-size: 100%;padding: 0;}.countdown-digits {color: inherit;}.countdown.running {border-color: #2A9B59FF;background-color: #43AC6A;}.countdown.running .countdown-digits {color: #002F14FF;}.countdown.finished {border-color: #DE3000FF;background-color: #F04124;}.countdown.finished .countdown-digits {color: #4A0900FF;}.countdown.running.warning {border-color: #CEAC04FF;background-color: #E6C229;}.countdown.running.warning .countdown-digits {color: #3A2F02FF;}.countdown.running.blink-colon .countdown-digits.colon {opacity: 0.1;}.countdown:not(.running) .countdown-controls {display: none;}.countdown-controls {position: absolute;top: -0.5rem;right: -0.5rem;left: -0.5rem;display: flex;justify-content: space-between;margin: 0;padding: 0;}.countdown-controls > button {font-size: 1.5rem;width: 1rem;height: 1rem;display: inline-block;display: flex;flex-direction: column;align-items: center;justify-content: center;font-family: monospace;padding: 10px;margin: 0;background: inherit;border: 2px solid;border-radius: 100%;transition: 50ms transform ease-in-out, 150ms opacity ease-in;--countdown-transition-distance: 10px;}.countdown .countdown-controls > button:last-child {transform: translate(calc(-1 * var(--countdown-transition-distance)), var(--countdown-transition-distance));opacity: 0;color: #002F14FF;background-color: #43AC6A;border-color: #2A9B59FF;}.countdown .countdown-controls > button:first-child {transform: translate(var(--countdown-transition-distance), var(--countdown-transition-distance));opacity: 0;color: #4A0900FF;background-color: #F04124;border-color: #DE3000FF;}.countdown.running:hover .countdown-controls > button,.countdown.running:focus-within .countdown-controls > button{transform: translate(0, 0);opacity: 1;}.countdown.running:hover .countdown-controls > button:hover,.countdown.running:focus-within .countdown-controls > button:hover{transform: translate(0, calc(var(--countdown-transition-distance) / -2));box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.4);-webkit-box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.4);}.countdown.running:hover .countdown-controls > button:active,.countdown.running:focus-within .countdown-controls > button:active{transform: translate(0, calc(var(--coutndown-transition-distance) / -5));}.countdown.countdown-fullscreen {z-index: 0;}.countdown-fullscreen.running .countdown-controls {top: 1rem;left: 0;right: 0;justify-content: center;}.countdown-fullscreen.running .countdown-controls > button + button {margin-left: 1rem;}</style>
-    <script>/* globals Shiny,Audio */
-class CountdownTimer {
-  constructor (el, opts) {
-    if (typeof el === 'string' || el instanceof String) {
-      el = document.querySelector(el)
+    <style type="text/css">
+.countdown {
+--_margin: 0.6em;
+--_running-color: var(--countdown-color-running-text, rgba(0, 0, 0, 0.8));
+--_running-background: var(--countdown-color-running-background, #43AC6A);
+--_running-border-color: var(--countdown-color-running-border, rgba(0, 0, 0, 0.1));
+--_finished-color: var(--countdown-color-finished-text, rgba(0, 0, 0, 0.7));
+--_finished-background: var(--countdown-color-finished-background, #F04124);
+--_finished-border-color: var(--countdown-color-finished-border, rgba(0, 0, 0, 0.1));
+position: absolute;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+background: var(--countdown-color-background, inherit);
+font-size: var(--countdown-font-size, 3rem);
+line-height: var(--countdown-line-height, 1);
+border-color: var(--countdown-color-border, #ddd);
+border-width: var(--countdown-border-width, 0.1875rem);
+border-style: solid;
+border-radius: var(--countdown-border-radius, 0.9rem);
+box-shadow: var(--countdown-box-shadow, 0px 4px 10px 0px rgba(50, 50, 50, 0.4));
+margin: var(--countdown-margin, var(--_margin, 0.6em));
+padding: var(--countdown-padding, 0.625rem 0.9rem);
+text-align: center;
+z-index: 10;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+countdown-timer[position="static"],
+countdown-timer[position="relative"] {
+position: relative;
+}
+.countdown.inline {
+position: relative;
+width: max-content;
+max-width: 100%;
+}
+.countdown .countdown-time {
+background: none;
+font-size: 100%;
+padding: 0;
+color: currentColor;
+}
+.countdown-digits {
+color: var(--countdown-color-text);
+}
+.countdown.running {
+border-color: var(--_running-border-color);
+background-color: var(--_running-background);
+}
+.countdown.running .countdown-digits {
+color: var(--_running-color);
+}
+.countdown.finished {
+border-color: var(--_finished-border-color);
+background-color: var(--_finished-background);
+}
+.countdown.finished .countdown-digits {
+color: var(--_finished-color);
+}
+.countdown.running.warning {
+border-color: var(--countdown-color-warning-border, rgba(0, 0, 0, 0.1));
+background-color: var(--countdown-color-warning-background, #E6C229);
+}
+.countdown.running.warning .countdown-digits {
+color: var(--countdown-color-warning-text, rgba(0, 0, 0, 0.7));
+}
+.countdown.running.blink-colon .countdown-digits.colon {
+opacity: 0.1;
+}
+
+.countdown:not(.running) .countdown-controls,
+.countdown.no-controls .countdown-controls {
+display: none;
+}
+.countdown-controls {
+position: absolute;
+top: -0.5rem;
+right: -0.5rem;
+left: -0.5rem;
+display: flex;
+justify-content: space-between;
+margin: 0;
+padding: 0;
+}
+.countdown-controls>button {
+position: relative;
+font-size: 1.5rem;
+width: 1rem;
+height: 1rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+font-family: monospace;
+padding: 10px;
+margin: 0;
+background: inherit;
+border: 2px solid;
+border-radius: 100%;
+transition: 50ms transform ease-in-out, 150ms opacity ease-in;
+box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.4);
+-webkit-box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.4);
+--_button-bump: 0;
+opacity: var(--_opacity, 0);
+transform: translate(0, var(--_button-bump));
+}
+
+.countdown .countdown-controls > button::after {
+content: "";
+height: 200%;
+width: 200%;
+position: absolute;
+border-radius: 50%;
+}
+.countdown .countdown-controls>button:last-child {
+color: var(--_running-color);
+background-color: var(--_running-background);
+border-color: var(--_running-border-color);
+}
+.countdown .countdown-controls>button:first-child {
+color: var(--_finished-color);
+background-color: var(--_finished-background);
+border-color: var(--_finished-border-color);
+}
+.countdown.running:hover, .countdown.running:focus-within {
+--_opacity: 1;
+}
+.countdown.running:hover .countdown-controls>button,
+.countdown.running:focus-within .countdown-controls>button {
+--_button-bump: -3px;
+}
+.countdown.running:hover .countdown-controls>button:active,
+.countdown.running:focus-within .countdown-controls>button:active {
+--_button-bump: 0;
+}
+
+.reveal .countdown {
+--_margin: 0;
+}
+
+.countdown.countdown-fullscreen {
+z-index: 0;
+}
+.countdown-fullscreen.running .countdown-controls {
+top: 1rem;
+left: 0;
+right: 0;
+justify-content: center;
+}
+.countdown-fullscreen.running .countdown-controls>button+button {
+margin-left: 1rem;
+}
+</style>
+    <script>/* countdown
+ * countdown timer for slides and HTML docs in Quarto, R Markdown, and Shiny
+ *
+ * https://pkg.garrickadenbuie.com/countdown
+ *
+ * Copyright (c) 2025 countdown authors
+ *
+ * This software is released under the MIT License.
+ * https://opensource.org/licenses/MIT
+ */
+
+/* globals Shiny,Audio */
+class CountdownTimer extends window.HTMLElement {
+  constructor () {
+    super()
+
+    // Initialize properties without DOM access
+    this._end = null
+    this._isRunning = false
+    this._timeout = null
+    this._remaining = null
+    this._display = { minutes: 0, seconds: 0 }
+    this._srcLocation = null
+    this._lastTouchTime = null
+
+    // Element references (will be set when DOM is created)
+    this._elements = {
+      controls: null,
+      bumpDown: null,
+      bumpUp: null,
+      timeCode: null,
+      minutes: null,
+      colon: null,
+      seconds: null
     }
 
-    if (el.counter) {
-      return el.counter
+    // For backward compatibility
+    this.countdown = this
+  }
+
+  static get observedAttributes () {
+    return [
+      'warn-when',
+      'update-every',
+      'play-sound',
+      'blink-colon',
+      'start-immediately',
+      'minutes',
+      'seconds'
+    ]
+  }
+
+  connectedCallback () {
+    // Ensure countdown class is present for backward compatibility
+    if (!this.classList.contains('countdown')) {
+      this.classList.add('countdown')
     }
 
-    const minutes = parseInt(el.querySelector('.minutes').innerText || '0')
-    const seconds = parseInt(el.querySelector('.seconds').innerText || '0')
-    const duration = minutes * 60 + seconds
-
-    function attrIsTrue (x) {
-      if (x === true) return true
-      return !!(x === 'true' || x === '' || x === '1')
+    // Make the element focusable
+    if (!this.hasAttribute('tabindex')) {
+      this.setAttribute('tabindex', '0')
     }
 
-    this.element = el
-    this.duration = duration
-    this.end = null
-    this.is_running = false
-    this.warn_when = parseInt(el.dataset.warnWhen) || -1
-    this.update_every = parseInt(el.dataset.updateEvery) || 1
-    this.play_sound = attrIsTrue(el.dataset.playSound)
-    this.blink_colon = attrIsTrue(el.dataset.blinkColon)
-    this.startImmediately = attrIsTrue(el.dataset.startImmediately)
-    this.timeout = null
-    this.display = { minutes, seconds }
-
-    if (opts.src_location) {
-      this.src_location = opts.src_location
-    }
-
+    this.initializeFromDOM()
     this.addEventListeners()
+
+    if (this.start_immediately) {
+      document.addEventListener('DOMContentLoaded', () => this.handleStartImmediately())
+    }
+  }
+
+  disconnectedCallback () {
+    this.cleanup()
+  }
+
+  attributeChangedCallback (name, oldValue, newValue) {
+    if (oldValue === newValue) return
+
+    switch (name) {
+      case 'warn-when':
+        this.warn_when = parseInt(newValue) || -1
+        break
+      case 'update-every':
+        this.update_every = parseInt(newValue) || 1
+        break
+      case 'play-sound':
+        this.play_sound = this.attrIsTrue(newValue) || newValue
+        break
+      case 'blink-colon':
+        this.blink_colon = this.attrIsTrue(newValue)
+        if (!this.blink_colon) {
+          this.classList.remove('blink-colon')
+        }
+        break
+      case 'start-immediately':
+        this.start_immediately = this.attrIsTrue(newValue)
+        break
+      case 'minutes':
+      case 'seconds':
+        // Re-initialize when minutes or seconds change
+        /* eslint-disable-next-line no-case-declarations */
+        const minutes = parseInt(this.getAttribute('minutes') || '0')
+        /* eslint-disable-next-line no-case-declarations */
+        const seconds = parseInt(this.getAttribute('seconds') || '0')
+        this._duration = minutes * 60 + seconds
+        this._display = { minutes, seconds }
+
+        // Update the display if DOM exists
+        if (this._elements.minutes && this._elements.seconds) {
+          this.update(true)
+        }
+        break
+    }
+  }
+
+  createInnerDOM () {
+    // Clear existing content
+    this.innerHTML = ''
+
+    // Controls ----
+    this._elements.controls = document.createElement('div')
+    this._elements.controls.className = 'countdown-controls'
+
+    this._elements.bumpDown = document.createElement('button')
+    this._elements.bumpDown.className = 'countdown-bump-down'
+    this._elements.bumpDown.innerHTML = '&minus;'
+
+    this._elements.bumpUp = document.createElement('button')
+    this._elements.bumpUp.className = 'countdown-bump-up'
+    this._elements.bumpUp.innerHTML = '&plus;'
+
+    this._elements.controls.appendChild(this._elements.bumpDown)
+    this._elements.controls.appendChild(this._elements.bumpUp)
+
+    // Time ----
+    this._elements.timeCode = document.createElement('code')
+    this._elements.timeCode.className = 'countdown-time'
+
+    this._elements.minutes = document.createElement('span')
+    this._elements.minutes.className = 'countdown-digits minutes'
+    this._elements.minutes.innerText = String(this._display.minutes).padStart(2, '0')
+
+    this._elements.colon = document.createElement('span')
+    this._elements.colon.className = 'countdown-digits colon'
+    this._elements.colon.innerText = ':'
+
+    this._elements.seconds = document.createElement('span')
+    this._elements.seconds.className = 'countdown-digits seconds'
+    this._elements.seconds.innerText = String(this._display.seconds).padStart(2, '0')
+
+    this._elements.timeCode.appendChild(this._elements.minutes)
+    this._elements.timeCode.appendChild(this._elements.colon)
+    this._elements.timeCode.appendChild(this._elements.seconds)
+
+    // Assemble ----
+    this.appendChild(this._elements.controls)
+    this.appendChild(this._elements.timeCode)
+  }
+
+  #normalizeTime (minutes, seconds) {
+    minutes = Math.floor(Number(minutes) || 0)
+    seconds = Math.floor(Number(seconds) || 0)
+
+    const totalSeconds = minutes * 60 + seconds
+
+    return {
+      minutes: Math.floor(totalSeconds / 60),
+      seconds: totalSeconds % 60,
+      totalSeconds
+    }
+  }
+
+  initializeFromDOM () {
+    // Get minutes and seconds from attributes, defaulting to 0
+    const { minutes, seconds, totalSeconds } = this.#normalizeTime(
+      this.getAttribute('minutes'),
+      this.getAttribute('seconds')
+    )
+
+    this._duration = totalSeconds
+    this._display = { minutes, seconds }
+
+    // Create the inner DOM structure
+    this.createInnerDOM()
+
+    // Initialize properties from attributes
+    this.warn_when = parseInt(this.getAttribute('warn-when')) || -1
+    this.update_every = parseInt(this.getAttribute('update-every')) || 1
+    this.play_sound =
+      this.attrIsTrue(this.getAttribute('play-sound')) ||
+      this.getAttribute('play-sound')
+    this.blink_colon = this.attrIsTrue(this.getAttribute('blink-colon'))
+    this.start_immediately = this.attrIsTrue(
+      this.getAttribute('start-immediately')
+    )
+
+    // Get source location from script tag if available
+    const currentScript = document.currentScript ||
+      (document.querySelector('script[src*="countdown"]') ?? '')
+    if (currentScript) {
+      this._srcLocation = currentScript.getAttribute('src')
+    }
+  }
+
+  cleanup () {
+    if (this._timeout) {
+      clearTimeout(this._timeout)
+      this._timeout = null
+    }
+    this._isRunning = false
+  }
+
+  attrIsTrue (x) {
+    if (typeof x === 'undefined') return false
+    if (x === true) return true
+    return !!(x === 'true' || x === '' || x === '1')
   }
 
   addEventListeners () {
     const self = this
-
-    if (this.startImmediately) {
-      if (window.remark && window.slideshow) {
-        // Remark (xaringan) support
-        const isOnVisibleSlide = () => {
-          return document.querySelector('.remark-visible').contains(self.element)
-        }
-        if (isOnVisibleSlide()) {
-          self.start()
-        } else {
-          let started_once = 0
-          window.slideshow.on('afterShowSlide', function () {
-            if (started_once > 0) return
-            if (isOnVisibleSlide()) {
-              self.start()
-              started_once = 1
-            }
-          })
-        }
-      } else if (window.Reveal) {
-        // Revealjs (quarto) support
-        const isOnVisibleSlide = () => {
-          const currentSlide = document.querySelector('.reveal .slide.present')
-          return currentSlide ? currentSlide.contains(self.element) : false
-        }
-        if (isOnVisibleSlide()) {
-          self.start()
-        } else {
-          const revealStartTimer = () => {
-            if (isOnVisibleSlide()) {
-              self.start()
-              window.Reveal.off('slidechanged', revealStartTimer)
-            }
-          }
-          window.Reveal.on('slidechanged', revealStartTimer)
-        }
-      } else if (window.IntersectionObserver) {
-        // All other situtations use IntersectionObserver
-        const onVisible = (element, callback) => {
-          new window.IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-              if (entry.intersectionRatio > 0) {
-                callback(element)
-                observer.disconnect()
-              }
-            })
-          }).observe(element)
-        }
-        onVisible(this.element, el => el.countdown.start())
-      } else {
-        // or just start the timer as soon as it's initialized
-        this.start()
-      }
-    }
 
     function haltEvent (ev) {
       ev.preventDefault()
@@ -2973,25 +3254,48 @@ class CountdownTimer {
       return ev.code === 'ArrowUp' || ev.code === 'ArrowDown'
     }
 
-    ;['click', 'touchend'].forEach(function (eventType) {
-      self.element.addEventListener(eventType, function (ev) {
-        haltEvent(ev)
-        self.is_running ? self.stop() : self.start()
-      })
+    // Handle click events (desktop)
+    self.addEventListener('click', function (ev) {
+      haltEvent(ev)
+      self._isRunning ? self.stop({ manual: true }) : self.start()
     })
-    this.element.addEventListener('keydown', function (ev) {
-      if (ev.code === "Escape") {
+
+    // Handle touch events (mobile) with double-tap detection
+    self.addEventListener('touchend', function (ev) {
+      haltEvent(ev)
+
+      const now = Date.now()
+      const DOUBLE_TAP_THRESHOLD = 300 // milliseconds
+
+      // Check for double-tap
+      if (self._lastTouchTime && (now - self._lastTouchTime) < DOUBLE_TAP_THRESHOLD) {
+        // Double-tap detected
+        self._lastTouchTime = null
+        if (!self._isRunning) {
+          // Double tap while *running* resets the timer, but the first tap
+          // stops the timer and the second tap resets it
+          self.reset()
+        }
+      } else {
+        // Single tap - update timestamp and toggle start/stop
+        self._lastTouchTime = now
+        self._isRunning ? self.stop({ manual: true }) : self.start()
+      }
+    })
+
+    this.addEventListener('keydown', function (ev) {
+      if (ev.code === 'Escape') {
         self.reset()
         haltEvent(ev)
       }
       if (!isSpaceOrEnter(ev) && !isArrowUpOrDown(ev)) return
       haltEvent(ev)
       if (isSpaceOrEnter(ev)) {
-        self.is_running ? self.stop() : self.start()
+        self._isRunning ? self.stop({ manual: true }) : self.start()
         return
       }
 
-      if (!self.is_running) return
+      if (!self._isRunning) return
 
       if (ev.code === 'ArrowUp') {
         self.bumpUp()
@@ -2999,46 +3303,109 @@ class CountdownTimer {
         self.bumpDown()
       }
     })
-    this.element.addEventListener('dblclick', function (ev) {
-      haltEvent(ev)
-      if (self.is_running) self.reset()
-    })
-    this.element.addEventListener('touchmove', haltEvent)
 
-    const btnBumpDown = this.element.querySelector('.countdown-bump-down')
-    ;['click', 'touchend'].forEach(function (eventType) {
-      btnBumpDown.addEventListener(eventType, function (ev) {
-        haltEvent(ev)
-        if (self.is_running) self.bumpDown()
-      })
-    })
-    btnBumpDown.addEventListener('keydown', function (ev) {
-      if (!isSpaceOrEnter(ev) || !self.is_running) return
+    this.addEventListener('dblclick', function (ev) {
       haltEvent(ev)
-      self.bumpDown()
+      if (self._isRunning) self.reset()
     })
 
-    const btnBumpUp = this.element.querySelector('.countdown-bump-up')
-    ;['click', 'touchend'].forEach(function (eventType) {
-      btnBumpUp.addEventListener(eventType, function (ev) {
-        haltEvent(ev)
-        if (self.is_running) self.bumpUp()
+    this.addEventListener('touchmove', haltEvent)
+
+    if (this._elements.bumpDown) {
+      ['click', 'touchend'].forEach(function (eventType) {
+        self._elements.bumpDown.addEventListener(eventType, function (ev) {
+          haltEvent(ev)
+          if (self._isRunning) self.bumpDown()
+        })
       })
-    })
-    btnBumpUp.addEventListener('keydown', function (ev) {
-      if (!isSpaceOrEnter(ev) || !self.is_running) return
-      haltEvent(ev)
-      self.bumpUp()
-    })
-    this.element.querySelector('.countdown-controls').addEventListener('dblclick', function (ev) {
-      haltEvent(ev)
-    })
+      this._elements.bumpDown.addEventListener('keydown', function (ev) {
+        if (!isSpaceOrEnter(ev) || !self._isRunning) return
+        haltEvent(ev)
+        self.bumpDown()
+      })
+    }
+
+    if (this._elements.bumpUp) {
+      ['click', 'touchend'].forEach(function (eventType) {
+        self._elements.bumpUp.addEventListener(eventType, function (ev) {
+          haltEvent(ev)
+          if (self._isRunning) self.bumpUp()
+        })
+      })
+      this._elements.bumpUp.addEventListener('keydown', function (ev) {
+        if (!isSpaceOrEnter(ev) || !self._isRunning) return
+        haltEvent(ev)
+        self.bumpUp()
+      })
+    }
+
+    if (this._elements.controls) {
+      this._elements.controls.addEventListener('dblclick', function (ev) {
+        haltEvent(ev)
+      })
+    }
+  }
+
+  handleStartImmediately () {
+    const self = this
+
+    if (window.remark && window.slideshow) {
+      // Remark (xaringan) support
+      const isOnVisibleSlide = () => {
+        return document.querySelector('.remark-visible').contains(self)
+      }
+      if (isOnVisibleSlide()) {
+        self.start()
+      } else {
+        let startedOnce = 0
+        window.slideshow.on('afterShowSlide', function () {
+          if (startedOnce > 0) return
+          if (isOnVisibleSlide()) {
+            self.start()
+            startedOnce = 1
+          }
+        })
+      }
+    } else if (window.Reveal) {
+      // Revealjs (quarto) support
+      const isOnVisibleSlide = () => {
+        const currentSlide = document.querySelector('.reveal .slide.present')
+        return currentSlide ? currentSlide.contains(self) : false
+      }
+      if (isOnVisibleSlide()) {
+        self.start()
+      } else {
+        const revealStartTimer = () => {
+          if (isOnVisibleSlide()) {
+            self.start()
+            window.Reveal.off('slidechanged', revealStartTimer)
+          }
+        }
+        window.Reveal.on('slidechanged', revealStartTimer)
+      }
+    } else if (window.IntersectionObserver) {
+      // All other situations use IntersectionObserver
+      const onVisible = (element, callback) => {
+        new window.IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.intersectionRatio > 0) {
+              callback(element)
+              observer.disconnect()
+            }
+          })
+        }).observe(element)
+      }
+      onVisible(this, (el) => el.countdown.start())
+    } else {
+      // or just start the timer as soon as it's initialized
+      this.start()
+    }
   }
 
   remainingTime () {
-    const remaining = this.is_running
-      ? (this.end - Date.now()) / 1000
-      : this.remaining || this.duration
+    const remaining = this._isRunning
+      ? (this._end - Date.now()) / 1000
+      : this._remaining || this._duration
 
     let minutes = Math.floor(remaining / 60)
     let seconds = Math.ceil(remaining - minutes * 60)
@@ -3052,40 +3419,40 @@ class CountdownTimer {
   }
 
   start () {
-    if (this.is_running) return
+    if (this._isRunning) return
 
-    this.is_running = true
+    this._isRunning = true
 
-    if (this.remaining) {
+    if (this._remaining) {
       // Having a static remaining time indicates timer was paused
-      this.end = Date.now() + this.remaining * 1000
-      this.remaining = null
+      this._end = Date.now() + this._remaining * 1000
+      this._remaining = null
     } else {
-      this.end = Date.now() + this.duration * 1000
+      this._end = Date.now() + this._duration * 1000
     }
 
-    this.reportStateToShiny('start')
+    this.emitStateEvent('start')
 
-    this.element.classList.remove('finished')
-    this.element.classList.add('running')
+    this.classList.remove('finished')
+    this.classList.add('running')
     this.update(true)
     this.tick()
   }
 
-  tick (run_again) {
-    if (typeof run_again === 'undefined') {
-      run_again = true
+  tick (runAgain) {
+    if (typeof runAgain === 'undefined') {
+      runAgain = true
     }
 
-    if (!this.is_running) return
+    if (!this._isRunning) return
 
-    const { seconds: secondsWas } = this.display
+    const { seconds: secondsWas } = this._display
     this.update()
 
-    if (run_again) {
-      const delay = (this.end - Date.now() > 10000) ? 1000 : 250
+    if (runAgain) {
+      const delay = this._end - Date.now() > 10000 ? 1000 : 250
       this.blinkColon(secondsWas)
-      this.timeout = setTimeout(this.tick.bind(this), delay)
+      this._timeout = setTimeout(this.tick.bind(this), delay)
     }
   }
 
@@ -3093,13 +3460,13 @@ class CountdownTimer {
     // don't blink unless option is set
     if (!this.blink_colon) return
     // warn_when always updates the seconds
-    if (this.warn_when > 0 && Date.now() + this.warn_when > this.end) {
-      this.element.classList.remove('blink-colon')
+    if (this.warn_when > 0 && Date.now() + this.warn_when > this._end) {
+      this.classList.remove('blink-colon')
       return
     }
-    const { seconds: secondsIs } = this.display
+    const { seconds: secondsIs } = this._display
     if (secondsIs > 10 || secondsWas !== secondsIs) {
-      this.element.classList.toggle('blink-colon')
+      this.classList.toggle('blink-colon')
     }
   }
 
@@ -3110,55 +3477,61 @@ class CountdownTimer {
 
     const { remaining, minutes, seconds } = this.remainingTime()
 
-    const setRemainingTime = (selector, time) => {
-      const timeContainer = this.element.querySelector(selector)
-      if (!timeContainer) return
+    const setRemainingTime = (element, time) => {
+      if (!element) return
       time = Math.max(time, 0)
-      timeContainer.innerText = String(time).padStart(2, 0)
+      element.innerText = String(time).padStart(2, 0)
     }
 
-    if (this.is_running && remaining < 0.25) {
+    if (this._isRunning && remaining < 0.25) {
       this.stop()
-      setRemainingTime('.minutes', 0)
-      setRemainingTime('.seconds', 0)
+      setRemainingTime(this._elements.minutes, 0)
+      setRemainingTime(this._elements.seconds, 0)
       this.playSound()
       return
     }
 
-    const should_update = force ||
+    const shouldUpdate =
+      force ||
       Math.round(remaining) < this.warn_when ||
       Math.round(remaining) % this.update_every === 0
 
-    if (should_update) {
-      this.element.classList.toggle('warning', remaining <= this.warn_when)
-      this.display = { minutes, seconds }
-      setRemainingTime('.minutes', minutes)
-      setRemainingTime('.seconds', seconds)
+    if (shouldUpdate) {
+      const isWarning = remaining <= this.warn_when
+      if (isWarning && !this.classList.contains('warning')) {
+        this.emitStateEvent('warning')
+      }
+      this.classList.toggle('warning', isWarning)
+      this._display = { minutes, seconds }
+      setRemainingTime(this._elements.minutes, minutes)
+      setRemainingTime(this._elements.seconds, seconds)
     }
   }
 
-  stop () {
+  stop ({ manual = false } = {}) {
     const { remaining } = this.remainingTime()
     if (remaining > 1) {
-      this.remaining = remaining
+      this._remaining = remaining
     }
-    this.element.classList.remove('running')
-    this.element.classList.remove('warning')
-    this.element.classList.remove('blink-colon')
-    this.element.classList.add('finished')
-    this.is_running = false
-    this.end = null
-    this.reportStateToShiny('stop')
-    this.timeout = clearTimeout(this.timeout)
+    this.classList.remove('running')
+    this.classList.remove('warning')
+    this.classList.remove('blink-colon')
+    this.classList.add('finished')
+    this._isRunning = false
+    this._end = null
+    this.emitStateEvent(manual ? 'stop' : 'finished')
+    this._timeout = clearTimeout(this._timeout)
   }
 
   reset () {
-    this.stop()
-    this.remaining = null
+    this.stop({ manual: true })
+    this._remaining = null
     this.update(true)
-    this.reportStateToShiny('reset')
-    this.element.classList.remove('finished')
-    this.element.classList.remove('warning')
+
+    this.classList.remove('finished')
+    this.classList.remove('warning')
+    this._emitEvents = true
+    this.emitStateEvent('reset')
   }
 
   setValues (opts) {
@@ -3171,20 +3544,20 @@ class CountdownTimer {
     if (typeof opts.blink_colon !== 'undefined') {
       this.blink_colon = opts.blink_colon
       if (!opts.blink_colon) {
-        this.element.classList.remove('blink-colon')
+        this.classList.remove('blink-colon')
       }
     }
     if (typeof opts.play_sound !== 'undefined') {
       this.play_sound = opts.play_sound
     }
     if (typeof opts.duration !== 'undefined') {
-      this.duration = opts.duration
-      if (this.is_running) {
+      this._duration = opts.duration
+      if (this._isRunning) {
         this.reset()
         this.start()
       }
     }
-    this.reportStateToShiny('update')
+    this.emitStateEvent('update')
     this.update(true)
   }
 
@@ -3201,12 +3574,12 @@ class CountdownTimer {
       newRemaining = Math.round(newRemaining / 5) * 5
     }
     this.setRemaining(newRemaining)
-    this.reportStateToShiny(val > 0 ? 'bumpUp' : 'bumpDown')
+    this.emitStateEvent(val > 0 ? 'bumpUp' : 'bumpDown')
     this.update(true)
   }
 
   bumpUp (val) {
-    if (!this.is_running) {
+    if (!this._isRunning) {
       console.error('timer is not running')
       return
     }
@@ -3217,7 +3590,7 @@ class CountdownTimer {
   }
 
   bumpDown (val) {
-    if (!this.is_running) {
+    if (!this._isRunning) {
       console.error('timer is not running')
       return
     }
@@ -3228,20 +3601,20 @@ class CountdownTimer {
   }
 
   setRemaining (val) {
-    if (!this.is_running) {
+    if (!this._isRunning) {
       console.error('timer is not running')
       return
     }
-    this.end = Date.now() + val * 1000
+    this._end = Date.now() + val * 1000
     this.update(true)
   }
 
   playSound () {
     let url = this.play_sound
-    if (!url) return
+    if (!url || url === 'false') return
     if (typeof url === 'boolean') {
-      const src = this.src_location
-        ? this.src_location.replace('/countdown.js', '')
+      const src = this._srcLocation
+        ? this._srcLocation.replace('/countdown.js', '')
         : 'libs/countdown'
       url = src + '/smb_stage_clear.mp3'
     }
@@ -3262,85 +3635,96 @@ class CountdownTimer {
     }
   }
 
-  reportStateToShiny (action) {
-    if (!window.Shiny) return
-
-    const inputId = this.element.id
+  emitStateEvent (action) {
     const data = {
-      event: {
-        action,
-        time: new Date().toISOString()
-      },
+      action,
+      time: new Date().toISOString(),
       timer: {
-        is_running: this.is_running,
-        end: this.end ? new Date(this.end).toISOString() : null,
+        is_running: this._isRunning,
+        end: this._end ? new Date(this._end).toISOString() : null,
         remaining: this.remainingTime()
       }
     }
 
-    function shinySetInputValue () {
-      if (!window.Shiny.setInputValue) {
-        setTimeout(shinySetInputValue, 100)
-        return
-      }
-      window.Shiny.setInputValue(inputId, data)
+    this.reportStateToShiny(data)
+    this.dispatchEvent(
+      new CustomEvent('countdown', { detail: data, bubbles: true })
+    )
+  }
+
+  reportStateToShiny (data) {
+    if (!window.Shiny) return
+
+    if (!window.Shiny.setInputValue) {
+      // We're in Shiny but it isn't ready for input updates yet
+      setTimeout(() => this.reportStateToShiny(data), 100)
+      return
     }
 
-    shinySetInputValue()
+    const { action, time, timer } = data
+
+    const shinyData = { event: { action, time }, timer }
+
+    window.Shiny.setInputValue(this.id, shinyData)
   }
 }
 
-(function () {
-  const CURRENT_SCRIPT = document.currentScript.getAttribute('src')
+if (!window.customElements.get('countdown-timer')) {
+  window.customElements.define('countdown-timer', CountdownTimer)
+}
 
-  document.addEventListener('DOMContentLoaded', function () {
-    const els = document.querySelectorAll('.countdown')
-    if (!els || !els.length) {
+(function () {
+  if (!window.Shiny) {
+    return
+  }
+  Shiny.addCustomMessageHandler('countdown:update', function (x) {
+    if (!x.id) {
+      console.error('No `id` provided, cannot update countdown')
       return
     }
-    els.forEach(function (el) {
-      el.countdown = new CountdownTimer(el, { src_location: CURRENT_SCRIPT })
-    })
+    const el = document.getElementById(x.id)
+    if (el && el.setValues) {
+      el.setValues(x)
+    }
+  })
 
-    if (window.Shiny) {
-      Shiny.addCustomMessageHandler('countdown:update', function (x) {
-        if (!x.id) {
-          console.error('No `id` provided, cannot update countdown')
-          return
-        }
-        const el = document.getElementById(x.id)
-        el.countdown.setValues(x)
-      })
+  Shiny.addCustomMessageHandler('countdown:start', function (id) {
+    const el = document.getElementById(id)
+    if (!el) return
+    if (el.start) {
+      el.start()
+    }
+  })
 
-      Shiny.addCustomMessageHandler('countdown:start', function (id) {
-        const el = document.getElementById(id)
-        if (!el) return
-        el.countdown.start()
-      })
+  Shiny.addCustomMessageHandler('countdown:stop', function (id) {
+    const el = document.getElementById(id)
+    if (!el) return
+    if (el.stop) {
+      el.stop({ manual: true })
+    }
+  })
 
-      Shiny.addCustomMessageHandler('countdown:stop', function (id) {
-        const el = document.getElementById(id)
-        if (!el) return
-        el.countdown.stop()
-      })
+  Shiny.addCustomMessageHandler('countdown:reset', function (id) {
+    const el = document.getElementById(id)
+    if (!el) return
+    if (el.reset) {
+      el.reset()
+    }
+  })
 
-      Shiny.addCustomMessageHandler('countdown:reset', function (id) {
-        const el = document.getElementById(id)
-        if (!el) return
-        el.countdown.reset()
-      })
+  Shiny.addCustomMessageHandler('countdown:bumpUp', function (id) {
+    const el = document.getElementById(id)
+    if (!el) return
+    if (el.bumpUp) {
+      el.bumpUp()
+    }
+  })
 
-      Shiny.addCustomMessageHandler('countdown:bumpUp', function (id) {
-        const el = document.getElementById(id)
-        if (!el) return
-        el.countdown.bumpUp()
-      })
-
-      Shiny.addCustomMessageHandler('countdown:bumpDown', function (id) {
-        const el = document.getElementById(id)
-        if (!el) return
-        el.countdown.bumpDown()
-      })
+  Shiny.addCustomMessageHandler('countdown:bumpDown', function (id) {
+    const el = document.getElementById(id)
+    if (!el) return
+    if (el.bumpDown) {
+      el.bumpDown()
     }
   })
 })()
@@ -3675,10 +4059,12 @@ Si dice che la media campionaria è uno **stimatore non distorto** della media d
 
 Riguardo alla **varianza** dello stimatore della media, abbiamo
 
-`$$\begin{split}\mbox{var}(\bar{X})&amp;= \mbox{var}\left(\frac{\sum_{i=1}^n X_i}{n}\right) =* \frac{1}{n^2} \mbox{var}\left(\sum_{i=1}^n X_i\right) =* \frac{1}{n^2} \sum_{i=1}^n \mbox{var}(X_i)\\&amp; \stackrel{\mbox{def}}{=} \frac{1}{n^2} \sum_{i=1}^n\sigma^2 = \frac{1}{n^2} n\sigma^2 = \frac{\sigma^2}{n}\end{split}$$`
+`$$\begin{split}\mbox{var}(\bar{X})&amp;= \mbox{var}\left(\frac{\sum_{i=1}^n X_i}{n}\right) =* \frac{1}{n^2} \mbox{var}\left(\sum_{i=1}^n X_i\right) \stackrel{\mbox{ind.}}{=} \frac{1}{n^2} \sum_{i=1}^n \mbox{var}(X_i)\\&amp; \stackrel{\mbox{def}}{=} \frac{1}{n^2} \sum_{i=1}^n\sigma^2 = \frac{1}{n^2} n\sigma^2 = \frac{\sigma^2}{n}\end{split}$$`
 
 
-- `\(\frac{\sigma}{\sqrt{n}}\)` è chiamato con .orange[errore standard della media], stimato da `\(\frac{s}{\sqrt{n}}\)`
+- `\(\frac{\sigma}{\sqrt{n}}\)` è chiamato .orange[errore standard della media], stimato da `\(\frac{s}{\sqrt{n}}\)`
+
+- il passaggio `\(\stackrel{\mbox{ind.}}{=}\)` vale perché le `\(X_i\)` sono **indipendenti**
 
 
 `$$*)\begin{split}\mbox{var}(aX) &amp;= \frac{\sum_1^n\left(ax_i-\frac{\sum_1^nax_j}{n}\right)^2}{n}= \frac{\sum_1^n\left(ax_i-\frac{a\sum_1^nx_j}{n}\right)^2}{n}\\&amp;= \frac{\sum_1^n\left(a\left(x_i-\mu\right)\right)^2}{n}= \frac{\sum_1^na^2\left(x_i-\mu\right)^2}{n}\\&amp;=\frac{a^2\sum_1^n\left(x_i-\mu\right)^2}{n}=a^ 2\mbox{var}(X)\end{split}$$` 
@@ -3735,7 +4121,7 @@ Associare alla stima puntuale una misura della sua precisione
 
 .panelset[
 .panel[.panel-name[Passaggio a Z]
-Data una variabile casuale normale `\(X\)` dal T.L.C. sappiamo che
+Se `\(X\)` è normale (oppure, per il T.L.C., se `\(n\)` è abbastanza grande, e in questo caso in modo approssimato) sappiamo che
 
 `$$Z =\frac{\bar{X}-\mu}{\frac{\sigma}{\sqrt{n}}}$$`
 
@@ -3843,21 +4229,18 @@ Consigli:
 - bere
 - andare in bagno
 
-<div class="countdown" id="timer_b98ad7ac" data-warn-when="3" data-update-every="1" data-play-sound="true" tabindex="0" style="bottom:5%;left:65%;">
-<div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
+<countdown-timer class="countdown" id="timer_b2b277d8" minutes="15" seconds="0" warn-when="3" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
 
 
 
 ---
 class: inverse, middle
 
-# .center[**.orange[Esempi]** e **.orange[Osservazioni**]]
+# .center[**.orange[Esempi]** e **.orange[Osservazioni]**]
 
-- **definizione**
+- **esempio** con i trigliceridi
 
-- **campioni e popolazione**
+- **confidenza**, **unicità** e **ampiezza** dell&#39;intervallo
 
 
 
@@ -3890,7 +4273,7 @@ Soggetto  | 1     | 2     | 3     | 4     | 5
 &lt;/small&gt;
 ]
 
-.pull-right[Cinque campioni casuali di ampiezza ( `\(n = 10\)` ) da un popolazione di soggetti afferenti al centro cardiovascolare dell&#39;ASL 1 di Trieste, a cui è stato rilevato il livello di trigliceridi (in mg/dl, valori di riferimento 50-175).
+.pull-right[Cinque campioni casuali di ampiezza ( `\(n = 10\)` ) da una popolazione di soggetti afferenti al centro cardiovascolare dell&#39;ASL 1 di Trieste, a cui è stato rilevato il livello di trigliceridi (in mg/dl, valori di riferimento 50-175).
 ]
 
 ]
@@ -3904,14 +4287,14 @@ Si supponga che il valore di `\(\sigma\)` sia noto e pari a 20.
 - Campione 1 `\((116.9-12.4; 116.9+12.4) \equiv (104.5; 129.3)\)`
 - Campione 2 `\((132.8-12.4; 132.8+12.4) \equiv (120.4; 145.2)\)`
 - Campione 3 `\((117.0-12.4; 117.0+12.4) \equiv (104.6; 129.4)\)`
-- Campione 4 `\((106.7-12.4; 106.7+12.4) \equiv (106.7; 119.1)\)`
+- Campione 4 `\((106.7-12.4; 106.7+12.4) \equiv (94.3; 119.1)\)`
 - Campione 5 `\((111.9-12.4; 111.9+12.4) \equiv (99.5; 124.3)\)`
 
 ]
 
 .panel[.panel-name[Graficamente]
 
-&lt;img src=&quot;data:image/png;base64,#img/ic1.PNG&quot; width=&quot;90%&quot; style=&quot;display: block; margin: auto;&quot; /&gt;
+&lt;img src=&quot;data:image/png;base64,#img/ic1.PNG&quot; alt=&quot;&quot; width=&quot;90%&quot; style=&quot;display: block; margin: auto;&quot; /&gt;
 
 
 ]
@@ -3952,12 +4335,12 @@ In generale, un intervallo di confidenza ad un livello `\((1-\alpha)\)` sarà da
 `$$\left ( \bar{x} - z_{1-\frac{\alpha}{2}} \frac{\sigma}{\sqrt{n}};
 \bar{x} + z_{1-\frac{\alpha}{2}} \frac{\sigma}{\sqrt{n}} \right )$$`
 
-dove `\(z_{1-\frac{\alpha}{2}}\)` è l&#39; `\(\frac{\alpha}{2}\)` -esimo
+dove `\(z_{1-\frac{\alpha}{2}}\)` è il `\(100(1-\frac{\alpha}{2})\)`-esimo
 percentile di una distribuzione `\(N(0,1)\)`.
 
 `\((1-\alpha)\)` | `\(z_{1-\frac{\alpha}{2}}\)` 
 ------------:|:-----------------------
-        0.90 |                    1.644
+        0.90 |                    1.645
         0.95 |                     1.96 
         0.99 |                    2.576
 
@@ -4001,7 +4384,7 @@ L&#39;ampiezza dell&#39;intervallo, data da `\(2 z_{1-\frac{\alpha}{2}} \frac{\s
 
 - `\(\sigma\)`: come **aumenta** la deviazione standard della popolazione ( `\(\sigma\)` ), così **.orange[aumenta]** l&#39;ampiezza dell&#39;intervallo
 
-- `\(\alpha\)`: come **aumenta** il livello di confidenza richiesto per l&#39;analisi, così **.orange[aumenta]** l&#39;ampiezzza dell&#39;intervallo
+- `\(1-\alpha\)`: come **aumenta** il livello di confidenza richiesto per l&#39;analisi, così **.orange[aumenta]** l&#39;ampiezza dell&#39;intervallo
 
 
 ]
@@ -4023,7 +4406,7 @@ n   | 20       | 0.95       | `\(\bar{X} \pm 1.96 \frac{20}{\sqrt{n}}\)`      |
 10  | 5        | 0.95       |    | 6.2
 10  | 40       | 0.95       |    | 49.6 
 10  | 20       | `\(1-\alpha\)` | `\(\bar{X} \pm z_{1-\frac{\alpha}{2}} \frac{20}{\sqrt{10}}\)` |
-10  | 20       | 0.90       |    | 20.7
+10  | 20       | 0.90       |    | 20.8
 10  | 20       | 0.95       |    | 24.8
 10  | 20       | 0.99       |    | 32.6
 
@@ -4035,7 +4418,7 @@ n   | 20       | 0.95       | `\(\bar{X} \pm 1.96 \frac{20}{\sqrt{n}}\)`      |
 
 
 ---
-# IC osservazioni: .orange[sotto controlliamo]
+# IC osservazioni: .orange[sotto controllo]
 
 `\(n\)` e `\(\alpha\)` sono **sotto il diretto controllo** del ricercatore
 
@@ -4065,14 +4448,14 @@ class: inverse, middle
 
 .panelset[
 .panel[.panel-name[Definizione]
-Se `\(\sigma\)` è **ignoto**, potremmo sostituirlo (approssimandolo/stimandolo) in `\(\frac{x-\mu}{\frac{\sigma}{\sqrt{n}}}\)` con `\(s\)`
+Se `\(\sigma\)` è **ignoto**, potremmo sostituirlo (approssimandolo/stimandolo) in `\(\frac{\bar{X}-\mu}{\frac{\sigma}{\sqrt{n}}}\)` con `\(s\)`
 
 **Se**
 - `\(X_1, \ldots, X_n \sim N(\mu,\sigma^2)\)`
 - sono indipendenti
 
 **Allora**
-- `\(\frac{x-\mu}{\frac{s}{\sqrt{n}}}\)` si distribuisce come una `\(t\)` di Student con `\((n-1)\)` gradi di libertà
+- `\(\frac{\bar{X}-\mu}{\frac{s}{\sqrt{n}}}\)` si distribuisce come una `\(t\)` di Student con `\((n-1)\)` gradi di libertà
 
 
 ]
@@ -4088,7 +4471,7 @@ Il `\(p\)` -esimo percentile della distribuzione `\(t\)` con `\(d\)` gradi di li
 
 ]
 .panel[.panel-name[Grafico]
-&lt;img src=&quot;data:image/png;base64,#img/CaptureOK.PNG&quot; width=&quot;100%&quot; style=&quot;display: block; margin: auto;&quot; /&gt;
+&lt;img src=&quot;data:image/png;base64,#img/CaptureOK.PNG&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;display: block; margin: auto;&quot; /&gt;
 
 ]
 
@@ -4134,7 +4517,7 @@ Nel caso del campione 1 si ha:
 - `\(\bar{x} = 116.90\)`
 - `\(n = 10\)`
 - `\(s = 21.7\)`
-- `\(\alpha = 0.5\)`
+- `\(\alpha = 0.05\)`
 
 `$$\left (116.90 -2.262 \frac{21.7}{\sqrt{10}} \leq \mu \leq 116.90 + 2.262 \frac{21.7}{\sqrt{10}} \right )$$`
 
@@ -4142,7 +4525,7 @@ ovvero `\((101.38; 132.42)\)`
 
 In generale, si avrà l&#39;intervallo
 
-`$$\left (\bar{x} - t_{\frac{\alpha}{2}; n-1} \frac{s}{\sqrt{n}} \leq \mu \leq \bar{x} + t_{\frac{\alpha}{2}; n-1} \frac{s}{\sqrt{n}} \right )$$`
+`$$\left (\bar{x} - t_{n-1,1-\frac{\alpha}{2}} \frac{s}{\sqrt{n}} \leq \mu \leq \bar{x} + t_{n-1,1-\frac{\alpha}{2}} \frac{s}{\sqrt{n}} \right )$$`
 
 
 ]
@@ -4157,7 +4540,7 @@ In generale, si avrà l&#39;intervallo
 .panelset[
 .panel[.panel-name[Quesito]
 
-Si supponga che il livello di colesterolo (espresso in `\(mg\%/mL\)`) **medio** nei bambini di età compresa tra i 2 e i 14 anni sia noto, da ampi studi di popolazione, essere **pari a 175**, con una .orange[deviazione standard di 30].
+Si supponga che il livello di colesterolo (espresso in `\(mg/dL\)`) **medio** nei bambini di età compresa tra i 2 e i 14 anni sia noto, da ampi studi di popolazione, essere **pari a 175**, con una .orange[deviazione standard di 30].
 
 Si vuole valutare la possibilità che vi sia un&#39;aggregazione familiare dei
 livelli di colesterolo.
@@ -4170,21 +4553,21 @@ Si identifica un gruppo di padri con pregresso infarto del miocardio acuto (IMA)
 ]
 
 .panel[.panel-name[Grafico]
-&lt;img src=&quot;data:image/png;base64,#img/Rplot02.PNG&quot; width=&quot;100%&quot; style=&quot;display: block; margin: auto;&quot; /&gt;
+&lt;img src=&quot;data:image/png;base64,#img/Rplot02.PNG&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;display: block; margin: auto;&quot; /&gt;
 
 ]
 .panel[.panel-name[Problema]
-Questo valore ( `\(207.2 mg\%/mL\)` ) è **sufficientemente lontano** da quello di `\(175 mg\%/mL\)` da farci credere che questi bambini abbiano una distribuzione dei livelli di colesterolo con una media più elevata di quella della popolazione generale  dei  bambini nella stessa classe di età?
+Questo valore ( `\(207.2\ mg/dL\)` ) è **sufficientemente lontano** da quello di `\(175\ mg/dL\)` da farci credere che questi bambini abbiano una distribuzione dei livelli di colesterolo con una media più elevata di quella della popolazione generale  dei  bambini nella stessa classe di età?
 
 
 ]
 .panel[.panel-name[Risposta]
 
-Un intervallo di confidenza al 95% può aiutare a trovare la risposta.
+Un intervallo di confidenza (bilaterale) al 95% può aiutare a trovare la risposta.
 
 `$$\left(207.2 - 1.96 \frac{30}{\sqrt{100}}; 207.2+1.96 \frac{30}{\sqrt{100}}\right) = (201.32; 213.08)$$`
 
-**Ni**: la media attesa non è inclusa nell&#39;intervallo di confidenza al 95% (e sta sotto). Questo vuol dire che se i bambini considerati provenissero dalla stessa distribuzione dei bambini nella popolazione generale (ovvero non vi fosse un&#39;aggregazione familiare dei livelli di colesterolo per loro), allora averli presi a caso proprio loro sarebbe tanto raro quanto il 5%. Se come naturalmente si ipotizza che questo sia un valore &quot;troppo&quot; raro, allora possiamo rifiutare l&#39;ipotesi che le due distribuzioni di bambini (popolazione generale e quelli considerati) siano la stessa distribuzione, e che quella dei valori dei bambini in studio sia spostata verso destra su valori più elevati del normale.
+**Sì**: la media attesa non è inclusa nell&#39;intervallo di confidenza al 95% (e sta sotto). Questo vuol dire che se i bambini considerati provenissero dalla stessa distribuzione dei bambini nella popolazione generale (ovvero non vi fosse un&#39;aggregazione familiare dei livelli di colesterolo per loro), allora un campione con una media così lontana dal valore atteso sarebbe più raro del 5%. Se come naturalmente si ipotizza che questo sia un valore &quot;troppo&quot; raro, allora possiamo rifiutare l&#39;ipotesi che le due distribuzioni di bambini (popolazione generale e quelli considerati) siano la stessa distribuzione, e che quella dei valori dei bambini in studio sia spostata verso destra su valori più elevati del normale.
 
 ]
 ]
@@ -4250,7 +4633,7 @@ class: inverse, middle
  
 
 
-&gt; Il criterio nella costruzione di un test è di minimizzare sia `\(\alpha\)` che `\(\beta\)`
+&gt; Il criterio nella costruzione di un test è di fissare `\(\alpha\)` e, fra i test con quel livello, scegliere quello con `\(\beta\)` minimo (massima potenza)
 
 
 
@@ -4267,7 +4650,7 @@ Obiettivo è un set di ipotesi del tipo:
 - `\(H_0: \mu=\mu_0\)`; `\(\sigma=\sigma_0\)`
 - `\(H_1: \mu=\mu_1&lt;\mu_0\)`; `\(\sigma=\sigma_0\)`
 
-Il primo passo è individuare la statistica test, che nel caso specifico `\(\bar{X}\)`
+Il primo passo è individuare la statistica test, che nel caso specifico è `\(\bar{X}\)`
 
 
 
@@ -4283,7 +4666,7 @@ Il primo passo è individuare la statistica test, che nel caso specifico `\(\bar
 
 .panel[.panel-name[Graficamente]
 
-&lt;img src=&quot;data:image/png;base64,#img/img.jpg&quot; width=&quot;70%&quot; style=&quot;display: block; margin: auto;&quot; /&gt;
+&lt;img src=&quot;data:image/png;base64,#img/img.jpg&quot; alt=&quot;&quot; width=&quot;70%&quot; style=&quot;display: block; margin: auto;&quot; /&gt;
 
 
 - La regione di accettazione è l&#39;insieme dei valori di `\(\bar{x}\)` per cui si accetta `\(H_0\)`
@@ -4318,7 +4701,7 @@ il test uniformemente più potente è basato su `\(\bar{X}\)`
 Si consideri l&#39;ipotesi per cui madri con un livello socioeconomico basso tendano a partorire figli con pesi alla nascita inferiori al normale. Per testare l&#39;ipotesi, si considera un campione di 100 nati vivi consecutivi in un ospedale situato in una zona socioeconomica svantaggiata. Il peso normale è noto dai dati del registro nazionale, che per gli USA è pari a 120 oz, con una deviazione standard di 25 oz. 
 Il peso medio dei 100 nati è di 115 oz con una deviazione standard campionaria di 24 oz. 
 
-Ad un livello di significatività di 0.05, si ha `\(z_{\alpha}=-1.645\)`, e la regione critica è pari a 
+Ad un livello di significatività di 0.05, si ha `\(z_{\alpha}=-1.645\)`, e il valore critico è pari a
 
 `$$c=120-1.645\frac{25}{10}=115.89$$`
 
@@ -4362,7 +4745,7 @@ si può anche equivalentemente calcolare
 .panelset[
 .panel[.panel-name[Definizione]
 
-Il `\(p-value\)` è quel valore di `\(\alpha\)` per cui il valore della statistica test è al confine tra regione di accettazione e zona di rifiuto
+Il `\(p-value\)` è quel valore di `\(\alpha\)` per cui il valore della statistica test è al confine tra regione di accettazione e zona di rifiuto (qui nel caso `\(H_1:\mu&lt;\mu_0\)`)
 
 `$$p=\Phi(z_p)=\Phi\left( \frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}\right)$$`
 
@@ -4388,7 +4771,7 @@ ovvero si ha un `\(p-value\)` pari a `\(p=\Phi(z)\)`
 
 ]
 .pull-right[
-&lt;img src=&quot;data:image/png;base64,#img/img2.2.png&quot; width=&quot;100%&quot; style=&quot;display: block; margin: auto;&quot; /&gt;
+&lt;img src=&quot;data:image/png;base64,#img/img2.2.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;display: block; margin: auto;&quot; /&gt;
 ]
 ]
 .panel[.panel-name[Alternativa maggiore]
@@ -4408,7 +4791,7 @@ ovvero si ha un `\(p-value\)` pari a `\(p=1-\Phi(z)\)`
 
 ]
 .pull-right[
-&lt;img src=&quot;data:image/png;base64,#img/img3.2.png&quot; width=&quot;100%&quot; style=&quot;display: block; margin: auto;&quot; /&gt;
+&lt;img src=&quot;data:image/png;base64,#img/img3.2.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;display: block; margin: auto;&quot; /&gt;
 ]
 ]
 ]
@@ -4427,7 +4810,7 @@ si ha che `\(z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}=\frac{200-175}{\fra
 
 Visto che `\(1.58=z&lt;z_{1-\alpha}=z_{.95}=1.645\)` non si rifiuta `\(H_0\)`, con un `\(p-value\)` pari a
 
-`$$p=1-\Phi(z)=1-\Phi(1.58)=1-0.9431=0.057$$`
+`$$p=1-\Phi(z)=1-\Phi(1.58)=1-0.9429=0.057$$`
 
 
 ---
@@ -4438,10 +4821,10 @@ Visto che `\(1.58=z&lt;z_{1-\alpha}=z_{.95}=1.645\)` non si rifiuta `\(H_0\)`, c
 
 Un test a due code è un test in cui i valori del parametro sotto ipotesi alternativa sono alternativamente maggiori o minori (diversi) dal valore sotto ipotesi nulla.
 
-Obiettivo è quello di rifiutare `\(H_0\)` se `\(Z\)` è **troppo piccolo o troppo grande**, ovvero `\(H_0\)` sarà accettata se `\(X_1\leq Z \leq X_2\)`
+Obiettivo è quello di rifiutare `\(H_0\)` se `\(Z\)` è **troppo piccolo o troppo grande**, ovvero `\(H_0\)` sarà accettata se `\(c_1\leq Z \leq c_2\)`
 
 
-`$$P(rifiutare\ H_0|H_0)=P(Z\leq X_1 \cup Z\geq X_2)=P(Z\leq X_1)+P(Z\geq X_2)=\alpha$$`
+`$$P(rifiutare\ H_0|H_0)=P(Z\leq c_1 \cup Z\geq c_2)=P(Z\leq c_1)+P(Z\geq c_2)=\alpha$$`
 
 
 Ipotizzando equiprobabilità sulle due code, si ha che
@@ -4450,7 +4833,7 @@ Ipotizzando equiprobabilità sulle due code, si ha che
 
 ]
 .panel[.panel-name[Procedura]
-Si test quindi l&#39;ipotesi
+Si testa quindi l&#39;ipotesi
 
 - `\(H_0:\mu=\mu_0\)`; `\(\sigma=\sigma_0\)`
 - `\(H_1:\mu\neq\mu_0\)`; `\(\sigma=\sigma_0\)`
@@ -4465,7 +4848,7 @@ si calcola
 
 ]
 .panel[.panel-name[Graficamente]
-&lt;img src=&quot;data:image/png;base64,#img/img4.png&quot; width=&quot;100%&quot; style=&quot;display: block; margin: auto;&quot; /&gt;
+&lt;img src=&quot;data:image/png;base64,#img/img4.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;display: block; margin: auto;&quot; /&gt;
 ]
 ]
 
@@ -4476,18 +4859,18 @@ si calcola
 
 #### Colesterolo negli immigrati asiatici
 
-Si sa che i livelli di colesterolo nelle donne americane di età tra i 20 ed i 40 anni è distribuito normalmente con media `\(190\ mg/dL\)` e deviazione standard di `\(40\ mg/dL\)`. Si vuole testare l&#39;ipotesi che i livelli di colesterolo nelle donne asiatiche di pari età sia eguale a quello delle donne americane. 
+Si sa che i livelli di colesterolo nelle donne americane di età tra i 20 ed i 40 anni sono distribuiti normalmente con media `\(190\ mg/dL\)` e deviazione standard di `\(40\ mg/dL\)`. Si vuole testare l&#39;ipotesi che i livelli di colesterolo nelle donne asiatiche di pari età siano eguali a quelli delle donne americane.
 Si considera quindi un campione di 100 donne con le caratteristiche specificate e si osserva un livello di colesterolo medio pari a `\(181.52\ mg/dL\)`. Si testa quindi l&#39;ipotesi 
 
 - `\(H_0:\mu=190\)`; `\(\sigma=40\)`
 - `\(H_1:\mu\neq 190\)`; `\(\sigma=40\)` 
 
-`$$z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}=\frac{181.5-190}{\frac{40}{\sqrt{100}}}=-2.12$$`
+`$$z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}=\frac{181.52-190}{\frac{40}{\sqrt{100}}}=-2.12$$`
 
 Per un test a livello di significatività dello 0.05 i valori critici sono `\(Z_{0.975}=1.96\)` e `\(Z_{0.025}=-1.96\)`, per cui, visto che `\(Z=-2.12&lt;-1.96\)` rifiuto `\(H_0\)`.
 
 ---
-# Test a tue code: p-value
+# Test a due code: p-value
 
 .panelset[
 .panel[.panel-name[Derivazione]
@@ -4502,7 +4885,7 @@ si ha che
 
 ]
 .panel[.panel-name[Graficamente]
-&lt;img src=&quot;data:image/png;base64,#img/img5.png&quot; width=&quot;100%&quot; style=&quot;display: block; margin: auto;&quot; /&gt;
+&lt;img src=&quot;data:image/png;base64,#img/img5.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;display: block; margin: auto;&quot; /&gt;
 ]
 .panel[.panel-name[Esempio]
 
@@ -4524,7 +4907,7 @@ da cui
 
 .panelset[
 .panel[.panel-name[t di Student]
-Se `\(X_1,...,X_n\)` è un campione di osservazioni indipendenti distribuite normalmente `\(N(\mu,\sigma^2)\)`, allora la quantità `\(\frac{\bar{X}-\mu_0}{\frac{s}{\sqrt{n}}}\)` è distribuita seconda una `\(t\)` di Student con `\(n-1\)` gradi di libertà.
+Se `\(X_1,...,X_n\)` è un campione di osservazioni indipendenti distribuite normalmente `\(N(\mu,\sigma^2)\)`, allora la quantità `\(\frac{\bar{X}-\mu}{\frac{s}{\sqrt{n}}}\)` è distribuita secondo una `\(t\)` di Student con `\(n-1\)` gradi di libertà.
 Da questo deriva che sotto l&#39;ipotesi nulla `\(\mu=\mu_0\)`
 
 `$$P\left(t&lt;t_{n-1;\frac{\alpha}{2}}\right)=P\left(t&gt;t_{n-1;1-\frac{\alpha}{2}}\right)=\frac{\alpha}{2}$$`
@@ -4534,7 +4917,7 @@ da cui si derivano i valori critici
 ]
 .panel[.panel-name[Procedura]
 
-Si test quindi l&#39;ipotesi
+Si testa quindi l&#39;ipotesi
 
 - `\(H_0:\mu=\mu_0\)`; `\(\sigma\)`
 - `\(H_1:\mu\neq\mu_0\)`; `\(\sigma\)`
@@ -4551,7 +4934,7 @@ Si osserva che
 `$$t_{n-1;\frac{\alpha}{2}}=-t_{n-1;1-\frac{\alpha}{2}}$$`
 ]
 .panel[.panel-name[Graficamente]
-&lt;img src=&quot;data:image/png;base64,#img/img6.png&quot; width=&quot;100%&quot; style=&quot;display: block; margin: auto;&quot; /&gt;
+&lt;img src=&quot;data:image/png;base64,#img/img6.png&quot; alt=&quot;&quot; width=&quot;100%&quot; style=&quot;display: block; margin: auto;&quot; /&gt;
 ]
 
 .panel[.panel-name[Esempio]
@@ -4562,9 +4945,9 @@ Si vuole studiare l&#39;effetto dell&#39;attività lavorativa (con conseguente e
 
 si calcola
 
-`$$t=\frac{\bar{x}-\mu_0}{\frac{s}{\sqrt{n}}}=\frac{0.27-0.10}{\frac{0.32}{\sqrt{26}}}=2.70$$`
+`$$t=\frac{\bar{x}-\mu_0}{\frac{s}{\sqrt{n}}}=\frac{0.27-0.10}{\frac{0.32}{\sqrt{26}}}=2.71$$`
 
-Sotto ipotesi nulla, si ha che `\(p(t_{25}&gt;2.70)=0.0061\)`, per cui `\(p-value=0.012\)`
+Sotto ipotesi nulla, si ha che `\(p(t_{25}&gt;2.71)=0.0060\)`, per cui `\(p-value=0.012\)`
 
 
 ]
@@ -4583,7 +4966,7 @@ Per un test del tipo
 - `\(H_0:\mu=\mu_0\)`; `\(\sigma=\sigma_0\)`
 - `\(H_1:\mu\neq\mu_0\)`; `\(\sigma=\sigma_0\)`
 
-`\(H_0\)` può essere rifiutata solo se IC per `\(\mu\)` non contiene `\(\mu_0\)`
+Al livello `\(\alpha\)`, `\(H_0\)` è rifiutata **se e solo se** l&#39;IC al livello `\((1-\alpha)\)` per `\(\mu\)` non contiene `\(\mu_0\)` (test a due code)
 ]
 .panel[.panel-name[Esempio]
 
@@ -4597,7 +4980,7 @@ ovvero
 
 `$$200-z_{0.975}\frac{50}{\sqrt{10}};  200+z_{0.975}\frac{50}{\sqrt{10}}=[169.01;230.99]$$`
 
-che contiene il valore `\(\mu_0=175\)` usato precedentemente nei test di ipotesi, per cui non rifiuto `\(H_0\)`
+che contiene il valore `\(\mu_0=175\)` usato precedentemente nei test di ipotesi, per cui non rifiuto `\(H_0\)` (anche con il test a due code: `\(z=1.58&lt;1.96\)`, `\(p=0.114\)`)
 
 ]
 ]

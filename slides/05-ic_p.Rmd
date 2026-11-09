@@ -280,10 +280,12 @@ Si dice che la media campionaria è uno **stimatore non distorto** della media d
 
 Riguardo alla **varianza** dello stimatore della media, abbiamo
 
-$$\begin{split}\mbox{var}(\bar{X})&= \mbox{var}\left(\frac{\sum_{i=1}^n X_i}{n}\right) =* \frac{1}{n^2} \mbox{var}\left(\sum_{i=1}^n X_i\right) =* \frac{1}{n^2} \sum_{i=1}^n \mbox{var}(X_i)\\& \stackrel{\mbox{def}}{=} \frac{1}{n^2} \sum_{i=1}^n\sigma^2 = \frac{1}{n^2} n\sigma^2 = \frac{\sigma^2}{n}\end{split}$$
+$$\begin{split}\mbox{var}(\bar{X})&= \mbox{var}\left(\frac{\sum_{i=1}^n X_i}{n}\right) =* \frac{1}{n^2} \mbox{var}\left(\sum_{i=1}^n X_i\right) \stackrel{\mbox{ind.}}{=} \frac{1}{n^2} \sum_{i=1}^n \mbox{var}(X_i)\\& \stackrel{\mbox{def}}{=} \frac{1}{n^2} \sum_{i=1}^n\sigma^2 = \frac{1}{n^2} n\sigma^2 = \frac{\sigma^2}{n}\end{split}$$
 
 
-- $\frac{\sigma}{\sqrt{n}}$ è chiamato con .orange[errore standard della media], stimato da $\frac{s}{\sqrt{n}}$
+- $\frac{\sigma}{\sqrt{n}}$ è chiamato .orange[errore standard della media], stimato da $\frac{s}{\sqrt{n}}$
+
+- il passaggio $\stackrel{\mbox{ind.}}{=}$ vale perché le $X_i$ sono **indipendenti**
 
 
 $$*)\begin{split}\mbox{var}(aX) &= \frac{\sum_1^n\left(ax_i-\frac{\sum_1^nax_j}{n}\right)^2}{n}= \frac{\sum_1^n\left(ax_i-\frac{a\sum_1^nx_j}{n}\right)^2}{n}\\&= \frac{\sum_1^n\left(a\left(x_i-\mu\right)\right)^2}{n}= \frac{\sum_1^na^2\left(x_i-\mu\right)^2}{n}\\&=\frac{a^2\sum_1^n\left(x_i-\mu\right)^2}{n}=a^ 2\mbox{var}(X)\end{split}$$ 
@@ -340,7 +342,7 @@ Associare alla stima puntuale una misura della sua precisione
 
 .panelset[
 .panel[.panel-name[Passaggio a Z]
-Data una variabile casuale normale $X$ dal T.L.C. sappiamo che
+Se $X$ è normale (oppure, per il T.L.C., se $n$ è abbastanza grande, e in questo caso in modo approssimato) sappiamo che
 
 $$Z =\frac{\bar{X}-\mu}{\frac{\sigma}{\sqrt{n}}}$$
 
@@ -458,11 +460,11 @@ countdown(minutes = 15, warn_when = 3, play_sound = TRUE,
 ---
 class: inverse, middle
 
-# .center[**.orange[Esempi]** e **.orange[Osservazioni**]]
+# .center[**.orange[Esempi]** e **.orange[Osservazioni]**]
 
-- **definizione**
+- **esempio** con i trigliceridi
 
-- **campioni e popolazione**
+- **confidenza**, **unicità** e **ampiezza** dell'intervallo
 
 
 
@@ -495,7 +497,7 @@ $s$       | 21.70 | 32.62 | 22.44 | 14.13 | 20.46
 </small>
 ]
 
-.pull-right[Cinque campioni casuali di ampiezza ( $n = 10$ ) da un popolazione di soggetti afferenti al centro cardiovascolare dell'ASL 1 di Trieste, a cui è stato rilevato il livello di trigliceridi (in mg/dl, valori di riferimento 50-175).
+.pull-right[Cinque campioni casuali di ampiezza ( $n = 10$ ) da una popolazione di soggetti afferenti al centro cardiovascolare dell'ASL 1 di Trieste, a cui è stato rilevato il livello di trigliceridi (in mg/dl, valori di riferimento 50-175).
 ]
 
 ]
@@ -509,7 +511,7 @@ $$\begin{split}\left(\bar{X} - 1.96 \frac{\sigma}{\sqrt{n}}; \bar{X}+1.96 \frac{
 - Campione 1 $(116.9-12.4; 116.9+12.4) \equiv (104.5; 129.3)$
 - Campione 2 $(132.8-12.4; 132.8+12.4) \equiv (120.4; 145.2)$
 - Campione 3 $(117.0-12.4; 117.0+12.4) \equiv (104.6; 129.4)$
-- Campione 4 $(106.7-12.4; 106.7+12.4) \equiv (106.7; 119.1)$
+- Campione 4 $(106.7-12.4; 106.7+12.4) \equiv (94.3; 119.1)$
 - Campione 5 $(111.9-12.4; 111.9+12.4) \equiv (99.5; 124.3)$
 
 ]
@@ -559,12 +561,12 @@ In generale, un intervallo di confidenza ad un livello $(1-\alpha)$ sarà dato d
 $$\left ( \bar{x} - z_{1-\frac{\alpha}{2}} \frac{\sigma}{\sqrt{n}};
 \bar{x} + z_{1-\frac{\alpha}{2}} \frac{\sigma}{\sqrt{n}} \right )$$
 
-dove $z_{1-\frac{\alpha}{2}}$ è l' $\frac{\alpha}{2}$ -esimo
+dove $z_{1-\frac{\alpha}{2}}$ è il $100(1-\frac{\alpha}{2})$-esimo
 percentile di una distribuzione $N(0,1)$.
 
 $(1-\alpha)$ | $z_{1-\frac{\alpha}{2}}$ 
 ------------:|:-----------------------
-        0.90 |                    1.644
+        0.90 |                    1.645
         0.95 |                     1.96 
         0.99 |                    2.576
 
@@ -608,7 +610,7 @@ L'ampiezza dell'intervallo, data da $2 z_{1-\frac{\alpha}{2}} \frac{\sigma}{\sqr
 
 - $\sigma$: come **aumenta** la deviazione standard della popolazione ( $\sigma$ ), così **.orange[aumenta]** l'ampiezza dell'intervallo
 
-- $\alpha$: come **aumenta** il livello di confidenza richiesto per l'analisi, così **.orange[aumenta]** l'ampiezzza dell'intervallo
+- $1-\alpha$: come **aumenta** il livello di confidenza richiesto per l'analisi, così **.orange[aumenta]** l'ampiezza dell'intervallo
 
 
 ]
@@ -630,7 +632,7 @@ n   | 20       | 0.95       | $\bar{X} \pm 1.96 \frac{20}{\sqrt{n}}$      |
 10  | 5        | 0.95       |    | 6.2
 10  | 40       | 0.95       |    | 49.6 
 10  | 20       | $1-\alpha$ | $\bar{X} \pm z_{1-\frac{\alpha}{2}} \frac{20}{\sqrt{10}}$ |
-10  | 20       | 0.90       |    | 20.7
+10  | 20       | 0.90       |    | 20.8
 10  | 20       | 0.95       |    | 24.8
 10  | 20       | 0.99       |    | 32.6
 
@@ -642,7 +644,7 @@ n   | 20       | 0.95       | $\bar{X} \pm 1.96 \frac{20}{\sqrt{n}}$      |
 
 
 ---
-# IC osservazioni: .orange[sotto controlliamo]
+# IC osservazioni: .orange[sotto controllo]
 
 $n$ e $\alpha$ sono **sotto il diretto controllo** del ricercatore
 
@@ -672,14 +674,14 @@ class: inverse, middle
 
 .panelset[
 .panel[.panel-name[Definizione]
-Se $\sigma$ è **ignoto**, potremmo sostituirlo (approssimandolo/stimandolo) in $\frac{x-\mu}{\frac{\sigma}{\sqrt{n}}}$ con $s$
+Se $\sigma$ è **ignoto**, potremmo sostituirlo (approssimandolo/stimandolo) in $\frac{\bar{X}-\mu}{\frac{\sigma}{\sqrt{n}}}$ con $s$
 
 **Se**
 - $X_1, \ldots, X_n \sim N(\mu,\sigma^2)$
 - sono indipendenti
 
 **Allora**
-- $\frac{x-\mu}{\frac{s}{\sqrt{n}}}$ si distribuisce come una $t$ di Student con $(n-1)$ gradi di libertà
+- $\frac{\bar{X}-\mu}{\frac{s}{\sqrt{n}}}$ si distribuisce come una $t$ di Student con $(n-1)$ gradi di libertà
 
 
 ]
@@ -743,7 +745,7 @@ Nel caso del campione 1 si ha:
 - $\bar{x} = 116.90$
 - $n = 10$
 - $s = 21.7$
-- $\alpha = 0.5$
+- $\alpha = 0.05$
 
 $$\left (116.90 -2.262 \frac{21.7}{\sqrt{10}} \leq \mu \leq 116.90 + 2.262 \frac{21.7}{\sqrt{10}} \right )$$
 
@@ -751,7 +753,7 @@ ovvero $(101.38; 132.42)$
 
 In generale, si avrà l'intervallo
 
-$$\left (\bar{x} - t_{\frac{\alpha}{2}; n-1} \frac{s}{\sqrt{n}} \leq \mu \leq \bar{x} + t_{\frac{\alpha}{2}; n-1} \frac{s}{\sqrt{n}} \right )$$
+$$\left (\bar{x} - t_{n-1,1-\frac{\alpha}{2}} \frac{s}{\sqrt{n}} \leq \mu \leq \bar{x} + t_{n-1,1-\frac{\alpha}{2}} \frac{s}{\sqrt{n}} \right )$$
 
 
 ]
@@ -766,7 +768,7 @@ $$\left (\bar{x} - t_{\frac{\alpha}{2}; n-1} \frac{s}{\sqrt{n}} \leq \mu \leq \b
 .panelset[
 .panel[.panel-name[Quesito]
 
-Si supponga che il livello di colesterolo (espresso in $mg\%/mL$) **medio** nei bambini di età compresa tra i 2 e i 14 anni sia noto, da ampi studi di popolazione, essere **pari a 175**, con una .orange[deviazione standard di 30].
+Si supponga che il livello di colesterolo (espresso in $mg/dL$) **medio** nei bambini di età compresa tra i 2 e i 14 anni sia noto, da ampi studi di popolazione, essere **pari a 175**, con una .orange[deviazione standard di 30].
 
 Si vuole valutare la possibilità che vi sia un'aggregazione familiare dei
 livelli di colesterolo.
@@ -785,17 +787,17 @@ knitr::include_graphics("img/Rplot02.PNG")
 
 ]
 .panel[.panel-name[Problema]
-Questo valore ( $207.2 mg\%/mL$ ) è **sufficientemente lontano** da quello di $175 mg\%/mL$ da farci credere che questi bambini abbiano una distribuzione dei livelli di colesterolo con una media più elevata di quella della popolazione generale  dei  bambini nella stessa classe di età?
+Questo valore ( $207.2\ mg/dL$ ) è **sufficientemente lontano** da quello di $175\ mg/dL$ da farci credere che questi bambini abbiano una distribuzione dei livelli di colesterolo con una media più elevata di quella della popolazione generale  dei  bambini nella stessa classe di età?
 
 
 ]
 .panel[.panel-name[Risposta]
 
-Un intervallo di confidenza al 95% può aiutare a trovare la risposta.
+Un intervallo di confidenza (bilaterale) al 95% può aiutare a trovare la risposta.
 
 $$\left(207.2 - 1.96 \frac{30}{\sqrt{100}}; 207.2+1.96 \frac{30}{\sqrt{100}}\right) = (201.32; 213.08)$$
 
-**Ni**: la media attesa non è inclusa nell'intervallo di confidenza al 95% (e sta sotto). Questo vuol dire che se i bambini considerati provenissero dalla stessa distribuzione dei bambini nella popolazione generale (ovvero non vi fosse un'aggregazione familiare dei livelli di colesterolo per loro), allora averli presi a caso proprio loro sarebbe tanto raro quanto il 5%. Se come naturalmente si ipotizza che questo sia un valore "troppo" raro, allora possiamo rifiutare l'ipotesi che le due distribuzioni di bambini (popolazione generale e quelli considerati) siano la stessa distribuzione, e che quella dei valori dei bambini in studio sia spostata verso destra su valori più elevati del normale.
+**Sì**: la media attesa non è inclusa nell'intervallo di confidenza al 95% (e sta sotto). Questo vuol dire che se i bambini considerati provenissero dalla stessa distribuzione dei bambini nella popolazione generale (ovvero non vi fosse un'aggregazione familiare dei livelli di colesterolo per loro), allora un campione con una media così lontana dal valore atteso sarebbe più raro del 5%. Se come naturalmente si ipotizza che questo sia un valore "troppo" raro, allora possiamo rifiutare l'ipotesi che le due distribuzioni di bambini (popolazione generale e quelli considerati) siano la stessa distribuzione, e che quella dei valori dei bambini in studio sia spostata verso destra su valori più elevati del normale.
 
 ]
 ]
@@ -861,7 +863,7 @@ class: inverse, middle
  
 
 
-> Il criterio nella costruzione di un test è di minimizzare sia $\alpha$ che $\beta$
+> Il criterio nella costruzione di un test è di fissare $\alpha$ e, fra i test con quel livello, scegliere quello con $\beta$ minimo (massima potenza)
 
 
 
@@ -878,7 +880,7 @@ Obiettivo è un set di ipotesi del tipo:
 - $H_0: \mu=\mu_0$; $\sigma=\sigma_0$
 - $H_1: \mu=\mu_1<\mu_0$; $\sigma=\sigma_0$
 
-Il primo passo è individuare la statistica test, che nel caso specifico $\bar{X}$
+Il primo passo è individuare la statistica test, che nel caso specifico è $\bar{X}$
 
 
 
@@ -931,7 +933,7 @@ il test uniformemente più potente è basato su $\bar{X}$
 Si consideri l'ipotesi per cui madri con un livello socioeconomico basso tendano a partorire figli con pesi alla nascita inferiori al normale. Per testare l'ipotesi, si considera un campione di 100 nati vivi consecutivi in un ospedale situato in una zona socioeconomica svantaggiata. Il peso normale è noto dai dati del registro nazionale, che per gli USA è pari a 120 oz, con una deviazione standard di 25 oz. 
 Il peso medio dei 100 nati è di 115 oz con una deviazione standard campionaria di 24 oz. 
 
-Ad un livello di significatività di 0.05, si ha $z_{\alpha}=-1.645$, e la regione critica è pari a 
+Ad un livello di significatività di 0.05, si ha $z_{\alpha}=-1.645$, e il valore critico è pari a
 
 $$c=120-1.645\frac{25}{10}=115.89$$
 
@@ -975,7 +977,7 @@ $$z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}$$
 .panelset[
 .panel[.panel-name[Definizione]
 
-Il $p-value$ è quel valore di $\alpha$ per cui il valore della statistica test è al confine tra regione di accettazione e zona di rifiuto
+Il $p-value$ è quel valore di $\alpha$ per cui il valore della statistica test è al confine tra regione di accettazione e zona di rifiuto (qui nel caso $H_1:\mu<\mu_0$)
 
 $$p=\Phi(z_p)=\Phi\left( \frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}\right)$$
 
@@ -1044,7 +1046,7 @@ si ha che $z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}=\frac{200-175}{\frac{
 
 Visto che $1.58=z<z_{1-\alpha}=z_{.95}=1.645$ non si rifiuta $H_0$, con un $p-value$ pari a
 
-$$p=1-\Phi(z)=1-\Phi(1.58)=1-0.9431=0.057$$
+$$p=1-\Phi(z)=1-\Phi(1.58)=1-0.9429=0.057$$
 
 
 ---
@@ -1055,10 +1057,10 @@ $$p=1-\Phi(z)=1-\Phi(1.58)=1-0.9431=0.057$$
 
 Un test a due code è un test in cui i valori del parametro sotto ipotesi alternativa sono alternativamente maggiori o minori (diversi) dal valore sotto ipotesi nulla.
 
-Obiettivo è quello di rifiutare $H_0$ se $Z$ è **troppo piccolo o troppo grande**, ovvero $H_0$ sarà accettata se $X_1\leq Z \leq X_2$
+Obiettivo è quello di rifiutare $H_0$ se $Z$ è **troppo piccolo o troppo grande**, ovvero $H_0$ sarà accettata se $c_1\leq Z \leq c_2$
 
 
-$$P(rifiutare\ H_0|H_0)=P(Z\leq X_1 \cup Z\geq X_2)=P(Z\leq X_1)+P(Z\geq X_2)=\alpha$$
+$$P(rifiutare\ H_0|H_0)=P(Z\leq c_1 \cup Z\geq c_2)=P(Z\leq c_1)+P(Z\geq c_2)=\alpha$$
 
 
 Ipotizzando equiprobabilità sulle due code, si ha che
@@ -1067,7 +1069,7 @@ $$P(Z\leq c_1|H_0)=P(Z\geq c_2|H_0)=\frac{\alpha}{2}$$
 
 ]
 .panel[.panel-name[Procedura]
-Si test quindi l'ipotesi
+Si testa quindi l'ipotesi
 
 - $H_0:\mu=\mu_0$; $\sigma=\sigma_0$
 - $H_1:\mu\neq\mu_0$; $\sigma=\sigma_0$
@@ -1095,18 +1097,18 @@ knitr::include_graphics("img/img4.png")
 
 #### Colesterolo negli immigrati asiatici
 
-Si sa che i livelli di colesterolo nelle donne americane di età tra i 20 ed i 40 anni è distribuito normalmente con media $190\ mg/dL$ e deviazione standard di $40\ mg/dL$. Si vuole testare l'ipotesi che i livelli di colesterolo nelle donne asiatiche di pari età sia eguale a quello delle donne americane. 
+Si sa che i livelli di colesterolo nelle donne americane di età tra i 20 ed i 40 anni sono distribuiti normalmente con media $190\ mg/dL$ e deviazione standard di $40\ mg/dL$. Si vuole testare l'ipotesi che i livelli di colesterolo nelle donne asiatiche di pari età siano eguali a quelli delle donne americane.
 Si considera quindi un campione di 100 donne con le caratteristiche specificate e si osserva un livello di colesterolo medio pari a $181.52\ mg/dL$. Si testa quindi l'ipotesi 
 
 - $H_0:\mu=190$; $\sigma=40$
 - $H_1:\mu\neq 190$; $\sigma=40$ 
 
-$$z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}=\frac{181.5-190}{\frac{40}{\sqrt{100}}}=-2.12$$
+$$z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}=\frac{181.52-190}{\frac{40}{\sqrt{100}}}=-2.12$$
 
 Per un test a livello di significatività dello 0.05 i valori critici sono $Z_{0.975}=1.96$ e $Z_{0.025}=-1.96$, per cui, visto che $Z=-2.12<-1.96$ rifiuto $H_0$.
 
 ---
-# Test a tue code: p-value
+# Test a due code: p-value
 
 .panelset[
 .panel[.panel-name[Derivazione]
@@ -1145,7 +1147,7 @@ $$p=2\Phi(-2.12)=2[1-\Phi(2.12)]=2[1-0.983]=0.034$$
 
 .panelset[
 .panel[.panel-name[t di Student]
-Se $X_1,...,X_n$ è un campione di osservazioni indipendenti distribuite normalmente $N(\mu,\sigma^2)$, allora la quantità $\frac{\bar{X}-\mu_0}{\frac{s}{\sqrt{n}}}$ è distribuita seconda una $t$ di Student con $n-1$ gradi di libertà.
+Se $X_1,...,X_n$ è un campione di osservazioni indipendenti distribuite normalmente $N(\mu,\sigma^2)$, allora la quantità $\frac{\bar{X}-\mu}{\frac{s}{\sqrt{n}}}$ è distribuita secondo una $t$ di Student con $n-1$ gradi di libertà.
 Da questo deriva che sotto l'ipotesi nulla $\mu=\mu_0$
 
 $$P\left(t<t_{n-1;\frac{\alpha}{2}}\right)=P\left(t>t_{n-1;1-\frac{\alpha}{2}}\right)=\frac{\alpha}{2}$$
@@ -1155,7 +1157,7 @@ da cui si derivano i valori critici
 ]
 .panel[.panel-name[Procedura]
 
-Si test quindi l'ipotesi
+Si testa quindi l'ipotesi
 
 - $H_0:\mu=\mu_0$; $\sigma$
 - $H_1:\mu\neq\mu_0$; $\sigma$
@@ -1185,9 +1187,9 @@ Si vuole studiare l'effetto dell'attività lavorativa (con conseguente esposizio
 
 si calcola
 
-$$t=\frac{\bar{x}-\mu_0}{\frac{s}{\sqrt{n}}}=\frac{0.27-0.10}{\frac{0.32}{\sqrt{26}}}=2.70$$
+$$t=\frac{\bar{x}-\mu_0}{\frac{s}{\sqrt{n}}}=\frac{0.27-0.10}{\frac{0.32}{\sqrt{26}}}=2.71$$
 
-Sotto ipotesi nulla, si ha che $p(t_{25}>2.70)=0.0061$, per cui $p-value=0.012$
+Sotto ipotesi nulla, si ha che $p(t_{25}>2.71)=0.0060$, per cui $p-value=0.012$
 
 
 ]
@@ -1206,7 +1208,7 @@ Per un test del tipo
 - $H_0:\mu=\mu_0$; $\sigma=\sigma_0$
 - $H_1:\mu\neq\mu_0$; $\sigma=\sigma_0$
 
-$H_0$ può essere rifiutata solo se IC per $\mu$ non contiene $\mu_0$
+Al livello $\alpha$, $H_0$ è rifiutata **se e solo se** l'IC al livello $(1-\alpha)$ per $\mu$ non contiene $\mu_0$ (test a due code)
 ]
 .panel[.panel-name[Esempio]
 
@@ -1220,7 +1222,7 @@ ovvero
 
 $$200-z_{0.975}\frac{50}{\sqrt{10}};  200+z_{0.975}\frac{50}{\sqrt{10}}=[169.01;230.99]$$
 
-che contiene il valore $\mu_0=175$ usato precedentemente nei test di ipotesi, per cui non rifiuto $H_0$
+che contiene il valore $\mu_0=175$ usato precedentemente nei test di ipotesi, per cui non rifiuto $H_0$ (anche con il test a due code: $z=1.58<1.96$, $p=0.114$)
 
 ]
 ]
