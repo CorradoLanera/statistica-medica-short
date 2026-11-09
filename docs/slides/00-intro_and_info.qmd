@@ -1,0 +1,259 @@
+---
+title: "STATISTICA MEDICA"
+subtitle: "Presentazione e informazioni generali"
+author: "Corrado Lanera"
+institute: "[Unità di Biostatistica, Epidemiologia e Salute Pubblica](https://www.unipd-ubep.it/), Università di Padova"
+date: last-modified
+date-format: "D MMMM YYYY"
+lang: it
+format:
+  revealjs:
+    theme: [default, statmed.scss]
+    template-partials: [title-slide.html]
+    width: 960
+    height: 720
+    margin: 0.06
+    slide-number: true
+    progress: true
+    logo: img/unipd_logo.png
+    footer: "Statistica Medica · [bit.ly/cl-statmed](https://bit.ly/cl-statmed)"
+    embed-resources: true
+    code-copy: true
+    auto-stretch: false
+    menu:
+      side: left
+execute:
+  cache: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  fig.retina = 3,
+  warning = FALSE,
+  message = FALSE,
+  comment = "",
+  out.width = "100%"
+)
+library(knitr)
+
+library(tidyverse)
+library(here)
+library(gridExtra)
+
+library(countdown)
+library(DT)
+
+options(width = 59) # fit into the right-column slides
+
+```
+
+## [Obiettivi]{.orange}
+
+- imparare le **definizioni** e gli **operatori** base della statistica medica,
+ in particolare riguardo:
+ 
+  + **analisi descrittiva** dei dati
+  + elementi di **probabilità**
+
+- imparare a comprendere e stimare i parametri di valutazione di un **test diagnostico**, in particolare **sensibilità**, **specificità**, **valori predittivi**, **positivo e negativo**
+  
+- conoscere e identificare le principali **distribuzioni di probabilità**
+  e i loro ambiti di utilità e applicabilità
+
+- acquisire le basi per la comprensione, il calcolo e l'interpretazione delle
+  metriche relative ai **test statistici** per variabili continue,
+  come il t-test, il p-value e gli intervalli di confidenza per una stima.
+
+## [Requisiti]{.orange}
+
+- **aritmetica** di base (somma, sottrazione, moltiplicazione, divisione, potenza, radice)
+
+- **operatori tra insiemi** (appartenenza, intersezione, unione, complemento; and, or, not).
+
+## [Lezioni]{.orange}
+
+- Modalità: in presenza, **75% obbligatorio** (minimo)
+
+- Materiale didattico: Moodle
+
+- Portale accesso slide, esercizi e calendario: [bit.ly/cl-statmed](https://bit.ly/cl-statmed)
+
+
+### Licenza
+
+Utilizzo del materiale e suoi derivati: consentito e libero sotto licenza  [cc-by 4.0](https://creativecommons.org/licenses/by/4.0/deed.it).
+  
+<br>
+
+::: {.small}
+
+In sintesi: potete condividere, modificare, utilizzare il materiale
+liberamente e gratuitamente per qualsiasi fine, a patto di attribuire
+adeguata paternità al materiale che producete, ma senza alcuna mia
+responsabilità o garanzia su di esso. Siete tenuti comunque a
+distribuirlo (incluse eventuali opere derivate) con analoga ed esplicita
+licenza, e senza ulteriori restrizioni.
+
+:::
+
+## [Agenda]{.orange}
+
+:::: {.columns}
+
+::: {.column width="48%"}
+
++ intro al corso
+
++ statistica descrittiva - prerequisiti, definizioni, localizzazione, dispersione / distribuzione, grafici
+  
++ fondamenti di probabilità
+
++ rischi, test di screening: sensibilità e specificità, valori predittivi positivo e negativo, teorema di Bayes (base e generalizzato)
+
+:::
+
+::: {.column width="48%"}
+
++ distribuzioni: modelli discreti
+
++ distribuzioni: modelli continui
+
++ intervalli di confidenza e p-value
+  
++ revisione e simulazione completa d'esame
+
+:::
+
+::::
+
+## [Supporto]{.orange}
+
+In [**Moodle**]{.orange}, trovate:
+
+- Link al portale **slide** ed **Esercizi**
+
+- **Lavagne** scritte a lezione
+
+- Link per prenotare **ricevimento**  [bit.ly/statmed-cl-ricevimento](https://bit.ly/statmed-cl-ricevimento): 
+  
+  - 25 minuti a sessione
+  - prenotabile con almeno 2 giorni di anticipo,
+  - entro due settimane nel futuro
+  
+> La settimana precedente le sessioni d'esame NON è attivo il ricevimento.
+
+## [Esame finale]{.orange}
+
+::: {.small}
+
+L'esame finale sarà composto da 10 **esercizi a risposta multipla** dal valore di 3 punti ciascuno, e **non avrà durata prestabilita** (durata prevista per lo svolgimento 2 ore).
+
+Durante lo svolgimento è **[concesso]{.orange}** l'utilizzo di:
+
+ - **qualunque libro di testo cartaceo**
+ - **appunti personali cartacei**
+ - **tavole statistiche cartacee**
+ - **calcolatrice scientifica NON programmabile**, né grafica né simbolica, che calcoli l'esponenziale (e<sup>x</sup>); smartphone, tablet e computer NON sono ammessi<br>(Casio 220 Plus II (~9 euro), Texas Instruments TI-30XA (~13 euro), Sharp EL-501T (~17 euro))
+
+Punteggi:
+
+- Una risposta corretta varrà 3 punti.
+- Sarà presente una sola risposta corretta in ciascuna domanda.
+- Una risposta errata sommerà negativamente sul totale in misura pari al punteggio della domanda diviso il numero di opzioni sbagliate possibili (= 3 / (numero risposte - 1)).
+- Sarà presente una domanda "bonus" che varrà 6 punti (portando il totale a 36). Tale domanda avrà valore (positivo o negativo che sia) solamente dopo aver raggiunto i 18/30 con le altre domande, e in alcun caso potrà dare o togliere la sufficienza.
+
+Il punteggio totale dell'esame sarà dunque di 36/36. Superato totalizzandone
+almeno 18/30. La lode è assegnata con un totale di almeno 31/36 punti.
+
+> Sarà possibile prenotare un'integrazione orale (solo) nei seguenti casi:
+>
+> - punteggio tra 14 e 17 punti, per arrivare a 18/30 (non di più)
+> - punteggio tra 27 e 30 punti, per arrivare fino a 30/30, con eventuale lode.
+
+:::
+
+## [Riconoscimenti]{.orange}
+
+- Le diapositive proposte sono state prodotte a partire anche da
+  materiale generato da/con le seguenti persone gravitanti attorno
+  all'UBEP*:
+  
+  + Danila Azzolina
+  + Dario Gregori
+  + Giulia Lorenzoni
+  + Honoria Ocagli
+  + Ileana Baldi
+  + Luca Vedovelli
+  + Matteo Martinato
+  + Paola Berchialla
+
+<br><br>
+
+::: {.small}
+
+::: {.text-right}
+
+\* In ordine alfabetico.
+
+:::
+
+:::
+
+<br><br>
+
+> Un ringraziamento speciale a Cristiana Vettori per
+l'aiuto e il supporto logistico e amministrativo che mi ha sempre offerto, e mi offre ancora.
+
+## {.inverse .text-right background-color="#03A696"}
+
+```{r, echo=FALSE, out.width = "50%"}
+knitr::include_graphics("img/profilo_CL.jpg")
+```
+### Per trovarmi... {.big}
+
+
+[`r fontawesome::fa("link")`](https://www.unipd-ubep.it/) [**www.unipd-ubep.it**](https://www.unipd-ubep.it/)
+
+[`r fontawesome::fa("envelope")`](mailto:Corrado.Lanera@ubep.unipd.it) [**Corrado.Lanera[\@ubep.unipd.it]{.orange}**](mailto:Corrado.Lanera@ubep.unipd.it)
+
+[`r fontawesome::fa("github")`](https://github.com/corradolanera)
+[`r fontawesome::fa("twitter")`](https://twitter.com/corradolanera)
+[`r fontawesome::fa("telegram")`](https://telegram.me/CorradoLanera)
+**\@CorradoLanera**
+
+[`r fontawesome::fa("calendar-check")` ](https://bit.ly/statmed-cl-ricevimento) [**bit.ly/statmed-cl-ricevimento**](https://bit.ly/statmed-cl-ricevimento)
+
+## {.inverse .text-center .center background-color="#03A696"}
+
+::: {.quote-box}
+
+::: {.text-left}
+
+_**Can** one be a [good data analyst]{.orange} **without** being a [half-good programmer]{.orange}?<br>The short answer to that is, 'No.'<br>The long answer to that is, 'No.'_
+
+:::
+
+
+::: {.text-right}
+
+—Frank Harrell<br>10/1999 - S-PLUS User Conference, New Orleans<br>
+
+:::
+
+:::
+
+
+### [Domande?]{.orange} {.big}
+
+
+Diapositive: [bit.ly/cl-statmed](https://bit.ly/cl-statmed)
+
+
+[`r fontawesome::fa("link")`](https://www.unipd-ubep.it/) [**www.unipd-ubep.it**](https://www.unipd-ubep.it/) | 
+[`r fontawesome::fa("envelope")`](mailto:Corrado.Lanera@ubep.unipd.it) [**Corrado.Lanera@ubep.unipd.it**](mailto:Corrado.Lanera@ubep.unipd.it)
+
+[`r fontawesome::fa("github")`](https://github.com/corradolanera)
+[`r fontawesome::fa("twitter")`](https://twitter.com/corradolanera)
+[`r fontawesome::fa("telegram")`](https://telegram.me/CorradoLanera)
+**\@CorradoLanera** |
+[`r fontawesome::fa("calendar-check")` ](https://bit.ly/statmed-cl-ricevimento) [**bit.ly/statmed-cl-ricevimento**](https://bit.ly/statmed-cl-ricevimento)

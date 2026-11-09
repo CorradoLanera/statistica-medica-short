@@ -4,7 +4,7 @@ sidebar: false
 listing:
   type: table
   contents:
-    - 00-intro_and_info.html
+    - 00-intro_and_info.qmd
     - 01-r_rstudio.html
     - 02-descrittive.html
     - 03-probabilita.html

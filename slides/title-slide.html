@@ -1,0 +1,21 @@
+<section id="title-slide"$for(title-slide-attributes/pairs)$ $it.key$="$it.value$"$endfor$ class="quarto-title-block center">
+  <div class="title-logos">
+    <img class="unipd" src="img/unipd_logo.png" alt="Università di Padova">
+    <img src="img/DCTV.png" alt="DCTV">
+    <img src="img/UBEP.png" alt="UBEP">
+    <img src="img/LAIMS.png" alt="LAIMS">
+  </div>
+  <h1 class="title">$title$</h1>
+$if(subtitle)$
+  <p class="subtitle">$subtitle$</p>
+$endif$
+$for(by-author)$
+  <p class="author">$it.name.literal$</p>
+$endfor$
+$if(institute)$
+  <p class="institute">$institute$</p>
+$endif$
+$if(date)$
+  <p class="date">$date$</p>
+$endif$
+</section>

@@ -1,29 +1,32 @@
 ---
 title: "STATISTICA MEDICA"
-subtitle: "Introduzione"
-author: "[CorradoLanera](www.CorradoLanera.it)"
-date: "YYYY-MM-DD (last update: `r Sys.Date()`)"
-institute: "[Unità di Biostatistica, Epidemiologia e Salute Pubblica](https://www.unipd-ubep.it/) --- University of Padova"
-output: 
-  xaringan::moon_reader:
-    seal: false  # no title slide! Do It Yourself here below
-    nature:
-      highlightStyle: github
-      highlightLines: true
-      countIncrementalSlides: false
-    css: xaringan-themer.css
-    self_contained: true
+subtitle: "Presentazione e informazioni generali"
+author: "Corrado Lanera"
+institute: "[Unità di Biostatistica, Epidemiologia e Salute Pubblica](https://www.unipd-ubep.it/), Università di Padova"
+date: last-modified
+date-format: "D MMMM YYYY"
+lang: it
+format:
+  revealjs:
+    theme: [default, statmed.scss]
+    template-partials: [title-slide.html]
+    width: 960
+    height: 720
+    margin: 0.06
+    slide-number: true
+    progress: true
+    logo: img/unipd_logo.png
+    footer: "Statistica Medica · [bit.ly/cl-statmed](https://bit.ly/cl-statmed)"
+    embed-resources: true
+    code-copy: true
+    auto-stretch: false
+    menu:
+      side: left
+execute:
+  cache: false
 ---
-class: center, middle, bg_title, hide-count
-
-
-<img src="img/unipd_logo.png" width="120px"/>
-<img src="img/DCTV.png" width="50px"/>
-<img src="img/UBEP.png" width="50px"/>
-<img src="img/LAIMS.png" width="50px"/>
 
 ```{r setup, include=FALSE}
-options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(
   fig.retina = 3,
   warning = FALSE,
@@ -32,135 +35,19 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 library(knitr)
-library(xaringanExtra)
-library(xaringanthemer)
 
 library(tidyverse)
 library(here)
 library(gridExtra)
 
 library(countdown)
-library(metathis)
 library(DT)
 
 options(width = 59) # fit into the right-column slides
 
 ```
 
-
-```{r xaringans, echo=FALSE}
-# https://github.com/gadenbuie/xaringanExtra
-use_tachyons()
-use_share_again()
-use_panelset()
-use_clipboard()
-use_editable(expires = 1)
-use_freezeframe()
-use_extra_styles(
-  hover_code_line = TRUE,         #<<
-  mute_unhighlighted_code = TRUE  #<<
-)
-use_progress_bar(color = "#0051BA", location = "top")
-use_logo("img/bit.ly_cl-statmed.png")
-```
-
-```{r style-share-again, echo=FALSE}
-style_share_again(
-  share_buttons = c("twitter", "linkedin", "pocket")
-)
-```
-
-```{css, echo=FALSE}
-.left-code {
-  color: #777;
-  width: 38%;
-  height: 92%;
-  float: left;
-}
-.right-code {
-  color: #777;
-  width: 55%;
-  height: 92%;
-  float: right;
-  padding-top: 0.5em;
-}
-.left-plot {
-  width: 43%;
-  float: left;
-}
-.right-plot {
-  width: 60%;
-  float: right;
-}
-.hide-count .remark-slide-number {
-  display: none;
-}
-
-.bg_title {
-  position: relative;
-  z-index: 1;
-}
-
-.bg_title::before {    
-      content: "";
-      background-image: url('img/bg1.png');
-      background-size: contain;
-      position: absolute;
-      top: 0px;
-      right: 0px;
-      bottom: 0px;
-      left: 0px;
-      opacity: 0.3;
-      z-index: -1;
-}
-
-```
-
-
-```{r xaringan-themer, include=FALSE, warning=FALSE}
-red <- "#f34213"
-purple <- "#3e2f5b"
-orange <- "#ff8811"
-green <- "#136f63"
-white <- "#FFFFFF"
-pastel_orange <- "#F97B64"
-blu_gray <- "#1F4257"
-style_duo_accent(
-    colors = c(
-        red = red,
-        purple = purple,
-        orange = orange,
-        green = green,
-        white = white,
-        pastel_orange = pastel_orange,
-        blu_gray = blu_gray
-    )
-)
-```
-
-
-<br>
-<br>
-<br>
-
-# **.orange[STATISTICA MEDICA]**
-
--- Presentazione e informazioni generali --
-<br>
-<br>
-<br>
-
-Corrado Lanera | [**Unità di Biostatistica, Epidemiologia e Salute Pubblica**](https://www.unipd-ubep.it/)
-
-
-
-
-
----
-class: hide-count
-
-
-# .orange[Obiettivi]
+## [Obiettivi]{.orange}
 
 - imparare le **definizioni** e gli **operatori** base della statistica medica,
  in particolare riguardo:
@@ -175,25 +62,15 @@ class: hide-count
 
 - acquisire le basi per la comprensione, il calcolo e l'interpretazione delle
   metriche relative ai **test statistici** per variabili continue,
-  come il t-test, del p-value e degli intervalli di confidenza per una stima.
+  come il t-test, il p-value e gli intervalli di confidenza per una stima.
 
-
----
-class: hide-count
-
-# .orange[Requisiti]
+## [Requisiti]{.orange}
 
 - **aritmetica** di base (somma, sottrazione, moltiplicazione, divisione, potenza, radice)
 
 - **operatori tra insiemi** (appartenenza, intersezione, unione, complemento; and, or, not).
 
-
----
-class: hide-count
-
-
-# .orange[Lezioni]
-
+## [Lezioni]{.orange}
 
 - Modalità: in presenza, **75% obbligatorio** (minimo)
 
@@ -202,29 +79,28 @@ class: hide-count
 - Portale accesso slide, esercizi e calendario: [bit.ly/cl-statmed](https://bit.ly/cl-statmed)
 
 
-## Licenza
+### Licenza
 
 Utilizzo del materiale e suoi derivati: consentito e libero sotto licenza  [cc-by 4.0](https://creativecommons.org/licenses/by/4.0/deed.it).
   
 <br>
-<small>
+
+::: {.small}
+
 In sintesi: potete condividere, modificare, utilizzare il materiale
 liberamente e gratuitamente per qualsiasi fine, a patto di attribuire
-adeguata paternalità al materiale che producete, ma senza alcuna mia
+adeguata paternità al materiale che producete, ma senza alcuna mia
 responsabilità o garanzia su di esso. Siete tenuti comunque a
 distribuirlo (incluse eventuali opere derivate) con analoga ed esplicita
 licenza, e senza ulteriori restrizioni.
-</small>
 
+:::
 
+## [Agenda]{.orange}
 
----
-class: hide-count
+:::: {.columns}
 
-
-## .orange[Agenda]
-
-.pull-left[
+::: {.column width="48%"}
 
 + intro al corso
 
@@ -233,9 +109,11 @@ class: hide-count
 + fondamenti di probabilità
 
 + rischi, test di screening: sensibilità e specificità, valori predittivi positivo e negativo, teorema di Bayes (base e generalizzato)
-]
 
-.pull-right[
+:::
+
+::: {.column width="48%"}
+
 + distribuzioni: modelli discreti
 
 + distribuzioni: modelli continui
@@ -243,17 +121,14 @@ class: hide-count
 + intervalli di confidenza e p-value
   
 + revisione e simulazione completa d'esame
-]
 
+:::
 
+::::
 
----
-class: hide-count
+## [Supporto]{.orange}
 
-
-# .orange[Supporto]
-
-In .orange[**Moodle**], trovate:
+In [**Moodle**]{.orange}, trovate:
 
 - Link al portale **slide** ed **Esercizi**
 
@@ -267,49 +142,41 @@ In .orange[**Moodle**], trovate:
   
 > La settimana precedente le sessioni d'esame NON è attivo il ricevimento.
 
+## [Esame finale]{.orange}
 
+::: {.small}
 
-
-
----
-class: hide-count
-
-
-# .orange[Esame finale]
-<small>
 L'esame finale sarà composto da 10 **esercizi a risposta multipla** dal valore di 3 punti ciascuno, e **non avrà durata prestabilita** (durata prevista per lo svolgimento 2 ore).
 
-Durante lo svolgimento è **.orange[concesso]** l'utilizzo di:
+Durante lo svolgimento è **[concesso]{.orange}** l'utilizzo di:
 
  - **qualunque libro di testo cartaceo**
- - **appunti personali cartacei**. 
+ - **appunti personali cartacei**
  - **tavole statistiche cartacee**
- - **calcolatrice scientifica NON programmabile** (aritmetica base, radici, esponenti, parentesi)<br>(Casio fx220 Plus-2 (~10 euro), Texas Instruments TI-30XA (~13 euro), Sharp EL-501T (~17 euro))
+ - **calcolatrice scientifica NON programmabile**, né grafica né simbolica, che calcoli l'esponenziale (e<sup>x</sup>); smartphone, tablet e computer NON sono ammessi<br>(Casio 220 Plus II (~9 euro), Texas Instruments TI-30XA (~13 euro), Sharp EL-501T (~17 euro))
 
 Punteggi:
 
 - Una risposta corretta varrà 3 punti.
 - Sarà presente una sola risposta corretta in ciascuna domanda.
 - Una risposta errata sommerà negativamente sul totale in misura pari al punteggio della domanda diviso il numero di opzioni sbagliate possibili (= 3 / (numero risposte - 1)).
-- Sarà presente una domanda "bonus" che varrà 6 punti (portanto il totale a 36). Tale domanda avrà valore (positivo o negativo che sia) solamente dopo aver raggiunto i 18/30 con le altre domande, e in alcun caso potrà dare o togliere la sufficienza.
+- Sarà presente una domanda "bonus" che varrà 6 punti (portando il totale a 36). Tale domanda avrà valore (positivo o negativo che sia) solamente dopo aver raggiunto i 18/30 con le altre domande, e in alcun caso potrà dare o togliere la sufficienza.
 
 Il punteggio totale dell'esame sarà dunque di 36/36. Superato totalizzandone
 almeno 18/30. La lode è assegnata con un totale di almeno 31/36 punti.
 
 > Sarà possibile prenotare un'integrazione orale (solo) nei seguenti casi:
+>
 > - punteggio tra 14 e 17 punti, per arrivare a 18/30 (non di più)
 > - punteggio tra 27 e 30 punti, per arrivare fino a 30/30, con eventuale lode.
 
+:::
 
-
----
-class: hide-count
-
-# .orange[Riconoscimenti]
+## [Riconoscimenti]{.orange}
 
 - Le diapositive proposte sono state prodotte a partire anche da
   materiale generato da/con le seguenti persone gravitanti attorno
-  l'UBEP*:
+  all'UBEP*:
   
   + Danila Azzolina
   + Dario Gregori
@@ -321,56 +188,62 @@ class: hide-count
   + Paola Berchialla
 
 <br><br>
-<small>
-.right[\* In ordine alfabetico.]
-</small>
+
+::: {.small}
+
+::: {.text-right}
+
+\* In ordine alfabetico.
+
+:::
+
+:::
 
 <br><br>
 
 > Un ringraziamento speciale a Cristiana Vettori per
 l'aiuto e il supporto logistico e amministrativo che mi ha sempre offerto, e mi offre ancora.
 
----
-class: inverse, bottom, right, hide-count
-
+## {.inverse .text-right background-color="#03A696"}
 
 ```{r, echo=FALSE, out.width = "50%"}
 knitr::include_graphics("img/profilo_CL.jpg")
 ```
-# Per trovarmi...
+### Per trovarmi... {.big}
 
 
 [`r fontawesome::fa("link")`](https://www.unipd-ubep.it/) [**www.unipd-ubep.it**](https://www.unipd-ubep.it/)
 
-[`r fontawesome::fa("envelope")`](mailto:Corrado.Lanera@ubep.unipd.it) [**Corrado.Lanera**__.orange[@ubep.unipd.it]__](mailto:Corrado.Lanera@ubep.unipd.it)
+[`r fontawesome::fa("envelope")`](mailto:Corrado.Lanera@ubep.unipd.it) [**Corrado.Lanera[\@ubep.unipd.it]{.orange}**](mailto:Corrado.Lanera@ubep.unipd.it)
 
 [`r fontawesome::fa("github")`](https://github.com/corradolanera)
 [`r fontawesome::fa("twitter")`](https://twitter.com/corradolanera)
 [`r fontawesome::fa("telegram")`](https://telegram.me/CorradoLanera)
-**@CorradoLanera**
+**\@CorradoLanera**
 
 [`r fontawesome::fa("calendar-check")` ](https://bit.ly/statmed-cl-ricevimento) [**bit.ly/statmed-cl-ricevimento**](https://bit.ly/statmed-cl-ricevimento)
 
+## {.inverse .text-center .center background-color="#03A696"}
+
+::: {.quote-box}
+
+::: {.text-left}
+
+_**Can** one be a [good data analyst]{.orange} **without** being a [half-good programmer]{.orange}?<br>The short answer to that is, 'No.'<br>The long answer to that is, 'No.'_
+
+:::
 
 
+::: {.text-right}
 
----
-class: inverse, center, middle, hide-count
-
-
-.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
-.left[
-_**Can** one be a .orange[good data analyst] **without** being a .orange[half-good programmer]?<br>The short answer to that is, 'No.'<br>The long answer to that is, 'No.'_
-]
-
-.tr[
 —Frank Harrell<br>10/1999 - S-PLUS User Conference, New Orleans<br>
-]
-]
+
+:::
+
+:::
 
 
-# .orange[Domande?]
-
+### [Domande?]{.orange} {.big}
 
 
 Diapositive: [bit.ly/cl-statmed](https://bit.ly/cl-statmed)
@@ -382,7 +255,5 @@ Diapositive: [bit.ly/cl-statmed](https://bit.ly/cl-statmed)
 [`r fontawesome::fa("github")`](https://github.com/corradolanera)
 [`r fontawesome::fa("twitter")`](https://twitter.com/corradolanera)
 [`r fontawesome::fa("telegram")`](https://telegram.me/CorradoLanera)
-**@CorradoLanera** |
+**\@CorradoLanera** |
 [`r fontawesome::fa("calendar-check")` ](https://bit.ly/statmed-cl-ricevimento) [**bit.ly/statmed-cl-ricevimento**](https://bit.ly/statmed-cl-ricevimento)
-
-

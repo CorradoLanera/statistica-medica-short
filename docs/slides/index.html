@@ -86,9 +86,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-filename','listing-file-modified',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-filename-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: ["listing-filename","listing-file-modified"],
+      searchColumns: ["listing-date","listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -468,14 +468,17 @@ window.Quarto = {
     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
       <option value="" disabled="" selected="" hidden="">Order By</option>
       <option value="index" data-direction="asc">Default</option>
-      <option value="listing-filename-sort" data-direction="asc">
-        File Name
+      <option value="listing-date-sort" data-direction="asc">
+        Date - Oldest
       </option>
-      <option value="listing-file-modified-sort" data-direction="asc">
-        Modified - Oldest
+      <option value="listing-date-sort" data-direction="desc">
+        Date - Newest
       </option>
-      <option value="listing-file-modified-sort" data-direction="desc">
-        Modified - Newest
+      <option value="listing-title-sort" data-direction="asc">
+        Title
+      </option>
+      <option value="listing-author" data-direction="asc">
+        Author
       </option>
     </select>
   </div>
@@ -489,93 +492,121 @@ window.Quarto = {
 <tr>
 
 <th>
-<a class="sort" data-sort="listing-filename-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">File Name</a>
+<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
 </th>
 
 <th>
-<a class="sort" data-sort="listing-file-modified-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Modified</a>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+</th>
+
+<th>
+<a class="sort" data-sort="listing-author" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Author</a>
 </th>
 
 </tr>
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-file-modified-sort="1794147293831" data-listing-filename-sort="00-intro_and_info.html">
+<tr data-index="0" data-listing-date-sort="1794229251000" data-listing-file-modified-sort="1794229251246" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="733" data-listing-title-sort="STATISTICA MEDICA" data-listing-filename-sort="00-intro_and_info.qmd">
 <td>
-<a href="../slides\00-intro_and_info.html" class="filename listing-filename">00-intro_and_info.html</a>
+<span class="listing-date">Nov 9, 2026</span>
 </td>
 <td>
-<span class="listing-file-modified">11/8/26, 3:14:53 PM</span>
-</td>
-
-</tr>
-
-<tr data-index="1" data-listing-file-modified-sort="1794147293841" data-listing-filename-sort="01-r_rstudio.html">
-<td>
-<a href="../slides\01-r_rstudio.html" class="filename listing-filename">01-r_rstudio.html</a>
+<a href="../slides/00-intro_and_info.html" class="title listing-title">STATISTICA MEDICA</a>
 </td>
 <td>
-<span class="listing-file-modified">11/8/26, 3:14:53 PM</span>
+<span class="listing-author">Corrado Lanera</span>
 </td>
 
 </tr>
 
-<tr data-index="2" data-listing-file-modified-sort="1794147293863" data-listing-filename-sort="02-descrittive.html">
+<tr data-index="1" data-listing-file-modified-sort="1794228349788" data-listing-filename-sort="01-r_rstudio.html">
 <td>
-<a href="../slides\02-descrittive.html" class="filename listing-filename">02-descrittive.html</a>
+<span class="listing-date">&nbsp;</span>
 </td>
 <td>
-<span class="listing-file-modified">11/8/26, 3:14:53 PM</span>
-</td>
-
-</tr>
-
-<tr data-index="3" data-listing-file-modified-sort="1794147293873" data-listing-filename-sort="03-probabilita.html">
-<td>
-<a href="../slides\03-probabilita.html" class="filename listing-filename">03-probabilita.html</a>
+<a href="../slides\01-r_rstudio.html" class="title listing-title">&nbsp;</a>
 </td>
 <td>
-<span class="listing-file-modified">11/8/26, 3:14:53 PM</span>
+<span class="listing-author">&nbsp;</span>
 </td>
 
 </tr>
 
-<tr data-index="4" data-listing-file-modified-sort="1794147293884" data-listing-filename-sort="04-distribuzioni.html">
+<tr data-index="2" data-listing-file-modified-sort="1794228523486" data-listing-filename-sort="02-descrittive.html">
 <td>
-<a href="../slides\04-distribuzioni.html" class="filename listing-filename">04-distribuzioni.html</a>
+<span class="listing-date">&nbsp;</span>
 </td>
 <td>
-<span class="listing-file-modified">11/8/26, 3:14:53 PM</span>
+<a href="../slides\02-descrittive.html" class="title listing-title">&nbsp;</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
 </td>
 
 </tr>
 
-<tr data-index="5" data-listing-file-modified-sort="1794147293894" data-listing-filename-sort="05-ic_p.html">
+<tr data-index="3" data-listing-file-modified-sort="1794228344183" data-listing-filename-sort="03-probabilita.html">
 <td>
-<a href="../slides\05-ic_p.html" class="filename listing-filename">05-ic_p.html</a>
+<span class="listing-date">&nbsp;</span>
 </td>
 <td>
-<span class="listing-file-modified">11/8/26, 3:14:53 PM</span>
+<a href="../slides\03-probabilita.html" class="title listing-title">&nbsp;</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="4" data-listing-file-modified-sort="1794228993731" data-listing-filename-sort="04-distribuzioni.html">
+<td>
+<span class="listing-date">&nbsp;</span>
+</td>
+<td>
+<a href="../slides\04-distribuzioni.html" class="title listing-title">&nbsp;</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="5" data-listing-file-modified-sort="1794228580124" data-listing-filename-sort="05-ic_p.html">
+<td>
+<span class="listing-date">&nbsp;</span>
+</td>
+<td>
+<a href="../slides\05-ic_p.html" class="title listing-title">&nbsp;</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
 </td>
 
 </tr>
 
 <tr data-index="6" data-listing-file-modified-sort="1794147294293" data-listing-filename-sort="tavole_a_negpos.pdf">
 <td>
-<a href="../slides\tavole_a_negpos.pdf" class="filename listing-filename">tavole_a_negpos.pdf</a>
+<span class="listing-date">&nbsp;</span>
 </td>
 <td>
-<span class="listing-file-modified">11/8/26, 3:14:54 PM</span>
+<a href="../slides\tavole_a_negpos.pdf" class="title listing-title">&nbsp;</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
 </td>
 
 </tr>
 
 <tr data-index="7" data-listing-file-modified-sort="1794147294295" data-listing-filename-sort="tavole_abcd_pos.pdf">
 <td>
-<a href="../slides\tavole_abcd_pos.pdf" class="filename listing-filename">tavole_abcd_pos.pdf</a>
+<span class="listing-date">&nbsp;</span>
 </td>
 <td>
-<span class="listing-file-modified">11/8/26, 3:14:54 PM</span>
+<a href="../slides\tavole_abcd_pos.pdf" class="title listing-title">&nbsp;</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
 </td>
 
 </tr>

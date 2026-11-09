@@ -14,7 +14,9 @@
   },
   {
     "listing": "/slides/index.html",
-    "items": []
+    "items": [
+      "/slides/00-intro_and_info.html"
+    ]
   },
   {
     "listing": "/esercizi/quiz.html",

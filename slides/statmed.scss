@@ -1,0 +1,103 @@
+/*-- scss:defaults --*/
+
+// Tema delle slide Quarto (revealjs). Riprende i colori e i caratteri del tema
+// xaringan (style_duo_accent): primario #035AA6, secondario #03A696.
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@600&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Source+Code+Pro:wght@400;700&display=swap');
+
+$statmed-primary: #035AA6;
+$statmed-secondary: #03A696;
+$statmed-orange: #ff8811;
+
+$font-family-sans-serif: "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+$font-family-monospace: "Source Code Pro", Menlo, Consolas, Monaco, monospace;
+$presentation-heading-font: "Cabin", Georgia, serif;
+$presentation-heading-font-weight: 600;
+$presentation-heading-color: $statmed-primary;
+$presentation-heading-text-transform: none;
+$presentation-font-size-root: 20px;
+$presentation-h1-font-size: 2.3em;
+$presentation-h2-font-size: 1.8em;
+$presentation-h3-font-size: 1.35em;
+$presentation-h4-font-size: 1.1em;
+$body-bg: #ffffff;
+$body-color: #000000;
+$link-color: $statmed-primary;
+$code-block-font-size: 0.75em;
+
+/*-- scss:rules --*/
+
+.reveal strong {
+  color: $statmed-primary;
+}
+
+.reveal .orange { color: $statmed-orange; }
+.reveal .red { color: #f34213; }
+.reveal .purple { color: #3e2f5b; }
+.reveal .green { color: #136f63; }
+.reveal .pastel_orange { color: #F97B64; }
+.reveal .blu_gray { color: #1F4257; }
+
+.reveal .text-center { text-align: center; }
+.reveal .text-right { text-align: right; }
+.reveal .text-left { text-align: left; }
+.reveal .small { font-size: 0.8em; }
+
+// titolo che nella slide xaringan non stava in cima
+.reveal h3.big {
+  font-size: $presentation-h1-font-size;
+}
+
+// slide "inverse" di xaringan: fondo #03A696 (attributo della slide), testo nero
+.reveal section.inverse,
+.reveal section.inverse h2,
+.reveal section.inverse h3 {
+  color: #000000;
+}
+
+// riquadro della citazione (classi tachyons nel deck xaringan)
+.reveal .quote-box {
+  background-color: #e8fdf5;
+  border: 0.125rem solid #137752;
+  border-radius: 0.5rem;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 0.2em 1.2em;
+  margin-top: 2em;
+}
+
+// slide del titolo
+.reveal #title-slide .title-logos {
+  display: flex;
+  gap: 0.6em;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+.reveal #title-slide .title-logos img {
+  height: 2.6em;
+  margin: 0;
+}
+.reveal #title-slide .title-logos img.unipd {
+  height: 5em;
+}
+.reveal #title-slide .title {
+  color: $statmed-orange;
+  font-weight: 700;
+}
+.reveal #title-slide .subtitle {
+  color: #000000;
+}
+.reveal #title-slide .institute,
+.reveal #title-slide .date {
+  font-size: 0.8em;
+}
+
+.reveal .slide-number,
+.reveal .footer {
+  color: $statmed-primary;
+}
+
+// colonne (pull-left/pull-right di xaringan): lo spazio libero va fra le due
+.reveal .columns {
+  justify-content: space-between;
+}

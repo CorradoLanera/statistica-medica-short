@@ -5,6 +5,7 @@ project:
     - index.qmd
     - intro.qmd
     - slides/index.qmd
+    - slides/00-intro_and_info.qmd
     - esercizi/index.qmd
     - esercizi/*.qmd
     - corsi/*.qmd
