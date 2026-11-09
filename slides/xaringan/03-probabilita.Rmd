@@ -176,7 +176,7 @@ class: hide-count
 
 - Le diapositive proposte sono state prodotte a partire anche da
   materiale generato da/con le seguenti persone gravitanti attorno
-  l'UBEP*:
+  all'UBEP*:
   
   + Danila Azzolina
   + Dario Gregori

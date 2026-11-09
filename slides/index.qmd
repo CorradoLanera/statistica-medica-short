@@ -7,9 +7,9 @@ listing:
     - 00-intro_and_info.qmd
     - 01-r_rstudio.qmd
     - 02-descrittive.qmd
-    - 03-probabilita.html
-    - 04-distribuzioni.html
-    - 05-ic_p.html
+    - 03-probabilita.qmd
+    - 04-distribuzioni.qmd
+    - 05-ic_p.qmd
     - "tavole_a_negpos.pdf"
     - "tavole_abcd_pos.pdf"
 ---

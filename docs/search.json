@@ -136,242 +136,473 @@
     ]
   },
   {
-    "objectID": "slides/01-r_rstudio.html#cosa-faremo",
-    "href": "slides/01-r_rstudio.html#cosa-faremo",
+    "objectID": "slides/04-distribuzioni.html#cosa-faremo",
+    "href": "slides/04-distribuzioni.html#cosa-faremo",
     "title": "Statistica Medica",
     "section": "Cosa faremo",
-    "text": "Cosa faremo\nNella prossima ora vi fornirò un’introduzione all’uso di R, tramite RStudio. Vedremo cosa sono, a cosa servono (in cosa si differenziano) e come installarli.\nL’obiettivo principale è quello di fornirvi gli elementi base per poter (se volete, vi fa piacere, o pensate possa esservi utile*) seguire anche la fase di codifica degli esempi interattivi ed esercitazioni che vi mostrerò nelle future lezioni.\nInoltre, ho messo a disposizione (gratuitamente) un ambiente di lavoro Posit Cloud attivabile da ciascuno di voi (vedremo come), in modo che possiate usare R/RStudio senza doverli installare, e con/su qualunque dispositivo vi troviate a operare.**\n\n\n\n* La mia opinione in merito, chiaramente, è: si 😉.\n** Volendo, anche su smartphone e tablet, seppur piuttosto scomodo!"
+    "text": "Cosa faremo\nQuello di cui ci interesseremo in questa lezione è di introdurre le principali distribuzioni di probabilità per eventi discreti, quali processi binomiali, utili per rappresentare il numero di successi per eventi dicotomici con una data probabilità p di esito positivo, e processi di Poisson utili a modellizzare il numero di eventi che è probabile osservare in un lasso di tempo stabilito. Inoltre ci occuperemo anche delle distribuzioni utili a descrivere eventi continui, con particolare attenzione alle distribuzioni normale e normale standard.\nPer ciascuna, oltre a qualche rapido cenno teorico, vedremo come calcolare media e varianza, percentili (per le distribuzioni continue), oltre che qualche esempio concreto."
   },
   {
-    "objectID": "slides/01-r_rstudio.html#panoramica",
-    "href": "slides/01-r_rstudio.html#panoramica",
+    "objectID": "slides/04-distribuzioni.html#riconoscimenti",
+    "href": "slides/04-distribuzioni.html#riconoscimenti",
+    "title": "Statistica Medica",
+    "section": "Riconoscimenti",
+    "text": "Riconoscimenti\n\nLe diapositive proposte sono state prodotte a partire anche da materiale generato da/con le seguenti persone gravitanti attorno all’UBEP*:\n\nDanila Azzolina\nDario Gregori\nGiulia Lorenzoni\nHonoria Ocagli\nIleana Baldi\nLuca Vedovelli\nMatteo Martinato\nPaola Berchialla\n\n\n\n\n\n* In ordine alfabetico.\n\n\n\n\nUn ringraziamento speciale a Cristiana Vettori e a Mariasole Rizzi per l’aiuto e il supporto logistico e amministrativo che mi è stato offerto, e ad Andrea Francavilla per avermi aiutato nella revisione del materiale."
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#panoramica",
+    "href": "slides/04-distribuzioni.html#panoramica",
     "title": "Statistica Medica",
     "section": "Panoramica",
-    "text": "Panoramica"
+    "text": "Panoramica\nModello probabilistico per variabili discrete: massa, valore atteso e varianza\nDistribuzione binomiale (ovvero per variabili con due soli possibili esiti)\nDistribuzione di Poisson (ovvero per variabili conteggio) e approssimazione della binomiale\nModello probabilistico per variabili continue: densità\nDistribuzione normale, localizzazione, forma, simmetria, percentili, trasformazioni\nApprossimazioni alla Normale"
   },
   {
-    "objectID": "slides/01-r_rstudio.html#installazione",
-    "href": "slides/01-r_rstudio.html#installazione",
+    "objectID": "slides/04-distribuzioni.html#modelli-probabilistici-discreti",
+    "href": "slides/04-distribuzioni.html#modelli-probabilistici-discreti",
     "title": "Statistica Medica",
-    "section": "Installazione",
-    "text": "Installazione\nGo to: https://cloud.r-project.org/"
+    "section": "Modelli (probabilistici) discreti",
+    "text": "Modelli (probabilistici) discreti\n\nMassa\nValore atteso\nVarianza"
   },
   {
-    "objectID": "slides/01-r_rstudio.html#algebra-elementare",
-    "href": "slides/01-r_rstudio.html#algebra-elementare",
+    "objectID": "slides/04-distribuzioni.html#richiamo-variabile-casuale",
+    "href": "slides/04-distribuzioni.html#richiamo-variabile-casuale",
     "title": "Statistica Medica",
-    "section": "Algebra elementare",
-    "text": "Algebra elementare\nIn R possiamo operare tutte le operazioni algebriche di base, e anche di più! Ottimo quindi anche come calcolatrice potenziata!\n\n\n\n1 + 1  # sum\n\n[1] 2\n\n7 * 3  # product\n\n[1] 21\n\nabs(-2)  # absolute value\n\n[1] 2\n\n3^2  # power\n\n[1] 9\n\nsqrt(9)  # square root\n\n[1] 3"
+    "section": "Richiamo: Variabile casuale",
+    "text": "Richiamo: Variabile casuale\nUna variabile casuale è una quantità che assume valori differenti con specifiche probabilità\n\nuna variabile casuale che assume un insieme discreto di valori con probabilità specificata è detta variabile casuale discreta\nuna variabile casuale che assume un insieme continuo (e infinito) di valori, in modo che gli intervalli di tali valori abbiano probabilità specificata è detta variabile casuale continua\n\n    \n\nNota: una funzione di una variabile casuale è una variabile casuale\n\n\nNota 2: funzione: una qualunque mappa/regola che associa a ogni elemento di un insieme (detto dominio della funzione) un unico elemento di un insieme (detto codominio della funzione)."
   },
   {
-    "objectID": "slides/01-r_rstudio.html#vettori",
-    "href": "slides/01-r_rstudio.html#vettori",
+    "objectID": "slides/04-distribuzioni.html#modelli-discreti",
+    "href": "slides/04-distribuzioni.html#modelli-discreti",
     "title": "Statistica Medica",
-    "section": "Vettori",
-    "text": "Vettori\nLa struttura base dei dati in R è il vettore: sequenze di valori dello stesso tipo (numeri, testo, logici)\n\nc(1, 2, 3, 7)  # concatenate\n\n[1] 1 2 3 7\n\n1:7  # sequence\n\n[1] 1 2 3 4 5 6 7\n\nseq_len(4)  # sequence\n\n[1] 1 2 3 4\n\nrep(2, 3)  # replicate\n\n[1] 2 2 2\n\nrev(c(1, 2, 3))  # reverse\n\n[1] 3 2 1"
+    "section": "Modelli discreti",
+    "text": "Modelli discreti\nObiettivo è determinare il modello probabilistico adatto ai dati che si vuole trattare, ovvero individuare eventi con la stessa struttura probabilistica\n\ndistribuzione binomiale, in cui l’evento di interesse ha due possibili esiti\ndistribuzione di Poisson, in cui l’evento di interesse è definito dal conteggio di eventi"
   },
   {
-    "objectID": "slides/01-r_rstudio.html#assegnamento-memorizzazione",
-    "href": "slides/01-r_rstudio.html#assegnamento-memorizzazione",
+    "objectID": "slides/04-distribuzioni.html#modelli-discreti-massa",
+    "href": "slides/04-distribuzioni.html#modelli-discreti-massa",
     "title": "Statistica Medica",
-    "section": "Assegnamento (“memorizzazione”)",
-    "text": "Assegnamento (“memorizzazione”)\nSpesso può essere utile salvare il risultato di una operazione o della chiamata di una funzione in un oggetto (che chiamiamo variabile) a cui possiamo assegnare un nome.\n\nfirst_vector &lt;- 1:10\nfirst_vector\n\n [1]  1  2  3  4  5  6  7  8  9 10\n\nfirst_vector + 5\n\n [1]  6  7  8  9 10 11 12 13 14 15"
+    "section": "Modelli discreti: massa",
+    "text": "Modelli discreti: massa\n\nDefinizioneEsempioDistr. CumulativaEsempio\n\n\nUna funzione di (distribuzione di) massa di probabilità è una relazione matematica, o regola, che assegna ad ogni possibile valore rr di una variabile casuale discreta XX la (sua) probabilità P(X=r)P(X=r).\nQuesta regola è definita per tutti i valori rr che hanno probabilità positiva.\n   \n\nImportante: Valgono sempre:\n\n0≤P(X=r)≤10\\leq P(X=r) \\leq 1\n∑P(X=r)=1\\sum P(X=r) = 1\n\n\n\n\nUn medico inizia a controllare lo stato ipertensivo di 4 suoi pazienti con farmaci antiipertensivi.\nSia: XX è il numero di pazienti complianti\nAllora:\n\n\n\n\n\nr\nP(X=r)\n\n\n\n\n0\n0.008\n\n\n1\n0.076\n\n\n2\n0.265\n\n\n3\n0.411\n\n\n4\n0.240\n\n\n\n\n\n\n\nLa distribuzione cumulativa di una variabile casuale discreta è indicata come F(x)F(x) ed è pari a P(X≤x)P(X\\leq x)\n\n\nF(x)=P(X≤x)F(x) = P(X\\leq x)\n\n\n\n\n\n\n\nr\nP(X=r)\nF(x)\n\n\n\n\n0\n0.008\n0.008\n\n\n1\n0.076\n0.084\n\n\n2\n0.265\n0.349\n\n\n3\n0.411\n0.760\n\n\n4\n0.240\n1.000"
   },
   {
-    "objectID": "slides/01-r_rstudio.html#confronti-booleani",
-    "href": "slides/01-r_rstudio.html#confronti-booleani",
+    "objectID": "slides/04-distribuzioni.html#modelli-discreti-valore-atteso",
+    "href": "slides/04-distribuzioni.html#modelli-discreti-valore-atteso",
     "title": "Statistica Medica",
-    "section": "Confronti (Booleani)",
-    "text": "Confronti (Booleani)\nPossiamo fare confronti ottenendo dei risultati logici: TRUE/FALSE.\n\n1 == 0\n\n[1] FALSE\n\n1 != 0\n\n[1] TRUE\n\n1 &gt; 0\n\n[1] TRUE\n\n1 &lt;= 0\n\n[1] FALSE"
+    "section": "Modelli discreti: valore atteso",
+    "text": "Modelli discreti: valore atteso\n\nDefinizioneEsempio\n\n\nIl valore atteso di una variabile casuale discreta è definito come\nE(X)=∑i∈IxiP(X=xi)E(X)=\\sum_{i\\in  I}x_iP(X=x_i)\ndove xix_i sono i valori che la variabile casuale XX assume con probabilità positiva\n\n\nPer la variabile X=X = pazienti complianti al controllo dell’ipertensione\nE(X)=0(0.008)+1(0.076)+2(0.265)+3(0.411)+4(0.240)=2.799E(X)=0(0.008)+1(0.076)+2(0.265)+3(0.411)+4(0.240) = 2.799\n\n\n\n\n\nr\nP(X=r)\n\n\n\n\n0\n0.008\n\n\n1\n0.076\n\n\n2\n0.265\n\n\n3\n0.411\n\n\n4\n0.240"
   },
   {
-    "objectID": "slides/01-r_rstudio.html#logica-booleana",
-    "href": "slides/01-r_rstudio.html#logica-booleana",
+    "objectID": "slides/04-distribuzioni.html#valore-atteso-esempio",
+    "href": "slides/04-distribuzioni.html#valore-atteso-esempio",
     "title": "Statistica Medica",
-    "section": "Logica (Booleana)",
-    "text": "Logica (Booleana)\nPossiamo anche fare operazioni direttamente con vettori logici\n\nTRUE & FALSE\n\n[1] FALSE\n\nTRUE | FALSE\n\n[1] TRUE\n\n!TRUE\n\n[1] FALSE"
+    "section": "Valore atteso: esempio",
+    "text": "Valore atteso: esempio\n\nProblemaSoluzione\n\n\nSia: XX il numero di episodi di otiti nei primi due anni di vita, con la seguente rispettiva massa di probabilità:\n\n\n\n\n\nr\nP(X=r)\n\n\n\n\n0\n0.129\n\n\n1\n0.264\n\n\n2\n0.271\n\n\n3\n0.185\n\n\n4\n0.095\n\n\n5\n0.039\n\n\n6\n0.017\n\n\n\n\n\nDeterminare il numero atteso di episodi di otite nei primi due anni di vita\n\n\nil numero atteso di episodi di otite nei primi due anni di vita è:\nE(X)=0(0.129)+1(0.264)+2(0.271)+3(0.185)+4(0.095)+5(0.039)+6(0.017)=2.038\\begin{split}E(X) =\\ &0(0.129)\\ + \\\\&1(0.264)\\ + \\\\& 2(0.271)\\ + \\\\&3(0.185)\\ + \\\\&4(0.095)\\ + \\\\&5(0.039)\\ + \\\\& 6(0.017) =\\\\& 2.038 \\end{split}"
   },
   {
-    "objectID": "slides/01-r_rstudio.html#logica-booleana-vettoriale",
-    "href": "slides/01-r_rstudio.html#logica-booleana-vettoriale",
+    "objectID": "slides/04-distribuzioni.html#modelli-discreti-varianza",
+    "href": "slides/04-distribuzioni.html#modelli-discreti-varianza",
     "title": "Statistica Medica",
-    "section": "Logica (Booleana, … vettoriale)",
-    "text": "Logica (Booleana, … vettoriale)\n\nc(TRUE, FALSE) & c(FALSE, FALSE)\n\n[1] FALSE FALSE\n\nc(1, 2, 3, 3, 2, 4) == 2\n\n[1] FALSE  TRUE FALSE FALSE  TRUE FALSE\n\nwhich(c(1, 2, 3, 3, 2, 4) == 2)\n\n[1] 2 5\n\n# WARNING\nc(TRUE, FALSE, NA) & FALSE\n\n[1] FALSE FALSE FALSE\n\nc(TRUE, FALSE, NA) & TRUE\n\n[1]  TRUE FALSE    NA"
+    "section": "Modelli discreti: varianza",
+    "text": "Modelli discreti: varianza\n\nDefinizioneEsempio\n\n\nLa varianza di una variabile casuale discreta XX è pari a\nvar(X)=∑r(xr−μ)2P(X=xr)=σ2\\mbox{var}(X)=\\sum_r(x_r-\\mu)^2P(X=x_r)=\\sigma^2\nvale anche\nσ2=E[(X−μ)2]=(∑rxr2P(X=xr))−μ2\\sigma^2=E[(X-\\mu)^2]=\\left(\\sum_r x_r^2P(X=x_r)\\right)-\\mu^2\n\n\nLa varianza della variabile casuale episodi di otite è pari a\n02(0.129)+…+62(0.017)−2.0382=1.9670^2(0.129)+\\ldots+6^2(0.017)-2.038^2=1.967"
   },
   {
-    "objectID": "slides/01-r_rstudio.html#dataframe",
-    "href": "slides/01-r_rstudio.html#dataframe",
+    "objectID": "slides/04-distribuzioni.html#distribuzione-binomiale",
+    "href": "slides/04-distribuzioni.html#distribuzione-binomiale",
     "title": "Statistica Medica",
-    "section": "Dataframe",
-    "text": "Dataframe\n\nogni riga è un’osservazione (es: un paziente, o una visita)\nogni colonna è una variabile (es: il genere, o l’età)\n\n\nfirst_df &lt;- data.frame(\n  id     = c(7, 12, 31),\n  gender = factor(\n      c('m', 'm', 'f'),\n      levels = c('f', 'm', 'non-binary', 'unknown')\n  ),\n  city   = c('Gorizia', 'Viterbo', 'Napoli'),\n  height = c(1.84, 1.70, 1.59),\n  weight = c(115, 70, 51),\n  overweight = c(TRUE, FALSE, FALSE)\n)\nfirst_df\n\n  id gender    city height weight overweight\n1  7      m Gorizia   1.84    115       TRUE\n2 12      m Viterbo   1.70     70      FALSE\n3 31      f  Napoli   1.59     51      FALSE"
+    "section": "Distribuzione binomiale",
+    "text": "Distribuzione binomiale\n\nStruttura e distribuzione\nValore atteso e varianza\nGrafici"
   },
   {
-    "objectID": "slides/01-r_rstudio.html#pacchetti",
-    "href": "slides/01-r_rstudio.html#pacchetti",
+    "objectID": "slides/04-distribuzioni.html#binomiale-struttura",
+    "href": "slides/04-distribuzioni.html#binomiale-struttura",
     "title": "Statistica Medica",
-    "section": "Pacchetti",
-    "text": "Pacchetti\nUn pacchetto di espansione di R è una collezione di funzioni e/o di dati che possono essere “aggiunti” al proprio ambiente di lavoro.\nSi installano una sola volta (in generale, salvo aggiornamenti) ma si caricano ogni volta (una sola volta) che si ricomincia a lavorare.\n\nlibrary('tidyverse')\nlibrary('palmerpenguins')\n\nggplot(\n    penguins,\n    aes(x = bill_length_mm, y = bill_depth_mm, colour = species)\n  ) +\n  geom_point() +\n  geom_smooth(method = lm) +\n  facet_wrap(island~.) +\n  labs(\n    x = \"Lunghezza becco (mm)\",\n    y = \"Altezza becco (mm)\",\n    colour = \"Specie\",\n    title = \"Relazioni tra dimensioni del becco per specie di pinguino\",\n    subtitle = \"Ogni riquadro riporta i dati di un'isola differente.\",\n    caption = \"Dati: Palmer Archipelago (Antarctica) penguin data.\"\n  ) +\n  theme_bw()"
+    "section": "Binomiale: struttura",
+    "text": "Binomiale: struttura\nUna variabile binomiale rappresenta la quantità di esiti positivi di un possibile esperimento con due soli risultati possibili (dicotomico), che possono avvenire con date probabilità costanti (complementari a 1).\nSi caratterizza quindi da:\n\nnn prove indipendenti\ndue possibili outcomes di ogni prova, successo o insuccesso\nla probabilità di successo, pp è costante in ogni prova (quella di insuccesso è pari a 1−p=q1-p = q)\n\nEd è utile per:\n\nvalutare la probabilità di kk successi in nn prove"
   },
   {
-    "objectID": "slides/01-r_rstudio.html#installazione-1",
-    "href": "slides/01-r_rstudio.html#installazione-1",
+    "objectID": "slides/04-distribuzioni.html#coefficiente-binomiale",
+    "href": "slides/04-distribuzioni.html#coefficiente-binomiale",
     "title": "Statistica Medica",
-    "section": "Installazione",
-    "text": "Installazione\nGo to: https://posit.co/download/rstudio-desktop/"
+    "section": "Coefficiente binomiale",
+    "text": "Coefficiente binomiale\nIl numero di combinazioni di nn oggetti presi kk alla volta è pari a\nnCk=(nk)=n(n−1)…(n−k+1)k!_nC_k=\\binom{n}{k}=\\frac{n(n-1)\\ldots (n-k+1)}{k!}\nmoltiplicando numeratore e denominatore per (n−k)!(n-k)! si ottiene\nnCk=(nk)=n!k!(n−k)!_nC_k=\\binom{n}{k}=\\frac{n!}{k!(n-k)!}\n\nNote:\n\n\nn!:=n⋅(n−1)⋅⋯⋅(2)⋅1n! := n\\cdot (n-1)\\cdot \\cdots \\cdot (2)\\cdot 1\nconvenzione: (n0)=1\\binom{n}{0}=1\nvale la simmetria: (nk)=(nn−k)\\binom{n}{k}=\\binom{n}{n-k}"
   },
   {
-    "objectID": "slides/01-r_rstudio.html#vediamolo-sul-vostro-cloud",
-    "href": "slides/01-r_rstudio.html#vediamolo-sul-vostro-cloud",
+    "objectID": "slides/04-distribuzioni.html#distribuzione-binomiale-probabilità",
+    "href": "slides/04-distribuzioni.html#distribuzione-binomiale-probabilità",
     "title": "Statistica Medica",
-    "section": "Vediamolo……sul vostro cloud!",
-    "text": "Vediamolo……sul vostro cloud!\nhttps://bit.ly/statmed-cl-rstudio"
+    "section": "Distribuzione Binomiale: probabilità",
+    "text": "Distribuzione Binomiale: probabilità\nla probabilità che kk successi avvengano in nn prove, con le rimanenti n−kn-k tutte insuccessi è pari a\npk(1−p)n−kp^k(1-p)^{n-k}\nTenendo conto che i kk successi si possono ottenere in nCk_nC_k modi diversi, si ha che\nP(X=k)=(nk)pk(1−p)n−kP(X=k)=\\binom{n}{k}p^k(1-p)^{n-k}\nche è la distribuzione di probabilità binomiale"
   },
   {
-    "objectID": "slides/01-r_rstudio.html#risorse-utili",
-    "href": "slides/01-r_rstudio.html#risorse-utili",
+    "objectID": "slides/04-distribuzioni.html#coefficiente-binomiale-triangolo-di-tartaglia",
+    "href": "slides/04-distribuzioni.html#coefficiente-binomiale-triangolo-di-tartaglia",
     "title": "Statistica Medica",
-    "section": "Risorse utili",
-    "text": "Risorse utili\n\nPosit Cloud: bit.ly/statmed-cl-rstudio gratis per voi per esplorare RStudio, le sue funzionalità, e allenarvi con R (link di iscrizione valido fino alla fine del corso).\nBase R workshop for Data Science: bit.ly/ubep-rws-slide - materiale base per un workshop di 16 ore su R (4 ore x 4 giorni), con esempi, codice, esercizi, ambiente di lavoro. (NO modelli, NO (bio-)statistica)\nRStudio primers ambiente gratuito dentro Posit Cloud per l’apprendimento delle basi di analisi di dati con R tramite tutorial interattivi. Una volta registrati, oltre all’accesso al nostro spazio di lavoro, avete accesso libero anche ai Primers.\nR 4 Data Science: libro gratuito (on-line) di Hadley Wickham, Mine Çetinkaya-Rundel e Garrett Grolemund\nAdvanced R: libro gratuito (on-line) di Hadley Wickham; suggeriti capitolo 1-6 (che non sono “Advanced” ma semplicemente “Correct”)."
+    "section": "Coefficiente binomiale: Triangolo di Tartaglia",
+    "text": "Coefficiente binomiale: Triangolo di Tartaglia\n\n\n\n\n\nhttp://matematicamente.it/6981-algebra-1-manuale-completo-per-il-primo-anno-della-secondaria-di-secondo-grado"
   },
   {
-    "objectID": "slides/01-r_rstudio.html#break",
-    "href": "slides/01-r_rstudio.html#break",
+    "objectID": "slides/04-distribuzioni.html#distribuzione-binomiale-1",
+    "href": "slides/04-distribuzioni.html#distribuzione-binomiale-1",
+    "title": "Statistica Medica",
+    "section": "Distribuzione Binomiale",
+    "text": "Distribuzione Binomiale\n\nDescrizioneEsempio\n\n\nLa distribuzione binomiale, di parametri nn e pp si indica come\nP(X=k)=(nk)pk(1−p)n−kk=0,1,…,nP(X=k)=\\binom{n}{k}p^k(1-p)^{n-k} \\:\\:\\:\\: k=0,1,\\ldots,n\nvale la simmetria\nP(X=k)=(nk)pk(1−p)n−k=(nn−k)pn−k(1−p)k=P(X=n−k)P(X=k)=\\binom{n}{k}p^k(1-p)^{n-k} = \\binom{n}{n-k}p^{n-k}(1-p)^{k}=P(X=n-k)\n\n\nQuale è la probabilità di ottenere 2 bambini maschi da 5 nati se la probabilità di un maschio è pari a 0.51, indipendente dal sesso dei bambini nati prima?\nSi usa la distribuzione binomiale\nP(X=2)=(52)0.512(0.49)5−2=5×42×10.512(0.49)5−2=0.306P(X=2)=\\binom{5}{2}0.51^2(0.49)^{5-2}=\\frac{5 \\times 4}{2 \\times 1}0.51^2(0.49)^{5-2}=0.306"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#binomiale-valore-atteso-e-varianza",
+    "href": "slides/04-distribuzioni.html#binomiale-valore-atteso-e-varianza",
+    "title": "Statistica Medica",
+    "section": "Binomiale: Valore atteso e varianza",
+    "text": "Binomiale: Valore atteso e varianza\nPer definizione si ha che: E(S)=∑kkP(S=k)E(S) = \\sum_{k} k\\,P(S=k)\nDa cui: E(S)=∑k=0nk(nk)pkqn−kE(S) =\\sum_{k=0}^n k\\binom{n}{k}p^kq^{n-k}\nDel resto, se SS è la somma degli esiti delle singole prove (che possiamo indicare come variabili casuali X1,…,XnX_1,\\ldots,X_n), allora per linearità\nE(S)=E(∑i=1nXi)=∑i=1nE(Xi)=∑i=1np=npE(S) = E\\left(\\sum_{i=1}^n X_i\\right) = \\sum_{i=1}^nE(X_i) = \\sum_{i=1}^np=np\nSempre per definizione, la varianza sarà: var(S)=∑k=0n(k−np)2(nk)pkqn−k\\mbox{var}(S)=\\sum_{k=0}^n (k-np)^2 \\binom{n}{k}p^kq^{n-k}\nChe, essendo le prove indipendenti, possiamo calcolare più semplicemente come\nvar(S)=var(∑i=1nXi)=∑i=1nvar(Xi)=*∑i=1npq=npqvar(S) = var\\left(\\sum_{i=1}^n X_i\\right) = \\sum_{i=1}^nvar(X_i) =^*  \\sum_{i=1}^npq=npq \n\n*= Se interessa, dimostrarlo per esercizio."
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#singolo-esperimento-grafico",
+    "href": "slides/04-distribuzioni.html#singolo-esperimento-grafico",
+    "title": "Statistica Medica",
+    "section": "Singolo esperimento: grafico",
+    "text": "Singolo esperimento: grafico"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#esperimenti-grafico",
+    "href": "slides/04-distribuzioni.html#esperimenti-grafico",
+    "title": "Statistica Medica",
+    "section": "10 esperimenti: grafico",
+    "text": "10 esperimenti: grafico"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#distribuzione-di-poisson",
+    "href": "slides/04-distribuzioni.html#distribuzione-di-poisson",
+    "title": "Statistica Medica",
+    "section": "Distribuzione di Poisson",
+    "text": "Distribuzione di Poisson\n\nStruttura e distribuzione\nValore atteso e varianza\nGrafici"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#poisson-struttura",
+    "href": "slides/04-distribuzioni.html#poisson-struttura",
+    "title": "Statistica Medica",
+    "section": "Poisson: struttura",
+    "text": "Poisson: struttura\nDato un intervallo di tempo Δt\\Delta t molto piccolo, si ha che\n\nla probabilità di osservare un evento è direttamente proporzionale alla lunghezza dell’intervallo di tempo Δt\\Delta t, ovvero, per una qualche costante λ\\lambda, abbiamo:\n\nP(1 evento)∼λΔtP(\\mbox{1 evento})\\sim \\lambda\\,\\Delta t\n\nla probabilità di osservare 00 eventi nell’intervallo Δt\\Delta t è approssimativamente 1−λΔt1-\\lambda\\Delta t\nla probabilità di osservare più di un evento nell’intervallo è sostanzialmente 00\nStazionarietà: il numero atteso di eventi per unità di tempo ( λ\\lambda ) è lo stesso in tutto l’intervallo di tempo tt (no trend)\nIndipendenza: se si verifica un evento nell’intervallo di tempo considerato, questo non modifica la probabilità di osservarne un secondo nell’intervallo successivo."
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#distribuzione-di-poisson-probabilità",
+    "href": "slides/04-distribuzioni.html#distribuzione-di-poisson-probabilità",
+    "title": "Statistica Medica",
+    "section": "Distribuzione di Poisson: probabilità",
+    "text": "Distribuzione di Poisson: probabilità\nLa probabilità di osservare kk eventi in un periodo di tempo tt per una variabile aleatoria di Poisson di tasso λ\\lambda (parametro μ=λt\\mu=\\lambda t) è pari a\nP(X=k)=e−μμkk!k=0,1,2,…P(X=k)=\\frac{e^{-\\mu}\\mu^k}{k!} \\:\\:\\:\\: k=0,1,2,\\ldots\ndove ee, pari a circa 2.71828, è la costante di Nepero."
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#distribuzione-di-poisson-1",
+    "href": "slides/04-distribuzioni.html#distribuzione-di-poisson-1",
+    "title": "Statistica Medica",
+    "section": "Distribuzione di Poisson",
+    "text": "Distribuzione di Poisson\n\nEsempioGrafici\n\n\nSi supponga che il numero di morti attribuite alla febbre tifoide in un anno sia una Poisson con parametro μ=4.6\\mu = 4.6. Si cerca la probabilità su un periodo di 6 e 3 mesi che avvengono, per esempio, zero eventi o almeno 6\nDalla definizione si ha che μ=4.6×1\\mu = 4.6 \\times 1, quindi λ=4.6\\lambda = 4.6.\nSu 6 mesi si ha allora che μ=4.6×0.5=2.3\\mu=4.6 \\times 0.5 = 2.3\nP(X=0)=e−2.3=0.1P(X≥6)=1−P(X&lt;6)=0.03P(X=0) = e^{-2.3} = 0.1 \\:\\:\\:\\: P(X\\geq6) = 1-P(X&lt;6)=0.03\nSu 3 mesi si ha allora che μ=4.6×0.25=1.15\\mu=4.6 \\times 0.25 = 1.15\nP(X=0)=e−1.15=0.317P(X≥6)=1−P(X&lt;6)=0.001P(X=0) = e^{-1.15} = 0.317 \\:\\:\\:\\: P(X\\geq6) = 1-P(X&lt;6)=0.001"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#poisson-valore-atteso-e-varianza",
+    "href": "slides/04-distribuzioni.html#poisson-valore-atteso-e-varianza",
+    "title": "Statistica Medica",
+    "section": "Poisson: valore atteso e varianza",
+    "text": "Poisson: valore atteso e varianza\nPer una distribuzione di Poisson con parametro μ\\mu, la media e la varianza sono entrambe pari a μ\\mu"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#poisson-polio",
+    "href": "slides/04-distribuzioni.html#poisson-polio",
+    "title": "Statistica Medica",
+    "section": "Poisson: Polio",
+    "text": "Poisson: Polio\nSi consideri numero di morti per polio negli anni 1968-76\n\n\n\n\n\n\n\nAnno\nMorti\n\n\n\n\n68\n24\n\n\n69\n13\n\n\n70\n7\n\n\n71\n18\n\n\n72\n2\n\n\n73\n10\n\n\n74\n3\n\n\n75\n9\n\n\n76\n16\n\n\n\n\n\n\nLa media è pari a 11.311.3 e la varianza a 51.551.5.\nProbabilmente vi è un effetto di clustering rispetto a certi periodi temporali e a certe aree geografiche."
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#poisson-cibo-cancerogeno",
+    "href": "slides/04-distribuzioni.html#poisson-cibo-cancerogeno",
+    "title": "Statistica Medica",
+    "section": "Poisson: cibo cancerogeno",
+    "text": "Poisson: cibo cancerogeno\nIn uno studio sul possibile effetto cancerogeno di EDB (etilene dibromide), osservando la mortalità di 161 operai bianchi, occupati presso due fabbriche, Texas e Michigan, 1940-1975 [Ott et al., B J Ind Med, 1980:37, 163-8]\nSi sono osservate 7 morti per cancro. In base ai dati di mortalità degli USA, si sarebbero attese in quel periodo 5.8 morti per cancro.\nSi cerca quindi la probabilità di osservare almeno 7 morti secondo una Poisson di parametro μ=5.8\\mu=5.8.\nP(X≥7)=1−P(X≤6)=1−[(e−5.85.80/0!)+…+(e−5.85.86/6!)]=0.362\\begin{align}P(X \\geq 7) &= 1 - P(X\\leq 6)\\\\& = 1-\\left[(e^{-5.8}5.8^0/0!)+ \\ldots + (e^{-5.8}5.8^6/6!)\\right]\\\\& = 0.362\\end{align}\nper cui le morti non sembrano in eccesso in questo gruppo di lavoratori."
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#poisson-approssimazione",
+    "href": "slides/04-distribuzioni.html#poisson-approssimazione",
+    "title": "Statistica Medica",
+    "section": "Poisson: Approssimazione",
+    "text": "Poisson: Approssimazione\nLa distribuzione Binomiale con nn grande e pp piccolo può essere accuratamente approssimata da una distribuzione di Poisson con parametro μ=np\\mu=np\nLa motivazione è data dalla maggiore semplicità computazionale della distribuzione di Poisson\nUna regola approssimativa è di usare l’approssimazione quando n≥100n\\geq 100 e p≤0.01p\\leq 0.01\n\n\n\n\n\nk\nbin\npois\n\n\n\n\n0\n0.3660323\n0.3678794\n\n\n1\n0.3697296\n0.3678794\n\n\n2\n0.1848648\n0.1839397\n\n\n3\n0.0609992\n0.0613132\n\n\n4\n0.0149417\n0.0153283\n\n\n5\n0.0028978\n0.0030657\n\n\n6\n0.0004635\n0.0005109"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#poisson-tumore-al-seno",
+    "href": "slides/04-distribuzioni.html#poisson-tumore-al-seno",
+    "title": "Statistica Medica",
+    "section": "Poisson: tumore al seno",
+    "text": "Poisson: tumore al seno\nSi studia la suscettibilità genetica per il cancro alla mammella, trovando che 4 donne su 1000 tra i 40 e i 49 anni le cui madri hanno avuto un cancro al seno, lo sviluppano nell’anno successivo di vita.\nIn base a studi di popolazione, si pensa che in queste classi di età si dovrebbe avere circa 1 cancro al seno su 1000 donne.\nSecondo la probabilità binomiale, con n=1000n=1000 e p=1/1000p=1/1000 si ha che P(X≥4)=1−P(X≤3)=1−[(10000)(.001)0(.999)1000+…+(10003)(.001)3(.999)997]=0.019\\begin{split}\nP(X\\geq 4)& = 1 - P(X\\leq 3)\\\\& = 1- \\left [\\binom{1000}{0} (.001)^0(.999)^{1000}+\\ldots+\\binom{1000}{3} (.001)^3(.999)^{997}  \\right ]\\\\& = 0.019\\end{split}\nSecondo la probabilità di Poisson, con μ=1\\mu = 1, si ha che\nP(X≥4)=1−[e−110/0!+…+e−113/3!]=1−0.9810=0.019\\begin{split}P(X\\geq 4)& = 1- [e^{-1}1^0/0! + \\ldots + e^{-1}1^3/3!]\\\\&= 1- 0.9810\\\\& = 0.019\\end{split}\nUn valore sufficientemente piccolo da far pensare ad una suscettibilità genetica."
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#sondaggio",
+    "href": "slides/04-distribuzioni.html#sondaggio",
+    "title": "Statistica Medica",
+    "section": "Sondaggio",
+    "text": "Sondaggio\nPer me: Discrete\nPer voi:  bit.ly/statmed-sondaggio-discrete"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#break",
+    "href": "slides/04-distribuzioni.html#break",
     "title": "Statistica Medica",
     "section": "Break",
     "text": "Break\nConsigli:\n\nalzarsi\nsgranchirsi\nguardare lontano (rilassare gli occhi)\nbere\nandare in bagno"
   },
   {
-    "objectID": "slides/01-r_rstudio.html#section-2",
-    "href": "slides/01-r_rstudio.html#section-2",
+    "objectID": "slides/04-distribuzioni.html#modello-probabilistico-per-variabili-continue",
+    "href": "slides/04-distribuzioni.html#modello-probabilistico-per-variabili-continue",
+    "title": "Statistica Medica",
+    "section": "Modello probabilistico per variabili continue",
+    "text": "Modello probabilistico per variabili continue\n\ndensità"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#modelli-continui",
+    "href": "slides/04-distribuzioni.html#modelli-continui",
+    "title": "Statistica Medica",
+    "section": "Modelli continui",
+    "text": "Modelli continui\nLa distribuzione di densità di probabilità di una variabile casuale XX è una curva tale per cui:\n\nl’area sotto la curva, compresa tra due punti aa e bb è pari alla probabilità che la variabile casuale XX assuma valore nell’intervallo (a,b)(a,b)\nl’area totale sotto la curva è pari ad 1."
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#esempi",
+    "href": "slides/04-distribuzioni.html#esempi",
+    "title": "Statistica Medica",
+    "section": "Esempi",
+    "text": "Esempi\n\nIpertensioneTrigliceridi\n\n\n\nDensità di probabilità per la DBP in un uomo di età 35-44. A (90-95), B (95-100), C (&gt; 100) sono rispettivamente Borderline, Moderatamente iperteso e Iperteso.\n\n\n\n\n\n\n\n\n\n\n\n\nLa distribuzione dei trigliceridi è asimmetrica, con skewness positivo"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#probabilità-cumulativa",
+    "href": "slides/04-distribuzioni.html#probabilità-cumulativa",
+    "title": "Statistica Medica",
+    "section": "Probabilità cumulativa",
+    "text": "Probabilità cumulativa\nLa distribuzione di probabilità cumulativa di una variabile casuale XX valutata in un punto aa è pari alla probabilità che XX prenda valori ≤a\\leq a.\nRappresenta l’area sotto la curva alla sinistra di aa\nEsempio\n\nLa distribuzione cumulativa del peso alla nascita (once) valutata in 88 once è pari a P(X≤88)P(X\\leq 88) ed è pari all’area sotto la curva a sinistra di 88 once. Questo valore è usato come limite per possibili outcomes sfavorevoli nel primo anno di vita"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#valore-atteso-e-varianza",
+    "href": "slides/04-distribuzioni.html#valore-atteso-e-varianza",
+    "title": "Statistica Medica",
+    "section": "Valore atteso e varianza",
+    "text": "Valore atteso e varianza\nL’atteso E(X)E(X) (o μ\\mu) è la media dei valori di XX: somma pesata nel discreto, integrale nel continuo\nE(X)=∫−∞∞xf(x)dx.E(X)=\\int_{-\\infty}^{\\infty} x f(x)\\,dx.\nLa varianza Var(X)\\text{Var}(X) (o σ2\\sigma^2) è la media dello scarto quadratico dall’atteso:\nVar(X)=∫−∞∞(x−E[X])2f(x)dx.\\text{Var}(X)=\\int_{-\\infty}^{\\infty} (x-E[X])^2 f(x)\\,dx.\nLa deviazione standard è Var(X)\\sqrt{\\text{Var}(X)}.\nLa moda è il punto di densità massima\nLa mediana divide in due la distribuzione, ovvero P(X≤m)=50100=12P(X\\leq m)=\\frac{50}{100}=\\frac{1}{2}.\nI percentili generalizzano quest’idea, ovvero P(X≤pk)=k100P(X\\leq p_k)=\\frac{k}{100}."
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#parametri-vs-statistiche",
+    "href": "slides/04-distribuzioni.html#parametri-vs-statistiche",
+    "title": "Statistica Medica",
+    "section": "Parametri vs Statistiche",
+    "text": "Parametri vs Statistiche\n\n\n\n\n\n\n\n\n\nSimbolo\nNome\nPopolazione\nCampione\n\n\n\n\nμ\\mu\nValore atteso / media\ncentro teorico\nx‾\\bar{x} = media campionaria\n\n\nσ2\\sigma^2\nVarianza\nvariabilità teorica\ns2s^2 = varianza campionaria\n\n\nσ\\sigma\nDeviazione standard\ndisp. media teorica\nss = dev. std. campionaria\n\n\n\n\nParametri (μ\\mu, σ2\\sigma^2, σ\\sigma): grandezze vere della popolazione (in genere ignote).\nStatistiche (x‾\\bar{x}, s2s^2, ss): stime calcolate dai dati campionari."
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#sondaggio-1",
+    "href": "slides/04-distribuzioni.html#sondaggio-1",
+    "title": "Statistica Medica",
+    "section": "Sondaggio",
+    "text": "Sondaggio\nPer me: Continue\nPer voi:  bit.ly/statmed-sondaggio-continue"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#distribuzione-normale",
+    "href": "slides/04-distribuzioni.html#distribuzione-normale",
+    "title": "Statistica Medica",
+    "section": "Distribuzione normale",
+    "text": "Distribuzione normale\n\n\n\nlocalizzazione\nforma\nsimmetria\npercentili\ntrasformazioni\n\n\n Artwork by @allison_horst"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#distribuzione-normale-definizione",
+    "href": "slides/04-distribuzioni.html#distribuzione-normale-definizione",
+    "title": "Statistica Medica",
+    "section": "Distribuzione Normale: definizione",
+    "text": "Distribuzione Normale: definizione\nf(x)=1σ2πe−12σ2(x−μ)2−∞&lt;x&lt;∞f(x) = \\frac{1}{\\sigma\\sqrt{2\\pi}}e^{-\\frac{1}{2\\sigma^2}(x-\\mu)^2} \\:\\:\\:\\: -\\infty&lt;x&lt;\\infty\n\n\n\n\n\n\n\n\n\nLa distribuzione normale è definita dalla sua distribuzione di densità di probabilità:"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#distribuzione-normale-parametri",
+    "href": "slides/04-distribuzioni.html#distribuzione-normale-parametri",
+    "title": "Statistica Medica",
+    "section": "Distribuzione Normale:parametri",
+    "text": "Distribuzione Normale:parametri\nf(x)=1σ2πe−12σ2(x−μ)2−∞&lt;x&lt;∞f(x) = \\frac{1}{\\sigma\\sqrt{2\\pi}}e^{-\\frac{1}{2\\sigma^2}(x-\\mu)^2} \\:\\:\\:\\: -\\infty&lt;x&lt;\\infty\nUna distribuzione normale con media μ\\mu e varianza σ2\\sigma^2 si indica come N(μ,σ2)N(\\mu, \\sigma^2).\nI suoi parametri modellano la locazione e la forma della distribuzione"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#distribuzione-normale-localizzazione",
+    "href": "slides/04-distribuzioni.html#distribuzione-normale-localizzazione",
+    "title": "Statistica Medica",
+    "section": "Distribuzione Normale: localizzazione",
+    "text": "Distribuzione Normale: localizzazione\nf(x)=1σ2πe−12σ2(x−μ)2−∞&lt;x&lt;∞f(x) = \\frac{1}{\\sigma\\sqrt{2\\pi}}e^{-\\frac{1}{2\\sigma^2}(x-\\mu)^2} \\:\\:\\:\\: -\\infty&lt;x&lt;\\infty"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#distribuzione-normale-forma",
+    "href": "slides/04-distribuzioni.html#distribuzione-normale-forma",
+    "title": "Statistica Medica",
+    "section": "Distribuzione Normale:forma",
+    "text": "Distribuzione Normale:forma\nf(x)=1σ2πe−12σ2(x−μ)2−∞&lt;x&lt;∞f(x) = \\frac{1}{\\sigma\\sqrt{2\\pi}}e^{-\\frac{1}{2\\sigma^2}(x-\\mu)^2} \\:\\:\\:\\: -\\infty&lt;x&lt;\\infty"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#distribuzione-normale-standard",
+    "href": "slides/04-distribuzioni.html#distribuzione-normale-standard",
+    "title": "Statistica Medica",
+    "section": "Distribuzione Normale Standard",
+    "text": "Distribuzione Normale Standard\nUna distribuzione normale con media 0 e varianza 1 si indica come distribuzione normale standard N(0,1)N(0,1) (o anche solo Standard)\nf(x)=12πe−12x2−∞&lt;x&lt;∞f(x) = \\frac{1}{\\sqrt{2\\pi}}e^{-\\frac{1}{2}x^2} \\:\\:\\:\\: -\\infty&lt;x&lt;\\infty\n   \n\nMemo: distribuzione Normale (generale):\nf(x)=1σ2πe−12σ2(x−μ)2−∞&lt;x&lt;∞f(x) = \\frac{1}{\\sigma\\sqrt{2\\pi}}e^{-\\frac{1}{2\\sigma^2}(x-\\mu)^2} \\:\\:\\:\\: -\\infty&lt;x&lt;\\infty"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#distribuzione-standard-simmetria",
+    "href": "slides/04-distribuzioni.html#distribuzione-standard-simmetria",
+    "title": "Statistica Medica",
+    "section": "Distribuzione Standard: simmetria",
+    "text": "Distribuzione Standard: simmetria\nLa distribuzione N(0,1)N(0,1) è simmetrica intorno allo 00, avendo f(x)=f(−x)f(x) = f(-x)"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#distribuzione-standard-valori-notevoli",
+    "href": "slides/04-distribuzioni.html#distribuzione-standard-valori-notevoli",
+    "title": "Statistica Medica",
+    "section": "Distribuzione Standard: valori notevoli",
+    "text": "Distribuzione Standard: valori notevoli\n\ncirca il 68% dell’area cade tra −1-1 e 11\ncirca il 95% dell’area cade tra circa −2-2 e 22\ncirca il 99% dell’area cade tra circa −2.5-2.5 e 2.52.5\n\n\n\n\n\n\n\n\n\n\n\n(Spoiler: percentili?…)"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#distribuzione-standard-cumulativa",
+    "href": "slides/04-distribuzioni.html#distribuzione-standard-cumulativa",
+    "title": "Statistica Medica",
+    "section": "Distribuzione Standard: cumulativa",
+    "text": "Distribuzione Standard: cumulativa\nLa distribuzione cumulativa per N(0,1)N(0, 1) è indicata da Φ(x)=P(Z≤x)\\Phi(x) = P(Z\\leq x)"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#distribuzione-cumulativa-standard-applicazione",
+    "href": "slides/04-distribuzioni.html#distribuzione-cumulativa-standard-applicazione",
+    "title": "Statistica Medica",
+    "section": "Distribuzione cumulativa Standard: applicazione",
+    "text": "Distribuzione cumulativa Standard: applicazione\nLa cumulata Φ(x)\\Phi(x) può aiutare a calcolare le probabilità di una N(0,1)N(0,1)\nTrovare (non calcolare) P(Z≤1.96)P(Z \\leq 1.96) e P(Z≤1)P(Z \\leq 1)… cerco i valori nelle tavole:\nΦ(1.96)=0.975\\Phi(1.96) = 0.975\nΦ(1)=0.8413\\Phi(1) = 0.8413"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#distribuzione-standard-strategia-simmetrica",
+    "href": "slides/04-distribuzioni.html#distribuzione-standard-strategia-simmetrica",
+    "title": "Statistica Medica",
+    "section": "Distribuzione Standard: strategia simmetrica",
+    "text": "Distribuzione Standard: strategia simmetrica\nPer la simmetria si ha che\nΦ(−x)=P(Z≤−x)=P(Z≥x)=1−P(Z≤x)=1−Φ(x)\\Phi(-x)=P(Z\\leq -x) = P(Z \\geq x) = 1-P(Z\\leq x) = 1-\\Phi(x)"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#strategia-esempio",
+    "href": "slides/04-distribuzioni.html#strategia-esempio",
+    "title": "Statistica Medica",
+    "section": "Strategia: esempio",
+    "text": "Strategia: esempio\nPer calcolare P(Z≤−1.96)P(Z \\leq -1.96) si ha che:\nΦ(−1.96)=P(Z≥1.96)=1−P(Z≤1.96)=0.0250\\Phi(-1.96) = P(Z\\geq 1.96) = 1 - P(Z\\leq 1.96) = 0.0250"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#normale-standard-fvc",
+    "href": "slides/04-distribuzioni.html#normale-standard-fvc",
+    "title": "Statistica Medica",
+    "section": "Normale Standard: FVC",
+    "text": "Normale Standard: FVC\n\nLa capacità vitale forzata (FVC) è una misura di funzionalità polmonare ed è misurata dalla quantità d’aria che una persona riesce ad espellere in 6 secondi.\nSi fa riferimento ad una FVC standard per ovviare a elementi di confondimento (età, fumo, …).\nUn bambino è considerato a rischio se ha una FVC inferiore alla media di più di 1.5 deviazioni standard.\nAllora, sotto l’ipotesi che lo scarto dalla FVC si distribuisca come una Normale Standard, possiamo calcolare con quale probabilità possiamo trovare valori più estremi, ovvero:\nP(Z≤−1.5)=P(Z≥1.5)=0.0668P(Z \\leq -1.5) = P(Z \\geq 1.5) = 0.0668\nOvvero, possiamo ipotizzare che circa il 7% dei bambini siano in condizioni polmonari compromesse\n\nProblemaSoluzione\n\n\nDi prassi, un bambino sarà considerato con un sistema polmonare normale se presenta una FVC entro un range di 1.5 deviazioni standard dalla media standardizzata.\n\nCon quale probabilità potremmo incontrare bambini con un sistema polmonare normale?\n\n\n\nP(−1.5≤Z≤1.5)=1−(P(Z≤−1.5)+P(Z≥1.5))=1−2*P(Z≤−1.5)=1−2*0.0668=0.8664\\begin{split}P(-1.5 \\leq Z \\leq 1.5)& = 1 - (P(Z \\leq -1.5) + P(Z \\geq 1.5))\\\\& = 1 - 2*P(Z \\leq -1.5)\\\\& = 1 - 2 * 0.0668\\\\& = 0.8664\\end{split}"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#distribuzione-normale-percentili",
+    "href": "slides/04-distribuzioni.html#distribuzione-normale-percentili",
+    "title": "Statistica Medica",
+    "section": "Distribuzione Normale: percentili",
+    "text": "Distribuzione Normale: percentili\nIl 100p100p-esimo percentile di una normale standard è indicato con zpz_p ed è definito dalla relazione\nP(Z&lt;zp)=pP(Z &lt; z_p)=p"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#percentili-standard-calcolo",
+    "href": "slides/04-distribuzioni.html#percentili-standard-calcolo",
+    "title": "Statistica Medica",
+    "section": "Percentili Standard: calcolo",
+    "text": "Percentili Standard: calcolo\nPer trovare zpz_p si deve trovare l’area pp e quindi trovare il valore che corrisponde a tale area.\nSe p&lt;0.5p &lt; 0.5 ( zp&lt;0z_p &lt; 0 ) è utile usare la simmetria della distribuzione per ottenere zp=−z1−pz_p = -z_{1-p}, dove 1−p&gt;0.51-p &gt; 0.5 ( z1−p&gt;0z_{1-p} &gt; 0 ) può essere spesso ottenuto dai valori comuni/noti come per esempio:\nz.975=1.96z.95=1.645z.5=0z.025=−1.96z_{.975}=1.96 \\:\\:\\:\\: z_{.95}=1.645 \\:\\:\\:\\: z_{.5}=0 \\:\\:\\:\\: z_{.025}=-1.96"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#normale-standard-trasformazioni",
+    "href": "slides/04-distribuzioni.html#normale-standard-trasformazioni",
+    "title": "Statistica Medica",
+    "section": "Normale Standard: trasformazioni",
+    "text": "Normale Standard: trasformazioni\n\nAnaliticamenteGraficamente\n\n\nSe:\n\nX∼N(μ,σ2)X \\sim N(\\mu, \\sigma^2)\nZ=X−μσZ = \\frac{X-\\mu}{\\sigma}\n\nAllora: Z∼N(0,1)Z \\sim N(0,1)\nE vale dunque:\nP(a≤X≤b)=P(a−μσ≤Z≤b−μσ)=P(Z≤b−μσ)−P(Z≤a−μσ)=Φ[(b−μ)/σ]−Φ[(a−μ)/σ]\\begin{split}P(a \\leq X \\leq b)& = P \\left ( \\frac{a-\\mu}{\\sigma} \\leq Z \\leq \\frac{b-\\mu}{\\sigma}\\right )\\\\& = P \\left (Z \\leq \\frac{b-\\mu}{\\sigma}\\right ) - P \\left (Z \\leq \\frac{a-\\mu}{\\sigma}\\right )\\\\& = \\Phi[(b-\\mu)/\\sigma]-\\Phi[(a-\\mu)/\\sigma]\\end{split}"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#caso-di-studio-ipertensione",
+    "href": "slides/04-distribuzioni.html#caso-di-studio-ipertensione",
+    "title": "Statistica Medica",
+    "section": "Caso di studio: ipertensione",
+    "text": "Caso di studio: ipertensione\n\nProblemaSoluzione\n\n\nUna persona borderline per ipertensione è definita come una DBP compresa tra 90 e 95 mm Hg. Nei maschi tra i 35 ed i 44 anni la DBP è distribuita normalmente con media 80 e varianza 144 Si vuole la probabilità di essere borderline per un maschio in quella classe di età\n\n\nP(90≤X≤95)=P(90−8012≤Z≤95−8012)=Φ[1.25]−Φ[0.83]=0.8944−0.7967=0.098\\begin{split}P(90 \\leq X \\leq 95)& = P \\left ( \\frac{90-80}{12} \\leq Z \\leq \\frac{95-80}{12}\\right )\\\\& = \\Phi[1.25]-\\Phi[0.83]\\\\& = 0.8944-0.7967\\\\& = 0.098\\end{split}"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#caso-di-studio-diametri-del-tronco",
+    "href": "slides/04-distribuzioni.html#caso-di-studio-diametri-del-tronco",
+    "title": "Statistica Medica",
+    "section": "Caso di studio: diametri del tronco",
+    "text": "Caso di studio: diametri del tronco\n\nProblemaSoluzione\n\n\nSi supponga che i diametri di alcuni arbusti siano distribuiti normalmente con media 8 cm e deviazione standard 2 cm.\nLa probabilità per un arbusto di avere un diametro eccezionalmente grande ( &gt;12cm&gt; 12 cm ) è pari a?\n\n\nP(X&gt;12)=1−P(Z&lt;12−82)=1−Φ[2]=1−0.977=0.023\\begin{split}P(X &gt; 12)& = 1 - P \\left ( Z &lt; \\frac{12-8}{2}\\right )\\\\& = 1-\\Phi[2]\\\\& = 1-0.977\\\\& = 0.023\n\\end{split}"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#caso-di-studio-flusso-ematico-cerebrale",
+    "href": "slides/04-distribuzioni.html#caso-di-studio-flusso-ematico-cerebrale",
+    "title": "Statistica Medica",
+    "section": "Caso di studio: flusso ematico cerebrale",
+    "text": "Caso di studio: flusso ematico cerebrale\n\nProblemaSoluzione\n\n\nNella popolazione generale il flusso ematico cerebrale (CBF) è distribuito normalmente con media 75 e deviazione standard 17. Un paziente è definito a rischio di stroke se ha una CBF &lt;&lt; 40.\nLa probabilità di essere a rischio è pari a?\n\n\nP(X&lt;40)=P(Z&lt;40−7517)=Φ[−2.059]=1−Φ[2.059]=1−0.98=0.02\\begin{split}P(X &lt; 40)& = P \\left ( Z &lt; \\frac{40-75}{17}\\right )\\\\&= \\Phi[-2.059]\\\\& = 1-\\Phi[2.059]\\\\& = 1-0.98\\\\& = 0.02\\end{split}"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#caso-di-studio-glaucoma",
+    "href": "slides/04-distribuzioni.html#caso-di-studio-glaucoma",
+    "title": "Statistica Medica",
+    "section": "Caso di studio: glaucoma",
+    "text": "Caso di studio: glaucoma\n\nProblemaSoluzionegrafico\n\n\nIl glaucoma è una malattia che si presenta con una pressione intraoculare eccessiva. Nella popolazione generale, la pressione intraoculare è normale con media 16 mm Hg e deviazione standard 3 mm Hg.\nSe il range di normalità è tra i 12 ed i 20 mm Hg, la probabilità di essere normali è pari a?\n\n\nP(12&lt;X&lt;20)=P(12−163&lt;Z&lt;20−163)=Φ[4/3]−Φ[−4/3]=Φ[1.33]−(1−Φ[1.33])=0.816\\begin{split}P(12 &lt; X &lt; 20)& = P \\left (\\frac{12-16}{3}&lt; Z &lt; \\frac{20-16}{3}\\right )\\\\& = \\Phi[4/3]-\\Phi[-4/3]\\\\& = \\Phi[1.33]-(1-\\Phi[1.33])\\\\& = 0.816\\end{split}"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#sondaggio-2",
+    "href": "slides/04-distribuzioni.html#sondaggio-2",
+    "title": "Statistica Medica",
+    "section": "Sondaggio",
+    "text": "Sondaggio\nPer me: Normale\nPer voi:  bit.ly/statmed-sondaggio-normale"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#approssimazioni-alla-distribuzione-normale-opzionale---no-esame",
+    "href": "slides/04-distribuzioni.html#approssimazioni-alla-distribuzione-normale-opzionale---no-esame",
+    "title": "Statistica Medica",
+    "section": "Approssimazioni alla distribuzione normale(OPZIONALE - no esame)",
+    "text": "Approssimazioni alla distribuzione normale(OPZIONALE - no esame)"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#approssimazione-alla-normale-binomiale",
+    "href": "slides/04-distribuzioni.html#approssimazione-alla-normale-binomiale",
+    "title": "Statistica Medica",
+    "section": "Approssimazione alla Normale: Binomiale",
+    "text": "Approssimazione alla Normale: Binomiale\n\nApprossimazioneGrafico\n\n\nSe XX è una variabile aleatoria binomiale di parametri nn (numero di prove) e pp (probabilità di successo), allora P(a≤X≤b)P(a \\leq X\\leq b) è approssimata dall’area sotto una curva normale N(np,npq)N(np, npq) tra a−1/2a-1/2 e b+1/2b+1/2.\nLa regola implica che per il caso speciale P(X=a)P(X=a) la probabilità binomiale è approssimata dall’area sotto la curva normale tra a−1/2a-1/2 e a+1/2a+1/2.\nUnica eccezione il caso P(X=0)P(X=0) e P(X=n)P(X=n) in cui queste probabilità sono approssimate dall’area sotto la curva normale alla sinistra di 1/21/2 e alla destra di n−1/2n-1/2\n\nNOTA: La distribuzione normale di media npnp e varianza npqnpq si può usare per approssimare una binomiale con analoghi parametri quando npq≥5npq \\geq 5"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#approssimazione-alla-normale-somma-di-v.a.",
+    "href": "slides/04-distribuzioni.html#approssimazione-alla-normale-somma-di-v.a.",
+    "title": "Statistica Medica",
+    "section": "Approssimazione alla Normale: somma di v.a.",
+    "text": "Approssimazione alla Normale: somma di v.a.\nSe NN è grande, allora la somma di NN v.a. indipendenti e con la stessa distribuzione (con varianza finita) è approssimativamente normale\nEsempio\nUna v.a. di Bernoulli è una v.a. Binomiale con parametro pp ed n=1n = 1\nIn questo caso, X1,…,XnX_1, \\ldots, X_n sono il risultato di nn prove di Bernoulli. Il valore atteso del numero di successi in nn prove è pari a\nE(X)=E(∑i=1nXi)=p+…+p=npE(X)=E(\\sum_{i=1}^n X_i)= p+\\ldots+p=np\nvar(X)=var(∑i=1nXi)=pq+…+pq=npq(prove indipendenti)\\mbox{var}(X)=\\mbox{var}(\\sum_{i=1}^n X_i)=pq+\\ldots+pq=npq \\:\\:\\:\\: \\mbox{(prove indipendenti)} Ovvero attesa e varianza della binomiale (si distribuisce approssimativamente come una N(np,npq)N(np, npq))"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#approssimazione-alla-normale-esempio",
+    "href": "slides/04-distribuzioni.html#approssimazione-alla-normale-esempio",
+    "title": "Statistica Medica",
+    "section": "Approssimazione alla Normale: esempio",
+    "text": "Approssimazione alla Normale: esempio\n\nProblemaSoluzioneGrafico\n\n\nSi supponga che:\n\nXX sia Binomiale di parametro n=25n=25 e p=0.4p=0.4\n\nSi calcoli:\n\nP(7≤X≤12)P(7 \\leq X \\leq 12)\n\n\n\nSi ha che np=25*0.4=10np = 25 * 0.4 = 10, npq=25*0.4*0.6=6npq = 25 * 0.4 * 0.6 = 6, quindi la distribuzione approssimante è una normale N(10,6)N(10,6). Si vuole allora calcolare l’area sotto la curva da 6.56.5 a 12.512.5.\nP(6.5≤Y≤12.5)=Φ(12.5−106)−Φ(6.5−106)=Φ(1.02)−Φ(−1.43)=Φ(1.02)−[1−Φ(1.43)]=Φ(1.02)+Φ(1.43)−1=0.8461+0.9236−1=0.770\\begin{split}P(6.5 \\leq Y \\leq 12.5)& = \\Phi\\left(\\frac{12.5-10}{\\sqrt{6}} \\right)-\\Phi\\left(\\frac{6.5-10}{\\sqrt{6}} \\right)\\\\& = \\Phi(1.02)-\\Phi(-1.43)\\\\& = \\Phi(1.02)-[1-\\Phi(1.43)]\\\\& = \\Phi(1.02)+\\Phi(1.43)-1\\\\& = 0.8461 + 0.9236 - 1\\\\& = 0.770\\end{split}"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#approssimazione-alla-normale-esempio-2",
+    "href": "slides/04-distribuzioni.html#approssimazione-alla-normale-esempio-2",
+    "title": "Statistica Medica",
+    "section": "Approssimazione alla Normale: esempio 2",
+    "text": "Approssimazione alla Normale: esempio 2\n\nProblemaSoluzione\n\n\nSi supponga di voler calcolare la probabilità che di 100 granulociti, ce ne siano tra 50 e 75 neutrofili, dove la probabilità che una cellula sia un neutrofilo è pari a 0.6.\n\n\nLa probabilità esatta è\n∑k=5075(100k)0.6k0.4100−k\\sum_{k=50}^{75}\\binom{100}{k} 0.6^k 0.4^{100-k}\nche può essere approssimata da una distribuzione normale di parametro\nnp=100*0.6=60np=100 * 0.6 = 60 e npq=100*0.6*0.4=24npq = 100 * 0.6 * 0.4 = 24 tra 49.5 e 75.5.\nΦ(75.5−6024)−Φ(49.5−6024)=Φ(3.16)−Φ(−2.14)=Φ(3.16)+Φ(2.14)−1=0.9992+0.9838−1=0.983\\begin{split}\\Phi\\left(\\frac{75.5-60}{\\sqrt{24}} \\right)-\\Phi\\left(\\frac{49.5-60}{\\sqrt{24}} \\right)& = \\Phi(3.16)-\\Phi(-2.14)\\\\& = \\Phi(3.16)+\\Phi(2.14)-1\\\\& = 0.9992 + 0.9838 - 1\\\\& = 0.983\\end{split}"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#approssimazione-alla-normale-esempio-3",
+    "href": "slides/04-distribuzioni.html#approssimazione-alla-normale-esempio-3",
+    "title": "Statistica Medica",
+    "section": "Approssimazione alla Normale: esempio 3",
+    "text": "Approssimazione alla Normale: esempio 3\n\nProblemaSoluzioneGrafico\n\n\nSi definisca una persona come anormale se il numero di neutrofili è superiore a 75 o inferiore a 50.\nStimare la percentuale di soggetti anormali\n\n\nLa percentuale di soggetti anormali può essere stimata con la approssimazione normale\n1−Φ(75.5−6024)=1−Φ(3.16)=1−0.9992=0.00081-\\Phi\\left(\\frac{75.5-60}{\\sqrt{24}} \\right)=1-\\Phi(3.16)=1-0.9992=0.0008 Φ(49.5−6024)=Φ(−2.14)=1−0.9838=0.016\\Phi\\left(\\frac{49.5-60}{\\sqrt{24}} \\right)=\\Phi(-2.14)=1-0.9838=0.016 0.0008+0.016=0.0170.0008 + 0.016 = 0.017 ovvero circa l’1.7% dei soggetti."
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#link-al-vostro-cloud",
+    "href": "slides/04-distribuzioni.html#link-al-vostro-cloud",
+    "title": "Statistica Medica",
+    "section": "link al vostro cloud:",
+    "text": "link al vostro cloud:\nhttps://bit.ly/statmed-cl-rstudio"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#risorse-utili",
+    "href": "slides/04-distribuzioni.html#risorse-utili",
+    "title": "Statistica Medica",
+    "section": "Risorse utili",
+    "text": "Risorse utili\n\nRStudio Cloud: https://bit.ly/statmed-cl-rstudio gratis per voi per esplorare RStudio, le sue funzionalità, e allenarvi con R (link di iscrizione valido fino alla fine del corso). NOTA: a vostra scelta, è utilizzabile anche come supporto durante l’esame.\nRStudio primers ambiente gratuito dentro RStudio Cloud per l’apprendimento delle basi di analisi di dati con R tramite tutorial interattivi. Una volta registrati, oltre all’accesso al nostro spazio di lavoro, avete accesso libero anche ai Primers.\nR 4 Data Science: libro gratuito (on-line) di Hadley Wickham e Garrett Grolemund\nGGplot2 cheatsheet schema dei possibili grafici di base rappresentabili in R con il pacchetto {ggplot2}, molto utile anche per conoscere le tipologie di grafico, e il loro utilizzo.\nAn Introduction to Medical Statistics di Martin Bland, suggeriti capitoli 4 e 5.\nPerché n − 1 nella formula della deviazione standard campionaria? di Riccardo Dossena Traduzione dell’articolo Book, S.A.: Why n − 1 in the formula for the sample standard deviation?, The Two-Year College Mathematics Journal 10(5), 330–333 (1979"
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#section",
+    "href": "slides/04-distribuzioni.html#section",
     "title": "Statistica Medica",
     "section": "",
-    "text": "If you think the only acceptable performance is the “perfect performance”,AI is not for you!But, I’ve heard that even humans have made mistakes…\n\n\n— Daniel Oberski2021/03/26 ASReview interviewhttps://daob.nl/\n\n\nGrazie per l’attenzione!\nDiapositive: bit.ly/cl-statmed\n www.unipd-ubep.it |  Corrado.Lanera@ubep.unipd.it\n   @CorradoLanera |  bit.ly/statmed-cl-ricevimento"
-  },
-  {
-    "objectID": "slides/index.html",
-    "href": "slides/index.html",
-    "title": "Slide del corso",
-    "section": "",
-    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\n9 nov 2026\n\n\nSTATISTICA MEDICA\n\n\nCorrado Lanera\n\n\n\n\n\n\n9 nov 2026\n\n\nStatistica Medica\n\n\nCorrado Lanera\n\n\n\n\n\n\n9 nov 2026\n\n\nStatistica Medica\n\n\nCorrado Lanera\n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\nNo matching items\n Back to top"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Statistica Medica — Corrado Lanera",
-    "section": "",
-    "text": "Fornire agli studenti delle Professioni Sanitarie le conoscenze di base di statistica medica per interpretare correttamente i dati clinici e scientifici, supportando decisioni informate nella pratica professionale."
-  },
-  {
-    "objectID": "index.html#scopo-del-corso",
-    "href": "index.html#scopo-del-corso",
-    "title": "Statistica Medica — Corrado Lanera",
-    "section": "",
-    "text": "Fornire agli studenti delle Professioni Sanitarie le conoscenze di base di statistica medica per interpretare correttamente i dati clinici e scientifici, supportando decisioni informate nella pratica professionale."
-  },
-  {
-    "objectID": "intro.html",
-    "href": "intro.html",
-    "title": "Introduzione",
-    "section": "",
-    "text": "Questo portale raccoglie le slide e una selezione di esercizi di Statistica Medica pensati per accompagnare lo studio teorico e le lezioni frontali dei corsi tenuti da Corrado Lanera e destinati ai percorsi di laurea delle Professioni Sanitarie dell’Università di Padova per un corso da 20 ore (2 CFU).\nLe slide e gli esercizi coprono i principali argomenti affrontati nel corso:\n\nStatistica descrittiva, con esempi di sintesi numerica e grafica dei dati.\n\nConcetti fondamentali di probabilità, utili a comprendere il ragionamento diagnostico.\n\nProbabilità condizionata e teorema di Bayes, applicati alla valutazione delle prestazioni dei test diagnostici.\nDistribuzioni di probabilità, per modellare variabili casuali discrete (Binomiale e Poisson) e continue (Normale e Normale Standard).\n\nStima puntuale e intervalli di confidenza, per quantificare l’incertezza delle stime.\n\nTest di ipotesi per misure continue, per prendere decisioni basate sui dati osservati.\n\n\nOgni esercizio è pensato per favorire la comprensione intuitiva dei concetti, più che la semplice applicazione di formule. L’obiettivo è abituarsi a leggere, interpretare e ragionare sui dati in contesti clinici e di ricerca.\nGran parte degli esercizi sono tratti da testi di riferimento, articoli scientifici o dataset reali. Si veda la bibliografia per i riferimenti completi.\n\n\n\n\n\n\nNote\n\n\n\nSe fate o avete eserczi che desiderate venganon aggiunti all’elenco, contattatemi pure!\n\n\n\n\n\nIl materiale può essere usato in due modi complementari:\n\nIn parallelo alle lezioni, per consolidare i concetti appena introdotti.\n\nCome preparazione all’esame, selezionando gli argomenti di maggiore difficoltà o interesse.\n\n\n\n\n\n\n\nNote\n\n\n\nGli esercizi nelle slide sono tutti svolti, si suggerisce agli studenti di provare a risolverli autonomamente prima di guardare la soluzione.\n\n\n\n\n\n\n\nLeggi sempre il testo dell’esercizio con attenzione prima di passare ai calcoli.\n\nCerca di interpretare il significato clinico dei risultati numerici: la statistica non è solo calcolo, ma anche comprensione del contesto.\n\nRicorda che, in ambito didattico, se viene posto un problema vuol dire che:\n\nsi può risolvere\nsi può risolvere con gli strumenti che hai a disposizione Dunque, provare a individuare e scrivere bene i dati, considerare le formule affrontate e riportate nella sezione appena precedente e ragionare su come poter adattare e sfruttare gfi strumenti proposti, coi dati forniti, per risolvere il problema.\n\nConfronta i tuoi risultati con quelli discussi a lezione; sopratutto, discutili con i colleghi.\n\n[OPZIONALE] Se utilizzi R, prova a riprodurre le analisi passo per passo, verificando come cambiano i risultati al variare dei dati.\n\n\n\n\n\n\n\n\nTavole delle distribuzioni (Z e t di Student, non ne servono altre) - fornite dal docente in formato cartaceo durante il corso (vanno bene anche altre).\nCalcolatrice scientifica base (non è permesso l’uso di smartphone o tablet). La più semplice ed economica che trovate e che sia in grado di fare l’esponenziale (\\(e^x\\)) va benissimo ed è sicuro sufficiente. Una mia rassegna di calcolatrici di esempio di varie marche che vanno sicuramente bene sono elencate in fondo a questa pagina.\n\n\n\n\n\nqualunque materiale cartaceo personale (appunti, libri, dispense, eccetera) - non è permesso condividere materiale cartaceo tra studenti durante l’esame.\n\n\n\n\n\ndispositivi elettronici connessi a internet (smartphone, tablet, computer portatili, eccetera);\ncalcolatrici programmabili o con funzionalità avanzate (grafici, simboliche, eccetera);\n\n\n\n\n\n\nQuesto materiale è in costante aggiornamento.\nEventuali correzioni, estensioni o nuove versioni saranno rese disponibili attraverso i canali ufficiali del corso o tramite il profilo docente.\nPer segnalare errori, suggerimenti o proposte di miglioramento, contattatemi pure via email (corrado.lanera@ubep.unipd.it), tramite i canali ufficiali del corso, o aprendo un issue dalla pagina di sviluppo del corso (https://github.com/CorradoLanera/statistica-medica-short)\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nIn ambito calcolatrici scientifiche, “più costosa” non significa necessariamente “migliore”. Un prezzo maggiore spesso corrisponde semplicemente a più funzioni (o un prodotto meno diffuso commercialmente) o a un display più evoluto, ma nella maggior parte dei casi molte di quelle funzioni non verranno mai usate. Per la gran parte dei calcoli matematici e statistici di base (e non solo) che ci serviranno, bastano poche operazioni fondamentali: aritmetica base, parentesi, memorie, potenze, radici, logaritmi, e l’esponenziale naturale \\(e^x\\). Dalla mia esperienza, se una calcolatrice è in grado di fare \\(e^x\\) (o ha addirittura un tasto dedicato per \\(e\\), allora ha tutte le funzioni che servono e, tranne una eccezione (unica che ho trovato: Casio FX-Junior Plus), se una calcolatrice non è in grado di fare \\(e^x\\) allora non ha tutte le funzioni base elencate qui sopra).\nI modelli raccolti in questa selezione non rappresentano “le migliori in assoluto”, ma piuttosto una mia panoramica con la filosofia alla base della scelta che punti alla chiarezza e dell’usabilità: lo strumento deve essere un supporto al ragionamento, non un ostacolo.\nTutte le calcolatrici di questa lista — e molte altre analoghe di altre marche — vanno bene per i nostri scopi. Se vi serve sapere se la “vostra” va bene, cercate se potete fare \\(e^x\\), se si, va bene di sicuro, se no, probabilmente no.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMarca\nModello\nDisplay\ne^x\nMemorie\nDistribuzioni Z/t\nAlimentazione\nGiudizio costruttivo\nNote sintetiche\nImmagine\n\n\n\n\nCasio FX\nJunior Plus\n1 riga\n❌\n❌\n❌\nbatteria\n🟡 base\n“Pre-scientifica” — minimalissima (per costante e usare approssimazione “a mano” 2.718, per il resto fa tutto!\n\n\n\n\n220 Plus II\n2 righe\n✅\n✅ (1)\n❌\nbatteria\n🟡 media\nEconomica (~9 €), semplice, completa “minima”\n\n\n\n\n82 MS 2\n2 righe\n✅\n✅ (A–D)\n❌\nbatteria\n🟡 media\nStandard universitaria, equilibrata\n\n\n\n\n82 ES Plus 2\nnaturale\n✅\n✅ (A–D)\n❌\nbatteria\n🟢 buona\nDisplay naturale, essenziale (senza distribuzioni)\n\n\n\n\n570 ES Plus 2\nnaturale\n✅\n✅ (A–D)\n✅\nbatteria\n🟢 buona\nPrimo modello Casio con NORM/t; ottimo per percentili\n\n\n\nSharp EL\n501 T\n1 riga\n✅\n✅ (1)\n❌\nbatteria\n🟢 buona\nMinimal solida, tasti eccellenti\n\n\n\n\n531 TH\n2 righe\n✅\n✅ (A–D)\n❌\nbatteria\n🟢 buona\nCompatta, leggibile, sobria\n\n\n\n\nW531 XH\nnaturale\n✅\n✅ (A–D)\n✅\nbatteria\n🟢 alta\nDisplay naturale brillante, distribuzioni complete\n\n\n\nTexas Instr. TI\n30 Xa\n1 riga\n✅\n✅ (1)\n❌\nbatteria\n🟢 alta\nStorica, indistruttibile, minimalismo puro\n\n\n\n\n30 XIIB\n2 righe\n✅\n✅ (1)\n❌\nbatteria\n🟢 buona\nEvoluzione Xa con frazioni e statistica base\n\n\n\n\n30 X Pro MathPrint\nnaturale\n✅\n✅ (A–D)\n✅\nbatteria\n🟢 alta\nNatural MathPrint + InvNorm / InvT; top ergonomia\n\n\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nSe dovete comprarla, e vi serve solo per l’esame, spendete meno possibile, non serve nulla di più complesso di una calcolatrice scientifica base: se fa esponenziale, tutto il resto che serve lo fa di sicuro.\n\n\n\n\n\n\n\n\nTip\n\n\n\nPer tutti i giorni (non potete usare app all’esame…) una calcolatrice sceintifica molto valida che funziona su browser e anche come app da cellulare è CalcES (https://mathda.com/calculator/it/), gratuita e open source."
-  },
-  {
-    "objectID": "intro.html#come-utilizzare-questo-materiale",
-    "href": "intro.html#come-utilizzare-questo-materiale",
-    "title": "Introduzione",
-    "section": "",
-    "text": "Il materiale può essere usato in due modi complementari:\n\nIn parallelo alle lezioni, per consolidare i concetti appena introdotti.\n\nCome preparazione all’esame, selezionando gli argomenti di maggiore difficoltà o interesse.\n\n\n\n\n\n\n\nNote\n\n\n\nGli esercizi nelle slide sono tutti svolti, si suggerisce agli studenti di provare a risolverli autonomamente prima di guardare la soluzione."
-  },
-  {
-    "objectID": "intro.html#suggerimenti-per-lo-studio",
-    "href": "intro.html#suggerimenti-per-lo-studio",
-    "title": "Introduzione",
-    "section": "",
-    "text": "Leggi sempre il testo dell’esercizio con attenzione prima di passare ai calcoli.\n\nCerca di interpretare il significato clinico dei risultati numerici: la statistica non è solo calcolo, ma anche comprensione del contesto.\n\nRicorda che, in ambito didattico, se viene posto un problema vuol dire che:\n\nsi può risolvere\nsi può risolvere con gli strumenti che hai a disposizione Dunque, provare a individuare e scrivere bene i dati, considerare le formule affrontate e riportate nella sezione appena precedente e ragionare su come poter adattare e sfruttare gfi strumenti proposti, coi dati forniti, per risolvere il problema.\n\nConfronta i tuoi risultati con quelli discussi a lezione; sopratutto, discutili con i colleghi.\n\n[OPZIONALE] Se utilizzi R, prova a riprodurre le analisi passo per passo, verificando come cambiano i risultati al variare dei dati."
-  },
-  {
-    "objectID": "intro.html#suggerimenti-e-indicazioni-per-lesame",
-    "href": "intro.html#suggerimenti-e-indicazioni-per-lesame",
-    "title": "Introduzione",
-    "section": "",
-    "text": "Tavole delle distribuzioni (Z e t di Student, non ne servono altre) - fornite dal docente in formato cartaceo durante il corso (vanno bene anche altre).\nCalcolatrice scientifica base (non è permesso l’uso di smartphone o tablet). La più semplice ed economica che trovate e che sia in grado di fare l’esponenziale (\\(e^x\\)) va benissimo ed è sicuro sufficiente. Una mia rassegna di calcolatrici di esempio di varie marche che vanno sicuramente bene sono elencate in fondo a questa pagina.\n\n\n\n\n\nqualunque materiale cartaceo personale (appunti, libri, dispense, eccetera) - non è permesso condividere materiale cartaceo tra studenti durante l’esame.\n\n\n\n\n\ndispositivi elettronici connessi a internet (smartphone, tablet, computer portatili, eccetera);\ncalcolatrici programmabili o con funzionalità avanzate (grafici, simboliche, eccetera);"
-  },
-  {
-    "objectID": "intro.html#aggiornamenti",
-    "href": "intro.html#aggiornamenti",
-    "title": "Introduzione",
-    "section": "",
-    "text": "Questo materiale è in costante aggiornamento.\nEventuali correzioni, estensioni o nuove versioni saranno rese disponibili attraverso i canali ufficiali del corso o tramite il profilo docente.\nPer segnalare errori, suggerimenti o proposte di miglioramento, contattatemi pure via email (corrado.lanera@ubep.unipd.it), tramite i canali ufficiali del corso, o aprendo un issue dalla pagina di sviluppo del corso (https://github.com/CorradoLanera/statistica-medica-short)"
-  },
-  {
-    "objectID": "intro.html#calcolatrici-scientifiche-di-esempio",
-    "href": "intro.html#calcolatrici-scientifiche-di-esempio",
-    "title": "Introduzione",
-    "section": "",
-    "text": "Note\n\n\n\nIn ambito calcolatrici scientifiche, “più costosa” non significa necessariamente “migliore”. Un prezzo maggiore spesso corrisponde semplicemente a più funzioni (o un prodotto meno diffuso commercialmente) o a un display più evoluto, ma nella maggior parte dei casi molte di quelle funzioni non verranno mai usate. Per la gran parte dei calcoli matematici e statistici di base (e non solo) che ci serviranno, bastano poche operazioni fondamentali: aritmetica base, parentesi, memorie, potenze, radici, logaritmi, e l’esponenziale naturale \\(e^x\\). Dalla mia esperienza, se una calcolatrice è in grado di fare \\(e^x\\) (o ha addirittura un tasto dedicato per \\(e\\), allora ha tutte le funzioni che servono e, tranne una eccezione (unica che ho trovato: Casio FX-Junior Plus), se una calcolatrice non è in grado di fare \\(e^x\\) allora non ha tutte le funzioni base elencate qui sopra).\nI modelli raccolti in questa selezione non rappresentano “le migliori in assoluto”, ma piuttosto una mia panoramica con la filosofia alla base della scelta che punti alla chiarezza e dell’usabilità: lo strumento deve essere un supporto al ragionamento, non un ostacolo.\nTutte le calcolatrici di questa lista — e molte altre analoghe di altre marche — vanno bene per i nostri scopi. Se vi serve sapere se la “vostra” va bene, cercate se potete fare \\(e^x\\), se si, va bene di sicuro, se no, probabilmente no.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMarca\nModello\nDisplay\ne^x\nMemorie\nDistribuzioni Z/t\nAlimentazione\nGiudizio costruttivo\nNote sintetiche\nImmagine\n\n\n\n\nCasio FX\nJunior Plus\n1 riga\n❌\n❌\n❌\nbatteria\n🟡 base\n“Pre-scientifica” — minimalissima (per costante e usare approssimazione “a mano” 2.718, per il resto fa tutto!\n\n\n\n\n220 Plus II\n2 righe\n✅\n✅ (1)\n❌\nbatteria\n🟡 media\nEconomica (~9 €), semplice, completa “minima”\n\n\n\n\n82 MS 2\n2 righe\n✅\n✅ (A–D)\n❌\nbatteria\n🟡 media\nStandard universitaria, equilibrata\n\n\n\n\n82 ES Plus 2\nnaturale\n✅\n✅ (A–D)\n❌\nbatteria\n🟢 buona\nDisplay naturale, essenziale (senza distribuzioni)\n\n\n\n\n570 ES Plus 2\nnaturale\n✅\n✅ (A–D)\n✅\nbatteria\n🟢 buona\nPrimo modello Casio con NORM/t; ottimo per percentili\n\n\n\nSharp EL\n501 T\n1 riga\n✅\n✅ (1)\n❌\nbatteria\n🟢 buona\nMinimal solida, tasti eccellenti\n\n\n\n\n531 TH\n2 righe\n✅\n✅ (A–D)\n❌\nbatteria\n🟢 buona\nCompatta, leggibile, sobria\n\n\n\n\nW531 XH\nnaturale\n✅\n✅ (A–D)\n✅\nbatteria\n🟢 alta\nDisplay naturale brillante, distribuzioni complete\n\n\n\nTexas Instr. TI\n30 Xa\n1 riga\n✅\n✅ (1)\n❌\nbatteria\n🟢 alta\nStorica, indistruttibile, minimalismo puro\n\n\n\n\n30 XIIB\n2 righe\n✅\n✅ (1)\n❌\nbatteria\n🟢 buona\nEvoluzione Xa con frazioni e statistica base\n\n\n\n\n30 X Pro MathPrint\nnaturale\n✅\n✅ (A–D)\n✅\nbatteria\n🟢 alta\nNatural MathPrint + InvNorm / InvT; top ergonomia\n\n\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nSe dovete comprarla, e vi serve solo per l’esame, spendete meno possibile, non serve nulla di più complesso di una calcolatrice scientifica base: se fa esponenziale, tutto il resto che serve lo fa di sicuro.\n\n\n\n\n\n\n\n\nTip\n\n\n\nPer tutti i giorni (non potete usare app all’esame…) una calcolatrice sceintifica molto valida che funziona su browser e anche come app da cellulare è CalcES (https://mathda.com/calculator/it/), gratuita e open source."
-  },
-  {
-    "objectID": "slides/00-intro_and_info.html#obiettivi",
-    "href": "slides/00-intro_and_info.html#obiettivi",
-    "title": "STATISTICA MEDICA",
-    "section": "Obiettivi",
-    "text": "Obiettivi\n\nimparare le definizioni e gli operatori base della statistica medica, in particolare riguardo:\n\nanalisi descrittiva dei dati\nelementi di probabilità\n\nimparare a comprendere e stimare i parametri di valutazione di un test diagnostico, in particolare sensibilità, specificità, valori predittivi, positivo e negativo\nconoscere e identificare le principali distribuzioni di probabilità e i loro ambiti di utilità e applicabilità\nacquisire le basi per la comprensione, il calcolo e l’interpretazione delle metriche relative ai test statistici per variabili continue, come il t-test, il p-value e gli intervalli di confidenza per una stima."
-  },
-  {
-    "objectID": "slides/00-intro_and_info.html#requisiti",
-    "href": "slides/00-intro_and_info.html#requisiti",
-    "title": "STATISTICA MEDICA",
-    "section": "Requisiti",
-    "text": "Requisiti\n\naritmetica di base (somma, sottrazione, moltiplicazione, divisione, potenza, radice)\noperatori tra insiemi (appartenenza, intersezione, unione, complemento; and, or, not)."
-  },
-  {
-    "objectID": "slides/00-intro_and_info.html#lezioni",
-    "href": "slides/00-intro_and_info.html#lezioni",
-    "title": "STATISTICA MEDICA",
-    "section": "Lezioni",
-    "text": "Lezioni\n\nModalità: in presenza, 75% obbligatorio (minimo)\nMateriale didattico: Moodle\nPortale accesso slide, esercizi e calendario: bit.ly/cl-statmed\n\nLicenza\nUtilizzo del materiale e suoi derivati: consentito e libero sotto licenza cc-by 4.0.\n\n\nIn sintesi: potete condividere, modificare, utilizzare il materiale liberamente e gratuitamente per qualsiasi fine, a patto di attribuire adeguata paternità al materiale che producete, ma senza alcuna mia responsabilità o garanzia su di esso. Siete tenuti comunque a distribuirlo (incluse eventuali opere derivate) con analoga ed esplicita licenza, e senza ulteriori restrizioni."
-  },
-  {
-    "objectID": "slides/00-intro_and_info.html#agenda",
-    "href": "slides/00-intro_and_info.html#agenda",
-    "title": "STATISTICA MEDICA",
-    "section": "Agenda",
-    "text": "Agenda\n\n\n\nintro al corso\nstatistica descrittiva - prerequisiti, definizioni, localizzazione, dispersione / distribuzione, grafici\nfondamenti di probabilità\nrischi, test di screening: sensibilità e specificità, valori predittivi positivo e negativo, teorema di Bayes (base e generalizzato)\n\n\n\ndistribuzioni: modelli discreti\ndistribuzioni: modelli continui\nintervalli di confidenza e p-value\nrevisione e simulazione completa d’esame"
-  },
-  {
-    "objectID": "slides/00-intro_and_info.html#supporto",
-    "href": "slides/00-intro_and_info.html#supporto",
-    "title": "STATISTICA MEDICA",
-    "section": "Supporto",
-    "text": "Supporto\nIn Moodle, trovate:\n\nLink al portale slide ed Esercizi\nLavagne scritte a lezione\nLink per prenotare ricevimento bit.ly/statmed-cl-ricevimento:\n\n25 minuti a sessione\nprenotabile con almeno 2 giorni di anticipo,\nentro due settimane nel futuro\n\n\n\nLa settimana precedente le sessioni d’esame NON è attivo il ricevimento."
-  },
-  {
-    "objectID": "slides/00-intro_and_info.html#esame-finale",
-    "href": "slides/00-intro_and_info.html#esame-finale",
-    "title": "STATISTICA MEDICA",
-    "section": "Esame finale",
-    "text": "Esame finale\n\nL’esame finale sarà composto da 10 esercizi a risposta multipla dal valore di 3 punti ciascuno, e non avrà durata prestabilita (durata prevista per lo svolgimento 2 ore).\nDurante lo svolgimento è concesso l’utilizzo di:\n\nqualunque libro di testo cartaceo\nappunti personali cartacei\ntavole statistiche cartacee\ncalcolatrice scientifica NON programmabile, né grafica né simbolica, che calcoli l’esponenziale (ex); smartphone, tablet e computer NON sono ammessi(Casio 220 Plus II (~9 euro), Texas Instruments TI-30XA (~13 euro), Sharp EL-501T (~17 euro))\n\nPunteggi:\n\nUna risposta corretta varrà 3 punti.\nSarà presente una sola risposta corretta in ciascuna domanda.\nUna risposta errata sommerà negativamente sul totale in misura pari al punteggio della domanda diviso il numero di opzioni sbagliate possibili (= 3 / (numero risposte - 1)).\nSarà presente una domanda “bonus” che varrà 6 punti (portando il totale a 36). Tale domanda avrà valore (positivo o negativo che sia) solamente dopo aver raggiunto i 18/30 con le altre domande, e in alcun caso potrà dare o togliere la sufficienza.\n\nIl punteggio totale dell’esame sarà dunque di 36/36. Superato totalizzandone almeno 18/30. La lode è assegnata con un totale di almeno 31/36 punti.\n\nSarà possibile prenotare un’integrazione orale (solo) nei seguenti casi:\n\npunteggio tra 14 e 17 punti, per arrivare a 18/30 (non di più)\npunteggio tra 27 e 30 punti, per arrivare fino a 30/30, con eventuale lode."
-  },
-  {
-    "objectID": "slides/00-intro_and_info.html#riconoscimenti",
-    "href": "slides/00-intro_and_info.html#riconoscimenti",
-    "title": "STATISTICA MEDICA",
-    "section": "Riconoscimenti",
-    "text": "Riconoscimenti\n\nLe diapositive proposte sono state prodotte a partire anche da materiale generato da/con le seguenti persone gravitanti attorno all’UBEP*:\n\nDanila Azzolina\nDario Gregori\nGiulia Lorenzoni\nHonoria Ocagli\nIleana Baldi\nLuca Vedovelli\nMatteo Martinato\nPaola Berchialla\n\n\n\n\n\n* In ordine alfabetico.\n\n\n\n\nUn ringraziamento speciale a Cristiana Vettori per l’aiuto e il supporto logistico e amministrativo che mi ha sempre offerto, e mi offre ancora."
-  },
-  {
-    "objectID": "slides/00-intro_and_info.html#section",
-    "href": "slides/00-intro_and_info.html#section",
-    "title": "STATISTICA MEDICA",
-    "section": "",
-    "text": "Per trovarmi…\n www.unipd-ubep.it\n Corrado.Lanera@ubep.unipd.it\n   @CorradoLanera\n bit.ly/statmed-cl-ricevimento"
-  },
-  {
-    "objectID": "slides/00-intro_and_info.html#section-1",
-    "href": "slides/00-intro_and_info.html#section-1",
-    "title": "STATISTICA MEDICA",
-    "section": "",
-    "text": "Can one be a good data analyst without being a half-good programmer?The short answer to that is, ‘No.’The long answer to that is, ‘No.’\n\n\n—Frank Harrell10/1999 - S-PLUS User Conference, New Orleans\n\n\nDomande?\nDiapositive: bit.ly/cl-statmed\n www.unipd-ubep.it |  Corrado.Lanera@ubep.unipd.it\n   @CorradoLanera |  bit.ly/statmed-cl-ricevimento"
+    "text": "Mathematical conventions are just that, conventions. They differ by field of mathematics. Don’t ask us why matrix rows are numbered down but graphs are numbered up the y axis, nor why x comes before y but row before column. But the matrix layout has always seemed illogical to me.\n\n\n—Brian D. Ripley08/2004 - R-help\n\n\n\nGrazie per l’attenzione!\n… e buona settimana.\nDiapositive: bit.ly/statmed-cl-corsi\n www.unipd-ubep.it |  Corrado.Lanera@ubep.unipd.it\n   @CorradoLanera |  bit.ly/statmed-cl-ricevimento"
   },
   {
     "objectID": "slides/02-descrittive.html#cosa-faremo",
@@ -750,6 +981,881 @@
     "title": "Statistica Medica",
     "section": "",
     "text": "Mathematical conventions are just that, conventions. They differ by field of mathematics. Don’t ask us why matrix rows are numbered down but graphs are numbered up the y axis, nor why x comes before y but row before column. But the matrix layout has always seemed illogical to me.\n\n\n—Brian D. Ripley08/2004 - R-help\n\n\nGrazie per l’attenzione!\nDiapositive: bit.ly/statmed-cl-corsi\n www.unipd-ubep.it |  Corrado.Lanera@ubep.unipd.it\n   @CorradoLanera |  bit.ly/statmed-cl-ricevimento"
+  },
+  {
+    "objectID": "slides/00-intro_and_info.html#obiettivi",
+    "href": "slides/00-intro_and_info.html#obiettivi",
+    "title": "STATISTICA MEDICA",
+    "section": "Obiettivi",
+    "text": "Obiettivi\n\nimparare le definizioni e gli operatori base della statistica medica, in particolare riguardo:\n\nanalisi descrittiva dei dati\nelementi di probabilità\n\nimparare a comprendere e stimare i parametri di valutazione di un test diagnostico, in particolare sensibilità, specificità, valori predittivi, positivo e negativo\nconoscere e identificare le principali distribuzioni di probabilità e i loro ambiti di utilità e applicabilità\nacquisire le basi per la comprensione, il calcolo e l’interpretazione delle metriche relative ai test statistici per variabili continue, come il t-test, il p-value e gli intervalli di confidenza per una stima."
+  },
+  {
+    "objectID": "slides/00-intro_and_info.html#requisiti",
+    "href": "slides/00-intro_and_info.html#requisiti",
+    "title": "STATISTICA MEDICA",
+    "section": "Requisiti",
+    "text": "Requisiti\n\naritmetica di base (somma, sottrazione, moltiplicazione, divisione, potenza, radice)\noperatori tra insiemi (appartenenza, intersezione, unione, complemento; and, or, not)."
+  },
+  {
+    "objectID": "slides/00-intro_and_info.html#lezioni",
+    "href": "slides/00-intro_and_info.html#lezioni",
+    "title": "STATISTICA MEDICA",
+    "section": "Lezioni",
+    "text": "Lezioni\n\nModalità: in presenza, 75% obbligatorio (minimo)\nMateriale didattico: Moodle\nPortale accesso slide, esercizi e calendario: bit.ly/cl-statmed\n\nLicenza\nUtilizzo del materiale e suoi derivati: consentito e libero sotto licenza cc-by 4.0.\n\n\nIn sintesi: potete condividere, modificare, utilizzare il materiale liberamente e gratuitamente per qualsiasi fine, a patto di attribuire adeguata paternità al materiale che producete, ma senza alcuna mia responsabilità o garanzia su di esso. Siete tenuti comunque a distribuirlo (incluse eventuali opere derivate) con analoga ed esplicita licenza, e senza ulteriori restrizioni."
+  },
+  {
+    "objectID": "slides/00-intro_and_info.html#agenda",
+    "href": "slides/00-intro_and_info.html#agenda",
+    "title": "STATISTICA MEDICA",
+    "section": "Agenda",
+    "text": "Agenda\n\n\n\nintro al corso\nstatistica descrittiva - prerequisiti, definizioni, localizzazione, dispersione / distribuzione, grafici\nfondamenti di probabilità\nrischi, test di screening: sensibilità e specificità, valori predittivi positivo e negativo, teorema di Bayes (base e generalizzato)\n\n\n\ndistribuzioni: modelli discreti\ndistribuzioni: modelli continui\nintervalli di confidenza e p-value\nrevisione e simulazione completa d’esame"
+  },
+  {
+    "objectID": "slides/00-intro_and_info.html#supporto",
+    "href": "slides/00-intro_and_info.html#supporto",
+    "title": "STATISTICA MEDICA",
+    "section": "Supporto",
+    "text": "Supporto\nIn Moodle, trovate:\n\nLink al portale slide ed Esercizi\nLavagne scritte a lezione\nLink per prenotare ricevimento bit.ly/statmed-cl-ricevimento:\n\n25 minuti a sessione\nprenotabile con almeno 2 giorni di anticipo,\nentro due settimane nel futuro\n\n\n\nLa settimana precedente le sessioni d’esame NON è attivo il ricevimento."
+  },
+  {
+    "objectID": "slides/00-intro_and_info.html#esame-finale",
+    "href": "slides/00-intro_and_info.html#esame-finale",
+    "title": "STATISTICA MEDICA",
+    "section": "Esame finale",
+    "text": "Esame finale\n\nL’esame finale sarà composto da 10 esercizi a risposta multipla dal valore di 3 punti ciascuno, e non avrà durata prestabilita (durata prevista per lo svolgimento 2 ore).\nDurante lo svolgimento è concesso l’utilizzo di:\n\nqualunque libro di testo cartaceo\nappunti personali cartacei\ntavole statistiche cartacee\ncalcolatrice scientifica NON programmabile, né grafica né simbolica, che calcoli l’esponenziale (ex); smartphone, tablet e computer NON sono ammessi(Casio 220 Plus II (~9 euro), Texas Instruments TI-30XA (~13 euro), Sharp EL-501T (~17 euro))\n\nPunteggi:\n\nUna risposta corretta varrà 3 punti.\nSarà presente una sola risposta corretta in ciascuna domanda.\nUna risposta errata sommerà negativamente sul totale in misura pari al punteggio della domanda diviso il numero di opzioni sbagliate possibili (= 3 / (numero risposte - 1)).\nSarà presente una domanda “bonus” che varrà 6 punti (portando il totale a 36). Tale domanda avrà valore (positivo o negativo che sia) solamente dopo aver raggiunto i 18/30 con le altre domande, e in alcun caso potrà dare o togliere la sufficienza.\n\nIl punteggio totale dell’esame sarà dunque di 36/36. Superato totalizzandone almeno 18/30. La lode è assegnata con un totale di almeno 31/36 punti.\n\nSarà possibile prenotare un’integrazione orale (solo) nei seguenti casi:\n\npunteggio tra 14 e 17 punti, per arrivare a 18/30 (non di più)\npunteggio tra 27 e 30 punti, per arrivare fino a 30/30, con eventuale lode."
+  },
+  {
+    "objectID": "slides/00-intro_and_info.html#riconoscimenti",
+    "href": "slides/00-intro_and_info.html#riconoscimenti",
+    "title": "STATISTICA MEDICA",
+    "section": "Riconoscimenti",
+    "text": "Riconoscimenti\n\nLe diapositive proposte sono state prodotte a partire anche da materiale generato da/con le seguenti persone gravitanti attorno all’UBEP*:\n\nDanila Azzolina\nDario Gregori\nGiulia Lorenzoni\nHonoria Ocagli\nIleana Baldi\nLuca Vedovelli\nMatteo Martinato\nPaola Berchialla\n\n\n\n\n\n* In ordine alfabetico.\n\n\n\n\nUn ringraziamento speciale a Cristiana Vettori per l’aiuto e il supporto logistico e amministrativo che mi ha sempre offerto, e mi offre ancora."
+  },
+  {
+    "objectID": "slides/00-intro_and_info.html#section",
+    "href": "slides/00-intro_and_info.html#section",
+    "title": "STATISTICA MEDICA",
+    "section": "",
+    "text": "Per trovarmi…\n www.unipd-ubep.it\n Corrado.Lanera@ubep.unipd.it\n   @CorradoLanera\n bit.ly/statmed-cl-ricevimento"
+  },
+  {
+    "objectID": "slides/00-intro_and_info.html#section-1",
+    "href": "slides/00-intro_and_info.html#section-1",
+    "title": "STATISTICA MEDICA",
+    "section": "",
+    "text": "Can one be a good data analyst without being a half-good programmer?The short answer to that is, ‘No.’The long answer to that is, ‘No.’\n\n\n—Frank Harrell10/1999 - S-PLUS User Conference, New Orleans\n\n\nDomande?\nDiapositive: bit.ly/cl-statmed\n www.unipd-ubep.it |  Corrado.Lanera@ubep.unipd.it\n   @CorradoLanera |  bit.ly/statmed-cl-ricevimento"
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "Introduzione",
+    "section": "",
+    "text": "Questo portale raccoglie le slide e una selezione di esercizi di Statistica Medica pensati per accompagnare lo studio teorico e le lezioni frontali dei corsi tenuti da Corrado Lanera e destinati ai percorsi di laurea delle Professioni Sanitarie dell’Università di Padova per un corso da 20 ore (2 CFU).\nLe slide e gli esercizi coprono i principali argomenti affrontati nel corso:\n\nStatistica descrittiva, con esempi di sintesi numerica e grafica dei dati.\n\nConcetti fondamentali di probabilità, utili a comprendere il ragionamento diagnostico.\n\nProbabilità condizionata e teorema di Bayes, applicati alla valutazione delle prestazioni dei test diagnostici.\nDistribuzioni di probabilità, per modellare variabili casuali discrete (Binomiale e Poisson) e continue (Normale e Normale Standard).\n\nStima puntuale e intervalli di confidenza, per quantificare l’incertezza delle stime.\n\nTest di ipotesi per misure continue, per prendere decisioni basate sui dati osservati.\n\n\nOgni esercizio è pensato per favorire la comprensione intuitiva dei concetti, più che la semplice applicazione di formule. L’obiettivo è abituarsi a leggere, interpretare e ragionare sui dati in contesti clinici e di ricerca.\nGran parte degli esercizi sono tratti da testi di riferimento, articoli scientifici o dataset reali. Si veda la bibliografia per i riferimenti completi.\n\n\n\n\n\n\nNote\n\n\n\nSe fate o avete eserczi che desiderate venganon aggiunti all’elenco, contattatemi pure!\n\n\n\n\n\nIl materiale può essere usato in due modi complementari:\n\nIn parallelo alle lezioni, per consolidare i concetti appena introdotti.\n\nCome preparazione all’esame, selezionando gli argomenti di maggiore difficoltà o interesse.\n\n\n\n\n\n\n\nNote\n\n\n\nGli esercizi nelle slide sono tutti svolti, si suggerisce agli studenti di provare a risolverli autonomamente prima di guardare la soluzione.\n\n\n\n\n\n\n\nLeggi sempre il testo dell’esercizio con attenzione prima di passare ai calcoli.\n\nCerca di interpretare il significato clinico dei risultati numerici: la statistica non è solo calcolo, ma anche comprensione del contesto.\n\nRicorda che, in ambito didattico, se viene posto un problema vuol dire che:\n\nsi può risolvere\nsi può risolvere con gli strumenti che hai a disposizione Dunque, provare a individuare e scrivere bene i dati, considerare le formule affrontate e riportate nella sezione appena precedente e ragionare su come poter adattare e sfruttare gfi strumenti proposti, coi dati forniti, per risolvere il problema.\n\nConfronta i tuoi risultati con quelli discussi a lezione; sopratutto, discutili con i colleghi.\n\n[OPZIONALE] Se utilizzi R, prova a riprodurre le analisi passo per passo, verificando come cambiano i risultati al variare dei dati.\n\n\n\n\n\n\n\n\nTavole delle distribuzioni (Z e t di Student, non ne servono altre) - fornite dal docente in formato cartaceo durante il corso (vanno bene anche altre).\nCalcolatrice scientifica base (non è permesso l’uso di smartphone o tablet). La più semplice ed economica che trovate e che sia in grado di fare l’esponenziale (\\(e^x\\)) va benissimo ed è sicuro sufficiente. Una mia rassegna di calcolatrici di esempio di varie marche che vanno sicuramente bene sono elencate in fondo a questa pagina.\n\n\n\n\n\nqualunque materiale cartaceo personale (appunti, libri, dispense, eccetera) - non è permesso condividere materiale cartaceo tra studenti durante l’esame.\n\n\n\n\n\ndispositivi elettronici connessi a internet (smartphone, tablet, computer portatili, eccetera);\ncalcolatrici programmabili o con funzionalità avanzate (grafici, simboliche, eccetera);\n\n\n\n\n\n\nQuesto materiale è in costante aggiornamento.\nEventuali correzioni, estensioni o nuove versioni saranno rese disponibili attraverso i canali ufficiali del corso o tramite il profilo docente.\nPer segnalare errori, suggerimenti o proposte di miglioramento, contattatemi pure via email (corrado.lanera@ubep.unipd.it), tramite i canali ufficiali del corso, o aprendo un issue dalla pagina di sviluppo del corso (https://github.com/CorradoLanera/statistica-medica-short)\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nIn ambito calcolatrici scientifiche, “più costosa” non significa necessariamente “migliore”. Un prezzo maggiore spesso corrisponde semplicemente a più funzioni (o un prodotto meno diffuso commercialmente) o a un display più evoluto, ma nella maggior parte dei casi molte di quelle funzioni non verranno mai usate. Per la gran parte dei calcoli matematici e statistici di base (e non solo) che ci serviranno, bastano poche operazioni fondamentali: aritmetica base, parentesi, memorie, potenze, radici, logaritmi, e l’esponenziale naturale \\(e^x\\). Dalla mia esperienza, se una calcolatrice è in grado di fare \\(e^x\\) (o ha addirittura un tasto dedicato per \\(e\\), allora ha tutte le funzioni che servono e, tranne una eccezione (unica che ho trovato: Casio FX-Junior Plus), se una calcolatrice non è in grado di fare \\(e^x\\) allora non ha tutte le funzioni base elencate qui sopra).\nI modelli raccolti in questa selezione non rappresentano “le migliori in assoluto”, ma piuttosto una mia panoramica con la filosofia alla base della scelta che punti alla chiarezza e dell’usabilità: lo strumento deve essere un supporto al ragionamento, non un ostacolo.\nTutte le calcolatrici di questa lista — e molte altre analoghe di altre marche — vanno bene per i nostri scopi. Se vi serve sapere se la “vostra” va bene, cercate se potete fare \\(e^x\\), se si, va bene di sicuro, se no, probabilmente no.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMarca\nModello\nDisplay\ne^x\nMemorie\nDistribuzioni Z/t\nAlimentazione\nGiudizio costruttivo\nNote sintetiche\nImmagine\n\n\n\n\nCasio FX\nJunior Plus\n1 riga\n❌\n❌\n❌\nbatteria\n🟡 base\n“Pre-scientifica” — minimalissima (per costante e usare approssimazione “a mano” 2.718, per il resto fa tutto!\n\n\n\n\n220 Plus II\n2 righe\n✅\n✅ (1)\n❌\nbatteria\n🟡 media\nEconomica (~9 €), semplice, completa “minima”\n\n\n\n\n82 MS 2\n2 righe\n✅\n✅ (A–D)\n❌\nbatteria\n🟡 media\nStandard universitaria, equilibrata\n\n\n\n\n82 ES Plus 2\nnaturale\n✅\n✅ (A–D)\n❌\nbatteria\n🟢 buona\nDisplay naturale, essenziale (senza distribuzioni)\n\n\n\n\n570 ES Plus 2\nnaturale\n✅\n✅ (A–D)\n✅\nbatteria\n🟢 buona\nPrimo modello Casio con NORM/t; ottimo per percentili\n\n\n\nSharp EL\n501 T\n1 riga\n✅\n✅ (1)\n❌\nbatteria\n🟢 buona\nMinimal solida, tasti eccellenti\n\n\n\n\n531 TH\n2 righe\n✅\n✅ (A–D)\n❌\nbatteria\n🟢 buona\nCompatta, leggibile, sobria\n\n\n\n\nW531 XH\nnaturale\n✅\n✅ (A–D)\n✅\nbatteria\n🟢 alta\nDisplay naturale brillante, distribuzioni complete\n\n\n\nTexas Instr. TI\n30 Xa\n1 riga\n✅\n✅ (1)\n❌\nbatteria\n🟢 alta\nStorica, indistruttibile, minimalismo puro\n\n\n\n\n30 XIIB\n2 righe\n✅\n✅ (1)\n❌\nbatteria\n🟢 buona\nEvoluzione Xa con frazioni e statistica base\n\n\n\n\n30 X Pro MathPrint\nnaturale\n✅\n✅ (A–D)\n✅\nbatteria\n🟢 alta\nNatural MathPrint + InvNorm / InvT; top ergonomia\n\n\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nSe dovete comprarla, e vi serve solo per l’esame, spendete meno possibile, non serve nulla di più complesso di una calcolatrice scientifica base: se fa esponenziale, tutto il resto che serve lo fa di sicuro.\n\n\n\n\n\n\n\n\nTip\n\n\n\nPer tutti i giorni (non potete usare app all’esame…) una calcolatrice sceintifica molto valida che funziona su browser e anche come app da cellulare è CalcES (https://mathda.com/calculator/it/), gratuita e open source."
+  },
+  {
+    "objectID": "intro.html#come-utilizzare-questo-materiale",
+    "href": "intro.html#come-utilizzare-questo-materiale",
+    "title": "Introduzione",
+    "section": "",
+    "text": "Il materiale può essere usato in due modi complementari:\n\nIn parallelo alle lezioni, per consolidare i concetti appena introdotti.\n\nCome preparazione all’esame, selezionando gli argomenti di maggiore difficoltà o interesse.\n\n\n\n\n\n\n\nNote\n\n\n\nGli esercizi nelle slide sono tutti svolti, si suggerisce agli studenti di provare a risolverli autonomamente prima di guardare la soluzione."
+  },
+  {
+    "objectID": "intro.html#suggerimenti-per-lo-studio",
+    "href": "intro.html#suggerimenti-per-lo-studio",
+    "title": "Introduzione",
+    "section": "",
+    "text": "Leggi sempre il testo dell’esercizio con attenzione prima di passare ai calcoli.\n\nCerca di interpretare il significato clinico dei risultati numerici: la statistica non è solo calcolo, ma anche comprensione del contesto.\n\nRicorda che, in ambito didattico, se viene posto un problema vuol dire che:\n\nsi può risolvere\nsi può risolvere con gli strumenti che hai a disposizione Dunque, provare a individuare e scrivere bene i dati, considerare le formule affrontate e riportate nella sezione appena precedente e ragionare su come poter adattare e sfruttare gfi strumenti proposti, coi dati forniti, per risolvere il problema.\n\nConfronta i tuoi risultati con quelli discussi a lezione; sopratutto, discutili con i colleghi.\n\n[OPZIONALE] Se utilizzi R, prova a riprodurre le analisi passo per passo, verificando come cambiano i risultati al variare dei dati."
+  },
+  {
+    "objectID": "intro.html#suggerimenti-e-indicazioni-per-lesame",
+    "href": "intro.html#suggerimenti-e-indicazioni-per-lesame",
+    "title": "Introduzione",
+    "section": "",
+    "text": "Tavole delle distribuzioni (Z e t di Student, non ne servono altre) - fornite dal docente in formato cartaceo durante il corso (vanno bene anche altre).\nCalcolatrice scientifica base (non è permesso l’uso di smartphone o tablet). La più semplice ed economica che trovate e che sia in grado di fare l’esponenziale (\\(e^x\\)) va benissimo ed è sicuro sufficiente. Una mia rassegna di calcolatrici di esempio di varie marche che vanno sicuramente bene sono elencate in fondo a questa pagina.\n\n\n\n\n\nqualunque materiale cartaceo personale (appunti, libri, dispense, eccetera) - non è permesso condividere materiale cartaceo tra studenti durante l’esame.\n\n\n\n\n\ndispositivi elettronici connessi a internet (smartphone, tablet, computer portatili, eccetera);\ncalcolatrici programmabili o con funzionalità avanzate (grafici, simboliche, eccetera);"
+  },
+  {
+    "objectID": "intro.html#aggiornamenti",
+    "href": "intro.html#aggiornamenti",
+    "title": "Introduzione",
+    "section": "",
+    "text": "Questo materiale è in costante aggiornamento.\nEventuali correzioni, estensioni o nuove versioni saranno rese disponibili attraverso i canali ufficiali del corso o tramite il profilo docente.\nPer segnalare errori, suggerimenti o proposte di miglioramento, contattatemi pure via email (corrado.lanera@ubep.unipd.it), tramite i canali ufficiali del corso, o aprendo un issue dalla pagina di sviluppo del corso (https://github.com/CorradoLanera/statistica-medica-short)"
+  },
+  {
+    "objectID": "intro.html#calcolatrici-scientifiche-di-esempio",
+    "href": "intro.html#calcolatrici-scientifiche-di-esempio",
+    "title": "Introduzione",
+    "section": "",
+    "text": "Note\n\n\n\nIn ambito calcolatrici scientifiche, “più costosa” non significa necessariamente “migliore”. Un prezzo maggiore spesso corrisponde semplicemente a più funzioni (o un prodotto meno diffuso commercialmente) o a un display più evoluto, ma nella maggior parte dei casi molte di quelle funzioni non verranno mai usate. Per la gran parte dei calcoli matematici e statistici di base (e non solo) che ci serviranno, bastano poche operazioni fondamentali: aritmetica base, parentesi, memorie, potenze, radici, logaritmi, e l’esponenziale naturale \\(e^x\\). Dalla mia esperienza, se una calcolatrice è in grado di fare \\(e^x\\) (o ha addirittura un tasto dedicato per \\(e\\), allora ha tutte le funzioni che servono e, tranne una eccezione (unica che ho trovato: Casio FX-Junior Plus), se una calcolatrice non è in grado di fare \\(e^x\\) allora non ha tutte le funzioni base elencate qui sopra).\nI modelli raccolti in questa selezione non rappresentano “le migliori in assoluto”, ma piuttosto una mia panoramica con la filosofia alla base della scelta che punti alla chiarezza e dell’usabilità: lo strumento deve essere un supporto al ragionamento, non un ostacolo.\nTutte le calcolatrici di questa lista — e molte altre analoghe di altre marche — vanno bene per i nostri scopi. Se vi serve sapere se la “vostra” va bene, cercate se potete fare \\(e^x\\), se si, va bene di sicuro, se no, probabilmente no.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMarca\nModello\nDisplay\ne^x\nMemorie\nDistribuzioni Z/t\nAlimentazione\nGiudizio costruttivo\nNote sintetiche\nImmagine\n\n\n\n\nCasio FX\nJunior Plus\n1 riga\n❌\n❌\n❌\nbatteria\n🟡 base\n“Pre-scientifica” — minimalissima (per costante e usare approssimazione “a mano” 2.718, per il resto fa tutto!\n\n\n\n\n220 Plus II\n2 righe\n✅\n✅ (1)\n❌\nbatteria\n🟡 media\nEconomica (~9 €), semplice, completa “minima”\n\n\n\n\n82 MS 2\n2 righe\n✅\n✅ (A–D)\n❌\nbatteria\n🟡 media\nStandard universitaria, equilibrata\n\n\n\n\n82 ES Plus 2\nnaturale\n✅\n✅ (A–D)\n❌\nbatteria\n🟢 buona\nDisplay naturale, essenziale (senza distribuzioni)\n\n\n\n\n570 ES Plus 2\nnaturale\n✅\n✅ (A–D)\n✅\nbatteria\n🟢 buona\nPrimo modello Casio con NORM/t; ottimo per percentili\n\n\n\nSharp EL\n501 T\n1 riga\n✅\n✅ (1)\n❌\nbatteria\n🟢 buona\nMinimal solida, tasti eccellenti\n\n\n\n\n531 TH\n2 righe\n✅\n✅ (A–D)\n❌\nbatteria\n🟢 buona\nCompatta, leggibile, sobria\n\n\n\n\nW531 XH\nnaturale\n✅\n✅ (A–D)\n✅\nbatteria\n🟢 alta\nDisplay naturale brillante, distribuzioni complete\n\n\n\nTexas Instr. TI\n30 Xa\n1 riga\n✅\n✅ (1)\n❌\nbatteria\n🟢 alta\nStorica, indistruttibile, minimalismo puro\n\n\n\n\n30 XIIB\n2 righe\n✅\n✅ (1)\n❌\nbatteria\n🟢 buona\nEvoluzione Xa con frazioni e statistica base\n\n\n\n\n30 X Pro MathPrint\nnaturale\n✅\n✅ (A–D)\n✅\nbatteria\n🟢 alta\nNatural MathPrint + InvNorm / InvT; top ergonomia\n\n\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nSe dovete comprarla, e vi serve solo per l’esame, spendete meno possibile, non serve nulla di più complesso di una calcolatrice scientifica base: se fa esponenziale, tutto il resto che serve lo fa di sicuro.\n\n\n\n\n\n\n\n\nTip\n\n\n\nPer tutti i giorni (non potete usare app all’esame…) una calcolatrice sceintifica molto valida che funziona su browser e anche come app da cellulare è CalcES (https://mathda.com/calculator/it/), gratuita e open source."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Statistica Medica — Corrado Lanera",
+    "section": "",
+    "text": "Fornire agli studenti delle Professioni Sanitarie le conoscenze di base di statistica medica per interpretare correttamente i dati clinici e scientifici, supportando decisioni informate nella pratica professionale."
+  },
+  {
+    "objectID": "index.html#scopo-del-corso",
+    "href": "index.html#scopo-del-corso",
+    "title": "Statistica Medica — Corrado Lanera",
+    "section": "",
+    "text": "Fornire agli studenti delle Professioni Sanitarie le conoscenze di base di statistica medica per interpretare correttamente i dati clinici e scientifici, supportando decisioni informate nella pratica professionale."
+  },
+  {
+    "objectID": "slides/index.html",
+    "href": "slides/index.html",
+    "title": "Slide del corso",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nNov 9, 2026\n\n\nSTATISTICA MEDICA\n\n\nCorrado Lanera\n\n\n\n\n\n\nNov 9, 2026\n\n\nStatistica Medica\n\n\nCorrado Lanera\n\n\n\n\n\n\nNov 9, 2026\n\n\nStatistica Medica\n\n\nCorrado Lanera\n\n\n\n\n\n\nNov 9, 2026\n\n\nStatistica Medica\n\n\nCorrado Lanera\n\n\n\n\n\n\nNov 9, 2026\n\n\nStatistica Medica\n\n\nCorrado Lanera\n\n\n\n\n\n\nNov 9, 2026\n\n\nStatistica Medica\n\n\nCorrado Lanera\n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\nNo matching items\n Back to top"
+  },
+  {
+    "objectID": "slides/01-r_rstudio.html#cosa-faremo",
+    "href": "slides/01-r_rstudio.html#cosa-faremo",
+    "title": "Statistica Medica",
+    "section": "Cosa faremo",
+    "text": "Cosa faremo\nNella prossima ora vi fornirò un’introduzione all’uso di R, tramite RStudio. Vedremo cosa sono, a cosa servono (in cosa si differenziano) e come installarli.\nL’obiettivo principale è quello di fornirvi gli elementi base per poter (se volete, vi fa piacere, o pensate possa esservi utile*) seguire anche la fase di codifica degli esempi interattivi ed esercitazioni che vi mostrerò nelle future lezioni.\nInoltre, ho messo a disposizione (gratuitamente) un ambiente di lavoro Posit Cloud attivabile da ciascuno di voi (vedremo come), in modo che possiate usare R/RStudio senza doverli installare, e con/su qualunque dispositivo vi troviate a operare.**\n\n\n\n* La mia opinione in merito, chiaramente, è: si 😉.\n** Volendo, anche su smartphone e tablet, seppur piuttosto scomodo!"
+  },
+  {
+    "objectID": "slides/01-r_rstudio.html#panoramica",
+    "href": "slides/01-r_rstudio.html#panoramica",
+    "title": "Statistica Medica",
+    "section": "Panoramica",
+    "text": "Panoramica"
+  },
+  {
+    "objectID": "slides/01-r_rstudio.html#installazione",
+    "href": "slides/01-r_rstudio.html#installazione",
+    "title": "Statistica Medica",
+    "section": "Installazione",
+    "text": "Installazione\nGo to: https://cloud.r-project.org/"
+  },
+  {
+    "objectID": "slides/01-r_rstudio.html#algebra-elementare",
+    "href": "slides/01-r_rstudio.html#algebra-elementare",
+    "title": "Statistica Medica",
+    "section": "Algebra elementare",
+    "text": "Algebra elementare\nIn R possiamo operare tutte le operazioni algebriche di base, e anche di più! Ottimo quindi anche come calcolatrice potenziata!\n\n\n\n1 + 1  # sum\n\n[1] 2\n\n7 * 3  # product\n\n[1] 21\n\nabs(-2)  # absolute value\n\n[1] 2\n\n3^2  # power\n\n[1] 9\n\nsqrt(9)  # square root\n\n[1] 3"
+  },
+  {
+    "objectID": "slides/01-r_rstudio.html#vettori",
+    "href": "slides/01-r_rstudio.html#vettori",
+    "title": "Statistica Medica",
+    "section": "Vettori",
+    "text": "Vettori\nLa struttura base dei dati in R è il vettore: sequenze di valori dello stesso tipo (numeri, testo, logici)\n\nc(1, 2, 3, 7)  # concatenate\n\n[1] 1 2 3 7\n\n1:7  # sequence\n\n[1] 1 2 3 4 5 6 7\n\nseq_len(4)  # sequence\n\n[1] 1 2 3 4\n\nrep(2, 3)  # replicate\n\n[1] 2 2 2\n\nrev(c(1, 2, 3))  # reverse\n\n[1] 3 2 1"
+  },
+  {
+    "objectID": "slides/01-r_rstudio.html#assegnamento-memorizzazione",
+    "href": "slides/01-r_rstudio.html#assegnamento-memorizzazione",
+    "title": "Statistica Medica",
+    "section": "Assegnamento (“memorizzazione”)",
+    "text": "Assegnamento (“memorizzazione”)\nSpesso può essere utile salvare il risultato di una operazione o della chiamata di una funzione in un oggetto (che chiamiamo variabile) a cui possiamo assegnare un nome.\n\nfirst_vector &lt;- 1:10\nfirst_vector\n\n [1]  1  2  3  4  5  6  7  8  9 10\n\nfirst_vector + 5\n\n [1]  6  7  8  9 10 11 12 13 14 15"
+  },
+  {
+    "objectID": "slides/01-r_rstudio.html#confronti-booleani",
+    "href": "slides/01-r_rstudio.html#confronti-booleani",
+    "title": "Statistica Medica",
+    "section": "Confronti (Booleani)",
+    "text": "Confronti (Booleani)\nPossiamo fare confronti ottenendo dei risultati logici: TRUE/FALSE.\n\n1 == 0\n\n[1] FALSE\n\n1 != 0\n\n[1] TRUE\n\n1 &gt; 0\n\n[1] TRUE\n\n1 &lt;= 0\n\n[1] FALSE"
+  },
+  {
+    "objectID": "slides/01-r_rstudio.html#logica-booleana",
+    "href": "slides/01-r_rstudio.html#logica-booleana",
+    "title": "Statistica Medica",
+    "section": "Logica (Booleana)",
+    "text": "Logica (Booleana)\nPossiamo anche fare operazioni direttamente con vettori logici\n\nTRUE & FALSE\n\n[1] FALSE\n\nTRUE | FALSE\n\n[1] TRUE\n\n!TRUE\n\n[1] FALSE"
+  },
+  {
+    "objectID": "slides/01-r_rstudio.html#logica-booleana-vettoriale",
+    "href": "slides/01-r_rstudio.html#logica-booleana-vettoriale",
+    "title": "Statistica Medica",
+    "section": "Logica (Booleana, … vettoriale)",
+    "text": "Logica (Booleana, … vettoriale)\n\nc(TRUE, FALSE) & c(FALSE, FALSE)\n\n[1] FALSE FALSE\n\nc(1, 2, 3, 3, 2, 4) == 2\n\n[1] FALSE  TRUE FALSE FALSE  TRUE FALSE\n\nwhich(c(1, 2, 3, 3, 2, 4) == 2)\n\n[1] 2 5\n\n# WARNING\nc(TRUE, FALSE, NA) & FALSE\n\n[1] FALSE FALSE FALSE\n\nc(TRUE, FALSE, NA) & TRUE\n\n[1]  TRUE FALSE    NA"
+  },
+  {
+    "objectID": "slides/01-r_rstudio.html#dataframe",
+    "href": "slides/01-r_rstudio.html#dataframe",
+    "title": "Statistica Medica",
+    "section": "Dataframe",
+    "text": "Dataframe\n\nogni riga è un’osservazione (es: un paziente, o una visita)\nogni colonna è una variabile (es: il genere, o l’età)\n\n\nfirst_df &lt;- data.frame(\n  id     = c(7, 12, 31),\n  gender = factor(\n      c('m', 'm', 'f'),\n      levels = c('f', 'm', 'non-binary', 'unknown')\n  ),\n  city   = c('Gorizia', 'Viterbo', 'Napoli'),\n  height = c(1.84, 1.70, 1.59),\n  weight = c(115, 70, 51),\n  overweight = c(TRUE, FALSE, FALSE)\n)\nfirst_df\n\n  id gender    city height weight overweight\n1  7      m Gorizia   1.84    115       TRUE\n2 12      m Viterbo   1.70     70      FALSE\n3 31      f  Napoli   1.59     51      FALSE"
+  },
+  {
+    "objectID": "slides/01-r_rstudio.html#pacchetti",
+    "href": "slides/01-r_rstudio.html#pacchetti",
+    "title": "Statistica Medica",
+    "section": "Pacchetti",
+    "text": "Pacchetti\nUn pacchetto di espansione di R è una collezione di funzioni e/o di dati che possono essere “aggiunti” al proprio ambiente di lavoro.\nSi installano una sola volta (in generale, salvo aggiornamenti) ma si caricano ogni volta (una sola volta) che si ricomincia a lavorare.\n\nlibrary('tidyverse')\nlibrary('palmerpenguins')\n\nggplot(\n    penguins,\n    aes(x = bill_length_mm, y = bill_depth_mm, colour = species)\n  ) +\n  geom_point() +\n  geom_smooth(method = lm) +\n  facet_wrap(island~.) +\n  labs(\n    x = \"Lunghezza becco (mm)\",\n    y = \"Altezza becco (mm)\",\n    colour = \"Specie\",\n    title = \"Relazioni tra dimensioni del becco per specie di pinguino\",\n    subtitle = \"Ogni riquadro riporta i dati di un'isola differente.\",\n    caption = \"Dati: Palmer Archipelago (Antarctica) penguin data.\"\n  ) +\n  theme_bw()"
+  },
+  {
+    "objectID": "slides/01-r_rstudio.html#installazione-1",
+    "href": "slides/01-r_rstudio.html#installazione-1",
+    "title": "Statistica Medica",
+    "section": "Installazione",
+    "text": "Installazione\nGo to: https://posit.co/download/rstudio-desktop/"
+  },
+  {
+    "objectID": "slides/01-r_rstudio.html#vediamolo-sul-vostro-cloud",
+    "href": "slides/01-r_rstudio.html#vediamolo-sul-vostro-cloud",
+    "title": "Statistica Medica",
+    "section": "Vediamolo……sul vostro cloud!",
+    "text": "Vediamolo……sul vostro cloud!\nhttps://bit.ly/statmed-cl-rstudio"
+  },
+  {
+    "objectID": "slides/01-r_rstudio.html#risorse-utili",
+    "href": "slides/01-r_rstudio.html#risorse-utili",
+    "title": "Statistica Medica",
+    "section": "Risorse utili",
+    "text": "Risorse utili\n\nPosit Cloud: bit.ly/statmed-cl-rstudio gratis per voi per esplorare RStudio, le sue funzionalità, e allenarvi con R (link di iscrizione valido fino alla fine del corso).\nBase R workshop for Data Science: bit.ly/ubep-rws-slide - materiale base per un workshop di 16 ore su R (4 ore x 4 giorni), con esempi, codice, esercizi, ambiente di lavoro. (NO modelli, NO (bio-)statistica)\nRStudio primers ambiente gratuito dentro Posit Cloud per l’apprendimento delle basi di analisi di dati con R tramite tutorial interattivi. Una volta registrati, oltre all’accesso al nostro spazio di lavoro, avete accesso libero anche ai Primers.\nR 4 Data Science: libro gratuito (on-line) di Hadley Wickham, Mine Çetinkaya-Rundel e Garrett Grolemund\nAdvanced R: libro gratuito (on-line) di Hadley Wickham; suggeriti capitolo 1-6 (che non sono “Advanced” ma semplicemente “Correct”)."
+  },
+  {
+    "objectID": "slides/01-r_rstudio.html#break",
+    "href": "slides/01-r_rstudio.html#break",
+    "title": "Statistica Medica",
+    "section": "Break",
+    "text": "Break\nConsigli:\n\nalzarsi\nsgranchirsi\nguardare lontano (rilassare gli occhi)\nbere\nandare in bagno"
+  },
+  {
+    "objectID": "slides/01-r_rstudio.html#section-2",
+    "href": "slides/01-r_rstudio.html#section-2",
+    "title": "Statistica Medica",
+    "section": "",
+    "text": "If you think the only acceptable performance is the “perfect performance”,AI is not for you!But, I’ve heard that even humans have made mistakes…\n\n\n— Daniel Oberski2021/03/26 ASReview interviewhttps://daob.nl/\n\n\nGrazie per l’attenzione!\nDiapositive: bit.ly/cl-statmed\n www.unipd-ubep.it |  Corrado.Lanera@ubep.unipd.it\n   @CorradoLanera |  bit.ly/statmed-cl-ricevimento"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#cosa-faremo",
+    "href": "slides/03-probabilita.html#cosa-faremo",
+    "title": "Statistica Medica",
+    "section": "Cosa faremo",
+    "text": "Cosa faremo\nInizieremo richiamando alcune definizioni e proprietà base della probabilità come il concetto di evento e probabilità stessa.\nVedremo come questi elementi si combinano tra loro con le operazioni di base quali somma, prodotto, e complemento (corrispondenti agli analoghi insiemistici di unione, intersezione, e complementare). In particolare introdurremo il concetto di indipendenza e vedremo come questo interagisce con le operazioni base.\nA questo punto saremo pronti per introdurre la parte interessante della probabilità, ovvero come la conoscenza del verificarsi di un dato evento condizioni la nostra conoscenza sulla probabilità del verificarsi di un altro. Ne vedremo una prima applicazione al caso dei rischi relativi e alle misure di valutazione per i test di screening.\nQuest’ultime ci daranno il pretesto per apprezzare la differenza fondamentale, quando siamo di fronte a due eventi, tra quello eventualmente noto e quello ignoto, e come poter girare i condizionamenti tramite il teorema di Bayes in modo da poter calcolare le misure che ci interessano (e non possiamo conoscere a priori) a partire da quelle che conosciamo (o possiamo conoscere a priori)."
+  },
+  {
+    "objectID": "slides/03-probabilita.html#riconoscimenti",
+    "href": "slides/03-probabilita.html#riconoscimenti",
+    "title": "Statistica Medica",
+    "section": "Riconoscimenti",
+    "text": "Riconoscimenti\n\nLe diapositive proposte sono state prodotte a partire anche da materiale generato da/con le seguenti persone gravitanti attorno all’UBEP*:\n\nDanila Azzolina\nDario Gregori\nGiulia Lorenzoni\nHonoria Ocagli\nIleana Baldi\nLuca Vedovelli\nMatteo Martinato\nPaola Berchialla\n\n\n\n\n\n* In ordine alfabetico.\n\n\n\n\nUn ringraziamento speciale a Cristiana Vettori per l’aiuto e il supporto logistico e amministrativo che mi è stato offerto."
+  },
+  {
+    "objectID": "slides/03-probabilita.html#panoramica",
+    "href": "slides/03-probabilita.html#panoramica",
+    "title": "Statistica Medica",
+    "section": "Panoramica",
+    "text": "Panoramica\nDefinizioni, proprietà e notazioni fondamentali\nOperazioni base tra eventi\nCondizionamento, rischio relativo, e misure per test di screening\nTeorema di Bayes"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#definizioni-proprietà-e-notazioni-fondamentali",
+    "href": "slides/03-probabilita.html#definizioni-proprietà-e-notazioni-fondamentali",
+    "title": "Statistica Medica",
+    "section": "Definizioni, proprietà e notazioni fondamentali",
+    "text": "Definizioni, proprietà e notazioni fondamentali\n\nEventi e probabilità\nEventi mutuamente esclusivi\nIntersezione, unione, e complemento"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#definizione-evento-e-probabilità",
+    "href": "slides/03-probabilita.html#definizione-evento-e-probabilità",
+    "title": "Statistica Medica",
+    "section": "Definizione: evento e probabilità",
+    "text": "Definizione: evento e probabilità\nLo spazio degli eventi Ω\\Omega è l’insieme di tutti i possibili risultati di un esperimento probabilistico.\nUn evento è un qualsiasi insieme di risultati di un esperimento probabilistico (ovvero, un sottoinsieme di Ω\\Omega ).\nUn risultato di un esperimento probabilistico verifica un evento se ne fa parte.\nLa probabilità di un evento è la frequenza relativa dei risultati che lo definiscono, valutata su infinite ripetizioni dell’esperimento probabilistico.\n\nEs.:\n\n\nEsperimento: misura della pressione diastolica (DBP) di una persona presa a caso, in un determinato momento, nella popolazione.\nSpazio degli eventi Ω\\Omega: ogni possibile misura di DBP.\nEvento AA : DBP ≥95\\geq 95 mmHg.\nRisultato (mio, ora): DBP =70= 70 mmHg. (Non fa parte dell’evento, quindi non lo verifica)\nProbabilità di AA : misurando la DBP, ora, a tutta la popolazione, la porzione di persone con DBP ≥95\\geq 95 mmHg."
+  },
+  {
+    "objectID": "slides/03-probabilita.html#proprietà-eventi-mutuamente-esclusivi",
+    "href": "slides/03-probabilita.html#proprietà-eventi-mutuamente-esclusivi",
+    "title": "Statistica Medica",
+    "section": "Proprietà: eventi mutuamente esclusivi",
+    "text": "Proprietà: eventi mutuamente esclusivi\nLa probabilità di un evento EE, indicata come P(E)P(E), soddisfa sempre la condizione\n0≤P(E)≤10 \\leq P(E) \\leq 1\nSe AA e BB sono due eventi che non possono verificarsi contemporaneamente, allora si ha che\nP(si verifichi A o che si verifichi B)=P(A)+P(B)P(\\textrm{si verifichi } A \\textrm{ o che si verifichi } B) = P(A) + P(B)\nEsempio:\n\nAA l’evento DBP normale ( DBP&lt;90\\mbox{DBP} &lt; 90 )\nBB l’evento DBP borderline ( 90≤DBP&lt;9590\\leq \\mbox{DBP} &lt; 95 )\nCC l’evento DBP &lt;95&lt; 95.\n\nSe:\n\nP(A)=0.7P(A)=0.7\nP(B)=0.1P(B)=0.1\n\nAllora: P(C)=P(A)+P(B)=0.7+0.1=0.8P(C) = P(A) + P(B) = 0.7 + 0.1 = 0.8."
+  },
+  {
+    "objectID": "slides/03-probabilita.html#proprietà-eventi-mutuamente-esclusivi-1",
+    "href": "slides/03-probabilita.html#proprietà-eventi-mutuamente-esclusivi-1",
+    "title": "Statistica Medica",
+    "section": "Proprietà: eventi mutuamente esclusivi",
+    "text": "Proprietà: eventi mutuamente esclusivi\nDue eventi AA e BB si dicono mutuamente esclusivi se non possono verificarsi contemporaneamente.\nEsempio\nSiano:\n\nxx la DBP.\nCC l’evento ( x≥90x \\geq 90 )\nDD l’evento ( 75≤x≤10075\\leq x\\leq 100 ).\n\nAllora in questo caso:\nCC e DD non sono mutuamente esclusivi, in quanto entrambi si verificano quando 90≤x≤10090 \\leq x \\leq 100."
+  },
+  {
+    "objectID": "slides/03-probabilita.html#notazione-unione",
+    "href": "slides/03-probabilita.html#notazione-unione",
+    "title": "Statistica Medica",
+    "section": "Notazione: unione",
+    "text": "Notazione: unione\n\nil simbolo {}\\{ \\} si usa per indicare un evento\nil simbolo ∪\\cup si usa come operatore per indicare l’evento unione A∪BA \\cup B, ovvero tale per cui si verifichi AA o BB (o entrambi).\n\nEsempio\nSia ( xx la DBP):\n\nA={x&lt;90}A = \\{x &lt; 90 \\}\nB={90≤x&lt;95}B = \\{90 \\leq x &lt; 95 \\}\nC={x≥90}C = \\{ x \\geq 90 \\}\nD={75≤x≤100}D = \\{75 \\leq x \\leq 100 \\}\n\nAllora:\nA∪B={x&lt;95}A \\cup B = \\{ x &lt; 95 \\}\nC∪D={x≥75}C \\cup D = \\{ x \\geq 75 \\}"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#eventi-e-spazio-omega",
+    "href": "slides/03-probabilita.html#eventi-e-spazio-omega",
+    "title": "Statistica Medica",
+    "section": "Eventi e spazio Ω\\Omega",
+    "text": "Eventi e spazio Ω\\Omega"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#notazione-intersezione",
+    "href": "slides/03-probabilita.html#notazione-intersezione",
+    "title": "Statistica Medica",
+    "section": "Notazione: intersezione",
+    "text": "Notazione: intersezione\nIl simbolo ∩\\cap indica l’evento A∩BA \\cap B, per cui sia AA che BB si verificano contemporaneamente.\nEsempio\nDati ( xx la DBP):\n\nC={x≥90}C = \\{x\\geq 90\\}\nD={75≤x≤100}D = \\{75 \\leq x \\leq 100 \\}\n\nAllora:\nC∩D={90≤x≤100}C \\cap D = \\{90 \\leq x \\leq 100  \\}"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#intersezione-di-eventi",
+    "href": "slides/03-probabilita.html#intersezione-di-eventi",
+    "title": "Statistica Medica",
+    "section": "Intersezione di eventi",
+    "text": "Intersezione di eventi"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#notazione-complemento",
+    "href": "slides/03-probabilita.html#notazione-complemento",
+    "title": "Statistica Medica",
+    "section": "Notazione: complemento",
+    "text": "Notazione: complemento\nCon A‾\\bar{A} si indica l’evento per cui AA non si verifica e si chiama complemento di AA.\nVale sempre:\nP(A‾)=1−P(A)P(\\bar{A}) = 1-P(A)\nEsempio\nDati ( xx la DBP):\n\nA={x&lt;90}A = \\{x &lt; 90 \\}, con P(A)=0.7P(A) = 0.7\nC={x≥90}C =\\{x \\geq 90 \\}\n\nAllora:\nA‾=C\\bar{A}=C\nDa cui:\nP(C)=P(A‾)=1−0.7=0.3P(C) = P(\\bar{A}) = 1-0.7 = 0.3"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#evento-complementare",
+    "href": "slides/03-probabilita.html#evento-complementare",
+    "title": "Statistica Medica",
+    "section": "Evento complementare",
+    "text": "Evento complementare"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#operazioni-di-base",
+    "href": "slides/03-probabilita.html#operazioni-di-base",
+    "title": "Statistica Medica",
+    "section": "Operazioni di base",
+    "text": "Operazioni di base\n\nProdotto (e indipendenza)\nSomma (e indipendenza)"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#prodotto-indipendenza",
+    "href": "slides/03-probabilita.html#prodotto-indipendenza",
+    "title": "Statistica Medica",
+    "section": "Prodotto: indipendenza",
+    "text": "Prodotto: indipendenza\nDue eventi sono indipendenti se\nP(A∩B)=P(A)P(B)P(A \\cap B) = P(A)P(B)\nTeorema del prodotto\nSe: A1,…,AkA_1, \\ldots, A_k sono mutuamente indipendenti\nAllora: P(A1∩A2∩…∩Ak)=P(A1)P(A2)…P(Ak)P(A_1 \\cap A_2 \\cap \\ldots \\cap A_k) = P(A_1)P(A_2)\\ldots P(A_k)"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#prodotto-esempio",
+    "href": "slides/03-probabilita.html#prodotto-esempio",
+    "title": "Statistica Medica",
+    "section": "Prodotto: esempio",
+    "text": "Prodotto: esempio\nSi considerino gli eventi\n\nA={DBP madre≥95}A=\\{\\mbox{DBP madre}\\geq 95\\}\nB={DBP padre≥95}B=\\{\\mbox{DBP padre}\\geq 95\\}\n\ncon probabilità\n\nP(A∩B)=0.05P(A \\cap B) = 0.05\nP(A)=0.1P(A) = 0.1\nP(B)=0.2P(B) = 0.2\n\nAllora:\nP(A∩B)=0.05&gt;0.02=P(A)P(B)P(A \\cap B) = 0.05 &gt; 0.02 = P(A)P(B)\nPer cui gli eventi non sono indipendenti, ovvero sono dipendenti."
+  },
+  {
+    "objectID": "slides/03-probabilita.html#indipendenza",
+    "href": "slides/03-probabilita.html#indipendenza",
+    "title": "Statistica Medica",
+    "section": "indipendenza",
+    "text": "indipendenza"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#teorema-della-somma",
+    "href": "slides/03-probabilita.html#teorema-della-somma",
+    "title": "Statistica Medica",
+    "section": "Teorema della somma",
+    "text": "Teorema della somma\nSiano:\n\nAA e BB due eventi qualsiasi\n\nAllora:\nP(A∪B)=P(A)+P(B)−P(A∩B)P(A \\cup B) = P(A)+P(B)-P(A\\cap B)"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#teorema-della-somma-es.",
+    "href": "slides/03-probabilita.html#teorema-della-somma-es.",
+    "title": "Statistica Medica",
+    "section": "Teorema della somma: es.",
+    "text": "Teorema della somma: es.\nDue medici, AA e BB, diagnosticano tutti i pazienti afferenti a un centro per le malattie a trasmissione sessuale.\nSiano:\n\nA+A^+ l’evento per cui il medico AA fa diagnosi positiva\nB+B^+ l’evento per cui il medico BB fa diagnosi positiva\n\ncon:\n\nP(A+)=0.1P(A^+)=0.1\nP(B+)=0.17P(B^+)=0.17\nP(A+∩B+)=0.08P(A^+ \\cap B^+)=0.08.\n\nSi supponga che un paziente sia riferito per test laboratoristici supplementari se in presenza di almeno una diagnosi positiva.\nLa probabilità che un paziente venga riferito ai laboratori è\nP(A+∪B+)=P(A+)+P(B+)−P(A+∩B+)=0.1+0.17−0.08=0.19P(A^+ \\cup B^+) = P(A^+) + P(B^+) - P(A^+ \\cap B^+) = 0.1+0.17-0.08=0.19"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#somma",
+    "href": "slides/03-probabilita.html#somma",
+    "title": "Statistica Medica",
+    "section": "Somma",
+    "text": "Somma"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#somma-indipendenza",
+    "href": "slides/03-probabilita.html#somma-indipendenza",
+    "title": "Statistica Medica",
+    "section": "Somma: indipendenza",
+    "text": "Somma: indipendenza\nSiano: AA e BB due eventi indipendenti (allora lo sono anche A‾\\bar{A} e BB)\nAllora:\nP(A∪B)=P(A)+P(B)−P(A∩B)=P(A)+P(B)−P(A)P(B)=P(A)+P(B)−P(B)P(A)=P(A)+P(B)[1−P(A)]=P(A)+P(B)P(A‾)=P(A)+P(B∩A‾)\\begin{split}P(A \\cup B)& = P(A)+P(B)-P(A\\cap B)\\\\& = P(A)+P(B)-P(A)P(B)\\\\& = P(A)+P(B)-P(B)P(A)\\\\& = P(A)+P(B)[1-P(A)]\\\\& = P(A)+P(B)P(\\bar{A})\\\\& = P(A)+P(B \\cap \\bar{A})\\end{split}"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#somma-indipendente",
+    "href": "slides/03-probabilita.html#somma-indipendente",
+    "title": "Statistica Medica",
+    "section": "Somma indipendente",
+    "text": "Somma indipendente"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#somma-eventi-indipendenti-esempio",
+    "href": "slides/03-probabilita.html#somma-eventi-indipendenti-esempio",
+    "title": "Statistica Medica",
+    "section": "Somma eventi indipendenti: esempio",
+    "text": "Somma eventi indipendenti: esempio\nSi considerino gli eventi\n\nP(A)=P({DBP madre≥95})=0.1P(A)=P(\\{\\mbox{DBP madre}\\geq 95 \\})=0.1\nP(B)=P({DBP padre≥95})=0.2P(B)=P(\\{\\mbox{DBP padre}\\geq 95 \\})=0.2\n\nSi definisca come famiglia ipertesa quella in cui almeno uno dei genitori è iperteso.\nAllora (ipotizzando AA e BB indipendenti):\nP({famiglia ipertesa})=P(A∪B)=P(A)+P(B∩A‾)=P(A)+P(B)P(A‾)=P(A)+P(B)[1−P(A)]=0.1+(0.2)[1−0.1]=0.28\\begin{split} P(\\{\\mbox{famiglia ipertesa}\\})& = P(A \\cup B)\\\\&= P(A) + P(B\\cap\\bar{A})\\\\&= P(A) + P(B)P(\\bar{A})\\\\& = P(A) +  P(B)[1-P(A)]\\\\& = 0.1 + (0.2)[1-0.1]\\\\& = 0.28\\end{split}"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#sondaggio",
+    "href": "slides/03-probabilita.html#sondaggio",
+    "title": "Statistica Medica",
+    "section": "Sondaggio",
+    "text": "Sondaggio\nPer me: Probabilità\nPer voi:  bit.ly/statmed-sondaggio-prob"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#break",
+    "href": "slides/03-probabilita.html#break",
+    "title": "Statistica Medica",
+    "section": "Break",
+    "text": "Break\n\n\nsgranchirsi\nguardare lontano (rilassare gli occhi)\nbere\nandare in bagno"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#condizionamento-rischio-relativo-misure-per-test-di-screening",
+    "href": "slides/03-probabilita.html#condizionamento-rischio-relativo-misure-per-test-di-screening",
+    "title": "Statistica Medica",
+    "section": "Condizionamento,rischio relativo,misure per test di screening",
+    "text": "Condizionamento,rischio relativo,misure per test di screening\n\nCondizionamento\nRischio relativo\nSensibilità, specificità e valori predittivi"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#condizionamento-definizione",
+    "href": "slides/03-probabilita.html#condizionamento-definizione",
+    "title": "Statistica Medica",
+    "section": "Condizionamento: definizione",
+    "text": "Condizionamento: definizione\nLa probabilità condizionata P(B|A)P(B|A) (con P(A)&gt;0P(A) &gt; 0) è definita come\nP(B|A)=P(A∩B)P(A)P(B|A)=\\frac{P(A \\cap B)}{P(A)}\nSe due eventi sono indipendenti, allora\nP(B|A)=P(B|A‾)=P(B)P(B|A)=P(B|\\bar{A})=P(B)\nAl contrario, se due eventi sono dipendenti, allora\nP(B)≠P(B|A)≠P(B|A‾)≠P(B)P(B) \\neq P(B|A) \\neq P(B|\\bar{A}) \\neq P(B) P(A∩B)≠P(A)P(B)P(A \\cap B) \\neq P(A)P(B)"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#condizionamento-proprietà",
+    "href": "slides/03-probabilita.html#condizionamento-proprietà",
+    "title": "Statistica Medica",
+    "section": "Condizionamento: proprietà",
+    "text": "Condizionamento: proprietà\nPer qualsiasi evento AA e BB (con 0&lt;P(A)&lt;10 &lt; P(A) &lt; 1), si ha che\nP(B)=P(B|A)P(A)+P(B|A‾)P(A‾)P(B) = P(B|A)P(A)+P(B|\\bar{A})P(\\bar{A})\nche si deriva considerando che\nP(B)=P(B∩A)+P(B∩A‾)P(B) = P(B\\cap A)+P(B \\cap \\bar{A}) e ricordando la definizione P(B|A)=P(A∩B)P(A)P(B|A)=\\frac{P(A \\cap B)}{P(A)}\nda cui\nP(A∩B)=P(B|A)P(A)P(A \\cap B) = P(B|A)P(A)"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#condizionamento-esempio",
+    "href": "slides/03-probabilita.html#condizionamento-esempio",
+    "title": "Statistica Medica",
+    "section": "Condizionamento: esempio",
+    "text": "Condizionamento: esempio\nSi ipotizzi che:\n\n1 persona su 100 con skin test (SKT) positivo abbia la tubercolosi (TB)\n1 persona ogni 10000 con SKT negativo abbia la TB\nl’1% della popolazione abbia SKT positivo\n\nSi calcoli la probabilità di tubercolosi (TB) nella popolazione P(TB)P(TB), ovvero, si stimi la porzione di malati di tubercolosi nella popolazione (chiamata: la prevalenza della malattia)\nSoluzione P(TB)=P(TB|SKT+)P(SKT+)+P(TB|SKT−)P(SKT−)=(0.01)(0.01)+(0.0001)(1−0.01)=0.000199\\begin{split}P(TB)& =P(TB|SKT^+)P(SKT^+) + P(TB|SKT^-)P(SKT^-)\\\\& = (0.01)(0.01) + (0.0001)(1-0.01)\\\\& = 0.000199\\end{split}"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#teorema-delle-probabilità-totali",
+    "href": "slides/03-probabilita.html#teorema-delle-probabilità-totali",
+    "title": "Statistica Medica",
+    "section": "Teorema delle probabilità totali",
+    "text": "Teorema delle probabilità totali\nUn insieme di eventi 𝒜={A1,…,Ak}\\mathscr{A} = \\{A_1, \\ldots, A_k\\} è detto esaustivo se almeno uno di tali eventi deve verificarsi.\nSia 𝒜={A1,…,Ak}\\mathscr{A} = \\{A_1, \\ldots, A_k\\} un insieme esaustivo di eventi mutuamente esclusivi.\nAllora, per qualunque evento BB, la probabilità di BB, P(B)P(B), può essere scritta come:\nP(B)=∑i=1kP(B|Ai)P(Ai)=∑A∈𝒜P(B|A)P(A)\\begin{split}P(B)& =\\sum_{i=1}^k P(B|A_i)P(A_i)\\\\&\\\\&=\\sum_{A\\in \\mathscr{A}} P(B|A)P(A)\\end{split} Ovvero, la somma pesata delle probabilità condizionali di BB dato AiA_i, P(B|Ai)P(B|A_i) per le corrispondenti probabilità degli AiA_i al variare di ii tra 11 e kk."
+  },
+  {
+    "objectID": "slides/03-probabilita.html#probabilità-totali-esempio-problema",
+    "href": "slides/03-probabilita.html#probabilità-totali-esempio-problema",
+    "title": "Statistica Medica",
+    "section": "Probabilità totali: esempio problema",
+    "text": "Probabilità totali: esempio problema\n\n\n\n\n\n\nProblemaSoluzioneConti\n\n\n\nSi vuole pianificare uno studio sulla cataratta in una popolazione di 5000 persone di età superiore a 60 anni.\nDal censimento è noto che la probabilità di appartenere a una delle seguenti classi di età 60-64, 65-69, 70-74, ≥75\\geq 75 è pari rispettivamente a 0.45, 0.28, 0.20, 0.07.\nDal Framingham Eye Study è noto che la probabilità di sviluppare una cataratta a 5 anni di distanza è pari, rispettivamente per le classi di età indicate, a 0.024, 0.046, 0.088, 0.153.\nSi vuole conoscere la percentuale di persone che potrebbe sviluppare una cataratta nei prossimi 5 anni, e una stima del loro numero.\n\n\n\n\n\nclasse\np_classe\np_cataratta5y_classe\n\n\n\n\n60-64\n0.45\n0.024\n\n\n65-69\n0.28\n0.046\n\n\n70-74\n0.20\n0.088\n\n\n75+\n0.07\n0.153\n\n\n\n\n\n\n\n\nLa percentuale di popolazione (o probabilità, su tale popolazione) P(B)P(B) per l’evento BB di sviluppare cataratta a 5 anni equivale, per il teorema delle probabilità totali, alla somma delle probabilità di svilupparla per ciascuna classe di età (che rappresentano un insieme esaustivo a elementi mutuamente disgiunti) pesate per la probabilità di appartenere a tali classi.\n\n\n\n\n\n\n\n\ninsieme\nclasse\np_classe\np_cataratta5y_classe\n\n\n\n\nA_1\n60-64\n0.45\n0.024\n\n\nA_2\n65-69\n0.28\n0.046\n\n\nA_3\n70-74\n0.20\n0.088\n\n\nA_4\n75+\n0.07\n0.153\n\n\n\n\n\nPer esempio:\n\nProbabilità di sviluppo cataratta a 5 anni se nella classe “60-64”: P(B|A1)=0.024P(B|A_1) = 0.024\nProbabilità di appartenere alla classe “60-64”: P(A1)=0.45P(A_1) = 0.45\n\nP(B)=∑i=14P(B|Ai)P(Ai)=(0.024)(0.45)+…+(0.153)(0.07)≃0.052\\begin{split}P(B)& = \\sum_{i=1}^4 P(B|A_i)P(A_i)\\\\& =\n(0.024)(0.45)+\\ldots+(0.153)(0.07)\\\\& \\simeq 0.052\\end{split}\ne il numero stimato di persone con cataratta sarà: 5000×0.052≃2605000 \\times 0.052 \\simeq 260 persone."
+  },
+  {
+    "objectID": "slides/03-probabilita.html#rischio-relativo",
+    "href": "slides/03-probabilita.html#rischio-relativo",
+    "title": "Statistica Medica",
+    "section": "Rischio relativo",
+    "text": "Rischio relativo\nIl rischio relativo (RR) di osservare, in una data popolazione, un evento BB su chi è esposto a un fattore AA rispetto a chi non ne è esposto ( A‾\\bar{A} ) è definito, tramite probabilità condizionate, come\nP(B|A)P(B|A‾)\\frac{P(B|A)}{P(B|\\bar{A})} &gt; NOTA: &gt; &gt; Se: AA e BB sono indipendenti &gt; &gt; Allora: RR=1RR = 1 (infatti P(B|A)=P(B|A‾)=P(B)P(B|A) = P(B|\\bar{A}) = P(B) )\n\nNOTA 2:\nDefiniamo Rischio assoluto il rapporto tra il numero di casi osservati e il numero di persone a rischio (a rischio vuol dire: che sono sottoposte al rischio con una probabilità positiva che si possa verificare l’evento di interesse), ovvero la probabilità che un certo evento accada sotto determinate condizioni in una data popolazione."
+  },
+  {
+    "objectID": "slides/03-probabilita.html#rischio-relativo-esempio",
+    "href": "slides/03-probabilita.html#rischio-relativo-esempio",
+    "title": "Statistica Medica",
+    "section": "Rischio relativo: esempio",
+    "text": "Rischio relativo: esempio\nSi ipotizzi che:\n\n1 persona su 100 con skin test (SKT) positivo abbia la tubercolosi (TB)\n1 persona ogni 10000 con SKT negativo abbia la TB\n\nIl rischio relativo di avere la TB nel caso di un test positivo rispetto a un test negativo è\nRR=P(B|A)P(B|A‾)=1/1001/10000=0.010.0001=100RR=\\frac{P(B|A)}{P(B|\\bar{A})}=\\frac{1/100}{1/10000}=\\frac{0.01}{0.0001}=100\ndove abbiamo indicato con BB l’evento di avere la TB, e con AA quello di avere un test positivo (ovvero con A‾\\bar{A} di averlo negativo)."
+  },
+  {
+    "objectID": "slides/03-probabilita.html#rischio-relativo-esempio-problema",
+    "href": "slides/03-probabilita.html#rischio-relativo-esempio-problema",
+    "title": "Statistica Medica",
+    "section": "Rischio relativo: esempio problema",
+    "text": "Rischio relativo: esempio problema\n\n\n\n\n\n\nProblemaSoluzione P(B+|A+)P(B^+|A^+)Soluzione RR\n\n\nPer i dati sul centro delle malattie a trasmissione sessuale, si è interessati a calcolare:\n\nla probabilità che il medico BB faccia diagnosi positiva data la diagnosi positiva del medico AA\nil corrispondente rischio relativo.\n\nRicordando che\n\nP(A+)=0.1P(A^+) = 0.1\nP(B+)=0.17P(B^+) = 0.17\nP(A+∩B+)=0.08P(A^+ \\cap B^+) = 0.08\n\n\n\nPartendo da P(A∩B)=P(B|A)P(A)P(A \\cap B) = P(B|A)P(A) otteniamo:\n\n\n\nP(A+)=0.1P(A^+)=0.1\nP(B+)=0.17P(B^+)=0.17\nP(A+∩B+)=0.08P(A^+ \\cap B^+)=0.08\n\n\n\nP(B+|A+)=P(B+∩A+)P(A+)=0.08/0.1=0.8\\begin{split}P(B^+|A^+)& = \\frac{P(B^+\\cap A^+)}{P(A^+)}\\\\& = 0.08/0.1\\\\& = 0.8\\end{split}\n\n\n\n\n\n\n\n\nP(A+)=0.1P(A^+)=0.1\nP(B+)=0.17P(B^+)=0.17\nP(A+∩B+)=0.08P(A^+ \\cap B^+)=0.08\nP(B+|A+)=0.8P(B^+|A^+) = 0.8\n\n    \n\nRicordiamo: P(B+)=P(B+∩A+)+P(B+∩A−)P(B^+)=P(B^+ \\cap A^+)+P(B^+ \\cap A^-)\n\n\n\n\nP(B+|A−)=P(B+∩A−)P(A−)=P(B+)−P(B+∩A+)P(A−)=0.17−0.080.9=0.1\\begin{split}P(B^+|A^-)& = \\frac{P(B^+\\cap A^-)}{P(A^-)}\\\\& = \\frac{P(B^+)-P(B^+\\cap A^+)}\n{P(A^-)}\\\\& =\\frac{0.17-0.08}{0.9}\\\\& = 0.1\\end{split}\n\nRR=P(B+|A+)P(B+|A−)=0.80.1=8RR=\\frac{P(B^+|A^+)}{P(B^+|A^-)}=\\frac{0.8}{0.1}=8"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#test-di-screening-valori-predittivi",
+    "href": "slides/03-probabilita.html#test-di-screening-valori-predittivi",
+    "title": "Statistica Medica",
+    "section": "Test di screening: valori predittivi",
+    "text": "Test di screening: valori predittivi\nIl valore predittivo positivo (o anche precisione) PV+PV^+ di un test di screening è la probabilità che la persona abbia la malattia dato un test positivo\nPV+=P(malattia|test+)PV^+ = P(\\mbox{malattia}|\\mbox{test}^+)\nIl valore predittivo negativo PV−PV^- di un test di screening è la probabilità che la persona non abbia la malattia dato un test negativo\nPV−=P(no malattia|test−)PV^- = P(\\mbox{no malattia}|\\mbox{test}^-)\nPer esempio, nel caso della tubercolina si ha che\nP(TB|SKT+)=0.01=PV+P(TB|SKT^+) = 0.01 = PV^+\nP(TB‾|SKT−)=1−P(TB|SKT−)=0.9999=PV−P(\\bar{TB}|SKT^-) = 1-P(TB|SKT^-) = 0.9999 = PV^-"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#test-di-screening-sensibilità-e-specificità",
+    "href": "slides/03-probabilita.html#test-di-screening-sensibilità-e-specificità",
+    "title": "Statistica Medica",
+    "section": "Test di screening: sensibilità e specificità",
+    "text": "Test di screening: sensibilità e specificità\nLa sensibilità (o anche richiamo) di un test o un sintomo è la probabilità di essere positivo al test quando si è malati\nsens=P(test+|malattia)\\mbox{sens} = P(\\mbox{test}^+|\\mbox{malattia})\nLa specificità di un test o un sintomo è la probabilità di essere negativo al test quando si è sani\nspec=P(test−|no malattia)\\mbox{spec} = P(\\mbox{test}^-|\\mbox{no malattia})\nSi definisce:\n\nfalso negativo la persona malata che ha un test negativo\nfalso positivo la persona sana che ha un test positivo"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#test-di-screening-esempi",
+    "href": "slides/03-probabilita.html#test-di-screening-esempi",
+    "title": "Statistica Medica",
+    "section": "Test di screening: esempi",
+    "text": "Test di screening: esempi\n\n\nSi ipotizzi che:\n\nla malattia sia: il cancro al polmone\nil “test” sia: il fumo di sigarette\nla probabilità di fumare per un soggetto malato sia pari a: 0.90\nla probabilità di fumare per un soggetto sano sia pari a: 0.50\n\nAllora, per il test fumo di sigarette rispetto al(la malattia) cancro polmonare:\n\nsensibilità (o richiamo) = 0.90\nspecificità = 0.5 ( 1−0.51 - 0.5 )\n\n\nSi ipotizzi che:\n\nla malattia sia: il cancro al seno nelle donne\nil sintomo sia la familiarità per tumore al seno (madre o sorella con il cancro al seno)\nla probabilità di avere familiarità per la malattia per una donna malata sia pari a: 0.05\nla probabilità di avere familiarità per la malattia per una donna sana sia pari a: 0.02\n\nAllora, per il sintomo familiarità rispetto al(la malattia) cancro al seno nelle donne:\n\nsensibilità (o richiamo) = 0.05\nspecificità = 0.98 ( 1−0.021 - 0.02 )"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#teorema-di-bayes",
+    "href": "slides/03-probabilita.html#teorema-di-bayes",
+    "title": "Statistica Medica",
+    "section": "Teorema di Bayes",
+    "text": "Teorema di Bayes\n\nEnunciato base con traccia di derivazione ed esempi\nEnunciato generalizzato ed esempi"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#teorema-di-bayes-base",
+    "href": "slides/03-probabilita.html#teorema-di-bayes-base",
+    "title": "Statistica Medica",
+    "section": "Teorema di Bayes: base",
+    "text": "Teorema di Bayes: base\n(PV+=)P(M|T)=P(T|M)P(M)P(T)=P(T|M)P(M)P(T|M)P(M)+P(T|M‾)P(M‾)(PV^+ = )\\ P(M|T) = \\frac{P(T|M)P(M)}{P(T)} = \\frac{P(T|M)P(M)}{P(T|M)P(M)+P(T|\\bar{M})P(\\bar{M})}\nSiano: TT test positivo e MM avere la malattia\nDati: SENS=P(T|M)SPEC=P(T‾|M‾)\\mbox{SENS} = P(T|M) \\quad \\mbox{SPEC} = P(\\bar{T}|\\bar{M})\nConsiderando che: 1 - SENS=P(T‾|M)1 - SPEC=P(T|M‾)\\mbox{1 - SENS} = P(\\bar{T}|M) \\quad \\mbox{1 - SPEC} = P(T|\\bar{M})\nCalcoliamo: PV+=P(M|T)PV−=P(M‾|T‾)PV^+ = P(M|T) \\quad PV^-=P(\\bar{M}|\\bar{T})\n\nNota: In assenza di altre informazioni, P(M)P(M) è la prevalenza della malattia nella popolazione di riferimento\n\nPV+=SENS⋅prev(SENS⋅prev)+(1−SPEC)⋅(1−prev)PV^+=\\frac{SENS\\cdot prev}{(SENS\\cdot prev) + (1- SPEC)\\cdot(1 - prev)} PV−=SPEC⋅(1−prev)SPEC⋅(1−prev)+(1−SENS)⋅prevPV^-=\\frac{SPEC\\cdot(1 - prev)}{SPEC\\cdot(1 - prev) + (1- SENS)\\cdot prev}"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#teorema-di-bayes-derivazione",
+    "href": "slides/03-probabilita.html#teorema-di-bayes-derivazione",
+    "title": "Statistica Medica",
+    "section": "Teorema di Bayes: derivazione",
+    "text": "Teorema di Bayes: derivazione\nDalla definizione di probabilità condizionata si ha che\nP(M|T):=P(M∩T)P(T)P(M∩T)=P(T∩M)=P(T|M)P(M)P(M|T) := \\frac{P(M \\cap T)}{P(T)} \\quad\\quad P(M \\cap T) = P(T \\cap M) = P(T|M)P(M)\nDal teorema delle probabilità totali si ha che\nP(T)=P(T|M)P(M)+P(T|M‾)P(M‾)P(T)=P(T|M)P(M)+P(T|\\bar{M})P(\\bar{M}) Sostituendo:\n(PV+=)P(M|T)=P(T|M)P(M)P(T|M)P(M)+P(T|M‾)P(M‾)(PV^+ = )\\ P(M|T) = \\frac{P(T|M)P(M)}{P(T|M)P(M)+P(T|\\bar{M})P(\\bar{M})}"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#teorema-di-bayes-esempio",
+    "href": "slides/03-probabilita.html#teorema-di-bayes-esempio",
+    "title": "Statistica Medica",
+    "section": "Teorema di Bayes: esempio",
+    "text": "Teorema di Bayes: esempio\n\n\n\n\n\n\nProblemaSoluzione PV+Soluzione PV-\n\n\nSi ipotizzi che:\n\nla probabilità che un iperteso sia correttamente classificato come tale da una macchina per la misurazione automatica della pressione sia pari a 0.84\nla probabilità che un normoteso sia erroneamente classificato come iperteso, sia pari a 0.23.\nla prevalenza dell’ipertensione nella popolazione è del 20%\n\nSi calcolino: i valori predittivi (positivo e negativo) della macchina.\n\n\nDai dati:\n\nsensibilità = 0.84\nspecificità = 1 - 0.23 = 0.77\nprevalenza = 0.2 (20%)\n\nDal teorema di Bayes:\nPV+=SENS⋅prev(SENS⋅prev)+(1−SPEC)⋅(1−prev)=(0.84)0.2(0.84)0.2+(0.23)0.8=0.1680.352=0.48\\begin{split}PV^+& = \\frac{SENS\\cdot prev}{(SENS\\cdot prev) + (1- SPEC)\\cdot(1 - prev)}\\\\& =  \\frac{(0.84)0.2}{(0.84)0.2 + (0.23)0.8}\\\\& = \\frac{0.168}{0.352}\\\\& = 0.48\\end{split}\n\n\nDai dati:\n\nsensibilità = 0.84\nspecificità = 1 - 0.23 = 0.77\nprevalenza = 0.2 (20%)\n\nDal teorema di Bayes:\nPV−=SPEC⋅(1−prev)SPEC⋅(1−prev)+(1−SENS)⋅prev=(0.77)0.8(0.77)0.8+(0.16)0.2=0.6160.648=0.95\\begin{split}PV^-& = \\frac{SPEC\\cdot(1 - prev)}{SPEC\\cdot(1 - prev) + (1- SENS)\\cdot prev}\\\\& = \\frac{(0.77)0.8}{(0.77)0.8 + (0.16)0.2}\\\\& = \\frac{0.616}{0.648}\\\\& = 0.95\\end{split}"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#approfondimento",
+    "href": "slides/03-probabilita.html#approfondimento",
+    "title": "Statistica Medica",
+    "section": "Approfondimento",
+    "text": "Approfondimento\nLa formula “tradizionale” frequentista per VPP (analoga VPN)\nVPP=VPVP+FPVPP = \\frac{VP}{VP + FP}\nDove VPVP è il numero di Veri Positivi (numero di volte che il test ha dato esito positivo correttamente) e FPFP il numero di Falsi Positivi (numero di volte che il test ha dato esito positivo erroneamente). Questo, dunque, ipotizzando di avere il dato certo del numero di veri e falsi positivi su tutta la nostra popolazione.\nNoi usiamo quella bayesiana, perché:\n\nesprime e mostra bene il concetto di probabilità condizionata\nopera un cambio di prospettiva: dal controllo dell’incertezza su una predizione sul futuro, rispetto a una descrizione statica definita di dati già osservati.\n\nSE usati bene, in un certo senso, numericamente, sono equivalenti; per approfondire: https://rpubs.com/CorradoLanera/vpp-freq-bayes-ita\n\nNOTA: se usati male i risultati sono sia diversi che fuorvianti. All’esame suggerisco di non prendere questa scorciatoia. (per quanto SE usata bene, porti comunque al risultato numericamente corretto)"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#sondaggio-1",
+    "href": "slides/03-probabilita.html#sondaggio-1",
+    "title": "Statistica Medica",
+    "section": "Sondaggio",
+    "text": "Sondaggio\nPer me: Bayes\nPer voi:  bit.ly/statmed-sondaggio-bayes"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#teorema-di-bayes-generalizzazione",
+    "href": "slides/03-probabilita.html#teorema-di-bayes-generalizzazione",
+    "title": "Statistica Medica",
+    "section": "Teorema di Bayes: generalizzazione",
+    "text": "Teorema di Bayes: generalizzazione\nSiano\n\nM1,…,MkM_1, \\ldots, M_k un insieme esaustivo (almeno uno deve verificarsi) di stati di malattia mutuamente esclusivi (non possono verificarsi due stati allo stesso tempo)\nTT la presenza di un insieme di sintomi test\n\nAllora, per ciascun i∈{1,…,k}i \\in \\{1, \\dots, k\\}:\nP(Mi|T)=P(T|Mi)P(Mi)∑j=1kP(T|Mj)P(Mj)P(M_i|T) =\\frac{P(T|M_i)P(M_i)}{\\sum_{j=1}^k P(T|M_j)P(M_j)}"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#bayes-generalizzato-esempio",
+    "href": "slides/03-probabilita.html#bayes-generalizzato-esempio",
+    "title": "Statistica Medica",
+    "section": "Bayes generalizzato: esempio",
+    "text": "Bayes generalizzato: esempio\n\n\n\n\n\n\nProblemaSoluzioneProblema fumatoreSoluzione fumatore\n\n\n\nSi supponga che un uomo di età pari a 60 anni, non fumatore, presenti dei sintomi come tosse cronica e affanno occasionale.\nIl medico prescrive una biopsia polmonare, il cui risultato è consistente con vari stati, quali:\n\nnessuna malattia (normale)\nil tumore polmonare,\nla sarcoidosi (malattia polmonare di solito non fatale)\n\nsintomi=T={tosse cronica,affanno occasionale,biopsia}\\mbox{sintomi}=T=\\{\\mbox{tosse cronica},\\mbox{affanno occasionale}, \\mbox{biopsia}\\}\nstati patologici=M={M1=normale,M2=cancro,M3=sarcoidosi}\\mbox{stati patologici} = M = \\{M_1 = \\mbox{normale},M_2 = \\mbox{cancro},M_3 = \\mbox{sarcoidosi}\\}\nsia inoltre\nP(T|M1)=0.001P(T|M2)=0.9P(T|M3)=0.9 P(T|M_1)=0.001 \\:\\:\\: P(T|M_2)=0.9 \\:\\:\\: P(T|M_3)=0.9 P(M1)=0.99P(M2)=0.001P(M3)=0.009P(M_1)=0.99 \\:\\:\\: P(M_2)=0.001 \\:\\:\\: P(M_3)=0.009 Si vogliono conoscere le probabilità degli stati patologici dati i sintomi\n\n\n\nP(M1|T)=P(T|M1)P(M1)∑j=13P(T|Mj)P(Mj)=0.001(0.99)0.001(0.99)+0.9(0.001)+0.9(0.009)=0.099\\begin{split}P(M_1|T)&=\\frac{P(T|M_1)P(M_1)}{\\sum_{j=1}^3 P(T|M_j)P(M_j)}\\\\&=\\frac{0.001(0.99)}{0.001(0.99)+0.9(0.001)+0.9(0.009)} = 0.099\\end{split}\nP(M2|T)=0.9(0.001)0.001(0.99)+0.9(0.001)+0.9(0.009)=0.090P(M_2|T)= \\frac{0.9(0.001)}{0.001(0.99)+0.9(0.001)+0.9(0.009)}=0.090\nP(M3|T)=0.9(0.009)0.001(0.99)+0.9(0.001)+0.9(0.009)=0.811P(M_3|T)=\n\\frac{0.9(0.009)}{0.001(0.99)+0.9(0.001)+0.9(0.009)}=0.811\n\n\nSi supponga ora che lo stesso paziente sia fumatore di due pacchetti di sigarette al giorno per 40 anni. Si abbia quindi che in questo gruppo di persone\nP(M1)=0.98P(M2)=0.015P(M3)=0.005P(M_1)=0.98 \\:\\:\\: P(M_2)=0.015 \\:\\:\\: P(M_3)=0.005 Sempre considerando le stesse probabilità di avere i sintomi in evidenza se soggetti ai vari stati patologici in esame:\nP(T|M1)=0.001P(T|M2)=0.9P(T|M3)=0.9P(T|M_1) = 0.001 \\:\\:\\: P(T|M_2)=0.9 \\:\\:\\: P(T|M_3)=0.9 La probabilità degli stati patologici è?\n\n\nDati:\n\nP(M1)=0.98P(M2)=0.015P(M3)=0.005P(M_1) = 0.98 \\:\\:\\: P(M_2)=0.015 \\:\\:\\: P(M_3)=0.005\nP(T|M1)=0.001P(T|M2)=0.9P(T|M3)=0.9P(T|M_1) = 0.001 \\:\\:\\: P(T|M_2)=0.9 \\:\\:\\: P(T|M_3)=0.9\n\nP(M1|T)=0.001(0.98)0.001(0.98)+0.9(0.015)+0.9(0.005)=0.052P(M_1|T) = \\frac{0.001(0.98)}{0.001(0.98)+0.9(0.015)+0.9(0.005)}=0.052\nP(M2|T)=0.9(0.015)0.001(0.98)+0.9(0.015)+0.9(0.005)=0.711P(M_2|T) = \\frac{0.9(0.015)}{0.001(0.98)+0.9(0.015)+0.9(0.005)}=0.711\nP(M3|T)=0.9(0.005)0.001(0.98)+0.9(0.015)+0.9(0.005)=0.237P(M_3|T) = \\frac{0.9(0.005)}{0.001(0.98)+0.9(0.015)+0.9(0.005)}=0.237"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#risorse-utili",
+    "href": "slides/03-probabilita.html#risorse-utili",
+    "title": "Statistica Medica",
+    "section": "Risorse utili",
+    "text": "Risorse utili\n\nRStudio Cloud: https://bit.ly/statmed-cl-rstudio gratis per voi per esplorare RStudio, le sue funzionalità, e allenarvi con R (link di iscrizione valido fino alla fine del corso). NOTA: a vostra scelta, è utilizzabile anche come supporto durante l’esame.\nAn Introduction to Medical Statistics di Martin Bland, suggeriti capitoli 4 e 5.\nDimostrazione della Coerenza Bayesiana e Frequentista nella definizione del Valore Predittivo Positivo di un test di Corrado Lanera"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#section",
+    "href": "slides/03-probabilita.html#section",
+    "title": "Statistica Medica",
+    "section": "",
+    "text": "If you believe that witnessing an additional white swan will bring confirmation that there are no black swans, then you should also accept the statement, on purely logical grounds, that the sighting of a red Mini Cooper should confirm that there are no black swans. […] “all swans are white” implies that “all nonwhite objects are not swans”.\n\n\n—Nassim Nicholas TalebThe black swan - “Saw Another Red Mini”, p.59\n\n\nGrazie per l’attenzione!\nDiapositive: bit.ly/statmed-cl-corsi\n www.unipd-ubep.it |  Corrado.Lanera@ubep.unipd.it\n   @CorradoLanera |  bit.ly/statmed-cl-ricevimento"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#cosa-faremo",
+    "href": "slides/05-ic_p.html#cosa-faremo",
+    "title": "Statistica Medica",
+    "section": "Cosa faremo",
+    "text": "Cosa faremo\nIn questa lezione ci occuperemo di stime effettuate su campioni di popolazioni. In questo senso, cercheremo di capire come stimare la media e la varianza partendo da un campione.\nIn seguito ci occuperemo di capire come avere una misura di precisione per queste stime, introducendo gli Intervalli di confidenza.\nDopo aver proposto degli esempi e fatto qualche osservazione in merito, introdurremo la distribuzione t di Student, utile quando la varianza della popolazione non è nota.\nIntrodurremo quindi il concetto di test d’ipotesi, delle tipologie di errore, e di p-value. Vedremo quindi come questi concetti si legano a quello degli intervalli di confidenza."
+  },
+  {
+    "objectID": "slides/05-ic_p.html#riconoscimenti",
+    "href": "slides/05-ic_p.html#riconoscimenti",
+    "title": "Statistica Medica",
+    "section": "Riconoscimenti",
+    "text": "Riconoscimenti\n\nLe diapositive proposte sono state prodotte a partire anche da materiale generato da/con le seguenti persone gravitanti attorno all’UBEP*:\n\nDanila Azzolina\nDario Gregori\nGiulia Lorenzoni\nIleana Baldi\nLuca Vedovelli\nMatteo Martinato\nPaola Berchialla\n\n\n\n\n\n* In ordine alfabetico.\n\n\n\n\nUn ringraziamento speciale a Cristiana Vettori e a Mariasole Rizzi per l’aiuto e il supporto logistico e amministrativo che mi è stato offerto, e ad Andrea Francavilla per avermi aiutato nella revisione del materiale."
+  },
+  {
+    "objectID": "slides/05-ic_p.html#panoramica",
+    "href": "slides/05-ic_p.html#panoramica",
+    "title": "Statistica Medica",
+    "section": "Panoramica",
+    "text": "Panoramica\nDefinizione e caratteristiche del problema inferenziale\nStime puntuali: media e varianza… della media! Teorema del limite centrale\nPrecisione delle stime puntuali: Intervalli di confidenza\nEsempi e osservazioni\nDistribuzione t di Student\nTest d’ipotesi: errori del I e II tipo, p-value\nRelazione tra p-value e IC"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#inferenza",
+    "href": "slides/05-ic_p.html#inferenza",
+    "title": "Statistica Medica",
+    "section": "inferenza",
+    "text": "inferenza\n\ndefinizione\ncampioni e popolazione"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#inferenza-di-cosa-si-tratta",
+    "href": "slides/05-ic_p.html#inferenza-di-cosa-si-tratta",
+    "title": "Statistica Medica",
+    "section": "Inferenza: di cosa si tratta",
+    "text": "Inferenza: di cosa si tratta\nDato un insieme di osservazioni definito campione, si vuole derivare una conoscenza della distribuzione di probabilità che ha generato i dati osservati (generalmente per estrapolare informazioni sulle non-osservazioni della stessa popolazione)"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#inferenza-campioni-e-popolazioni",
+    "href": "slides/05-ic_p.html#inferenza-campioni-e-popolazioni",
+    "title": "Statistica Medica",
+    "section": "Inferenza: campioni e popolazioni",
+    "text": "Inferenza: campioni e popolazioni\n\nUn campione casuale è una selezione di alcuni membri di una popolazione tale che ogni membro è scelto indipendentemente dagli altri ed ha una probabilità non nulla di essere selezionato\nUn campione casuale semplice è un campione casuale in cui ogni membro ha la stessa probabilità di essere selezionato\nLa popolazione target è il gruppo di soggetti, da cui è estratto il campione, che si intende studiare e che si ipotizza essere infinita"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#stime-puntuali-e-teorema-del-limite-centrale",
+    "href": "slides/05-ic_p.html#stime-puntuali-e-teorema-del-limite-centrale",
+    "title": "Statistica Medica",
+    "section": "Stime puntuali e teorema del limite centrale",
+    "text": "Stime puntuali e teorema del limite centrale\n\nStimatore puntuale della media\nErrore standard della media\nTeorema del Limite Centrale (TLC)"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#stima-puntuale-media",
+    "href": "slides/05-ic_p.html#stima-puntuale-media",
+    "title": "Statistica Medica",
+    "section": "Stima puntuale: media",
+    "text": "Stima puntuale: media\nLo stimatore puntuale della media di una distribuzione è\nX‾=∑i=1nXin\\bar{X} = \\frac{\\sum_{i=1}^n X_i}{n}\nLa distribuzione campionaria di X‾\\bar{X} è la distribuzione dei valori di X‾\\bar{X} su tutti i possibili campioni di ampiezza nn estratti dalla popolazione target.\nSe X1,…,XnX_1, \\ldots, X_n è un campione casuale estratto da una popolazione con media di popolazione μ\\mu allora per la media campionaria vale E(X‾)=μE(\\bar{X}) = \\mu\nSi dice che la media campionaria è uno stimatore non distorto della media di popolazione."
+  },
+  {
+    "objectID": "slides/05-ic_p.html#stima-puntuale-errore-standard",
+    "href": "slides/05-ic_p.html#stima-puntuale-errore-standard",
+    "title": "Statistica Medica",
+    "section": "Stima puntuale: errore standard",
+    "text": "Stima puntuale: errore standard\nRiguardo alla varianza dello stimatore della media, abbiamo\nvar(X‾)=var(∑i=1nXin)=*1n2var(∑i=1nXi)=ind.1n2∑i=1nvar(Xi)=def1n2∑i=1nσ2=1n2nσ2=σ2n\\begin{split}\\mbox{var}(\\bar{X})&= \\mbox{var}\\left(\\frac{\\sum_{i=1}^n X_i}{n}\\right) =* \\frac{1}{n^2} \\mbox{var}\\left(\\sum_{i=1}^n X_i\\right) \\stackrel{\\mbox{ind.}}{=} \\frac{1}{n^2} \\sum_{i=1}^n \\mbox{var}(X_i)\\\\& \\stackrel{\\mbox{def}}{=} \\frac{1}{n^2} \\sum_{i=1}^n\\sigma^2 = \\frac{1}{n^2} n\\sigma^2 = \\frac{\\sigma^2}{n}\\end{split}\n\nσn\\frac{\\sigma}{\\sqrt{n}} è chiamato errore standard della media, stimato da sn\\frac{s}{\\sqrt{n}}\nil passaggio =ind.\\stackrel{\\mbox{ind.}}{=} vale perché le XiX_i sono indipendenti\n\n*)var(aX)=∑1n(axi−∑1naxjn)2n=∑1n(axi−a∑1nxjn)2n=∑1n(a(xi−μ))2n=∑1na2(xi−μ)2n=a2∑1n(xi−μ)2n=a2var(X)*)\\begin{split}\\mbox{var}(aX) &= \\frac{\\sum_1^n\\left(ax_i-\\frac{\\sum_1^nax_j}{n}\\right)^2}{n}= \\frac{\\sum_1^n\\left(ax_i-\\frac{a\\sum_1^nx_j}{n}\\right)^2}{n}\\\\&= \\frac{\\sum_1^n\\left(a\\left(x_i-\\mu\\right)\\right)^2}{n}= \\frac{\\sum_1^na^2\\left(x_i-\\mu\\right)^2}{n}\\\\&=\\frac{a^2\\sum_1^n\\left(x_i-\\mu\\right)^2}{n}=a^ 2\\mbox{var}(X)\\end{split}"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#teorema-del-limite-centrale",
+    "href": "slides/05-ic_p.html#teorema-del-limite-centrale",
+    "title": "Statistica Medica",
+    "section": "Teorema del Limite Centrale",
+    "text": "Teorema del Limite Centrale\nSia\n\nX1,…,XnX_1, \\ldots, X_n un campione casuale semplice estratto da una popolazione qualsiasi con media μ\\mu e varianza σ2\\sigma^2.\n\nAllora, per nn abbastanza grande:\nX‾∼N(μ,σ2n)\\bar{X} \\sim N \\left( \\mu, \\frac{\\sigma^2}{n} \\right)\n\n… anche se la distribuzione XX della popolazione non è normale!"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#sondaggio",
+    "href": "slides/05-ic_p.html#sondaggio",
+    "title": "Statistica Medica",
+    "section": "Sondaggio",
+    "text": "Sondaggio\nPer me: Stimatore della media\nPer voi:  bit.ly/statmed-sondaggio-tlc"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#precisione-delle-stime",
+    "href": "slides/05-ic_p.html#precisione-delle-stime",
+    "title": "Statistica Medica",
+    "section": "Precisione delle stime",
+    "text": "Precisione delle stime\n\nIntervalli di Confidenza\nAmpiezza dell’intervallo di confidenza"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#intervalli-di-confidenza-obiettivo",
+    "href": "slides/05-ic_p.html#intervalli-di-confidenza-obiettivo",
+    "title": "Statistica Medica",
+    "section": "Intervalli di Confidenza: Obiettivo",
+    "text": "Intervalli di Confidenza: Obiettivo\nAssociare alla stima puntuale una misura della sua precisione"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#i.c.-derivazione",
+    "href": "slides/05-ic_p.html#i.c.-derivazione",
+    "title": "Statistica Medica",
+    "section": "I.C.: Derivazione",
+    "text": "I.C.: Derivazione\n\nPassaggio a ZRitorno alle stimeConclusione\n\n\nSe XX è normale (oppure, per il T.L.C., se nn è abbastanza grande, e in questo caso in modo approssimato) sappiamo che\nZ=X‾−μσnZ =\\frac{\\bar{X}-\\mu}{\\frac{\\sigma}{\\sqrt{n}}}\nsi distribuisce come una variabile casuale normale standardizzata Z∼N(0,1)Z \\sim N(0,1)\nIn questo caso, il 95% delle osservazioni è compreso tra -1.96 e 1.96, ovvero\nP(−1.96≤Z≤1.96)=0.95\\mbox{P}(-1.96\\leq Z\\leq 1.96)= 0.95\n\n\nSostituendo alla ZZ la sua espressione estesa\nP(−1.96≤X‾−μσn≤1.96)=0.95P \\left (-1.96 \\leq \\frac{\\bar{X}-\\mu}{\\frac{\\sigma}{\\sqrt{n}}}\n\\leq 1.96 \\right ) = 0.95\nMoltiplicando tutti i termini per σn{\\frac{\\sigma}{\\sqrt{n}}}\nP(−1.96σn≤X‾−μσnσn≤1.96σn)=0.95P \\left (-1.96 {\\frac{\\sigma}{\\sqrt{n}}} \\leq\n\\frac{\\bar{X}-\\mu}{\\frac{\\sigma}{\\sqrt{n}}}\n{\\frac{\\sigma}{\\sqrt{n}}}\\leq 1.96 {\\frac{\\sigma}{\\sqrt{n}}}\\right\n) = 0.95\nSemplificando\nP(−1.96σn≤X‾−μ≤1.96σn)=0.95P \\left (-1.96 {\\frac{\\sigma}{\\sqrt{n}}} \\leq \\bar{X}-\\mu\\leq 1.96\n{\\frac{\\sigma}{\\sqrt{n}}}\\right ) = 0.95\n\n\nP(−1.96σn≤X‾−μ≤1.96σn)=0.95P \\left (-1.96 {\\frac{\\sigma}{\\sqrt{n}}} \\leq \\bar{X}-\\mu\\leq 1.96\n{\\frac{\\sigma}{\\sqrt{n}}}\\right ) = 0.95\nSottraendo X‾\\bar{X} da ogni termine\nP(−1.96σn−X‾≤X‾−μ−X‾≤1.96σn−X‾)=0.95P \\left (-1.96 {\\frac{\\sigma}{\\sqrt{n}}}-\\bar{X} \\leq \\bar{X}-\\mu\n-\\bar{X}\\leq 1.96 {\\frac{\\sigma}{\\sqrt{n}}-\\bar{X}}\\right ) = 0.95\nMoltiplicando per -1 ed invertendo il senso delle disugualianze\nP(1.96σn+X‾≥μ≥−1.96σn+X‾)=0.95P \\left (1.96 {\\frac{\\sigma}{\\sqrt{n}}}+\\bar{X} \\geq \\mu \\geq\n-1.96 {\\frac{\\sigma}{\\sqrt{n}}+\\bar{X}}\\right ) = 0.95\nRiorganizzando i termini\nP(X‾−1.96σn≤μ≤X‾+1.96σn)=0.95P \\left (\\bar{X} - 1.96 {\\frac{\\sigma}{\\sqrt{n}}}\\leq \\mu \\leq\n\\bar{X}+1.96 {\\frac{\\sigma}{\\sqrt{n}}}\\right )= 0.95"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#definizione-i.c.-per-la-media-varianza-nota",
+    "href": "slides/05-ic_p.html#definizione-i.c.-per-la-media-varianza-nota",
+    "title": "Statistica Medica",
+    "section": "Definizione I.C. per la media (varianza nota)",
+    "text": "Definizione I.C. per la media (varianza nota)\nUn intervallo di confidenza al 95% per μ\\mu quando σ2\\sigma^2 è noto è dato da\n(X‾−1.96σn;X‾+1.96σn)\\left ( \\bar{X} - 1.96 \\frac{\\sigma}{\\sqrt{n}}; \\bar{X} + 1.96\n\\frac{\\sigma}{\\sqrt{n}} \\right )"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#sondaggio-1",
+    "href": "slides/05-ic_p.html#sondaggio-1",
+    "title": "Statistica Medica",
+    "section": "Sondaggio",
+    "text": "Sondaggio\nPer me: Intervalli di Confidenza\nPer voi:  bit.ly/statmed-sondaggio-icp"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#break",
+    "href": "slides/05-ic_p.html#break",
+    "title": "Statistica Medica",
+    "section": "Break",
+    "text": "Break\nConsigli:\n\nalzarsi\nsgranchirsi\nguardare lontano (rilassare gli occhi)\nbere\nandare in bagno"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#esempi-e-osservazioni",
+    "href": "slides/05-ic_p.html#esempi-e-osservazioni",
+    "title": "Statistica Medica",
+    "section": "Esempi e Osservazioni",
+    "text": "Esempi e Osservazioni\n\nesempio con i trigliceridi\nconfidenza, unicità e ampiezza dell’intervallo"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#i.c.-trigliceridi",
+    "href": "slides/05-ic_p.html#i.c.-trigliceridi",
+    "title": "Statistica Medica",
+    "section": "I.C.: Trigliceridi",
+    "text": "I.C.: Trigliceridi\n\nProblemaICGraficamente\n\n\n\n\n\n\n\n\nSoggetto\n1\n2\n3\n4\n5\n\n\n\n\n1\n97\n177\n97\n101\n137\n\n\n2\n117\n198\n125\n114\n118\n\n\n3\n140\n107\n62\n79\n78\n\n\n4\n78\n99\n120\n120\n129\n\n\n5\n99\n104\n132\n115\n87\n\n\n6\n148\n121\n135\n117\n110\n\n\n7\n108\n148\n118\n106\n106\n\n\n8\n135\n133\n137\n86\n116\n\n\n9\n126\n126\n126\n110\n140\n\n\n10\n121\n115\n118\n119\n98\n\n\n\n\n\n\n\n\n\n\nx‾\\bar{x}\n116.9\n132.8\n117.0\n106.7\n111.9\n\n\nss\n21.70\n32.62\n22.44\n14.13\n20.46\n\n\n\n\n\nCinque campioni casuali di ampiezza ( n=10n = 10 ) da una popolazione di soggetti afferenti al centro cardiovascolare dell’ASL 1 di Trieste, a cui è stato rilevato il livello di trigliceridi (in mg/dl, valori di riferimento 50-175).\n\n\n\nSi supponga che il valore di σ\\sigma sia noto e pari a 20.\n(X‾−1.96σn;X‾+1.96σn)=(X‾−1.962010;X‾+1.962010)=(X‾−12.4;X‾+12.4)\\begin{split}\\left(\\bar{X} - 1.96 \\frac{\\sigma}{\\sqrt{n}}; \\bar{X}+1.96 \\frac{\\sigma}{\\sqrt{n}} \\right)&= \\left (\\bar{X}-1.96\\frac{20}{\\sqrt{10}}; \\bar{X} + 1.96 \\frac{20}{\\sqrt{10}} \\right)\\\\& = (\\bar{X}-12.4; \\bar{X}+12.4)\\end{split}\n\nCampione 1 (116.9−12.4;116.9+12.4)≡(104.5;129.3)(116.9-12.4; 116.9+12.4) \\equiv (104.5; 129.3)\nCampione 2 (132.8−12.4;132.8+12.4)≡(120.4;145.2)(132.8-12.4; 132.8+12.4) \\equiv (120.4; 145.2)\nCampione 3 (117.0−12.4;117.0+12.4)≡(104.6;129.4)(117.0-12.4; 117.0+12.4) \\equiv (104.6; 129.4)\nCampione 4 (106.7−12.4;106.7+12.4)≡(94.3;119.1)(106.7-12.4; 106.7+12.4) \\equiv (94.3; 119.1)\nCampione 5 (111.9−12.4;111.9+12.4)≡(99.5;124.3)(111.9-12.4; 111.9+12.4) \\equiv (99.5; 124.3)"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#ic-osservazioni-confidenza",
+    "href": "slides/05-ic_p.html#ic-osservazioni-confidenza",
+    "title": "Statistica Medica",
+    "section": "IC osservazioni: “confidenza”",
+    "text": "IC osservazioni: “confidenza”\nX‾\\bar{X} è una variabile casuale, mentre il parametro μ\\mu è una costante (ignota). Quindi l’intervallo\n(X‾−1.96σn;X‾+1.96σn)\\left ( \\bar{X} - 1.96 \\frac{\\sigma}{\\sqrt{n}}; \\bar{X} + 1.96 \\frac{\\sigma}{\\sqrt{n}} \\right )\nha una probabilità del 95% di comprendere μ\\mu prima che il campione sia selezionato.\nDopo aver selezionato il campione e aver calcolato l’intervallo, invece:\n\nμ\\mu può essere compresa o meno nell’intervallo (non lo sappiamo)\nstimiamo che su 100 campioni estratti dalla stessa popolazione, circa 95 conterranno la media e 5 no (ed utilizziamo di conseguenza il termine di confidenza)\n\n\nNOTA: uno dei 5 potrebbe essere il nostro!!\n\nIn ogni caso, l’interpretazione è corretta se il campione selezionato è un campione rappresentativo (non distorto) della popolazione studiata"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#ic-osservazioni-unicità",
+    "href": "slides/05-ic_p.html#ic-osservazioni-unicità",
+    "title": "Statistica Medica",
+    "section": "IC osservazioni: unicità",
+    "text": "IC osservazioni: unicità\n\nOsservazioneTrigliceridi\n\n\nL’intervallo di confidenza al 95% è quello di uso più comune, ma non è l’unico.\nIn generale, un intervallo di confidenza ad un livello (1−α)(1-\\alpha) sarà dato da\n(x‾−z1−α2σn;x‾+z1−α2σn)\\left ( \\bar{x} - z_{1-\\frac{\\alpha}{2}} \\frac{\\sigma}{\\sqrt{n}};\n\\bar{x} + z_{1-\\frac{\\alpha}{2}} \\frac{\\sigma}{\\sqrt{n}} \\right )\ndove z1−α2z_{1-\\frac{\\alpha}{2}} è il 100(1−α2)100(1-\\frac{\\alpha}{2})-esimo percentile di una distribuzione N(0,1)N(0,1).\n\n\n\n(1−α)(1-\\alpha)\nz1−α2z_{1-\\frac{\\alpha}{2}}\n\n\n\n\n0.90\n1.645\n\n\n0.95\n1.96\n\n\n0.99\n2.576\n\n\n\n\n\nNel caso del primo campione selezionato, si ha che un intervallo al 99% è pari a\n(116.9−z0.9952010;116.9+z0.9952010)=(116.9−2.5762010;116.9+2.5762010)=(100.6;133.2)\\begin{split} &\\left(116.9 - z_{0.995} \\frac{20}{\\sqrt{10}}; 116.9 + z_{0.995} \\frac{20}{\\sqrt{10}} \\right)\\\\ = &\\left(116.9- 2.576\\frac{20}{\\sqrt{10}}; 116.9+2.576\\frac{20}{\\sqrt{10}}\\right)\\\\ = &(100.6; 133.2)\\end{split}"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#ic-osservazioni-ampiezza",
+    "href": "slides/05-ic_p.html#ic-osservazioni-ampiezza",
+    "title": "Statistica Medica",
+    "section": "IC osservazioni: ampiezza",
+    "text": "IC osservazioni: ampiezza\n\nConstatazioneOsservazioneTrigliceridi\n\n\nL’ampiezza dell’intervallo di confidenza a un livello (1−α)(1-\\alpha) è data da\nX‾+z1−α2σn−(X‾−z1−α2σn)\\bar{X}+z_{1-\\frac{\\alpha}{2}} \\frac{\\sigma}{\\sqrt{n}} - \\left(\\bar{X} - z_{1-\\frac{\\alpha}{2}} \\frac{\\sigma}{\\sqrt{n}} \\right )\novvero da\n2z1−α2σn2 z_{1-\\frac{\\alpha}{2}} \\frac{\\sigma}{\\sqrt{n}}\nNel campione 1, l’ampiezza (al 95% e con σ=20\\sigma = 20) è pari a\n2×1.962010=24.8=129.3−104.52 \\times 1.96 \\frac{20}{\\sqrt{10}} = 24.8 = 129.3-104.5\n\n\nL’ampiezza dell’intervallo, data da 2z1−α2σn2 z_{1-\\frac{\\alpha}{2}} \\frac{\\sigma}{\\sqrt{n}}\ndipende da\n\nnn: come cresce il campione ( nn ), così diminuisce l’ampiezza dell’intervallo\nσ\\sigma: come aumenta la deviazione standard della popolazione ( σ\\sigma ), così aumenta l’ampiezza dell’intervallo\n1−α1-\\alpha: come aumenta il livello di confidenza richiesto per l’analisi, così aumenta l’ampiezza dell’intervallo\n\n\n\n\nPer l’intervallo del campione 1, pari a (104.5; 129.3) con n=10n=10, σ=20\\sigma=20, 1−α=0.951-\\alpha=0.95\n\n\n\n\n\n\n\n\n\n\nnn\nσ\\sigma\n1−α1-\\alpha\nLimiti\nAmpiezza\n\n\n\n\nn\n20\n0.95\nX‾±1.9620n\\bar{X} \\pm 1.96 \\frac{20}{\\sqrt{n}}\n\n\n\n10\n20\n0.95\n\n24.8\n\n\n100\n20\n0.95\n\n7.8\n\n\n1000\n20\n0.95\n\n2.5\n\n\n10\nσ\\sigma\n0.95\nX‾±1.96σ10\\bar{X} \\pm 1.96 \\frac{\\sigma}{\\sqrt{10}}\n\n\n\n10\n5\n0.95\n\n6.2\n\n\n10\n40\n0.95\n\n49.6\n\n\n10\n20\n1−α1-\\alpha\nX‾±z1−α22010\\bar{X} \\pm z_{1-\\frac{\\alpha}{2}} \\frac{20}{\\sqrt{10}}\n\n\n\n10\n20\n0.90\n\n20.8\n\n\n10\n20\n0.95\n\n24.8\n\n\n10\n20\n0.99\n\n32.6"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#ic-osservazioni-sotto-controllo",
+    "href": "slides/05-ic_p.html#ic-osservazioni-sotto-controllo",
+    "title": "Statistica Medica",
+    "section": "IC osservazioni: sotto controllo",
+    "text": "IC osservazioni: sotto controllo\nnn e α\\alpha sono sotto il diretto controllo del ricercatore\nσ\\sigma, ovvero la variabilità a livello di popolazione, dipende dal tipo di variabile studiata.\nIn alcuni casi e con opportuni accorgimenti può essere controllata, con:\n\nscelta di tecniche per misurazioni più accurate\nscelta del timing di misurazione ottimale per ridurre la variabilità, per es. giornaliera\nutilizzo di tecniche di mediazione, ottenendo varie misurazioni ripetute sulla stessa variabile e utilizzando la media di queste anziché una singola osservazione nel calcolo dell’intervallo"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#distribuzione-t-di-student",
+    "href": "slides/05-ic_p.html#distribuzione-t-di-student",
+    "title": "Statistica Medica",
+    "section": "Distribuzione t di Student",
+    "text": "Distribuzione t di Student\n\nt di Student\nI.C."
+  },
+  {
+    "objectID": "slides/05-ic_p.html#distribuzione-t-di-student-1",
+    "href": "slides/05-ic_p.html#distribuzione-t-di-student-1",
+    "title": "Statistica Medica",
+    "section": "Distribuzione t di Student",
+    "text": "Distribuzione t di Student\n\nDefinizionePercentiliGrafico\n\n\nSe σ\\sigma è ignoto, potremmo sostituirlo (approssimandolo/stimandolo) in X‾−μσn\\frac{\\bar{X}-\\mu}{\\frac{\\sigma}{\\sqrt{n}}} con ss\nSe\n\nX1,…,Xn∼N(μ,σ2)X_1, \\ldots, X_n \\sim N(\\mu,\\sigma^2)\nsono indipendenti\n\nAllora\n\nX‾−μsn\\frac{\\bar{X}-\\mu}{\\frac{s}{\\sqrt{n}}} si distribuisce come una tt di Student con (n−1)(n-1) gradi di libertà\n\n\n\nIl pp -esimo percentile della distribuzione tt con dd gradi di libertà si indica con td,pt_{d,p}, ovvero\nP(td≤td,p)=pP(t_d \\leq t_{d,p}) = p\n\n\nNota: La distribuzione tt è simmetrica sullo 00 ma è più dispersa rispetto alla N(0,1)N(0,1)"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#ic-per-la-media-varianza-non-nota",
+    "href": "slides/05-ic_p.html#ic-per-la-media-varianza-non-nota",
+    "title": "Statistica Medica",
+    "section": "IC per la media: varianza non nota",
+    "text": "IC per la media: varianza non nota\n\nConsiderazioneDefinizioneTrigliceridi\n\n\nNel caso di varianza stimata S2S^2, abbiamo appena visto che\nT=X‾−μsn∼tn−1diStudentT=\\frac{\\bar{X}-\\mu}{\\frac{s}{\\sqrt{n}}} \\sim t_{n-1} \\:\\:\\: di\\:\\:\\: Student\ne per questa variabile si ha che, con ( n=10n=10, ovvero d=9d=9 gradi di libertà )\nP(−2.262≤T≤2.262)=0.95\\mbox{P}(-2.262\\leq T\\leq 2.262)= 0.95\nripercorrendo i passaggi del caso con varianza nota si ottiene che l’intervallo di confidenza al 95% è pari a\n(x‾−2.262s10≤μ≤x‾+2.262s10)\\left (\\bar{x} -2.262 \\frac{s}{\\sqrt{10}} \\leq \\mu \\leq \\bar{x} + 2.262 \\frac{s}{\\sqrt{10}} \\right )\nIn cui 2.262=t9,0.975=td,p2.262 = t_{9, 0.975} = t_{d,p} essendo α=0.05\\alpha = 0.05 e p=1−α2=0.975p = 1-\\frac{\\alpha}{2} = 0.975\n\n\nUn intervallo di confidenza al 95% per μ\\mu quando σ2\\sigma^2 è ignoto è dato da\n(x‾−tn−1,1−α2sn;x‾+tn−1,1−α2sn)\\left ( \\bar{x} - t_{n-1,1-\\frac{\\alpha}{2}} \\frac{s}{\\sqrt{n}}; \\bar{x} + t_{n-1,1-\\frac{\\alpha}{2}}\n\\frac{s}{\\sqrt{n}} \\right )\n\n\nNel caso del campione 1 si ha:\n\nx‾=116.90\\bar{x} = 116.90\nn=10n = 10\ns=21.7s = 21.7\nα=0.05\\alpha = 0.05\n\n(116.90−2.26221.710≤μ≤116.90+2.26221.710)\\left (116.90 -2.262 \\frac{21.7}{\\sqrt{10}} \\leq \\mu \\leq 116.90 + 2.262 \\frac{21.7}{\\sqrt{10}} \\right )\novvero (101.38;132.42)(101.38; 132.42)\nIn generale, si avrà l’intervallo\n(x‾−tn−1,1−α2sn≤μ≤x‾+tn−1,1−α2sn)\\left (\\bar{x} - t_{n-1,1-\\frac{\\alpha}{2}} \\frac{s}{\\sqrt{n}} \\leq \\mu \\leq \\bar{x} + t_{n-1,1-\\frac{\\alpha}{2}} \\frac{s}{\\sqrt{n}} \\right )"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#ic-esempio",
+    "href": "slides/05-ic_p.html#ic-esempio",
+    "title": "Statistica Medica",
+    "section": "IC: Esempio",
+    "text": "IC: Esempio\n\nQuesitoGraficoProblemaRisposta\n\n\nSi supponga che il livello di colesterolo (espresso in mg/dLmg/dL) medio nei bambini di età compresa tra i 2 e i 14 anni sia noto, da ampi studi di popolazione, essere pari a 175, con una deviazione standard di 30.\nSi vuole valutare la possibilità che vi sia un’aggregazione familiare dei livelli di colesterolo.\nSi identifica un gruppo di padri con pregresso infarto del miocardio acuto (IMA) ed elevati livelli di colesterolo, e si misura il livello di colesterolo dei figli che abbiano un’età compresa nell’intervallo in esame.\nIl livello medio stimato nel campione di 100 figli è pari a 207.2.\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuesto valore ( 207.2mg/dL207.2\\ mg/dL ) è sufficientemente lontano da quello di 175mg/dL175\\ mg/dL da farci credere che questi bambini abbiano una distribuzione dei livelli di colesterolo con una media più elevata di quella della popolazione generale dei bambini nella stessa classe di età?\n\n\nUn intervallo di confidenza (bilaterale) al 95% può aiutare a trovare la risposta.\n(207.2−1.9630100;207.2+1.9630100)=(201.32;213.08)\\left(207.2 - 1.96 \\frac{30}{\\sqrt{100}}; 207.2+1.96 \\frac{30}{\\sqrt{100}}\\right) = (201.32; 213.08)\nSì: la media attesa non è inclusa nell’intervallo di confidenza al 95% (e sta sotto). Questo vuol dire che se i bambini considerati provenissero dalla stessa distribuzione dei bambini nella popolazione generale (ovvero non vi fosse un’aggregazione familiare dei livelli di colesterolo per loro), allora un campione con una media così lontana dal valore atteso sarebbe più raro del 5%. Se come naturalmente si ipotizza che questo sia un valore “troppo” raro, allora possiamo rifiutare l’ipotesi che le due distribuzioni di bambini (popolazione generale e quelli considerati) siano la stessa distribuzione, e che quella dei valori dei bambini in studio sia spostata verso destra su valori più elevati del normale."
+  },
+  {
+    "objectID": "slides/05-ic_p.html#sondaggio-2",
+    "href": "slides/05-ic_p.html#sondaggio-2",
+    "title": "Statistica Medica",
+    "section": "Sondaggio",
+    "text": "Sondaggio\nPer me: Distribuzione t-Student\nPer voi:  bit.ly/statmed-sondaggio-tstudent"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#test-dipotesi",
+    "href": "slides/05-ic_p.html#test-dipotesi",
+    "title": "Statistica Medica",
+    "section": "Test d’ipotesi",
+    "text": "Test d’ipotesi\n\nDefinizioni: ipotesi, accettazione, rifiuto, errori\nTest (con varianza nota)"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#ipotesi-definizioni",
+    "href": "slides/05-ic_p.html#ipotesi-definizioni",
+    "title": "Statistica Medica",
+    "section": "Ipotesi: definizioni",
+    "text": "Ipotesi: definizioni\n\nipotesi nulla, H0H_0, l’ipotesi che si vuole testare\nipotesi alternativa, H1H_1, l’ipotesi che contraddice l’ipotesi nulla\n\n   \n\nIn particolare, le ipotesi riguardano i parametri di una distribuzione"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#ipotesi-decisioni",
+    "href": "slides/05-ic_p.html#ipotesi-decisioni",
+    "title": "Statistica Medica",
+    "section": "Ipotesi: decisioni",
+    "text": "Ipotesi: decisioni\n\n\n\n\n\n\n\n\nDecisioni sull’ipotesi nulla\nIpotesi nulla vera\nIpotesi nulla falsa\n\n\n\n\nAccetto (Non rifiuto!)\nDecisione corretta  P = 1−α1-\\alpha\nErrore di II tipo  P = β\\beta\n\n\nRifiuto\nErrore di I tipo  P = α\\alpha\nDecisione corretta  P = 1−β1-\\beta\n\n\n\n\nα\\alpha è definito livello di significatività\n1−β1-\\beta è definito potenza\nLa probabilità di un errore di I specie ( α\\alpha, la significatività ) è la probabilità di rifiutare l’ipotesi nulla H0H_0 quando è vera, si chiama livello di significatività del test\nLa probabilità di un errore di II specie ( β\\beta ) è la probabilità di accettare l’ipotesi nulla H0H_0 dato che è falsa\n\n\nIl criterio nella costruzione di un test è di fissare α\\alpha e, fra i test con quel livello, scegliere quello con β\\beta minimo (massima potenza)"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#test-media-di-una-normale",
+    "href": "slides/05-ic_p.html#test-media-di-una-normale",
+    "title": "Statistica Medica",
+    "section": "Test: media di una Normale",
+    "text": "Test: media di una Normale\n(varianza nota)\n\nAnaliticamenteGraficamenteProcedura\n\n\nObiettivo è un set di ipotesi del tipo:\n\nH0:μ=μ0H_0: \\mu=\\mu_0; σ=σ0\\sigma=\\sigma_0\nH1:μ=μ1&lt;μ0H_1: \\mu=\\mu_1&lt;\\mu_0; σ=σ0\\sigma=\\sigma_0\n\nIl primo passo è individuare la statistica test, che nel caso specifico è X‾\\bar{X}\nα=P(ErroreIspecie|H0)=P[X‾&lt;c|X‾∼N(μ0,σ2n)]=Φ(c−μ0σn)\\alpha = P (Errore\\ I\\ specie|H_0)= P \\left [ \\bar{X}&lt;c|\\bar{X}\\sim N\\left ( \\mu_0,\\frac{\\sigma^2}{n} \\right ) \\right ]= \\Phi \\left ( \\frac{c-\\mu_0}{\\frac{\\sigma}{\\sqrt{n}}} \\right )\nzα=c−μ0σnz_{\\alpha}=\\frac{c-\\mu_0}{\\frac{\\sigma}{\\sqrt{n}}}\nc=μ0+zασnc=\\mu_0+z_{\\alpha}\\frac{\\sigma}{\\sqrt{n}}\n\n\n\n\n\n\n\n\n\n\n\n\nLa regione di accettazione è l’insieme dei valori di x‾\\bar{x} per cui si accetta H0H_0\nLa regione di rifiuto è l’insieme dei valori di x‾\\bar{x} per cui si rifiuta H0H_0\n\n\n\nPer testare l’ipotesi:\n\nH0:μ=μ0H_0:\\mu=\\mu_0; σ=σ0\\sigma=\\sigma_0\nH1:μ&lt;μ0H_1:\\mu&lt;\\mu_0; σ=σ0\\sigma=\\sigma_0\n\nil test uniformemente più potente è basato su X‾\\bar{X}\n\nse x‾&lt;μ0+zασn\\bar{x}&lt;\\mu_0+z_{\\alpha}\\frac{\\sigma}{\\sqrt{n}} si rifiuta\nse x‾≥μ0+zασn\\bar{x}\\geq\\mu_0+z_{\\alpha}\\frac{\\sigma}{\\sqrt{n}} si accetta"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#test-esempio",
+    "href": "slides/05-ic_p.html#test-esempio",
+    "title": "Statistica Medica",
+    "section": "Test: esempio",
+    "text": "Test: esempio\n\nCaso studioMaggiore significativitàUsando Z\n\n\nstato socioeconomico e peso alla nascita\nSi consideri l’ipotesi per cui madri con un livello socioeconomico basso tendano a partorire figli con pesi alla nascita inferiori al normale. Per testare l’ipotesi, si considera un campione di 100 nati vivi consecutivi in un ospedale situato in una zona socioeconomica svantaggiata. Il peso normale è noto dai dati del registro nazionale, che per gli USA è pari a 120 oz, con una deviazione standard di 25 oz. Il peso medio dei 100 nati è di 115 oz con una deviazione standard campionaria di 24 oz.\nAd un livello di significatività di 0.05, si ha zα=−1.645z_{\\alpha}=-1.645, e il valore critico è pari a\nc=120−1.6452510=115.89c=120-1.645\\frac{25}{10}=115.89\nquindi, poiché X‾=115&lt;115.89=c\\bar{X}=115&lt;115.89=c si rifiuta H0H_0 ad un livello di significatività di 0.05\n\n\nUsando un livello di significatività pari a 0.01, si avrebbe che\nzα=−2.326z_{\\alpha}=-2.326 e che\nc=120−2.3262510=114.18c=120-2.326\\frac{25}{10}=114.18\ne quindi non si rifiuterebbe l’ipotesi nulla dal momento che x‾=115≥114.18=c\\bar{x}=115\\geq 114.18=c\n\n\nPer testare l’ipotesi:\n\nH0:μ=μ0H_0:\\mu=\\mu_0; σ=σ0\\sigma=\\sigma_0\nH1:μ&lt;μ0H_1:\\mu&lt;\\mu_0; σ=σ0\\sigma=\\sigma_0\n\nsi può anche equivalentemente calcolare\nz=x‾−μ0σnz=\\frac{\\bar{x}-\\mu_0}{\\frac{\\sigma}{\\sqrt{n}}}\n\nse z&lt;zαz&lt;z_{\\alpha} si rifiuta H0H_0\nse z≥zαz\\geq z_{\\alpha} non si rifiuta H0H_0"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#p-value",
+    "href": "slides/05-ic_p.html#p-value",
+    "title": "Statistica Medica",
+    "section": "P-value",
+    "text": "P-value\n\nDefinizioneAlternativa minoreAlternativa maggiore\n\n\nIl p−valuep-value è quel valore di α\\alpha per cui il valore della statistica test è al confine tra regione di accettazione e zona di rifiuto (qui nel caso H1:μ&lt;μ0H_1:\\mu&lt;\\mu_0)\np=Φ(zp)=Φ(x‾−μ0σn)p=\\Phi(z_p)=\\Phi\\left( \\frac{\\bar{x}-\\mu_0}{\\frac{\\sigma}{\\sqrt{n}}}\\right)\nIl p−valuep-value è quindi la probabilità di ottenere un risultato eguale o più estremo di quello ottenuto quando l’ipotesi nulla è vera.\n\n\n\n\n\nH0:μ=μ0H_0:\\mu=\\mu_0; σ=σ0\\sigma=\\sigma_0\nH1:μ&lt;μ0H_1:\\mu&lt;\\mu_0; σ=σ0\\sigma=\\sigma_0\n\nsi calcola\nz=x‾−μ0σnz=\\frac{\\bar{x}-\\mu_0}{\\frac{\\sigma}{\\sqrt{n}}}\n\nse z&lt;zαz&lt;z_{\\alpha} si rifiuta H0H_0\nse z≥zαz\\geq z_{\\alpha} non si rifiuta H0H_0\n\novvero si ha un p−valuep-value pari a p=Φ(z)p=\\Phi(z)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nH0:μ=μ0H_0:\\mu=\\mu_0; σ=σ0\\sigma=\\sigma_0\nH1:μ&gt;μ0H_1:\\mu&gt;\\mu_0; σ=σ0\\sigma=\\sigma_0\n\nsi calcola\nz=x‾−μ0σnz=\\frac{\\bar{x}-\\mu_0}{\\frac{\\sigma}{\\sqrt{n}}}\n\nse z&gt;z1−αz&gt;z_{1-\\alpha} si rifiuta H0H_0\nse z≤z1−αz\\leq z_{1-\\alpha} non si rifiuta H0H_0\n\novvero si ha un p−valuep-value pari a p=1−Φ(z)p=1-\\Phi(z)"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#p-value-esempio",
+    "href": "slides/05-ic_p.html#p-value-esempio",
+    "title": "Statistica Medica",
+    "section": "p-value: esempio",
+    "text": "p-value: esempio\nSi supponga che in un campione di 10 bambini il livello di colesterolo sia pari a 200mg/dL200\\ mg/dL con una deviazione standard nota nella popolazione pari a 50mg/dL50\\ mg/dL. Lo studio intende verificare se il livello del colesterolo in questi bambini è più elevato del normale ( 175mg/dL175\\ mg/dL ), con un livello di significatività statistica α=0.05\\alpha = 0.05. Si testa quindi l’ipotesi\n\nH0:μ=175H_0:\\mu=175; σ=50\\sigma=50\nH1:μ&gt;175H_1:\\mu&gt;175; σ=50\\sigma=50\n\nsi ha che z=x‾−μ0σn=200−1755010=1.58z=\\frac{\\bar{x}-\\mu_0}{\\frac{\\sigma}{\\sqrt{n}}}=\\frac{200-175}{\\frac{50}{\\sqrt{10}}}=1.58\nVisto che 1.58=z&lt;z1−α=z.95=1.6451.58=z&lt;z_{1-\\alpha}=z_{.95}=1.645 non si rifiuta H0H_0, con un p−valuep-value pari a\np=1−Φ(z)=1−Φ(1.58)=1−0.9429=0.057p=1-\\Phi(z)=1-\\Phi(1.58)=1-0.9429=0.057"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#test-due-code",
+    "href": "slides/05-ic_p.html#test-due-code",
+    "title": "Statistica Medica",
+    "section": "Test: due code",
+    "text": "Test: due code\n\nObiettivoProceduraGraficamente\n\n\nUn test a due code è un test in cui i valori del parametro sotto ipotesi alternativa sono alternativamente maggiori o minori (diversi) dal valore sotto ipotesi nulla.\nObiettivo è quello di rifiutare H0H_0 se ZZ è troppo piccolo o troppo grande, ovvero H0H_0 sarà accettata se c1≤Z≤c2c_1\\leq Z \\leq c_2\nP(rifiutareH0|H0)=P(Z≤c1∪Z≥c2)=P(Z≤c1)+P(Z≥c2)=αP(rifiutare\\ H_0|H_0)=P(Z\\leq c_1 \\cup Z\\geq c_2)=P(Z\\leq c_1)+P(Z\\geq c_2)=\\alpha\nIpotizzando equiprobabilità sulle due code, si ha che\nP(Z≤c1|H0)=P(Z≥c2|H0)=α2P(Z\\leq c_1|H_0)=P(Z\\geq c_2|H_0)=\\frac{\\alpha}{2}\n\n\nSi testa quindi l’ipotesi\n\nH0:μ=μ0H_0:\\mu=\\mu_0; σ=σ0\\sigma=\\sigma_0\nH1:μ≠μ0H_1:\\mu\\neq\\mu_0; σ=σ0\\sigma=\\sigma_0\n\nsi calcola\nz=x‾−μ0σnz=\\frac{\\bar{x}-\\mu_0}{\\frac{\\sigma}{\\sqrt{n}}}\n\nse z≤zα2z\\leq z_{\\frac{\\alpha}{2}} o z&gt;z1−α2z &gt; z_{1-\\frac{\\alpha}{2}} si rifiuta H0H_0\nse zα2&lt;z&lt;z1−α2z_{\\frac{\\alpha}{2}}&lt; z &lt; z_{1-\\frac{\\alpha}{2}} non si rifiuta H0H_0"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#test-a-due-code-esempio",
+    "href": "slides/05-ic_p.html#test-a-due-code-esempio",
+    "title": "Statistica Medica",
+    "section": "Test a due code: esempio",
+    "text": "Test a due code: esempio\nColesterolo negli immigrati asiatici\nSi sa che i livelli di colesterolo nelle donne americane di età tra i 20 ed i 40 anni sono distribuiti normalmente con media 190mg/dL190\\ mg/dL e deviazione standard di 40mg/dL40\\ mg/dL. Si vuole testare l’ipotesi che i livelli di colesterolo nelle donne asiatiche di pari età siano eguali a quelli delle donne americane. Si considera quindi un campione di 100 donne con le caratteristiche specificate e si osserva un livello di colesterolo medio pari a 181.52mg/dL181.52\\ mg/dL. Si testa quindi l’ipotesi\n\nH0:μ=190H_0:\\mu=190; σ=40\\sigma=40\nH1:μ≠190H_1:\\mu\\neq 190; σ=40\\sigma=40\n\nz=x‾−μ0σn=181.52−19040100=−2.12z=\\frac{\\bar{x}-\\mu_0}{\\frac{\\sigma}{\\sqrt{n}}}=\\frac{181.52-190}{\\frac{40}{\\sqrt{100}}}=-2.12\nPer un test a livello di significatività dello 0.05 i valori critici sono Z0.975=1.96Z_{0.975}=1.96 e Z0.025=−1.96Z_{0.025}=-1.96, per cui, visto che Z=−2.12&lt;−1.96Z=-2.12&lt;-1.96 rifiuto H0H_0."
+  },
+  {
+    "objectID": "slides/05-ic_p.html#test-a-due-code-p-value",
+    "href": "slides/05-ic_p.html#test-a-due-code-p-value",
+    "title": "Statistica Medica",
+    "section": "Test a due code: p-value",
+    "text": "Test a due code: p-value\n\nDerivazioneGraficamenteEsempio\n\n\nAvendo\nz=x‾−μ0σnz=\\frac{\\bar{x}-\\mu_0}{\\frac{\\sigma}{\\sqrt{n}}}\nsi ha che\np={2Φ(z)sez≤02[1−Φ(z)]sez&gt;0p=\\left\\{\\begin{matrix}2\\Phi(z) & se & z\\leq 0\\\\ 2[1-\\Phi(z)] & se & z&gt;0\\end{matrix}\\right.\n\n\n\n\n\n\n\n\n\n\n\n\n\nColesterolo negli immigrati asiatici\nSi calcola\nz=x‾−μ0σn=−2.12z=\\frac{\\bar{x}-\\mu_0}{\\frac{\\sigma}{\\sqrt{n}}}=-2.12\nda cui\np=2Φ(−2.12)=2[1−Φ(2.12)]=2[1−0.983]=0.034p=2\\Phi(-2.12)=2[1-\\Phi(2.12)]=2[1-0.983]=0.034"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#test-varianza-non-nota",
+    "href": "slides/05-ic_p.html#test-varianza-non-nota",
+    "title": "Statistica Medica",
+    "section": "Test: varianza non nota",
+    "text": "Test: varianza non nota\n\nt di StudentProceduraGraficamenteEsempio\n\n\nSe X1,...,XnX_1,...,X_n è un campione di osservazioni indipendenti distribuite normalmente N(μ,σ2)N(\\mu,\\sigma^2), allora la quantità X‾−μsn\\frac{\\bar{X}-\\mu}{\\frac{s}{\\sqrt{n}}} è distribuita secondo una tt di Student con n−1n-1 gradi di libertà. Da questo deriva che sotto l’ipotesi nulla μ=μ0\\mu=\\mu_0\nP(t&lt;tn−1;α2)=P(t&gt;tn−1;1−α2)=α2P\\left(t&lt;t_{n-1;\\frac{\\alpha}{2}}\\right)=P\\left(t&gt;t_{n-1;1-\\frac{\\alpha}{2}}\\right)=\\frac{\\alpha}{2}\nda cui si derivano i valori critici\n\n\nSi testa quindi l’ipotesi\n\nH0:μ=μ0H_0:\\mu=\\mu_0; σ\\sigma\nH1:μ≠μ0H_1:\\mu\\neq\\mu_0; σ\\sigma\n\nsi calcola\nt=x‾−μ0snt=\\frac{\\bar{x}-\\mu_0}{\\frac{s}{\\sqrt{n}}}\n\nse t&lt;tn−1;α2t&lt;t_{n-1;\\frac{\\alpha}{2}} o t&gt;tn−1;1−α2t&gt;t_{n-1;1-\\frac{\\alpha}{2}} si rifiuta H0H_0\nse tn−1;α2&lt;t&lt;tn−1;1−α2t_{n-1;\\frac{\\alpha}{2}}&lt;t&lt;t_{n-1;1-\\frac{\\alpha}{2}} si accetta H0H_0\n\nSi osserva che\ntn−1;α2=−tn−1;1−α2t_{n-1;\\frac{\\alpha}{2}}=-t_{n-1;1-\\frac{\\alpha}{2}}\n\n\n\n\n\n\n\n\n\n\n\n\n\nSi vuole studiare l’effetto dell’attività lavorativa (con conseguente esposizione a fumi di varia natura) sui pompieri. Si considera un campione di 26 pompieri di età compresa tra i 25 ed i 34 anni e si misura il cambiamento di FEV (volume di espirazione forzata) su un periodo di 5 anni. In un gruppo generico di pari età nella popolazione, il declino è pari in media a 0.10L/sec.0.10\\ L/sec. Nel campione osservato il declino è stato di 0.27L/sec0.27\\ L/sec con una deviazione standard di 0.32L/sec0.32\\ L/sec. Rispetto alla FEV, vi è stato un effettivo rischio lavorativo dei pompieri? Supponendo che il declino in FEV sia distribuito normalmente, si ha che\n\nH0:μ=0.10H_0:\\mu=0.10; σ\\sigma\nH1:μ≠0.10H_1:\\mu\\neq 0.10; σ\\sigma\n\nsi calcola\nt=x‾−μ0sn=0.27−0.100.3226=2.71t=\\frac{\\bar{x}-\\mu_0}{\\frac{s}{\\sqrt{n}}}=\\frac{0.27-0.10}{\\frac{0.32}{\\sqrt{26}}}=2.71\nSotto ipotesi nulla, si ha che p(t25&gt;2.71)=0.0060p(t_{25}&gt;2.71)=0.0060, per cui p−value=0.012p-value=0.012"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#p-value-e-ci",
+    "href": "slides/05-ic_p.html#p-value-e-ci",
+    "title": "Statistica Medica",
+    "section": "P-value e CI",
+    "text": "P-value e CI\n\nRelazioneEsempio\n\n\nPer un test del tipo\n\nH0:μ=μ0H_0:\\mu=\\mu_0; σ=σ0\\sigma=\\sigma_0\nH1:μ≠μ0H_1:\\mu\\neq\\mu_0; σ=σ0\\sigma=\\sigma_0\n\nAl livello α\\alpha, H0H_0 è rifiutata se e solo se l’IC al livello (1−α)(1-\\alpha) per μ\\mu non contiene μ0\\mu_0 (test a due code)\n\n\nColesterolo nei bambini\nUn intervallo di confidenza a livello 0.95 per la media μ\\mu è pari a\nx‾−z1−α2σn;x‾+z1−α2σn\\bar{x}-z_{1-\\frac{\\alpha}{2}}\\frac{\\sigma}{\\sqrt{n}};  \\bar{x}+z_{1-\\frac{\\alpha}{2}}\\frac{\\sigma}{\\sqrt{n}}\novvero\n200−z0.9755010;200+z0.9755010=[169.01;230.99]200-z_{0.975}\\frac{50}{\\sqrt{10}};  200+z_{0.975}\\frac{50}{\\sqrt{10}}=[169.01;230.99]\nche contiene il valore μ0=175\\mu_0=175 usato precedentemente nei test di ipotesi, per cui non rifiuto H0H_0 (anche con il test a due code: z=1.58&lt;1.96z=1.58&lt;1.96, p=0.114p=0.114)"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#sondaggio-3",
+    "href": "slides/05-ic_p.html#sondaggio-3",
+    "title": "Statistica Medica",
+    "section": "Sondaggio",
+    "text": "Sondaggio\nPer me: p-value\nPer voi:  bit.ly/statmed-sondaggio-pvalue"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#vediamolo-sul-vostro-cloud",
+    "href": "slides/05-ic_p.html#vediamolo-sul-vostro-cloud",
+    "title": "Statistica Medica",
+    "section": "Vediamolo……sul vostro cloud!",
+    "text": "Vediamolo……sul vostro cloud!\nhttps://bit.ly/statmed-cl-rstudio"
+  },
+  {
+    "objectID": "slides/05-ic_p.html#risorse-utili",
+    "href": "slides/05-ic_p.html#risorse-utili",
+    "title": "Statistica Medica",
+    "section": "Risorse utili",
+    "text": "Risorse utili\n\nRStudio Cloud: https://bit.ly/statmed-cl-rstudio gratis per voi per esplorare RStudio, le sue funzionalità, e allenarvi con R (link di iscrizione valido fino alla fine del corso). NOTA: a vostra scelta, è utilizzabile anche come supporto durante l’esame.\nRStudio primers ambiente gratuito dentro RStudio Cloud per l’apprendimento delle basi di analisi di dati con R tramite tutorial interattivi. Una volta registrati, oltre all’accesso al nostro spazio di lavoro, avete accesso libero anche ai Primers.\nR 4 Data Science: libro gratuito (on-line) di Hadley Wickham e Garrett Grolemund\nGGplot2 cheatsheet schema dei possibili grafici di base rappresentabili in R con il pacchetto {ggplot2}, molto utile anche per conoscere le tipologie di grafico, e il loro utilizzo.\nAn Introduction to Medical Statistics di Martin Bland, suggeriti capitoli 4 e 5."
+  },
+  {
+    "objectID": "slides/05-ic_p.html#section",
+    "href": "slides/05-ic_p.html#section",
+    "title": "Statistica Medica",
+    "section": "",
+    "text": "Mathematical conventions are just that, conventions. They differ by field of mathematics. Don’t ask us why matrix rows are numbered down but graphs are numbered up the y axis, nor why x comes before y but row before column. But the matrix layout has always seemed illogical to me.\n\n\n—Brian D. Ripley08/2004 - R-help\n\n\n\nGrazie per l’attenzione!\nDiapositive: bit.ly/statmed-cl-corsi\n www.unipd-ubep.it |  Corrado.Lanera@ubep.unipd.it\n   @CorradoLanera |  bit.ly/statmed-cl-ricevimento"
   },
   {
     "objectID": "esercizi/descrittive_1.html",

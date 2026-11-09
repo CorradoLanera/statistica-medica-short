@@ -1,30 +1,40 @@
 ---
 title: "Statistica Medica"
-subtitle: "Distribuzioni"
-author: "[CorradoLanera](www.CorradoLanera.it)"
-date: "YYYY-MM-DD (last update: `r Sys.Date()`)"
-institute: "[Unità di Biostatistica, Epidemiologia e Salute Pubblica](https://www.unipd-ubep.it/) --- University of Padova"
-output: 
-  xaringan::moon_reader:
-    seal: false  # no title slide! Do It Yourself here below
-    nature:
-      highlightStyle: github
-      highlightLines: true
-      countIncrementalSlides: false
-    css: xaringan-themer.css
-    self_contained: true
+subtitle: "Distribuzioni di probabilità"
+author: "Corrado Lanera"
+institute: "[Unità di Biostatistica, Epidemiologia e Salute Pubblica](https://www.unipd-ubep.it/), Università di Padova"
+date: last-modified
+date-format: "D MMMM YYYY"
+lang: it
+format:
+  revealjs:
+    theme: [default, statmed.scss]
+    template-partials: [title-slide.html]
+    width: 960
+    height: 720
+    margin: 0.06
+    slide-number: true
+    progress: true
+    logo: img/unipd_logo.png
+    footer: "Statistica Medica · [bit.ly/cl-statmed](https://bit.ly/cl-statmed)"
+    embed-resources: true
+    code-copy: true
+    code-line-numbers: false
+    auto-stretch: false
+    html-math-method: mathml
+    pdf-max-pages-per-slide: 4
+    include-after-body: [print-tabs.html, fit-images.html]
+    css: math-font.css
+    fig-width: 7
+    fig-height: 5
+    menu:
+      side: left
+execute:
+  echo: true
+  cache: false
 ---
-class: center, middle, bg_title, hide-count
-
-
-<img src="img/unipd_logo.png" width="120px"/>
-<img src="img/DCTV.png" width="50px"/>
-<img src="img/UBEP.png" width="50px"/>
-<img src="img/LAIMS.png" width="50px"/>
-
 
 ```{r setup, include=FALSE}
-options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(
   fig.retina = 3,
   warning = FALSE,
@@ -33,156 +43,39 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 library(knitr)
-library(xaringanExtra)
-library(xaringanthemer)
 
 library(tidyverse)
 library(here)
 library(gridExtra)
 
 library(countdown)
-library(metathis)
 library(DT)
 
 options(width = 59) # fit into the right-column slides
 
 ```
 
-
-```{r xaringans, echo=FALSE}
-# https://github.com/gadenbuie/xaringanExtra
-use_tachyons()
-use_share_again()
-use_panelset()
-use_clipboard()
-use_editable(expires = 1)
-use_freezeframe()
-use_extra_styles(
-  hover_code_line = TRUE,         #<<
-  mute_unhighlighted_code = TRUE  #<<
-)
-use_progress_bar(color = "#0051BA", location = "top")
-use_logo("img/bit.ly_statmed-cl-corsi.png")
-```
-
-```{r style-share-again, echo=FALSE}
-style_share_again(
-  share_buttons = c("twitter", "linkedin", "pocket")
-)
-```
-
-
-
-```{css, echo=FALSE}
-.left-code {
-  color: #777;
-  width: 38%;
-  height: 92%;
-  float: left;
-}
-.right-code {
-  color: #777;
-  width: 55%;
-  height: 92%;
-  float: right;
-  padding-top: 0.5em;
-}
-.left-plot {
-  width: 43%;
-  float: left;
-}
-.right-plot {
-  width: 60%;
-  float: right;
-}
-.hide-count .remark-slide-number {
-  display: none;
-}
-
-.bg_title {
-  position: relative;
-  z-index: 1;
-}
-
-.bg_title::before {    
-      content: "";
-      background-image: url('img/bg1.png');
-      background-size: contain;
-      position: absolute;
-      top: 0px;
-      right: 0px;
-      bottom: 0px;
-      left: 0px;
-      opacity: 0.3;
-      z-index: -1;
-}
-
-```
-
-
-```{r xaringan-themer, include=FALSE, warning=FALSE}
-red <- "#f34213"
-purple <- "#3e2f5b"
-orange <- "#ff8811"
-green <- "#136f63"
-white <- "#FFFFFF"
-pastel_orange <- "#F97B64"
-blu_gray <- "#1F4257"
-style_duo_accent(
-    colors = c(
-        red = red,
-        purple = purple,
-        orange = orange,
-        green = green,
-        white = white,
-        pastel_orange = pastel_orange,
-        blu_gray = blu_gray
-    )
-)
-```
-
-
-<br>
-<br>
-<br>
-
-# **.orange[STATISTICA MEDICA]**
-
--- Distribuzioni di probabilità --
-
-Corrado Lanera | [**Unità di Biostatistica, Epidemiologia e Salute Pubblica**](https://www.unipd-ubep.it/)
-
-
-
-
-
----
-class: inverse, hide-count
-
-# Cosa faremo
+## Cosa faremo {.inverse background-color="#03A696"}
 
 Quello di cui ci interesseremo in questa lezione è di introdurre le 
 principali distribuzioni di probabilità per eventi discreti, quali 
-.orange[processi binomiali], utili per rappresentare il numero di
+[processi binomiali]{.orange}, utili per rappresentare il numero di
 successi per eventi dicotomici con una data probabilità p di esito
-positivo, e .orange[processi di Poisson] utili a modellizzare
+positivo, e [processi di Poisson]{.orange} utili a modellizzare
 il numero di eventi che è probabile osservare in un lasso di tempo
 stabilito. Inoltre ci occuperemo anche delle distribuzioni utili a
 descrivere eventi continui, con particolare attenzione alle
-distribuzioni .orange[normale] e .orange[normale standard].
+distribuzioni [normale]{.orange} e [normale standard]{.orange}.
 
 Per ciascuna, oltre a qualche rapido cenno teorico, vedremo come
-calcolare .orange[media] e .orange[varianza], .orange[percentili] 
+calcolare [media]{.orange} e [varianza]{.orange}, [percentili]{.orange} 
 (per le distribuzioni continue), oltre che qualche esempio concreto.
 
----
-class: hide-count
-
-# .orange[Riconoscimenti]
+## [Riconoscimenti]{.orange}
 
 - Le diapositive proposte sono state prodotte a partire anche da
   materiale generato da/con le seguenti persone gravitanti attorno
-  l'UBEP*:
+  all'UBEP*:
   
   + Danila Azzolina
   + Dario Gregori
@@ -194,9 +87,16 @@ class: hide-count
   + Paola Berchialla
 
 <br><br>
-<small>
-.right[\* In ordine alfabetico.]
-</small>
+
+::: {.small}
+
+::: {.text-right}
+
+\* In ordine alfabetico.
+
+:::
+
+:::
 
 <br><br>
 
@@ -205,10 +105,7 @@ l'aiuto e il supporto logistico e amministrativo che mi è stato offerto,
 e ad Andrea Francavilla per avermi aiutato nella revisione del
 materiale.
 
----
-class: inverse, middle
-
-# .center[**.orange[Panoramica]**]
+## **[Panoramica]{.orange}** {.text-center .inverse .center background-color="#03A696"}
 
 **Modello** probabilistico per variabili discrete: massa, valore atteso e varianza 
 
@@ -222,19 +119,7 @@ Distribuzione **normale**, localizzazione, forma, simmetria, percentili, trasfor
 
 **Approssimazioni** alla Normale
 
-
-
-
-
-
-
-
-
-
----
-class: inverse, middle
-
-# .center[Modelli (probabilistici) **.orange[discreti]**]
+## Modelli (probabilistici) **[discreti]{.orange}** {.text-center .inverse .center background-color="#03A696"}
 
 - **Massa**
 
@@ -242,16 +127,13 @@ class: inverse, middle
 
 - **Varianza**
 
-
-
----
-# Richiamo: .orange[Variabile casuale]
+## Richiamo: [Variabile casuale]{.orange}
 
 Una variabile casuale è una quantità che assume **valori differenti** con **specifiche probabilità**
 
-- una variabile casuale che assume un .orange[insieme discreto] di valori con probabilità specificata è detta variabile casuale **discreta**
+- una variabile casuale che assume un [insieme discreto]{.orange} di valori con probabilità specificata è detta variabile casuale **discreta**
 
-- una variabile casuale che assume un .orange[insieme continuo] (e infinito) di valori, in modo che **gli intervalli** di tali valori abbiano probabilità specificata è detta variabile casuale continua
+- una variabile casuale che assume un [insieme continuo]{.orange} (e infinito) di valori, in modo che **gli intervalli** di tali valori abbiano probabilità specificata è detta variabile casuale continua
 
 <br>
 <br>
@@ -263,30 +145,24 @@ Una variabile casuale è una quantità che assume **valori differenti** con **sp
 
  
 
-> Nota 2: **funzione**: una qualunque mappa/regola che associa **a ogni elemento** di un insieme (detto .orange[dominio] della funzione) **un unico elemento** di un insieme (detto .orange[codominio] della funzione).
+> Nota 2: **funzione**: una qualunque mappa/regola che associa **a ogni elemento** di un insieme (detto [dominio]{.orange} della funzione) **un unico elemento** di un insieme (detto [codominio]{.orange} della funzione).
 
-
----
-# .orange[Modelli discreti]
+## [Modelli discreti]{.orange}
 
 Obiettivo è determinare il modello probabilistico adatto ai dati
 che si vuole trattare, ovvero individuare eventi con la stessa struttura probabilistica
 
-- distribuzione .orange[binomiale], in cui l'evento di interesse ha due possibili esiti 
+- distribuzione [binomiale]{.orange}, in cui l'evento di interesse ha due possibili esiti 
 
-- distribuzione di .orange[Poisson], in cui l'evento di interesse è definito dal conteggio di eventi
+- distribuzione di [Poisson]{.orange}, in cui l'evento di interesse è definito dal conteggio di eventi
 
+## [Modelli discreti]{.orange}: massa
 
+::: {.panel-tabset}
 
+### Definizione
 
-
----
-# .orange[Modelli discreti]: massa
-
-.panelset[
-.panel[.panel-name[Definizione]
-
-Una funzione di (distribuzione di) .orange[massa] di probabilità è una relazione matematica, o regola, che assegna **ad ogni possibile valore** $r$ di una variabile casuale discreta $X$ **la (sua) probabilità** $P(X=r)$.
+Una funzione di (distribuzione di) [massa]{.orange} di probabilità è una relazione matematica, o regola, che assegna **ad ogni possibile valore** $r$ di una variabile casuale discreta $X$ **la (sua) probabilità** $P(X=r)$.
 
 Questa regola è definita per tutti i valori $r$ che hanno probabilità positiva.
 
@@ -301,9 +177,8 @@ Questa regola è definita per tutti i valori $r$ che hanno probabilità positiva
 >
 >  - $\sum P(X=r) = 1$
 
-]
-.panel[.panel-name[Esempio]
 
+### Esempio
 
 Un medico inizia a controllare lo stato ipertensivo di 4 suoi pazienti con farmaci antiipertensivi.
 
@@ -320,18 +195,20 @@ ipertensione <- tibble::tibble(
 knitr::kable(ipertensione)
 ```
 
-]
 
-
-.panel[.panel-name[Distr. Cumulativa]
+### Distr. Cumulativa
 
 La distribuzione cumulativa di una variabile casuale discreta è indicata come $F(x)$ ed è pari a $P(X\leq x)$
-]
 
-.panel[.panel-name[Esempio]
+
+### Esempio
 
 $$F(x) = P(X\leq x)$$
-.left-column[
+
+:::: {.columns}
+
+::: {.column width="22%"}
+
 ```{r, echo=FALSE}
 ipertensione |> 
   dplyr::mutate(
@@ -339,9 +216,10 @@ ipertensione |>
   ) |> 
   knitr::kable()
 ```
-]
 
-.right-plot[
+:::
+
+::: {.column width="57%"}
 
 ```{r, echo=FALSE, out.width="80%"}
 ipertensione |> 
@@ -359,25 +237,26 @@ ipertensione |>
 ```
 
   
-]
+:::
 
-]
+::::
 
-]
----
-# .orange[Modelli discreti]: valore atteso
+:::
 
-.panelset[
-.panel[.panel-name[Definizione]
+## [Modelli discreti]{.orange}: valore atteso
+
+::: {.panel-tabset}
+
+### Definizione
 
 Il valore atteso di una variabile casuale discreta è definito come
 
 $$E(X)=\sum_{i\in  I}x_iP(X=x_i)$$
 
 dove $x_i$ sono i valori che la variabile casuale $X$ assume con probabilità positiva
-]
-.panel[.panel-name[Esempio]
 
+
+### Esempio
 
 Per la variabile $X =$ _pazienti complianti al controllo dell'ipertensione_
 
@@ -399,17 +278,13 @@ sum(
 )
 ```
 
+:::
 
-]
-]
+## [Valore atteso]{.orange}: esempio
 
----
-# .orange[Valore atteso]: esempio
+::: {.panel-tabset}
 
-
-.panelset[
-.panel[.panel-name[Problema]
-
+### Problema
 
 **Sia**: $X$ il **numero** di episodi di otiti **nei primi due anni di vita**, con la seguente rispettiva massa di probabilità:
 
@@ -423,9 +298,9 @@ knitr::kable(otiti)
 
 Determinare il numero atteso di episodi di otite nei primi due anni di vita
 
-]
 
-.panel[.panel-name[Soluzione]
+### Soluzione
+
 ```{r, include=FALSE}
 atteso_otiti <- sum(
   otiti[["r"]] * otiti[["P(X=r)"]]
@@ -437,20 +312,19 @@ il numero atteso di episodi di otite nei primi due anni di vita è:
 
 $$\begin{split}E(X) =\ &0(0.129)\ + \\&1(0.264)\ + \\& 2(0.271)\ + \\&3(0.185)\ + \\&4(0.095)\ + \\&5(0.039)\ + \\& 6(0.017) =\\& `r atteso_otiti` \end{split}$$
 
-]
-]
+:::
+
 
 ```{r, echo = FALSE}
 countdown(minutes = 1, warn_when = 1, play_sound = TRUE,
           left = "70%", bottom = "15%")
 ```
 
+## [Modelli discreti]{.orange}: varianza
 
----
-# .orange[Modelli discreti]: varianza
+::: {.panel-tabset}
 
-.panelset[
-.panel[.panel-name[Definizione]
+### Definizione
 
 La varianza di una variabile casuale discreta $X$ è pari a
 
@@ -459,8 +333,9 @@ $$\mbox{var}(X)=\sum_r(x_r-\mu)^2P(X=x_r)=\sigma^2$$
 vale anche
 
 $$\sigma^2=E[(X-\mu)^2]=\left(\sum_r x_r^2P(X=x_r)\right)-\mu^2$$
-]
-.panel[.panel-name[Esempio]
+
+
+### Esempio
 
 ```{r, include=FALSE}
 var_otiti <- sum(
@@ -472,51 +347,34 @@ La varianza della variabile casuale episodi di otite è pari a
 
 $$0^2(0.129)+\ldots+6^2(0.017)-2.038^2=`r round(var_otiti,3)`$$
 
-]
+:::
 
-]
+## Distribuzione **[binomiale]{.orange}** {.text-center .inverse .center background-color="#03A696"}
 
+- Struttura e **[distribuzione]{.orange}**
 
-
-
-
-
-
-
-
-
----
-class: inverse, middle
-
-# .center[Distribuzione **.orange[binomiale]**]
-
-- Struttura e **.orange[distribuzione]**
-
-- Valore **.orange[atteso]** e **.orange[varianza]**
+- Valore **[atteso]{.orange}** e **[varianza]{.orange}**
 
 - Grafici
 
----
-# .orange[Binomiale]: struttura
+## [Binomiale]{.orange}: struttura
 
-Una variabile binomiale rappresenta la **.orange[quantità]** di esiti **positivi** di un possibile esperimento con due soli risultati possibili (**dicotomico**), che possono avvenire con date **.orange[probabilità costanti]** (complementari a 1).
+Una variabile binomiale rappresenta la **[quantità]{.orange}** di esiti **positivi** di un possibile esperimento con due soli risultati possibili (**dicotomico**), che possono avvenire con date **[probabilità costanti]{.orange}** (complementari a 1).
 
 Si caratterizza quindi da:
 
 - $n$ prove **indipendenti**
 
-- **due** possibili outcomes di ogni prova, .orange[successo] o .orange[insuccesso]
+- **due** possibili outcomes di ogni prova, [successo]{.orange} o [insuccesso]{.orange}
 
-- la probabilità di successo, $p$ è .orange[costante] in ogni prova (quella di insuccesso è pari a $1-p = q$)
+- la probabilità di successo, $p$ è [costante]{.orange} in ogni prova (quella di insuccesso è pari a $1-p = q$)
 
 Ed è utile per:
 
 - valutare la probabilità di $k$ successi in $n$ prove
 
+## [Coefficiente binomiale]{.orange}
 
-
----
-# .orange[Coefficiente binomiale]
 Il numero di combinazioni di $n$ oggetti presi $k$ alla volta è pari a
 
 $$_nC_k=\binom{n}{k}=\frac{n(n-1)\ldots (n-k+1)}{k!}$$
@@ -526,14 +384,12 @@ moltiplicando numeratore e denominatore per $(n-k)!$ si ottiene
 $$_nC_k=\binom{n}{k}=\frac{n!}{k!(n-k)!}$$
 
 >Note:
+
 - $n! := n\cdot (n-1)\cdot \cdots \cdot (2)\cdot 1$
 - convenzione: $\binom{n}{0}=1$
 - vale la simmetria: $\binom{n}{k}=\binom{n}{n-k}$
 
-
-
----
-## Distribuzione .orange[Binomiale]: probabilità
+## Distribuzione [Binomiale]{.orange}: probabilità
 
 la probabilità che $k$ successi avvengano in $n$ prove, con le rimanenti $n-k$ tutte insuccessi è pari a
 
@@ -545,8 +401,7 @@ $$P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}$$
 
 che è la distribuzione di probabilità binomiale
 
----
-### Coefficiente binomiale: .orange[Triangolo di Tartaglia]
+## Coefficiente binomiale: [Triangolo di Tartaglia]{.orange}
 
 ```{r, echo=FALSE, out.width="80%", fig.cap="http://matematicamente.it/6981-algebra-1-manuale-completo-per-il-primo-anno-della-secondaria-di-secondo-grado"}
 
@@ -554,13 +409,11 @@ knitr::include_graphics("img/Algebra1_12_fig003.svg.png")
 
 ```
 
+## Distribuzione [Binomiale]{.orange}
 
+::: {.panel-tabset}
 
----
-# Distribuzione .orange[Binomiale]
-
-.panelset[
-.panel[.panel-name[Descrizione]
+### Descrizione
 
 La distribuzione binomiale, di parametri $n$ e $p$ si indica come
 
@@ -569,9 +422,9 @@ $$P(X=k)=\binom{n}{k}p^k(1-p)^{n-k} \:\:\:\: k=0,1,\ldots,n$$
 vale la simmetria
 
 $$P(X=k)=\binom{n}{k}p^k(1-p)^{n-k} = \binom{n}{n-k}p^{n-k}(1-p)^{k}=P(X=n-k)$$
-]
 
-.panel[.panel-name[Esempio]
+
+### Esempio
 
 Quale è la probabilità di ottenere 2 bambini maschi da 5 nati se la probabilità di un maschio è pari a 0.51, indipendente dal sesso dei bambini nati prima?
 ```{r, include=FALSE}
@@ -593,16 +446,9 @@ pbinom(q = 2, size = 5, prob = 0.51) -
   pbinom(q = 1, size = 5, prob = 0.51)
 ```
 
+:::
 
-]
-
-
-]
-
-
-
----
-## .orange[Binomiale]: Valore atteso e varianza
+## [Binomiale]{.orange}: Valore atteso e varianza
 
 Per definizione si ha che: $E(S) = \sum_{k} k\,P(S=k)$
 
@@ -619,12 +465,14 @@ Che, essendo le prove indipendenti, possiamo calcolare più semplicemente come
 $$var(S) = var\left(\sum_{i=1}^n X_i\right) = \sum_{i=1}^nvar(X_i) =^*  \sum_{i=1}^npq=npq$$
 <br>
 
-.right[*= Se interessa, dimostrarlo per esercizio.]
 
+::: {.text-right}
 
+*= Se interessa, dimostrarlo per esercizio.
 
----
-## .orange[Singolo esperimento]: grafico
+:::
+
+## [Singolo esperimento]{.orange}: grafico
 
 ```{r, echo=FALSE, out.width="60%"}
 
@@ -642,11 +490,7 @@ ggplot(db, aes(x = p, y = pq)) +
 
 ```
 
-
-
-
----
-## .orange[10 esperimenti]: grafico
+## [10 esperimenti]{.orange}: grafico
 
 ```{r, echo=FALSE, out.width="60%"}
 n <- 10
@@ -669,28 +513,15 @@ ggplot(db, aes(x = k, y = `P(S=k)`,fill = p)) +
 
 ```
 
+## Distribuzione di **[Poisson]{.orange}** {.text-center .inverse .center background-color="#03A696"}
 
+- Struttura e **[distribuzione]{.orange}**
 
-
-
-
-
-
----
-class: inverse, middle
-
-# .center[Distribuzione di **.orange[Poisson]**]
-
-- Struttura e **.orange[distribuzione]**
-
-- Valore **.orange[atteso]** e **.orange[varianza]**
+- Valore **[atteso]{.orange}** e **[varianza]{.orange}**
 
 - Grafici
 
-
-
----
-# .orange[Poisson]: struttura
+## [Poisson]{.orange}: struttura
 
 Dato un intervallo di tempo $\Delta t$ molto piccolo, si ha che
 
@@ -699,18 +530,15 @@ Dato un intervallo di tempo $\Delta t$ molto piccolo, si ha che
 $$P(\mbox{1 evento})\sim \lambda\,\Delta t$$
 
 
-
 - la probabilità di osservare $0$ eventi nell'intervallo $\Delta t$ è approssimativamente $1-\lambda\Delta t$
 
 - la probabilità di osservare più di un evento nell'intervallo è sostanzialmente $0$
 
-- .orange[Stazionarietà]: il numero _atteso_ di eventi per unità di tempo ( $\lambda$ ) è lo stesso in tutto l'intervallo di tempo $t$ (no trend)
+- [Stazionarietà]{.orange}: il numero _atteso_ di eventi per unità di tempo ( $\lambda$ ) è lo stesso in tutto l'intervallo di tempo $t$ (no trend)
 
-- .orange[Indipendenza]: se si verifica un evento nell'intervallo di tempo considerato, questo non modifica la probabilità di osservarne un secondo nell'intervallo successivo.
+- [Indipendenza]{.orange}: se si verifica un evento nell'intervallo di tempo considerato, questo non modifica la probabilità di osservarne un secondo nell'intervallo successivo.
 
-
----
-## Distribuzione di .orange[Poisson]: probabilità
+## Distribuzione di [Poisson]{.orange}: probabilità
 
 La probabilità di osservare $k$ eventi in un periodo di tempo $t$ per una variabile aleatoria di Poisson di tasso $\lambda$ (parametro $\mu=\lambda t$) è pari a
 
@@ -718,11 +546,11 @@ $$P(X=k)=\frac{e^{-\mu}\mu^k}{k!} \:\:\:\: k=0,1,2,\ldots$$
 
 dove $e$, pari a circa 2.71828, è la costante di Nepero.
 
----
-## Distribuzione di .orange[Poisson]
+## Distribuzione di [Poisson]{.orange}
 
-.panelset[
-.panel[.panel-name[Esempio]
+::: {.panel-tabset}
+
+### Esempio
 
 Si supponga che il numero di morti attribuite alla febbre tifoide in un anno sia una Poisson con parametro $\mu = 4.6$. Si cerca la probabilità su un periodo di 6 e 3 mesi che avvengono, per esempio,  zero eventi o almeno 6
 
@@ -737,9 +565,9 @@ Su 3 mesi si ha allora che $\mu=4.6 \times 0.25 = `r round(4.6*0.25,3)`$
 
 $$P(X=0) = e^{-1.15} = `r round(ppois(0, lambda=1.15),3)` \:\:\:\: P(X\geq6) = 1-P(X<6)=`r round(1-sum(dpois(0:5, lambda=4.6*0.25)),3)`$$
 
-]
 
-.panel[.panel-name[Grafici]
+### Grafici
+
 ```{r, echo=FALSE, out.width="60%"}
 lambda = 4.6
 mesi = c(3, 6)
@@ -762,23 +590,22 @@ ggplot(db, aes(n, `P(X=n)`, fill = mu)) +
   ) +
   theme_bw()
 ```
-]
-]
 
+:::
 
-
----
-# .orange[Poisson]: valore atteso e varianza
+## [Poisson]{.orange}: valore atteso e varianza
 
 Per una distribuzione di Poisson con parametro $\mu$, la media e la varianza sono entrambe pari a $\mu$
 
-
----
-# .orange[Poisson]: Polio
+## [Poisson]{.orange}: Polio
 
 Si consideri numero di morti per polio negli anni 1968-76
 
-.pull-left[
+
+:::: {.columns}
+
+::: {.column width="48%"}
+
 ```{r,echo=FALSE}
 tibble(
 Anno = c(68, 69, 70, 71, 72, 73, 74, 75 , 76),
@@ -786,19 +613,20 @@ Morti = c(24, 13, 7, 18, 2, 10, 3, 9, 16)
 ) |> 
   knitr::kable()
 ```
-]
 
-.pull-right[
+:::
+
+::: {.column width="48%"}
+
 La media è pari a $11.3$ e la varianza a $51.5$.
 
 Probabilmente vi è un effetto di clustering rispetto a certi periodi temporali e a certe aree geografiche.
 
-]
+:::
 
+::::
 
----
-# .orange[Poisson]: cibo cancerogeno
-
+## [Poisson]{.orange}: cibo cancerogeno
 
 In uno studio sul possibile effetto cancerogeno di EDB (etilene dibromide), osservando la mortalità di 161 operai bianchi, occupati presso due fabbriche, Texas e Michigan, 1940-1975 [Ott _et al._, B J Ind Med, 1980:37, 163-8]
 
@@ -809,12 +637,9 @@ Si cerca quindi la probabilità di osservare almeno 7 morti  secondo una Poisson
 $$\begin{align}P(X \geq 7) &= 1 - P(X\leq 6)\\& = 1-\left[(e^{-5.8}5.8^0/0!)+ \ldots + (e^{-5.8}5.8^6/6!)\right]\\& = `r round(1-sum(dpois(0:6, lambda=5.8)),3)`\end{align}$$
 
 
-
 per cui le morti non sembrano in eccesso in questo gruppo di lavoratori.
 
-
----
-# .orange[Poisson]: Approssimazione
+## [Poisson]{.orange}: Approssimazione
 
 La distribuzione Binomiale con $n$ grande e $p$ piccolo può essere accuratamente approssimata da una distribuzione di Poisson con parametro $\mu=np$
 
@@ -844,11 +669,7 @@ tibble(
   kable()
 ```
 
-
-
-
----
-# .orange[Poisson]: tumore al seno
+## [Poisson]{.orange}: tumore al seno
 
 Si studia la suscettibilità genetica per il cancro alla mammella, trovando che 4 donne su 1000 tra i 40 e i 49 anni le cui madri hanno avuto un cancro al seno, lo sviluppano nell'anno successivo di vita.
 
@@ -864,26 +685,16 @@ $$\begin{split}P(X\geq 4)& = 1- [e^{-1}1^0/0! + \ldots + e^{-1}1^3/3!]\\&= 1- 0.
 
 Un valore sufficientemente piccolo da far pensare ad una suscettibilità genetica.
 
-
-
----
-class: inverse, middle
-
-## .orange[Sondaggio]
+## [Sondaggio]{.orange} {.inverse .center background-color="#03A696"}
 
 Per me: [Discrete](https://app.wooclap.com/events/STATMEDDISCRETE/0)
 
-Per voi: <img src="img/bit.ly_statmed-sondaggio-discrete.png", width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-discrete](https://bit.ly/statmed-sondaggio-discrete)
+Per voi: <img src="img/bit.ly_statmed-sondaggio-discrete.png" width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-discrete](https://bit.ly/statmed-sondaggio-discrete)
 
-
-
-
----
-class: middle, hide-count, inverse
-
-# .center[.orange[Break]]
+## [Break]{.orange} {.text-center .center .inverse background-color="#03A696"}
 
 Consigli: 
+
 - alzarsi
 - sgranchirsi
 - guardare _lontano_ (rilassare gli occhi)
@@ -895,33 +706,26 @@ countdown(minutes = 15, warn_when = 3, play_sound = TRUE,
           left = "65%", bottom = "5%")
 ```
 
-
-
-
-
----
-class: inverse, middle
-
-# .center[Modello probabilistico per variabili **.orange[continue]**]
+## Modello probabilistico per variabili **[continue]{.orange}** {.text-center .inverse .center background-color="#03A696"}
 
 - **densità**
 
----
-# .orange[Modelli **continui**]
+## [Modelli **continui**]{.orange}
 
-La distribuzione di .orange[densità] di probabilità di una variabile casuale $X$ è una **curva** tale per cui:
+La distribuzione di [densità]{.orange} di probabilità di una variabile casuale $X$ è una **curva** tale per cui:
 
 - l'**area** sotto la curva, **compresa tra due punti** $a$ e $b$ è pari alla probabilità che la variabile casuale $X$ assuma valore nell'intervallo $(a,b)$
 
 - l'**area totale** sotto la curva è pari ad 1.
 
----
-# .orange[Esempi]
+## [Esempi]{.orange}
 
-.panelset[
-.panel[.panel-name[Ipertensione]
+::: {.panel-tabset}
 
-<small>
+### Ipertensione
+
+::: {.small}
+
 Densità di probabilità per la DBP in un uomo di età 35-44. A (90-95), B (95-100), C (> 100) sono rispettivamente Borderline, Moderatamente iperteso e Iperteso.
 
 ```{r, echo=FALSE, fig.height=6, fig.width=12, fig.align='center', message=FALSE, warning=FALSE}
@@ -943,9 +747,10 @@ text(103,0.0015,"C",cex=2)
 ```
 
 
-</small>
-]
-.panel[.panel-name[Trigliceridi]
+:::
+
+
+### Trigliceridi
 
 La distribuzione dei trigliceridi è asimmetrica, con skewness positivo
 
@@ -965,21 +770,19 @@ plotGamma(2, 0.015)
 
 ```
 
+:::
 
-]
-]
-
-
----
-# .orange[Probabilità **cumulativa**]
+## [Probabilità **cumulativa**]{.orange}
 
 La distribuzione di probabilità cumulativa di una variabile casuale $X$ valutata in un punto $a$ è pari alla probabilità che $X$ prenda valori $\leq a$.
 
 Rappresenta l'area sotto la curva alla sinistra di $a$
 
 
-### Esempio
-<small>
+#### Esempio
+
+::: {.small}
+
 La distribuzione cumulativa del peso alla nascita (once) valutata in 88 once è pari a $P(X\leq 88)$ ed è pari all'area sotto la curva a sinistra di 88 once.
 Questo valore è usato come limite per possibili outcomes sfavorevoli nel primo anno di vita
 
@@ -995,10 +798,9 @@ text(67,0.0005,"P(X < 88)",cex=1.2)
 
 ```
 
-</small>
+:::
 
----
-# Valore .orange[atteso] e .orange[varianza]
+## Valore [atteso]{.orange} e [varianza]{.orange}
 
 L’**atteso** $E(X)$ (o $\mu$) è la media dei valori di $X$: somma pesata nel discreto, integrale nel continuo
 
@@ -1020,9 +822,7 @@ I **percentili** generalizzano quest’idea, ovvero $P(X\leq p_k)=\frac{k}{100}$
 
 <img src="img/mode-med-mean-normal-dist.png"/>
 
----
-
-# .orange[Parametri] vs .orange[Statistiche]
+## [Parametri]{.orange} vs [Statistiche]{.orange}
 
 | Simbolo | Nome                   | Popolazione             | Campione                    |
 |---------|------------------------|-------------------------|-----------------------------|
@@ -1034,43 +834,36 @@ I **percentili** generalizzano quest’idea, ovvero $P(X\leq p_k)=\frac{k}{100}$
 
 - **Statistiche** ($\bar{x}$, $s^2$, $s$): stime calcolate dai dati campionari.
 
-
----
-class: inverse, middle
-
-## .orange[Sondaggio]
+## [Sondaggio]{.orange} {.inverse .center background-color="#03A696"}
 
 Per me: [Continue](https://app.wooclap.com/events/STATMEDCONTINUE/0)
 
-Per voi: <img src="img/bit.ly_statmed-sondaggio-continue.png", width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-continue](https://bit.ly/statmed-sondaggio-continue)
+Per voi: <img src="img/bit.ly_statmed-sondaggio-continue.png" width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-continue](https://bit.ly/statmed-sondaggio-continue)
 
+## Distribuzione **[normale]{.orange}** {.text-center .inverse .center background-color="#03A696"}
 
+:::: {.columns}
 
+::: {.column width="48%"}
 
----
-class: inverse, middle
-
-# .center[Distribuzione **.orange[normale]**]
-
-.pull-left[
 - **localizzazione**
 - **forma**
 - **simmetria**
 - **percentili**
 - **trasformazioni**
-]
-.pull-right[
+
+:::
+
+::: {.column width="48%"}
+
 <img src="img/not-normal.png"/>
-[Artwork by @allison_horst](https://twitter.com/allison_horst)
-]
+[Artwork by \@allison_horst](https://twitter.com/allison_horst)
 
+:::
 
+::::
 
-
-
----
-# Distribuzione .orange[Normale]: definizione
-
+## Distribuzione [Normale]{.orange}: definizione
 
 $$f(x) = \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2\sigma^2}(x-\mu)^2} \:\:\:\: -\infty<x<\infty$$
 
@@ -1099,9 +892,7 @@ axis(1, at=1, expression(mu+sigma),cex.axis=1.5)
 
 La distribuzione normale è definita dalla sua distribuzione di densità di probabilità:
 
-
----
-# Distribuzione Normale:<br>.orange[parametri]
+## Distribuzione Normale:<br>[parametri]{.orange}
 
 $$f(x) = \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2\sigma^2}(x-\mu)^2} \:\:\:\: -\infty<x<\infty$$
 
@@ -1109,8 +900,7 @@ Una distribuzione normale con media $\mu$ e varianza $\sigma^2$ si indica come $
 
 I suoi parametri modellano la locazione e la forma della distribuzione
 
----
-# Distribuzione Normale: .orange[localizzazione]
+## Distribuzione Normale: [localizzazione]{.orange}
 
 $$f(x) = \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2\sigma^2}(x-\mu)^2} \:\:\:\: -\infty<x<\infty$$
 
@@ -1122,7 +912,6 @@ y1   <- dnorm(x,mean=-3, sqrt(1))
 
 plot(x,y, type="l", lwd=2,xlim=c(-6,3), col="blue",ylab=expression(Density),xlab = "Normal distribution",xaxt="n")
 points (x, y1, type="l", lwd=2, col="blue")
-
 
 
 lines(c(-1,-1),c(-0.1, dnorm(-1,mean=0, sqrt(1))),lty=2)
@@ -1137,10 +926,7 @@ axis(1, at=-4, expression(mu[1]-sigma),cex.axis=1.5)
 
 ```
 
-
-
----
-# Distribuzione Normale:<br>.orange[forma]
+## Distribuzione Normale:<br>[forma]{.orange}
 
 $$f(x) = \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2\sigma^2}(x-\mu)^2} \:\:\:\: -\infty<x<\infty$$
 
@@ -1161,7 +947,6 @@ lines(c(sqrt(0.4),sqrt(0.4)),c(-0.1, dnorm(sqrt(0.4),mean=0, sqrt(0.4))),lty=2)
 lines(c(-sqrt(0.4),-sqrt(0.4)),c(-0.1, dnorm(-sqrt(0.4),mean=0, sqrt(0.4))),lty=2)
 
 
-
 axis(1, at=0, expression(mu),cex.axis=1.5)
 axis(1, at=-1, expression(mu-sigma[2]),cex.axis=1.5)
 axis(1, at=1, expression(mu+sigma[2]),cex.axis=1.5)
@@ -1169,10 +954,7 @@ axis(1, at=-sqrt(0.4), expression(mu-sigma[1]),cex.axis=1.5, padj=1.2)
 axis(1, at=sqrt(0.4), expression(mu+sigma[1]),cex.axis=1.5, padj=1.2)
 ```
 
-
----
-# Distribuzione Normale .orange[Standard]
-
+## Distribuzione Normale [Standard]{.orange}
 
 Una distribuzione normale con media 0 e varianza 1 si indica come distribuzione normale standard $N(0,1)$ (o anche solo **Standard**)
 
@@ -1187,10 +969,7 @@ $$f(x) = \frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}x^2} \:\:\:\: -\infty<x<\infty$$
 >
 > $$f(x) = \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2\sigma^2}(x-\mu)^2} \:\:\:\: -\infty<x<\infty$$
 
-
----
-# Distribuzione Standard: .orange[simmetria]
-
+## Distribuzione Standard: [simmetria]{.orange}
 
 La distribuzione $N(0,1)$ è simmetrica intorno allo $0$, avendo $f(x) = f(-x)$
 ```{r, echo=FALSE, fig.height=5, fig.width=12, fig.align='center', message=FALSE, warning=FALSE}
@@ -1204,11 +983,6 @@ lines(c(0,0),c(-0.1, dnorm(0,mean=0, sqrt(1))),lty=2)
 
 ```
 
-
-
-
-
----
 ## Distribuzione Standard: valori notevoli
 
 - circa il 68% dell'area cade tra $-1$ e $1$
@@ -1228,7 +1002,6 @@ axis(1, at=-2.576,-2.576,cex.axis=1.5,col.axis="green")
 
 > (Spoiler: percentili?...)
 
----
 ## Distribuzione Standard: cumulativa
 
 La distribuzione cumulativa per $N(0, 1)$ è indicata da $\Phi(x) = P(Z\leq x)$
@@ -1270,8 +1043,7 @@ text(1.64,0.02,round(pnorm(1.96,mean=0, sqrt(1)),3),cex = 1.5)
 
 ```
 
----
-# Distribuzione cumulativa Standard: applicazione
+## Distribuzione cumulativa Standard: applicazione
 
 La cumulata $\Phi(x)$ può aiutare a calcolare le probabilità di una $N(0,1)$
 
@@ -1281,8 +1053,7 @@ $$\Phi(1.96) = 0.975$$
 
 $$\Phi(1) = 0.8413$$
 
----
-### Distribuzione Standard: strategia simmetrica
+## Distribuzione Standard: strategia simmetrica
 
 Per la simmetria si ha che
 
@@ -1310,18 +1081,16 @@ polygon(cord.x,cord.y,col="grey90")
 
 ```
 
-
----
-### Strategia: esempio
+## Strategia: esempio
 
 Per calcolare $P(Z \leq -1.96)$ si ha che:
 
 
 $$\Phi(-1.96) = P(Z\geq 1.96) = 1 - P(Z\leq 1.96) = 0.0250$$
 
----
-### Normale Standard: .orange[FVC]
-<small>
+## Normale Standard: [FVC]{.orange}
+
+::: {.small}
 
 La **capacità vitale forzata** (FVC) è una misura di funzionalità polmonare ed è misurata dalla quantità d'aria che una persona riesce ad espellere in 6 secondi.
 
@@ -1336,19 +1105,20 @@ $$P(Z \leq -1.5) = P(Z \geq 1.5) = 0.0668$$
 Ovvero, possiamo ipotizzare che circa il 7% dei bambini siano in condizioni polmonari compromesse
 
 
+::: {.panel-tabset}
 
-.panelset[
-.panel[.panel-name[Problema]
+### Problema
+
 Di prassi, un bambino sarà considerato con un sistema polmonare _normale_ se presenta una FVC entro un range di 1.5 deviazioni standard dalla media standardizzata.
 
 > Con quale probabilità potremmo incontrare bambini con un sistema polmonare _normale_?
 
-]
-.panel[.panel-name[Soluzione]
+
+### Soluzione
+
 $$\begin{split}P(-1.5 \leq Z \leq 1.5)& = 1 - (P(Z \leq -1.5) + P(Z \geq 1.5))\\& = 1 - 2*P(Z \leq -1.5)\\& = 1 - 2 * 0.0668\\& = 0.8664\end{split}$$
 
-]
-]
+:::
 
 
 ```{r, echo = FALSE}
@@ -1357,14 +1127,13 @@ countdown(minutes = 2, warn_when = 30, play_sound = TRUE,
 ```
 
 
+::: {.small}
 
-<small>
+:::
 
+:::
 
-
-
----
-# Distribuzione Normale: .orange[percentili]
+## Distribuzione Normale: [percentili]{.orange}
 
 Il $100p$-esimo percentile di una normale standard è indicato con $z_p$ ed è definito dalla relazione
 
@@ -1391,26 +1160,22 @@ text(0,0.2,expression(Area==p),cex = 1.5)
 
 ```
 
-
-
----
-# Percentili Standard: .orange[calcolo]
+## Percentili Standard: [calcolo]{.orange}
 
 Per trovare $z_p$ si deve trovare l'area $p$ e quindi trovare il valore che corrisponde a tale area.
 
-Se $p < 0.5$ ( $z_p < 0$ ) è utile usare la .orange[simmetria della distribuzione] per ottenere $z_p = -z_{1-p}$, dove $1-p > 0.5$ ( $z_{1-p} > 0$ ) può essere spesso ottenuto dai valori comuni/noti come per esempio:
+Se $p < 0.5$ ( $z_p < 0$ ) è utile usare la [simmetria della distribuzione]{.orange} per ottenere $z_p = -z_{1-p}$, dove $1-p > 0.5$ ( $z_{1-p} > 0$ ) può essere spesso ottenuto dai valori comuni/noti come per esempio:
 
 $$z_{.975}=1.96 \:\:\:\: z_{.95}=1.645 \:\:\:\: z_{.5}=0 \:\:\:\: z_{.025}=-1.96$$
 
+## Normale Standard: [trasformazioni]{.orange}
 
+::: {.panel-tabset}
 
----
-## Normale Standard: .orange[trasformazioni]
-
-.panelset[
-.panel[.panel-name[Analiticamente]
+### Analiticamente
 
 **Se**: 
+
 - $X \sim N(\mu, \sigma^2)$
 - $Z = \frac{X-\mu}{\sigma}$
 
@@ -1421,8 +1186,8 @@ $$z_{.975}=1.96 \:\:\:\: z_{.95}=1.645 \:\:\:\: z_{.5}=0 \:\:\:\: z_{.025}=-1.96
 
 $$\begin{split}P(a \leq X \leq b)& = P \left ( \frac{a-\mu}{\sigma} \leq Z \leq \frac{b-\mu}{\sigma}\right )\\& = P \left (Z \leq \frac{b-\mu}{\sigma}\right ) - P \left (Z \leq \frac{a-\mu}{\sigma}\right )\\& = \Phi[(b-\mu)/\sigma]-\Phi[(a-\mu)/\sigma]\end{split}$$
 
-]
-.panel[.panel-name[Graficamente]
+
+### Graficamente
 
 ```{r, echo=FALSE, fig.height=7, fig.width=12, fig.align='center', message=FALSE, warning=FALSE}
 par(mfrow=c(2,1))
@@ -1466,26 +1231,24 @@ polygon(cord.x,cord.y,col="grey90",lty=2)
 lines(c(0,0),c(-0.1,dnorm(0,mean=0, sqrt(1))),lty=2)
 
 ```
-]
-]
 
+:::
 
+## Caso di studio: [ipertensione]{.orange}
 
----
-# Caso di studio: .orange[ipertensione]
+::: {.panel-tabset}
 
-.panelset[
-.panel[.panel-name[Problema]
+### Problema
+
 Una persona borderline per ipertensione è definita come una DBP compresa tra 90 e 95 mm Hg. Nei maschi tra i 35 ed i 44 anni la DBP è distribuita normalmente con media 80 e varianza 144
 Si vuole la probabilità di essere borderline per un maschio in quella classe di età
-]
 
-.panel[.panel-name[Soluzione]
+
+### Soluzione
 
 $$\begin{split}P(90 \leq X \leq 95)& = P \left ( \frac{90-80}{12} \leq Z \leq \frac{95-80}{12}\right )\\& = \Phi[1.25]-\Phi[0.83]\\& = 0.8944-0.7967\\& = 0.098\end{split}$$
-]
 
-]
+:::
 
 
 ```{r, echo = FALSE}
@@ -1493,55 +1256,46 @@ countdown(minutes = 2, warn_when = 30, play_sound = TRUE,
           left = "65%", bottom = "5%")
 ```
 
+## Caso di studio: [diametri del tronco]{.orange}
 
+::: {.panel-tabset}
 
+### Problema
 
-
-
----
-# Caso di studio: .orange[diametri del tronco]
-.panelset[
-.panel[.panel-name[Problema]
 Si supponga che i diametri di alcuni arbusti siano distribuiti normalmente con media 8 cm e deviazione standard 2 cm.
 
 La probabilità per un arbusto di avere un diametro eccezionalmente grande ( $> 12 cm$ ) è pari a?
 
-]
 
-.panel[.panel-name[Soluzione]
+### Soluzione
 
 $$\begin{split}P(X > 12)& = 1 - P \left ( Z < \frac{12-8}{2}\right )\\& = 1-\Phi[`r (12-8)/2`]\\& = 1-`r round(pnorm(2),3)`\\& = `r round(1-pnorm(2),3)`
 \end{split}$$
-]
 
-]
+:::
+
 
 ```{r, echo = FALSE}
 countdown(minutes = 2, warn_when = 30, play_sound = TRUE,
           left = "65%", bottom = "5%")
 ```
 
+## Caso di studio: [flusso ematico cerebrale]{.orange}
 
+::: {.panel-tabset}
 
+### Problema
 
-
-
-
----
-# Caso di studio: .orange[flusso ematico cerebrale]
-
-.panelset[
-.panel[.panel-name[Problema]
 Nella popolazione generale il flusso ematico cerebrale (CBF) è distribuito normalmente con media 75 e deviazione standard 17. Un paziente è definito a rischio di stroke se ha una CBF $<$ 40.
 
 La probabilità di essere a rischio è pari a?
-]
 
-.panel[.panel-name[Soluzione]
+
+### Soluzione
+
 $$\begin{split}P(X < 40)& = P \left ( Z < \frac{40-75}{17}\right )\\&= \Phi[`r round((40-75)/17,3)`]\\& = 1-\Phi[`r round(-((40-75)/17),3)`]\\& = 1-`r round(pnorm(-((40-75)/17)),3)`\\& = `r round(1-pnorm(-((40-75)/17)),3)`\end{split}$$
-]
 
-]
+:::
 
 
 ```{r, echo = FALSE}
@@ -1549,29 +1303,24 @@ countdown(minutes = 2, warn_when = 30, play_sound = TRUE,
           left = "65%", bottom = "5%")
 ```
 
+## Caso di studio: [glaucoma]{.orange}
 
+::: {.panel-tabset}
 
-
-
----
-# Caso di studio: .orange[glaucoma]
-
-
-.panelset[
-.panel[.panel-name[Problema]
+### Problema
 
 Il glaucoma è una malattia che si presenta con una pressione intraoculare eccessiva. Nella popolazione generale, la pressione intraoculare è normale con media 16 mm Hg e deviazione standard 3 mm Hg.
 
 Se il range di normalità è tra i 12 ed i 20 mm Hg, la probabilità di essere normali è pari a?
-]
 
-.panel[.panel-name[Soluzione]
+
+### Soluzione
+
 $$\begin{split}P(12 < X < 20)& = P \left (\frac{12-16}{3}< Z < \frac{20-16}{3}\right )\\& = \Phi[4/3]-\Phi[-4/3]\\& = \Phi[1.33]-(1-\Phi[1.33])\\& = `r round(pnorm(1.33)-(1-pnorm(1.33)),3)`\end{split}$$
-]
 
 
+### grafico
 
-.panel[.panel-name[grafico]
 ```{r, include=FALSE}
 zp_high <- (20 - 16) / 3
 zp_low <- (12 - 16) / 3
@@ -1596,8 +1345,6 @@ axis(1, at=-4/3,expression(12),cex.axis=1.5)
 text(0,0.1,expression(P(paste(12<X)<20)==0.816),cex = 1.5)
 
 
-
-
 plot(x,y, type="l", lwd=2,xlim=c(-3,3), col="blue",ylab=expression(f(x)),main = " Standard Normal distribution",xaxt="n")
 axis(1, at=4/3,expression(1.33),cex.axis=1.5)
 axis(1, at=0,expression(0),cex.axis=1.5)
@@ -1605,8 +1352,8 @@ axis(1, at=-4/3,expression(-1.33),cex.axis=1.5)
 text(0,0.1,expression(P(paste(-1.33<Z)<1.33)==0.816),cex = 1.5)
 
 ```
-]
-]
+
+:::
 
 
 ```{r, echo = FALSE}
@@ -1614,37 +1361,20 @@ countdown(minutes = 2, warn_when = 30, play_sound = TRUE,
           left = "65%", bottom = "5%")
 ```
 
-
-
-
-
-
-
-
----
-class: inverse, middle
-
-## .orange[Sondaggio]
+## [Sondaggio]{.orange} {.inverse .center background-color="#03A696"}
 
 Per me: [Normale](https://app.wooclap.com/events/STATMEDNORMALE/0)
 
-Per voi: <img src="img/bit.ly_statmed-sondaggio-normale.png", width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-normale](https://bit.ly/statmed-sondaggio-normale)
+Per voi: <img src="img/bit.ly_statmed-sondaggio-normale.png" width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-normale](https://bit.ly/statmed-sondaggio-normale)
+
+## **[Approssimazioni]{.orange}** alla distribuzione normale<br><br>(OPZIONALE - no esame) {.text-center .inverse .center background-color="#03A696"}
 
 
+## Approssimazione alla Normale: Binomiale
 
+::: {.panel-tabset}
 
----
-class: inverse, middle
-
-# .center[**.orange[Approssimazioni]** alla distribuzione normale<br><br>(OPZIONALE - no esame)]
-
-
----
-# Approssimazione alla Normale: Binomiale
-
-
-.panelset[
-.panel[.panel-name[Approssimazione]
+### Approssimazione
 
 Se $X$ è una variabile aleatoria binomiale di parametri $n$ (numero di prove) e $p$ (probabilità di successo), allora $P(a \leq X\leq b)$ è approssimata dall'area sotto una curva normale $N(np, npq)$ tra $a-1/2$ e $b+1/2$.
 
@@ -1657,11 +1387,7 @@ Unica eccezione il caso $P(X=0)$ e $P(X=n)$ in cui queste probabilità sono appr
 > $$npq \geq 5$$
 
 
-
-]
-
-.panel[.panel-name[Grafico]
-
+### Grafico
 
 ```{r, echo=FALSE, fig.height=6, fig.width=12, fig.align='center', message=FALSE, warning=FALSE}
 x <- seq(0,100,by=1)
@@ -1669,7 +1395,6 @@ y <- dbinom(x,100,0.01)
 y1 <- dbinom(x,100,0.99)
 y2 <- dbinom(0:5,5,.3)
 y3 <- dbinom(0:25,25,.4)
-
 
 
 par(mfrow=c(2,2))
@@ -1680,17 +1405,13 @@ plot(0:25,y3,type ="h",main="p=0.4, n=25",ylab=expression(P(X==x)),lwd=2,col="bl
 
 ```
 
-]
-]
+:::
 
+## Approssimazione alla Normale: somma di v.a.
 
+Se $N$ è grande, allora la somma di $N$ v.a. indipendenti e con la stessa distribuzione (con varianza finita) è [approssimativamente normale]{.orange}
 
----
-# Approssimazione alla Normale: somma di v.a.
-
-Se $N$ è grande, allora la somma di $N$ v.a. indipendenti e con la stessa distribuzione (con varianza finita) è .orange[approssimativamente normale]
-
-### Esempio
+#### Esempio
 
 Una v.a. di Bernoulli è una v.a. Binomiale con parametro $p$ ed $n = 1$
 
@@ -1701,29 +1422,29 @@ $$E(X)=E(\sum_{i=1}^n X_i)= p+\ldots+p=np$$
 $$\mbox{var}(X)=\mbox{var}(\sum_{i=1}^n X_i)=pq+\ldots+pq=npq \:\:\:\: \mbox{(prove indipendenti)}$$
 Ovvero attesa e varianza della binomiale (si distribuisce approssimativamente come una $N(np, npq)$)
 
+## Approssimazione alla Normale: esempio
 
+::: {.panel-tabset}
 
----
-# Approssimazione alla Normale: esempio
-
-.panelset[
-.panel[.panel-name[Problema]
+### Problema
 
 **Si supponga che**:
+
 - $X$ sia Binomiale di parametro $n=25$ e $p=0.4$
 
 **Si calcoli**:  
+
 - $P(7 \leq X \leq 12)$
 
-]
-.panel[.panel-name[Soluzione]
+
+### Soluzione
 
 Si ha che $np = 25 * 0.4 = 10$, $npq = 25 * 0.4 * 0.6 = 6$, quindi la distribuzione approssimante è una normale $N(10,6)$. Si vuole allora calcolare l'area sotto la curva da $6.5$ a $12.5$.
 
 $$\begin{split}P(6.5 \leq Y \leq 12.5)& = \Phi\left(\frac{12.5-10}{\sqrt{6}} \right)-\Phi\left(\frac{6.5-10}{\sqrt{6}} \right)\\& = \Phi(1.02)-\Phi(-1.43)\\& = \Phi(1.02)-[1-\Phi(1.43)]\\& = \Phi(1.02)+\Phi(1.43)-1\\& = 0.8461 + 0.9236 - 1\\& = 0.770\end{split}$$
-]
 
-.panel[.panel-name[Grafico]
+
+### Grafico
 
 ```{r, include=FALSE}
 n <- 25
@@ -1761,9 +1482,7 @@ text(20,0.15,expression(Y%~%N(10, 6)),cex = 2)
 
 ```
 
-]
-
-]
+:::
 
 
 ```{r, echo = FALSE}
@@ -1771,21 +1490,16 @@ countdown(minutes = 3, warn_when = 30, play_sound = TRUE,
           left = "65%", bottom = "5%")
 ```
 
+## Approssimazione alla Normale: esempio 2
 
+::: {.panel-tabset}
 
----
-# Approssimazione alla Normale: esempio 2
-
-.panelset[
-.panel[.panel-name[Problema]
+### Problema
 
 Si supponga di voler calcolare la probabilità che di 100 granulociti, ce ne siano tra 50 e 75 neutrofili, dove la probabilità che una cellula sia un neutrofilo è pari a 0.6.
 
 
-
-]
-
-.panel[.panel-name[Soluzione]
+### Soluzione
 
 La probabilità esatta è
 
@@ -1796,10 +1510,8 @@ che può essere approssimata da una distribuzione normale di parametro
 $np=100 * 0.6 = 60$ e $npq = 100 * 0.6 * 0.4 = 24$ tra 49.5 e 75.5.
 
 $$\begin{split}\Phi\left(\frac{75.5-60}{\sqrt{24}} \right)-\Phi\left(\frac{49.5-60}{\sqrt{24}} \right)& = \Phi(3.16)-\Phi(-2.14)\\& = \Phi(3.16)+\Phi(2.14)-1\\& = 0.9992 + 0.9838 - 1\\& = 0.983\end{split}$$
-]
 
-
-]
+:::
 
 
 ```{r, echo = FALSE}
@@ -1807,27 +1519,18 @@ countdown(minutes = 3, warn_when = 30, play_sound = TRUE,
           left = "65%", bottom = "32%")
 ```
 
+## Approssimazione alla Normale: esempio 3
 
+::: {.panel-tabset}
 
-
-
-
-
-
-
----
-# Approssimazione alla Normale: esempio 3
-
-.panelset[
-.panel[.panel-name[Problema]
+### Problema
 
 Si definisca una persona come anormale se il numero di neutrofili è superiore a 75 o inferiore a 50.
 
 Stimare la percentuale di soggetti anormali
 
-]
 
-.panel[.panel-name[Soluzione]
+### Soluzione
 
 La percentuale di soggetti anormali può essere stimata con la approssimazione normale
 
@@ -1837,13 +1540,8 @@ $$\Phi\left(\frac{49.5-60}{\sqrt{24}} \right)=\Phi(-2.14)=1-0.9838=0.016$$
 $$0.0008 + 0.016 = 0.017$$
 ovvero circa l'1.7% dei soggetti.
 
-]
 
-
-
-
-
-.panel[.panel-name[Grafico]
+### Grafico
 
 ```{r, include=FALSE}
 np <- 100 * 0.6 # 60
@@ -1885,9 +1583,8 @@ cord.y <- c(0,dnorm(seq(49.5,40,-0.01),mean=60, sqrt(24)),0)
 polygon(cord.x,cord.y,col="grey90")
 
 ```
-]
 
-]
+:::
 
 
 ```{r, echo = FALSE}
@@ -1895,54 +1592,11 @@ countdown(minutes = 3, warn_when = 30, play_sound = TRUE,
           left = "65%", bottom = "4%")
 ```
 
-
-
-
-
-
-
-
----
-class: middle, center, hide-count, inverse
-
-# .orange[link al _vostro_ cloud:]
+## [link al _vostro_ cloud:]{.orange} {.center .text-center .inverse background-color="#03A696"}
 
 [https://bit.ly/statmed-cl-rstudio](https://bit.ly/statmed-cl-rstudio)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
----
-class: inverse
-
-# Risorse utili
+## Risorse utili {.inverse background-color="#03A696"}
 
 - [**RStudio Cloud**](https://bit.ly/statmed-cl-rstudio): [https://bit.ly/statmed-cl-rstudio](https://bit.ly/statmed-cl-rstudio) gratis per voi per esplorare RStudio, le sue funzionalità, e allenarvi con R (link di iscrizione valido fino alla fine del corso). NOTA: a vostra scelta, è utilizzabile anche come _supporto_ durante l'esame.
 
@@ -1958,28 +1612,32 @@ class: inverse
 - [Perché n − 1 nella formula della deviazione standard
 campionaria?](http://rdossena.altervista.org/Articoli/Book-Perch%E9%20n-1.pdf) di [Riccardo Dossena](http://rdossena.altervista.org) Traduzione dell'articolo **Book, S.A.**: _Why n − 1 in the formula for the sample standard deviation?_, The Two-Year College Mathematics Journal 10(5), 330–333 (1979
 
+## {.inverse .text-center .center background-color="#03A696"}
 
----
-class: inverse, center, middle, hide-count
+::: {.quote-box}
+
+::: {.text-left}
+
+_Mathematical conventions are just that, conventions. They differ by field of mathematics. Don’t ask us why **matrix rows** **[are numbered down]{.orange}** but **graphs** **[are numbered up]{.orange}** the **y axis**, nor why **x [comes before]{.orange} y** but **row [before]{.orange} column**. But the matrix layout has always seemed illogical to me._
+
+:::
 
 
-.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
-.left[
-_Mathematical conventions are just that, conventions. They differ by field of mathematics. Don’t ask us why **matrix rows** **.orange[are numbered down]** but **graphs** **.orange[are numbered up]** the **y axis**, nor why **x .orange[comes before] y** but **row .orange[before] column**. But the matrix layout has always seemed illogical to me._
-]
+::: {.text-right}
 
-.tr[
 —Brian D. Ripley<br>08/2004 - R-help<br>
-]
-]
+
+:::
+
+:::
+
 
 <br>
 
 
-# **.orange[Grazie]** per l'attenzione!
+### **[Grazie]{.orange}** per l'attenzione! {.big}
 
 ... e buona settimana.
-
 
 
 Diapositive: [bit.ly/statmed-cl-corsi](https://bit.ly/statmed-cl-corsi)
@@ -1991,7 +1649,5 @@ Diapositive: [bit.ly/statmed-cl-corsi](https://bit.ly/statmed-cl-corsi)
 [`r fontawesome::fa("github")`](https://github.com/corradolanera)
 [`r fontawesome::fa("twitter")`](https://twitter.com/corradolanera)
 [`r fontawesome::fa("telegram")`](https://telegram.me/CorradoLanera)
-**@CorradoLanera** |
+**\@CorradoLanera** |
 [`r fontawesome::fa("calendar-check")` ](https://bit.ly/statmed-cl-ricevimento) [**bit.ly/statmed-cl-ricevimento**](https://bit.ly/statmed-cl-ricevimento)
-
-

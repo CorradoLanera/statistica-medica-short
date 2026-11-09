@@ -1,6 +1,7 @@
 project:
   type: website
   output-dir: docs
+  post-render: dev/fix_mathml_accents.py
   render:
     - index.qmd
     - intro.qmd
@@ -8,6 +9,9 @@ project:
     - slides/00-intro_and_info.qmd
     - slides/01-r_rstudio.qmd
     - slides/02-descrittive.qmd
+    - slides/03-probabilita.qmd
+    - slides/04-distribuzioni.qmd
+    - slides/05-ic_p.qmd
     - esercizi/index.qmd
     - esercizi/*.qmd
     - corsi/*.qmd
