@@ -23,7 +23,7 @@ project:
 
 website:
   title: "Statistica Medica — Corrado Lanera"
-  description: "Luree per le Professioni Sanitarie, Università di Padova"
+  description: "Lauree per le Professioni Sanitarie, Università di Padova"
   site-url: https://CorradoLanera.github.io/statistica-medica-short
   repo-url: https://github.com/CorradoLanera/statistica-medica-short
   repo-actions: [edit, issue]

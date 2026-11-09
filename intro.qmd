@@ -16,7 +16,7 @@ Ogni esercizio è pensato per favorire la comprensione intuitiva dei concetti, p
 Gran parte degli esercizi sono tratti da testi di riferimento, articoli scientifici o dataset reali. Si veda la bibliografia per i riferimenti completi.
 
 ::: callout-note
-Se fate o avete eserczi che desiderate venganon aggiunti all'elenco, contattatemi pure!
+Se fate o avete esercizi che desiderate vengano aggiunti all'elenco, contattatemi pure!
 :::
 
 ------------------------------------------------------------------------
@@ -40,8 +40,8 @@ Gli esercizi nelle slide sono tutti svolti, si suggerisce agli studenti di prova
 - Cerca di **interpretare il significato clinico** dei risultati numerici: la statistica non è solo calcolo, ma anche comprensione del contesto.\
 - Ricorda che, in ambito didattico, se viene posto un problema vuol dire che:
   - si può risolvere
-  - si può risolvere con gli strumenti che hai a disposizione Dunque, provare a individuare e scrivere bene i dati, considerare le formule affrontate e riportate nella sezione appena precedente e ragionare su come poter adattare e sfruttare gfi strumenti proposti, coi dati forniti, per risolvere il problema.
-- Confronta i tuoi risultati con quelli discussi a lezione; sopratutto, discutili con i colleghi.\
+  - si può risolvere con gli strumenti che hai a disposizione. Dunque, provare a individuare e scrivere bene i dati, considerare le formule affrontate e riportate nella sezione appena precedente e ragionare su come poter adattare e sfruttare gli strumenti proposti, coi dati forniti, per risolvere il problema.
+- Confronta i tuoi risultati con quelli discussi a lezione; soprattutto, discutili con i colleghi.\
 - \[OPZIONALE\] Se utilizzi R, prova a **riprodurre le analisi passo per passo**, verificando come cambiano i risultati al variare dei dati.
 
 ------------------------------------------------------------------------
@@ -79,9 +79,9 @@ Per segnalare errori, suggerimenti o proposte di miglioramento, contattatemi pur
 ::: callout-note
 In ambito calcolatrici scientifiche, "più costosa" non significa necessariamente “migliore”. Un prezzo maggiore spesso corrisponde semplicemente a più funzioni (o un prodotto meno diffuso commercialmente) o a un display più evoluto, ma nella maggior parte dei casi molte di quelle funzioni non verranno mai usate. Per la gran parte dei calcoli matematici e statistici di base (e non solo) che ci serviranno, bastano poche operazioni fondamentali: aritmetica base, parentesi, memorie, potenze, radici, logaritmi, e l’esponenziale naturale $e^x$. Dalla mia esperienza, se una calcolatrice è in grado di fare $e^x$ (o ha addirittura un tasto dedicato per $e$, allora ha tutte le funzioni che servono e, tranne una eccezione (unica che ho trovato: Casio FX-Junior Plus), se una calcolatrice non è in grado di fare $e^x$ allora non ha tutte le funzioni base elencate qui sopra).
 
-I modelli raccolti in questa selezione non rappresentano “le migliori in assoluto”, ma piuttosto una mia panoramica con la filosofia alla base della scelta che punti alla chiarezza e dell’usabilità: lo strumento deve essere un supporto al ragionamento, non un ostacolo.
+I modelli raccolti in questa selezione non rappresentano “le migliori in assoluto”, ma piuttosto una mia panoramica con la filosofia alla base della scelta che punti alla chiarezza e all’usabilità: lo strumento deve essere un supporto al ragionamento, non un ostacolo.
 
-Tutte le calcolatrici di questa lista — e molte altre analoghe di altre marche — vanno bene per i nostri scopi. Se vi serve sapere se la "vostra" va bene, cercate se potete fare $e^x$, se si, va bene di sicuro, se no, probabilmente no.
+Tutte le calcolatrici di questa lista — e molte altre analoghe di altre marche — vanno bene per i nostri scopi. Se vi serve sapere se la "vostra" va bene, cercate se potete fare $e^x$, se sì, va bene di sicuro, se no, probabilmente no.
 :::
 
 ::: {style="overflow-x: auto;"}
@@ -105,5 +105,5 @@ Se dovete comprarla, e vi serve solo per l'esame, spendete meno possibile, non s
 :::
 
 ::: callout-tip
-Per *tutti i giorni* (non potete usare app all'esame...) una calcolatrice sceintifica molto valida che funziona su browser e anche come app da cellulare è CalcES (https://mathda.com/calculator/it/), gratuita e open source.
+Per *tutti i giorni* (non potete usare app all'esame...) una calcolatrice scientifica molto valida che funziona su browser e anche come app da cellulare è CalcES (https://mathda.com/calculator/it/), gratuita e open source.
 :::
