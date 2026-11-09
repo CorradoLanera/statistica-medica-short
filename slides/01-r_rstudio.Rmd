@@ -1,7 +1,7 @@
 ---
 title: "Statistica Medica"
 subtitle: "R e RStudio"
-author: "[CorradoLanera](www.CorradoLanera.it)"
+author: "[CorradoLanera](https://www.CorradoLanera.it)"
 date: "YYYY-MM-DD (last update: `r Sys.Date()`)"
 institute: "[Unità di Biostatistica, Epidemiologia e Salute Pubblica](https://www.unipd-ubep.it/) --- University of Padova"
 output: 
@@ -68,7 +68,7 @@ use_logo("img/bit.ly_statmed-cl-corsi.png")
 
 ```{r style-share-again, echo=FALSE}
 style_share_again(
-  share_buttons = c("twitter", "linkedin", "pocket")
+  share_buttons = c("twitter", "linkedin")
 )
 ```
 
@@ -166,9 +166,9 @@ class: inverse, hide-count
 
 Nella prossima ora vi fornirò un'introduzione all'uso di **R**, tramite **RStudio**. Vedremo **.orange[cosa sono]**, **.orange[a cosa servono]** (in cosa si differenziano) e come installarli.
 
-L'obiettivo principale è quello di fornirvi gli elementi **base** per poter (se volete, vi fa piacere, o pensate possa esservi utile\*) seguire _anche_ la fase di codifica degli esempi interattivi ed esercitazioni che vi mostrerò nelle future lezioni. Questo, oltre a poterli utilizzare (seppur non richiesto!!) per svolgere l'esame.\*\*
+L'obiettivo principale è quello di fornirvi gli elementi **base** per poter (se volete, vi fa piacere, o pensate possa esservi utile\*) seguire _anche_ la fase di codifica degli esempi interattivi ed esercitazioni che vi mostrerò nelle future lezioni.
 
-Inoltre, ho messo a disposizione (**gratuitamente**) un ambiente di lavoro RStudio Cloud attivabile da ciascuno di voi (vedremo come), in modo che possiate usare R/Rstudio senza doverli installare, e con/su qualunque dispositivo vi troviate a operare.\*\*\*
+Inoltre, ho messo a disposizione (**gratuitamente**) un ambiente di lavoro Posit Cloud attivabile da ciascuno di voi (vedremo come), in modo che possiate usare R/RStudio senza doverli installare, e con/su qualunque dispositivo vi troviate a operare.\*\*
 
 
 <br><br><br><br>
@@ -177,9 +177,7 @@ Inoltre, ho messo a disposizione (**gratuitamente**) un ambiente di lavoro RStud
 .right[
 \* La mia opinione in merito, chiaramente, è: _si_ `r emo::ji("wink")`.
 
-\*\* Una tale scelta **non comporterà valutazioni** di merito né demerito, e in alcun caso influenzerà la valutazione finale (se non in misura di un loro utilizzo corretto o errato nel produrre i risultati richiesti).
-
-\*\*\* Volendo, anche su smartphone e tablet, seppur piuttosto scomodo!
+\*\* Volendo, anche su smartphone e tablet, seppur piuttosto scomodo!
 ]
 
 </small>
@@ -282,10 +280,10 @@ più! Ottimo quindi anche come calcolatrice potenziata!
 
 7 * 3  # product
 
-abs(-2)  # absoulte value
+abs(-2)  # absolute value
 
 3^2  # power
-sqrt(9)  # squared root
+sqrt(9)  # square root
 ```
 </small>
 </small>
@@ -299,7 +297,7 @@ sqrt(9)  # squared root
 ---
 # .orange[Vettori]
 
-La struttura base dei dati in R è il vettore: sequenze di numeri
+La struttura base dei dati in R è il vettore: sequenze di valori dello stesso tipo (numeri, testo, logici)
 
 ```{r vectors}
 c(1, 2, 3, 7)  # concatenate
@@ -372,7 +370,7 @@ c(TRUE, FALSE, NA) & TRUE  #<<
 ---
 ## .orange[Dataframe]
 
-- ogni riga è una osservazione (es: un paziente, o una visita)
+- ogni riga è un'osservazione (es: un paziente, o una visita)
 - ogni colonna è una variabile (es: il genere, o l'età)
 
 ```{r df}
@@ -421,8 +419,8 @@ ggplot(
     y = "Altezza becco (mm)",
     colour = "Specie",
     title = "Relazioni tra dimensioni del becco per specie di pinguino",
-    subtitle = "Ogni riquadro riporta i dati dei un isola differente.",
-    caption = "Dati: Palmer Archipelago (Antarctica) penguin."
+    subtitle = "Ogni riquadro riporta i dati di un'isola differente.",
+    caption = "Dati: Palmer Archipelago (Antarctica) penguin data."
   ) +
   theme_bw()
 
@@ -462,13 +460,13 @@ class: inverse
 
 # Risorse utili
 
-- [**RStudio Cloud**](https://bit.ly/statmed-cl-rstudio): [bit.ly/statmed-cl-rstudio](https://bit.ly/statmed-cl-rstudio) gratis per voi per esplorare RStudio, le sue funzionalità, e allenarvi con R (link di iscrizione valido fino alla fine del corso). NOTA: a vostra scelta, è utilizzabile anche come _supporto_ durante l'esame.
+- [**Posit Cloud**](https://bit.ly/statmed-cl-rstudio): [bit.ly/statmed-cl-rstudio](https://bit.ly/statmed-cl-rstudio) gratis per voi per esplorare RStudio, le sue funzionalità, e allenarvi con R (link di iscrizione valido fino alla fine del corso).
 
 - [Base R workshop for Data Science](https://bit.ly/ubep-rws-slide): [bit.ly/ubep-rws-slide](https://bit.ly/ubep-rws-slide) - materiale base per un workshop di 16 ore su R (4 ore x 4 giorni), con esempi, codice, esercizi, ambiente di lavoro. (NO modelli, NO (bio-)statistica)
 
-- [**RStudio primers**](https://rstudio.cloud/learn/primers) ambiente gratuito dentro RStudio Cloud per l'apprendimento delle basi di analisi di dati con R tramite tutorial interattivi. Una volta registrati, oltre all'accesso al _nostro_ spazio di lavoro, avete accesso libero anche ai _Primers_.
+- [**RStudio primers**](https://posit.cloud/learn/primers) ambiente gratuito dentro Posit Cloud per l'apprendimento delle basi di analisi di dati con R tramite tutorial interattivi. Una volta registrati, oltre all'accesso al _nostro_ spazio di lavoro, avete accesso libero anche ai _Primers_.
 
-- [**R 4 Data Science**](https://r4ds.had.co.nz/): libro gratuito (on-line) di [**Hadley Wickham**](http://hadley.nz/) e [**Garrett Grolemund**](https://rstudio.com/speakers/garrett-grolemund/)
+- [**R 4 Data Science**](https://r4ds.hadley.nz/): libro gratuito (on-line) di [**Hadley Wickham**](http://hadley.nz/), **Mine Çetinkaya-Rundel** e **Garrett Grolemund**
 
 - [**Advanced R**](https://adv-r.hadley.nz/): libro gratuito (on-line) di [**Hadley Wickham**](http://hadley.nz/); suggeriti capitolo 1-6 (che non sono "Advanced" ma semplicemente "Correct").
 
@@ -513,7 +511,7 @@ _If you think the only acceptable performance is the ".orange[perfect performanc
 
 
 
-Diapositive: [bit.ly/statmed-cl-corsi](https://bit.ly/statmed-cl-corsi)
+Diapositive: [bit.ly/cl-statmed](https://bit.ly/cl-statmed)
 
 
 [`r fontawesome::fa("link")`](https://www.unipd-ubep.it/) [**www.unipd-ubep.it**](https://www.unipd-ubep.it/) | 
