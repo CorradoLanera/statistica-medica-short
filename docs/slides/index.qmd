@@ -11,6 +11,10 @@ listing:
     - 03-probabilita.qmd
     - 04-distribuzioni.qmd
     - 05-ic_p.qmd
-    - "tavole_a_negpos.pdf"
-    - "tavole_abcd_pos.pdf"
+    - path: tavole_a_negpos.pdf
+      title: "Tavole statistiche"
+      subtitle: "Normale standardizzata, t di Student, Chi-quadrato, F (PDF)"
+    - path: tavole_abcd_pos.pdf
+      title: "Tavole statistiche (Rosner)"
+      subtitle: "Appendice di Fundamentals of Biostatistics (PDF, in inglese)"
 ---
