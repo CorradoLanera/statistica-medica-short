@@ -1,3 +1,7 @@
+---
+tbl-colwidths: [15, 70, 15]
+---
+
 ## CdL Infermieristica, III anno, I semestre, a.a. 2026-27 - Rovigo
 
 | **Giorno** | **Tema** | **Diapositive** |
@@ -9,7 +13,5 @@
 | 2026-12-02 | Probabilità |  |
 | 2026-12-09 | Distribuzioni | [Distribuzioni](../slides/04-distribuzioni.html) |
 | 2026-12-16 | Inferenza (IC e p-value) | [Inferenza](../slides/05-ic_p.html) |
-
-: {tbl-colwidths="\[15,70,15\]"}
 
 Moodle: [bit.ly/infermieristica-26-moodle](https://bit.ly/infermieristica-26-moodle)

@@ -1,3 +1,7 @@
+---
+tbl-colwidths: [15, 70, 15]
+---
+
 ## CdL Ortottica, I anno, I semestre, a.a. 2026-27 - Padova
 
 | **Giorno** | **Tema** | **Diapositive** |
