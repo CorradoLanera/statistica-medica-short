@@ -9,7 +9,7 @@ listing:
     - Modulo: "Probabilità"
       Link: "[https://bit.ly/cl-statmed-ex-probabilita](https://bit.ly/cl-statmed-ex-probabilita)"
     - Modulo: "Distribuzioni"
-      Link: "[https://bit.ly/cl-statmed-ex-distribuzioni](https://bit.ly/cl-statmed-ex-distribuzioni)"
+      Link: "[https://bit.ly/cl-statmed-distribuzioni](https://bit.ly/cl-statmed-distribuzioni)"
     - Modulo: "Inferenza"
       Link: "[https://bit.ly/cl-statmed-ex-inferenza](https://bit.ly/cl-statmed-ex-inferenza)"
 ---
