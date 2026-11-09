@@ -163,12 +163,17 @@ Durante lo svolgimento è **[concesso]{.orange}** l'utilizzo di:
  - **tavole statistiche cartacee**
  - **calcolatrice scientifica NON programmabile**, né grafica né simbolica, che calcoli l'esponenziale (e<sup>x</sup>); smartphone, tablet e computer NON sono ammessi<br>(Casio 220 Plus II (~9 euro), Texas Instruments TI-30XA (~13 euro), Sharp EL-501T (~17 euro))
 
-Punteggi:
+:::
+
+## [Esame finale: punteggi]{.orange}
+
+::: {.small}
 
 - Una risposta corretta varrà 3 punti.
 - Sarà presente una sola risposta corretta in ciascuna domanda.
 - Una risposta errata sommerà negativamente sul totale in misura pari al punteggio della domanda diviso il numero di opzioni sbagliate possibili (= 3 / (numero risposte - 1)).
-- Sarà presente una domanda "bonus" che varrà 6 punti (portando il totale a 36). Tale domanda avrà valore (positivo o negativo che sia) solamente dopo aver raggiunto i 18/30 con le altre domande, e in alcun caso potrà dare o togliere la sufficienza.
+- Sarà presente una domanda "bonus" da 6 punti (totale 36), che conta solo dopo aver raggiunto 18/30 con le altre: se giusta aggiunge 6 punti, se sbagliata toglie punti come le altre, ma senza scendere sotto 18. Non può quindi né dare né togliere la sufficienza.
+- I punteggi si arrotondano sempre per eccesso (per esempio 17,25 diventa 18).
 
 Il punteggio totale dell'esame sarà dunque di 36/36. Superato totalizzandone
 almeno 18/30. La lode è assegnata con un totale di almeno 31/36 punti.
