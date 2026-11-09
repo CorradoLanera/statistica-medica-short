@@ -2,12 +2,13 @@
 
 | **Giorno** | **Tema** | **Diapositive** |
 |-----------------------:|:-----------------------|:-----------------------|
-| da definire | Intro e info | [Intro e info](../slides/00-intro_and_info.html) |
-| da definire | R e RStudio (opzionale) | [R e RStudio](../slides/01-r_rstudio.html) |
-| da definire | Descrittive | [Descrittive](../slides/02-descrittive.html) |
-| da definire | Probabilità | [Probabilità](../slides/03-probabilita.html) |
-| da definire | Distribuzioni | [Distribuzioni](../slides/04-distribuzioni.html) |
-| da definire | Inferenza (IC e p-value) | [Inferenza](../slides/05-ic_p.html) |
+| 2026-11-11 | Intro e info | [Intro e info](../slides/00-intro_and_info.html) |
+| 2026-11-11 | R e RStudio (opzionale) | [R e RStudio](../slides/01-r_rstudio.html) |
+| 2026-11-11 | Descrittive | [Descrittive](../slides/02-descrittive.html) |
+| 2026-11-18 | Descrittive/Probabilità | [Probabilità](../slides/03-probabilita.html) |
+| 2026-12-02 | Probabilità |  |
+| 2026-12-09 | Distribuzioni | [Distribuzioni](../slides/04-distribuzioni.html) |
+| 2026-12-16 | Inferenza (IC e p-value) | [Inferenza](../slides/05-ic_p.html) |
 
 : {tbl-colwidths="\[15,70,15\]"}
 
