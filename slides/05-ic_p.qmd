@@ -361,7 +361,12 @@ abline(v = 112, lty = 2, col = "grey40")
 mtext(expression(mu), side = 1, at = 112, line = 2, cex = 1.3)
 segments(m - h, y, m + h, y, lwd = 2)
 points(m, y, pch = 19)
-text(m, y + 0.3, sprintf("%.1f", m))
+# fondo bianco sotto le medie, perché la linea di mu non le attraversi
+lab <- sprintf("%.1f", m)
+w <- strwidth(lab) / 2 + 0.4
+hh <- strheight(lab) * 0.7
+rect(m - w, y + 0.3 - hh, m + w, y + 0.3 + hh, col = "white", border = NA)
+text(m, y + 0.3, lab)
 text(m - h, y - 0.3, sprintf("%.1f", m - h), cex = 0.9)
 text(m + h, y - 0.3, sprintf("%.1f", m + h), cex = 0.9)
 axis(2, at = y, labels = paste("Campione", 1:5), las = 1, tick = FALSE)
