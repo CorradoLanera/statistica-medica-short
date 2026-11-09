@@ -150,9 +150,8 @@ In [**Moodle**]{.orange}, trovate:
   
 > La settimana precedente le sessioni d'esame NON è attivo il ricevimento.
 
-## [Esame finale]{.orange}
+## [Esame finale]{.orange} {.smaller}
 
-::: {.small}
 
 L'esame finale sarà composto da 10 **esercizi a risposta multipla** dal valore di 3 punti ciascuno, e **non avrà durata prestabilita** (durata prevista per lo svolgimento 2 ore).
 
@@ -163,17 +162,13 @@ Durante lo svolgimento è **[concesso]{.orange}** l'utilizzo di:
  - **tavole statistiche cartacee**
  - **calcolatrice scientifica NON programmabile**, né grafica né simbolica, che calcoli l'esponenziale (e<sup>x</sup>); smartphone, tablet e computer NON sono ammessi<br>(Casio 220 Plus II (~9 euro), Texas Instruments TI-30XA (~13 euro), Sharp EL-501T (~17 euro))
 
-:::
-
-## [Esame finale: punteggi]{.orange}
-
-::: {.small}
+Punteggi:
 
 - Una risposta corretta varrà 3 punti.
 - Sarà presente una sola risposta corretta in ciascuna domanda.
 - Una risposta errata sommerà negativamente sul totale in misura pari al punteggio della domanda diviso il numero di opzioni sbagliate possibili (= 3 / (numero risposte - 1)).
 - Sarà presente una domanda "bonus" da 6 punti (totale 36), che conta solo dopo aver raggiunto 18/30 con le altre: se giusta aggiunge 6 punti, se sbagliata toglie punti come le altre, ma senza scendere sotto 18. Non può quindi né dare né togliere la sufficienza.
-- I punteggi si arrotondano sempre per eccesso (per esempio 17,25 diventa 18).
+- I punteggi si arrotondano sempre per eccesso.
 
 Il punteggio totale dell'esame sarà dunque di 36/36. Superato totalizzandone
 almeno 18/30. La lode è assegnata con un totale di almeno 31/36 punti.
@@ -183,7 +178,7 @@ almeno 18/30. La lode è assegnata con un totale di almeno 31/36 punti.
 > - punteggio tra 14 e 17 punti, per arrivare a 18/30 (non di più)
 > - punteggio tra 27 e 30 punti, per arrivare fino a 30/30, con eventuale lode.
 
-:::
+
 
 ## [Riconoscimenti]{.orange}
 

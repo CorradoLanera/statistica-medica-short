@@ -1090,9 +1090,8 @@ margin-right: 0; }
 <p>La settimana precedente le sessioni d’esame NON è attivo il ricevimento.</p>
 </blockquote>
 </section>
-<section id="esame-finale" class="slide level2">
+<section id="esame-finale" class="slide level2 smaller">
 <h2><span class="orange">Esame finale</span></h2>
-<div class="small">
 <p>L’esame finale sarà composto da 10 <strong>esercizi a risposta multipla</strong> dal valore di 3 punti ciascuno, e <strong>non avrà durata prestabilita</strong> (durata prevista per lo svolgimento 2 ore).</p>
 <p>Durante lo svolgimento è <strong><span class="orange">concesso</span></strong> l’utilizzo di:</p>
 <ul>
@@ -1101,17 +1100,13 @@ margin-right: 0; }
 <li><strong>tavole statistiche cartacee</strong></li>
 <li><strong>calcolatrice scientifica NON programmabile</strong>, né grafica né simbolica, che calcoli l’esponenziale (e<sup>x</sup>); smartphone, tablet e computer NON sono ammessi<br>(Casio 220 Plus II (~9 euro), Texas Instruments TI-30XA (~13 euro), Sharp EL-501T (~17 euro))</li>
 </ul>
-</div>
-</section>
-<section id="esame-finale-punteggi" class="slide level2">
-<h2><span class="orange">Esame finale: punteggi</span></h2>
-<div class="small">
+<p>Punteggi:</p>
 <ul>
 <li>Una risposta corretta varrà 3 punti.</li>
 <li>Sarà presente una sola risposta corretta in ciascuna domanda.</li>
 <li>Una risposta errata sommerà negativamente sul totale in misura pari al punteggio della domanda diviso il numero di opzioni sbagliate possibili (= 3 / (numero risposte - 1)).</li>
 <li>Sarà presente una domanda “bonus” da 6 punti (totale 36), che conta solo dopo aver raggiunto 18/30 con le altre: se giusta aggiunge 6 punti, se sbagliata toglie punti come le altre, ma senza scendere sotto 18. Non può quindi né dare né togliere la sufficienza.</li>
-<li>I punteggi si arrotondano sempre per eccesso (per esempio 17,25 diventa 18).</li>
+<li>I punteggi si arrotondano sempre per eccesso.</li>
 </ul>
 <p>Il punteggio totale dell’esame sarà dunque di 36/36. Superato totalizzandone almeno 18/30. La lode è assegnata con un totale di almeno 31/36 punti.</p>
 <blockquote>
@@ -1121,7 +1116,6 @@ margin-right: 0; }
 <li>punteggio tra 27 e 30 punti, per arrivare fino a 30/30, con eventuale lode.</li>
 </ul>
 </blockquote>
-</div>
 </section>
 <section id="riconoscimenti" class="slide level2">
 <h2><span class="orange">Riconoscimenti</span></h2>
@@ -2370,7 +2364,10 @@ window.QuartoSupport = function () {
       function fit(s) {
         if (!s || s.dataset.fitted) return;
         var imgs = Array.prototype.filter.call(s.querySelectorAll("img"), function (i) {
-          return !i.closest(".title-logos");
+          // solo le immagini visibili e fuori dai riquadri a schede: le schede si
+          // compongono dopo, e prima risultano tutte aperte una sotto l'altra
+          return !i.closest(".title-logos") && !i.closest(".panel-tabset") &&
+            i.getBoundingClientRect().height > 0;
         });
         if (!imgs.length) return;
         var H = Reveal.getConfig().height;
@@ -2378,7 +2375,7 @@ window.QuartoSupport = function () {
         var top = s.getBoundingClientRect().top;
         var bottom = 0;
         s.querySelectorAll("*").forEach(function (e) {
-          if (e.closest(".countdown")) return;
+          if (e.closest(".countdown") || e.closest(".panel-tabset")) return;
           var r = e.getBoundingClientRect();
           if (r.height) bottom = Math.max(bottom, (r.bottom - top) / sc);
         });
