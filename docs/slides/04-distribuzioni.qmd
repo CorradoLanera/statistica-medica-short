@@ -98,7 +98,7 @@ calcolare [media]{.orange} e [varianza]{.orange}, [percentili]{.orange}
 
 :::
 
-<br><br>
+<br>
 
 > Un ringraziamento speciale a Cristiana Vettori e a Mariasole Rizzi per
 l'aiuto e il supporto logistico e amministrativo che mi è stato offerto,
