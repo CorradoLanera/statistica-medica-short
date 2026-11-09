@@ -2,14 +2,12 @@
 
 | **Giorno** | **Tema** | **Diapositive** |
 |-----------------------:|:-----------------------|:-----------------------|
-| 2025-09-25 | Intro e info | [Intro e info](../slides/00-intro_and_info.html) |
-| 2025-09-25 | R e RStudio | [R e RStudio](../slides/01-r_rstudio.html) |
-| 2025-09-25 | Descrittive (intro, notazioni, centralità) | [Descrittive](../slides/02-descrittive.html) |
-| 2025-09-29 | Descrittive (Variabilità, grafici) |  |
-| 2025-10-01 | Probabilità (definizioni, operazioni e teoremi fondamentali, sens, spec, vpp, vpn, Bayes) | [Probabilità](../slides/03-probabilita.html) |
-| 2025-10-03 | Distribuzioni (massa di probabilità, valore atteso; binomiale, poisson) | [Distribuzioni](../slides/04-distribuzioni.html) |
-| 2025-10-09 | Distribuzioni (normale, standard) |  |
-| 2025-10-23 | Inferenza, IC (e p-value) | [Inferenza](../slides/05-ic_p.html) |
+| da definire | Intro e info | [Intro e info](../slides/00-intro_and_info.html) |
+| da definire | R e RStudio (opzionale) | [R e RStudio](../slides/01-r_rstudio.html) |
+| da definire | Descrittive | [Descrittive](../slides/02-descrittive.html) |
+| da definire | Probabilità | [Probabilità](../slides/03-probabilita.html) |
+| da definire | Distribuzioni | [Distribuzioni](../slides/04-distribuzioni.html) |
+| da definire | Inferenza (IC e p-value) | [Inferenza](../slides/05-ic_p.html) |
 
 : {tbl-colwidths="\[15,70,15\]"}
 
