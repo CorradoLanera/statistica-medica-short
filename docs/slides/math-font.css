@@ -1,0 +1,16 @@
+/* Font matematico incorporato nelle slide: Latin Modern Math (GUST Font
+   License), lo stesso aspetto di LaTeX/MathJax, uguale su PC, telefono e
+   tablet anche offline. Senza, il browser usa il font matematico di sistema,
+   che cambia da un dispositivo all'altro (e su Windows sposta le barre). */
+@font-face {
+  font-family: "Latin Modern Math";
+  src: url("fonts/latinmodern-math.otf") format("opentype");
+}
+.reveal math {
+  font-family: "Latin Modern Math", math;
+}
+/* barre e accenti (\bar, \hat): un po' di distanza dalla lettera, altrimenti
+   sulla X maiuscola la barra si confonde con la lettera */
+.reveal mover[accent="true"] > mo:last-child {
+  padding-bottom: 0.12em;
+}

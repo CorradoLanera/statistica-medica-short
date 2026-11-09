@@ -358,6 +358,8 @@ def convert_slide(raw):
     # grassetto con __x__: Pandoc non lo riconosce attaccato ad altro grassetto
     text = re.sub(r"(?<![\w_])__(?=\S)(.+?)(?<=\S)__(?![\w_])", r"**\1**", text)
     text = text.replace("****", "")
+    # "** testo**": remark lo prende per grassetto, Pandoc no (spazio dopo **)
+    text = re.sub(r"(^|[\s(])\*\*[ \t]+(\S[^*\n]*?\S)\*\*", r"\1**\2**", text, flags=re.M)
     text = fix_nested_indent(text)
     text = blank_before_lists(text)
     text = space_fences(text)
@@ -444,7 +446,8 @@ def front_matter(yaml_text, subtitle):
         "    auto-stretch: false",
         "    html-math-method: mathml",
         "    pdf-max-pages-per-slide: 4",
-        "    include-after-body: print-tabs.html",
+        "    include-after-body: [print-tabs.html, fit-images.html]",
+        "    css: math-font.css",
         "    fig-width: 7",
         "    fig-height: 5",
         "    menu:",

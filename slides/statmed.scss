@@ -104,7 +104,7 @@ $code-block-font-size: 0.75em;
 
 // immagini alte (out.width 100% in 4:3): non oltre il fondo della slide
 .reveal section img {
-  max-height: 570px;
+  max-height: 520px;
   object-fit: contain;
 }
 
@@ -143,4 +143,8 @@ html.reveal-print .reveal .panel-tabset .tab-content > div {
 .reveal math mtd,
 .reveal math mtable {
   math-style: normal;
+}
+// due formule in display una sotto l'altra, nello stesso paragrafo: un po' d'aria
+.reveal math[display="block"] {
+  margin: 0.35em 0;
 }

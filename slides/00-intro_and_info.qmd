@@ -23,7 +23,8 @@ format:
     auto-stretch: false
     html-math-method: mathml
     pdf-max-pages-per-slide: 4
-    include-after-body: print-tabs.html
+    include-after-body: [print-tabs.html, fit-images.html]
+    css: math-font.css
     fig-width: 7
     fig-height: 5
     menu:

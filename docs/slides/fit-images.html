@@ -1,0 +1,41 @@
+<script>
+// Se il contenuto di una slide va oltre il fondo (per esempio due grafici
+// uno sotto l'altro, nati per il 4:3 di xaringan), riduce le immagini quanto
+// basta perche' tutto stia sopra il piè di pagina. Gira sulla slide corrente,
+// e su tutte in modalità stampa.
+(function () {
+  function fit(s) {
+    if (!s || s.dataset.fitted) return;
+    var imgs = Array.prototype.filter.call(s.querySelectorAll("img"), function (i) {
+      return !i.closest(".title-logos");
+    });
+    if (!imgs.length) return;
+    var H = Reveal.getConfig().height;
+    var sc = Reveal.getScale() || 1;
+    var top = s.getBoundingClientRect().top;
+    var bottom = 0;
+    s.querySelectorAll("*").forEach(function (e) {
+      if (e.closest(".countdown")) return;
+      var r = e.getBoundingClientRect();
+      if (r.height) bottom = Math.max(bottom, (r.bottom - top) / sc);
+    });
+    var excess = bottom - (H - 35);
+    if (excess > 0) {
+      var each = excess / imgs.length;
+      imgs.forEach(function (i) {
+        var h = i.getBoundingClientRect().height / sc;
+        i.style.maxHeight = Math.max(80, h - each) + "px";
+      });
+    }
+    s.dataset.fitted = "1";
+  }
+  function setup() {
+    var printing = /print-pdf|view=print/.test(window.location.search);
+    function all() { Reveal.getSlides().forEach(fit); }
+    Reveal.on("ready", function (e) { printing ? all() : fit(e.currentSlide); });
+    Reveal.on("slidechanged", function (e) { fit(e.currentSlide); });
+    if (Reveal.isReady && Reveal.isReady()) { printing ? all() : fit(Reveal.getCurrentSlide()); }
+  }
+  if (window.Reveal) setup(); else window.addEventListener("load", setup);
+})();
+</script>
