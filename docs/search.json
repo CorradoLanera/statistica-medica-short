@@ -136,11 +136,123 @@
     ]
   },
   {
+    "objectID": "slides/01-r_rstudio.html#cosa-faremo",
+    "href": "slides/01-r_rstudio.html#cosa-faremo",
+    "title": "Statistica Medica",
+    "section": "Cosa faremo",
+    "text": "Cosa faremo\nNella prossima ora vi fornirò un’introduzione all’uso di R, tramite RStudio. Vedremo cosa sono, a cosa servono (in cosa si differenziano) e come installarli.\nL’obiettivo principale è quello di fornirvi gli elementi base per poter (se volete, vi fa piacere, o pensate possa esservi utile*) seguire anche la fase di codifica degli esempi interattivi ed esercitazioni che vi mostrerò nelle future lezioni.\nInoltre, ho messo a disposizione (gratuitamente) un ambiente di lavoro Posit Cloud attivabile da ciascuno di voi (vedremo come), in modo che possiate usare R/RStudio senza doverli installare, e con/su qualunque dispositivo vi troviate a operare.**\n\n\n\n* La mia opinione in merito, chiaramente, è: si 😉.\n** Volendo, anche su smartphone e tablet, seppur piuttosto scomodo!"
+  },
+  {
+    "objectID": "slides/01-r_rstudio.html#panoramica",
+    "href": "slides/01-r_rstudio.html#panoramica",
+    "title": "Statistica Medica",
+    "section": "Panoramica",
+    "text": "Panoramica"
+  },
+  {
+    "objectID": "slides/01-r_rstudio.html#installazione",
+    "href": "slides/01-r_rstudio.html#installazione",
+    "title": "Statistica Medica",
+    "section": "Installazione",
+    "text": "Installazione\nGo to: https://cloud.r-project.org/"
+  },
+  {
+    "objectID": "slides/01-r_rstudio.html#algebra-elementare",
+    "href": "slides/01-r_rstudio.html#algebra-elementare",
+    "title": "Statistica Medica",
+    "section": "Algebra elementare",
+    "text": "Algebra elementare\nIn R possiamo operare tutte le operazioni algebriche di base, e anche di più! Ottimo quindi anche come calcolatrice potenziata!\n\n\n\n1 + 1  # sum\n\n[1] 2\n\n7 * 3  # product\n\n[1] 21\n\nabs(-2)  # absolute value\n\n[1] 2\n\n3^2  # power\n\n[1] 9\n\nsqrt(9)  # square root\n\n[1] 3"
+  },
+  {
+    "objectID": "slides/01-r_rstudio.html#vettori",
+    "href": "slides/01-r_rstudio.html#vettori",
+    "title": "Statistica Medica",
+    "section": "Vettori",
+    "text": "Vettori\nLa struttura base dei dati in R è il vettore: sequenze di valori dello stesso tipo (numeri, testo, logici)\n\nc(1, 2, 3, 7)  # concatenate\n\n[1] 1 2 3 7\n\n1:7  # sequence\n\n[1] 1 2 3 4 5 6 7\n\nseq_len(4)  # sequence\n\n[1] 1 2 3 4\n\nrep(2, 3)  # replicate\n\n[1] 2 2 2\n\nrev(c(1, 2, 3))  # reverse\n\n[1] 3 2 1"
+  },
+  {
+    "objectID": "slides/01-r_rstudio.html#assegnamento-memorizzazione",
+    "href": "slides/01-r_rstudio.html#assegnamento-memorizzazione",
+    "title": "Statistica Medica",
+    "section": "Assegnamento (“memorizzazione”)",
+    "text": "Assegnamento (“memorizzazione”)\nSpesso può essere utile salvare il risultato di una operazione o della chiamata di una funzione in un oggetto (che chiamiamo variabile) a cui possiamo assegnare un nome.\n\nfirst_vector &lt;- 1:10\nfirst_vector\n\n [1]  1  2  3  4  5  6  7  8  9 10\n\nfirst_vector + 5\n\n [1]  6  7  8  9 10 11 12 13 14 15"
+  },
+  {
+    "objectID": "slides/01-r_rstudio.html#confronti-booleani",
+    "href": "slides/01-r_rstudio.html#confronti-booleani",
+    "title": "Statistica Medica",
+    "section": "Confronti (Booleani)",
+    "text": "Confronti (Booleani)\nPossiamo fare confronti ottenendo dei risultati logici: TRUE/FALSE.\n\n1 == 0\n\n[1] FALSE\n\n1 != 0\n\n[1] TRUE\n\n1 &gt; 0\n\n[1] TRUE\n\n1 &lt;= 0\n\n[1] FALSE"
+  },
+  {
+    "objectID": "slides/01-r_rstudio.html#logica-booleana",
+    "href": "slides/01-r_rstudio.html#logica-booleana",
+    "title": "Statistica Medica",
+    "section": "Logica (Booleana)",
+    "text": "Logica (Booleana)\nPossiamo anche fare operazioni direttamente con vettori logici\n\nTRUE & FALSE\n\n[1] FALSE\n\nTRUE | FALSE\n\n[1] TRUE\n\n!TRUE\n\n[1] FALSE"
+  },
+  {
+    "objectID": "slides/01-r_rstudio.html#logica-booleana-vettoriale",
+    "href": "slides/01-r_rstudio.html#logica-booleana-vettoriale",
+    "title": "Statistica Medica",
+    "section": "Logica (Booleana, … vettoriale)",
+    "text": "Logica (Booleana, … vettoriale)\n\nc(TRUE, FALSE) & c(FALSE, FALSE)\n\n[1] FALSE FALSE\n\nc(1, 2, 3, 3, 2, 4) == 2\n\n[1] FALSE  TRUE FALSE FALSE  TRUE FALSE\n\nwhich(c(1, 2, 3, 3, 2, 4) == 2)\n\n[1] 2 5\n\n# WARNING\nc(TRUE, FALSE, NA) & FALSE\n\n[1] FALSE FALSE FALSE\n\nc(TRUE, FALSE, NA) & TRUE\n\n[1]  TRUE FALSE    NA"
+  },
+  {
+    "objectID": "slides/01-r_rstudio.html#dataframe",
+    "href": "slides/01-r_rstudio.html#dataframe",
+    "title": "Statistica Medica",
+    "section": "Dataframe",
+    "text": "Dataframe\n\nogni riga è un’osservazione (es: un paziente, o una visita)\nogni colonna è una variabile (es: il genere, o l’età)\n\n\nfirst_df &lt;- data.frame(\n  id     = c(7, 12, 31),\n  gender = factor(\n      c('m', 'm', 'f'),\n      levels = c('f', 'm', 'non-binary', 'unknown')\n  ),\n  city   = c('Gorizia', 'Viterbo', 'Napoli'),\n  height = c(1.84, 1.70, 1.59),\n  weight = c(115, 70, 51),\n  overweight = c(TRUE, FALSE, FALSE)\n)\nfirst_df\n\n  id gender    city height weight overweight\n1  7      m Gorizia   1.84    115       TRUE\n2 12      m Viterbo   1.70     70      FALSE\n3 31      f  Napoli   1.59     51      FALSE"
+  },
+  {
+    "objectID": "slides/01-r_rstudio.html#pacchetti",
+    "href": "slides/01-r_rstudio.html#pacchetti",
+    "title": "Statistica Medica",
+    "section": "Pacchetti",
+    "text": "Pacchetti\nUn pacchetto di espansione di R è una collezione di funzioni e/o di dati che possono essere “aggiunti” al proprio ambiente di lavoro.\nSi installano una sola volta (in generale, salvo aggiornamenti) ma si caricano ogni volta (una sola volta) che si ricomincia a lavorare.\n\nlibrary('tidyverse')\nlibrary('palmerpenguins')\n\nggplot(\n    penguins,\n    aes(x = bill_length_mm, y = bill_depth_mm, colour = species)\n  ) +\n  geom_point() +\n  geom_smooth(method = lm) +\n  facet_wrap(island~.) +\n  labs(\n    x = \"Lunghezza becco (mm)\",\n    y = \"Altezza becco (mm)\",\n    colour = \"Specie\",\n    title = \"Relazioni tra dimensioni del becco per specie di pinguino\",\n    subtitle = \"Ogni riquadro riporta i dati di un'isola differente.\",\n    caption = \"Dati: Palmer Archipelago (Antarctica) penguin data.\"\n  ) +\n  theme_bw()"
+  },
+  {
+    "objectID": "slides/01-r_rstudio.html#installazione-1",
+    "href": "slides/01-r_rstudio.html#installazione-1",
+    "title": "Statistica Medica",
+    "section": "Installazione",
+    "text": "Installazione\nGo to: https://posit.co/download/rstudio-desktop/"
+  },
+  {
+    "objectID": "slides/01-r_rstudio.html#vediamolo-sul-vostro-cloud",
+    "href": "slides/01-r_rstudio.html#vediamolo-sul-vostro-cloud",
+    "title": "Statistica Medica",
+    "section": "Vediamolo……sul vostro cloud!",
+    "text": "Vediamolo……sul vostro cloud!\nhttps://bit.ly/statmed-cl-rstudio"
+  },
+  {
+    "objectID": "slides/01-r_rstudio.html#risorse-utili",
+    "href": "slides/01-r_rstudio.html#risorse-utili",
+    "title": "Statistica Medica",
+    "section": "Risorse utili",
+    "text": "Risorse utili\n\nPosit Cloud: bit.ly/statmed-cl-rstudio gratis per voi per esplorare RStudio, le sue funzionalità, e allenarvi con R (link di iscrizione valido fino alla fine del corso).\nBase R workshop for Data Science: bit.ly/ubep-rws-slide - materiale base per un workshop di 16 ore su R (4 ore x 4 giorni), con esempi, codice, esercizi, ambiente di lavoro. (NO modelli, NO (bio-)statistica)\nRStudio primers ambiente gratuito dentro Posit Cloud per l’apprendimento delle basi di analisi di dati con R tramite tutorial interattivi. Una volta registrati, oltre all’accesso al nostro spazio di lavoro, avete accesso libero anche ai Primers.\nR 4 Data Science: libro gratuito (on-line) di Hadley Wickham, Mine Çetinkaya-Rundel e Garrett Grolemund\nAdvanced R: libro gratuito (on-line) di Hadley Wickham; suggeriti capitolo 1-6 (che non sono “Advanced” ma semplicemente “Correct”)."
+  },
+  {
+    "objectID": "slides/01-r_rstudio.html#break",
+    "href": "slides/01-r_rstudio.html#break",
+    "title": "Statistica Medica",
+    "section": "Break",
+    "text": "Break\nConsigli:\n\nalzarsi\nsgranchirsi\nguardare lontano (rilassare gli occhi)\nbere\nandare in bagno"
+  },
+  {
+    "objectID": "slides/01-r_rstudio.html#section-2",
+    "href": "slides/01-r_rstudio.html#section-2",
+    "title": "Statistica Medica",
+    "section": "",
+    "text": "If you think the only acceptable performance is the “perfect performance”,AI is not for you!But, I’ve heard that even humans have made mistakes…\n\n\n— Daniel Oberski2021/03/26 ASReview interviewhttps://daob.nl/\n\n\nGrazie per l’attenzione!\nDiapositive: bit.ly/cl-statmed\n www.unipd-ubep.it |  Corrado.Lanera@ubep.unipd.it\n   @CorradoLanera |  bit.ly/statmed-cl-ricevimento"
+  },
+  {
     "objectID": "slides/index.html",
     "href": "slides/index.html",
     "title": "Slide del corso",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nNov 9, 2026\n\n\nSTATISTICA MEDICA\n\n\nCorrado Lanera\n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\nNo matching items\n Back to top"
+    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nNov 9, 2026\n\n\nSTATISTICA MEDICA\n\n\nCorrado Lanera\n\n\n\n\n\n\nNov 9, 2026\n\n\nStatistica Medica\n\n\nCorrado Lanera\n\n\n\n\n\n\nNov 9, 2026\n\n\nStatistica Medica\n\n\nCorrado Lanera\n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\nNo matching items\n Back to top"
   },
   {
     "objectID": "index.html",
@@ -260,6 +372,384 @@
     "title": "STATISTICA MEDICA",
     "section": "",
     "text": "Can one be a good data analyst without being a half-good programmer?The short answer to that is, ‘No.’The long answer to that is, ‘No.’\n\n\n—Frank Harrell10/1999 - S-PLUS User Conference, New Orleans\n\n\nDomande?\nDiapositive: bit.ly/cl-statmed\n www.unipd-ubep.it |  Corrado.Lanera@ubep.unipd.it\n   @CorradoLanera |  bit.ly/statmed-cl-ricevimento"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#cosa-faremo",
+    "href": "slides/02-descrittive.html#cosa-faremo",
+    "title": "Statistica Medica",
+    "section": "Cosa faremo",
+    "text": "Cosa faremo\nPrima di tutto richiameremo alcuni simboli, notazioni, oggetti “matematici” che ci potranno tornare utili lungo la trattazione dell’intero corso.\nAndremo quindi a identificare quali sono gli oggetti che ci interessa analizzare, e di che tipologie possono essere.\nQuindi vedremo come localizzarli; ovvero, come (numericamente) avere un’idea di dove si collochino (rispetto a un dato riferimento o misura), questo grazie all’individuazione di uno o più punti di riferimento (detti centrali) e una misura di quanto gli altri punti di interesse siano più o meno distanti da questi (variabilità).\nPoiché guardare numeri, a volte, può essere poco informativo, o immediato, ci occuperemo di rappresentare i nostri dati graficamente, individuando a seconda del tipo, quantità e interesse, il grafico più opportuno tra quelli base, imparando anche a leggere cosa rappresentano."
+  },
+  {
+    "objectID": "slides/02-descrittive.html#riconoscimenti",
+    "href": "slides/02-descrittive.html#riconoscimenti",
+    "title": "Statistica Medica",
+    "section": "Riconoscimenti",
+    "text": "Riconoscimenti\n\nLe diapositive proposte sono state prodotte a partire anche da materiale generato da/con le seguenti persone gravitanti attorno all’UBEP*:\n\nDanila Azzolina\nDario Gregori\nGiulia Lorenzoni\nHonoria Ocagli\nIleana Baldi\nLuca Vedovelli\nMatteo Martinato\nPaola Berchialla\n\n\n\n\n\n* In ordine alfabetico.\n\n\n\n\nUn ringraziamento speciale a Cristiana Vettori per l’aiuto e il supporto logistico e amministrativo che mi è stato offerto."
+  },
+  {
+    "objectID": "slides/02-descrittive.html#panoramica",
+    "href": "slides/02-descrittive.html#panoramica",
+    "title": "Statistica Medica",
+    "section": "Panoramica",
+    "text": "Panoramica\nOggetti in gioco\nLocalizzazione\nRappresentazione"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#oggetti-in-gioco",
+    "href": "slides/02-descrittive.html#oggetti-in-gioco",
+    "title": "Statistica Medica",
+    "section": "Oggetti in gioco",
+    "text": "Oggetti in gioco\nNotazioni di base\ntipologie di dati"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#notazioni-sommatoria-fino-a-n",
+    "href": "slides/02-descrittive.html#notazioni-sommatoria-fino-a-n",
+    "title": "Statistica Medica",
+    "section": "Notazioni: Sommatoria fino a N",
+    "text": "Notazioni: Sommatoria fino a N\nSia \\(I\\) un insieme di indici \\(i\\) con \\(N\\) elementi, utile a identificare (in modo univoco) ciascun elemento \\(x\\) di un insieme \\(X\\) composto da \\(N\\) numeri. Allora, indichiamo in modo generico con \\(x_i\\) l’i-esimo elemento di \\(X\\).\nPer esempio, quando consideriamo \\(i = 1\\), allora \\(x_i\\) è \\(x_1\\), ovvero il primo elemento di \\(X\\).\nCon tale notazione, utilizzando il simbolo \\(\\Sigma\\) (Sigma, maiuscola: la “S” greca), indichiamo brevemente con\n\\[\\sum_{i = 1}^N x_i = x_1 + x_2 + \\cdots + x_{N-1} + x_{N}\\]\nla somma di tutti gli \\(x_i\\), e lo leggiamo “Sommatoria per i che va da 1 a N degli x-con-i”."
+  },
+  {
+    "objectID": "slides/02-descrittive.html#notazioni-sommatoria-su-i",
+    "href": "slides/02-descrittive.html#notazioni-sommatoria-su-i",
+    "title": "Statistica Medica",
+    "section": "Notazioni: Sommatoria su I",
+    "text": "Notazioni: Sommatoria su I\nIn modo analogo, se \\(I\\) non fosse numerico ma, per esempio, l’insieme dei codici identificativi dei pazienti in uno studio, e \\(X\\) fosse l’insieme dei pesi di tali pazienti, ipotizzando che \\(R43\\) sia l’id di un paziente, allora quando \\(i = R43\\) abbiamo che \\(x_i = x_{R43}\\) è il peso del paziente identificato dal codice \\(R43\\).\nRicordando inoltre che indichiamo con \\(x\\in X\\) la relazione di appartenenza insiemistica per l’elemento \\(x\\) nell’insieme \\(X\\), possiamo scrivere\n\\[\\sum_{i\\in I} x_i\\]\nCon il medesimo significato di prima, ovvero la somma di tutti i pesi di tutti i pazienti i cui indici (ovvero ID) stanno nell’insieme considerato \\(I\\), e lo leggiamo “Sommatoria per gli i in I degli x-con-i”."
+  },
+  {
+    "objectID": "slides/02-descrittive.html#proprietà-della-sommatoria",
+    "href": "slides/02-descrittive.html#proprietà-della-sommatoria",
+    "title": "Statistica Medica",
+    "section": "Proprietà della sommatoria",
+    "text": "Proprietà della sommatoria\nSia \\(C\\) una generica costante numerica, allora\n\\[\\sum_{i\\in I} (C * x_i) = C * \\sum_{i\\in I} x_i\\]\n\\[45=(5*2) + (5*3) + (5*4) = \\sum_{i=2}^{4} (5 * i) = 5 * \\sum_{i=2}^{4} i = 5*(2+3+4)=45\\]\n\\[\\sum_{i = 1}^N C = N * C\\]\n\\[\\sum_{i = 1}^3 5 = 5 + 5 + 5 = 3 * 5\\]"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#esempio-sommatoria",
+    "href": "slides/02-descrittive.html#esempio-sommatoria",
+    "title": "Statistica Medica",
+    "section": "Esempio sommatoria",
+    "text": "Esempio sommatoria\nPer esempio considerando\n\n\n\n\n\nPortion of ‘EPIC-Norfolk cohort’ (Bain et al. 2015)\n\n\nI\nage\n\n\n\n\n1\n55.1\n\n\n2\n62.9\n\n\n3\n53.1\n\n\n4\n76.3\n\n\n5\n64.2\n\n\n6\n53.3\n\n\n\n\n\n\nPossiamo scrivere la somma di tutte le età\n\n\n55.1 + 62.9 + 53.1 + 76.3 + 64.2 + 53.3\n\n\ncome \\(\\sum_{i\\in I} age_i =\\) 364.9."
+  },
+  {
+    "objectID": "slides/02-descrittive.html#unità-statistica",
+    "href": "slides/02-descrittive.html#unità-statistica",
+    "title": "Statistica Medica",
+    "section": "Unità statistica",
+    "text": "Unità statistica\nElemento di base su cui si compie l’osservazione o la rilevazione dei dati. In altre parole, è ciò che si osserva, misura o registra in una ricerca statistica.\n📌 Caratteristiche principali:\n\nÈ l’oggetto elementare dell’indagine (può essere una persona, una famiglia, un’impresa, un animale, un prodotto, un evento, ecc.).\nÈ ben definita e distinguibile da altre unità della popolazione.\nSu ciascuna unità si rilevano variabili (caratteristiche qualitative o quantitative).\nL’insieme di tutte le unità statistiche considerate forma la popolazione statistica.\n\n👉 Esempi:\n\nIn un censimento della popolazione: l’unità statistica è l’individuo.\nIn un’indagine sui redditi familiari: l’unità statistica è la famiglia.\nIn uno studio clinico: l’unità statistica è il paziente arruolato."
+  },
+  {
+    "objectID": "slides/02-descrittive.html#unità-statistica-1",
+    "href": "slides/02-descrittive.html#unità-statistica-1",
+    "title": "Statistica Medica",
+    "section": "Unità statistica",
+    "text": "Unità statistica\n\n\n\n\nPortion of “EPIC-Norfolk cohort” (Bain et al. 2015)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nid\ngender\nage\natt.fisica\nsigarette\nbmi\nsbp\ndbp\ncole.tot\nmag\nfarmaci\n\n\n\n\n1\nM\n55.1\nMai\n1\n30.4\n151.0\n108.0\n5.2\n425.5\nNo\n\n\n2\nM\n62.9\n1-2 volte a sett.\n2\n42.6\n140.1\n103.9\n4.6\n312.6\nStatine\n\n\n3\nM\n53.1\n3 Volte a sett.\n2\n41.6\n145.2\n120.6\n4.8\n426.8\nStatine\n\n\n4\nM\n76.3\nMai\n2\n23.3\n126.9\n114.0\n8.4\n422.7\nfibrati\n\n\n5\nM\n64.2\n3 Volte a sett.\n1\n32.9\n151.6\n116.0\n7.7\n281.1\nNo\n\n\n6\nM\n53.3\nMai\n1\n31.7\n167.4\n100.7\n6.6\n318.2\nNo\n\n\n7\nM\n65.7\n3 Volte a sett.\n1\n26.4\n160.0\n101.5\n6.0\n424.5\nNo\n\n\n8\nM\n68.1\n3 Volte a sett.\n0\n31.4\n125.0\n101.0\n5.3\n327.3\nStatine\n\n\n9\nM\n66.6\n3 Volte a sett.\n0\n24.9\n110.1\n109.3\n5.1\n203.7\nNo\n\n\n10\nM\n58.2\n1-2 volte a sett.\n2\n30.5\n138.0\n106.4\n6.7\n412.4\nNo"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#tipologie-di-dati",
+    "href": "slides/02-descrittive.html#tipologie-di-dati",
+    "title": "Statistica Medica",
+    "section": "Tipologie di dati",
+    "text": "Tipologie di dati"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#tipologie-di-dati-1",
+    "href": "slides/02-descrittive.html#tipologie-di-dati-1",
+    "title": "Statistica Medica",
+    "section": "Tipologie di dati",
+    "text": "Tipologie di dati"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#sondaggio",
+    "href": "slides/02-descrittive.html#sondaggio",
+    "title": "Statistica Medica",
+    "section": "Sondaggio",
+    "text": "Sondaggio\nPer me: Tipi di variabile\nPer voi: &lt;img src=“img/bit.ly_statmed-sondaggio-tipi-variabili.png”, width=“300px” style=“vertical-align: middle”/&gt; bit.ly/statmed-sondaggio-tipi-variabili"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#localizzazione-dati-continui",
+    "href": "slides/02-descrittive.html#localizzazione-dati-continui",
+    "title": "Statistica Medica",
+    "section": "Localizzazione (dati continui)",
+    "text": "Localizzazione (dati continui)\nMisure di centralità\nMisure di variabilità (e confrontabilità)\nPercentili\nAccorpamenti, e misure ponderate"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#misure-di-centralità-media",
+    "href": "slides/02-descrittive.html#misure-di-centralità-media",
+    "title": "Statistica Medica",
+    "section": "Misure di centralità: media",
+    "text": "Misure di centralità: media\nData una variabile \\(x\\), misurata su \\(n\\) soggetti, la media aritmetica campionaria è pari a \\[\\bar{x} = \\frac{1}{n}\\sum_{i=1}^n x_i\\]\nÈ molto sensibile ai valori estremi: se ce ne sono non è una buona misura di centralità.\n\nEs.: se in questa stanza entra Elon Musk, quale sarebbe la media del saldo dei conti in banca dei presenti (ma anche di tutta Rovigo…)? Sarebbe una buona misura di centralità per tale distribuzione di valori?"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#media-estremamente-sensibile",
+    "href": "slides/02-descrittive.html#media-estremamente-sensibile",
+    "title": "Statistica Medica",
+    "section": "Media (estremamente sensibile)",
+    "text": "Media (estremamente sensibile)\nRiprendendo le età del nostro sotto-campione di soggetti, la loro media è\n\n\n\n\n\nPortion of ‘EPIC-Norfolk cohort’ (Bain et al. 2015)\n\n\nI\nage\n\n\n\n\n1\n55.1\n\n\n2\n62.9\n\n\n3\n53.1\n\n\n4\n76.3\n\n\n5\n64.2\n\n\n6\n53.3\n\n\n\n\n\n\n\\(\\frac{1}{6}\\sum_{i=1}^6 age_i =\\) 60.82\n La media è molto sensibile ai dati estremi: sostituendo, per esempio, anche solamente il primo valore (55.1) con 5.51 (ipotizzando un errore di inserimento), la media cambia sensibilmente e diviene 52.55."
+  },
+  {
+    "objectID": "slides/02-descrittive.html#misure-di-centralità-mediana",
+    "href": "slides/02-descrittive.html#misure-di-centralità-mediana",
+    "title": "Statistica Medica",
+    "section": "Misure di centralità: mediana",
+    "text": "Misure di centralità: mediana\nOrdiniamo ora le \\(n\\) osservazioni. La mediana campionaria è\n\nla \\((\\frac{n+1}{2})\\)-ma osservazione se \\(n\\) è dispari (ovvero, ha un centro) &gt; Se prendo \\(k=n/2\\) ottengo una “posizione” con la virgola, quindi prendo la prima (intera) successiva.\nla media aritmetica della \\((\\frac{n}{2})\\)-ma e la \\((\\frac{n}{2}+1)\\)-ma osservazione se \\(n\\) è pari (ovvero, non ha un centro) &gt; Se prendo \\(k=n/2\\) ottengo un numero intero, e prendo allora la media tra la \\(k\\)-esima e la \\(k+1\\)-esima osservazione"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#mediana-n-pari",
+    "href": "slides/02-descrittive.html#mediana-n-pari",
+    "title": "Statistica Medica",
+    "section": "Mediana (n pari)",
+    "text": "Mediana (n pari)\nNel nostro esempio\n\n\n\n\n\nPortion of ‘EPIC-Norfolk cohort’ (Bain et al. 2015)\n\n\n\nI\nage\n\n\n\n\n1\n3\n53.1\n\n\n2\n6\n53.3\n\n\n3\n1\n55.1\n\n\n4\n2\n62.9\n\n\n5\n5\n64.2\n\n\n6\n4\n76.3\n\n\n\n\n\n\nSiccome \\(n\\) è pari (è 6), la mediana è la media tra la 3a e 4a osservazione (ordinate!) \\[\\mbox{Mediana} = \\frac{55.1 + 62.9}{2} = 59\\] E anche modificando il primo valore (55.1) con 5.51, la mediana cambia molto poco, diventando 58.1 (invece di 59)."
+  },
+  {
+    "objectID": "slides/02-descrittive.html#mediana-n-dispari",
+    "href": "slides/02-descrittive.html#mediana-n-dispari",
+    "title": "Statistica Medica",
+    "section": "Mediana (n dispari)",
+    "text": "Mediana (n dispari)\n\n\n\n\n\nPortion of ‘EPIC-Norfolk cohort’ (Bain et al. 2015)\n\n\n\nI\nage\n\n\n\n\n1\n3\n53.1\n\n\n2\n6\n53.3\n\n\n3\n1\n55.1\n\n\n4\n2\n62.9\n\n\n5\n5\n64.2\n\n\n6\n7\n65.7\n\n\n7\n4\n76.3\n\n\n\n\n\n\nNel caso in cui \\(n\\) sia dispari (prendiamo per esempio \\(n = 7\\) ), prendiamo direttamente il valore centrale (in posizione \\(4 = (7+1)/2\\) ), ovvero 62.9."
+  },
+  {
+    "objectID": "slides/02-descrittive.html#confronto-media-e-mediana",
+    "href": "slides/02-descrittive.html#confronto-media-e-mediana",
+    "title": "Statistica Medica",
+    "section": "Confronto media e mediana",
+    "text": "Confronto media e mediana\nCome indicatore semplice di asimmetria (skewness) usiamo la differenza\nAsimmetria = Media - Mediana\n\n\nLa distribuzione dei dati sarà considerata:\n\nsimmetrica se \\(Asimmetria \\simeq 0\\) (rispetto alla scala dei dati)\nasimmetrica (sbilanciata) a destra se \\(Asimmetria &gt; 0\\) (la media è più grande, distorta in eccesso)\nasimmetrica (sbilanciata) a sinistra se \\(Asimmetria &lt; 0\\) (la media è più piccola, distorta in difetto)\n\n\n\n\n\n\n\n‘EPIC-Norfolk cohort’ (Bain et al. 2015)"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#misure-di-centralità-moda",
+    "href": "slides/02-descrittive.html#misure-di-centralità-moda",
+    "title": "Statistica Medica",
+    "section": "Misure di centralità: Moda",
+    "text": "Misure di centralità: Moda\nle mode sono ciascuno dei valori che si osservano con massima frequenza.\n\n\n\nSigarette al giorno\n\n\n\nPortion of ‘EPIC-Norfolk cohort’ (Bain et al. 2015)\n\n\nsigarette\nn\n\n\n\n\n0\n51\n\n\n1\n62\n\n\n2\n46\n\n\n3\n14\n\n\n4\n17\n\n\n5\n7\n\n\n6\n2\n\n\n7\n1\n\n\n\n\n\n\nModa di sigarette fumate al giorno\n\n\n\n\n\nsigarette\nn\n\n\n\n\n1\n62\n\n\n\n\n\n\nNOTA: una distribuzione può essere unimodale, bimodale, trimodale, …"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#misure-di-variabilità",
+    "href": "slides/02-descrittive.html#misure-di-variabilità",
+    "title": "Statistica Medica",
+    "section": "Misure di variabilità",
+    "text": "Misure di variabilità\nSi considerino due campioni di misurazioni del colesterolo eseguite con due tecniche, una autoanalitica e l’altra microenzimatica:\n\n\n\n\n\nautoanalitica\nmicroenzimatica\n\n\n\n\n177\n192\n\n\n193\n197\n\n\n195\n200\n\n\n209\n202\n\n\n226\n209\n\n\n\n\n\nLe medie campionarie (nonostante la differenza di variabilità) restano identiche:\n\n\n\n\n\nautoanalitica\nmicroenzimatica\n\n\n\n\n200\n200"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#misure-di-variabilità-range-massimale",
+    "href": "slides/02-descrittive.html#misure-di-variabilità-range-massimale",
+    "title": "Statistica Medica",
+    "section": "Misure di variabilità: range (massimale)",
+    "text": "Misure di variabilità: range (massimale)\nIl range massimale è la differenza tra il valore massimo osservato e quello minimo.\nSimbolicamente: \\[range = max(x_i)-min(x_i)\\]\n\n\n\n\n\nautoanalitica\nmicroenzimatica\n\n\n\n\n49\n17\n\n\n\n\n\nÈ molto semplice da calcolare ma molto sensibile ai valori estremi.\n\nDipende dall’ampiezza campionaria \\(n\\), e tende ad aumentare all’aumentare di \\(N\\)! (un campione più grande della stessa popolazione avrà estremi più lontani e non più vicini)"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#misure-di-variabilità-varianza-campionaria",
+    "href": "slides/02-descrittive.html#misure-di-variabilità-varianza-campionaria",
+    "title": "Statistica Medica",
+    "section": "Misure di variabilità: varianza campionaria",
+    "text": "Misure di variabilità: varianza campionaria\nLa varianza campionaria è definita come\n\\[s^2 = \\frac{\\sum_{i=1}^n (x_i-\\bar{x})^2}{n-1}\\]\nQuesta è una misura di quanto, in media, sono grandi i quadrati degli scarti dei dati dalla loro media.\nÈ un valore non confrontabile con i dati stessi in quanto con un’altra unità di misura. Si definisce quindi la deviazione standard campionaria, come\n\\[s = \\sqrt{s^2} = \\sqrt{\\frac{\\sum_{i=1}^n (x_i-\\bar{x})^2}{n-1}}\\]\n\nSi noti che \\(\\sum_{i=1}^n (x_i-\\bar{x}) = 0\\)"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#varianza-campionaria-esempio",
+    "href": "slides/02-descrittive.html#varianza-campionaria-esempio",
+    "title": "Statistica Medica",
+    "section": "Varianza campionaria: esempio",
+    "text": "Varianza campionaria: esempio\n\n\n\n\n\n\n\nautoanalitica\nmicroenzimatica\n\n\n\n\n177\n192\n\n\n193\n197\n\n\n195\n200\n\n\n209\n202\n\n\n226\n209\n\n\n\n\n\nMedie:\n\n\n\n\n\nautoanalitica\nmicroenzimatica\n\n\n\n\n200\n200\n\n\n\n\n\n\n\nAutoanaliticaMicroenzimatica\n\n\n\\(\\begin{split}s^2& = \\frac{(177-200)^2 + \\ldots + (226-200)^2}{4}\\\\& = \\frac{1360}{4} = 340\\end{split}\\)\n\\(s = \\sqrt{340} = 18.4\\)\n\n\n\\(\\begin{split}s^2& = \\frac{(192-200)^2 + \\ldots + (209-200)^2}{4}\\\\& = \\frac{158}{4} = 39.5\\end{split}\\)\n\\(s = \\sqrt{39.5} = 6.3\\)"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#varianza-formula-alternativa",
+    "href": "slides/02-descrittive.html#varianza-formula-alternativa",
+    "title": "Statistica Medica",
+    "section": "Varianza (formula alternativa)",
+    "text": "Varianza (formula alternativa)\nSe la media è già calcolata, allora può essere utile usare \\[s^2=\\frac{(\\sum_{i=1}^n x_i^2) - n\\bar{x}^2}{n-1}\\]\nPer la tecnica autoanalitica si ha \\[\\sum_{i=1}^5 x_i^2 = 177^2+\\ldots+226^2=201360\\] \\[s^2 = \\frac{201360 - 5 \\times 200^2}{4}= 1360/4=340\\]"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#misure-di-variabilità-coefficiente-di-variazione",
+    "href": "slides/02-descrittive.html#misure-di-variabilità-coefficiente-di-variazione",
+    "title": "Statistica Medica",
+    "section": "Misure di variabilità: coefficiente di variazione",
+    "text": "Misure di variabilità: coefficiente di variazione\nSebbene la deviazione standard sia della stessa unità di misura dei dati, non permette di confrontare tra loro le variabilità di variabili con unità di misura differenti.\nIl coefficiente di variazione \\(CV\\) è definito come \\[CV = \\frac{100s}{\\bar{x}}\\] È una misura adimensionale, e quindi utilizzabile anche per confrontare variabili di natura differente (purché positive e con zero assoluto). È anche insensibile alla scala, ovvero a trasformazioni del tipo \\(cx\\)"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#cv-non-effetto-scala",
+    "href": "slides/02-descrittive.html#cv-non-effetto-scala",
+    "title": "Statistica Medica",
+    "section": "CV (non-effetto scala)",
+    "text": "CV (non-effetto scala)\n\nI valori di Colesterolo raccolti dai 200 pazienti del database Epic sono i seguenti:\n\n\n5.2, 4.6, 4.8, 8.4, 7.7, 6.6, 6, 5.3, 5.1, 6.7, 7.3, 5.1, 5, 5.4, 6.4, \n6.6, 4.7, 5.7, 4.8, 5.9, 5.2, 5.6, 7.2, 5.9, 6.1, 5.5, 4.8, 7.6, 4.8, 5.4, \n5.9, 5.6, 6.9, 6.9, 5, 9.1, 5.8, 5.5, 7.4, 6.4, 6.2, 7.2, 4.9, 6.7, 6.8, \n5.4, 7.1, 5.9, 5.9, 5.3, 7, 6.8, 6.1, 5.5, 6.3, 5.3, 6.1, 5.6, 8, 4.9, \n6, 6.7, 5.1, 6.8, 4.8, 4.9, 4.7, 5.8, 5.9, 6.2, 4.8, 5, 10.5, 6.9, 6, \n5.4, 6.8, 5.4, 5.3, 5.5, 5.5, 7.4, 6.4, 6.9, 5.2, 6.2, 6.4, 4.9, 8.6, 4.6, \n5.2, 5.7, 6, 8.5, 5.4, 5.1, 8.4, 6, 6.7, 5.4, 7.3, 6.4, 7.1, 5.3, 7.1, \n4.9, 5.1, 7, 4.7, 6.5, 8.7, 7, 6.2, 5.5, 5.7, 4.6, 5.1, 7, 5.4, 6.3, \n6.3, 5.9, 5.4, 4.6, 5.8, 5.5, 6.2, 7.6, 6.4, 5.9, 7.7, 6.4, 8.4, 6.9, 5.2, \n5.8, 4.7, 4.8, 7.5, 6, 8.5, 8.4, 4.9, 4.8, 5, 6.7, 7.3, 5.4, 6.7, 4.7, \n5.5, 6.8, 11.3, 4.7, 5.8, 5.4, 5.4, 5.8, 5.2, 7, 6.4, 6.8, 7.5, 5, 6.3, \n6.6, 5.6, 5.7, 5.6, 7.1, 5.1, 5, 4.6, 5.2, 4.9, 6.7, 7.1, 6.6, 5.3, 6, \n4.7, 7.1, 5.3, 5.8, 6.7, 6.1, 7.9, 6.2, 5.7, 6.1, 5.1, 5.7, 5.4, 5.2, 6.7, \n6, 4.6, 4.7, 8.3, 5.2\n\n\nPartendo dai dati così espressi in mmol/L: \\(CV = 1.12/6.07 \\times 100 \\simeq 18\\%\\)\ne per gli stessi valori espressi in mg/dl (massa molare colesterolo: 386.65 g/mol) abbiamo: \\[CV = 43.35/234.83 \\times 100 \\simeq 18\\%\\]"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#sondaggio-1",
+    "href": "slides/02-descrittive.html#sondaggio-1",
+    "title": "Statistica Medica",
+    "section": "Sondaggio",
+    "text": "Sondaggio\nPer me: Localizzazione\nPer voi: &lt;img src=“img/bit.ly_statmed-sondaggio-localizzazione.png”, width=“300px” style=“vertical-align: middle”/&gt; bit.ly/statmed-sondaggio-localizzazione"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#domande-fin-qui",
+    "href": "slides/02-descrittive.html#domande-fin-qui",
+    "title": "Statistica Medica",
+    "section": "Domande fin qui?",
+    "text": "Domande fin qui?"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#percentili",
+    "href": "slides/02-descrittive.html#percentili",
+    "title": "Statistica Medica",
+    "section": "Percentili",
+    "text": "Percentili\nIl percentile \\(p\\)-esimo è un valore \\(V_p\\) tale che almeno il \\(p\\)% dei valori è minore o uguale a esso e almeno il \\((100-p)\\)% è maggiore o uguale.\nPer un calcolo a mano, posto \\(k=\\frac{p}{100}n\\), il percentile \\(p\\)-esimo è definito come\n\nSe \\(k\\) è un intero, la media tra la \\(k\\)-ma e la \\((k + 1)\\)-ma osservazione (ordinata).\nSe \\(k\\) non è un intero, l’osservazione alla prima posizione (intera) superiore a \\(k\\) (ordinata).\n\nI quartili sono tre valori che dividono i dati in quattro gruppi contenenti un numero approssimativamente uguale di osservazioni. Il totale di 100% è diviso in quattro parti uguali: 25%, 50%, 75%, 100%.\n\nPrimo quartile (Q1) è il \\(25\\)° percentile (\\(25\\% = 1/4\\)), calcolato con la regola precedente\nTerzo quartile (Q3) è il \\(75\\)° percentile (\\(75\\% = 3/4\\)), calcolato con la regola precedente"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#percentili-esempio-intero",
+    "href": "slides/02-descrittive.html#percentili-esempio-intero",
+    "title": "Statistica Medica",
+    "section": "Percentili (esempio intero)",
+    "text": "Percentili (esempio intero)\n\nSi calcoli il \\(10\\)° e il \\(90\\)° percentile del campione del BMI su 10 soggetti.\n\n\n\n\n\n\n\n\nid\nbmi\n\n\n\n\n1\n4\n23.3\n\n\n2\n9\n24.9\n\n\n3\n7\n26.4\n\n\n4\n1\n30.4\n\n\n5\n10\n30.5\n\n\n6\n8\n31.4\n\n\n7\n6\n31.7\n\n\n8\n5\n32.9\n\n\n9\n3\n41.6\n\n\n10\n2\n42.6\n\n\n\n\n\n\n\nSi calcola \\(np/100\\), pari a:\n\n10° percentile (p/100 = 0.1): \\(10 \\times 0.1 = 1\\)\n90° percentile (p/100 = 0.9): \\(10 \\times 0.9 = 9\\)\n\n(Sono valori interi, quindi posti uguale a \\(k\\) e) si calcola la media tra le osservazioni (ordinate):\n\n10°: posizioni 1 e 2 \\(\\frac{23.3 + 24.9}{2} =\\) 24.1\n90°: posizioni 9 e 10 \\(\\frac{41.6 + 42.6}{2} =\\) 42.1"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#percentili-esempio-decimale",
+    "href": "slides/02-descrittive.html#percentili-esempio-decimale",
+    "title": "Statistica Medica",
+    "section": "Percentili (esempio decimale)",
+    "text": "Percentili (esempio decimale)\nSi calcoli il \\(20\\)° percentile del campione del BMI su 9 soggetti.\n\n\n\n\n\n\n\n\nid\nbmi\n\n\n\n\n1\n4\n23.3\n\n\n2\n9\n24.9\n\n\n3\n7\n26.4\n\n\n4\n1\n30.4\n\n\n5\n8\n31.4\n\n\n6\n6\n31.7\n\n\n7\n5\n32.9\n\n\n8\n3\n41.6\n\n\n9\n2\n42.6\n\n\n\n\n\n\n\nSi calcola \\(k=np/100\\), pari a:\n\n20° percentile (p/100 = 0.2): \\(9 \\times 0.2 = 1.8\\)\n\n(È un valore decimale, quindi) Si trova il primo numero intero superiore a 1.8: che è 2\nIl 20° percentile è il \\(2\\)° (secondo) valore (ordinato!); ovvero, 24.9."
+  },
+  {
+    "objectID": "slides/02-descrittive.html#sondaggio-2",
+    "href": "slides/02-descrittive.html#sondaggio-2",
+    "title": "Statistica Medica",
+    "section": "Sondaggio",
+    "text": "Sondaggio\nPer me: Percentili\nPer voi: &lt;img src=“img/bit.ly_statmed-sondaggio-percentili.png”, width=“300px” style=“vertical-align: middle”/&gt; bit.ly/statmed-sondaggio-percentili"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#accorpamenti",
+    "href": "slides/02-descrittive.html#accorpamenti",
+    "title": "Statistica Medica",
+    "section": "Accorpamenti",
+    "text": "Accorpamenti\nLa struttura generale dei dati raggruppati è simile a\n\n\n\nGruppi\nPunto medio \\(m_i\\)\nFrequenza\n\n\n\n\n\\([y_1, y_2)\\)\n\\(\\frac{y_1+y_2}{2}\\)\n\\(f_1\\)\n\n\n\\(\\vdots\\)\n\\(\\vdots\\)\n\\(\\vdots\\)\n\n\n\\([y_k, y_{k+1})\\)\n\\(\\frac{y_k+y_{k+1}}{2}\\)\n\\(f_k\\)"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#accorpamenti-epic---magnesio",
+    "href": "slides/02-descrittive.html#accorpamenti-epic---magnesio",
+    "title": "Statistica Medica",
+    "section": "Accorpamenti: Epic - magnesio",
+    "text": "Accorpamenti: Epic - magnesio\nIntake giornaliero di magnesio (mg/day) per \\(n = 100\\) soggetti\n\n\n43, 84.2, 100.4, 102.2, 113, 116.7, 118.9, 128.8, 130.1, 144.3, 151.5, \n152.3, 163, 168.9, 169.4, 181.1, 189.5, 197.5, 198.3, 198.3, 198.7, 202.2, \n204.6, 212, 215.3, 215.4, 219.6, 222, 226.2, 228, 234.3, 234.4, 236.4, \n239.9, 241.7, 245.9, 250, 251.8, 255.8, 257.9, 263.7, 264.5, 267.7, 269.6, \n277.7, 279.7, 281.1, 285.3, 285.8, 288.9, 295.5, 297.6, 297.8, 299, 300.8, \n302.9, 304.2, 304.9, 305.1, 306, 307.1, 307.4, 309, 312.3, 317.1, 317.8, \n318.4, 320.1, 320.2, 320.4, 320.5, 321.1, 322.4, 323.7, 323.9, 324, 325.3, \n326.4, 329.1, 329.2, 331.1, 332.6, 333, 334.3, 338.1, 340.3, 341.3, 343.4, \n343.8, 344.9, 349.4, 349.6, 350.5, 351.4, 355.9, 357.6, 359.1, 359.8, 359.8, \n360.3"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#accorpamenti-epic---magnesio-1",
+    "href": "slides/02-descrittive.html#accorpamenti-epic---magnesio-1",
+    "title": "Statistica Medica",
+    "section": "Accorpamenti: Epic - magnesio",
+    "text": "Accorpamenti: Epic - magnesio\nAccorpati in 8 gruppi con approssimativamente la stessa quantità di soggetti in ciascun gruppo:\n\n\n\n‘EPIC-Norfolk cohort’ (Bain et al. 2015)\n\n\nGruppi\nm\nFreq\n\n\n\n\n[ 43.0,168.9)\n105.95\n13\n\n\n[168.9,215.4)\n192.15\n12\n\n\n[215.4,255.8)\n235.60\n13\n\n\n[255.8,295.5)\n275.65\n12\n\n\n[295.5,312.3)\n303.90\n13\n\n\n[312.3,324.0)\n318.15\n12\n\n\n[324.0,343.8)\n333.90\n13\n\n\n[343.8,360.3]\n352.05\n12"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#misure-ponderate-media-aritmetica-ponderata",
+    "href": "slides/02-descrittive.html#misure-ponderate-media-aritmetica-ponderata",
+    "title": "Statistica Medica",
+    "section": "misure ponderate: media aritmetica ponderata",
+    "text": "misure ponderate: media aritmetica ponderata\nLa media aritmetica campionaria ponderata è pari a \\[\\bar{x}_g = \\frac{\\sum_{i=1}^k f_im_i}{\\sum_{i=1}^k f_i}\\]\nPer il dataset accorpato sui dati di magnesio, è pari a \\[\\bar{x}_g = \\frac{13(105.95)+\\ldots+12(352.05)}{13+\\ldots+12}= 26387.55/100 = 263.8755\\]"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#misure-ponderate-varianza-ponderata",
+    "href": "slides/02-descrittive.html#misure-ponderate-varianza-ponderata",
+    "title": "Statistica Medica",
+    "section": "misure ponderate: varianza ponderata",
+    "text": "misure ponderate: varianza ponderata\nLa varianza campionaria ponderata, con \\(n = \\sum_{i=1}^k f_i\\), è pari a \\[s_g^2 = \\frac{\\sum_{i=1}^k f_i(m_i-\\bar{x}_g)^2}{(\\sum_{i=1}^k f_i)-1} \\quad\\rm{ovvero}\\quad s_g^2 = \\frac{(\\sum_{i=1}^k f_im_i^2)-n\\bar{x}_g^2}{n-1}\\]\nPer il caso del magnesio è pari a\n\\[\\begin{align*}s_g^2& = \\frac{13(105.95 - 263.8755)^2+\\ldots+12(352.05 - 263.8755)^2}{13 + \\cdots + 12 - 1}\\\\& = 611233.5/99 = 6174.075\\end{align*}\\] \\[\\begin{align*}s_g^2& = \\frac{[13(105.95)^2+\\ldots+12(352.05)^2]-100(263.8755^2)}{100-1}\\\\& = 611233.5/99 = 6174.075\\end{align*}\\]"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#rappresentazione",
+    "href": "slides/02-descrittive.html#rappresentazione",
+    "title": "Statistica Medica",
+    "section": "Rappresentazione",
+    "text": "Rappresentazione\nDati continui\n\nIstogrammi\nBox-plot\n\nDati categorici\n\nGrafici a barre"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#istogramma",
+    "href": "slides/02-descrittive.html#istogramma",
+    "title": "Statistica Medica",
+    "section": "Istogramma",
+    "text": "Istogramma\n\nL’istogramma è uno stimatore della distribuzione"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#dati-continui-istogramma",
+    "href": "slides/02-descrittive.html#dati-continui-istogramma",
+    "title": "Statistica Medica",
+    "section": "Dati continui: istogramma",
+    "text": "Dati continui: istogramma\nPer il calcolo dell’istogramma, la tabella delle frequenze deve essere estesa\n\n\n\n\n\n\n\n\n\n\nGruppi\nPunto medio \\(m_i\\)\nFrequenza\nAmpiezza\nDensità\n\n\n\n\n\\([y_1, y_2)\\)\n\\(\\frac{y_1+y_2}{2}\\)\n\\(f_1\\)\n\\(a_1 = y_2-y_1\\)\n\\(\\frac{f_1}{n*a_1}\\)\n\n\n\\(\\vdots\\)\n\\(\\vdots\\)\n\\(\\vdots\\)\n\\(\\vdots\\)\n\\(\\vdots\\)\n\n\n\\([y_k, y_{k+1})\\)\n\\(\\frac{y_k+y_{k+1}}{2}\\)\n\\(f_k\\)\n\\(a_k = y_{k+1}-y_k\\)\n\\(\\frac{f_k}{n*a_k}\\)"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#istogramma-autocalcolato",
+    "href": "slides/02-descrittive.html#istogramma-autocalcolato",
+    "title": "Statistica Medica",
+    "section": "Istogramma: autocalcolato",
+    "text": "Istogramma: autocalcolato\n\nSe ampiezze tutte uguali, la forma standardizzata ad area unitaria è proporzionale a quella con barre di altezza le frequenze\n\nCountHist"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#boxplot-general",
+    "href": "slides/02-descrittive.html#boxplot-general",
+    "title": "Statistica Medica",
+    "section": "Boxplot (general)",
+    "text": "Boxplot (general)"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#dati-continui-box-plot",
+    "href": "slides/02-descrittive.html#dati-continui-box-plot",
+    "title": "Statistica Medica",
+    "section": "Dati continui: box-plot",
+    "text": "Dati continui: box-plot\nIl box-plot è un modo per rappresentare graficamente una distribuzione rispetto a centralità e variabilità. Per un campione di ampiezza \\(n\\)\n\nIl segmento all’interno del box è la mediana.\nil primo quartile (h, o 25º percentile) è il bordo inferiore della scatola (box)\nil terzo quartile (H, o 75º percentile) è il bordo superiore della scatola\nl’ampiezza della scatola (box) è il Range Inter-Quartile (IQR), ovvero la differenza tra il III e il I quartile (\\(H - h\\)).\ni baffi arrivano fino al valore più lontano dalla scatola ma entro una volta e mezza l’IQR dai suoi bordi; i limiti \\(h - 1.5 \\times (H-h)\\) e \\(H + 1.5 \\times (H-h)\\) sono il baffo inferiore e superiore dello schema\nun outlier è: un valore oltre i baffi, cioè che si allontana dai bordi della scatola più di una volta e mezza l’IQR, cioè \\[x &gt; H + 1.5 \\times (H-h)  \\quad o \\quad x &lt; h - 1.5 \\times (H-h)\\]\nun outlier estremo è: un valore che si allontana dai bordi della scatola più di tre volte l’IQR, cioè \\[x &gt; H + 3 \\times (H-h)  \\quad o \\quad x &lt; h - 3 \\times (H-h)\\]"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#box-plot-calcolo",
+    "href": "slides/02-descrittive.html#box-plot-calcolo",
+    "title": "Statistica Medica",
+    "section": "Box-plot (calcolo)",
+    "text": "Box-plot (calcolo)\nUn’assunzione giornaliera di 43 mg/die di magnesio rappresenta un outlier\n\n\n\n\n  [1]  43.0  84.2 100.4 102.2 113.0 116.7 118.9 128.8 130.1\n [10] 144.3 151.5 152.3 163.0 168.9 169.4 181.1 189.5 197.5\n [19] 198.3 198.3 198.7 202.2 204.6 212.0 215.3 215.4 219.6\n [28] 222.0 226.2 228.0 234.3 234.4 236.4 239.9 241.7 245.9\n [37] 250.0 251.8 255.8 257.9 263.7 264.5 267.7 269.6 277.7\n [46] 279.7 281.1 285.3 285.8 288.9 295.5 297.6 297.8 299.0\n [55] 300.8 302.9 304.2 304.9 305.1 306.0 307.1 307.4 309.0\n [64] 312.3 317.1 317.8 318.4 320.1 320.2 320.4 320.5 321.1\n [73] 322.4 323.7 323.9 324.0 325.3 326.4 329.1 329.2 331.1\n [82] 332.6 333.0 334.3 338.1 340.3 341.3 343.4 343.8 344.9\n [91] 349.4 349.6 350.5 351.4 355.9 357.6 359.1 359.8 359.8\n[100] 360.3\n\n\n\n\\(h\\) è la media tra l’osservazione \\((100 * 1/4)\\)ª e la \\(((100 * 1/4) + 1)\\)ª, ovvero \\((215.3+215.4) / 2 = 215.35\\)\n\\(H\\) è la media dell’osservazione \\((100 * 3/4)\\)ª e la \\(((100 * 3/4) + 1)\\)ª, ovvero \\((323.9+324) / 2 = 323.95\\)\ni limiti per gli outlier sono quindi: \\[x &gt; 323.95 + 1.5 * (323.95 - 215.35) = 486.85\\] \\[x &lt; 215.35 - 1.5 * (323.95 - 215.35) = 52.45\\]\ngli outlier estremi sarebbero: \\[x &gt; 323.95 + 3 * (323.95 - 215.35) = 649.75\\] \\[x &lt; 215.35 - 3 * (323.95 - 215.35) = -110.45\\] (valore negativo: un’assunzione non può essere negativa, quindi nessun outlier estremo inferiore)"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#dati-categorici-barre",
+    "href": "slides/02-descrittive.html#dati-categorici-barre",
+    "title": "Statistica Medica",
+    "section": "Dati categorici: barre",
+    "text": "Dati categorici: barre\nVolendo rappresentare confronti tra conteggi, possiamo usare grafici a barre.\n\nATTENZIONE 1: istogramma rappresenta una distribuzione per i valori di una variabile continua; un grafico a barre rappresenta i valori (conteggi) dei livelli di una variabile categorica!\n\n\nATTENZIONE 2: in un grafico a barre, la base delle barre DEVE essere sempre (ben!!) definita, ovvero deve SEMPRE iniziare dall’opportuno “zero” (per esempio da 1 per scale logaritmiche, da 0 per i conteggi classici)"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#prima",
+    "href": "slides/02-descrittive.html#prima",
+    "title": "Statistica Medica",
+    "section": "Prima",
+    "text": "Prima"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#prima-1",
+    "href": "slides/02-descrittive.html#prima-1",
+    "title": "Statistica Medica",
+    "section": "Prima",
+    "text": "Prima"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#prima-2",
+    "href": "slides/02-descrittive.html#prima-2",
+    "title": "Statistica Medica",
+    "section": "Prima",
+    "text": "Prima"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#dopo",
+    "href": "slides/02-descrittive.html#dopo",
+    "title": "Statistica Medica",
+    "section": "Dopo",
+    "text": "Dopo"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#sondaggio-3",
+    "href": "slides/02-descrittive.html#sondaggio-3",
+    "title": "Statistica Medica",
+    "section": "Sondaggio",
+    "text": "Sondaggio\nPer me: Grafici\nPer voi: &lt;img src=“img/bit.ly_statmed-sondaggio-grafici.png”, width=“300px” style=“vertical-align: middle”/&gt; bit.ly/statmed-sondaggio-grafici"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#risorse-utili",
+    "href": "slides/02-descrittive.html#risorse-utili",
+    "title": "Statistica Medica",
+    "section": "Risorse utili",
+    "text": "Risorse utili\n\nRStudio Cloud: https://bit.ly/statmed-cl-rstudio gratis per voi per esplorare RStudio, le sue funzionalità, e allenarvi con R (link di iscrizione valido fino alla fine del corso). NOTA: a vostra scelta, è utilizzabile anche come supporto durante l’esame.\nRStudio primers ambiente gratuito dentro RStudio Cloud per l’apprendimento delle basi di analisi di dati con R tramite tutorial interattivi. Una volta registrati, oltre all’accesso al nostro spazio di lavoro, avete accesso libero anche ai Primers.\nR 4 Data Science: libro gratuito (on-line) di Hadley Wickham e Garrett Grolemund\nGGplot2 cheatsheet schema dei possibili grafici di base rappresentabili in R con il pacchetto {ggplot2}, molto utile anche per conoscere le tipologie di grafico, e il loro utilizzo.\nStatistica medica di Martin Bland, suggeriti capitoli 1, 4 e 5.\nPerché n − 1 nella formula della deviazione standard campionaria? di Riccardo Dossena Traduzione dell’articolo Book, S.A.: Why n − 1 in the formula for the sample standard deviation?, The Two-Year College Mathematics Journal 10(5), 330–333 (1979)"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#section",
+    "href": "slides/02-descrittive.html#section",
+    "title": "Statistica Medica",
+    "section": "",
+    "text": "Mathematical conventions are just that, conventions. They differ by field of mathematics. Don’t ask us why matrix rows are numbered down but graphs are numbered up the y axis, nor why x comes before y but row before column. But the matrix layout has always seemed illogical to me.\n\n\n—Brian D. Ripley08/2004 - R-help\n\n\nGrazie per l’attenzione!\nDiapositive: bit.ly/statmed-cl-corsi\n www.unipd-ubep.it |  Corrado.Lanera@ubep.unipd.it\n   @CorradoLanera |  bit.ly/statmed-cl-ricevimento"
   },
   {
     "objectID": "esercizi/descrittive_1.html",

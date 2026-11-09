@@ -15,7 +15,9 @@
   {
     "listing": "/slides/index.html",
     "items": [
-      "/slides/00-intro_and_info.html"
+      "/slides/00-intro_and_info.html",
+      "/slides/01-r_rstudio.html",
+      "/slides/02-descrittive.html"
     ]
   },
   {

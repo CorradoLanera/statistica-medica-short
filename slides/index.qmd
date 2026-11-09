@@ -5,8 +5,8 @@ listing:
   type: table
   contents:
     - 00-intro_and_info.qmd
-    - 01-r_rstudio.html
-    - 02-descrittive.html
+    - 01-r_rstudio.qmd
+    - 02-descrittive.qmd
     - 03-probabilita.html
     - 04-distribuzioni.html
     - 05-ic_p.html
