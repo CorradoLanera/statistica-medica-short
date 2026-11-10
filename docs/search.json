@@ -1365,7 +1365,7 @@
     "href": "slides/03-probabilita.html#somma-indipendenza",
     "title": "Statistica Medica",
     "section": "Somma: indipendenza",
-    "text": "Somma: indipendenza\nSiano: AA e BB due eventi indipendenti (allora lo sono anche A‾\\bar{A} e BB)\nAllora:\nP(A∪B)=P(A)+P(B)−P(A∩B)=P(A)+P(B)−P(A)P(B)=P(A)+P(B)−P(B)P(A)=P(A)+P(B)[1−P(A)]=P(A)+P(B)P(A‾)=P(A)+P(B∩A‾)\\begin{split}P(A \\cup B)& = P(A)+P(B)-P(A\\cap B)\\\\& = P(A)+P(B)-P(A)P(B)\\\\& = P(A)+P(B)-P(B)P(A)\\\\& = P(A)+P(B)[1-P(A)]\\\\& = P(A)+P(B)P(\\bar{A})\\\\& = P(A)+P(B \\cap \\bar{A})\\end{split}"
+    "text": "Somma: indipendenza\nSempre (indipendenti o no):\nP(A∪B)=P(A)+P(B∩A‾)P(A \\cup B) = P(A) + P(B \\cap \\bar{A})\nperché AA e B∩A‾B \\cap \\bar{A} sono incompatibili (figura nella slide seguente).\nSe AA e BB sono indipendenti (allora lo sono anche A‾\\bar{A} e BB):\nP(B∩A‾)=P(B)P(A‾)P(B \\cap \\bar{A}) = P(B)P(\\bar{A})\nquindi:\nP(A∪B)=P(A)+P(B)[1−P(A)]P(A \\cup B) = P(A) + P(B)[1 - P(A)]"
   },
   {
     "objectID": "slides/03-probabilita.html#somma-indipendente",
@@ -1379,7 +1379,7 @@
     "href": "slides/03-probabilita.html#somma-eventi-indipendenti-esempio",
     "title": "Statistica Medica",
     "section": "Somma eventi indipendenti: esempio",
-    "text": "Somma eventi indipendenti: esempio\nSi considerino gli eventi\n\nP(A)=P({DBP madre≥95})=0.1P(A)=P(\\{\\mbox{DBP madre}\\geq 95 \\})=0.1\nP(B)=P({DBP padre≥95})=0.2P(B)=P(\\{\\mbox{DBP padre}\\geq 95 \\})=0.2\n\nSi definisca come famiglia ipertesa quella in cui almeno uno dei genitori è iperteso.\nAllora (ipotizzando AA e BB indipendenti):\nP({famiglia ipertesa})=P(A∪B)=P(A)+P(B∩A‾)=P(A)+P(B)P(A‾)=P(A)+P(B)[1−P(A)]=0.1+(0.2)[1−0.1]=0.28\\begin{split} P(\\{\\mbox{famiglia ipertesa}\\})& = P(A \\cup B)\\\\&= P(A) + P(B\\cap\\bar{A})\\\\&= P(A) + P(B)P(\\bar{A})\\\\& = P(A) +  P(B)[1-P(A)]\\\\& = 0.1 + (0.2)[1-0.1]\\\\& = 0.28\\end{split}"
+    "text": "Somma eventi indipendenti: esempio\nSi considerino gli eventi\n\nP(A)=P({DBP madre≥95})=0.1P(A)=P(\\{\\mbox{DBP madre}\\geq 95 \\})=0.1\nP(B)=P({DBP padre≥95})=0.2P(B)=P(\\{\\mbox{DBP padre}\\geq 95 \\})=0.2\n\nSi definisca come famiglia ipertesa quella in cui almeno uno dei genitori è iperteso.\nAllora (ipotizzando AA e BB indipendenti):\nP({famiglia ipertesa})=P(A∪B)=P(A)+P(B∩A‾)(sempre)=P(A)+P(B)P(A‾)(indipendenza)=P(A)+P(B)[1−P(A)]=0.1+(0.2)[1−0.1]=0.28\\begin{split} P(\\{\\mbox{famiglia ipertesa}\\})& = P(A \\cup B)\\\\&= P(A) + P(B\\cap\\bar{A}) \\quad \\mbox{(sempre)}\\\\&= P(A) + P(B)P(\\bar{A}) \\quad \\mbox{(indipendenza)}\\\\& = P(A) +  P(B)[1-P(A)]\\\\& = 0.1 + (0.2)[1-0.1]\\\\& = 0.28\\end{split}"
   },
   {
     "objectID": "slides/03-probabilita.html#sondaggio",
