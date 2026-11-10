@@ -57,20 +57,24 @@ options(width = 59) # fit into the right-column slides
 
 ## [Obiettivi]{.orange}
 
-- imparare le **definizioni** e gli **operatori** base della statistica medica,
- in particolare riguardo:
- 
-  + **analisi descrittiva** dei dati
-  + elementi di **probabilità**
+Alla fine del corso saprete:
 
-- imparare a comprendere e stimare i parametri di valutazione di un **test diagnostico**, in particolare **sensibilità**, **specificità**, **valori predittivi**, **positivo e negativo**
-  
-- conoscere e identificare le principali **distribuzioni di probabilità**
-  e i loro ambiti di utilità e applicabilità
+- scegliere e calcolare le **misure di centralità e di variabilità** adatte
+  ai dati, e dire quando la media inganna;
 
-- acquisire le basi per la comprensione, il calcolo e l'interpretazione delle
-  metriche relative ai **test statistici** per variabili continue,
-  come il t-test, il p-value e gli intervalli di confidenza per una stima.
+- riconoscere un **grafico** che distorce i dati e scegliere il grafico
+  adatto al tipo di variabile;
+
+- calcolare **sensibilità**, **specificità** e **valori predittivi** di un
+  test diagnostico, anche dopo un secondo test;
+
+- calcolare probabilità con le distribuzioni **binomiale**, di **Poisson**
+  e **normale**;
+
+- calcolare un **intervallo di confidenza** per una media e dire come
+  cambia con la numerosità, la variabilità e il livello di confidenza;
+
+- leggere un **p-value** in un articolo: che cosa significa e che cosa no.
 
 ## [Requisiti]{.orange}
 

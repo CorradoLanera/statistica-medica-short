@@ -987,7 +987,7 @@
     "href": "slides/00-intro_and_info.html#obiettivi",
     "title": "Statistica Medica",
     "section": "Obiettivi",
-    "text": "Obiettivi\n\nimparare le definizioni e gli operatori base della statistica medica, in particolare riguardo:\n\nanalisi descrittiva dei dati\nelementi di probabilità\n\nimparare a comprendere e stimare i parametri di valutazione di un test diagnostico, in particolare sensibilità, specificità, valori predittivi, positivo e negativo\nconoscere e identificare le principali distribuzioni di probabilità e i loro ambiti di utilità e applicabilità\nacquisire le basi per la comprensione, il calcolo e l’interpretazione delle metriche relative ai test statistici per variabili continue, come il t-test, il p-value e gli intervalli di confidenza per una stima."
+    "text": "Obiettivi\nAlla fine del corso saprete:\n\nscegliere e calcolare le misure di centralità e di variabilità adatte ai dati, e dire quando la media inganna;\nriconoscere un grafico che distorce i dati e scegliere il grafico adatto al tipo di variabile;\ncalcolare sensibilità, specificità e valori predittivi di un test diagnostico, anche dopo un secondo test;\ncalcolare probabilità con le distribuzioni binomiale, di Poisson e normale;\ncalcolare un intervallo di confidenza per una media e dire come cambia con la numerosità, la variabilità e il livello di confidenza;\nleggere un p-value in un articolo: che cosa significa e che cosa no."
   },
   {
     "objectID": "slides/00-intro_and_info.html#requisiti",
