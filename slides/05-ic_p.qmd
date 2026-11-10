@@ -912,6 +912,8 @@ Frequenza cardiaca a riposo: nella popolazione la media è $\mu_0 = 72$ battiti/
 
 2. E con $H_1: \mu \neq 72$?
 
+3. E se $\sigma$ non fosse nota, e dal campione $s = 12$?
+
 
 ### Risposte
 
@@ -921,7 +923,9 @@ $$z = \frac{75.6 - 72}{\frac{12}{\sqrt{36}}} = \frac{3.6}{2} = 1.80$$
 
 2. No: a due code i valori critici sono $\pm 1.96$, e $-1.96 < 1.80 < 1.96$.
 
-Con gli stessi dati le conclusioni cambiano: $H_1$ si sceglie prima di guardare i dati.
+   Con gli stessi dati le conclusioni cambiano: $H_1$ si sceglie prima di guardare i dati.
+
+3. Si usa la $t$ con $n-1=35$ gradi di libertà: $t = \frac{75.6 - 72}{12/\sqrt{36}} = 1.80$. I valori critici sono $t_{35,0.95} = 1.690$ (una coda) e $t_{35,0.975} = 2.030$ (due code): stesse conclusioni di prima, ma con valori critici più grandi di quelli di $z$ (1.645 e 1.96), perché $\sigma$ stimata aggiunge incertezza.
 
 :::
 
