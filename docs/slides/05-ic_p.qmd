@@ -167,7 +167,7 @@ $$\begin{split}\mbox{var}(\bar{X})&= \mbox{var}\left(\frac{\sum_{i=1}^n X_i}{n}\
 - il passaggio $\stackrel{\mbox{ind.}}{=}$ vale perché le $X_i$ sono **indipendenti**
 
 
-$$*)\begin{split}\mbox{var}(aX) &= \frac{\sum_1^n\left(ax_i-\frac{\sum_1^nax_j}{n}\right)^2}{n}= \frac{\sum_1^n\left(ax_i-\frac{a\sum_1^nx_j}{n}\right)^2}{n}\\&= \frac{\sum_1^n\left(a\left(x_i-\mu\right)\right)^2}{n}= \frac{\sum_1^na^2\left(x_i-\mu\right)^2}{n}\\&=\frac{a^2\sum_1^n\left(x_i-\mu\right)^2}{n}=a^ 2\mbox{var}(X)\end{split}$$ 
+$$*)\begin{split}\mbox{var}(aX) &= \frac{\sum_1^n\left(ax_i-\frac{\sum_1^nax_j}{n}\right)^2}{n}= \frac{\sum_1^n\left(ax_i-\frac{a\sum_1^nx_j}{n}\right)^2}{n}\\&= \frac{\sum_1^n\left(a\left(x_i-\mu\right)\right)^2}{n}= \frac{\sum_1^na^2\left(x_i-\mu\right)^2}{n}\\&=\frac{a^2\sum_1^n\left(x_i-\mu\right)^2}{n}=a^ 2\mbox{var}(X)\end{split}$$
 
 ## [Teorema del Limite Centrale]{.orange}
 
@@ -1056,9 +1056,9 @@ $p = 0.034 < 0.05$: si rifiuta $H_0$, come con i valori critici.
 
 $t = 2.71$ con 25 gradi di libertà: le aree si leggono sulla $t_{25}$ invece che sulla $N(0,1)$.
 
-$$p = 2P(t_{25}>2.71) = 2 \times 0.0060 = 0.012$$
+Dalle tavole: $t_{25,0.99} = 2.485 < 2.71 < 2.787 = t_{25,0.995}$, quindi $0.005 < P(t_{25}>2.71) < 0.01$ e $0.01 < p < 0.02$ (con un software: $p = 0.012$).
 
-$p = 0.012 < 0.05$: si rifiuta $H_0$, come con i valori critici $\pm 2.060$.
+$p < 0.02 < 0.05$: si rifiuta $H_0$, come con i valori critici $\pm 2.060$.
 
 :::
 
