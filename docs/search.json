@@ -1442,7 +1442,7 @@
     "href": "slides/03-probabilita.html#rischio-relativo",
     "title": "Statistica Medica",
     "section": "Rischio relativo",
-    "text": "Rischio relativo\nIl rischio relativo (RR) di osservare, in una data popolazione, un evento BB su chi è esposto a un fattore AA rispetto a chi non ne è esposto ( A‾\\bar{A} ) è definito, tramite probabilità condizionate, come\nP(B|A)P(B|A‾)\\frac{P(B|A)}{P(B|\\bar{A})} &gt; NOTA: &gt; &gt; Se: AA e BB sono indipendenti &gt; &gt; Allora: RR=1RR = 1 (infatti P(B|A)=P(B|A‾)=P(B)P(B|A) = P(B|\\bar{A}) = P(B) )\n\nNOTA 2:\nDefiniamo Rischio assoluto il rapporto tra il numero di casi osservati e il numero di persone a rischio (a rischio vuol dire: che sono sottoposte al rischio con una probabilità positiva che si possa verificare l’evento di interesse), ovvero la probabilità che un certo evento accada sotto determinate condizioni in una data popolazione."
+    "text": "Rischio relativo\nIl rischio relativo (RR) di osservare, in una data popolazione, un evento BB su chi è esposto a un fattore AA rispetto a chi non ne è esposto ( A‾\\bar{A} ) è definito, tramite probabilità condizionate, come\nP(B|A)P(B|A‾)\\frac{P(B|A)}{P(B|\\bar{A})} &gt; NOTA: &gt; &gt; Se: AA e BB sono indipendenti &gt; &gt; Allora: RR=1RR = 1 (infatti P(B|A)=P(B|A‾)=P(B)P(B|A) = P(B|\\bar{A}) = P(B) )"
   },
   {
     "objectID": "slides/03-probabilita.html#rischio-relativo-esempio",
@@ -2199,5 +2199,12 @@
     "title": "Statistica Medica",
     "section": "Media o mediana?",
     "text": "Media o mediana?\n\n\nCon dati a coda lunga (degenze, trigliceridi, redditi) pochi valori molto grandi tirano la media verso la coda; la mediana no.\nIn questi casi la media non descrive il valore tipico, e si descrivono i dati con la mediana (e con i quartili, che vedremo più avanti).\n\n\n\n\n\n\n‘EPIC-Norfolk cohort’ (Bain et al. 2015)"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#rischio-relativo-attenzione-al-gonfiaggio",
+    "href": "slides/03-probabilita.html#rischio-relativo-attenzione-al-gonfiaggio",
+    "title": "Statistica Medica",
+    "section": "Rischio relativo: attenzione al gonfiaggio",
+    "text": "Rischio relativo: attenzione al gonfiaggio\nIl RR dice quante volte è più probabile l’evento, non quanti casi in più ci sono. Va letto insieme al rischio di partenza, P(B∣A‾)P(B \\mid \\bar{A}).\n\nEsempio della TB: RR=100RR = 100, eppure fra i positivi allo skin test solo 1 su 100 ha la TB (P(TB∣SKT+)=0.01P(TB \\mid SKT^+) = 0.01); gli altri 99 no.\nIl caso tipico degli articoli: il rischio passa da 1 su 10000 a 2 su 10000.\nRR=2/100001/10000=2RR = \\frac{2/10000}{1/10000} = 2\n«Il rischio raddoppia!», ma è 1 caso in più ogni 10000 persone."
   }
 ]

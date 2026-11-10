@@ -546,12 +546,6 @@ $$\frac{P(B|A)}{P(B|\bar{A})}$$
 > **Se**: $A$ e $B$ sono [indipendenti]{.orange}
 > 
 > **Allora**:  $RR = 1$ (infatti $P(B|A) = P(B|\bar{A}) = P(B)$ )
- 
- 
-> NOTA 2:
->
-> Definiamo **Rischio assoluto** il rapporto tra il numero di casi osservati e il numero di persone a rischio (a rischio vuol dire: che sono sottoposte al rischio con una probabilità positiva che si possa verificare l'evento di interesse), ovvero la probabilità che un certo evento accada sotto determinate condizioni in una data popolazione.
->
 
 ## [Rischio relativo]{.orange}: esempio
 
@@ -565,6 +559,18 @@ Il rischio relativo di avere la TB nel caso di un test positivo rispetto a un te
 $$RR=\frac{P(B|A)}{P(B|\bar{A})}=\frac{1/100}{1/10000}=\frac{0.01}{0.0001}=100$$
 
 dove abbiamo indicato con $B$ l'evento di avere la TB, e con $A$ quello di avere un test positivo (ovvero con $\bar{A}$ di averlo negativo).
+
+## [Rischio relativo]{.orange}: attenzione al gonfiaggio
+
+Il RR dice **quante volte** è più probabile l'evento, non **quanti** casi in più ci sono. Va letto insieme al rischio di partenza, $P(B \mid \bar{A})$.
+
+- **Esempio della TB**: $RR = 100$, eppure fra i positivi allo skin test solo **1 su 100** ha la TB ($P(TB \mid SKT^+) = 0.01$); gli altri 99 no.
+
+- **Il caso tipico degli articoli**: il rischio passa da 1 su 10000 a 2 su 10000.
+
+  $$RR = \frac{2/10000}{1/10000} = 2$$
+
+  «Il rischio raddoppia!», ma è **1 caso in più ogni 10000** persone.
 
 ## [Rischio relativo]{.orange}: esempio problema
 

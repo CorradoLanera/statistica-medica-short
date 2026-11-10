@@ -5438,7 +5438,7 @@ flowchart LR
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_7d196ef9" minutes="15" seconds="0" warn-when="3" update-every="1" play-sound="true" tabindex="0" style="bottom:20%;left:70%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_c3f5a599" minutes="15" seconds="0" warn-when="3" update-every="1" play-sound="true" tabindex="0" style="bottom:20%;left:70%;"></countdown-timer>
 </div>
 </div>
 </section>
@@ -5490,7 +5490,7 @@ flowchart LR
 <h2><span class="orange">Probabilità totali</span>: esempio problema</h2>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_55aa2bb2" minutes="3" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:10%;left:70%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_be6d4d5c" minutes="3" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:10%;left:70%;"></countdown-timer>
 </div>
 </div>
 <div class="panel-tabset">
@@ -5601,10 +5601,6 @@ flowchart LR
 <h2><span class="orange">Rischio relativo</span></h2>
 <p>Il rischio relativo (<strong>RR</strong>) di osservare, in una data popolazione, un evento <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math> su chi è esposto a un fattore <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> rispetto a chi non ne è esposto ( <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover accent="true"><mi>A</mi><mo>‾</mo></mover><annotation encoding="application/x-tex">\bar{A}</annotation></semantics></math> ) è definito, tramite <span class="orange">probabilità condizionate</span>, come</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="prefix">|</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="prefix">|</mo><mover accent="true"><mi>A</mi><mo>‾</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><annotation encoding="application/x-tex">\frac{P(B|A)}{P(B|\bar{A})}</annotation></semantics></math> &gt; NOTA: &gt; &gt; <strong>Se</strong>: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math> sono <span class="orange">indipendenti</span> &gt; &gt; <strong>Allora</strong>: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mi>R</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">RR = 1</annotation></semantics></math> (infatti <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="prefix">|</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="prefix">|</mo><mover accent="true"><mi>A</mi><mo>‾</mo></mover><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P(B|A) = P(B|\bar{A}) = P(B)</annotation></semantics></math> )</p>
-<blockquote>
-<p>NOTA 2:</p>
-<p>Definiamo <strong>Rischio assoluto</strong> il rapporto tra il numero di casi osservati e il numero di persone a rischio (a rischio vuol dire: che sono sottoposte al rischio con una probabilità positiva che si possa verificare l’evento di interesse), ovvero la probabilità che un certo evento accada sotto determinate condizioni in una data popolazione.</p>
-</blockquote>
 </section>
 <section id="rischio-relativo-esempio" class="slide level2">
 <h2><span class="orange">Rischio relativo</span>: esempio</h2>
@@ -5617,11 +5613,21 @@ flowchart LR
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mi>R</mi><mo>=</mo><mfrac><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="prefix">|</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="prefix">|</mo><mover accent="true"><mi>A</mi><mo>‾</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>1</mn><mi>/</mi><mn>100</mn></mrow><mrow><mn>1</mn><mi>/</mi><mn>10000</mn></mrow></mfrac><mo>=</mo><mfrac><mn>0.01</mn><mn>0.0001</mn></mfrac><mo>=</mo><mn>100</mn></mrow><annotation encoding="application/x-tex">RR=\frac{P(B|A)}{P(B|\bar{A})}=\frac{1/100}{1/10000}=\frac{0.01}{0.0001}=100</annotation></semantics></math></p>
 <p>dove abbiamo indicato con <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math> l’evento di avere la TB, e con <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> quello di avere un test positivo (ovvero con <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover accent="true"><mi>A</mi><mo>‾</mo></mover><annotation encoding="application/x-tex">\bar{A}</annotation></semantics></math> di averlo negativo).</p>
 </section>
+<section id="rischio-relativo-attenzione-al-gonfiaggio" class="slide level2">
+<h2><span class="orange">Rischio relativo</span>: attenzione al gonfiaggio</h2>
+<p>Il RR dice <strong>quante volte</strong> è più probabile l’evento, non <strong>quanti</strong> casi in più ci sono. Va letto insieme al rischio di partenza, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo>∣</mo><mover accent="true"><mi>A</mi><mo>‾</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P(B \mid \bar{A})</annotation></semantics></math>.</p>
+<ul>
+<li><p><strong>Esempio della TB</strong>: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mi>R</mi><mo>=</mo><mn>100</mn></mrow><annotation encoding="application/x-tex">RR = 100</annotation></semantics></math>, eppure fra i positivi allo skin test solo <strong>1 su 100</strong> ha la TB (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>T</mi><mi>B</mi><mo>∣</mo><mi>S</mi><mi>K</mi><msup><mi>T</mi><mo>+</mo></msup><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.01</mn></mrow><annotation encoding="application/x-tex">P(TB \mid SKT^+) = 0.01</annotation></semantics></math>); gli altri 99 no.</p></li>
+<li><p><strong>Il caso tipico degli articoli</strong>: il rischio passa da 1 su 10000 a 2 su 10000.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mi>R</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mi>/</mi><mn>10000</mn></mrow><mrow><mn>1</mn><mi>/</mi><mn>10000</mn></mrow></mfrac><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">RR = \frac{2/10000}{1/10000} = 2</annotation></semantics></math></p>
+<p>«Il rischio raddoppia!», ma è <strong>1 caso in più ogni 10000</strong> persone.</p></li>
+</ul>
+</section>
 <section id="rischio-relativo-esempio-problema" class="slide level2">
 <h2><span class="orange">Rischio relativo</span>: esempio problema</h2>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_75c85cfa" minutes="3" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:70%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_397c32c3" minutes="3" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:70%;"></countdown-timer>
 </div>
 </div>
 <div class="panel-tabset">
@@ -5864,7 +5870,7 @@ flowchart LR
 <h2><span class="orange">Teorema di Bayes</span>: esempio</h2>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_b52787b9" minutes="5" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:70%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_f5bf3fab" minutes="5" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:70%;"></countdown-timer>
 </div>
 </div>
 <div class="panel-tabset">
@@ -5936,7 +5942,7 @@ flowchart LR
 <h2><span class="orange">Bayes generalizzato</span>: esempio</h2>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_f601ef55" minutes="3" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:0%;left:70%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_18032fba" minutes="3" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:0%;left:70%;"></countdown-timer>
 </div>
 </div>
 <div class="panel-tabset">
