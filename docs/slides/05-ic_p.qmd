@@ -730,42 +730,45 @@ altrimenti non si rifiuta.
 
 ##### stato socioeconomico e peso alla nascita
 
-Si consideri l'ipotesi per cui madri con un livello socioeconomico basso tendano a partorire figli con pesi alla nascita inferiori al normale. Per testare l'ipotesi, si considera un campione di 100 nati vivi consecutivi in un ospedale situato in una zona socioeconomica svantaggiata. Il peso normale è noto dai dati del registro nazionale, che per gli USA è pari a 120 oz, con una deviazione standard di 25 oz. 
-Il peso medio dei 100 nati è di 115 oz con una deviazione standard campionaria di 24 oz. 
+Le madri con un livello socioeconomico basso partoriscono figli che pesano meno del normale?
 
-Ad un livello di significatività di 0.05, si ha $z_{\alpha}=-1.645$, e il valore critico è pari a
+- campione: 100 nati vivi consecutivi in un ospedale di una zona svantaggiata, peso medio $\bar{x} = 115$ oz
+- riferimento (registro nazionale USA): $\mu_0 = 120$ oz, con $\sigma = 25$ oz nota
 
-$$c=120-1.645\frac{25}{10}=115.89$$
+$H_0: \mu = 120$, $H_1: \mu < 120$
 
-quindi, poiché $\bar{X}=115<115.89=c$ si rifiuta $H_0$ ad un livello di significatività di 0.05
+La deviazione standard del campione (24 oz) qui non serve: $\sigma$ è nota.
+
+
+### Con $\alpha = 0.05$
+
+$z_{0.05}=-1.645$, quindi il valore critico è
+
+$$c=120-1.645\frac{25}{\sqrt{100}}=115.89$$
+
+$\bar{x}=115<115.89=c$: si rifiuta $H_0$ al livello 0.05.
 
 
 ### Con $\alpha = 0.01$
 
-Usando un livello di significatività pari a 0.01, si avrebbe che
+$z_{0.01}=-2.326$, quindi il valore critico è
 
-$z_{\alpha}=-2.326$ e che
+$$c=120-2.326\frac{25}{\sqrt{100}}=114.18$$
 
-$$c=120-2.326\frac{25}{10}=114.18$$
-
-e quindi **non si rifiuterebbe** l'ipotesi nulla dal momento che $\bar{x}=115\geq 114.18=c$
+$\bar{x}=115\geq 114.18=c$: **non si rifiuta** $H_0$ al livello 0.01.
 
 Un $\alpha$ più piccolo è un criterio più severo: per rifiutare $H_0$ serve una media più lontana da 120.
 
 
-### Usando Z
+### Usando z
 
-Per testare l'ipotesi:
+Invece di confrontare $\bar{x}$ con $c$, si può standardizzare $\bar{x}$:
 
-- $H_0:\mu=\mu_0$; $\sigma=\sigma_0$
-- $H_1:\mu<\mu_0$; $\sigma=\sigma_0$
+$$z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}=\frac{115-120}{\frac{25}{\sqrt{100}}}=-2.00$$
 
-si può anche equivalentemente calcolare
+Se $z<z_{\alpha}$ si rifiuta $H_0$; altrimenti non si rifiuta.
 
-$$z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}$$
-
-- se $z<z_{\alpha}$ si rifiuta $H_0$
-- se $z\geq z_{\alpha}$ non si rifiuta $H_0$
+Con $\alpha = 0.05$: $-2.00 < -1.645$, si rifiuta. Con $\alpha = 0.01$: $-2.00 \geq -2.326$, non si rifiuta. Le conclusioni sono le stesse.
 
 :::
 
