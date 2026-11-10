@@ -793,18 +793,11 @@ Di conseguenza si rifiuta $H_0$ al livello $\alpha$ se e solo se $p < \alpha$ ($
 
 ::: {.column width="48%"}
 
-- $H_0:\mu=\mu_0$; $\sigma=\sigma_0$
-- $H_1:\mu<\mu_0$; $\sigma=\sigma_0$
+$H_1:\mu<\mu_0$
 
+«Più estremo» vuol dire più piccolo: il p-value è l'area a sinistra di $z$
 
-si calcola
-
-$$z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}$$
-
-- se $z<z_{\alpha}$ si rifiuta $H_0$
-- se $z\geq z_{\alpha}$ non si rifiuta $H_0$
-
-ovvero si ha un p-value pari a $p=\Phi(z)$
+$$p=\Phi(z)$$
 
 :::
 
@@ -825,17 +818,11 @@ knitr::include_graphics("img/img2.2.png")
 
 ::: {.column width="48%"}
 
-- $H_0:\mu=\mu_0$; $\sigma=\sigma_0$
-- $H_1:\mu>\mu_0$; $\sigma=\sigma_0$
+$H_1:\mu>\mu_0$
 
-si calcola
+«Più estremo» vuol dire più grande: il p-value è l'area a destra di $z$
 
-$$z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}$$
-
-- se $z>z_{1-\alpha}$ si rifiuta $H_0$
-- se $z\leq z_{1-\alpha}$ non si rifiuta $H_0$
-
-ovvero si ha un p-value pari a $p=1-\Phi(z)$
+$$p=1-\Phi(z)$$
 
 :::
 
