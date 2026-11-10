@@ -935,35 +935,30 @@ $p = 0.034 < 0.05$: si rifiuta $H_0$, come con i valori critici.
 
 ## Test: varianza non nota
 
+$\sigma$ non è nota: la si stima con $s$, e al posto di $z$ si usa $t$.
+
 ::: {.panel-tabset}
 
 ### t di Student
 
-Se $X_1,...,X_n$ è un campione di osservazioni indipendenti distribuite normalmente $N(\mu,\sigma^2)$, allora la quantità $\frac{\bar{X}-\mu}{\frac{s}{\sqrt{n}}}$ è distribuita secondo una $t$ di Student con $n-1$ gradi di libertà.
-Da questo deriva che sotto l'ipotesi nulla $\mu=\mu_0$
+Se $X_1,\ldots,X_n$ sono indipendenti e $N(\mu,\sigma^2)$, quando $H_0: \mu = \mu_0$ è vera
 
-$$P\left(t<t_{n-1;\frac{\alpha}{2}}\right)=P\left(t>t_{n-1;1-\frac{\alpha}{2}}\right)=\frac{\alpha}{2}$$
+$$t=\frac{\bar{X}-\mu_0}{\frac{s}{\sqrt{n}}} \sim t_{n-1}$$
 
-da cui si derivano i valori critici
+I valori critici si leggono quindi sulla $t$ di Student con $n-1$ gradi di libertà, invece che sulla $N(0,1)$. A due code:
+
+$$P\left(t<t_{n-1,\frac{\alpha}{2}}\right)=P\left(t>t_{n-1,1-\frac{\alpha}{2}}\right)=\frac{\alpha}{2}, \qquad t_{n-1,\frac{\alpha}{2}}=-t_{n-1,1-\frac{\alpha}{2}}$$
 
 
-### Procedura
+### Regola
 
-Si testa quindi l'ipotesi
-
-- $H_0:\mu=\mu_0$; $\sigma$
-- $H_1:\mu\neq\mu_0$; $\sigma$
-
-si calcola
+$H_0:\mu=\mu_0$, $H_1:\mu\neq\mu_0$
 
 $$t=\frac{\bar{x}-\mu_0}{\frac{s}{\sqrt{n}}}$$
 
-- se $t<t_{n-1;\frac{\alpha}{2}}$ o $t>t_{n-1;1-\frac{\alpha}{2}}$ si rifiuta $H_0$
-- se $t_{n-1;\frac{\alpha}{2}}<t<t_{n-1;1-\frac{\alpha}{2}}$ non si rifiuta $H_0$
+Se $t<t_{n-1,\frac{\alpha}{2}}$ oppure $t>t_{n-1,1-\frac{\alpha}{2}}$ si rifiuta $H_0$;
 
-Si osserva che
-
-$$t_{n-1;\frac{\alpha}{2}}=-t_{n-1;1-\frac{\alpha}{2}}$$
+altrimenti non si rifiuta.
 
 
 ### Graficamente
@@ -975,12 +970,11 @@ knitr::include_graphics("img/img6.png")
 
 ### Esempio
 
-Si vuole studiare l'effetto dell'attività lavorativa (con conseguente esposizione a fumi di varia natura) sui pompieri. Si considera un campione di 26 pompieri di età compresa tra i 25 ed i 34 anni e si misura il cambiamento di FEV (volume di espirazione forzata) su un periodo di 5 anni. In un gruppo generico di pari età nella popolazione, il declino è pari in media a $0.10\ L/sec.$ Nel campione osservato il declino è stato di $0.27\ L/sec$ con una deviazione standard di $0.32\ L/sec$. Rispetto alla FEV, vi è stato un effettivo rischio lavorativo dei pompieri? Supponendo che il declino in FEV sia distribuito normalmente, si ha che
+L'esposizione ai fumi cambia il declino della funzione respiratoria nei pompieri?
 
-- $H_0:\mu=0.10$; $\sigma$
-- $H_1:\mu\neq 0.10$; $\sigma$
-
-si calcola
+- campione: 26 pompieri fra 25 e 34 anni; declino del FEV (volume di espirazione forzata) in 5 anni: $\bar{x} = 0.27\ L/sec$, $s = 0.32\ L/sec$
+- nella popolazione generale di pari età il declino medio è $0.10\ L/sec$
+- il declino del FEV è distribuito normalmente; $H_0:\mu=0.10$, $H_1:\mu\neq 0.10$
 
 $$t=\frac{\bar{x}-\mu_0}{\frac{s}{\sqrt{n}}}=\frac{0.27-0.10}{\frac{0.32}{\sqrt{26}}}=2.71$$
 
