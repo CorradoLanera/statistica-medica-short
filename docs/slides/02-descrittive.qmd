@@ -450,8 +450,8 @@ ages_db_dispari |>
 
 ::: {.column width="75%"}
 
-Nel caso in cui $n$ sia dispari (prendiamo per esempio $n = 7$ ), prendiamo
-direttamente il valore centrale (in posizione $4 = (7+1)/2$ ), ovvero **62.9**.
+Nel caso in cui $n$ sia dispari (prendiamo per esempio $n = 7$), prendiamo
+direttamente il valore centrale (in posizione $4 = (7+1)/2$), ovvero **62.9**.
 
 ```{r, include=FALSE}
 age <- c(55.1, 62.9, 53.1, 76.3, 64.2, 53.3, 65.7)

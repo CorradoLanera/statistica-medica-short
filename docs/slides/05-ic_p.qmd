@@ -335,7 +335,7 @@ $s$       | 21.70 | 32.62 | 22.44 | 14.13 | 20.46
 
 ::: {.column width="48%"}
 
-Cinque campioni casuali di ampiezza ( $n = 10$ ) da una popolazione di soggetti afferenti al centro cardiovascolare dell'ASL 1 di Trieste, a cui è stato rilevato il livello di trigliceridi (in mg/dl, valori di riferimento 50-175).
+Cinque campioni casuali di ampiezza ($n = 10$) da una popolazione di soggetti afferenti al centro cardiovascolare dell'ASL 1 di Trieste, a cui è stato rilevato il livello di trigliceridi (in mg/dl, valori di riferimento 50-175).
 
 :::
 
@@ -458,9 +458,9 @@ L'ampiezza dell'intervallo, data da $2 z_{1-\frac{\alpha}{2}} \frac{\sigma}{\sqr
 
 **dipende da** 
 
-- $n$:  come **cresce** il campione ( $n$ ), così **[diminuisce]{.orange}** l'ampiezza dell'intervallo
+- $n$:  come **cresce** il campione ($n$), così **[diminuisce]{.orange}** l'ampiezza dell'intervallo
 
-- $\sigma$: come **aumenta** la deviazione standard della popolazione ( $\sigma$ ), così **[aumenta]{.orange}** l'ampiezza dell'intervallo
+- $\sigma$: come **aumenta** la deviazione standard della popolazione ($\sigma$), così **[aumenta]{.orange}** l'ampiezza dell'intervallo
 
 - $1-\alpha$: come **aumenta** il livello di confidenza richiesto per l'analisi, così **[aumenta]{.orange}** l'ampiezza dell'intervallo
 
@@ -557,7 +557,7 @@ Nel caso di varianza stimata $S^2$, abbiamo appena visto che
 $$T=\frac{\bar{X}-\mu}{\frac{s}{\sqrt{n}}} \sim t_{n-1} \:\:\: di\:\:\: Student$$
 
 
-e per questa variabile si ha che, con ( $n=10$, ovvero $d=9$ gradi di libertà )
+e per questa variabile si ha che, con ($n=10$, ovvero $d=9$ gradi di libertà )
 
 $$\mbox{P}(-2.262\leq T\leq 2.262)= 0.95$$
 
@@ -638,7 +638,7 @@ knitr::include_graphics("img/Rplot02.PNG")
 
 ### Problema
 
-Questo valore ( $207.2\ mg/dL$ ) è **sufficientemente lontano** da quello di $175\ mg/dL$ da farci credere che questi bambini abbiano una distribuzione dei livelli di colesterolo con una media più elevata di quella della popolazione generale  dei  bambini nella stessa classe di età?
+Questo valore ($207.2\ mg/dL$) è **sufficientemente lontano** da quello di $175\ mg/dL$ da farci credere che questi bambini abbiano una distribuzione dei livelli di colesterolo con una media più elevata di quella della popolazione generale  dei  bambini nella stessa classe di età?
 
 
 ### Risposta
@@ -736,8 +736,8 @@ Con $\alpha < 0.5$, $z_{\alpha}$ è negativo: $c$ sta sotto $\mu_0$.
 knitr::include_graphics("img/img.jpg")
 ```
 
-- **regione di rifiuto**: i valori di $\bar{x}$ per cui si rifiuta $H_0$ ( $\bar{x} < c$ )
-- **regione di non rifiuto** (detta anche di accettazione): i valori di $\bar{x}$ per cui non si rifiuta $H_0$ ( $\bar{x} \geq c$ )
+- **regione di rifiuto**: i valori di $\bar{x}$ per cui si rifiuta $H_0$ ($\bar{x} < c$)
+- **regione di non rifiuto** (detta anche di accettazione): i valori di $\bar{x}$ per cui non si rifiuta $H_0$ ($\bar{x} \geq c$)
 
 
 ### Regola
@@ -945,7 +945,7 @@ Tumore al seno   | 4 casi su 1000 | 1      | $P(X \geq 4) = 0.019$   | sospetto
 
 <br>
 
-Erano **p-value**: quanto è raro un risultato almeno così estremo, se non succede niente di speciale ( $H_0$ ).
+Erano **p-value**: quanto è raro un risultato almeno così estremo, se non succede niente di speciale ($H_0$).
 
 ## [P-value]{.orange}
 
@@ -1011,7 +1011,7 @@ knitr::include_graphics("img/img3.2.png")
 
 ## p-value: esempio
 
-In un campione di 10 bambini il colesterolo medio è $200\ mg/dL$, con deviazione standard nota nella popolazione $\sigma = 50\ mg/dL$. Il colesterolo di questi bambini è più alto del normale ( $175\ mg/dL$ )? Si usa $\alpha = 0.05$.
+In un campione di 10 bambini il colesterolo medio è $200\ mg/dL$, con deviazione standard nota nella popolazione $\sigma = 50\ mg/dL$. Il colesterolo di questi bambini è più alto del normale ($175\ mg/dL$)? Si usa $\alpha = 0.05$.
 
 $H_0:\mu=175$, $H_1:\mu>175$
 
@@ -1089,7 +1089,7 @@ ovvero
 
 $$\left(200-z_{0.975}\frac{50}{\sqrt{10}};\ 200+z_{0.975}\frac{50}{\sqrt{10}}\right)=(169.01; 230.99)$$
 
-che contiene $\mu_0=175$: con il test a due code non si rifiuta $H_0$ ( $z=1.58<1.96$, $p=0.114$ ).
+che contiene $\mu_0=175$: con il test a due code non si rifiuta $H_0$ ($z=1.58<1.96$, $p=0.114$).
 
 
 ### Colesterolo e familiarità

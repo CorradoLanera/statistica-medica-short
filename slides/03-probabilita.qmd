@@ -119,7 +119,7 @@ l'aiuto e il supporto logistico e amministrativo che mi è stato offerto.
 
 Lo **spazio degli eventi** $\Omega$ è l'insieme di tutti i possibili risultati di un esperimento probabilistico.
 
-Un **evento** è un qualsiasi insieme di risultati di un esperimento probabilistico (ovvero, un sottoinsieme di $\Omega$ ).
+Un **evento** è un qualsiasi insieme di risultati di un esperimento probabilistico (ovvero, un sottoinsieme di $\Omega$).
 
 Un **risultato** di un esperimento probabilistico _verifica_ un evento se ne fa parte.
 
@@ -145,8 +145,8 @@ $$P(\textrm{si verifichi } A \textrm{ o che si verifichi } B) = P(A) + P(B)$$
 
 ##### Esempio:
 
-- $A$ l'evento DBP normale ( $\mbox{DBP} < 90$ )
-- $B$ l'evento DBP borderline ( $90\leq \mbox{DBP} < 95$ )
+- $A$ l'evento DBP normale ($\mbox{DBP} < 90$)
+- $B$ l'evento DBP borderline ($90\leq \mbox{DBP} < 95$)
 - $C$ l'evento DBP $< 95$.
 
 **Se**:
@@ -165,8 +165,8 @@ Due eventi $A$ e $B$ si dicono **mutuamente esclusivi** se [non possono]{.orange
 **Siano**:
 
 - $x$ la DBP.
-- $C$ l'evento ( $x \geq 90$ )
-- $D$ l'evento ( $75\leq x\leq 100$ ).
+- $C$ l'evento ($x \geq 90$)
+- $D$ l'evento ($75\leq x\leq 100$).
 
 **Allora** in questo caso:
 
@@ -180,7 +180,7 @@ verificano quando $90 \leq x \leq 100$.
 
 ##### Esempio
 
-**Sia** ( $x$ la DBP): 
+**Sia** ($x$ la DBP): 
 
 - $A = \{x < 90 \}$
 - $B = \{90 \leq x < 95 \}$
@@ -205,7 +205,7 @@ Il simbolo $\cap$ indica l'evento $A \cap B$, per cui sia $A$ che $B$ si verific
 
 ##### Esempio
 
-**Dati** ( $x$ la DBP):
+**Dati** ($x$ la DBP):
 
 - $C = \{x\geq 90\}$
 - $D = \{75 \leq x \leq 100 \}$
@@ -232,7 +232,7 @@ $$P(\bar{A}) = 1-P(A)$$
 ##### Esempio
 
 
-**Dati** ( $x$ la DBP):
+**Dati** ($x$ la DBP):
 
 - $A = \{x < 90 \}$, con $P(A) = 0.7$
 - $C =\{x \geq 90 \}$
@@ -538,14 +538,14 @@ p_cataratta5y
 
 ## [Rischio relativo]{.orange}
 
-Il rischio relativo (**RR**) di osservare, in una data popolazione, un evento $B$ su chi è esposto a un fattore $A$ rispetto a chi non ne è esposto ( $\bar{A}$ ) è definito, tramite [probabilità condizionate]{.orange}, come
+Il rischio relativo (**RR**) di osservare, in una data popolazione, un evento $B$ su chi è esposto a un fattore $A$ rispetto a chi non ne è esposto ($\bar{A}$) è definito, tramite [probabilità condizionate]{.orange}, come
 
 $$\frac{P(B|A)}{P(B|\bar{A})}$$
 > NOTA:
 >
 > **Se**: $A$ e $B$ sono [indipendenti]{.orange}
 > 
-> **Allora**:  $RR = 1$ (infatti $P(B|A) = P(B|\bar{A}) = P(B)$ )
+> **Allora**:  $RR = 1$ (infatti $P(B|A) = P(B|\bar{A}) = P(B)$)
 
 ## [Rischio relativo]{.orange}: esempio
 
@@ -723,7 +723,7 @@ Si ipotizzi che:
 **Allora**, per il _test_ fumo di sigarette rispetto al(la _malattia_) cancro polmonare:
 
 - [sensibilità]{.orange} (o richiamo) = 0.90
-- [specificità]{.orange} = 0.5 ( $1 - 0.5$ ) 
+- [specificità]{.orange} = 0.5 ($1 - 0.5$) 
 
 :::
 
@@ -739,7 +739,7 @@ Si ipotizzi che:
 **Allora**, per il _sintomo_ familiarità rispetto al(la _malattia_) cancro al seno nelle donne:
 
 - [sensibilità]{.orange} (o richiamo) = 0.05
-- [specificità]{.orange} = 0.98 ( $1 - 0.02$ ) 
+- [specificità]{.orange} = 0.98 ($1 - 0.02$) 
 
 :::
 

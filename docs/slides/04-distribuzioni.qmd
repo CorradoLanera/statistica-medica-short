@@ -492,7 +492,7 @@ $$P(\mbox{1 evento})\sim \lambda\,\Delta t$$
 
 - la probabilità di osservare più di un evento nell'intervallo è sostanzialmente $0$
 
-- [Stazionarietà]{.orange}: il numero _atteso_ di eventi per unità di tempo ( $\lambda$ ) è lo stesso in tutto l'intervallo di tempo $t$ (no trend)
+- [Stazionarietà]{.orange}: il numero _atteso_ di eventi per unità di tempo ($\lambda$) è lo stesso in tutto l'intervallo di tempo $t$ (no trend)
 
 - [Indipendenza]{.orange}: se si verifica un evento nell'intervallo di tempo considerato, questo non modifica la probabilità di osservarne un secondo nell'intervallo successivo.
 
@@ -1091,7 +1091,7 @@ text(0,0.2,expression(Area==p),cex = 1.5)
 
 Per trovare $z_p$ si deve trovare l'area $p$ e quindi trovare il valore che corrisponde a tale area.
 
-Se $p < 0.5$ ( $z_p < 0$ ) è utile usare la [simmetria della distribuzione]{.orange} per ottenere $z_p = -z_{1-p}$, dove $1-p > 0.5$ ( $z_{1-p} > 0$ ) può essere spesso ottenuto dai valori comuni/noti come per esempio:
+Se $p < 0.5$ ($z_p < 0$) è utile usare la [simmetria della distribuzione]{.orange} per ottenere $z_p = -z_{1-p}$, dove $1-p > 0.5$ ($z_{1-p} > 0$) può essere spesso ottenuto dai valori comuni/noti come per esempio:
 
 $$z_{.975}=1.96 \:\:\:\: z_{.95}=1.645 \:\:\:\: z_{.5}=0 \:\:\:\: z_{.025}=-1.96$$
 
@@ -1191,7 +1191,7 @@ countdown(minutes = 2, warn_when = 30, play_sound = TRUE,
 
 Si supponga che i diametri di alcuni arbusti siano distribuiti normalmente con media 8 cm e deviazione standard 2 cm.
 
-La probabilità per un arbusto di avere un diametro eccezionalmente grande ( $> 12 cm$ ) è pari a?
+La probabilità per un arbusto di avere un diametro eccezionalmente grande ($> 12 cm$) è pari a?
 
 
 ### Soluzione
