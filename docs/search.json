@@ -973,7 +973,7 @@
     "href": "slides/02-descrittive.html#risorse-utili",
     "title": "Statistica Medica",
     "section": "Risorse utili",
-    "text": "Risorse utili\n\nBroman KW, Woo KH. Data Organization in Spreadsheets. The American Statistician 2018;72(1):2-10. Come organizzare i dati in un foglio di calcolo (dati tidy).\nStatistica medica di Martin Bland, suggeriti capitoli 1, 4 e 5.\nFundamentals of Biostatistics (8ª ed., Cengage, 2016) di Bernard Rosner, suggerito il capitolo 2.\nPerché n − 1 nella formula della deviazione standard campionaria? di Riccardo Dossena Traduzione dell’articolo Book, S.A.: Why n − 1 in the formula for the sample standard deviation?, The Two-Year College Mathematics Journal 10(5), 330–333 (1979)"
+    "text": "Risorse utili\n\nBroman KW, Woo KH. Data Organization in Spreadsheets. The American Statistician 2018;72(1):2-10. Come organizzare i dati in un foglio di calcolo (dati tidy).\nWickham H. Tidy Data. Journal of Statistical Software 2014;59(10). L’articolo che ha dato il nome ai dati tidy.\nStatistica medica di Martin Bland, suggeriti capitoli 1, 4 e 5.\nFundamentals of Biostatistics (8ª ed., Cengage, 2016) di Bernard Rosner, suggerito il capitolo 2.\nPerché n − 1 nella formula della deviazione standard campionaria? di Riccardo Dossena Traduzione dell’articolo Book, S.A.: Why n − 1 in the formula for the sample standard deviation?, The Two-Year College Mathematics Journal 10(5), 330–333 (1979)"
   },
   {
     "objectID": "slides/02-descrittive.html#section",
@@ -1974,7 +1974,7 @@
     "href": "slides/02-descrittive.html#dati-tidy-ordinati",
     "title": "Statistica Medica",
     "section": "Dati tidy (ordinati)",
-    "text": "Dati tidy (ordinati)\nUna tabella è tidy quando rispetta tre regole:\n\nOgni variabile è una colonna, e ogni colonna è una variabile.\nOgni osservazione (l’unità statistica) è una riga, e ogni riga è un’osservazione.\nOgni valore è una cella, e ogni cella contiene un solo valore.\n\n\nLa tabella di prima le viola tutte e tre:\n\nil sesso occupa due colonne (M e F), e così la pressione; inoltre il giorno della rilevazione, che è un’altra variabile, sta nascosto nel nome delle colonne (_g1, _g2);\nogni riga contiene due misurazioni, cioè due osservazioni, una per giorno;\n«130/85» sono due valori in una cella: pressione sistolica e diastolica.\n\n\n\nWickham H. (2014). Tidy Data. Journal of Statistical Software, 59(10)."
+    "text": "Dati tidy (ordinati)\nUna tabella è tidy quando rispetta tre regole:\n\nOgni variabile è una colonna, e ogni colonna è una variabile.\nOgni osservazione (l’unità statistica) è una riga, e ogni riga è un’osservazione.\nOgni valore è una cella, e ogni cella contiene un solo valore.\n\n\nLa tabella di prima le viola tutte e tre:\n\nil sesso occupa due colonne (M e F), e così la pressione; inoltre il giorno della rilevazione, che è un’altra variabile, sta nascosto nel nome delle colonne (_g1, _g2);\nogni riga contiene due misurazioni, cioè due osservazioni, una per giorno;\n«130/85» sono due valori in una cella: pressione sistolica e diastolica."
   },
   {
     "objectID": "slides/02-descrittive.html#la-stessa-tabella-tidy",
