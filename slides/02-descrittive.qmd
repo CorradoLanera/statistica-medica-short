@@ -332,6 +332,33 @@ include_graphics("img/condis.png")
 include_graphics("img/distype.png")
 ```
 
+## [Tipologie]{.orange} di dati: in sintesi
+
+- **Qualitative** (o **categoriche**): i valori sono categorie.
+  + **nominali**: senza un ordine (gruppo sanguigno, farmaco assunto);
+  + **ordinali**: con un ordine (stadio del tumore; attività fisica: mai,
+    1-2 volte, 3 volte a settimana);
+  + **binarie** (o dicotomiche): solo due categorie, che si escludono a
+    vicenda (fumatore: sì/no).
+- **Quantitative** (o **[cardinali]{.orange}**): i valori sono numeri,
+  ottenuti contando o misurando, e le differenze fra loro hanno senso.
+  + **discrete**: solo valori isolati, di solito conteggi (numero di
+    figli, ricoveri nell'ultimo anno);
+  + **continue**: qualunque valore in un intervallo, di solito misure
+    (età, BMI, pressione, colesterolo).
+
+::: {.small}
+
+**Ordinale o cardinale?** In una ordinale conta solo l'ordine: «3 volte a
+settimana» viene dopo «1-2 volte», ma non ha senso chiedersi di quanto. In
+una cardinale la distanza fra 120 e 130 mmHg è la stessa che fra 140 e
+150 mmHg.
+
+**Un numero non basta a fare una cardinale**: il codice di un paziente, o
+0/1 per no/sì, restano variabili qualitative.
+
+:::
+
 ## [Sondaggio]{.orange} {.inverse .center background-color="#03A696"}
 
 Per me: [Tipi di variabile](https://app.wooclap.com/events/STATMEDTYPE/0)
