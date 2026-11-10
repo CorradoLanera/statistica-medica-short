@@ -649,7 +649,7 @@ $$\left(207.2 - 1.96 \frac{30}{\sqrt{100}}; 207.2+1.96 \frac{30}{\sqrt{100}}\rig
 
 175 è fuori dall'IC al 95% (201.32; 213.08): tutti i valori di $\mu$ compatibili con i dati stanno sopra 200.
 
-Quanto sarebbe raro un campione con media 207.2, se la media vera fosse 175? È la domanda a cui risponde il test d'ipotesi.
+Quanto sarebbe raro un campione con media di 207.2 o più, se la media vera fosse 175? È la domanda a cui risponde il test d'ipotesi.
 
 :::
 
@@ -1090,13 +1090,11 @@ che contiene $\mu_0=175$: con il test a due code non si rifiuta $H_0$ ( $z=1.58<
 
 ### Colesterolo e familiarità
 
-Si torna al problema d'apertura: $n = 100$ figli, $\bar{x} = 207.2$, $\sigma = 30$ nota; $H_0: \mu = 175$, $H_1: \mu \neq 175$.
+Si torna al problema d'apertura: $n = 100$ figli, $\bar{x} = 207.2$, $\sigma = 30$ nota; $H_0: \mu = 175$, $H_1: \mu > 175$ (slide «Ipotesi: definizioni»).
 
 $$z = \frac{207.2 - 175}{\frac{30}{\sqrt{100}}} = 10.73$$
 
-p-value $= 2\left[1-\Phi(10.73)\right] < 0.0001$ (anche a una coda, con $H_1: \mu > 175$).
-
-Se la media vera fosse 175, un campione con media 207.2 sarebbe quasi impossibile: si rifiuta $H_0$, come diceva l'IC al 95% (201.32; 213.08), che non contiene 175.
+p-value $= 1-\Phi(10.73) < 0.0001$: se la media vera fosse 175, una media campionaria di 207.2 o più sarebbe quasi impossibile, e si rifiuta $H_0$. L'IC al 95%, (201.32; 213.08), dice anche quanto: la media dei figli sta fra 26 e 38 mg/dL sopra 175.
 
 :::
 
@@ -1118,7 +1116,7 @@ $$P(\mbox{test}^+ \mid \mbox{sano}) \neq P(\mbox{sano} \mid \mbox{test}^+)$$
 
 $p > 0.05$ **non** vuol dire «nessun effetto».
 
-Colesterolo in 10 bambini (slide «p-value: esempio»): $p = 0.057$ a una coda, quindi non si rifiuta $H_0: \mu = 175$.
+Colesterolo in 10 bambini (slide «p-value: esempio»): non si rifiuta $H_0: \mu = 175$, né a una coda ($p = 0.057$) né a due code ($p = 0.114$).
 
 L'IC al 95%, però, è (169.01; 230.99): arriva fino a 56 mg/dL sopra 175. I dati sono compatibili sia con nessuna differenza sia con una differenza grande: con 10 bambini non si riesce a distinguere.
 
