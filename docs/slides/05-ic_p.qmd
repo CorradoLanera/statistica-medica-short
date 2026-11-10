@@ -737,7 +737,7 @@ knitr::include_graphics("img/img.jpg")
 ```
 
 - **regione di rifiuto**: i valori di $\bar{x}$ per cui si rifiuta $H_0$ ( $\bar{x} < c$ )
-- **regione di accettazione**: i valori di $\bar{x}$ per cui non si rifiuta $H_0$ ( $\bar{x} \geq c$ )
+- **regione di non rifiuto** (detta anche di accettazione): i valori di $\bar{x}$ per cui non si rifiuta $H_0$ ( $\bar{x} \geq c$ )
 
 
 ### Regola
@@ -819,9 +819,9 @@ Altrimenti non si rifiuta $H_0$.
 
 ### Due code
 
-Con $H_1: \mu \neq \mu_0$ si rifiuta $H_0$ se $z$ è **troppo piccolo o troppo grande**, cioè fuori da due valori critici $c_1 < c_2$. I due eventi sono incompatibili, quindi
+Con $H_1: \mu \neq \mu_0$ si rifiuta $H_0$ se $z$ è **troppo piccolo o troppo grande**, cioè fuori da due valori critici per $z$, $c_1 < c_2$. I due eventi sono incompatibili, quindi
 
-$$P(\mbox{rifiuto}\ H_0 \mid H_0)=P(Z< c_1 \cup Z> c_2)=P(Z< c_1)+P(Z> c_2)=\alpha$$
+$$P(\mbox{rifiuto}\ H_0 \mid H_0)=P(Z< c_1 \cup Z> c_2 \mid H_0)=P(Z< c_1 \mid H_0)+P(Z> c_2 \mid H_0)=\alpha$$
 
 Si divide $\alpha$ a metà fra le due code:
 
@@ -1077,13 +1077,13 @@ L'IC al livello $1-\alpha$ contiene quindi i valori di $\mu_0$ che il test al li
 
 #### Colesterolo nei bambini
 
-Un intervallo di confidenza a livello 0.95 per la media $\mu$ è pari a 
+Un intervallo di confidenza al 95% per la media $\mu$ è pari a 
 
 $$\bar{x}-z_{1-\frac{\alpha}{2}}\frac{\sigma}{\sqrt{n}};  \bar{x}+z_{1-\frac{\alpha}{2}}\frac{\sigma}{\sqrt{n}}$$
 
 ovvero
 
-$$200-z_{0.975}\frac{50}{\sqrt{10}};  200+z_{0.975}\frac{50}{\sqrt{10}}=[169.01;230.99]$$
+$$\left(200-z_{0.975}\frac{50}{\sqrt{10}};\ 200+z_{0.975}\frac{50}{\sqrt{10}}\right)=(169.01; 230.99)$$
 
 che contiene $\mu_0=175$: con il test a due code non si rifiuta $H_0$ ( $z=1.58<1.96$, $p=0.114$ ).
 
