@@ -1166,7 +1166,9 @@ margin-right: 0; }
 <thead>
 <tr class="header">
 <th style="text-align: left;">Paziente</th>
-<th style="text-align: center;">Sesso</th>
+<th style="text-align: center;">M</th>
+<th style="text-align: center;">F</th>
+<th style="text-align: right;">Età</th>
 <th style="text-align: center;">Pressione_g1</th>
 <th style="text-align: center;">Pressione_g2</th>
 </tr>
@@ -1174,25 +1176,33 @@ margin-right: 0; }
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">P01</td>
-<td style="text-align: center;">F</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: right;">54</td>
 <td style="text-align: center;">130/85</td>
 <td style="text-align: center;">125/80</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">P02</td>
-<td style="text-align: center;">M</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: right;">61</td>
 <td style="text-align: center;">145/95</td>
 <td style="text-align: center;">140/90</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">P03</td>
-<td style="text-align: center;">F</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: right;">47</td>
 <td style="text-align: center;">120/80</td>
 <td style="text-align: center;">120/75</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">P04</td>
-<td style="text-align: center;">M</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: right;">70</td>
 <td style="text-align: center;">150/90</td>
 <td style="text-align: center;">155/95</td>
 </tr>
@@ -1219,7 +1229,7 @@ margin-right: 0; }
 <p><br></p>
 <p>La tabella di prima le viola tutte e tre:</p>
 <ol type="1">
-<li>la <strong>pressione</strong>, una sola variabile, occupa due colonne, e il <strong>giorno</strong> della rilevazione, che è un’altra variabile, sta nascosto nel loro nome (<code>_g1</code>, <code>_g2</code>);</li>
+<li>il <strong>sesso</strong> occupa due colonne (M e F), e così la <strong>pressione</strong>; inoltre il <strong>giorno</strong> della rilevazione, che è un’altra variabile, sta nascosto nel nome delle colonne (<code>_g1</code>, <code>_g2</code>);</li>
 <li>ogni riga contiene <strong>due misurazioni</strong>, cioè due osservazioni, una per giorno;</li>
 <li><strong>«130/85»</strong> sono due valori in una cella: pressione sistolica e diastolica.</li>
 </ol>
@@ -1236,6 +1246,7 @@ margin-right: 0; }
 <tr class="header">
 <th style="text-align: left;">Paziente</th>
 <th style="text-align: center;">Sesso</th>
+<th style="text-align: right;">Età (anni)</th>
 <th style="text-align: center;">Giorno</th>
 <th style="text-align: right;">PAS (mmHg)</th>
 <th style="text-align: right;">PAD (mmHg)</th>
@@ -1245,6 +1256,7 @@ margin-right: 0; }
 <tr class="odd">
 <td style="text-align: left;">P01</td>
 <td style="text-align: center;">F</td>
+<td style="text-align: right;">54</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: right;">130</td>
 <td style="text-align: right;">85</td>
@@ -1252,6 +1264,7 @@ margin-right: 0; }
 <tr class="even">
 <td style="text-align: left;">P01</td>
 <td style="text-align: center;">F</td>
+<td style="text-align: right;">54</td>
 <td style="text-align: center;">2</td>
 <td style="text-align: right;">125</td>
 <td style="text-align: right;">80</td>
@@ -1259,6 +1272,7 @@ margin-right: 0; }
 <tr class="odd">
 <td style="text-align: left;">P02</td>
 <td style="text-align: center;">M</td>
+<td style="text-align: right;">61</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: right;">145</td>
 <td style="text-align: right;">95</td>
@@ -1266,6 +1280,7 @@ margin-right: 0; }
 <tr class="even">
 <td style="text-align: left;">P02</td>
 <td style="text-align: center;">M</td>
+<td style="text-align: right;">61</td>
 <td style="text-align: center;">2</td>
 <td style="text-align: right;">140</td>
 <td style="text-align: right;">90</td>
@@ -1273,6 +1288,7 @@ margin-right: 0; }
 <tr class="odd">
 <td style="text-align: left;">P03</td>
 <td style="text-align: center;">F</td>
+<td style="text-align: right;">47</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: right;">120</td>
 <td style="text-align: right;">80</td>
@@ -1280,6 +1296,7 @@ margin-right: 0; }
 <tr class="even">
 <td style="text-align: left;">P03</td>
 <td style="text-align: center;">F</td>
+<td style="text-align: right;">47</td>
 <td style="text-align: center;">2</td>
 <td style="text-align: right;">120</td>
 <td style="text-align: right;">75</td>
@@ -1287,6 +1304,7 @@ margin-right: 0; }
 <tr class="odd">
 <td style="text-align: left;">P04</td>
 <td style="text-align: center;">M</td>
+<td style="text-align: right;">70</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: right;">150</td>
 <td style="text-align: right;">90</td>
@@ -1294,6 +1312,7 @@ margin-right: 0; }
 <tr class="even">
 <td style="text-align: left;">P04</td>
 <td style="text-align: center;">M</td>
+<td style="text-align: right;">70</td>
 <td style="text-align: center;">2</td>
 <td style="text-align: right;">155</td>
 <td style="text-align: right;">95</td>
@@ -1305,7 +1324,7 @@ margin-right: 0; }
 </div>
 <ul>
 <li><strong>8 righe</strong>, una per misurazione: qui l’<strong>unità statistica</strong> è la <strong>misurazione</strong> (un paziente in un giorno), non il paziente.</li>
-<li>Il <strong>sesso</strong> si ripete: è una caratteristica del paziente, uguale in tutte le sue misurazioni.</li>
+<li><strong>Sesso</strong> ed <strong>età</strong> si ripetono: sono caratteristiche del paziente, uguali in tutte le sue misurazioni.</li>
 </ul>
 </section>
 <section id="un-esempio-reale" class="slide level2">
