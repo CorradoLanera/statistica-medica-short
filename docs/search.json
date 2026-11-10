@@ -1757,7 +1757,7 @@
     "href": "slides/05-ic_p.html#ipotesi-definizioni",
     "title": "Statistica Medica",
     "section": "Ipotesi: definizioni",
-    "text": "Ipotesi: definizioni\n\nipotesi nulla, H0H_0, l’ipotesi che si vuole testare\nipotesi alternativa, H1H_1, l’ipotesi che contraddice l’ipotesi nulla\n\n   \n\nIn particolare, le ipotesi riguardano i parametri di una distribuzione"
+    "text": "Ipotesi: definizioni\nLe ipotesi riguardano i parametri della popolazione (qui la media μ\\mu), non il campione.\n\nipotesi nulla H0H_0: l’ipotesi che si mette alla prova, di solito «nessuna differenza» dal valore di riferimento. Nell’esempio: H0:μ=175H_0: \\mu = 175\nipotesi alternativa H1H_1: l’ipotesi che contraddice H0H_0. Nell’esempio: H1:μ&gt;175H_1: \\mu &gt; 175\n\n\nUn test d’ipotesi è una regola che, a partire dai dati del campione, decide se rifiutare H0H_0 oppure non rifiutarla."
   },
   {
     "objectID": "slides/05-ic_p.html#ipotesi-decisioni",

@@ -653,16 +653,15 @@ Quanto sarebbe raro un campione con media 207.2, se la media vera fosse 175? È 
 
 ## [Ipotesi]{.orange}: definizioni
 
-- **ipotesi nulla**, $H_0$, l'ipotesi che si vuole testare
+Le ipotesi riguardano i **parametri** della popolazione (qui la media $\mu$), non il campione.
 
-- **ipotesi alternativa**, $H_1$, l'ipotesi che **[contraddice]{.orange}** l'ipotesi nulla 
+- **ipotesi nulla** $H_0$: l'ipotesi che si mette alla prova, di solito «nessuna differenza» dal valore di riferimento. Nell'esempio: $H_0: \mu = 175$
+
+- **ipotesi alternativa** $H_1$: l'ipotesi che **[contraddice]{.orange}** $H_0$. Nell'esempio: $H_1: \mu > 175$
 
 <br>
-<br>
-<br>
-<br>
 
-> In particolare, le ipotesi riguardano i parametri di una distribuzione 
+Un **test d'ipotesi** è una regola che, a partire dai dati del campione, decide se **rifiutare** $H_0$ oppure **non rifiutarla**.
 
 ## Ipotesi: [decisioni]{.orange}
 
