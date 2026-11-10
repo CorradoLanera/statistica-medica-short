@@ -1554,7 +1554,7 @@
     "href": "slides/05-ic_p.html#cosa-faremo",
     "title": "Statistica Medica",
     "section": "Cosa faremo",
-    "text": "Cosa faremo\nIn questa lezione ci occuperemo di stime effettuate su campioni di popolazioni. In questo senso, cercheremo di capire come stimare la media e la varianza partendo da un campione.\nIn seguito ci occuperemo di capire come avere una misura di precisione per queste stime, introducendo gli Intervalli di confidenza.\nDopo aver proposto degli esempi e fatto qualche osservazione in merito, introdurremo la distribuzione t di Student, utile quando la varianza della popolazione non è nota.\nIntrodurremo quindi il concetto di test d’ipotesi, delle tipologie di errore, e di p-value. Vedremo quindi come questi concetti si legano a quello degli intervalli di confidenza."
+    "text": "Cosa faremo\nIn questa lezione ci occuperemo di stime effettuate su campioni di popolazioni. In questo senso, cercheremo di capire come stimare la media e la varianza partendo da un campione.\nIn seguito ci occuperemo di capire come avere una misura di precisione per queste stime, introducendo gli Intervalli di confidenza.\nDopo aver proposto degli esempi e fatto qualche osservazione in merito, introdurremo la distribuzione t di Student, utile quando la varianza della popolazione non è nota.\nIntrodurremo quindi il concetto di test d’ipotesi, delle tipologie di errore, e di p-value. Vedremo quindi come questi concetti si legano a quello degli intervalli di confidenza, e come leggere un p-value in un articolo."
   },
   {
     "objectID": "slides/05-ic_p.html#riconoscimenti",
@@ -1568,7 +1568,7 @@
     "href": "slides/05-ic_p.html#panoramica",
     "title": "Statistica Medica",
     "section": "Panoramica",
-    "text": "Panoramica\nDefinizione e caratteristiche del problema inferenziale\nStime puntuali: media e varianza… della media! Teorema del limite centrale\nPrecisione delle stime puntuali: Intervalli di confidenza\nEsempi e osservazioni\nDistribuzione t di Student\nTest d’ipotesi: errori del I e II tipo, p-value\nRelazione tra p-value e IC"
+    "text": "Panoramica\nDefinizione e caratteristiche del problema inferenziale\nStime puntuali: media e varianza… della media! Teorema del limite centrale\nPrecisione delle stime puntuali: Intervalli di confidenza\nEsempi e osservazioni\nDistribuzione t di Student\nTest d’ipotesi: errori del I e II tipo, p-value\nRelazione tra p-value e IC; come leggere un p-value"
   },
   {
     "objectID": "slides/05-ic_p.html#inferenza",
@@ -1750,7 +1750,7 @@
     "href": "slides/05-ic_p.html#test-dipotesi",
     "title": "Statistica Medica",
     "section": "Test d’ipotesi",
-    "text": "Test d’ipotesi\n\nIpotesi ed errori: H0H_0 e H1H_1, rifiuto e non rifiuto, errori di I e II tipo\nTest z e test t: valore critico, regione di rifiuto, una e due code\nP-value e relazione con l’IC"
+    "text": "Test d’ipotesi\n\nIpotesi ed errori: H0H_0 e H1H_1, rifiuto e non rifiuto, errori di I e II tipo\nTest z e test t: valore critico, regione di rifiuto, una e due code\nP-value: relazione con l’IC e come leggerlo in un articolo"
   },
   {
     "objectID": "slides/05-ic_p.html#ipotesi-definizioni",
@@ -1848,7 +1848,7 @@
     "href": "slides/05-ic_p.html#risorse-utili",
     "title": "Statistica Medica",
     "section": "Risorse utili",
-    "text": "Risorse utili\n\nPosit Cloud: https://bit.ly/statmed-cl-rstudio gratis per voi per esplorare RStudio, le sue funzionalità, e allenarvi con R (link di iscrizione valido fino alla fine del corso).\nRStudio primers ambiente gratuito dentro Posit Cloud per l’apprendimento delle basi di analisi di dati con R tramite tutorial interattivi. Una volta registrati, oltre all’accesso al nostro spazio di lavoro, avete accesso libero anche ai Primers.\nR 4 Data Science: libro gratuito (on-line) di Hadley Wickham, Mine Çetinkaya-Rundel e Garrett Grolemund\nGGplot2 cheatsheet schema dei possibili grafici di base rappresentabili in R con il pacchetto {ggplot2}, molto utile anche per conoscere le tipologie di grafico, e il loro utilizzo.\nFundamentals of Biostatistics (8ª ed., Cengage, 2016) di Bernard Rosner, suggeriti i capitoli 6 e 7."
+    "text": "Risorse utili\n\nPosit Cloud: https://bit.ly/statmed-cl-rstudio gratis per voi per esplorare RStudio, le sue funzionalità, e allenarvi con R (link di iscrizione valido fino alla fine del corso).\nRStudio primers ambiente gratuito dentro Posit Cloud per l’apprendimento delle basi di analisi di dati con R tramite tutorial interattivi. Una volta registrati, oltre all’accesso al nostro spazio di lavoro, avete accesso libero anche ai Primers.\nR 4 Data Science: libro gratuito (on-line) di Hadley Wickham, Mine Çetinkaya-Rundel e Garrett Grolemund\nGGplot2 cheatsheet schema dei possibili grafici di base rappresentabili in R con il pacchetto {ggplot2}, molto utile anche per conoscere le tipologie di grafico, e il loro utilizzo.\nFundamentals of Biostatistics (8ª ed., Cengage, 2016) di Bernard Rosner, suggeriti i capitoli 6 e 7.\nWasserstein RL, Lazar NA. The ASA Statement on p-Values: Context, Process, and Purpose. The American Statistician 2016;70(2):129-133.\nGreenland S, Senn SJ, Rothman KJ, Carlin JB, Poole C, Goodman SN, Altman DG. Statistical tests, P values, confidence intervals, and power: a guide to misinterpretations. European Journal of Epidemiology 2016;31:337-350."
   },
   {
     "objectID": "slides/05-ic_p.html#section",
@@ -2269,5 +2269,26 @@
     "title": "Statistica Medica",
     "section": "Richiamo: due p-value già visti",
     "text": "Richiamo: due p-value già visti\nNella lezione sulle distribuzioni, con la Poisson, si è calcolata la probabilità di osservare almeno i casi osservati, se il numero atteso fosse quello della popolazione generale:\n\n\n\n\n\n\n\n\n\n\nEsempio\nOsservati\nAttesi\nProbabilità\nLettura\n\n\n\n\nCibo cancerogeno\n7 morti\n5.8\nP(X≥7)=0.36P(X \\geq 7) = 0.36\nnessun eccesso\n\n\nTumore al seno\n4 casi su 1000\n1\nP(X≥4)=0.019P(X \\geq 4) = 0.019\nsospetto\n\n\n\n\nErano p-value: quanto è raro un risultato almeno così estremo, se non succede niente di speciale ( H0H_0 )."
+  },
+  {
+    "objectID": "slides/05-ic_p.html#leggere-un-p-value-che-cosa-misura",
+    "href": "slides/05-ic_p.html#leggere-un-p-value-che-cosa-misura",
+    "title": "Statistica Medica",
+    "section": "Leggere un p-value: che cosa misura",
+    "text": "Leggere un p-value: che cosa misura\nIl p-value è una probabilità dei dati, se H0H_0 è vera:\np=P(dati almeno così estremi∣H0)p = P(\\mbox{dati almeno così estremi} \\mid H_0)\nNon è la probabilità che H0H_0 sia vera, dati i risultati: p≠P(H0∣dati)p \\neq P(H_0 \\mid \\mbox{dati}).\nÈ la stessa inversione dei test di screening, dove la sensibilità non è il valore predittivo positivo:\nP(test+∣malattia)≠P(malattia∣test+)P(\\mbox{test}^+ \\mid \\mbox{malattia}) \\neq P(\\mbox{malattia} \\mid \\mbox{test}^+)\n\np=0.03p = 0.03 non vuol dire «3% di probabilità che H0H_0 sia vera»."
+  },
+  {
+    "objectID": "slides/05-ic_p.html#leggere-un-p-value-se-non-è-significativo",
+    "href": "slides/05-ic_p.html#leggere-un-p-value-se-non-è-significativo",
+    "title": "Statistica Medica",
+    "section": "Leggere un p-value: se non è significativo",
+    "text": "Leggere un p-value: se non è significativo\np&gt;0.05p &gt; 0.05 non vuol dire «nessun effetto».\nColesterolo in 10 bambini (slide «p-value: esempio»): p=0.057p = 0.057 a una coda, quindi non si rifiuta H0:μ=175H_0: \\mu = 175.\nL’IC al 95%, però, è (169.01; 230.99): arriva fino a 56 mg/dL sopra 175. I dati sono compatibili sia con nessuna differenza sia con una differenza grande: con 10 bambini non si riesce a distinguere.\n\nAssenza di prove non è prova di assenza."
+  },
+  {
+    "objectID": "slides/05-ic_p.html#leggere-un-p-value-se-è-significativo",
+    "href": "slides/05-ic_p.html#leggere-un-p-value-se-è-significativo",
+    "title": "Statistica Medica",
+    "section": "Leggere un p-value: se è significativo",
+    "text": "Leggere un p-value: se è significativo\np&lt;0.05p &lt; 0.05 non vuol dire «effetto importante».\nTrigliceridi (slide «IC osservazioni: ampiezza»): con σ=20\\sigma = 20 e n=1000n = 1000 l’IC al 95% è largo 2.5 mg/dL. Basta che la media del campione disti da μ0\\mu_0 più di 1.24 mg/dL perché il test a due code dia p&lt;0.05p &lt; 0.05: una differenza minima, senza peso clinico, diventa «significativa».\nIl p-value non dice quanto è grande l’effetto. Si legge l’IC: dice quanto è grande l’effetto e quanto siamo incerti.\n\n0.05 è una convenzione: p=0.049p = 0.049 e p=0.051p = 0.051 dicono la stessa cosa."
   }
 ]

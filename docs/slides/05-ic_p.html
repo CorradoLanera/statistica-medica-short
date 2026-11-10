@@ -4994,7 +4994,7 @@ if (!window.customElements.get('countdown-timer')) {
 <p>In questa lezione ci occuperemo di <strong><span class="orange">stime</span></strong> effettuate su <strong><span class="orange">campioni</span></strong> di popolazioni. In questo senso, cercheremo di capire come <strong><span class="orange">stimare la media</span></strong> e la <strong><span class="orange">varianza</span></strong> partendo da un campione.</p>
 <p>In seguito ci occuperemo di capire come avere una misura di <strong><span class="orange">precisione</span></strong> per queste stime, introducendo gli <strong><span class="orange">Intervalli di confidenza</span></strong>.</p>
 <p>Dopo aver proposto degli esempi e fatto qualche osservazione in merito, introdurremo la distribuzione <strong><span class="orange">t di Student</span></strong>, utile quando la varianza della popolazione non è nota.</p>
-<p>Introdurremo quindi il concetto di <strong><span class="orange">test d’ipotesi</span></strong>, delle tipologie di errore, e di <strong>p-value</strong>. Vedremo quindi come questi concetti si legano a quello degli intervalli di confidenza.</p>
+<p>Introdurremo quindi il concetto di <strong><span class="orange">test d’ipotesi</span></strong>, delle tipologie di errore, e di <strong>p-value</strong>. Vedremo quindi come questi concetti si legano a quello degli intervalli di confidenza, e come leggere un p-value in un articolo.</p>
 </section>
 <section id="riconoscimenti" class="slide level2">
 <h2><span class="orange">Riconoscimenti</span></h2>
@@ -5029,7 +5029,7 @@ if (!window.customElements.get('countdown-timer')) {
 <p><strong><span class="orange">Esempi</span></strong> e <strong><span class="orange">osservazioni</span></strong></p>
 <p>Distribuzione <strong><span class="orange">t di Student</span></strong></p>
 <p><strong><span class="orange">Test d’ipotesi</span></strong>: errori del I e II tipo, <strong>p-value</strong></p>
-<p>Relazione tra p-value e IC</p>
+<p>Relazione tra p-value e IC; come leggere un p-value</p>
 </section>
 <section id="inferenza" class="slide level2 text-center inverse center" data-background-color="#03A696">
 <h2><strong><span class="orange">inferenza</span></strong></h2>
@@ -5367,7 +5367,7 @@ flowchart LR
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_5caa7eb2" minutes="15" seconds="0" warn-when="3" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_15ae6ba4" minutes="15" seconds="0" warn-when="3" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
 </div>
 </div>
 </section>
@@ -5957,7 +5957,7 @@ flowchart LR
 <ul>
 <li><p><strong>Ipotesi ed errori</strong>: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>1</mn></msub><annotation encoding="application/x-tex">H_1</annotation></semantics></math>, rifiuto e non rifiuto, errori di I e II tipo</p></li>
 <li><p><strong>Test z e test t</strong>: valore critico, regione di rifiuto, una e due code</p></li>
-<li><p><strong>P-value</strong> e relazione con l’IC</p></li>
+<li><p><strong>P-value</strong>: relazione con l’IC e come leggerlo in un articolo</p></li>
 </ul>
 </section>
 <section id="un-problema-colesterolo-e-familiarità" class="slide level2">
@@ -6061,7 +6061,7 @@ flowchart LR
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_1cfb1900" minutes="2" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_82dd30f5" minutes="2" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
 </div>
 </div>
 </section>
@@ -6279,7 +6279,7 @@ flowchart LR
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_456f4006" minutes="2" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_49d0a21f" minutes="2" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
 </div>
 </div>
 </section>
@@ -6443,6 +6443,35 @@ flowchart LR
 </div>
 </div>
 </div>
+</section>
+<section id="leggere-un-p-value-che-cosa-misura" class="slide level2">
+<h2><span class="orange">Leggere un p-value</span>: che cosa misura</h2>
+<p>Il p-value è una probabilità <strong>dei dati, se <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math> è vera</strong>:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">dati almeno così estremi</mtext><mo>∣</mo><msub><mi>H</mi><mn>0</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">p = P(\mbox{dati almeno così estremi} \mid H_0)</annotation></semantics></math></p>
+<p><strong>Non</strong> è la probabilità che <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math> sia vera, dati i risultati: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>≠</mo><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>H</mi><mn>0</mn></msub><mo>∣</mo><mtext mathvariant="normal">dati</mtext><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">p \neq P(H_0 \mid \mbox{dati})</annotation></semantics></math>.</p>
+<p>È la stessa inversione dei test di screening, dove la sensibilità non è il valore predittivo positivo:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msup><mtext mathvariant="normal">test</mtext><mo>+</mo></msup><mo>∣</mo><mtext mathvariant="normal">malattia</mtext><mo stretchy="false" form="postfix">)</mo><mo>≠</mo><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">malattia</mtext><mo>∣</mo><msup><mtext mathvariant="normal">test</mtext><mo>+</mo></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P(\mbox{test}^+ \mid \mbox{malattia}) \neq P(\mbox{malattia} \mid \mbox{test}^+)</annotation></semantics></math></p>
+<blockquote>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mn>0.03</mn></mrow><annotation encoding="application/x-tex">p = 0.03</annotation></semantics></math> non vuol dire «3% di probabilità che <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math> sia vera».</p>
+</blockquote>
+</section>
+<section id="leggere-un-p-value-se-non-è-significativo" class="slide level2">
+<h2><span class="orange">Leggere un p-value</span>: se non è significativo</h2>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>&gt;</mo><mn>0.05</mn></mrow><annotation encoding="application/x-tex">p &gt; 0.05</annotation></semantics></math> <strong>non</strong> vuol dire «nessun effetto».</p>
+<p>Colesterolo in 10 bambini (slide «p-value: esempio»): <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mn>0.057</mn></mrow><annotation encoding="application/x-tex">p = 0.057</annotation></semantics></math> a una coda, quindi non si rifiuta <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub><mo>:</mo><mi>μ</mi><mo>=</mo><mn>175</mn></mrow><annotation encoding="application/x-tex">H_0: \mu = 175</annotation></semantics></math>.</p>
+<p>L’IC al 95%, però, è (169.01; 230.99): arriva fino a 56 mg/dL sopra 175. I dati sono compatibili sia con nessuna differenza sia con una differenza grande: con 10 bambini non si riesce a distinguere.</p>
+<blockquote>
+<p>Assenza di prove non è prova di assenza.</p>
+</blockquote>
+</section>
+<section id="leggere-un-p-value-se-è-significativo" class="slide level2">
+<h2><span class="orange">Leggere un p-value</span>: se è significativo</h2>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>&lt;</mo><mn>0.05</mn></mrow><annotation encoding="application/x-tex">p &lt; 0.05</annotation></semantics></math> <strong>non</strong> vuol dire «effetto importante».</p>
+<p>Trigliceridi (slide «IC osservazioni: ampiezza»): con <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mn>20</mn></mrow><annotation encoding="application/x-tex">\sigma = 20</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>1000</mn></mrow><annotation encoding="application/x-tex">n = 1000</annotation></semantics></math> l’IC al 95% è largo 2.5 mg/dL. Basta che la media del campione disti da <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>μ</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\mu_0</annotation></semantics></math> più di 1.24 mg/dL perché il test a due code dia <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>&lt;</mo><mn>0.05</mn></mrow><annotation encoding="application/x-tex">p &lt; 0.05</annotation></semantics></math>: una differenza minima, senza peso clinico, diventa «significativa».</p>
+<p>Il p-value non dice quanto è grande l’effetto. Si legge l’<strong>IC</strong>: dice quanto è grande l’effetto e quanto siamo incerti.</p>
+<blockquote>
+<p>0.05 è una convenzione: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mn>0.049</mn></mrow><annotation encoding="application/x-tex">p = 0.049</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mn>0.051</mn></mrow><annotation encoding="application/x-tex">p = 0.051</annotation></semantics></math> dicono la stessa cosa.</p>
+</blockquote>
 </section>
 <section id="sondaggio-3" class="slide level2 inverse center" data-background-color="#03A696">
 <h2><span class="orange">Sondaggio</span></h2>
@@ -6683,6 +6712,8 @@ flowchart LR
 <li><p><a href="https://r4ds.hadley.nz/"><strong>R 4 Data Science</strong></a>: libro gratuito (on-line) di <a href="http://hadley.nz/"><strong>Hadley Wickham</strong></a>, <strong>Mine Çetinkaya-Rundel</strong> e <strong>Garrett Grolemund</strong></p></li>
 <li><p><a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-visualization.pdf"><strong>GGplot2 cheatsheet</strong></a> schema dei possibili grafici di base rappresentabili in R con il pacchetto <code>{ggplot2}</code>, molto utile anche per conoscere le tipologie di grafico, e il loro utilizzo.</p></li>
 <li><p><em>Fundamentals of Biostatistics</em> (8ª ed., Cengage, 2016) di <strong>Bernard Rosner</strong>, suggeriti i capitoli 6 e 7.</p></li>
+<li><p>Wasserstein RL, Lazar NA. <a href="https://doi.org/10.1080/00031305.2016.1154108"><strong>The ASA Statement on p-Values: Context, Process, and Purpose</strong></a>. <em>The American Statistician</em> 2016;70(2):129-133.</p></li>
+<li><p>Greenland S, Senn SJ, Rothman KJ, Carlin JB, Poole C, Goodman SN, Altman DG. <a href="https://doi.org/10.1007/s10654-016-0149-3"><strong>Statistical tests, P values, confidence intervals, and power: a guide to misinterpretations</strong></a>. <em>European Journal of Epidemiology</em> 2016;31:337-350.</p></li>
 </ul>
 </section>
 <section id="section" class="slide level2 inverse text-center center" data-background-color="#03A696">

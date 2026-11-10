@@ -63,7 +63,7 @@ In seguito ci occuperemo di capire come avere una misura di **[precisione]{.oran
 
 Dopo aver proposto degli esempi e fatto qualche osservazione in merito, introdurremo la distribuzione **[t di Student]{.orange}**, utile quando la varianza della popolazione non è nota.
 
-Introdurremo quindi il concetto di **[test d'ipotesi]{.orange}**, delle tipologie di errore, e di **p-value**. Vedremo quindi come questi concetti si legano a quello degli intervalli di confidenza.
+Introdurremo quindi il concetto di **[test d'ipotesi]{.orange}**, delle tipologie di errore, e di **p-value**. Vedremo quindi come questi concetti si legano a quello degli intervalli di confidenza, e come leggere un p-value in un articolo.
 
 ## [Riconoscimenti]{.orange}
 
@@ -112,7 +112,7 @@ Distribuzione **[t di Student]{.orange}**
 
 **[Test d'ipotesi]{.orange}**: errori del I e II tipo, **p-value**
 
-Relazione tra p-value e IC
+Relazione tra p-value e IC; come leggere un p-value
 
 ## **[inferenza]{.orange}** {.text-center .inverse .center background-color="#03A696"}
 
@@ -611,7 +611,7 @@ Per voi: <img src="img/bit.ly_statmed-sondaggio-tstudent.png" width="300px" styl
 
 - **Test z e test t**: valore critico, regione di rifiuto, una e due code
 
-- **P-value** e relazione con l'IC
+- **P-value**: relazione con l'IC e come leggerlo in un articolo
 
 ## [Un problema]{.orange}: colesterolo e familiarità
 
@@ -1104,6 +1104,40 @@ Se la media vera fosse 175, un campione con media 207.2 sarebbe quasi impossibil
 
 :::
 
+## [Leggere un p-value]{.orange}: che cosa misura
+
+Il p-value è una probabilità **dei dati, se $H_0$ è vera**:
+
+$$p = P(\mbox{dati almeno così estremi} \mid H_0)$$
+
+**Non** è la probabilità che $H_0$ sia vera, dati i risultati: $p \neq P(H_0 \mid \mbox{dati})$.
+
+È la stessa inversione dei test di screening, dove la sensibilità non è il valore predittivo positivo:
+
+$$P(\mbox{test}^+ \mid \mbox{malattia}) \neq P(\mbox{malattia} \mid \mbox{test}^+)$$
+
+> $p = 0.03$ non vuol dire «3% di probabilità che $H_0$ sia vera».
+
+## [Leggere un p-value]{.orange}: se non è significativo
+
+$p > 0.05$ **non** vuol dire «nessun effetto».
+
+Colesterolo in 10 bambini (slide «p-value: esempio»): $p = 0.057$ a una coda, quindi non si rifiuta $H_0: \mu = 175$.
+
+L'IC al 95%, però, è (169.01; 230.99): arriva fino a 56 mg/dL sopra 175. I dati sono compatibili sia con nessuna differenza sia con una differenza grande: con 10 bambini non si riesce a distinguere.
+
+> Assenza di prove non è prova di assenza.
+
+## [Leggere un p-value]{.orange}: se è significativo
+
+$p < 0.05$ **non** vuol dire «effetto importante».
+
+Trigliceridi (slide «IC osservazioni: ampiezza»): con $\sigma = 20$ e $n = 1000$ l'IC al 95% è largo 2.5 mg/dL. Basta che la media del campione disti da $\mu_0$ più di 1.24 mg/dL perché il test a due code dia $p < 0.05$: una differenza minima, senza peso clinico, diventa «significativa».
+
+Il p-value non dice quanto è grande l'effetto. Si legge l'**IC**: dice quanto è grande l'effetto e quanto siamo incerti.
+
+> 0.05 è una convenzione: $p = 0.049$ e $p = 0.051$ dicono la stessa cosa.
+
 ## [Sondaggio]{.orange} {.inverse .center background-color="#03A696"}
 
 Per me: [p-value](https://app.wooclap.com/events/STATMEDPVALUE/0)
@@ -1129,6 +1163,10 @@ Per voi: <img src="img/bit.ly_statmed-sondaggio-pvalue.png" width="300px" style=
 - [**GGplot2 cheatsheet**](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-visualization.pdf) schema dei possibili grafici di base rappresentabili in R con il pacchetto `{ggplot2}`, molto utile anche per conoscere le tipologie di grafico, e il loro utilizzo.
 
 - _Fundamentals of Biostatistics_ (8ª ed., Cengage, 2016) di **Bernard Rosner**, suggeriti i capitoli 6 e 7.
+
+- Wasserstein RL, Lazar NA. [**The ASA Statement on p-Values: Context, Process, and Purpose**](https://doi.org/10.1080/00031305.2016.1154108). _The American Statistician_ 2016;70(2):129-133.
+
+- Greenland S, Senn SJ, Rothman KJ, Carlin JB, Poole C, Goodman SN, Altman DG. [**Statistical tests, P values, confidence intervals, and power: a guide to misinterpretations**](https://doi.org/10.1007/s10654-016-0149-3). _European Journal of Epidemiology_ 2016;31:337-350.
 
 ## {.inverse .text-center .center background-color="#03A696"}
 
