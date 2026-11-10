@@ -1018,7 +1018,7 @@ margin-right: 0; }
   <p class="subtitle">Analisi esplorativa e statistiche descrittive</p>
   <p class="author">Corrado Lanera</p>
   <p class="institute"><a href="https://www.unipd-ubep.it/">Unità di Biostatistica, Epidemiologia e Salute Pubblica</a>, Università di Padova</p>
-  <p class="date">9 novembre 2026</p>
+  <p class="date">10 novembre 2026</p>
 </section>
 <section id="cosa-faremo" class="slide level2 inverse" data-background-color="#03A696">
 <h2>Cosa faremo</h2>
@@ -1062,6 +1062,7 @@ margin-right: 0; }
 <section id="oggetti-in-gioco" class="slide level2 text-center inverse center" data-background-color="#03A696">
 <h2><strong><span class="orange">Oggetti</span> in gioco</strong></h2>
 <p><strong>Notazioni di base</strong></p>
+<p><strong><span class="orange">unità</span> statistiche e tabelle <em>tidy</em></strong></p>
 <p><strong><span class="orange">tipologie</span> di dati</strong></p>
 </section>
 <section id="notazioni-sommatoria-fino-a-n" class="slide level2">
@@ -1158,8 +1159,141 @@ margin-right: 0; }
 <li>In uno studio clinico: l’unità statistica è il paziente arruolato.</li>
 </ul>
 </section>
-<section id="unità-statistica-1" class="slide level2">
-<h2><span class="orange">Unità</span> statistica</h2>
+<section id="una-tabella-disordinata" class="slide level2">
+<h2>Una tabella <span class="orange">disordinata</span></h2>
+<p>Quattro pazienti, registrati in un foglio di calcolo come capita spesso:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Paziente</th>
+<th style="text-align: center;">M</th>
+<th style="text-align: center;">F</th>
+<th style="text-align: right;">Età</th>
+<th style="text-align: center;">Pressione (mmHg)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">P01</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: right;">54</td>
+<td style="text-align: center;">130/85</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">P02</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: right;">61</td>
+<td style="text-align: center;">145/95</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">P03</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: right;">47</td>
+<td style="text-align: center;">120/80</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">P04</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: right;">70</td>
+<td style="text-align: center;">150/90</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Media</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: right;"><strong>58</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<ul>
+<li>Quante sono le <strong><span class="orange">unità statistiche</span></strong>?</li>
+<li>Quante e quali sono le <strong><span class="orange">variabili</span></strong>?</li>
+<li>Che cosa non va in questa tabella?</li>
+</ul>
+</section>
+<section id="dati-tidy-ordinati" class="slide level2">
+<h2>Dati <span class="orange">tidy</span> (ordinati)</h2>
+<p>Una tabella è <em>tidy</em> quando rispetta tre regole:</p>
+<ol type="1">
+<li>Ogni <strong>variabile</strong> è una <strong>colonna</strong>, e ogni colonna è una variabile.</li>
+<li>Ogni <strong>osservazione</strong> (l’unità statistica) è una <strong>riga</strong>, e ogni riga è un’osservazione.</li>
+<li>Ogni <strong>valore</strong> è una <strong>cella</strong>, e ogni cella contiene un solo valore.</li>
+</ol>
+<p><br></p>
+<p>La tabella di prima le viola tutte e tre:</p>
+<ol type="1">
+<li>il <strong>sesso</strong>, una sola variabile, occupa due colonne (M e F);</li>
+<li>la riga <strong>«Media»</strong> non è un paziente, ma un riassunto calcolato sui pazienti;</li>
+<li><strong>«130/85»</strong> sono due valori in una cella: pressione sistolica e diastolica.</li>
+</ol>
+<div class="small">
+<div class="text-right">
+<p>Wickham H. (2014). Tidy Data. <em>Journal of Statistical Software</em>, 59(10). <a href="https://r4ds.hadley.nz/data-tidy.html">R for Data Science, cap. «Data tidying»</a>.</p>
+</div>
+</div>
+</section>
+<section id="la-stessa-tabella-tidy" class="slide level2">
+<h2>La stessa tabella, <span class="orange">tidy</span></h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Paziente</th>
+<th style="text-align: center;">Sesso</th>
+<th style="text-align: right;">Età (anni)</th>
+<th style="text-align: right;">PAS (mmHg)</th>
+<th style="text-align: right;">PAD (mmHg)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">P01</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: right;">54</td>
+<td style="text-align: right;">130</td>
+<td style="text-align: right;">85</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">P02</td>
+<td style="text-align: center;">M</td>
+<td style="text-align: right;">61</td>
+<td style="text-align: right;">145</td>
+<td style="text-align: right;">95</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">P03</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: right;">47</td>
+<td style="text-align: right;">120</td>
+<td style="text-align: right;">80</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">P04</td>
+<td style="text-align: center;">M</td>
+<td style="text-align: right;">70</td>
+<td style="text-align: right;">150</td>
+<td style="text-align: right;">90</td>
+</tr>
+</tbody>
+</table>
+<div class="small">
+<p>PAS e PAD: pressione arteriosa sistolica e diastolica.</p>
+</div>
+<p><br></p>
+<ul>
+<li><strong>4 righe</strong>: una per paziente, cioè una per unità statistica.</li>
+<li><strong>5 colonne</strong>: l’identificativo e 4 variabili (sesso, età, PAS, PAD), ciascuna con un solo tipo di dato.</li>
+<li>La <strong>media</strong> dell’età non si perde: si calcola dai dati quando serve.</li>
+</ul>
+</section>
+<section id="un-esempio-reale" class="slide level2">
+<h2>Un esempio <span class="orange">reale</span></h2>
+<p>Le prime 10 delle 200 righe della coorte EPIC-Norfolk, che useremo negli esempi che seguono: ogni riga è un partecipante (l’unità statistica), ogni colonna una variabile.</p>
 <div class="small">
 <div class="cell">
 <div class="cell-output-display">

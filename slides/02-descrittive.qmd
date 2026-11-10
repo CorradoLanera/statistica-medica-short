@@ -123,6 +123,8 @@ l'aiuto e il supporto logistico e amministrativo che mi è stato offerto.
 
 **Notazioni di base**
 
+**[unità]{.orange} statistiche e tabelle _tidy_**
+
 **[tipologie]{.orange} di dati**
 
 ## [Notazioni]{.orange}: Sommatoria fino a N
@@ -234,7 +236,81 @@ In altre parole, è ciò che si osserva, misura o registra in una ricerca statis
 - In un’indagine sui redditi familiari: l’unità statistica è la famiglia.
 - In uno studio clinico: l’unità statistica è il paziente arruolato.
 
-## [Unità]{.orange} statistica
+## Una tabella [disordinata]{.orange}
+
+Quattro pazienti, registrati in un foglio di calcolo come capita spesso:
+
+| Paziente | M | F | Età | Pressione (mmHg) |
+|:---------|:-:|:-:|----:|:----------------:|
+| P01      |   | X |  54 | 130/85           |
+| P02      | X |   |  61 | 145/95           |
+| P03      |   | X |  47 | 120/80           |
+| P04      | X |   |  70 | 150/90           |
+| **Media**|   |   | **58** |               |
+
+<br>
+
+- Quante sono le **[unità statistiche]{.orange}**?
+- Quante e quali sono le **[variabili]{.orange}**?
+- Che cosa non va in questa tabella?
+
+## Dati [tidy]{.orange} (ordinati)
+
+Una tabella è _tidy_ quando rispetta tre regole:
+
+1. Ogni **variabile** è una **colonna**, e ogni colonna è una variabile.
+2. Ogni **osservazione** (l'unità statistica) è una **riga**, e ogni riga
+   è un'osservazione.
+3. Ogni **valore** è una **cella**, e ogni cella contiene un solo valore.
+
+<br>
+
+La tabella di prima le viola tutte e tre:
+
+1. il **sesso**, una sola variabile, occupa due colonne (M e F);
+2. la riga **«Media»** non è un paziente, ma un riassunto calcolato sui
+   pazienti;
+3. **«130/85»** sono due valori in una cella: pressione sistolica e
+   diastolica.
+
+::: {.small}
+
+::: {.text-right}
+
+Wickham H. (2014). Tidy Data. _Journal of Statistical Software_, 59(10).
+[R for Data Science, cap. «Data tidying»](https://r4ds.hadley.nz/data-tidy.html).
+
+:::
+
+:::
+
+## La stessa tabella, [tidy]{.orange}
+
+| Paziente | Sesso | Età (anni) | PAS (mmHg) | PAD (mmHg) |
+|:---------|:-----:|-----------:|-----------:|-----------:|
+| P01      | F     |         54 |        130 |         85 |
+| P02      | M     |         61 |        145 |         95 |
+| P03      | F     |         47 |        120 |         80 |
+| P04      | M     |         70 |        150 |         90 |
+
+::: {.small}
+
+PAS e PAD: pressione arteriosa sistolica e diastolica.
+
+:::
+
+<br>
+
+- **4 righe**: una per paziente, cioè una per unità statistica.
+- **5 colonne**: l'identificativo e 4 variabili (sesso, età, PAS, PAD),
+  ciascuna con un solo tipo di dato.
+- La **media** dell'età non si perde: si calcola dai dati quando serve.
+
+## Un esempio [reale]{.orange}
+
+Le prime 10 delle 200 righe della coorte EPIC-Norfolk, che useremo negli
+esempi che seguono: ogni riga è un partecipante (l'unità statistica), ogni
+colonna una variabile.
 
 ::: {.small}
 

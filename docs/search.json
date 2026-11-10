@@ -630,7 +630,7 @@
     "href": "slides/02-descrittive.html#oggetti-in-gioco",
     "title": "Statistica Medica",
     "section": "Oggetti in gioco",
-    "text": "Oggetti in gioco\nNotazioni di base\ntipologie di dati"
+    "text": "Oggetti in gioco\nNotazioni di base\nunità statistiche e tabelle tidy\ntipologie di dati"
   },
   {
     "objectID": "slides/02-descrittive.html#notazioni-sommatoria-fino-a-n",
@@ -1106,7 +1106,7 @@
     "href": "slides/index.html",
     "title": "Slide del corso",
     "section": "",
-    "text": "Ordinare per\n      Predefinito\n      \n        Data - Meno recente\n      \n      \n        Data - Più recente\n      \n      \n        Titolo\n      \n      \n        Autore/Autrice\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nData\n\n\n\nTitolo\n\n\n\nSottotitolo\n\n\n\nAutore/Autrice\n\n\n\n\n\n\n\n\n9 nov 2026\n\n\nStatistica Medica\n\n\nPresentazione e informazioni generali\n\n\nCorrado Lanera\n\n\n\n\n\n\n9 nov 2026\n\n\nStatistica Medica\n\n\nIntroduzione a R/RStudio\n\n\nCorrado Lanera\n\n\n\n\n\n\n9 nov 2026\n\n\nStatistica Medica\n\n\nAnalisi esplorativa e statistiche descrittive\n\n\nCorrado Lanera\n\n\n\n\n\n\n9 nov 2026\n\n\nStatistica Medica\n\n\nBasi di probabilità\n\n\nCorrado Lanera\n\n\n\n\n\n\n9 nov 2026\n\n\nStatistica Medica\n\n\nDistribuzioni di probabilità\n\n\nCorrado Lanera\n\n\n\n\n\n\n9 nov 2026\n\n\nStatistica Medica\n\n\nInferenza, intervalli di confidenza, introduzione ai test d’ipotesi\n\n\nCorrado Lanera\n\n\n\n\n\n\n \n\n\nTavole statistiche\n\n\nNormale standardizzata, t di Student, Chi-quadrato, F (PDF)\n\n\n \n\n\n\n\n\n\n \n\n\nTavole statistiche (Rosner)\n\n\nAppendice di Fundamentals of Biostatistics (PDF, in inglese)\n\n\n \n\n\n\n\n\n\nNessun risultato\n Torna in cima"
+    "text": "Ordinare per\n      Predefinito\n      \n        Data - Meno recente\n      \n      \n        Data - Più recente\n      \n      \n        Titolo\n      \n      \n        Autore/Autrice\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nData\n\n\n\nTitolo\n\n\n\nSottotitolo\n\n\n\nAutore/Autrice\n\n\n\n\n\n\n\n\n9 nov 2026\n\n\nStatistica Medica\n\n\nPresentazione e informazioni generali\n\n\nCorrado Lanera\n\n\n\n\n\n\n9 nov 2026\n\n\nStatistica Medica\n\n\nIntroduzione a R/RStudio\n\n\nCorrado Lanera\n\n\n\n\n\n\n10 nov 2026\n\n\nStatistica Medica\n\n\nAnalisi esplorativa e statistiche descrittive\n\n\nCorrado Lanera\n\n\n\n\n\n\n9 nov 2026\n\n\nStatistica Medica\n\n\nBasi di probabilità\n\n\nCorrado Lanera\n\n\n\n\n\n\n9 nov 2026\n\n\nStatistica Medica\n\n\nDistribuzioni di probabilità\n\n\nCorrado Lanera\n\n\n\n\n\n\n9 nov 2026\n\n\nStatistica Medica\n\n\nInferenza, intervalli di confidenza, introduzione ai test d’ipotesi\n\n\nCorrado Lanera\n\n\n\n\n\n\n \n\n\nTavole statistiche\n\n\nNormale standardizzata, t di Student, Chi-quadrato, F (PDF)\n\n\n \n\n\n\n\n\n\n \n\n\nTavole statistiche (Rosner)\n\n\nAppendice di Fundamentals of Biostatistics (PDF, in inglese)\n\n\n \n\n\n\n\n\n\nNessun risultato\n Torna in cima"
   },
   {
     "objectID": "slides/01-r_rstudio.html#cosa-faremo",
@@ -1961,5 +1961,40 @@
     "title": "Statistica Medica — Corrado Lanera",
     "section": "",
     "text": "Corrado Lanera\nE-mail: Corrado.Lanera@ubep.unipd.it\nRicevimento: bit.ly/statmed-cl-ricevimento\nPosit Cloud (RStudio online): bit.ly/statmed-cl-rstudio"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#una-tabella-disordinata",
+    "href": "slides/02-descrittive.html#una-tabella-disordinata",
+    "title": "Statistica Medica",
+    "section": "Una tabella disordinata",
+    "text": "Una tabella disordinata\nQuattro pazienti, registrati in un foglio di calcolo come capita spesso:\n\n\n\nPaziente\nM\nF\nEtà\nPressione (mmHg)\n\n\n\n\nP01\n\nX\n54\n130/85\n\n\nP02\nX\n\n61\n145/95\n\n\nP03\n\nX\n47\n120/80\n\n\nP04\nX\n\n70\n150/90\n\n\nMedia\n\n\n58\n\n\n\n\n\n\nQuante sono le unità statistiche?\nQuante e quali sono le variabili?\nChe cosa non va in questa tabella?"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#dati-tidy-ordinati",
+    "href": "slides/02-descrittive.html#dati-tidy-ordinati",
+    "title": "Statistica Medica",
+    "section": "Dati tidy (ordinati)",
+    "text": "Dati tidy (ordinati)\nUna tabella è tidy quando rispetta tre regole:\n\nOgni variabile è una colonna, e ogni colonna è una variabile.\nOgni osservazione (l’unità statistica) è una riga, e ogni riga è un’osservazione.\nOgni valore è una cella, e ogni cella contiene un solo valore.\n\n\nLa tabella di prima le viola tutte e tre:\n\nil sesso, una sola variabile, occupa due colonne (M e F);\nla riga «Media» non è un paziente, ma un riassunto calcolato sui pazienti;\n«130/85» sono due valori in una cella: pressione sistolica e diastolica.\n\n\n\nWickham H. (2014). Tidy Data. Journal of Statistical Software, 59(10). R for Data Science, cap. «Data tidying»."
+  },
+  {
+    "objectID": "slides/02-descrittive.html#la-stessa-tabella-tidy",
+    "href": "slides/02-descrittive.html#la-stessa-tabella-tidy",
+    "title": "Statistica Medica",
+    "section": "La stessa tabella, tidy",
+    "text": "La stessa tabella, tidy\n\n\n\nPaziente\nSesso\nEtà (anni)\nPAS (mmHg)\nPAD (mmHg)\n\n\n\n\nP01\nF\n54\n130\n85\n\n\nP02\nM\n61\n145\n95\n\n\nP03\nF\n47\n120\n80\n\n\nP04\nM\n70\n150\n90\n\n\n\n\nPAS e PAD: pressione arteriosa sistolica e diastolica.\n\n\n\n4 righe: una per paziente, cioè una per unità statistica.\n5 colonne: l’identificativo e 4 variabili (sesso, età, PAS, PAD), ciascuna con un solo tipo di dato.\nLa media dell’età non si perde: si calcola dai dati quando serve."
+  },
+  {
+    "objectID": "slides/02-descrittive.html#un-esempio-reale",
+    "href": "slides/02-descrittive.html#un-esempio-reale",
+    "title": "Statistica Medica",
+    "section": "Un esempio reale",
+    "text": "Un esempio reale\nLe prime 10 delle 200 righe della coorte EPIC-Norfolk, che useremo negli esempi che seguono: ogni riga è un partecipante (l’unità statistica), ogni colonna una variabile.\n\n\n\n\nPortion of “EPIC-Norfolk cohort” (Bain et al. 2015)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nid\ngender\nage\natt.fisica\nsigarette\nbmi\nsbp\ndbp\ncole.tot\nmag\nfarmaci\n\n\n\n\n1\nM\n55.1\nMai\n1\n30.4\n151.0\n108.0\n5.2\n425.5\nNo\n\n\n2\nM\n62.9\n1-2 volte a sett.\n2\n42.6\n140.1\n103.9\n4.6\n312.6\nStatine\n\n\n3\nM\n53.1\n3 Volte a sett.\n2\n41.6\n145.2\n120.6\n4.8\n426.8\nStatine\n\n\n4\nM\n76.3\nMai\n2\n23.3\n126.9\n114.0\n8.4\n422.7\nfibrati\n\n\n5\nM\n64.2\n3 Volte a sett.\n1\n32.9\n151.6\n116.0\n7.7\n281.1\nNo\n\n\n6\nM\n53.3\nMai\n1\n31.7\n167.4\n100.7\n6.6\n318.2\nNo\n\n\n7\nM\n65.7\n3 Volte a sett.\n1\n26.4\n160.0\n101.5\n6.0\n424.5\nNo\n\n\n8\nM\n68.1\n3 Volte a sett.\n0\n31.4\n125.0\n101.0\n5.3\n327.3\nStatine\n\n\n9\nM\n66.6\n3 Volte a sett.\n0\n24.9\n110.1\n109.3\n5.1\n203.7\nNo\n\n\n10\nM\n58.2\n1-2 volte a sett.\n2\n30.5\n138.0\n106.4\n6.7\n412.4\nNo"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#tipologie-di-dati-in-sintesi",
+    "href": "slides/02-descrittive.html#tipologie-di-dati-in-sintesi",
+    "title": "Statistica Medica",
+    "section": "Tipologie di dati: in sintesi",
+    "text": "Tipologie di dati: in sintesi\n\nQualitative (o categoriche): i valori sono categorie.\n\nnominali: senza un ordine (gruppo sanguigno, farmaco assunto);\nordinali: con un ordine (stadio del tumore; attività fisica: mai, 1-2 volte, 3 volte a settimana);\nbinarie (o dicotomiche): solo due categorie, che si escludono a vicenda (fumatore: sì/no).\n\nQuantitative (o cardinali): i valori sono numeri, ottenuti contando o misurando, e le differenze fra loro hanno senso.\n\ndiscrete: solo valori isolati, di solito conteggi (numero di figli, ricoveri nell’ultimo anno);\ncontinue: qualunque valore in un intervallo, di solito misure (età, BMI, pressione, colesterolo).\n\n\n\nOrdinale o cardinale? In una ordinale conta solo l’ordine: «3 volte a settimana» viene dopo «1-2 volte», ma non ha senso chiedersi di quanto. In una cardinale la distanza fra 120 e 130 mmHg è la stessa che fra 140 e 150 mmHg.\nUn numero non basta a fare una cardinale: il codice di un paziente, o 0/1 per no/sì, restano variabili qualitative."
   }
 ]
