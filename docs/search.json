@@ -224,7 +224,7 @@
     "href": "slides/04-distribuzioni.html#coefficiente-binomiale",
     "title": "Statistica Medica",
     "section": "Coefficiente binomiale",
-    "text": "Coefficiente binomiale\nIl numero di combinazioni di nn oggetti presi kk alla volta è pari a\nnCk=(nk)=n(n−1)…(n−k+1)k!_nC_k=\\binom{n}{k}=\\frac{n(n-1)\\ldots (n-k+1)}{k!}\nmoltiplicando numeratore e denominatore per (n−k)!(n-k)! si ottiene\nnCk=(nk)=n!k!(n−k)!_nC_k=\\binom{n}{k}=\\frac{n!}{k!(n-k)!}\n\nNote:\n\n\nn!:=n⋅(n−1)⋅⋯⋅(2)⋅1n! := n\\cdot (n-1)\\cdot \\cdots \\cdot (2)\\cdot 1\nconvenzione: (n0)=1\\binom{n}{0}=1\nvale la simmetria: (nk)=(nn−k)\\binom{n}{k}=\\binom{n}{n-k}"
+    "text": "Coefficiente binomiale\nIl numero di combinazioni di nn oggetti presi kk alla volta è pari a\nnCk=(nk)=n(n−1)…(n−k+1)k!_nC_k=\\binom{n}{k}=\\frac{n(n-1)\\ldots (n-k+1)}{k!}\nmoltiplicando numeratore e denominatore per (n−k)!(n-k)! si ottiene\nnCk=(nk)=n!k!(n−k)!_nC_k=\\binom{n}{k}=\\frac{n!}{k!(n-k)!}\n\nNote:\n\n\nn!:=n⋅(n−1)⋅⋯⋅(2)⋅1n! := n\\cdot (n-1)\\cdot \\cdots \\cdot (2)\\cdot 1\nconvenzione: (n0)=1\\binom{n}{0}=1"
   },
   {
     "objectID": "slides/04-distribuzioni.html#distribuzione-binomiale-probabilità",
@@ -245,7 +245,7 @@
     "href": "slides/04-distribuzioni.html#distribuzione-binomiale-1",
     "title": "Statistica Medica",
     "section": "Distribuzione Binomiale",
-    "text": "Distribuzione Binomiale\n\nDescrizioneEsempio\n\n\nLa distribuzione binomiale, di parametri nn e pp si indica come\nP(X=k)=(nk)pk(1−p)n−kk=0,1,…,nP(X=k)=\\binom{n}{k}p^k(1-p)^{n-k} \\:\\:\\:\\: k=0,1,\\ldots,n\nvale la simmetria\nP(X=k)=(nk)pk(1−p)n−k=(nn−k)pn−k(1−p)k=P(X=n−k)P(X=k)=\\binom{n}{k}p^k(1-p)^{n-k} = \\binom{n}{n-k}p^{n-k}(1-p)^{k}=P(X=n-k)\n\n\nQuale è la probabilità di ottenere 2 bambini maschi da 5 nati se la probabilità di un maschio è pari a 0.51, indipendente dal sesso dei bambini nati prima?\nSi usa la distribuzione binomiale\nP(X=2)=(52)0.512(0.49)5−2=5×42×10.512(0.49)5−2=0.306P(X=2)=\\binom{5}{2}0.51^2(0.49)^{5-2}=\\frac{5 \\times 4}{2 \\times 1}0.51^2(0.49)^{5-2}=0.306"
+    "text": "Distribuzione Binomiale\n\nDescrizioneEsempio\n\n\nLa distribuzione binomiale, di parametri nn e pp si indica come\nP(X=k)=(nk)pk(1−p)n−kk=0,1,…,nP(X=k)=\\binom{n}{k}p^k(1-p)^{n-k} \\:\\:\\:\\: k=0,1,\\ldots,n\n\n\nQuale è la probabilità di ottenere 2 bambini maschi da 5 nati se la probabilità di un maschio è pari a 0.51, indipendente dal sesso dei bambini nati prima?\nSi usa la distribuzione binomiale\nP(X=2)=(52)0.512(0.49)5−2=5×42×10.512(0.49)5−2=0.306P(X=2)=\\binom{5}{2}0.51^2(0.49)^{5-2}=\\frac{5 \\times 4}{2 \\times 1}0.51^2(0.49)^{5-2}=0.306"
   },
   {
     "objectID": "slides/04-distribuzioni.html#binomiale-valore-atteso-e-varianza",

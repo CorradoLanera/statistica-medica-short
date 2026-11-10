@@ -389,7 +389,6 @@ $$_nC_k=\binom{n}{k}=\frac{n!}{k!(n-k)!}$$
 
 - $n! := n\cdot (n-1)\cdot \cdots \cdot (2)\cdot 1$
 - convenzione: $\binom{n}{0}=1$
-- vale la simmetria: $\binom{n}{k}=\binom{n}{n-k}$
 
 ## Distribuzione [Binomiale]{.orange}: probabilità
 
@@ -420,11 +419,6 @@ knitr::include_graphics("img/Algebra1_12_fig003.svg.png")
 La distribuzione binomiale, di parametri $n$ e $p$ si indica come
 
 $$P(X=k)=\binom{n}{k}p^k(1-p)^{n-k} \:\:\:\: k=0,1,\ldots,n$$
-
-vale la simmetria
-
-$$P(X=k)=\binom{n}{k}p^k(1-p)^{n-k} = \binom{n}{n-k}p^{n-k}(1-p)^{k}=P(X=n-k)$$
-
 
 ### Esempio
 
