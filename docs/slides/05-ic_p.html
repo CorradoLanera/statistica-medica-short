@@ -5128,6 +5128,7 @@ flowchart LR
 <li><p>il passaggio <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mo>=</mo><mtext mathvariant="normal">ind.</mtext></mover><annotation encoding="application/x-tex">\stackrel{\mbox{ind.}}{=}</annotation></semantics></math> vale perché le <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>X</mi><mi>i</mi></msub><annotation encoding="application/x-tex">X_i</annotation></semantics></math> sono <strong>indipendenti</strong></p></li>
 </ul>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>*</mi><mo stretchy="false" form="postfix">)</mo><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mtext mathvariant="normal">var</mtext><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mi>X</mi><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mfrac><mrow><munderover><mo>∑</mo><mn>1</mn><mi>n</mi></munderover><msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>a</mi><msub><mi>x</mi><mi>i</mi></msub><mo>−</mo><mfrac><mrow><munderover><mo>∑</mo><mn>1</mn><mi>n</mi></munderover><mi>a</mi><msub><mi>x</mi><mi>j</mi></msub></mrow><mi>n</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup></mrow><mi>n</mi></mfrac><mo>=</mo><mfrac><mrow><munderover><mo>∑</mo><mn>1</mn><mi>n</mi></munderover><msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>a</mi><msub><mi>x</mi><mi>i</mi></msub><mo>−</mo><mfrac><mrow><mi>a</mi><munderover><mo>∑</mo><mn>1</mn><mi>n</mi></munderover><msub><mi>x</mi><mi>j</mi></msub></mrow><mi>n</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup></mrow><mi>n</mi></mfrac></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mfrac><mrow><munderover><mo>∑</mo><mn>1</mn><mi>n</mi></munderover><msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>a</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo>−</mo><mi>μ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup></mrow><mi>n</mi></mfrac><mo>=</mo><mfrac><mrow><munderover><mo>∑</mo><mn>1</mn><mi>n</mi></munderover><msup><mi>a</mi><mn>2</mn></msup><msup><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo>−</mo><mi>μ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup></mrow><mi>n</mi></mfrac></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mfrac><mrow><msup><mi>a</mi><mn>2</mn></msup><munderover><mo>∑</mo><mn>1</mn><mi>n</mi></munderover><msup><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo>−</mo><mi>μ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup></mrow><mi>n</mi></mfrac><mo>=</mo><msup><mi>a</mi><mn>2</mn></msup><mtext mathvariant="normal">var</mtext><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo stretchy="false" form="postfix">)</mo></mtd></mtr></mtable></mrow><annotation encoding="application/x-tex">*)\begin{split}\mbox{var}(aX) &amp;= \frac{\sum_1^n\left(ax_i-\frac{\sum_1^nax_j}{n}\right)^2}{n}= \frac{\sum_1^n\left(ax_i-\frac{a\sum_1^nx_j}{n}\right)^2}{n}\\&amp;= \frac{\sum_1^n\left(a\left(x_i-\mu\right)\right)^2}{n}= \frac{\sum_1^na^2\left(x_i-\mu\right)^2}{n}\\&amp;=\frac{a^2\sum_1^n\left(x_i-\mu\right)^2}{n}=a^ 2\mbox{var}(X)\end{split}</annotation></semantics></math></p>
+<p>Una costante esce dalla sommatoria: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∑</mo><mi>i</mi></msub><mi>C</mi><msub><mi>x</mi><mi>i</mi></msub><mo>=</mo><mi>C</mi><msub><mo>∑</mo><mi>i</mi></msub><msub><mi>x</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\sum_i C x_i = C\sum_i x_i</annotation></semantics></math>.</p>
 </section>
 <section id="teorema-del-limite-centrale" class="slide level2">
 <h2><span class="orange">Teorema del Limite Centrale</span></h2>
@@ -5366,7 +5367,7 @@ flowchart LR
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_a3f9ae4d" minutes="15" seconds="0" warn-when="3" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_2f5ca429" minutes="15" seconds="0" warn-when="3" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
 </div>
 </div>
 </section>
@@ -6053,7 +6054,7 @@ flowchart LR
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_360a148d" minutes="2" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_629bbd33" minutes="2" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
 </div>
 </div>
 </section>
@@ -6273,7 +6274,7 @@ flowchart LR
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_4921d6ac" minutes="2" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_3d8fd560" minutes="2" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
 </div>
 </div>
 </section>
