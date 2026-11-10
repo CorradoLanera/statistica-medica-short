@@ -4987,7 +4987,7 @@ if (!window.customElements.get('countdown-timer')) {
   <p class="subtitle">Distribuzioni di probabilità</p>
   <p class="author">Corrado Lanera</p>
   <p class="institute"><a href="https://www.unipd-ubep.it/">Unità di Biostatistica, Epidemiologia e Salute Pubblica</a>, Università di Padova</p>
-  <p class="date">10 novembre 2026</p>
+  <p class="date">11 novembre 2026</p>
 </section>
 <section id="cosa-faremo" class="slide level2 inverse" data-background-color="#03A696">
 <h2>Cosa faremo</h2>
@@ -5287,7 +5287,7 @@ if (!window.customElements.get('countdown-timer')) {
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_4f4e7070" minutes="1" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:15%;left:70%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_4e6e6346" minutes="1" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:15%;left:70%;"></countdown-timer>
 </div>
 </div>
 </section>
@@ -5457,13 +5457,11 @@ flowchart LR
 </section>
 <section id="binomiale-valore-atteso-e-varianza" class="slide level2">
 <h2><span class="orange">Binomiale</span>: Valore atteso e varianza</h2>
-<p>Sia <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math> la somma degli esiti delle singole prove, che indichiamo come variabili casuali <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">X_1,\ldots,X_n</annotation></semantics></math>. Per linearità</p>
+<p>Sia <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math> la somma degli esiti delle singole prove, che indichiamo come variabili casuali <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">X_1,\ldots,X_n</annotation></semantics></math>. Ogni <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>X</mi><mi>i</mi></msub><annotation encoding="application/x-tex">X_i</annotation></semantics></math> vale 1 (successo) con probabilità <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math> e 0 con probabilità <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>q</mi><annotation encoding="application/x-tex">q</annotation></semantics></math>: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>X</mi><mi>i</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn><mo>⋅</mo><mi>p</mi><mo>+</mo><mn>0</mn><mo>⋅</mo><mi>q</mi><mo>=</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">E(X_i) = 1\cdot p + 0\cdot q = p</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mi>a</mi><mi>r</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>X</mi><mi>i</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>p</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mi>p</mi><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>−</mo><mi>p</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mi>q</mi><mo>=</mo><mi>p</mi><mi>q</mi></mrow><annotation encoding="application/x-tex">var(X_i) = (1-p)^2p + (0-p)^2q = pq</annotation></semantics></math>.</p>
+<p>Per linearità</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo stretchy="false" form="prefix">(</mo><mi>S</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>E</mi><mrow><mo stretchy="true" form="prefix">(</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>X</mi><mi>i</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>E</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>X</mi><mi>i</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>p</mi><mo>=</mo><mi>n</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">E(S) = E\left(\sum_{i=1}^n X_i\right) = \sum_{i=1}^nE(X_i) = \sum_{i=1}^np=np</annotation></semantics></math></p>
 <p>Essendo le prove indipendenti, la <strong>varianza di una somma di variabili indipendenti è la somma delle varianze</strong>:</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mi>a</mi><mi>r</mi><mo stretchy="false" form="prefix">(</mo><mi>S</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>v</mi><mi>a</mi><mi>r</mi><mrow><mo stretchy="true" form="prefix">(</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>X</mi><mi>i</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>v</mi><mi>a</mi><mi>r</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>X</mi><mi>i</mi></msub><mo stretchy="false" form="postfix">)</mo><msup><mo>=</mo><mo>*</mo></msup><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>p</mi><mi>q</mi><mo>=</mo><mi>n</mi><mi>p</mi><mi>q</mi></mrow><annotation encoding="application/x-tex">var(S) = var\left(\sum_{i=1}^n X_i\right) = \sum_{i=1}^nvar(X_i) =^*  \sum_{i=1}^npq=npq</annotation></semantics></math> <br></p>
-<div class="text-right">
-<p>*= Se interessa, dimostrarlo per esercizio.</p>
-</div>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mi>a</mi><mi>r</mi><mo stretchy="false" form="prefix">(</mo><mi>S</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>v</mi><mi>a</mi><mi>r</mi><mrow><mo stretchy="true" form="prefix">(</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>X</mi><mi>i</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>v</mi><mi>a</mi><mi>r</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>X</mi><mi>i</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>p</mi><mi>q</mi><mo>=</mo><mi>n</mi><mi>p</mi><mi>q</mi></mrow><annotation encoding="application/x-tex">var(S) = var\left(\sum_{i=1}^n X_i\right) = \sum_{i=1}^nvar(X_i) = \sum_{i=1}^npq=npq</annotation></semantics></math></p>
 </section>
 <section id="esperimenti-grafico" class="slide level2">
 <h2><span class="orange">10 esperimenti</span>: grafico</h2>
@@ -5491,8 +5489,8 @@ flowchart LR
 <pre class="mermaid mermaid-js">%%{init: {&quot;flowchart&quot;: {&quot;padding&quot;: 12, &quot;wrappingWidth&quot;: 320}, &quot;themeVariables&quot;: {&quot;fontFamily&quot;: &quot;Arial, Helvetica, sans-serif&quot;}}}%%
 flowchart LR
   n_varianza_di_variabile_casuale[&quot;Varianza Var(X)&quot;]:::prev
-  n_valore_atteso[&quot;Valore atteso E(X)&quot;]:::prev
   n_funzione_di_massa[&quot;Funzione di massa&quot;]:::prev
+  n_valore_atteso[&quot;Valore atteso E(X)&quot;]:::prev
   k_n_02_notazioni[&quot;Indici e sommatoria · 02&quot;]:::prev
   k_n_02_tipi[&quot;Tipi di variabile · 02&quot;]:::prev
   k_n_03_operazioni[&quot;Operazioni fra eventi · 03&quot;]:::prev
@@ -5502,13 +5500,10 @@ flowchart LR
   n_fattoriale[&quot;Fattoriale n!&quot;]:::cur
   n_coefficiente_binomiale[&quot;Coefficiente binomiale&quot;]:::cur
   n_distribuzione_binomiale[&quot;Binomiale&quot;]:::cur
-  n_triangolo_di_tartaglia[&quot;Triangolo di Tartaglia&quot;]:::cur
   n_linearita_del_valore_atteso[&quot;Linearità di E(X)&quot;]:::cur
   n_varianza_della_somma_di_indipendenti[&quot;Var della somma&quot;]:::cur
   n_valore_atteso_e_varianza_della_binomiale[&quot;E e Var della binomiale&quot;]:::cur
-  n_distribuzione_di_bernoulli[&quot;Bernoulli&quot;]:::cur
   n_forma_della_binomiale[&quot;Forma della binomiale&quot;]:::cur
-  n_simmetria_della_binomiale[&quot;Simmetria della binomiale&quot;]:::cur
   k_n_02_notazioni --&gt; n_linearita_del_valore_atteso
   k_n_02_tipi --&gt; n_schema_binomiale
   k_n_03_operazioni --&gt; n_schema_binomiale
@@ -5516,10 +5511,7 @@ flowchart LR
   k_n_03_somma_prodotto --&gt; n_schema_binomiale
   k_n_03_somma_prodotto --&gt; n_varianza_della_somma_di_indipendenti
   n_coefficiente_binomiale --&gt; n_distribuzione_binomiale
-  n_coefficiente_binomiale --&gt; n_triangolo_di_tartaglia
-  n_distribuzione_binomiale --&gt; n_distribuzione_di_bernoulli
   n_distribuzione_binomiale --&gt; n_forma_della_binomiale
-  n_distribuzione_binomiale --&gt; n_simmetria_della_binomiale
   n_distribuzione_binomiale --&gt; n_valore_atteso_e_varianza_della_binomiale
   n_fattoriale --&gt; n_coefficiente_binomiale
   n_funzione_di_massa --&gt; n_distribuzione_binomiale
@@ -5548,13 +5540,10 @@ flowchart LR
 <li><a href="#//coefficiente-binomiale">Fattoriale n!</a></li>
 <li><a href="#//coefficiente-binomiale">Coefficiente binomiale</a></li>
 <li><a href="#//distribuzione-binomiale-probabilità">Binomiale</a></li>
-<li><a href="#//coefficiente-binomiale-triangolo-di-tartaglia">Triangolo di Tartaglia</a></li>
 <li><a href="#//binomiale-valore-atteso-e-varianza">Linearità di E(X)</a></li>
 <li><a href="#//binomiale-valore-atteso-e-varianza">Var della somma</a></li>
 <li><a href="#//binomiale-valore-atteso-e-varianza">E e Var della binomiale</a></li>
-<li><a href="#//singolo-esperimento-grafico">Bernoulli</a></li>
 <li><a href="#//esperimenti-grafico">Forma della binomiale</a></li>
-<li><a href="#//distribuzione-binomiale-1">Simmetria della binomiale</a></li>
 </ul>
 </div>
 </div>
@@ -5715,13 +5704,11 @@ flowchart LR
   n_varianza_di_variabile_casuale[&quot;Varianza Var(X)&quot;]:::prev
   n_funzione_di_massa[&quot;Funzione di massa&quot;]:::prev
   n_valore_atteso[&quot;Valore atteso E(X)&quot;]:::prev
+  n_fattoriale[&quot;Fattoriale n!&quot;]:::prev
   n_distribuzione_binomiale[&quot;Binomiale&quot;]:::prev
   n_valore_atteso_e_varianza_della_binomiale[&quot;E e Var della binomiale&quot;]:::prev
-  n_fattoriale[&quot;Fattoriale n!&quot;]:::prev
-  k_n_02_centralita[&quot;Centralità · 02&quot;]:::prev
   k_n_02_notazioni[&quot;Indici e sommatoria · 02&quot;]:::prev
   k_n_02_tipi[&quot;Tipi di variabile · 02&quot;]:::prev
-  k_n_02_variabilita[&quot;Variabilità · 02&quot;]:::prev
   k_n_03_operazioni[&quot;Operazioni fra eventi · 03&quot;]:::prev
   k_n_03_probabilita[&quot;Probabilità · 03&quot;]:::prev
   k_n_03_somma_prodotto[&quot;Somma, prodotto, indipendenza · 03&quot;]:::prev
@@ -5730,14 +5717,11 @@ flowchart LR
   n_costante_di_nepero[&quot;Costante e&quot;]:::cur
   n_distribuzione_di_poisson[&quot;Poisson&quot;]:::cur
   n_valore_atteso_e_varianza_della_poisson[&quot;E e Var della Poisson&quot;]:::cur
-  n_sovradispersione[&quot;Sovradispersione&quot;]:::cur
   n_probabilita_di_coda[&quot;Probabilità di coda&quot;]:::cur
   n_approssimazione_poisson_della_binomiale[&quot;Poisson per la binomiale&quot;]:::cur
   n_probabilita_di_almeno_k[&quot;P(almeno k)&quot;]:::cur
-  k_n_02_centralita --&gt; n_sovradispersione
   k_n_02_notazioni --&gt; n_probabilita_di_almeno_k
   k_n_02_tipi --&gt; n_processo_di_poisson
-  k_n_02_variabilita --&gt; n_sovradispersione
   k_n_03_operazioni --&gt; n_processo_di_poisson
   k_n_03_probabilita --&gt; n_processo_di_poisson
   k_n_03_probabilita --&gt; n_tasso_di_evento
@@ -5754,7 +5738,6 @@ flowchart LR
   n_tasso_di_evento --&gt; n_distribuzione_di_poisson
   n_valore_atteso --&gt; n_valore_atteso_e_varianza_della_poisson
   n_valore_atteso_e_varianza_della_binomiale --&gt; n_approssimazione_poisson_della_binomiale
-  n_valore_atteso_e_varianza_della_poisson --&gt; n_sovradispersione
   n_varianza_di_variabile_casuale --&gt; n_valore_atteso_e_varianza_della_poisson
   classDef cur fill:#e6f0fa,stroke:#035AA6,color:#000000
   classDef prev fill:#f4f4f4,stroke:#9a9a9a,color:#555555,stroke-dasharray:4 3
@@ -5777,7 +5760,6 @@ flowchart LR
 <li><a href="#//distribuzione-di-poisson-probabilità">Costante e</a></li>
 <li><a href="#//distribuzione-di-poisson-probabilità">Poisson</a></li>
 <li><a href="#//poisson-valore-atteso-e-varianza">E e Var della Poisson</a></li>
-<li><a href="#//poisson-polio">Sovradispersione</a></li>
 <li><a href="#//poisson-cibo-cancerogeno">Probabilità di coda</a></li>
 <li><a href="#//poisson-approssimazione">Poisson per la binomiale</a></li>
 <li><a href="#//distribuzione-di-poisson-1">P(almeno k)</a></li>
@@ -5799,7 +5781,7 @@ flowchart LR
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_46b4d10b" minutes="15" seconds="0" warn-when="3" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_94b1d382" minutes="15" seconds="0" warn-when="3" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
 </div>
 </div>
 </section>
@@ -5940,12 +5922,12 @@ flowchart LR
 <div>
 <pre class="mermaid mermaid-js">%%{init: {&quot;flowchart&quot;: {&quot;padding&quot;: 12, &quot;wrappingWidth&quot;: 320}, &quot;themeVariables&quot;: {&quot;fontFamily&quot;: &quot;Arial, Helvetica, sans-serif&quot;}}}%%
 flowchart LR
-  n_funzione_matematica[&quot;Funzione&quot;]:::prev
-  n_distribuzione_di_probabilita[&quot;Distribuzione di probabilità&quot;]:::prev
-  n_varianza_di_variabile_casuale[&quot;Varianza Var(X)&quot;]:::prev
   n_distribuzione_cumulativa[&quot;Cumulata F(x)&quot;]:::prev
-  n_valore_atteso[&quot;Valore atteso E(X)&quot;]:::prev
+  n_varianza_di_variabile_casuale[&quot;Varianza Var(X)&quot;]:::prev
   n_proprieta_della_funzione_di_massa[&quot;Proprietà della massa&quot;]:::prev
+  n_distribuzione_di_probabilita[&quot;Distribuzione di probabilità&quot;]:::prev
+  n_funzione_matematica[&quot;Funzione&quot;]:::prev
+  n_valore_atteso[&quot;Valore atteso E(X)&quot;]:::prev
   n_variabile_casuale_continua[&quot;V.c. continua&quot;]:::prev
   k_n_02_centralita[&quot;Centralità · 02&quot;]:::prev
   k_n_02_percentili[&quot;Percentili e quartili · 02&quot;]:::prev
@@ -5955,18 +5937,13 @@ flowchart LR
   n_funzione_di_densita[&quot;Densità&quot;]:::cur
   n_integrale[&quot;Integrale&quot;]:::cur
   n_valore_atteso_e_varianza_continui[&quot;E e Var (continue)&quot;]:::cur
-  n_moda_di_distribuzione[&quot;Moda di distribuzione&quot;]:::cur
   n_mediana_di_distribuzione[&quot;Mediana di distribuzione&quot;]:::cur
   n_percentile_di_distribuzione[&quot;Percentile di distribuzione&quot;]:::cur
-  n_posizione_di_media_mediana_moda[&quot;Media, mediana, moda&quot;]:::cur
   n_parametro[&quot;Parametro&quot;]:::cur
   n_statistica_campionaria[&quot;Statistica campionaria&quot;]:::cur
   k_n_02_centralita --&gt; n_mediana_di_distribuzione
-  k_n_02_centralita --&gt; n_moda_di_distribuzione
-  k_n_02_centralita --&gt; n_posizione_di_media_mediana_moda
   k_n_02_centralita --&gt; n_statistica_campionaria
   k_n_02_percentili --&gt; n_percentile_di_distribuzione
-  k_n_02_unita --&gt; n_parametro
   k_n_02_unita --&gt; n_statistica_campionaria
   k_n_02_variabilita --&gt; n_parametro
   k_n_02_variabilita --&gt; n_statistica_campionaria
@@ -5975,8 +5952,6 @@ flowchart LR
   n_distribuzione_cumulativa --&gt; n_mediana_di_distribuzione
   n_distribuzione_di_probabilita --&gt; n_funzione_di_densita
   n_funzione_di_densita --&gt; n_mediana_di_distribuzione
-  n_funzione_di_densita --&gt; n_moda_di_distribuzione
-  n_funzione_di_densita --&gt; n_posizione_di_media_mediana_moda
   n_funzione_di_densita --&gt; n_valore_atteso_e_varianza_continui
   n_funzione_matematica --&gt; n_funzione_di_densita
   n_integrale --&gt; n_valore_atteso_e_varianza_continui
@@ -6006,10 +5981,8 @@ flowchart LR
 <li><a href="#//modelli-continui">Densità</a></li>
 <li><a href="#//valore-atteso-e-varianza">Integrale</a></li>
 <li><a href="#//valore-atteso-e-varianza">E e Var (continue)</a></li>
-<li><a href="#//valore-atteso-e-varianza">Moda di distribuzione</a></li>
 <li><a href="#//valore-atteso-e-varianza">Mediana di distribuzione</a></li>
 <li><a href="#//valore-atteso-e-varianza">Percentile di distribuzione</a></li>
-<li><a href="#//valore-atteso-e-varianza">Media, mediana, moda</a></li>
 <li><a href="#//parametri-vs-statistiche">Parametro</a></li>
 <li><a href="#//parametri-vs-statistiche">Statistica campionaria</a></li>
 </ul>
@@ -6195,7 +6168,7 @@ flowchart LR
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_4e4cd3ab" minutes="2" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_21b96cc2" minutes="2" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
 </div>
 </div>
 <div class="small">
@@ -6267,7 +6240,7 @@ flowchart LR
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_e59e53e4" minutes="2" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_1f1bee20" minutes="2" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
 </div>
 </div>
 </section>
@@ -6288,7 +6261,7 @@ flowchart LR
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_3675b3bd" minutes="2" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_ab475ea5" minutes="2" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
 </div>
 </div>
 </section>
@@ -6308,7 +6281,7 @@ flowchart LR
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_5d0292d4" minutes="2" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_9a3f9f24" minutes="2" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
 </div>
 </div>
 </section>
@@ -6339,7 +6312,7 @@ flowchart LR
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_95ed0646" minutes="2" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_45ce222a" minutes="2" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
 </div>
 </div>
 </section>
@@ -6361,13 +6334,13 @@ flowchart LR
 <div>
 <pre class="mermaid mermaid-js">%%{init: {&quot;flowchart&quot;: {&quot;padding&quot;: 12, &quot;wrappingWidth&quot;: 320}, &quot;themeVariables&quot;: {&quot;fontFamily&quot;: &quot;Arial, Helvetica, sans-serif&quot;}}}%%
 flowchart LR
-  n_funzione_di_variabile_casuale[&quot;Funzione di v.c.&quot;]:::prev
   n_distribuzione_cumulativa[&quot;Cumulata F(x)&quot;]:::prev
+  n_funzione_di_variabile_casuale[&quot;Funzione di v.c.&quot;]:::prev
   n_costante_di_nepero[&quot;Costante e&quot;]:::prev
+  n_parametro[&quot;Parametro&quot;]:::prev
+  n_funzione_di_densita[&quot;Densità&quot;]:::prev
   n_valore_atteso_e_varianza_continui[&quot;E e Var (continue)&quot;]:::prev
   n_percentile_di_distribuzione[&quot;Percentile di distribuzione&quot;]:::prev
-  n_funzione_di_densita[&quot;Densità&quot;]:::prev
-  n_parametro[&quot;Parametro&quot;]:::prev
   k_n_03_operazioni[&quot;Operazioni fra eventi · 03&quot;]:::prev
   k_n_03_somma_prodotto[&quot;Somma, prodotto, indipendenza · 03&quot;]:::prev
   n_distribuzione_normale[&quot;Normale&quot;]:::cur
@@ -6470,16 +6443,14 @@ flowchart LR
   k_n_04_vc[&quot;Variabili casuali (5)&quot;]:::cur
   k_n_04_massa[&quot;Massa e cumulata (4)&quot;]:::cur
   k_n_04_momenti[&quot;Valore atteso e varianza (4)&quot;]:::cur
-  k_n_04_binomiale[&quot;Binomiale (9)&quot;]:::cur
-  k_n_04_poisson[&quot;Poisson (9)&quot;]:::cur
-  k_n_04_densita[&quot;Densità (7)&quot;]:::cur
+  k_n_04_binomiale[&quot;Binomiale (6)&quot;]:::cur
+  k_n_04_poisson[&quot;Poisson (8)&quot;]:::cur
+  k_n_04_densita[&quot;Densità (5)&quot;]:::cur
   k_n_04_parametri[&quot;Parametri e statistiche (2)&quot;]:::cur
   k_n_04_normale[&quot;Normale (7)&quot;]:::cur
   k_n_04_tavole[&quot;Tavole e standardizzazione (6)&quot;]:::cur
-  k_n_04_approssimazioni[&quot;Approssimazioni (facoltativo) (2)&quot;]:::opt
   k_n_02_centralita --&gt; k_n_04_densita
   k_n_02_centralita --&gt; k_n_04_parametri
-  k_n_02_centralita --&gt; k_n_04_poisson
   k_n_02_classi --&gt; k_n_04_momenti
   k_n_02_notazioni --&gt; k_n_04_massa
   k_n_02_percentili --&gt; k_n_04_densita
@@ -6498,7 +6469,6 @@ flowchart LR
   k_n_04_normale --&gt; k_n_04_tavole
   k_n_04_parametri --&gt; k_n_04_normale
   k_n_04_poisson --&gt; k_n_04_normale
-  k_n_04_tavole --&gt; k_n_04_approssimazioni
   k_n_04_vc --&gt; k_n_04_massa
   classDef cur fill:#e6f0fa,stroke:#035AA6,color:#000000
   classDef prev fill:#f4f4f4,stroke:#9a9a9a,color:#555555,stroke-dasharray:4 3
@@ -6519,13 +6489,12 @@ flowchart LR
 <li><strong>Variabili casuali</strong>: <a href="#//richiamo-variabile-casuale">Variabile casuale</a>, <a href="#//richiamo-variabile-casuale">V.c. discreta</a>, <a href="#//richiamo-variabile-casuale">V.c. continua</a>, <a href="#//richiamo-variabile-casuale">Funzione</a>, <a href="#//richiamo-variabile-casuale">Funzione di v.c.</a></li>
 <li><strong>Massa e cumulata</strong>: <a href="#//modelli-discreti">Distribuzione di probabilità</a>, <a href="#//modelli-discreti-massa">Funzione di massa</a>, <a href="#//modelli-discreti-massa">Proprietà della massa</a>, <a href="#//modelli-discreti-massa">Cumulata F(x)</a></li>
 <li><strong>Valore atteso e varianza</strong>: <a href="#//modelli-discreti-valore-atteso">Valore atteso E(X)</a>, <a href="#//modelli-discreti-varianza">Varianza Var(X)</a>, <a href="#//binomiale-valore-atteso-e-varianza">Linearità di E(X)</a>, <a href="#//binomiale-valore-atteso-e-varianza">Var della somma</a></li>
-<li><strong>Binomiale</strong>: <a href="#//binomiale-struttura">Schema binomiale</a>, <a href="#//coefficiente-binomiale">Fattoriale n!</a>, <a href="#//coefficiente-binomiale">Coefficiente binomiale</a>, <a href="#//distribuzione-binomiale-probabilità">Binomiale</a>, <a href="#//distribuzione-binomiale-1">Simmetria della binomiale</a>, <a href="#//coefficiente-binomiale-triangolo-di-tartaglia">Triangolo di Tartaglia</a>, <a href="#//binomiale-valore-atteso-e-varianza">E e Var della binomiale</a>, <a href="#//singolo-esperimento-grafico">Bernoulli</a>, <a href="#//esperimenti-grafico">Forma della binomiale</a></li>
-<li><strong>Poisson</strong>: <a href="#//poisson-struttura">Tasso λ</a>, <a href="#//poisson-struttura">Processo di Poisson</a>, <a href="#//distribuzione-di-poisson-probabilità">Costante e</a>, <a href="#//distribuzione-di-poisson-probabilità">Poisson</a>, <a href="#//distribuzione-di-poisson-1">P(almeno k)</a>, <a href="#//poisson-valore-atteso-e-varianza">E e Var della Poisson</a>, <a href="#//poisson-polio">Sovradispersione</a>, <a href="#//poisson-cibo-cancerogeno">Probabilità di coda</a>, <a href="#//poisson-approssimazione">Poisson per la binomiale</a></li>
-<li><strong>Densità</strong>: <a href="#//modelli-continui">Densità</a>, <a href="#//valore-atteso-e-varianza">Integrale</a>, <a href="#//valore-atteso-e-varianza">E e Var (continue)</a>, <a href="#//valore-atteso-e-varianza">Moda di distribuzione</a>, <a href="#//valore-atteso-e-varianza">Mediana di distribuzione</a>, <a href="#//valore-atteso-e-varianza">Percentile di distribuzione</a>, <a href="#//valore-atteso-e-varianza">Media, mediana, moda</a></li>
+<li><strong>Binomiale</strong>: <a href="#//binomiale-struttura">Schema binomiale</a>, <a href="#//coefficiente-binomiale">Fattoriale n!</a>, <a href="#//coefficiente-binomiale">Coefficiente binomiale</a>, <a href="#//distribuzione-binomiale-probabilità">Binomiale</a>, <a href="#//binomiale-valore-atteso-e-varianza">E e Var della binomiale</a>, <a href="#//esperimenti-grafico">Forma della binomiale</a></li>
+<li><strong>Poisson</strong>: <a href="#//poisson-struttura">Tasso λ</a>, <a href="#//poisson-struttura">Processo di Poisson</a>, <a href="#//distribuzione-di-poisson-probabilità">Costante e</a>, <a href="#//distribuzione-di-poisson-probabilità">Poisson</a>, <a href="#//distribuzione-di-poisson-1">P(almeno k)</a>, <a href="#//poisson-valore-atteso-e-varianza">E e Var della Poisson</a>, <a href="#//poisson-cibo-cancerogeno">Probabilità di coda</a>, <a href="#//poisson-approssimazione">Poisson per la binomiale</a></li>
+<li><strong>Densità</strong>: <a href="#//modelli-continui">Densità</a>, <a href="#//valore-atteso-e-varianza">Integrale</a>, <a href="#//valore-atteso-e-varianza">E e Var (continue)</a>, <a href="#//valore-atteso-e-varianza">Mediana di distribuzione</a>, <a href="#//valore-atteso-e-varianza">Percentile di distribuzione</a></li>
 <li><strong>Parametri e statistiche</strong>: <a href="#//parametri-vs-statistiche">Parametro</a>, <a href="#//parametri-vs-statistiche">Statistica campionaria</a></li>
 <li><strong>Normale</strong>: <a href="#//distribuzione-normale-definizione">Normale</a>, <a href="#//distribuzione-normale-parametri">Parametri μ e σ</a>, <a href="#//distribuzione-normale-localizzazione">Effetto di μ</a>, <a href="#//distribuzione-normale-forma">Effetto di σ</a>, <a href="#//distribuzione-normale-standard">Normale standard</a>, <a href="#//distribuzione-standard-simmetria">Simmetria della normale</a>, <a href="#//distribuzione-standard-valori-notevoli">68-95-99%</a></li>
 <li><strong>Tavole e standardizzazione</strong>: <a href="#//distribuzione-standard-cumulativa">Cumulata Φ</a>, <a href="#//distribuzione-cumulativa-standard-applicazione">Tavole della normale</a>, <a href="#//distribuzione-standard-strategia-simmetrica">Φ(−x) = 1 − Φ(x)</a>, <a href="#//distribuzione-normale-percentili">Percentili di Z</a>, <a href="#//percentili-standard-calcolo">Calcolo dei percentili</a>, <a href="#//normale-standard-trasformazioni">Standardizzazione</a></li>
-<li><strong>Approssimazioni (facoltativo)</strong>: <a href="#//approssimazione-alla-normale-binomiale">Correzione di continuità</a>, <a href="#//approssimazione-alla-normale-binomiale">Normale per la binomiale</a></li>
 </ul>
 </div>
 </div>

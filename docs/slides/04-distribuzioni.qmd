@@ -436,21 +436,15 @@ pbinom(q = 2, size = 5, prob = 0.51) -
 
 ## [Binomiale]{.orange}: Valore atteso e varianza
 
-Sia $S$ la somma degli esiti delle singole prove, che indichiamo come variabili casuali $X_1,\ldots,X_n$. Per linearità
+Sia $S$ la somma degli esiti delle singole prove, che indichiamo come variabili casuali $X_1,\ldots,X_n$. Ogni $X_i$ vale 1 (successo) con probabilità $p$ e 0 con probabilità $q$: $E(X_i) = 1\cdot p + 0\cdot q = p$ e $var(X_i) = (1-p)^2p + (0-p)^2q = pq$.
+
+Per linearità
 
 $$E(S) = E\left(\sum_{i=1}^n X_i\right) = \sum_{i=1}^nE(X_i) = \sum_{i=1}^np=np$$
 
 Essendo le prove indipendenti, la **varianza di una somma di variabili indipendenti è la somma delle varianze**:
 
-$$var(S) = var\left(\sum_{i=1}^n X_i\right) = \sum_{i=1}^nvar(X_i) =^*  \sum_{i=1}^npq=npq$$
-<br>
-
-
-::: {.text-right}
-
-*= Se interessa, dimostrarlo per esercizio.
-
-:::
+$$var(S) = var\left(\sum_{i=1}^n X_i\right) = \sum_{i=1}^nvar(X_i) = \sum_{i=1}^npq=npq$$
 
 ## [10 esperimenti]{.orange}: grafico
 
