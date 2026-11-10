@@ -238,21 +238,27 @@ In altre parole, è ciò che si osserva, misura o registra in una ricerca statis
 
 ## Una tabella [disordinata]{.orange}
 
-Quattro pazienti, registrati in un foglio di calcolo come capita spesso:
+Quattro pazienti, con la pressione misurata in due giorni, registrati in un
+foglio di calcolo come capita spesso:
 
-| Paziente | M | F | Età | Pressione (mmHg) |
-|:---------|:-:|:-:|----:|:----------------:|
-| P01      |   | X |  54 | 130/85           |
-| P02      | X |   |  61 | 145/95           |
-| P03      |   | X |  47 | 120/80           |
-| P04      | X |   |  70 | 150/90           |
-| **Media**|   |   | **58** |               |
+| Paziente | Sesso | Pressione_g1 | Pressione_g2 |
+|:---------|:-----:|:------------:|:------------:|
+| P01      | F     | 130/85       | 125/80       |
+| P02      | M     | 145/95       | 140/90       |
+| P03      | F     | 120/80       | 120/75       |
+| P04      | M     | 150/90       | 155/95       |
+
+::: {.small}
+
+Pressione in mmHg; `_g1` e `_g2`: primo e secondo giorno di rilevazione.
+
+:::
 
 <br>
 
-- Quante sono le **[unità statistiche]{.orange}**?
+- Quante sono le righe? E quante le misurazioni della pressione?
+- Qual è l'**[unità statistica]{.orange}**?
 - Quante e quali sono le **[variabili]{.orange}**?
-- Che cosa non va in questa tabella?
 
 ## Dati [tidy]{.orange} (ordinati)
 
@@ -267,9 +273,11 @@ Una tabella è _tidy_ quando rispetta tre regole:
 
 La tabella di prima le viola tutte e tre:
 
-1. il **sesso**, una sola variabile, occupa due colonne (M e F);
-2. la riga **«Media»** non è un paziente, ma un riassunto calcolato sui
-   pazienti;
+1. la **pressione**, una sola variabile, occupa due colonne, e il
+   **giorno** della rilevazione, che è un'altra variabile, sta nascosto
+   nel loro nome (`_g1`, `_g2`);
+2. ogni riga contiene **due misurazioni**, cioè due osservazioni, una per
+   giorno;
 3. **«130/85»** sono due valori in una cella: pressione sistolica e
    diastolica.
 
@@ -286,12 +294,16 @@ Wickham H. (2014). Tidy Data. _Journal of Statistical Software_, 59(10).
 
 ## La stessa tabella, [tidy]{.orange}
 
-| Paziente | Sesso | Età (anni) | PAS (mmHg) | PAD (mmHg) |
-|:---------|:-----:|-----------:|-----------:|-----------:|
-| P01      | F     |         54 |        130 |         85 |
-| P02      | M     |         61 |        145 |         95 |
-| P03      | F     |         47 |        120 |         80 |
-| P04      | M     |         70 |        150 |         90 |
+| Paziente | Sesso | Giorno | PAS (mmHg) | PAD (mmHg) |
+|:---------|:-----:|:------:|-----------:|-----------:|
+| P01      | F     | 1      |        130 |         85 |
+| P01      | F     | 2      |        125 |         80 |
+| P02      | M     | 1      |        145 |         95 |
+| P02      | M     | 2      |        140 |         90 |
+| P03      | F     | 1      |        120 |         80 |
+| P03      | F     | 2      |        120 |         75 |
+| P04      | M     | 1      |        150 |         90 |
+| P04      | M     | 2      |        155 |         95 |
 
 ::: {.small}
 
@@ -299,12 +311,10 @@ PAS e PAD: pressione arteriosa sistolica e diastolica.
 
 :::
 
-<br>
-
-- **4 righe**: una per paziente, cioè una per unità statistica.
-- **5 colonne**: l'identificativo e 4 variabili (sesso, età, PAS, PAD),
-  ciascuna con un solo tipo di dato.
-- La **media** dell'età non si perde: si calcola dai dati quando serve.
+- **8 righe**, una per misurazione: qui l'**unità statistica** è la
+  **misurazione** (un paziente in un giorno), non il paziente.
+- Il **sesso** si ripete: è una caratteristica del paziente, uguale in
+  tutte le sue misurazioni.
 
 ## Un esempio [reale]{.orange}
 
