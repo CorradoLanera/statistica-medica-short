@@ -562,7 +562,7 @@ dove abbiamo indicato con $B$ l'evento di avere la TB, e con $A$ quello di avere
 
 ## [Rischio relativo]{.orange}: attenzione al gonfiaggio
 
-Il RR dice **quante volte** è più probabile l'evento, non **quanti** casi in più ci sono. Va letto insieme al rischio di partenza, $P(B \mid \bar{A})$.
+Il RR dice **quante volte** è più probabile l'evento, non **quanti** casi in più ci sono. Va letto insieme ai due rischi, $P(B \mid A)$ e $P(B \mid \bar{A})$.
 
 - **Esempio della TB**: $RR = 100$, eppure fra i positivi allo skin test solo **1 su 100** ha la TB ($P(TB \mid SKT^+) = 0.01$); gli altri 99 no.
 

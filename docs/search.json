@@ -1491,7 +1491,7 @@
     "href": "slides/03-probabilita.html#rischio-relativo-attenzione-al-gonfiaggio",
     "title": "Statistica Medica",
     "section": "Rischio relativo: attenzione al gonfiaggio",
-    "text": "Rischio relativo: attenzione al gonfiaggio\nIl RR dice quante volte è più probabile l’evento, non quanti casi in più ci sono. Va letto insieme al rischio di partenza, P(B∣A‾)P(B \\mid \\bar{A}).\n\nEsempio della TB: RR=100RR = 100, eppure fra i positivi allo skin test solo 1 su 100 ha la TB (P(TB∣SKT+)=0.01P(TB \\mid SKT^+) = 0.01); gli altri 99 no.\nIl caso tipico degli articoli: il rischio passa da 1 su 10000 a 2 su 10000.\nRR=2/100001/10000=2RR = \\frac{2/10000}{1/10000} = 2\n«Il rischio raddoppia!», ma è 1 caso in più ogni 10000 persone."
+    "text": "Rischio relativo: attenzione al gonfiaggio\nIl RR dice quante volte è più probabile l’evento, non quanti casi in più ci sono. Va letto insieme ai due rischi, P(B∣A)P(B \\mid A) e P(B∣A‾)P(B \\mid \\bar{A}).\n\nEsempio della TB: RR=100RR = 100, eppure fra i positivi allo skin test solo 1 su 100 ha la TB (P(TB∣SKT+)=0.01P(TB \\mid SKT^+) = 0.01); gli altri 99 no.\nIl caso tipico degli articoli: il rischio passa da 1 su 10000 a 2 su 10000.\nRR=2/100001/10000=2RR = \\frac{2/10000}{1/10000} = 2\n«Il rischio raddoppia!», ma è 1 caso in più ogni 10000 persone."
   },
   {
     "objectID": "slides/03-probabilita.html#rischio-relativo-esempio-problema",
