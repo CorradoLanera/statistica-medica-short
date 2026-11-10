@@ -5438,7 +5438,7 @@ flowchart LR
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_c3f5a599" minutes="15" seconds="0" warn-when="3" update-every="1" play-sound="true" tabindex="0" style="bottom:20%;left:70%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_7d7f4681" minutes="15" seconds="0" warn-when="3" update-every="1" play-sound="true" tabindex="0" style="bottom:20%;left:70%;"></countdown-timer>
 </div>
 </div>
 </section>
@@ -5490,7 +5490,7 @@ flowchart LR
 <h2><span class="orange">Probabilità totali</span>: esempio problema</h2>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_be6d4d5c" minutes="3" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:10%;left:70%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_f50ad35f" minutes="3" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:10%;left:70%;"></countdown-timer>
 </div>
 </div>
 <div class="panel-tabset">
@@ -5627,7 +5627,7 @@ flowchart LR
 <h2><span class="orange">Rischio relativo</span>: esempio problema</h2>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_397c32c3" minutes="3" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:70%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_e9584132" minutes="3" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:70%;"></countdown-timer>
 </div>
 </div>
 <div class="panel-tabset">
@@ -5870,11 +5870,11 @@ flowchart LR
 <h2><span class="orange">Teorema di Bayes</span>: esempio</h2>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_f5bf3fab" minutes="5" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:70%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_30ba2338" minutes="5" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:70%;"></countdown-timer>
 </div>
 </div>
 <div class="panel-tabset">
-<ul id="tabset-6" class="panel-tabset-tabby"><li><a data-tabby-default href="#tabset-6-1">Problema</a></li><li><a href="#tabset-6-2">Soluzione PV+</a></li><li><a href="#tabset-6-3">Soluzione PV-</a></li></ul>
+<ul id="tabset-6" class="panel-tabset-tabby"><li><a data-tabby-default href="#tabset-6-1">Problema</a></li><li><a href="#tabset-6-2">Soluzione PV+</a></li><li><a href="#tabset-6-3">Soluzione PV-</a></li><li><a href="#tabset-6-4">Nota sui conteggi</a></li></ul>
 <div class="tab-content">
 <div id="tabset-6-1">
 <p><strong>Si ipotizzi</strong> che:</p>
@@ -5905,23 +5905,13 @@ flowchart LR
 <p>Dal teorema di Bayes:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>P</mi><msup><mi>V</mi><mo>−</mo></msup></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mfrac><mrow><mi>S</mi><mi>P</mi><mi>E</mi><mi>C</mi><mo>⋅</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>p</mi><mi>r</mi><mi>e</mi><mi>v</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mi>S</mi><mi>P</mi><mi>E</mi><mi>C</mi><mo>⋅</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>p</mi><mi>r</mi><mi>e</mi><mi>v</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>S</mi><mi>E</mi><mi>N</mi><mi>S</mi><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><mi>p</mi><mi>r</mi><mi>e</mi><mi>v</mi></mrow></mfrac></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mn>0.77</mn><mo stretchy="false" form="postfix">)</mo><mn>0.8</mn></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mn>0.77</mn><mo stretchy="false" form="postfix">)</mo><mn>0.8</mn><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>0.16</mn><mo stretchy="false" form="postfix">)</mo><mn>0.2</mn></mrow></mfrac></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mfrac><mn>0.616</mn><mn>0.648</mn></mfrac></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>0.95</mn></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{split}PV^-&amp; = \frac{SPEC\cdot(1 - prev)}{SPEC\cdot(1 - prev) + (1- SENS)\cdot prev}\\&amp; = \frac{(0.77)0.8}{(0.77)0.8 + (0.16)0.2}\\&amp; = \frac{0.616}{0.648}\\&amp; = 0.95\end{split}</annotation></semantics></math></p>
 </div>
+<div id="tabset-6-4">
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mi>P</mi><mi>/</mi><mo stretchy="false" form="prefix">(</mo><mi>V</mi><mi>P</mi><mo>+</mo><mi>F</mi><mi>P</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">VP/(VP+FP)</annotation></semantics></math> (veri positivi su tutti i positivi) calcolato su una tabella dà il VPP giusto <strong>solo se</strong> la prevalenza della tabella è quella della popolazione su cui usate il test.</p>
+<p>Per esempio, provando la macchina su 100 ipertesi e 100 normotesi (prevalenza 0.5 nella tabella): <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mi>P</mi><mo>=</mo><mn>84</mn></mrow><annotation encoding="application/x-tex">VP = 84</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mi>P</mi><mo>=</mo><mn>23</mn></mrow><annotation encoding="application/x-tex">FP = 23</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mi>P</mi><mi>/</mi><mo stretchy="false" form="prefix">(</mo><mi>V</mi><mi>P</mi><mo>+</mo><mi>F</mi><mi>P</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>84</mn><mi>/</mi><mn>107</mn><mo>=</mo><mn>0.79</mn></mrow><annotation encoding="application/x-tex">VP/(VP+FP) = 84/107 = 0.79</annotation></semantics></math>. Nella popolazione, con prevalenza 0.2, il <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msup><mi>V</mi><mo>+</mo></msup></mrow><annotation encoding="application/x-tex">PV^+</annotation></semantics></math> è 0.48.</p>
+<p>Con Bayes la prevalenza la scegliete voi.</p>
 </div>
 </div>
-</section>
-<section id="approfondimento" class="slide level2">
-<h2>Approfondimento</h2>
-<p>La formula “tradizionale” frequentista per VPP (analoga VPN)</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mi>P</mi><mi>P</mi><mo>=</mo><mfrac><mrow><mi>V</mi><mi>P</mi></mrow><mrow><mi>V</mi><mi>P</mi><mo>+</mo><mi>F</mi><mi>P</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">VPP = \frac{VP}{VP + FP}</annotation></semantics></math></p>
-<p>Dove <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mi>P</mi></mrow><annotation encoding="application/x-tex">VP</annotation></semantics></math> è il numero di <strong>V</strong>eri <strong>P</strong>ositivi (numero di volte che il test ha dato esito positivo correttamente) e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mi>P</mi></mrow><annotation encoding="application/x-tex">FP</annotation></semantics></math> il numero di <strong>F</strong>alsi <strong>P</strong>ositivi (numero di volte che il test ha dato esito positivo erroneamente). Questo, dunque, ipotizzando di avere il dato certo del numero di veri e falsi positivi su tutta la nostra popolazione.</p>
-<p>Noi usiamo quella bayesiana, perché:</p>
-<ul>
-<li><p>esprime e mostra bene il concetto di probabilità condizionata</p></li>
-<li><p>opera un cambio di prospettiva: dal controllo dell’incertezza su una <em>predizione</em> sul futuro, rispetto a una descrizione statica definita di dati già osservati.</p></li>
-</ul>
-<p><strong>SE</strong> usati bene, in un certo senso, numericamente, sono equivalenti; per approfondire: https://rpubs.com/CorradoLanera/vpp-freq-bayes-ita</p>
-<blockquote>
-<p>NOTA: se usati male i risultati sono sia diversi che fuorvianti. All’esame suggerisco di non prendere questa <em>scorciatoia</em>. (per quanto SE usata bene, porti comunque al risultato numericamente corretto)</p>
-</blockquote>
+</div>
 </section>
 <section id="sondaggio-1" class="slide level2 inverse center" data-background-color="#03A696">
 <h2><span class="orange">Sondaggio</span></h2>
@@ -5942,7 +5932,7 @@ flowchart LR
 <h2><span class="orange">Bayes generalizzato</span>: esempio</h2>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_18032fba" minutes="3" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:0%;left:70%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_865de98c" minutes="3" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:0%;left:70%;"></countdown-timer>
 </div>
 </div>
 <div class="panel-tabset">
@@ -6127,7 +6117,7 @@ flowchart TB
 <ul>
 <li><p><a href="https://bit.ly/statmed-cl-rstudio"><strong>Posit Cloud</strong></a>: <a href="https://bit.ly/statmed-cl-rstudio">https://bit.ly/statmed-cl-rstudio</a> gratis per voi per esplorare RStudio, le sue funzionalità, e allenarvi con R (link di iscrizione valido fino alla fine del corso).</p></li>
 <li><p><em>Fundamentals of Biostatistics</em> (8ª ed., Cengage, 2016) di <strong>Bernard Rosner</strong>, suggerito il capitolo 3.</p></li>
-<li><p><a href="https://rpubs.com/CorradoLanera/vpp-freq-bayes-ita">Dimostrazione della Coerenza Bayesiana e Frequentista nella definizione del Valore Predittivo Positivo di un test</a> di <a href="https://www.corradolanera.it/"><strong>Corrado Lanera</strong></a></p></li>
+<li><p><a href="https://rpubs.com/CorradoLanera/vpp-freq-bayes-ita">VPP: formula frequentista e bayesiana a confronto</a> di <a href="https://www.corradolanera.it/"><strong>Corrado Lanera</strong></a></p></li>
 </ul>
 </section>
 <section id="section" class="slide level2 inverse text-center center" data-background-color="#03A696">

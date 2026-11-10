@@ -832,25 +832,16 @@ Dal teorema di Bayes:
 
 $$\begin{split}PV^-& = \frac{SPEC\cdot(1 - prev)}{SPEC\cdot(1 - prev) + (1- SENS)\cdot prev}\\& = \frac{(0.77)0.8}{(0.77)0.8 + (0.16)0.2}\\& = \frac{0.616}{0.648}\\& = 0.95\end{split}$$
 
+
+### Nota sui conteggi
+
+$VP/(VP+FP)$ (veri positivi su tutti i positivi) calcolato su una tabella dà il VPP giusto **solo se** la prevalenza della tabella è quella della popolazione su cui usate il test.
+
+Per esempio, provando la macchina su 100 ipertesi e 100 normotesi (prevalenza 0.5 nella tabella): $VP = 84$, $FP = 23$, $VP/(VP+FP) = 84/107 = 0.79$. Nella popolazione, con prevalenza 0.2, il $PV^+$ è 0.48.
+
+Con Bayes la prevalenza la scegliete voi.
+
 :::
-
-## Approfondimento
-
-La formula "tradizionale" frequentista per VPP (analoga VPN)
-
-$$VPP = \frac{VP}{VP + FP}$$
-
-Dove $VP$ è il numero di **V**eri **P**ositivi (numero di volte che il test ha dato esito positivo correttamente) e $FP$ il numero di **F**alsi **P**ositivi (numero di volte che il test ha dato esito positivo erroneamente). Questo, dunque, ipotizzando di avere il dato certo del numero di veri e falsi positivi su tutta la nostra popolazione. 
-
-Noi usiamo quella bayesiana, perché:
-
-- esprime e mostra  bene il concetto di probabilità condizionata
-
-- opera un cambio di prospettiva: dal controllo dell'incertezza su una _predizione_ sul futuro, rispetto a una descrizione statica definita di dati già osservati.
-
-**SE** usati bene, in un certo senso, numericamente, sono equivalenti; per approfondire: https://rpubs.com/CorradoLanera/vpp-freq-bayes-ita
-
-> NOTA: se usati male i risultati sono sia diversi che fuorvianti. All'esame suggerisco di non prendere questa _scorciatoia_. (per quanto SE usata bene, porti comunque al risultato numericamente corretto)
 
 ## [Sondaggio]{.orange} {.inverse .center background-color="#03A696"}
 
@@ -952,7 +943,7 @@ $$P(M_3|T) = \frac{0.9(0.005)}{0.001(0.98)+0.9(0.015)+0.9(0.005)}=0.237$$
 
 - _Fundamentals of Biostatistics_ (8ª ed., Cengage, 2016) di **Bernard Rosner**, suggerito il capitolo 3.
 
-- [Dimostrazione della Coerenza Bayesiana e Frequentista nella definizione del Valore Predittivo Positivo di un test](https://rpubs.com/CorradoLanera/vpp-freq-bayes-ita) di [**Corrado Lanera**](https://www.corradolanera.it/)
+- [VPP: formula frequentista e bayesiana a confronto](https://rpubs.com/CorradoLanera/vpp-freq-bayes-ita) di [**Corrado Lanera**](https://www.corradolanera.it/)
 
 ## {.inverse .text-center .center background-color="#03A696"}
 
