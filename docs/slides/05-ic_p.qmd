@@ -420,11 +420,9 @@ percentile di una distribuzione $N(0,1)$.
 
 $\alpha$ è la probabilità, prima di estrarre il campione, che l'intervallo non contenga $\mu$.
 
-$(1-\alpha)$ | $z_{1-\frac{\alpha}{2}}$ 
-------------:|:-----------------------
-        0.90 |                    1.645
-        0.95 |                     1.96 
-        0.99 |                    2.576
+$(1-\alpha)$              | 0.90  | 0.95 | 0.99
+:-------------------------|------:|-----:|------:
+$z_{1-\frac{\alpha}{2}}$  | 1.645 | 1.96 | 2.576
 
 
 ### Trigliceridi
@@ -834,7 +832,7 @@ quindi $c_1 = z_{\frac{\alpha}{2}} = -z_{1-\frac{\alpha}{2}}$ e $c_2 = z_{1-\fra
 
 ### Graficamente
 
-```{r echo=FALSE, fig.align = 'center', out.width="100%"}
+```{r echo=FALSE, fig.align = 'center', out.width="75%"}
 knitr::include_graphics("img/img4.png")
 ```
 
@@ -883,7 +881,7 @@ altrimenti non si rifiuta.
 
 ### Graficamente
 
-```{r echo=FALSE, fig.align = 'center', out.width="100%"}
+```{r echo=FALSE, fig.align = 'center', out.width="75%"}
 knitr::include_graphics("img/img6.png")
 ```
 
