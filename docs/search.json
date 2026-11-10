@@ -154,7 +154,7 @@
     "href": "slides/04-distribuzioni.html#panoramica",
     "title": "Statistica Medica",
     "section": "Panoramica",
-    "text": "Panoramica\nModello probabilistico per variabili discrete: massa, valore atteso e varianza\nDistribuzione binomiale (ovvero per variabili con due soli possibili esiti)\nDistribuzione di Poisson (ovvero per variabili conteggio) e approssimazione della binomiale\nModello probabilistico per variabili continue: densità\nDistribuzione normale, localizzazione, forma, simmetria, percentili, trasformazioni\nApprossimazioni alla Normale"
+    "text": "Panoramica\nModello probabilistico per variabili discrete: massa, valore atteso e varianza\nDistribuzione binomiale (ovvero per variabili con due soli possibili esiti)\nDistribuzione di Poisson (ovvero per variabili conteggio) e approssimazione della binomiale\nModello probabilistico per variabili continue: densità\nDistribuzione normale, localizzazione, forma, simmetria, percentili, trasformazioni"
   },
   {
     "objectID": "slides/04-distribuzioni.html#modelli-probabilistici-discreti",
