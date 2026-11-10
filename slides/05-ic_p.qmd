@@ -132,6 +132,8 @@ Dato un insieme di osservazioni definito **campione**, si vuole derivare una con
 
 - La **[popolazione target]{.orange}** è il gruppo di soggetti, **da cui è estratto** il campione, che si intende studiare e che **[si ipotizza essere infinita]{.orange}**
 
+{{< include _mappe/05-1.qmd >}}
+
 ## Stime **[puntuali]{.orange}** e **[teorema del limite centrale]{.orange}** {.text-center .inverse .center background-color="#03A696"}
 
 - Stimatore puntuale della **media**
@@ -184,6 +186,8 @@ $$\bar{X} \sim N \left( \mu, \frac{\sigma^2}{n} \right)$$
 Per me: [Stimatore della media](https://app.wooclap.com/events/STATMEDTLC/0)
 
 Per voi: <img src="img/bit.ly_statmed-sondaggio-tlc.png" width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-tlc](https://bit.ly/statmed-sondaggio-tlc)
+
+{{< include _mappe/05-2.qmd >}}
 
 ## **[Precisione]{.orange}** delle stime {.text-center .inverse .center background-color="#03A696"}
 
@@ -271,6 +275,8 @@ $$\left ( \bar{X} - 1.96 \frac{\sigma}{\sqrt{n}}; \bar{X} + 1.96
 Per me: [Intervalli di Confidenza](https://app.wooclap.com/events/STATMEDICP/0)
 
 Per voi: <img src="img/bit.ly_statmed-sondaggio-icp.png" width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-icp](https://bit.ly/statmed-sondaggio-icp)
+
+{{< include _mappe/05-3.qmd >}}
 
 ## [Break]{.orange} {.text-center .center .inverse background-color="#03A696"}
 
@@ -493,6 +499,8 @@ In alcuni casi e con opportuni accorgimenti **[può essere controllata]{.orange}
 - scelta del **timing di misurazione** ottimale per ridurre la variabilità, per es. giornaliera
 - utilizzo di tecniche di **mediazione**, ottenendo varie misurazioni ripetute sulla stessa variabile e utilizzando la media di queste anziché una singola osservazione nel calcolo dell'intervallo
 
+{{< include _mappe/05-4.qmd >}}
+
 ## Distribuzione **[t di Student]{.orange}** {.text-center .inverse .center background-color="#03A696"}
 
 - **t di Student**
@@ -630,6 +638,8 @@ $$\left(207.2 - 1.96 \frac{30}{\sqrt{100}}; 207.2+1.96 \frac{30}{\sqrt{100}}\rig
 Per me: [Distribuzione t-Student](https://app.wooclap.com/events/STATMEDTSTUDENT/0)
 
 Per voi: <img src="img/bit.ly_statmed-sondaggio-tstudent.png" width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-tstudent](https://bit.ly/statmed-sondaggio-tstudent)
+
+{{< include _mappe/05-5.qmd >}}
 
 ## **[Test d'ipotesi]{.orange}** {.text-center .inverse .center background-color="#03A696"}
 
@@ -1034,6 +1044,10 @@ che contiene il valore $\mu_0=175$ usato precedentemente nei test di ipotesi, pe
 Per me: [p-value](https://app.wooclap.com/events/STATMEDPVALUE/0)
 
 Per voi: <img src="img/bit.ly_statmed-sondaggio-pvalue.png" width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-pvalue](https://bit.ly/statmed-sondaggio-pvalue)
+
+{{< include _mappe/05-6.qmd >}}
+
+{{< include _mappe/05-deck.qmd >}}
 
 ## [Vediamolo...<br>...sul _vostro_ cloud!]{.orange} {.center .text-center .inverse background-color="#03A696"}
 

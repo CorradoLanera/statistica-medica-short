@@ -1,0 +1,57 @@
+## Mappa: R e RStudio in breve {.mappa}
+
+::: {.panel-tabset}
+
+### Mappa
+
+```{mermaid}
+%%| echo: false
+%%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
+flowchart LR
+  n_r_motore_di_calcolo["R"]:::opt
+  n_analisi_grafici_report["Analisi, grafici, report"]:::opt
+  n_codice_r["Codice R"]:::opt
+  n_pacchetto_r["Pacchetto"]:::opt
+  n_rstudio["RStudio"]:::opt
+  n_editor_rstudio["Editor"]:::opt
+  n_console_rstudio["Console"]:::opt
+  n_viewer_rstudio["Viewer"]:::opt
+  n_navigatore_file_rstudio["Navigatore file"]:::opt
+  n_analisi_grafici_report --> n_viewer_rstudio
+  n_codice_r --> n_editor_rstudio
+  n_codice_r --> n_pacchetto_r
+  n_editor_rstudio --> n_console_rstudio
+  n_r_motore_di_calcolo --> n_analisi_grafici_report
+  n_r_motore_di_calcolo --> n_codice_r
+  n_r_motore_di_calcolo --> n_rstudio
+  n_rstudio --> n_editor_rstudio
+  n_rstudio --> n_navigatore_file_rstudio
+  n_rstudio --> n_viewer_rstudio
+  classDef cur fill:#e6f0fa,stroke:#035AA6,color:#000000
+  classDef prev fill:#f4f4f4,stroke:#9a9a9a,color:#555555,stroke-dasharray:4 3
+  classDef opt fill:#ffffff,stroke:#035AA6,color:#555555,stroke-dasharray:2 2
+```
+
+::: {.mappa-legenda}
+
+Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle sezioni o dei deck precedenti (con il numero del deck).
+
+:::
+
+### Indice
+
+::: {.mappa-indice}
+
+- [R](#/panoramica) (facoltativo)
+- [Analisi, grafici, report](#/panoramica) (facoltativo)
+- [Codice R](#/panoramica) (facoltativo)
+- [Pacchetto](#/panoramica) (facoltativo)
+- [RStudio](#/panoramica) (facoltativo)
+- [Editor](#/panoramica) (facoltativo)
+- [Console](#/panoramica) (facoltativo)
+- [Viewer](#/panoramica) (facoltativo)
+- [Navigatore file](#/panoramica) (facoltativo)
+
+:::
+
+:::

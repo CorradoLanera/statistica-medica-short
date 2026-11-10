@@ -1,0 +1,67 @@
+## Mappa: Definizioni e notazioni {.mappa}
+
+::: {.panel-tabset}
+
+### Mappa
+
+```{mermaid}
+%%| echo: false
+%%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
+flowchart LR
+  k_n_02_unita["Unità, variabili, tabelle · 02"]:::prev
+  n_esperimento_casuale["Esperimento casuale"]:::cur
+  n_spazio_campionario["Spazio degli eventi Ω"]:::cur
+  n_evento["Evento"]:::cur
+  n_probabilita["Probabilità"]:::cur
+  n_limiti_della_probabilita["0 ≤ P(E) ≤ 1"]:::cur
+  n_additivita_eventi_incompatibili["Somma per incompatibili"]:::cur
+  n_notazione_evento_graffe["Notazione {…}"]:::cur
+  n_unione_di_eventi["Unione (∪)"]:::cur
+  n_diagramma_di_venn["Diagramma di Venn"]:::cur
+  n_intersezione_di_eventi["Intersezione (∩)"]:::cur
+  n_evento_complementare["Complementare"]:::cur
+  n_eventi_incompatibili["Eventi incompatibili"]:::cur
+  k_n_02_unita --> n_probabilita
+  n_esperimento_casuale --> n_spazio_campionario
+  n_eventi_incompatibili --> n_additivita_eventi_incompatibili
+  n_evento --> n_diagramma_di_venn
+  n_evento --> n_eventi_incompatibili
+  n_evento --> n_notazione_evento_graffe
+  n_evento --> n_probabilita
+  n_notazione_evento_graffe --> n_intersezione_di_eventi
+  n_notazione_evento_graffe --> n_unione_di_eventi
+  n_probabilita --> n_additivita_eventi_incompatibili
+  n_probabilita --> n_evento_complementare
+  n_probabilita --> n_limiti_della_probabilita
+  n_spazio_campionario --> n_evento
+  classDef cur fill:#e6f0fa,stroke:#035AA6,color:#000000
+  classDef prev fill:#f4f4f4,stroke:#9a9a9a,color:#555555,stroke-dasharray:4 3
+  classDef opt fill:#ffffff,stroke:#035AA6,color:#555555,stroke-dasharray:2 2
+```
+
+::: {.mappa-legenda}
+
+Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle sezioni o dei deck precedenti (con il numero del deck).
+
+:::
+
+### Indice
+
+::: {.mappa-indice}
+
+- [Esperimento casuale](#/definizione-evento-e-probabilità)
+- [Spazio degli eventi Ω](#/definizione-evento-e-probabilità)
+- [Evento](#/definizione-evento-e-probabilità)
+- [Probabilità](#/definizione-evento-e-probabilità)
+- [0 ≤ P(E) ≤ 1](#/proprietà-eventi-mutuamente-esclusivi)
+- [Somma per incompatibili](#/proprietà-eventi-mutuamente-esclusivi)
+- [Notazione {…}](#/notazione-unione)
+- [Unione (∪)](#/notazione-unione)
+- [Diagramma di Venn](#/eventi-e-spazio-omega)
+- [Intersezione (∩)](#/notazione-intersezione)
+- [Complementare](#/notazione-complemento)
+- [Eventi incompatibili](#/proprietà-eventi-mutuamente-esclusivi-1)
+
+:::
+
+:::

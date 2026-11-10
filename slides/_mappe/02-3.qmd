@@ -1,0 +1,84 @@
+## Mappa: Rappresentazione {.mappa}
+
+::: {.panel-tabset}
+
+### Mappa
+
+```{mermaid}
+%%| echo: false
+%%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
+flowchart LR
+  n_variabile_continua["Continua"]:::prev
+  n_variabile_discreta["Discreta"]:::prev
+  n_tipo_di_variabile["Tipo di variabile"]:::prev
+  n_mediana["Mediana"]:::prev
+  n_frequenza_assoluta["Frequenza"]:::prev
+  n_accorpamento_in_classi["Classi"]:::prev
+  n_quartile["Quartile"]:::prev
+  n_istogramma["Istogramma"]:::cur
+  n_densita_di_frequenza["Densità di frequenza"]:::cur
+  n_boxplot["Box-plot"]:::cur
+  n_distanza_interquartile["Distanza interquartile"]:::cur
+  n_baffi_del_boxplot["Baffi"]:::cur
+  n_outlier["Outlier"]:::cur
+  n_outlier_estremo["Outlier estremo"]:::cur
+  n_grafico_a_barre["Grafico a barre"]:::cur
+  n_istogramma_vs_grafico_a_barre["Istogramma ≠ barre"]:::cur
+  n_base_delle_barre_da_zero["Barre da zero"]:::cur
+  n_scelta_del_grafico["Scelta del grafico"]:::cur
+  n_distorsioni_grafiche["Distorsioni grafiche"]:::cur
+  n_boxplot_per_confronto_di_distribuzioni["Box-plot a confronto"]:::cur
+  n_accorpamento_in_classi --> n_istogramma
+  n_baffi_del_boxplot --> n_outlier
+  n_base_delle_barre_da_zero --> n_distorsioni_grafiche
+  n_boxplot --> n_boxplot_per_confronto_di_distribuzioni
+  n_distanza_interquartile --> n_baffi_del_boxplot
+  n_distanza_interquartile --> n_boxplot
+  n_frequenza_assoluta --> n_grafico_a_barre
+  n_frequenza_assoluta --> n_istogramma
+  n_grafico_a_barre --> n_base_delle_barre_da_zero
+  n_grafico_a_barre --> n_boxplot_per_confronto_di_distribuzioni
+  n_grafico_a_barre --> n_istogramma_vs_grafico_a_barre
+  n_grafico_a_barre --> n_scelta_del_grafico
+  n_istogramma --> n_densita_di_frequenza
+  n_istogramma --> n_istogramma_vs_grafico_a_barre
+  n_istogramma --> n_scelta_del_grafico
+  n_mediana --> n_boxplot
+  n_outlier --> n_boxplot_per_confronto_di_distribuzioni
+  n_outlier --> n_outlier_estremo
+  n_quartile --> n_distanza_interquartile
+  n_tipo_di_variabile --> n_scelta_del_grafico
+  n_variabile_continua --> n_istogramma
+  n_variabile_discreta --> n_grafico_a_barre
+  classDef cur fill:#e6f0fa,stroke:#035AA6,color:#000000
+  classDef prev fill:#f4f4f4,stroke:#9a9a9a,color:#555555,stroke-dasharray:4 3
+  classDef opt fill:#ffffff,stroke:#035AA6,color:#555555,stroke-dasharray:2 2
+```
+
+::: {.mappa-legenda}
+
+Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle sezioni o dei deck precedenti (con il numero del deck).
+
+:::
+
+### Indice
+
+::: {.mappa-indice}
+
+- [Istogramma](#/istogramma)
+- [Densità di frequenza](#/dati-continui-istogramma)
+- [Box-plot](#/boxplot-general)
+- [Distanza interquartile](#/dati-continui-box-plot)
+- [Baffi](#/dati-continui-box-plot)
+- [Outlier](#/dati-continui-box-plot)
+- [Outlier estremo](#/dati-continui-box-plot)
+- [Grafico a barre](#/dati-categorici-barre)
+- [Istogramma ≠ barre](#/dati-categorici-barre)
+- [Barre da zero](#/dati-categorici-barre)
+- [Scelta del grafico](#/dati-categorici-barre)
+- [Distorsioni grafiche](#/dati-categorici-barre)
+- [Box-plot a confronto](#/prima)
+
+:::
+
+:::

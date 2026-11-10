@@ -18,3 +18,19 @@ listing:
       title: "Tavole statistiche (Rosner)"
       subtitle: "Appendice di Fundamentals of Biostatistics (PDF, in inglese)"
 ---
+
+::: {#listing-listing}
+:::
+
+## Mappa del corso
+
+Ogni riquadro è un blocco di concetti che si usano insieme; ogni freccia va
+da un blocco a quelli che lo usano. In tratteggio le parti facoltative (R e
+le approssimazioni alla normale). In fondo a ogni sezione delle slide c'è la
+mappa dei suoi concetti, e in fondo a ogni deck quella dei suoi blocchi.
+
+::: {.column-page}
+
+{{< include _mappe/corso.qmd >}}
+
+:::

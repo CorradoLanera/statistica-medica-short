@@ -374,6 +374,8 @@ Per me: [Tipi di variabile](https://app.wooclap.com/events/STATMEDTYPE/0)
 
 Per voi: <img src="img/bit.ly_statmed-sondaggio-tipi-variabili.png" width="300px" style="vertical-align: middle"/>  [bit.ly/statmed-sondaggio-tipi-variabili](https://bit.ly/statmed-sondaggio-tipi-variabili)
 
+{{< include _mappe/02-1.qmd >}}
+
 ## **[Localizzazione]{.orange} (dati continui)** {.text-center .inverse .center background-color="#03A696"}
 
 **Misure di [centralità]{.orange}**
@@ -982,6 +984,8 @@ sum(
 ) / (n - 1)
 ```
 
+{{< include _mappe/02-2.qmd >}}
+
 ## **[Rappresentazione]{.orange}** {.text-center .inverse .center background-color="#03A696"}
 
 #### **Dati [continui]{.orange}**
@@ -1194,6 +1198,10 @@ barre.
 Per me: [Grafici](https://app.wooclap.com/events/STATMEDGRAFICI/0)
 
 Per voi: <img src="img/bit.ly_statmed-sondaggio-grafici.png" width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-grafici](https://bit.ly/statmed-sondaggio-grafici)
+
+{{< include _mappe/02-3.qmd >}}
+
+{{< include _mappe/02-deck.qmd >}}
 
 ## Risorse utili {.inverse background-color="#03A696"}
 

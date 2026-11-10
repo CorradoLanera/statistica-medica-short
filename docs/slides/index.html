@@ -105,6 +105,10 @@ ul.task-list li input[type="checkbox"] {
     }
   })
   </script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -137,6 +141,7 @@ window.Quarto = {
 </script>
 
 <meta name="twitter:title" content="Slide del corso – Statistica Medica — Corrado Lanera">
+<meta name="twitter:description" content="Lauree per le Professioni Sanitarie, Università di Padova">
 <meta name="twitter:image" content="https://CorradoLanera.github.io/statistica-medica-short/img/logo-statmed.png">
 <meta name="twitter:creator" content="@CorradoLanera">
 <meta name="twitter:image-height" content="1024">
@@ -430,11 +435,17 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">In questa pagina</h2>
+   
+  <ul>
+  <li><a href="#mappa-del-corso" id="toc-mappa-del-corso" class="nav-link active" data-scroll-target="#mappa-del-corso">Mappa del corso</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/CorradoLanera/statistica-medica-short/edit/main/slides/index.qmd" class="toc-action"><i class="bi bi-github"></i>Modifica questa pagina</a></li><li><a href="https://github.com/CorradoLanera/statistica-medica-short/issues/new" class="toc-action"><i class="bi empty"></i>Segnala un problema</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -456,9 +467,146 @@ window.Quarto = {
 </header>
 
 
+<div id="listing-listing">
+
+</div>
+<section id="mappa-del-corso" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="mappa-del-corso">Mappa del corso</h2>
+<p>Ogni riquadro è un blocco di concetti che si usano insieme; ogni freccia va da un blocco a quelli che lo usano. In tratteggio le parti facoltative (R e le approssimazioni alla normale). In fondo a ogni sezione delle slide c’è la mappa dei suoi concetti, e in fondo a ogni deck quella dei suoi blocchi.</p>
+<div class="column-page">
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
+flowchart TB
+  subgraph d01 ["01 · R e RStudio"]
+    direction LR
+    k_n_01_r_rstudio["R e RStudio"]:::opt
+    k_n_01_r_oggetti["Oggetti e operazioni"]:::opt
+    k_n_01_r_logica["Confronti e logica"]:::opt
+    k_n_01_r_dati["Dati e pacchetti"]:::opt
+  end
+  subgraph d02 ["02 · Statistiche descrittive"]
+    direction LR
+    k_n_02_notazioni["Indici e sommatoria"]:::cur
+    k_n_02_unita["Unità, variabili, tabelle"]:::cur
+    k_n_02_tipi["Tipi di variabile"]:::cur
+    k_n_02_centralita["Centralità"]:::cur
+    k_n_02_variabilita["Variabilità"]:::cur
+    k_n_02_percentili["Percentili e quartili"]:::cur
+    k_n_02_classi["Classi e medie ponderate"]:::cur
+    k_n_02_istogramma["Istogramma"]:::cur
+    k_n_02_boxplot["Box-plot"]:::cur
+    k_n_02_barre["Barre e scelta del grafico"]:::cur
+  end
+  subgraph d03 ["03 · Probabilità"]
+    direction LR
+    k_n_03_eventi["Esperimenti ed eventi"]:::cur
+    k_n_03_probabilita["Probabilità"]:::cur
+    k_n_03_operazioni["Operazioni fra eventi"]:::cur
+    k_n_03_somma_prodotto["Somma, prodotto, indipendenza"]:::cur
+    k_n_03_condizionata["Probabilità condizionata"]:::cur
+    k_n_03_rischio["Rischio e prevalenza"]:::cur
+    k_n_03_test["Test diagnostici"]:::cur
+    k_n_03_bayes["Teorema di Bayes"]:::cur
+  end
+  subgraph d04 ["04 · Distribuzioni"]
+    direction LR
+    k_n_04_vc["Variabili casuali"]:::cur
+    k_n_04_massa["Massa e cumulata"]:::cur
+    k_n_04_momenti["Valore atteso e varianza"]:::cur
+    k_n_04_binomiale["Binomiale"]:::cur
+    k_n_04_poisson["Poisson"]:::cur
+    k_n_04_densita["Densità"]:::cur
+    k_n_04_parametri["Parametri e statistiche"]:::cur
+    k_n_04_normale["Normale"]:::cur
+    k_n_04_tavole["Tavole e standardizzazione"]:::cur
+    k_n_04_approssimazioni["Approssimazioni (facoltativo)"]:::opt
+  end
+  subgraph d05 ["05 · Stime, intervalli e test"]
+    direction LR
+    k_n_05_campioni["Inferenza e campioni"]:::cur
+    k_n_05_stima["Stima puntuale"]:::cur
+    k_n_05_media_campionaria["Distribuzione della media"]:::cur
+    k_n_05_ic["Intervallo di confidenza"]:::cur
+    k_n_05_t["t di Student"]:::cur
+    k_n_05_ipotesi["Ipotesi ed errori"]:::cur
+    k_n_05_test_z["Test z"]:::cur
+    k_n_05_p_value["P-value e test t"]:::cur
+  end
+  k_n_01_r_logica --&gt; k_n_01_r_oggetti
+  k_n_01_r_oggetti --&gt; k_n_01_r_dati
+  k_n_01_r_oggetti --&gt; k_n_01_r_logica
+  k_n_01_r_rstudio --&gt; k_n_01_r_oggetti
+  k_n_02_barre --&gt; k_n_02_boxplot
+  k_n_02_centralita --&gt; k_n_02_percentili
+  k_n_02_centralita --&gt; k_n_02_variabilita
+  k_n_02_classi --&gt; k_n_02_istogramma
+  k_n_02_classi --&gt; k_n_04_momenti
+  k_n_02_istogramma --&gt; k_n_02_barre
+  k_n_02_notazioni --&gt; k_n_02_centralita
+  k_n_02_notazioni --&gt; k_n_03_condizionata
+  k_n_02_notazioni --&gt; k_n_04_massa
+  k_n_02_percentili --&gt; k_n_02_boxplot
+  k_n_02_percentili --&gt; k_n_04_densita
+  k_n_02_tipi --&gt; k_n_02_centralita
+  k_n_02_tipi --&gt; k_n_04_vc
+  k_n_02_unita --&gt; k_n_01_r_dati
+  k_n_02_unita --&gt; k_n_02_tipi
+  k_n_02_unita --&gt; k_n_03_probabilita
+  k_n_02_variabilita --&gt; k_n_02_classi
+  k_n_03_condizionata --&gt; k_n_03_rischio
+  k_n_03_condizionata --&gt; k_n_03_test
+  k_n_03_condizionata --&gt; k_n_05_ipotesi
+  k_n_03_eventi --&gt; k_n_03_probabilita
+  k_n_03_operazioni --&gt; k_n_03_somma_prodotto
+  k_n_03_probabilita --&gt; k_n_03_operazioni
+  k_n_03_probabilita --&gt; k_n_04_vc
+  k_n_03_rischio --&gt; k_n_03_bayes
+  k_n_03_somma_prodotto --&gt; k_n_03_condizionata
+  k_n_03_somma_prodotto --&gt; k_n_04_massa
+  k_n_03_test --&gt; k_n_03_bayes
+  k_n_04_binomiale --&gt; k_n_04_poisson
+  k_n_04_densita --&gt; k_n_04_normale
+  k_n_04_massa --&gt; k_n_04_momenti
+  k_n_04_massa --&gt; k_n_05_campioni
+  k_n_04_momenti --&gt; k_n_04_binomiale
+  k_n_04_momenti --&gt; k_n_04_densita
+  k_n_04_momenti --&gt; k_n_04_parametri
+  k_n_04_normale --&gt; k_n_04_tavole
+  k_n_04_normale --&gt; k_n_05_media_campionaria
+  k_n_04_parametri --&gt; k_n_04_normale
+  k_n_04_parametri --&gt; k_n_05_ipotesi
+  k_n_04_parametri --&gt; k_n_05_stima
+  k_n_04_poisson --&gt; k_n_04_normale
+  k_n_04_tavole --&gt; k_n_04_approssimazioni
+  k_n_04_tavole --&gt; k_n_05_ic
+  k_n_04_tavole --&gt; k_n_05_test_z
+  k_n_04_vc --&gt; k_n_04_massa
+  k_n_05_campioni --&gt; k_n_05_media_campionaria
+  k_n_05_ic --&gt; k_n_05_t
+  k_n_05_ipotesi --&gt; k_n_05_test_z
+  k_n_05_media_campionaria --&gt; k_n_05_ic
+  k_n_05_media_campionaria --&gt; k_n_05_test_z
+  k_n_05_stima --&gt; k_n_05_media_campionaria
+  k_n_05_t --&gt; k_n_05_p_value
+  k_n_05_test_z --&gt; k_n_05_p_value
+  classDef cur fill:#e6f0fa,stroke:#035AA6,color:#000000
+  classDef prev fill:#f4f4f4,stroke:#9a9a9a,color:#555555,stroke-dasharray:4 3
+  classDef opt fill:#ffffff,stroke:#035AA6,color:#555555,stroke-dasharray:2 2
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div>
 
 
 
+</section>
 
 <div class="quarto-listing quarto-listing-container-table" id="listing-listing">
 <div class="listing-actions-group">
@@ -526,9 +674,9 @@ Sottotitolo
 
 </tr>
 
-<tr data-index="1" data-listing-date-sort="1794232759000" data-listing-file-modified-sort="1794232759756" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="829" data-listing-title-sort="Statistica Medica" data-listing-filename-sort="01-r_rstudio.qmd">
+<tr data-index="1" data-listing-date-sort="1794336078000" data-listing-file-modified-sort="1794336078303" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="838" data-listing-title-sort="Statistica Medica" data-listing-filename-sort="01-r_rstudio.qmd">
 <td>
-<span class="listing-date">9 nov 2026</span>
+<span class="listing-date">10 nov 2026</span>
 </td>
 <td>
 <a href="../slides/01-r_rstudio.html" class="title listing-title">Statistica Medica</a>
@@ -542,7 +690,7 @@ Sottotitolo
 
 </tr>
 
-<tr data-index="2" data-listing-date-sort="1794334294000" data-listing-file-modified-sort="1794334294776" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="23" data-listing-word-count-sort="4594" data-listing-title-sort="Statistica Medica" data-listing-filename-sort="02-descrittive.qmd">
+<tr data-index="2" data-listing-date-sort="1794335335000" data-listing-file-modified-sort="1794335335008" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="24" data-listing-word-count-sort="4606" data-listing-title-sort="Statistica Medica" data-listing-filename-sort="02-descrittive.qmd">
 <td>
 <span class="listing-date">10 nov 2026</span>
 </td>
@@ -558,9 +706,9 @@ Sottotitolo
 
 </tr>
 
-<tr data-index="3" data-listing-date-sort="1794242726000" data-listing-file-modified-sort="1794242726359" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3167" data-listing-title-sort="Statistica Medica" data-listing-filename-sort="03-probabilita.qmd">
+<tr data-index="3" data-listing-date-sort="1794336078000" data-listing-file-modified-sort="1794336078303" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3182" data-listing-title-sort="Statistica Medica" data-listing-filename-sort="03-probabilita.qmd">
 <td>
-<span class="listing-date">9 nov 2026</span>
+<span class="listing-date">10 nov 2026</span>
 </td>
 <td>
 <a href="../slides/03-probabilita.html" class="title listing-title">Statistica Medica</a>
@@ -574,9 +722,9 @@ Sottotitolo
 
 </tr>
 
-<tr data-index="4" data-listing-date-sort="1794242839000" data-listing-file-modified-sort="1794242839665" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="27" data-listing-word-count-sort="5207" data-listing-title-sort="Statistica Medica" data-listing-filename-sort="04-distribuzioni.qmd">
+<tr data-index="4" data-listing-date-sort="1794336112000" data-listing-file-modified-sort="1794336112806" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="27" data-listing-word-count-sort="5225" data-listing-title-sort="Statistica Medica" data-listing-filename-sort="04-distribuzioni.qmd">
 <td>
-<span class="listing-date">9 nov 2026</span>
+<span class="listing-date">10 nov 2026</span>
 </td>
 <td>
 <a href="../slides/04-distribuzioni.html" class="title listing-title">Statistica Medica</a>
@@ -590,9 +738,9 @@ Sottotitolo
 
 </tr>
 
-<tr data-index="5" data-listing-date-sort="1794242895000" data-listing-file-modified-sort="1794242895804" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="22" data-listing-word-count-sort="4327" data-listing-title-sort="Statistica Medica" data-listing-filename-sort="05-ic_p.qmd">
+<tr data-index="5" data-listing-date-sort="1794336112000" data-listing-file-modified-sort="1794336112807" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="22" data-listing-word-count-sort="4348" data-listing-title-sort="Statistica Medica" data-listing-filename-sort="05-ic_p.qmd">
 <td>
-<span class="listing-date">9 nov 2026</span>
+<span class="listing-date">10 nov 2026</span>
 </td>
 <td>
 <a href="../slides/05-ic_p.html" class="title listing-title">Statistica Medica</a>
@@ -1060,4 +1208,4 @@ Sottotitolo
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/CorradoLanera/statistica-medica-short/edit/main/slides/index.qmd" class="toc-action"><i class="bi bi-github"></i>Modifica questa pagina</a></li><li><a href="https://github.com/CorradoLanera/statistica-medica-short/issues/new" class="toc-action"><i class="bi empty"></i>Segnala un problema</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/CorradoLanera/statistica-medica-short/edit/main/slides/index.qmd" class="toc-action"><i class="bi bi-github"></i>Modifica questa pagina</a></li><li><a href="https://github.com/CorradoLanera/statistica-medica-short/issues/new" class="toc-action"><i class="bi empty"></i>Segnala un problema</a></li></ul></div></div></div></footer></body></html>

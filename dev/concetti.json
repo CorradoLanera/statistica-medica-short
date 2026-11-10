@@ -1,0 +1,4412 @@
+{
+ "nota": "Grafo dei concetti delle slide; lo usa dev/mappe_concetti.py. requires = prerequisiti diretti; slide_norm e slide_k individuano la slide.",
+ "sections": [
+  {
+   "deck": "00",
+   "id": "00.1",
+   "title": "Presentazione del corso e informazioni"
+  },
+  {
+   "deck": "01",
+   "id": "01.0",
+   "title": "Apertura"
+  },
+  {
+   "deck": "01",
+   "id": "01.1",
+   "title": "Panoramica: R e RStudio (mappa concettuale)"
+  },
+  {
+   "deck": "01",
+   "id": "01.2",
+   "title": "R"
+  },
+  {
+   "deck": "01",
+   "id": "01.3",
+   "title": "RStudio"
+  },
+  {
+   "deck": "01",
+   "id": "01.9",
+   "title": "Chiusura"
+  },
+  {
+   "deck": "02",
+   "id": "02.0",
+   "title": "Apertura"
+  },
+  {
+   "deck": "02",
+   "id": "02.1",
+   "title": "Oggetti in gioco"
+  },
+  {
+   "deck": "02",
+   "id": "02.2",
+   "title": "Localizzazione (dati continui)"
+  },
+  {
+   "deck": "02",
+   "id": "02.3",
+   "title": "Rappresentazione"
+  },
+  {
+   "deck": "02",
+   "id": "02.9",
+   "title": "Chiusura"
+  },
+  {
+   "deck": "03",
+   "id": "03.0",
+   "title": "Apertura"
+  },
+  {
+   "deck": "03",
+   "id": "03.1",
+   "title": "Definizioni, proprietà e notazioni fondamentali"
+  },
+  {
+   "deck": "03",
+   "id": "03.2",
+   "title": "Operazioni di base"
+  },
+  {
+   "deck": "03",
+   "id": "03.3",
+   "title": "Condizionamento, rischio relativo, misure per test di screening"
+  },
+  {
+   "deck": "03",
+   "id": "03.4",
+   "title": "Teorema di Bayes"
+  },
+  {
+   "deck": "03",
+   "id": "03.9",
+   "title": "Chiusura"
+  },
+  {
+   "deck": "04",
+   "id": "04.0",
+   "title": "Apertura"
+  },
+  {
+   "deck": "04",
+   "id": "04.1",
+   "title": "Modelli (probabilistici) discreti"
+  },
+  {
+   "deck": "04",
+   "id": "04.2",
+   "title": "Distribuzione binomiale"
+  },
+  {
+   "deck": "04",
+   "id": "04.3",
+   "title": "Distribuzione di Poisson"
+  },
+  {
+   "deck": "04",
+   "id": "04.4",
+   "title": "Modello probabilistico per variabili continue"
+  },
+  {
+   "deck": "04",
+   "id": "04.5",
+   "title": "Distribuzione normale"
+  },
+  {
+   "deck": "04",
+   "id": "04.6",
+   "title": "Approssimazioni alla distribuzione normale (OPZIONALE - no esame)"
+  },
+  {
+   "deck": "04",
+   "id": "04.9",
+   "title": "Chiusura"
+  },
+  {
+   "deck": "05",
+   "id": "05.0",
+   "title": "Apertura"
+  },
+  {
+   "deck": "05",
+   "id": "05.1",
+   "title": "inferenza"
+  },
+  {
+   "deck": "05",
+   "id": "05.2",
+   "title": "Stime puntuali e teorema del limite centrale"
+  },
+  {
+   "deck": "05",
+   "id": "05.3",
+   "title": "Precisione delle stime"
+  },
+  {
+   "deck": "05",
+   "id": "05.4",
+   "title": "Esempi e Osservazioni"
+  },
+  {
+   "deck": "05",
+   "id": "05.5",
+   "title": "Distribuzione t di Student"
+  },
+  {
+   "deck": "05",
+   "id": "05.6",
+   "title": "Test d'ipotesi"
+  },
+  {
+   "deck": "05",
+   "id": "05.9",
+   "title": "Chiusura"
+  }
+ ],
+ "chunks": [
+  {
+   "id": "01-r-rstudio",
+   "deck": "01",
+   "label": "R e RStudio",
+   "concepts": [
+    "r-motore-di-calcolo",
+    "analisi-grafici-report",
+    "codice-r",
+    "pacchetto-r",
+    "rstudio",
+    "editor-rstudio",
+    "console-rstudio",
+    "viewer-rstudio",
+    "navigatore-file-rstudio",
+    "posit-cloud",
+    "installazione-di-r",
+    "installazione-di-rstudio"
+   ]
+  },
+  {
+   "id": "01-r-oggetti",
+   "deck": "01",
+   "label": "Oggetti e operazioni",
+   "concepts": [
+    "aritmetica-in-r",
+    "tipo-di-dato-r",
+    "vettore-r",
+    "assegnamento",
+    "vettorizzazione",
+    "funzione-which"
+   ]
+  },
+  {
+   "id": "01-r-logica",
+   "deck": "01",
+   "label": "Confronti e logica",
+   "concepts": [
+    "operatori-di-confronto",
+    "operatori-booleani",
+    "valore-mancante-na"
+   ]
+  },
+  {
+   "id": "01-r-dati",
+   "deck": "01",
+   "label": "Dati e pacchetti",
+   "concepts": [
+    "dataframe",
+    "fattore-r",
+    "caricamento-di-pacchetti"
+   ]
+  },
+  {
+   "id": "02-notazioni",
+   "deck": "02",
+   "label": "Indici e sommatoria",
+   "concepts": [
+    "notazione-con-indici",
+    "sommatoria",
+    "appartenenza-insiemistica",
+    "proprieta-della-sommatoria"
+   ]
+  },
+  {
+   "id": "02-unita",
+   "deck": "02",
+   "label": "Unità, variabili, tabelle",
+   "concepts": [
+    "unita-statistica",
+    "popolazione",
+    "campione",
+    "variabile",
+    "dati-tidy"
+   ]
+  },
+  {
+   "id": "02-tipi",
+   "deck": "02",
+   "label": "Tipi di variabile",
+   "concepts": [
+    "tipo-di-variabile",
+    "variabile-continua",
+    "variabile-discreta",
+    "variabile-nominale",
+    "variabile-ordinale",
+    "variabile-dicotomica",
+    "variabile-cardinale",
+    "codifica-numerica-non-implica-tipo"
+   ]
+  },
+  {
+   "id": "02-centralita",
+   "deck": "02",
+   "label": "Centralità",
+   "concepts": [
+    "misura-di-centralita",
+    "media-aritmetica",
+    "media-sensibile-ai-valori-estremi",
+    "mediana",
+    "mediana-robusta-ai-valori-estremi",
+    "asimmetria",
+    "frequenza-assoluta",
+    "moda"
+   ]
+  },
+  {
+   "id": "02-variabilita",
+   "deck": "02",
+   "label": "Variabilità",
+   "concepts": [
+    "misura-di-variabilita",
+    "range",
+    "varianza",
+    "deviazione-standard",
+    "somma-degli-scarti-nulla",
+    "formula-computazionale-della-varianza",
+    "coefficiente-di-variazione",
+    "cv-invariante-per-scala"
+   ]
+  },
+  {
+   "id": "02-percentili",
+   "deck": "02",
+   "label": "Percentili e quartili",
+   "concepts": [
+    "percentile",
+    "quartile"
+   ]
+  },
+  {
+   "id": "02-classi",
+   "deck": "02",
+   "label": "Classi e medie ponderate",
+   "concepts": [
+    "accorpamento-in-classi",
+    "media-ponderata",
+    "varianza-ponderata"
+   ]
+  },
+  {
+   "id": "02-istogramma",
+   "deck": "02",
+   "label": "Istogramma",
+   "concepts": [
+    "istogramma",
+    "densita-di-frequenza"
+   ]
+  },
+  {
+   "id": "02-boxplot",
+   "deck": "02",
+   "label": "Box-plot",
+   "concepts": [
+    "boxplot",
+    "distanza-interquartile",
+    "baffi-del-boxplot",
+    "outlier",
+    "outlier-estremo",
+    "boxplot-per-confronto-di-distribuzioni"
+   ]
+  },
+  {
+   "id": "02-barre",
+   "deck": "02",
+   "label": "Barre e scelta del grafico",
+   "concepts": [
+    "grafico-a-barre",
+    "istogramma-vs-grafico-a-barre",
+    "base-delle-barre-da-zero",
+    "scelta-del-grafico",
+    "distorsioni-grafiche"
+   ]
+  },
+  {
+   "id": "03-eventi",
+   "deck": "03",
+   "label": "Esperimenti ed eventi",
+   "concepts": [
+    "esperimento-casuale",
+    "spazio-campionario",
+    "evento",
+    "notazione-evento-graffe",
+    "diagramma-di-venn"
+   ]
+  },
+  {
+   "id": "03-probabilita",
+   "deck": "03",
+   "label": "Probabilità",
+   "concepts": [
+    "probabilita",
+    "limiti-della-probabilita"
+   ]
+  },
+  {
+   "id": "03-operazioni",
+   "deck": "03",
+   "label": "Operazioni fra eventi",
+   "concepts": [
+    "unione-di-eventi",
+    "intersezione-di-eventi",
+    "evento-complementare",
+    "eventi-incompatibili",
+    "additivita-eventi-incompatibili"
+   ]
+  },
+  {
+   "id": "03-somma-prodotto",
+   "deck": "03",
+   "label": "Somma, prodotto, indipendenza",
+   "concepts": [
+    "eventi-indipendenti",
+    "regola-del-prodotto",
+    "regola-della-somma",
+    "indipendenza-del-complementare",
+    "somma-di-eventi-indipendenti",
+    "notazione-esito-positivo-negativo"
+   ]
+  },
+  {
+   "id": "03-condizionata",
+   "deck": "03",
+   "label": "Probabilità condizionata",
+   "concepts": [
+    "probabilita-condizionata",
+    "regola-del-prodotto-generale",
+    "probabilita-totali-due-eventi",
+    "eventi-esaustivi",
+    "teorema-delle-probabilita-totali"
+   ]
+  },
+  {
+   "id": "03-rischio",
+   "deck": "03",
+   "label": "Rischio e prevalenza",
+   "concepts": [
+    "rischio-relativo",
+    "rischio-assoluto",
+    "prevalenza"
+   ]
+  },
+  {
+   "id": "03-test",
+   "deck": "03",
+   "label": "Test diagnostici",
+   "concepts": [
+    "test-di-screening",
+    "sensibilita",
+    "specificita",
+    "valore-predittivo-positivo",
+    "valore-predittivo-negativo",
+    "falso-positivo",
+    "falso-negativo"
+   ]
+  },
+  {
+   "id": "03-bayes",
+   "deck": "03",
+   "label": "Teorema di Bayes",
+   "concepts": [
+    "teorema-di-bayes",
+    "calcolo-dei-valori-predittivi",
+    "vpp-da-conteggi",
+    "teorema-di-bayes-generalizzato"
+   ]
+  },
+  {
+   "id": "04-vc",
+   "deck": "04",
+   "label": "Variabili casuali",
+   "concepts": [
+    "variabile-casuale",
+    "variabile-casuale-discreta",
+    "variabile-casuale-continua",
+    "funzione-matematica",
+    "funzione-di-variabile-casuale"
+   ]
+  },
+  {
+   "id": "04-massa",
+   "deck": "04",
+   "label": "Massa e cumulata",
+   "concepts": [
+    "distribuzione-di-probabilita",
+    "funzione-di-massa",
+    "proprieta-della-funzione-di-massa",
+    "distribuzione-cumulativa"
+   ]
+  },
+  {
+   "id": "04-momenti",
+   "deck": "04",
+   "label": "Valore atteso e varianza",
+   "concepts": [
+    "valore-atteso",
+    "varianza-di-variabile-casuale",
+    "linearita-del-valore-atteso",
+    "varianza-della-somma-di-indipendenti"
+   ]
+  },
+  {
+   "id": "04-binomiale",
+   "deck": "04",
+   "label": "Binomiale",
+   "concepts": [
+    "schema-binomiale",
+    "fattoriale",
+    "coefficiente-binomiale",
+    "distribuzione-binomiale",
+    "simmetria-della-binomiale",
+    "triangolo-di-tartaglia",
+    "valore-atteso-e-varianza-della-binomiale",
+    "distribuzione-di-bernoulli",
+    "forma-della-binomiale"
+   ]
+  },
+  {
+   "id": "04-poisson",
+   "deck": "04",
+   "label": "Poisson",
+   "concepts": [
+    "tasso-di-evento",
+    "processo-di-poisson",
+    "costante-di-nepero",
+    "distribuzione-di-poisson",
+    "probabilita-di-almeno-k",
+    "valore-atteso-e-varianza-della-poisson",
+    "sovradispersione",
+    "probabilita-di-coda",
+    "approssimazione-poisson-della-binomiale"
+   ]
+  },
+  {
+   "id": "04-densita",
+   "deck": "04",
+   "label": "Densità",
+   "concepts": [
+    "funzione-di-densita",
+    "integrale",
+    "valore-atteso-e-varianza-continui",
+    "moda-di-distribuzione",
+    "mediana-di-distribuzione",
+    "percentile-di-distribuzione",
+    "posizione-di-media-mediana-moda"
+   ]
+  },
+  {
+   "id": "04-parametri",
+   "deck": "04",
+   "label": "Parametri e statistiche",
+   "concepts": [
+    "parametro",
+    "statistica-campionaria"
+   ]
+  },
+  {
+   "id": "04-normale",
+   "deck": "04",
+   "label": "Normale",
+   "concepts": [
+    "distribuzione-normale",
+    "parametri-della-normale",
+    "localizzazione-della-normale",
+    "forma-della-normale",
+    "normale-standardizzata",
+    "simmetria-della-normale",
+    "regola-empirica-68-95-99"
+   ]
+  },
+  {
+   "id": "04-tavole",
+   "deck": "04",
+   "label": "Tavole e standardizzazione",
+   "concepts": [
+    "cumulata-normale-standard",
+    "tavole-della-normale",
+    "simmetria-della-cumulata",
+    "percentile-della-normale-standard",
+    "calcolo-dei-percentili-della-normale",
+    "standardizzazione"
+   ]
+  },
+  {
+   "id": "04-approssimazioni",
+   "deck": "04",
+   "label": "Approssimazioni (facoltativo)",
+   "concepts": [
+    "correzione-di-continuita",
+    "approssimazione-normale-della-binomiale"
+   ]
+  },
+  {
+   "id": "05-campioni",
+   "deck": "05",
+   "label": "Inferenza e campioni",
+   "concepts": [
+    "inferenza-statistica",
+    "campione-casuale",
+    "campione-casuale-semplice",
+    "popolazione-target",
+    "campione-rappresentativo"
+   ]
+  },
+  {
+   "id": "05-stima",
+   "deck": "05",
+   "label": "Stima puntuale",
+   "concepts": [
+    "stima-puntuale",
+    "stimatore",
+    "stimatore-non-distorto",
+    "numerosita-campionaria"
+   ]
+  },
+  {
+   "id": "05-media-campionaria",
+   "deck": "05",
+   "label": "Distribuzione della media",
+   "concepts": [
+    "distribuzione-campionaria",
+    "varianza-di-trasformazione-lineare",
+    "varianza-della-media-campionaria",
+    "errore-standard",
+    "teorema-del-limite-centrale"
+   ]
+  },
+  {
+   "id": "05-ic",
+   "deck": "05",
+   "label": "Intervallo di confidenza",
+   "concepts": [
+    "intervallo-di-confidenza",
+    "derivazione-ic-con-z",
+    "ic-media-varianza-nota",
+    "livello-di-confidenza",
+    "interpretazione-dell-intervallo-di-confidenza",
+    "ic-a-livello-generico",
+    "ampiezza-dell-intervallo-di-confidenza",
+    "controllo-della-variabilita-di-misura"
+   ]
+  },
+  {
+   "id": "05-t",
+   "deck": "05",
+   "label": "t di Student",
+   "concepts": [
+    "distribuzione-t-di-student",
+    "gradi-di-liberta",
+    "percentile-della-t-di-student",
+    "ic-media-varianza-ignota",
+    "confronto-tra-ic-e-valore-di-riferimento"
+   ]
+  },
+  {
+   "id": "05-ipotesi",
+   "deck": "05",
+   "label": "Ipotesi ed errori",
+   "concepts": [
+    "ipotesi-nulla",
+    "ipotesi-alternativa",
+    "test-d-ipotesi",
+    "rifiuto-e-non-rifiuto-di-h0",
+    "errore-di-primo-tipo",
+    "errore-di-secondo-tipo",
+    "significativita-statistica",
+    "potenza",
+    "criterio-di-costruzione-del-test"
+   ]
+  },
+  {
+   "id": "05-test-z",
+   "deck": "05",
+   "label": "Test z",
+   "concepts": [
+    "statistica-test",
+    "valore-critico",
+    "regione-di-rifiuto",
+    "test-sulla-media-varianza-nota",
+    "statistica-z-del-test",
+    "test-a-una-coda",
+    "test-a-due-code"
+   ]
+  },
+  {
+   "id": "05-p-value",
+   "deck": "05",
+   "label": "P-value e test t",
+   "concepts": [
+    "p-value",
+    "calcolo-del-p-value",
+    "p-value-a-due-code",
+    "test-t-per-la-media",
+    "dualita-test-intervallo-di-confidenza"
+   ]
+  }
+ ],
+ "concepts": [
+  {
+   "id": "posit-cloud",
+   "deck": "01",
+   "section": "01.0",
+   "label": "Posit Cloud (R/RStudio online)",
+   "short": "Posit Cloud",
+   "kind": "strumento-r",
+   "optional": true,
+   "requires": [
+    "rstudio"
+   ],
+   "slide": "Cosa faremo",
+   "slide_norm": "cosafaremo",
+   "slide_k": 0,
+   "chunk": "01-r-rstudio"
+  },
+  {
+   "id": "r-motore-di-calcolo",
+   "deck": "01",
+   "section": "01.1",
+   "label": "R come motore di calcolo statistico",
+   "short": "R",
+   "kind": "definizione",
+   "optional": true,
+   "requires": [],
+   "slide": "Panoramica",
+   "slide_norm": "panoramica",
+   "slide_k": 0,
+   "chunk": "01-r-rstudio"
+  },
+  {
+   "id": "analisi-grafici-report",
+   "deck": "01",
+   "section": "01.1",
+   "label": "Con R: analisi, grafici, report",
+   "short": "Analisi, grafici, report",
+   "kind": "definizione",
+   "optional": true,
+   "requires": [
+    "r-motore-di-calcolo"
+   ],
+   "slide": "Panoramica",
+   "slide_norm": "panoramica",
+   "slide_k": 0,
+   "chunk": "01-r-rstudio"
+  },
+  {
+   "id": "codice-r",
+   "deck": "01",
+   "section": "01.1",
+   "label": "Codice R (testo eseguito da R)",
+   "short": "Codice R",
+   "kind": "definizione",
+   "optional": true,
+   "requires": [
+    "r-motore-di-calcolo"
+   ],
+   "slide": "Panoramica",
+   "slide_norm": "panoramica",
+   "slide_k": 0,
+   "chunk": "01-r-rstudio"
+  },
+  {
+   "id": "pacchetto-r",
+   "deck": "01",
+   "section": "01.1",
+   "label": "Pacchetto di R",
+   "short": "Pacchetto",
+   "kind": "definizione",
+   "optional": true,
+   "requires": [
+    "r-motore-di-calcolo",
+    "codice-r"
+   ],
+   "slide": "Panoramica",
+   "slide_norm": "panoramica",
+   "slide_k": 0,
+   "chunk": "01-r-rstudio"
+  },
+  {
+   "id": "rstudio",
+   "deck": "01",
+   "section": "01.1",
+   "label": "RStudio (ambiente di lavoro per R)",
+   "short": "RStudio",
+   "kind": "definizione",
+   "optional": true,
+   "requires": [
+    "r-motore-di-calcolo"
+   ],
+   "slide": "Panoramica",
+   "slide_norm": "panoramica",
+   "slide_k": 0,
+   "chunk": "01-r-rstudio"
+  },
+  {
+   "id": "editor-rstudio",
+   "deck": "01",
+   "section": "01.1",
+   "label": "Editor di RStudio",
+   "short": "Editor",
+   "kind": "strumento-r",
+   "optional": true,
+   "requires": [
+    "rstudio",
+    "codice-r"
+   ],
+   "slide": "Panoramica",
+   "slide_norm": "panoramica",
+   "slide_k": 0,
+   "chunk": "01-r-rstudio"
+  },
+  {
+   "id": "console-rstudio",
+   "deck": "01",
+   "section": "01.1",
+   "label": "Console di RStudio",
+   "short": "Console",
+   "kind": "strumento-r",
+   "optional": true,
+   "requires": [
+    "rstudio",
+    "editor-rstudio",
+    "r-motore-di-calcolo"
+   ],
+   "slide": "Panoramica",
+   "slide_norm": "panoramica",
+   "slide_k": 0,
+   "chunk": "01-r-rstudio"
+  },
+  {
+   "id": "viewer-rstudio",
+   "deck": "01",
+   "section": "01.1",
+   "label": "Viewer di RStudio",
+   "short": "Viewer",
+   "kind": "strumento-r",
+   "optional": true,
+   "requires": [
+    "rstudio",
+    "analisi-grafici-report"
+   ],
+   "slide": "Panoramica",
+   "slide_norm": "panoramica",
+   "slide_k": 0,
+   "chunk": "01-r-rstudio"
+  },
+  {
+   "id": "navigatore-file-rstudio",
+   "deck": "01",
+   "section": "01.1",
+   "label": "Navigatore file di RStudio",
+   "short": "Navigatore file",
+   "kind": "strumento-r",
+   "optional": true,
+   "requires": [
+    "rstudio"
+   ],
+   "slide": "Panoramica",
+   "slide_norm": "panoramica",
+   "slide_k": 0,
+   "chunk": "01-r-rstudio"
+  },
+  {
+   "id": "installazione-di-r",
+   "deck": "01",
+   "section": "01.2",
+   "label": "Installazione di R da CRAN",
+   "short": "Installare R",
+   "kind": "procedura",
+   "optional": true,
+   "requires": [
+    "r-motore-di-calcolo"
+   ],
+   "slide": "Installazione",
+   "slide_norm": "installazione",
+   "slide_k": 0,
+   "chunk": "01-r-rstudio"
+  },
+  {
+   "id": "aritmetica-in-r",
+   "deck": "01",
+   "section": "01.2",
+   "label": "Aritmetica in R",
+   "short": "Aritmetica",
+   "kind": "strumento-r",
+   "optional": true,
+   "requires": [
+    "codice-r",
+    "aritmetica-di-base"
+   ],
+   "slide": "Algebra elementare",
+   "slide_norm": "algebraelementare",
+   "slide_k": 0,
+   "chunk": "01-r-oggetti"
+  },
+  {
+   "id": "tipo-di-dato-r",
+   "deck": "01",
+   "section": "01.2",
+   "label": "Tipi di dato di R (numerico, testo, logico)",
+   "short": "Tipi di dato",
+   "kind": "definizione",
+   "optional": true,
+   "requires": [
+    "codice-r"
+   ],
+   "slide": "[Vettori]",
+   "slide_norm": "vettori",
+   "slide_k": 0,
+   "chunk": "01-r-oggetti"
+  },
+  {
+   "id": "vettore-r",
+   "deck": "01",
+   "section": "01.2",
+   "label": "Vettore",
+   "short": "Vettore",
+   "kind": "strumento-r",
+   "optional": true,
+   "requires": [
+    "tipo-di-dato-r",
+    "aritmetica-in-r"
+   ],
+   "slide": "[Vettori]",
+   "slide_norm": "vettori",
+   "slide_k": 0,
+   "chunk": "01-r-oggetti"
+  },
+  {
+   "id": "assegnamento",
+   "deck": "01",
+   "section": "01.2",
+   "label": "Assegnamento e oggetti",
+   "short": "Assegnamento",
+   "kind": "strumento-r",
+   "optional": true,
+   "requires": [
+    "vettore-r"
+   ],
+   "slide": "Assegnamento (\"memorizzazione\")",
+   "slide_norm": "assegnamentomemorizzazione",
+   "slide_k": 0,
+   "chunk": "01-r-oggetti"
+  },
+  {
+   "id": "operatori-di-confronto",
+   "deck": "01",
+   "section": "01.2",
+   "label": "Operatori di confronto",
+   "short": "Confronti",
+   "kind": "strumento-r",
+   "optional": true,
+   "requires": [
+    "tipo-di-dato-r",
+    "aritmetica-in-r"
+   ],
+   "slide": "Confronti (Booleani)",
+   "slide_norm": "confrontibooleani",
+   "slide_k": 0,
+   "chunk": "01-r-logica"
+  },
+  {
+   "id": "operatori-booleani",
+   "deck": "01",
+   "section": "01.2",
+   "label": "Operatori logici (&, |, !)",
+   "short": "Operatori logici",
+   "kind": "strumento-r",
+   "optional": true,
+   "requires": [
+    "operatori-di-confronto",
+    "operatori-logici-and-or-not"
+   ],
+   "slide": "Logica (Booleana)",
+   "slide_norm": "logicabooleana",
+   "slide_k": 0,
+   "chunk": "01-r-logica"
+  },
+  {
+   "id": "vettorizzazione",
+   "deck": "01",
+   "section": "01.2",
+   "label": "Operazioni vettorializzate",
+   "short": "Vettorizzazione",
+   "kind": "proprieta",
+   "optional": true,
+   "requires": [
+    "vettore-r",
+    "operatori-di-confronto",
+    "operatori-booleani"
+   ],
+   "slide": "Logica (Booleana, ... vettoriale)",
+   "slide_norm": "logicabooleanavettoriale",
+   "slide_k": 0,
+   "chunk": "01-r-oggetti"
+  },
+  {
+   "id": "funzione-which",
+   "deck": "01",
+   "section": "01.2",
+   "label": "which()",
+   "short": "which()",
+   "kind": "strumento-r",
+   "optional": true,
+   "requires": [
+    "vettorizzazione"
+   ],
+   "slide": "Logica (Booleana, ... vettoriale)",
+   "slide_norm": "logicabooleanavettoriale",
+   "slide_k": 0,
+   "chunk": "01-r-oggetti"
+  },
+  {
+   "id": "valore-mancante-na",
+   "deck": "01",
+   "section": "01.2",
+   "label": "Valore mancante NA nella logica",
+   "short": "NA",
+   "kind": "proprieta",
+   "optional": true,
+   "requires": [
+    "operatori-booleani"
+   ],
+   "slide": "Logica (Booleana, ... vettoriale)",
+   "slide_norm": "logicabooleanavettoriale",
+   "slide_k": 0,
+   "chunk": "01-r-logica"
+  },
+  {
+   "id": "dataframe",
+   "deck": "01",
+   "section": "01.2",
+   "label": "Dataframe",
+   "short": "Dataframe",
+   "kind": "strumento-r",
+   "optional": true,
+   "requires": [
+    "vettore-r",
+    "assegnamento",
+    "tipo-di-dato-r",
+    "variabile",
+    "unita-statistica"
+   ],
+   "slide": "[Dataframe]",
+   "slide_norm": "dataframe",
+   "slide_k": 0,
+   "chunk": "01-r-dati"
+  },
+  {
+   "id": "fattore-r",
+   "deck": "01",
+   "section": "01.2",
+   "label": "Fattore (factor) con livelli",
+   "short": "Fattore",
+   "kind": "strumento-r",
+   "optional": true,
+   "requires": [
+    "dataframe"
+   ],
+   "slide": "[Dataframe]",
+   "slide_norm": "dataframe",
+   "slide_k": 0,
+   "chunk": "01-r-dati"
+  },
+  {
+   "id": "caricamento-di-pacchetti",
+   "deck": "01",
+   "section": "01.2",
+   "label": "Installazione e caricamento di pacchetti",
+   "short": "Caricare pacchetti",
+   "kind": "procedura",
+   "optional": true,
+   "requires": [
+    "pacchetto-r"
+   ],
+   "slide": "Pacchetti",
+   "slide_norm": "pacchetti",
+   "slide_k": 0,
+   "chunk": "01-r-dati"
+  },
+  {
+   "id": "installazione-di-rstudio",
+   "deck": "01",
+   "section": "01.3",
+   "label": "Installazione di RStudio Desktop",
+   "short": "Installare RStudio",
+   "kind": "procedura",
+   "optional": true,
+   "requires": [
+    "rstudio",
+    "installazione-di-r"
+   ],
+   "slide": "Installazione",
+   "slide_norm": "installazione",
+   "slide_k": 1,
+   "chunk": "01-r-rstudio"
+  },
+  {
+   "id": "notazione-con-indici",
+   "deck": "02",
+   "section": "02.1",
+   "label": "Notazione con indici (x_i)",
+   "short": "Indici (x_i)",
+   "kind": "notazione",
+   "optional": false,
+   "requires": [],
+   "slide": "Notazioni: Sommatoria fino a N",
+   "slide_norm": "notazionisommatoriafinoan",
+   "slide_k": 0,
+   "chunk": "02-notazioni"
+  },
+  {
+   "id": "sommatoria",
+   "deck": "02",
+   "section": "02.1",
+   "label": "Sommatoria",
+   "short": "Sommatoria Σ",
+   "kind": "notazione",
+   "optional": false,
+   "requires": [
+    "notazione-con-indici"
+   ],
+   "slide": "Notazioni: Sommatoria fino a N",
+   "slide_norm": "notazionisommatoriafinoan",
+   "slide_k": 0,
+   "chunk": "02-notazioni"
+  },
+  {
+   "id": "appartenenza-insiemistica",
+   "deck": "02",
+   "section": "02.1",
+   "label": "Appartenenza insiemistica (∈)",
+   "short": "Appartenenza (∈)",
+   "kind": "notazione",
+   "optional": false,
+   "requires": [],
+   "slide": "Notazioni: Sommatoria su I",
+   "slide_norm": "notazionisommatoriasui",
+   "slide_k": 0,
+   "chunk": "02-notazioni"
+  },
+  {
+   "id": "proprieta-della-sommatoria",
+   "deck": "02",
+   "section": "02.1",
+   "label": "Proprietà della sommatoria",
+   "short": "Proprietà di Σ",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "sommatoria"
+   ],
+   "slide": "Proprietà della sommatoria",
+   "slide_norm": "proprietàdellasommatoria",
+   "slide_k": 0,
+   "chunk": "02-notazioni"
+  },
+  {
+   "id": "unita-statistica",
+   "deck": "02",
+   "section": "02.1",
+   "label": "Unità statistica",
+   "short": "Unità statistica",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [],
+   "slide": "Unità statistica",
+   "slide_norm": "unitàstatistica",
+   "slide_k": 0,
+   "chunk": "02-unita"
+  },
+  {
+   "id": "popolazione",
+   "deck": "02",
+   "section": "02.1",
+   "label": "Popolazione statistica",
+   "short": "Popolazione",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "unita-statistica"
+   ],
+   "slide": "Unità statistica",
+   "slide_norm": "unitàstatistica",
+   "slide_k": 0,
+   "chunk": "02-unita"
+  },
+  {
+   "id": "variabile",
+   "deck": "02",
+   "section": "02.1",
+   "label": "Variabile",
+   "short": "Variabile",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "unita-statistica"
+   ],
+   "slide": "Unità statistica",
+   "slide_norm": "unitàstatistica",
+   "slide_k": 0,
+   "chunk": "02-unita"
+  },
+  {
+   "id": "dati-tidy",
+   "deck": "02",
+   "section": "02.1",
+   "label": "Dati tidy (tabella ordinata)",
+   "short": "Dati tidy",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "variabile",
+    "unita-statistica"
+   ],
+   "slide": "Dati tidy (ordinati)",
+   "slide_norm": "datitidyordinati",
+   "slide_k": 0,
+   "chunk": "02-unita"
+  },
+  {
+   "id": "tipo-di-variabile",
+   "deck": "02",
+   "section": "02.1",
+   "label": "Tipo di variabile",
+   "short": "Tipo di variabile",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "variabile"
+   ],
+   "slide": "Tipologie di dati",
+   "slide_norm": "tipologiedidati",
+   "slide_k": 0,
+   "chunk": "02-tipi"
+  },
+  {
+   "id": "variabile-continua",
+   "deck": "02",
+   "section": "02.1",
+   "label": "Variabile continua",
+   "short": "Continua",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "tipo-di-variabile"
+   ],
+   "slide": "Tipologie di dati",
+   "slide_norm": "tipologiedidati",
+   "slide_k": 0,
+   "chunk": "02-tipi"
+  },
+  {
+   "id": "variabile-discreta",
+   "deck": "02",
+   "section": "02.1",
+   "label": "Variabile discreta",
+   "short": "Discreta",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "tipo-di-variabile"
+   ],
+   "slide": "Tipologie di dati",
+   "slide_norm": "tipologiedidati",
+   "slide_k": 0,
+   "chunk": "02-tipi"
+  },
+  {
+   "id": "variabile-nominale",
+   "deck": "02",
+   "section": "02.1",
+   "label": "Variabile nominale",
+   "short": "Nominale",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "variabile-discreta"
+   ],
+   "slide": "Tipologie di dati",
+   "slide_norm": "tipologiedidati",
+   "slide_k": 1,
+   "chunk": "02-tipi"
+  },
+  {
+   "id": "variabile-ordinale",
+   "deck": "02",
+   "section": "02.1",
+   "label": "Variabile ordinale",
+   "short": "Ordinale",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "variabile-discreta"
+   ],
+   "slide": "Tipologie di dati",
+   "slide_norm": "tipologiedidati",
+   "slide_k": 1,
+   "chunk": "02-tipi"
+  },
+  {
+   "id": "variabile-dicotomica",
+   "deck": "02",
+   "section": "02.1",
+   "label": "Variabile dicotomica",
+   "short": "Dicotomica",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "variabile-discreta"
+   ],
+   "slide": "Tipologie di dati",
+   "slide_norm": "tipologiedidati",
+   "slide_k": 1,
+   "chunk": "02-tipi"
+  },
+  {
+   "id": "variabile-cardinale",
+   "deck": "02",
+   "section": "02.1",
+   "label": "Variabile cardinale",
+   "short": "Cardinale",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "variabile-discreta",
+    "variabile-continua"
+   ],
+   "slide": "Tipologie di dati: in sintesi",
+   "slide_norm": "tipologiedidatiinsintesi",
+   "slide_k": 0,
+   "chunk": "02-tipi"
+  },
+  {
+   "id": "codifica-numerica-non-implica-tipo",
+   "deck": "02",
+   "section": "02.1",
+   "label": "Un numero non basta a fare una variabile numerica",
+   "short": "Un numero non basta",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "variabile-nominale",
+    "variabile-dicotomica",
+    "variabile-cardinale",
+    "variabile-continua"
+   ],
+   "slide": "Tipologie di dati: in sintesi",
+   "slide_norm": "tipologiedidatiinsintesi",
+   "slide_k": 0,
+   "chunk": "02-tipi"
+  },
+  {
+   "id": "misura-di-centralita",
+   "deck": "02",
+   "section": "02.2",
+   "label": "Misura di centralità",
+   "short": "Misura di centralità",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "variabile-continua"
+   ],
+   "slide": "Misure di centralità: media",
+   "slide_norm": "misuredicentralitàmedia",
+   "slide_k": 0,
+   "chunk": "02-centralita"
+  },
+  {
+   "id": "campione",
+   "deck": "02",
+   "section": "02.2",
+   "label": "Campione (statistica campionaria)",
+   "short": "Campione",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "popolazione"
+   ],
+   "slide": "Misure di centralità: media",
+   "slide_norm": "misuredicentralitàmedia",
+   "slide_k": 0,
+   "chunk": "02-unita"
+  },
+  {
+   "id": "media-aritmetica",
+   "deck": "02",
+   "section": "02.2",
+   "label": "Media aritmetica (campionaria)",
+   "short": "Media",
+   "kind": "formula",
+   "optional": false,
+   "requires": [
+    "sommatoria",
+    "variabile-continua",
+    "campione",
+    "frazione"
+   ],
+   "slide": "Misure di centralità: media",
+   "slide_norm": "misuredicentralitàmedia",
+   "slide_k": 0,
+   "chunk": "02-centralita"
+  },
+  {
+   "id": "media-sensibile-ai-valori-estremi",
+   "deck": "02",
+   "section": "02.2",
+   "label": "La media è sensibile ai valori estremi",
+   "short": "Media e valori estremi",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "media-aritmetica"
+   ],
+   "slide": "Misure di centralità: media",
+   "slide_norm": "misuredicentralitàmedia",
+   "slide_k": 0,
+   "chunk": "02-centralita"
+  },
+  {
+   "id": "mediana",
+   "deck": "02",
+   "section": "02.2",
+   "label": "Mediana (campionaria)",
+   "short": "Mediana",
+   "kind": "procedura",
+   "optional": false,
+   "requires": [
+    "media-aritmetica"
+   ],
+   "slide": "Misure di centralità: mediana",
+   "slide_norm": "misuredicentralitàmediana",
+   "slide_k": 0,
+   "chunk": "02-centralita"
+  },
+  {
+   "id": "mediana-robusta-ai-valori-estremi",
+   "deck": "02",
+   "section": "02.2",
+   "label": "La mediana è poco sensibile ai valori estremi",
+   "short": "Mediana e valori estremi",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "mediana",
+    "media-sensibile-ai-valori-estremi"
+   ],
+   "slide": "Mediana (n pari)",
+   "slide_norm": "mediananpari",
+   "slide_k": 0,
+   "chunk": "02-centralita"
+  },
+  {
+   "id": "asimmetria",
+   "deck": "02",
+   "section": "02.2",
+   "label": "Asimmetria (media − mediana)",
+   "short": "Asimmetria",
+   "kind": "formula",
+   "optional": false,
+   "requires": [
+    "media-aritmetica",
+    "mediana"
+   ],
+   "slide": "Confronto media e mediana",
+   "slide_norm": "confrontomediaemediana",
+   "slide_k": 0,
+   "chunk": "02-centralita"
+  },
+  {
+   "id": "frequenza-assoluta",
+   "deck": "02",
+   "section": "02.2",
+   "label": "Frequenza assoluta",
+   "short": "Frequenza",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "variabile-discreta"
+   ],
+   "slide": "Misure di centralità: Moda",
+   "slide_norm": "misuredicentralitàmoda",
+   "slide_k": 0,
+   "chunk": "02-centralita"
+  },
+  {
+   "id": "moda",
+   "deck": "02",
+   "section": "02.2",
+   "label": "Moda",
+   "short": "Moda",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "frequenza-assoluta"
+   ],
+   "slide": "Misure di centralità: Moda",
+   "slide_norm": "misuredicentralitàmoda",
+   "slide_k": 0,
+   "chunk": "02-centralita"
+  },
+  {
+   "id": "misura-di-variabilita",
+   "deck": "02",
+   "section": "02.2",
+   "label": "Misura di variabilità",
+   "short": "Misura di variabilità",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "media-aritmetica"
+   ],
+   "slide": "Misure di [variabilità]",
+   "slide_norm": "misuredivariabilità",
+   "slide_k": 0,
+   "chunk": "02-variabilita"
+  },
+  {
+   "id": "range",
+   "deck": "02",
+   "section": "02.2",
+   "label": "Range (massimale)",
+   "short": "Range",
+   "kind": "formula",
+   "optional": false,
+   "requires": [
+    "misura-di-variabilita"
+   ],
+   "slide": "Misure di variabilità: range (massimale)",
+   "slide_norm": "misuredivariabilitàrangemassimale",
+   "slide_k": 0,
+   "chunk": "02-variabilita"
+  },
+  {
+   "id": "varianza",
+   "deck": "02",
+   "section": "02.2",
+   "label": "Varianza campionaria",
+   "short": "Varianza",
+   "kind": "formula",
+   "optional": false,
+   "requires": [
+    "media-aritmetica",
+    "sommatoria",
+    "misura-di-variabilita",
+    "potenza-e-radice"
+   ],
+   "slide": "Misure di variabilità: varianza campionaria",
+   "slide_norm": "misuredivariabilitàvarianzacampionaria",
+   "slide_k": 0,
+   "chunk": "02-variabilita"
+  },
+  {
+   "id": "deviazione-standard",
+   "deck": "02",
+   "section": "02.2",
+   "label": "Deviazione standard campionaria",
+   "short": "Deviazione standard",
+   "kind": "formula",
+   "optional": false,
+   "requires": [
+    "varianza",
+    "potenza-e-radice"
+   ],
+   "slide": "Misure di variabilità: varianza campionaria",
+   "slide_norm": "misuredivariabilitàvarianzacampionaria",
+   "slide_k": 0,
+   "chunk": "02-variabilita"
+  },
+  {
+   "id": "somma-degli-scarti-nulla",
+   "deck": "02",
+   "section": "02.2",
+   "label": "La somma degli scarti dalla media è zero",
+   "short": "Scarti a somma zero",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "media-aritmetica",
+    "sommatoria"
+   ],
+   "slide": "Misure di variabilità: varianza campionaria",
+   "slide_norm": "misuredivariabilitàvarianzacampionaria",
+   "slide_k": 0,
+   "chunk": "02-variabilita"
+  },
+  {
+   "id": "formula-computazionale-della-varianza",
+   "deck": "02",
+   "section": "02.2",
+   "label": "Formula alternativa della varianza",
+   "short": "Varianza: formula alternativa",
+   "kind": "formula",
+   "optional": false,
+   "requires": [
+    "varianza",
+    "media-aritmetica",
+    "sommatoria"
+   ],
+   "slide": "Varianza (formula alternativa)",
+   "slide_norm": "varianzaformulaalternativa",
+   "slide_k": 0,
+   "chunk": "02-variabilita"
+  },
+  {
+   "id": "coefficiente-di-variazione",
+   "deck": "02",
+   "section": "02.2",
+   "label": "Coefficiente di variazione",
+   "short": "Coefficiente di variazione",
+   "kind": "formula",
+   "optional": false,
+   "requires": [
+    "deviazione-standard",
+    "media-aritmetica",
+    "percentuale"
+   ],
+   "slide": "Misure di variabilità: coefficiente di variazione",
+   "slide_norm": "misuredivariabilitàcoefficientedivariazione",
+   "slide_k": 0,
+   "chunk": "02-variabilita"
+  },
+  {
+   "id": "cv-invariante-per-scala",
+   "deck": "02",
+   "section": "02.2",
+   "label": "Il CV non dipende dall'unità di misura",
+   "short": "CV e unità di misura",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "coefficiente-di-variazione",
+    "conversione-di-unita-di-misura"
+   ],
+   "slide": "CV (non-effetto scala)",
+   "slide_norm": "cvnoneffettoscala",
+   "slide_k": 0,
+   "chunk": "02-variabilita"
+  },
+  {
+   "id": "percentile",
+   "deck": "02",
+   "section": "02.2",
+   "label": "Percentile",
+   "short": "Percentile",
+   "kind": "procedura",
+   "optional": false,
+   "requires": [
+    "mediana",
+    "percentuale"
+   ],
+   "slide": "[Percentili]",
+   "slide_norm": "percentili",
+   "slide_k": 0,
+   "chunk": "02-percentili"
+  },
+  {
+   "id": "quartile",
+   "deck": "02",
+   "section": "02.2",
+   "label": "Quartile",
+   "short": "Quartile",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "percentile"
+   ],
+   "slide": "[Percentili]",
+   "slide_norm": "percentili",
+   "slide_k": 0,
+   "chunk": "02-percentili"
+  },
+  {
+   "id": "accorpamento-in-classi",
+   "deck": "02",
+   "section": "02.2",
+   "label": "Accorpamento in classi",
+   "short": "Classi",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "frequenza-assoluta",
+    "variabile-continua",
+    "intervallo-semiaperto"
+   ],
+   "slide": "[Accorpamenti]",
+   "slide_norm": "accorpamenti",
+   "slide_k": 0,
+   "chunk": "02-classi"
+  },
+  {
+   "id": "media-ponderata",
+   "deck": "02",
+   "section": "02.2",
+   "label": "Media aritmetica ponderata",
+   "short": "Media ponderata",
+   "kind": "formula",
+   "optional": false,
+   "requires": [
+    "accorpamento-in-classi",
+    "media-aritmetica",
+    "sommatoria"
+   ],
+   "slide": "misure ponderate: media aritmetica ponderata",
+   "slide_norm": "misureponderatemediaaritmeticaponderata",
+   "slide_k": 0,
+   "chunk": "02-classi"
+  },
+  {
+   "id": "varianza-ponderata",
+   "deck": "02",
+   "section": "02.2",
+   "label": "Varianza ponderata",
+   "short": "Varianza ponderata",
+   "kind": "formula",
+   "optional": false,
+   "requires": [
+    "varianza",
+    "media-ponderata",
+    "formula-computazionale-della-varianza"
+   ],
+   "slide": "misure ponderate: varianza ponderata",
+   "slide_norm": "misureponderatevarianzaponderata",
+   "slide_k": 0,
+   "chunk": "02-classi"
+  },
+  {
+   "id": "istogramma",
+   "deck": "02",
+   "section": "02.3",
+   "label": "Istogramma",
+   "short": "Istogramma",
+   "kind": "rappresentazione",
+   "optional": false,
+   "requires": [
+    "accorpamento-in-classi",
+    "variabile-continua",
+    "frequenza-assoluta"
+   ],
+   "slide": "Istogramma",
+   "slide_norm": "istogramma",
+   "slide_k": 0,
+   "chunk": "02-istogramma"
+  },
+  {
+   "id": "densita-di-frequenza",
+   "deck": "02",
+   "section": "02.3",
+   "label": "Densità (altezza dell'istogramma)",
+   "short": "Densità di frequenza",
+   "kind": "formula",
+   "optional": false,
+   "requires": [
+    "istogramma",
+    "accorpamento-in-classi",
+    "frequenza-assoluta",
+    "frazione"
+   ],
+   "slide": "Dati continui: istogramma",
+   "slide_norm": "daticontinuiistogramma",
+   "slide_k": 0,
+   "chunk": "02-istogramma"
+  },
+  {
+   "id": "boxplot",
+   "deck": "02",
+   "section": "02.3",
+   "label": "Box-plot",
+   "short": "Box-plot",
+   "kind": "rappresentazione",
+   "optional": false,
+   "requires": [
+    "mediana",
+    "quartile",
+    "distanza-interquartile"
+   ],
+   "slide": "Boxplot (general)",
+   "slide_norm": "boxplotgeneral",
+   "slide_k": 0,
+   "chunk": "02-boxplot"
+  },
+  {
+   "id": "distanza-interquartile",
+   "deck": "02",
+   "section": "02.3",
+   "label": "Range inter-quartile (IQR)",
+   "short": "Distanza interquartile",
+   "kind": "formula",
+   "optional": false,
+   "requires": [
+    "quartile"
+   ],
+   "slide": "Dati continui: box-plot",
+   "slide_norm": "daticontinuiboxplot",
+   "slide_k": 0,
+   "chunk": "02-boxplot"
+  },
+  {
+   "id": "baffi-del-boxplot",
+   "deck": "02",
+   "section": "02.3",
+   "label": "Baffi del box-plot",
+   "short": "Baffi",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "distanza-interquartile"
+   ],
+   "slide": "Dati continui: box-plot",
+   "slide_norm": "daticontinuiboxplot",
+   "slide_k": 0,
+   "chunk": "02-boxplot"
+  },
+  {
+   "id": "outlier",
+   "deck": "02",
+   "section": "02.3",
+   "label": "Outlier",
+   "short": "Outlier",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "baffi-del-boxplot",
+    "distanza-interquartile"
+   ],
+   "slide": "Dati continui: box-plot",
+   "slide_norm": "daticontinuiboxplot",
+   "slide_k": 0,
+   "chunk": "02-boxplot"
+  },
+  {
+   "id": "outlier-estremo",
+   "deck": "02",
+   "section": "02.3",
+   "label": "Outlier estremo",
+   "short": "Outlier estremo",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "outlier"
+   ],
+   "slide": "Dati continui: box-plot",
+   "slide_norm": "daticontinuiboxplot",
+   "slide_k": 0,
+   "chunk": "02-boxplot"
+  },
+  {
+   "id": "grafico-a-barre",
+   "deck": "02",
+   "section": "02.3",
+   "label": "Grafico a barre",
+   "short": "Grafico a barre",
+   "kind": "rappresentazione",
+   "optional": false,
+   "requires": [
+    "frequenza-assoluta",
+    "variabile-discreta"
+   ],
+   "slide": "Dati categorici: barre",
+   "slide_norm": "daticategoricibarre",
+   "slide_k": 0,
+   "chunk": "02-barre"
+  },
+  {
+   "id": "istogramma-vs-grafico-a-barre",
+   "deck": "02",
+   "section": "02.3",
+   "label": "Istogramma e grafico a barre non sono la stessa cosa",
+   "short": "Istogramma ≠ barre",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "istogramma",
+    "grafico-a-barre"
+   ],
+   "slide": "Dati categorici: barre",
+   "slide_norm": "daticategoricibarre",
+   "slide_k": 0,
+   "chunk": "02-barre"
+  },
+  {
+   "id": "base-delle-barre-da-zero",
+   "deck": "02",
+   "section": "02.3",
+   "label": "La base delle barre parte da zero",
+   "short": "Barre da zero",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "grafico-a-barre"
+   ],
+   "slide": "Dati categorici: barre",
+   "slide_norm": "daticategoricibarre",
+   "slide_k": 0,
+   "chunk": "02-barre"
+  },
+  {
+   "id": "scelta-del-grafico",
+   "deck": "02",
+   "section": "02.3",
+   "label": "Scelta del grafico in base a tipo e numero di variabili",
+   "short": "Scelta del grafico",
+   "kind": "regola",
+   "optional": false,
+   "requires": [
+    "tipo-di-variabile",
+    "grafico-a-barre",
+    "istogramma"
+   ],
+   "slide": "Dati categorici: barre",
+   "slide_norm": "daticategoricibarre",
+   "slide_k": 0,
+   "chunk": "02-barre"
+  },
+  {
+   "id": "distorsioni-grafiche",
+   "deck": "02",
+   "section": "02.3",
+   "label": "Distorsioni grafiche e illusioni ottiche",
+   "short": "Distorsioni grafiche",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "grafico-a-barre",
+    "base-delle-barre-da-zero"
+   ],
+   "slide": "Dati categorici: barre",
+   "slide_norm": "daticategoricibarre",
+   "slide_k": 0,
+   "chunk": "02-barre"
+  },
+  {
+   "id": "boxplot-per-confronto-di-distribuzioni",
+   "deck": "02",
+   "section": "02.3",
+   "label": "Box-plot per confrontare distribuzioni (Prima/Dopo)",
+   "short": "Box-plot a confronto",
+   "kind": "rappresentazione",
+   "optional": false,
+   "requires": [
+    "boxplot",
+    "grafico-a-barre",
+    "outlier",
+    "distanza-interquartile"
+   ],
+   "slide": "Prima",
+   "slide_norm": "prima",
+   "slide_k": 0,
+   "chunk": "02-boxplot"
+  },
+  {
+   "id": "esperimento-casuale",
+   "deck": "03",
+   "section": "03.1",
+   "label": "Esperimento probabilistico (esperimento casuale)",
+   "short": "Esperimento casuale",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [],
+   "slide": "Definizione: evento e probabilità",
+   "slide_norm": "definizioneeventoeprobabilità",
+   "slide_k": 0,
+   "chunk": "03-eventi"
+  },
+  {
+   "id": "spazio-campionario",
+   "deck": "03",
+   "section": "03.1",
+   "label": "Spazio degli eventi Ω",
+   "short": "Spazio degli eventi Ω",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "esperimento-casuale",
+    "insiemi-e-sottoinsiemi"
+   ],
+   "slide": "Definizione: evento e probabilità",
+   "slide_norm": "definizioneeventoeprobabilità",
+   "slide_k": 0,
+   "chunk": "03-eventi"
+  },
+  {
+   "id": "evento",
+   "deck": "03",
+   "section": "03.1",
+   "label": "Evento e risultato che lo verifica",
+   "short": "Evento",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "spazio-campionario",
+    "insiemi-e-sottoinsiemi"
+   ],
+   "slide": "Definizione: evento e probabilità",
+   "slide_norm": "definizioneeventoeprobabilità",
+   "slide_k": 0,
+   "chunk": "03-eventi"
+  },
+  {
+   "id": "probabilita",
+   "deck": "03",
+   "section": "03.1",
+   "label": "Probabilità (definizione frequentista, notazione P(E))",
+   "short": "Probabilità",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "evento",
+    "esperimento-casuale",
+    "frequenza-relativa",
+    "popolazione",
+    "frazioni-percentuali-decimali"
+   ],
+   "slide": "Definizione: evento e probabilità",
+   "slide_norm": "definizioneeventoeprobabilità",
+   "slide_k": 0,
+   "chunk": "03-probabilita"
+  },
+  {
+   "id": "limiti-della-probabilita",
+   "deck": "03",
+   "section": "03.1",
+   "label": "Limiti della probabilità: 0 <= P(E) <= 1",
+   "short": "0 ≤ P(E) ≤ 1",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "probabilita"
+   ],
+   "slide": "Proprietà: eventi mutuamente esclusivi",
+   "slide_norm": "proprietàeventimutuamenteesclusivi",
+   "slide_k": 0,
+   "chunk": "03-probabilita"
+  },
+  {
+   "id": "additivita-eventi-incompatibili",
+   "deck": "03",
+   "section": "03.1",
+   "label": "Probabilità dell'unione di eventi che non possono verificarsi insieme: P(A o B) = P(A) + P(B)",
+   "short": "Somma per incompatibili",
+   "kind": "regola",
+   "optional": false,
+   "requires": [
+    "probabilita",
+    "eventi-incompatibili"
+   ],
+   "slide": "Proprietà: eventi mutuamente esclusivi",
+   "slide_norm": "proprietàeventimutuamenteesclusivi",
+   "slide_k": 0,
+   "chunk": "03-operazioni"
+  },
+  {
+   "id": "eventi-incompatibili",
+   "deck": "03",
+   "section": "03.1",
+   "label": "Eventi mutuamente esclusivi",
+   "short": "Eventi incompatibili",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "evento"
+   ],
+   "slide": "Proprietà: eventi mutuamente esclusivi",
+   "slide_norm": "proprietàeventimutuamenteesclusivi",
+   "slide_k": 1,
+   "chunk": "03-operazioni"
+  },
+  {
+   "id": "notazione-evento-graffe",
+   "deck": "03",
+   "section": "03.1",
+   "label": "Notazione { } per un evento (es. {x < 90})",
+   "short": "Notazione {…}",
+   "kind": "notazione",
+   "optional": false,
+   "requires": [
+    "evento",
+    "disuguaglianze-e-intervalli"
+   ],
+   "slide": "Notazione: unione",
+   "slide_norm": "notazioneunione",
+   "slide_k": 0,
+   "chunk": "03-eventi"
+  },
+  {
+   "id": "unione-di-eventi",
+   "deck": "03",
+   "section": "03.1",
+   "label": "Unione di eventi (∪, «A o B o entrambi»)",
+   "short": "Unione (∪)",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "evento",
+    "notazione-evento-graffe",
+    "insiemi-e-sottoinsiemi"
+   ],
+   "slide": "Notazione: unione",
+   "slide_norm": "notazioneunione",
+   "slide_k": 0,
+   "chunk": "03-operazioni"
+  },
+  {
+   "id": "diagramma-di-venn",
+   "deck": "03",
+   "section": "03.1",
+   "label": "Diagramma di Venn (eventi, spazio, intersezione, complemento, somma)",
+   "short": "Diagramma di Venn",
+   "kind": "rappresentazione",
+   "optional": false,
+   "requires": [
+    "evento",
+    "spazio-campionario"
+   ],
+   "slide": "Eventi e spazio $\\Omega$",
+   "slide_norm": "eventiespazio",
+   "slide_k": 0,
+   "chunk": "03-eventi"
+  },
+  {
+   "id": "intersezione-di-eventi",
+   "deck": "03",
+   "section": "03.1",
+   "label": "Intersezione di eventi (∩, «A e B insieme»)",
+   "short": "Intersezione (∩)",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "evento",
+    "notazione-evento-graffe",
+    "insiemi-e-sottoinsiemi"
+   ],
+   "slide": "Notazione: intersezione",
+   "slide_norm": "notazioneintersezione",
+   "slide_k": 0,
+   "chunk": "03-operazioni"
+  },
+  {
+   "id": "evento-complementare",
+   "deck": "03",
+   "section": "03.1",
+   "label": "Evento complementare e P(Ā) = 1 - P(A)",
+   "short": "Complementare",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "evento",
+    "probabilita"
+   ],
+   "slide": "Notazione: complemento",
+   "slide_norm": "notazionecomplemento",
+   "slide_k": 0,
+   "chunk": "03-operazioni"
+  },
+  {
+   "id": "eventi-indipendenti",
+   "deck": "03",
+   "section": "03.2",
+   "label": "Eventi indipendenti e dipendenti: P(A∩B) = P(A)P(B)",
+   "short": "Eventi indipendenti",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "intersezione-di-eventi",
+    "probabilita"
+   ],
+   "slide": "Prodotto: indipendenza",
+   "slide_norm": "prodottoindipendenza",
+   "slide_k": 0,
+   "chunk": "03-somma-prodotto"
+  },
+  {
+   "id": "regola-del-prodotto",
+   "deck": "03",
+   "section": "03.2",
+   "label": "Teorema del prodotto per eventi (mutuamente) indipendenti",
+   "short": "Prodotto (indipendenti)",
+   "kind": "regola",
+   "optional": false,
+   "requires": [
+    "eventi-indipendenti",
+    "intersezione-di-eventi"
+   ],
+   "slide": "Prodotto: indipendenza",
+   "slide_norm": "prodottoindipendenza",
+   "slide_k": 0,
+   "chunk": "03-somma-prodotto"
+  },
+  {
+   "id": "notazione-esito-positivo-negativo",
+   "deck": "03",
+   "section": "03.2",
+   "label": "Apici + e - per esito positivo/negativo (A+, B-, SKT+)",
+   "short": "Notazione + e −",
+   "kind": "notazione",
+   "optional": false,
+   "requires": [
+    "evento"
+   ],
+   "slide": "Teorema della somma: es.",
+   "slide_norm": "teoremadellasommaes",
+   "slide_k": 0,
+   "chunk": "03-somma-prodotto"
+  },
+  {
+   "id": "regola-della-somma",
+   "deck": "03",
+   "section": "03.2",
+   "label": "Teorema della somma: P(A∪B) = P(A) + P(B) - P(A∩B)",
+   "short": "Regola della somma",
+   "kind": "regola",
+   "optional": false,
+   "requires": [
+    "unione-di-eventi",
+    "intersezione-di-eventi",
+    "probabilita"
+   ],
+   "slide": "Teorema della [somma]",
+   "slide_norm": "teoremadellasomma",
+   "slide_k": 0,
+   "chunk": "03-somma-prodotto"
+  },
+  {
+   "id": "indipendenza-del-complementare",
+   "deck": "03",
+   "section": "03.2",
+   "label": "Se A e B sono indipendenti lo sono anche Ā e B",
+   "short": "Indipendenza e complementare",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "eventi-indipendenti",
+    "evento-complementare"
+   ],
+   "slide": "Somma: indipendenza",
+   "slide_norm": "sommaindipendenza",
+   "slide_k": 0,
+   "chunk": "03-somma-prodotto"
+  },
+  {
+   "id": "somma-di-eventi-indipendenti",
+   "deck": "03",
+   "section": "03.2",
+   "label": "Unione di eventi indipendenti: P(A∪B) = P(A) + P(B)P(Ā)",
+   "short": "Somma per indipendenti",
+   "kind": "procedura",
+   "optional": false,
+   "requires": [
+    "regola-della-somma",
+    "eventi-indipendenti",
+    "evento-complementare",
+    "indipendenza-del-complementare",
+    "regola-del-prodotto"
+   ],
+   "slide": "Somma: indipendenza",
+   "slide_norm": "sommaindipendenza",
+   "slide_k": 0,
+   "chunk": "03-somma-prodotto"
+  },
+  {
+   "id": "probabilita-condizionata",
+   "deck": "03",
+   "section": "03.3",
+   "label": "Probabilità condizionata P(B|A) = P(A∩B)/P(A)",
+   "short": "Probabilità condizionata",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "probabilita",
+    "intersezione-di-eventi",
+    "evento-complementare",
+    "eventi-indipendenti"
+   ],
+   "slide": "Condizionamento: definizione",
+   "slide_norm": "condizionamentodefinizione",
+   "slide_k": 0,
+   "chunk": "03-condizionata"
+  },
+  {
+   "id": "regola-del-prodotto-generale",
+   "deck": "03",
+   "section": "03.3",
+   "label": "Regola del prodotto generale: P(A∩B) = P(B|A)P(A)",
+   "short": "Regola del prodotto",
+   "kind": "regola",
+   "optional": false,
+   "requires": [
+    "probabilita-condizionata"
+   ],
+   "slide": "Condizionamento: proprietà",
+   "slide_norm": "condizionamentoproprietà",
+   "slide_k": 0,
+   "chunk": "03-condizionata"
+  },
+  {
+   "id": "probabilita-totali-due-eventi",
+   "deck": "03",
+   "section": "03.3",
+   "label": "Probabilità totali con due eventi: P(B) = P(B|A)P(A) + P(B|Ā)P(Ā)",
+   "short": "Probabilità totali (2 eventi)",
+   "kind": "regola",
+   "optional": false,
+   "requires": [
+    "probabilita-condizionata",
+    "evento-complementare",
+    "additivita-eventi-incompatibili",
+    "regola-del-prodotto-generale"
+   ],
+   "slide": "Condizionamento: proprietà",
+   "slide_norm": "condizionamentoproprietà",
+   "slide_k": 0,
+   "chunk": "03-condizionata"
+  },
+  {
+   "id": "prevalenza",
+   "deck": "03",
+   "section": "03.3",
+   "label": "Prevalenza di una malattia (P(malattia) nella popolazione)",
+   "short": "Prevalenza",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "probabilita",
+    "popolazione",
+    "frazioni-percentuali-decimali"
+   ],
+   "slide": "Condizionamento: esempio",
+   "slide_norm": "condizionamentoesempio",
+   "slide_k": 0,
+   "chunk": "03-rischio"
+  },
+  {
+   "id": "eventi-esaustivi",
+   "deck": "03",
+   "section": "03.3",
+   "label": "Insieme esaustivo di eventi",
+   "short": "Eventi esaustivi",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "evento",
+    "eventi-incompatibili"
+   ],
+   "slide": "Teorema delle [probabilità totali]",
+   "slide_norm": "teoremadelleprobabilitàtotali",
+   "slide_k": 0,
+   "chunk": "03-condizionata"
+  },
+  {
+   "id": "teorema-delle-probabilita-totali",
+   "deck": "03",
+   "section": "03.3",
+   "label": "Teorema delle probabilità totali: P(B) = Σ P(B|Ai)P(Ai)",
+   "short": "Probabilità totali",
+   "kind": "regola",
+   "optional": false,
+   "requires": [
+    "probabilita-totali-due-eventi",
+    "eventi-esaustivi",
+    "eventi-incompatibili",
+    "sommatoria",
+    "appartenenza-insiemistica"
+   ],
+   "slide": "Teorema delle [probabilità totali]",
+   "slide_norm": "teoremadelleprobabilitàtotali",
+   "slide_k": 0,
+   "chunk": "03-condizionata"
+  },
+  {
+   "id": "rischio-relativo",
+   "deck": "03",
+   "section": "03.3",
+   "label": "Rischio relativo RR = P(B|A)/P(B|Ā)",
+   "short": "Rischio relativo",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "probabilita-condizionata",
+    "evento-complementare",
+    "eventi-indipendenti",
+    "frazioni-percentuali-decimali"
+   ],
+   "slide": "[Rischio relativo]",
+   "slide_norm": "rischiorelativo",
+   "slide_k": 0,
+   "chunk": "03-rischio"
+  },
+  {
+   "id": "rischio-assoluto",
+   "deck": "03",
+   "section": "03.3",
+   "label": "Rischio assoluto",
+   "short": "Rischio assoluto",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "probabilita"
+   ],
+   "slide": "[Rischio relativo]",
+   "slide_norm": "rischiorelativo",
+   "slide_k": 0,
+   "chunk": "03-rischio"
+  },
+  {
+   "id": "test-di-screening",
+   "deck": "03",
+   "section": "03.3",
+   "label": "Test di screening (test, malattia, esito positivo/negativo)",
+   "short": "Test di screening",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "probabilita-condizionata",
+    "evento-complementare"
+   ],
+   "slide": "Test di screening: valori predittivi",
+   "slide_norm": "testdiscreeningvaloripredittivi",
+   "slide_k": 0,
+   "chunk": "03-test"
+  },
+  {
+   "id": "valore-predittivo-positivo",
+   "deck": "03",
+   "section": "03.3",
+   "label": "Valore predittivo positivo PV+ = P(malattia|test+)",
+   "short": "VPP",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "probabilita-condizionata",
+    "test-di-screening"
+   ],
+   "slide": "Test di screening: valori predittivi",
+   "slide_norm": "testdiscreeningvaloripredittivi",
+   "slide_k": 0,
+   "chunk": "03-test"
+  },
+  {
+   "id": "valore-predittivo-negativo",
+   "deck": "03",
+   "section": "03.3",
+   "label": "Valore predittivo negativo PV- = P(no malattia|test-)",
+   "short": "VPN",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "probabilita-condizionata",
+    "evento-complementare",
+    "test-di-screening"
+   ],
+   "slide": "Test di screening: valori predittivi",
+   "slide_norm": "testdiscreeningvaloripredittivi",
+   "slide_k": 0,
+   "chunk": "03-test"
+  },
+  {
+   "id": "sensibilita",
+   "deck": "03",
+   "section": "03.3",
+   "label": "Sensibilità sens = P(test+|malattia)",
+   "short": "Sensibilità",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "probabilita-condizionata",
+    "test-di-screening"
+   ],
+   "slide": "Test di screening: sensibilità e specificità",
+   "slide_norm": "testdiscreeningsensibilitàespecificità",
+   "slide_k": 0,
+   "chunk": "03-test"
+  },
+  {
+   "id": "specificita",
+   "deck": "03",
+   "section": "03.3",
+   "label": "Specificità spec = P(test-|no malattia)",
+   "short": "Specificità",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "probabilita-condizionata",
+    "evento-complementare",
+    "test-di-screening"
+   ],
+   "slide": "Test di screening: sensibilità e specificità",
+   "slide_norm": "testdiscreeningsensibilitàespecificità",
+   "slide_k": 0,
+   "chunk": "03-test"
+  },
+  {
+   "id": "falso-positivo",
+   "deck": "03",
+   "section": "03.3",
+   "label": "Falso positivo",
+   "short": "Falso positivo",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "test-di-screening"
+   ],
+   "slide": "Test di screening: sensibilità e specificità",
+   "slide_norm": "testdiscreeningsensibilitàespecificità",
+   "slide_k": 0,
+   "chunk": "03-test"
+  },
+  {
+   "id": "falso-negativo",
+   "deck": "03",
+   "section": "03.3",
+   "label": "Falso negativo",
+   "short": "Falso negativo",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "test-di-screening"
+   ],
+   "slide": "Test di screening: sensibilità e specificità",
+   "slide_norm": "testdiscreeningsensibilitàespecificità",
+   "slide_k": 0,
+   "chunk": "03-test"
+  },
+  {
+   "id": "teorema-di-bayes",
+   "deck": "03",
+   "section": "03.4",
+   "label": "Teorema di Bayes (traccia di derivazione)",
+   "short": "Teorema di Bayes",
+   "kind": "regola",
+   "optional": false,
+   "requires": [
+    "probabilita-condizionata",
+    "regola-del-prodotto-generale",
+    "probabilita-totali-due-eventi",
+    "sensibilita",
+    "specificita",
+    "prevalenza",
+    "valore-predittivo-positivo"
+   ],
+   "slide": "Teorema di Bayes: base",
+   "slide_norm": "teoremadibayesbase",
+   "slide_k": 0,
+   "chunk": "03-bayes"
+  },
+  {
+   "id": "calcolo-dei-valori-predittivi",
+   "deck": "03",
+   "section": "03.4",
+   "label": "Calcolo di PV+ e PV- da sensibilità, specificità e prevalenza",
+   "short": "Calcolo di VPP e VPN",
+   "kind": "procedura",
+   "optional": false,
+   "requires": [
+    "teorema-di-bayes",
+    "sensibilita",
+    "specificita",
+    "prevalenza",
+    "valore-predittivo-positivo",
+    "valore-predittivo-negativo"
+   ],
+   "slide": "Teorema di Bayes: base",
+   "slide_norm": "teoremadibayesbase",
+   "slide_k": 0,
+   "chunk": "03-bayes"
+  },
+  {
+   "id": "vpp-da-conteggi",
+   "deck": "03",
+   "section": "03.4",
+   "label": "VPP = VP/(VP+FP) (formula frequentista con veri e falsi positivi)",
+   "short": "VPP dai conteggi",
+   "kind": "formula",
+   "optional": true,
+   "requires": [
+    "valore-predittivo-positivo",
+    "falso-positivo"
+   ],
+   "slide": "Approfondimento",
+   "slide_norm": "approfondimento",
+   "slide_k": 0,
+   "chunk": "03-bayes"
+  },
+  {
+   "id": "teorema-di-bayes-generalizzato",
+   "deck": "03",
+   "section": "03.4",
+   "label": "Teorema di Bayes generalizzato (k stati di malattia)",
+   "short": "Bayes generalizzato",
+   "kind": "regola",
+   "optional": false,
+   "requires": [
+    "teorema-di-bayes",
+    "eventi-esaustivi",
+    "eventi-incompatibili",
+    "teorema-delle-probabilita-totali",
+    "sommatoria",
+    "appartenenza-insiemistica"
+   ],
+   "slide": "Teorema di Bayes: generalizzazione",
+   "slide_norm": "teoremadibayesgeneralizzazione",
+   "slide_k": 0,
+   "chunk": "03-bayes"
+  },
+  {
+   "id": "variabile-casuale",
+   "deck": "04",
+   "section": "04.1",
+   "label": "Variabile casuale",
+   "short": "Variabile casuale",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "probabilita",
+    "variabile-discreta",
+    "variabile-continua"
+   ],
+   "slide": "Richiamo: [Variabile casuale]",
+   "slide_norm": "richiamovariabilecasuale",
+   "slide_k": 0,
+   "chunk": "04-vc"
+  },
+  {
+   "id": "variabile-casuale-discreta",
+   "deck": "04",
+   "section": "04.1",
+   "label": "Variabile casuale discreta",
+   "short": "V.c. discreta",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "variabile-casuale",
+    "variabile-discreta"
+   ],
+   "slide": "Richiamo: [Variabile casuale]",
+   "slide_norm": "richiamovariabilecasuale",
+   "slide_k": 0,
+   "chunk": "04-vc"
+  },
+  {
+   "id": "variabile-casuale-continua",
+   "deck": "04",
+   "section": "04.1",
+   "label": "Variabile casuale continua",
+   "short": "V.c. continua",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "variabile-casuale",
+    "variabile-continua"
+   ],
+   "slide": "Richiamo: [Variabile casuale]",
+   "slide_norm": "richiamovariabilecasuale",
+   "slide_k": 0,
+   "chunk": "04-vc"
+  },
+  {
+   "id": "funzione-matematica",
+   "deck": "04",
+   "section": "04.1",
+   "label": "Funzione (dominio, codominio)",
+   "short": "Funzione",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [],
+   "slide": "Richiamo: [Variabile casuale]",
+   "slide_norm": "richiamovariabilecasuale",
+   "slide_k": 0,
+   "chunk": "04-vc"
+  },
+  {
+   "id": "funzione-di-variabile-casuale",
+   "deck": "04",
+   "section": "04.1",
+   "label": "Funzione di una variabile casuale",
+   "short": "Funzione di v.c.",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "variabile-casuale",
+    "funzione-matematica"
+   ],
+   "slide": "Richiamo: [Variabile casuale]",
+   "slide_norm": "richiamovariabilecasuale",
+   "slide_k": 0,
+   "chunk": "04-vc"
+  },
+  {
+   "id": "distribuzione-di-probabilita",
+   "deck": "04",
+   "section": "04.1",
+   "label": "Distribuzione (modello) di probabilita",
+   "short": "Distribuzione di probabilità",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "variabile-casuale",
+    "probabilita"
+   ],
+   "slide": "[Modelli discreti]",
+   "slide_norm": "modellidiscreti",
+   "slide_k": 0,
+   "chunk": "04-massa"
+  },
+  {
+   "id": "funzione-di-massa",
+   "deck": "04",
+   "section": "04.1",
+   "label": "Funzione di massa di probabilita",
+   "short": "Funzione di massa",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "variabile-casuale-discreta",
+    "probabilita",
+    "funzione-matematica",
+    "distribuzione-di-probabilita"
+   ],
+   "slide": "Modelli discreti: massa",
+   "slide_norm": "modellidiscretimassa",
+   "slide_k": 0,
+   "chunk": "04-massa"
+  },
+  {
+   "id": "proprieta-della-funzione-di-massa",
+   "deck": "04",
+   "section": "04.1",
+   "label": "Proprieta della massa (0<=P<=1, somma = 1)",
+   "short": "Proprietà della massa",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "funzione-di-massa",
+    "sommatoria",
+    "regola-della-somma",
+    "eventi-incompatibili"
+   ],
+   "slide": "Modelli discreti: massa",
+   "slide_norm": "modellidiscretimassa",
+   "slide_k": 0,
+   "chunk": "04-massa"
+  },
+  {
+   "id": "distribuzione-cumulativa",
+   "deck": "04",
+   "section": "04.1",
+   "label": "Distribuzione cumulativa F(x)=P(X<=x)",
+   "short": "Cumulata F(x)",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "funzione-di-massa",
+    "probabilita",
+    "sommatoria"
+   ],
+   "slide": "Modelli discreti: massa",
+   "slide_norm": "modellidiscretimassa",
+   "slide_k": 0,
+   "chunk": "04-massa"
+  },
+  {
+   "id": "valore-atteso",
+   "deck": "04",
+   "section": "04.1",
+   "label": "Valore atteso E(X)",
+   "short": "Valore atteso E(X)",
+   "kind": "formula",
+   "optional": false,
+   "requires": [
+    "funzione-di-massa",
+    "media-ponderata",
+    "sommatoria",
+    "appartenenza-insiemistica"
+   ],
+   "slide": "Modelli discreti: valore atteso",
+   "slide_norm": "modellidiscretivaloreatteso",
+   "slide_k": 0,
+   "chunk": "04-momenti"
+  },
+  {
+   "id": "varianza-di-variabile-casuale",
+   "deck": "04",
+   "section": "04.1",
+   "label": "Varianza di una variabile casuale",
+   "short": "Varianza Var(X)",
+   "kind": "formula",
+   "optional": false,
+   "requires": [
+    "valore-atteso",
+    "varianza",
+    "sommatoria",
+    "funzione-di-massa"
+   ],
+   "slide": "Modelli discreti: varianza",
+   "slide_norm": "modellidiscretivarianza",
+   "slide_k": 0,
+   "chunk": "04-momenti"
+  },
+  {
+   "id": "schema-binomiale",
+   "deck": "04",
+   "section": "04.2",
+   "label": "Schema binomiale (n prove indipendenti, due esiti, p costante)",
+   "short": "Schema binomiale",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "eventi-indipendenti",
+    "variabile-dicotomica",
+    "probabilita",
+    "evento-complementare"
+   ],
+   "slide": "Binomiale: struttura",
+   "slide_norm": "binomialestruttura",
+   "slide_k": 0,
+   "chunk": "04-binomiale"
+  },
+  {
+   "id": "fattoriale",
+   "deck": "04",
+   "section": "04.2",
+   "label": "Fattoriale n!",
+   "short": "Fattoriale n!",
+   "kind": "notazione",
+   "optional": false,
+   "requires": [],
+   "slide": "[Coefficiente binomiale]",
+   "slide_norm": "coefficientebinomiale",
+   "slide_k": 0,
+   "chunk": "04-binomiale"
+  },
+  {
+   "id": "coefficiente-binomiale",
+   "deck": "04",
+   "section": "04.2",
+   "label": "Coefficiente binomiale (combinazioni)",
+   "short": "Coefficiente binomiale",
+   "kind": "formula",
+   "optional": false,
+   "requires": [
+    "fattoriale"
+   ],
+   "slide": "[Coefficiente binomiale]",
+   "slide_norm": "coefficientebinomiale",
+   "slide_k": 0,
+   "chunk": "04-binomiale"
+  },
+  {
+   "id": "distribuzione-binomiale",
+   "deck": "04",
+   "section": "04.2",
+   "label": "Distribuzione binomiale",
+   "short": "Binomiale",
+   "kind": "formula",
+   "optional": false,
+   "requires": [
+    "schema-binomiale",
+    "coefficiente-binomiale",
+    "regola-del-prodotto",
+    "eventi-indipendenti",
+    "evento-complementare",
+    "funzione-di-massa"
+   ],
+   "slide": "Distribuzione Binomiale: probabilità",
+   "slide_norm": "distribuzionebinomialeprobabilità",
+   "slide_k": 0,
+   "chunk": "04-binomiale"
+  },
+  {
+   "id": "simmetria-della-binomiale",
+   "deck": "04",
+   "section": "04.2",
+   "label": "Simmetria P(X=k)=P(X=n-k)",
+   "short": "Simmetria della binomiale",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "distribuzione-binomiale",
+    "coefficiente-binomiale"
+   ],
+   "slide": "Distribuzione [Binomiale]",
+   "slide_norm": "distribuzionebinomiale",
+   "slide_k": 1,
+   "chunk": "04-binomiale"
+  },
+  {
+   "id": "triangolo-di-tartaglia",
+   "deck": "04",
+   "section": "04.2",
+   "label": "Triangolo di Tartaglia",
+   "short": "Triangolo di Tartaglia",
+   "kind": "rappresentazione",
+   "optional": false,
+   "requires": [
+    "coefficiente-binomiale"
+   ],
+   "slide": "Coefficiente binomiale: [Triangolo di Tartaglia]",
+   "slide_norm": "coefficientebinomialetriangoloditartaglia",
+   "slide_k": 0,
+   "chunk": "04-binomiale"
+  },
+  {
+   "id": "linearita-del-valore-atteso",
+   "deck": "04",
+   "section": "04.2",
+   "label": "Linearita del valore atteso (E della somma = somma degli E)",
+   "short": "Linearità di E(X)",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "valore-atteso",
+    "sommatoria"
+   ],
+   "slide": "Binomiale: Valore atteso e varianza",
+   "slide_norm": "binomialevaloreattesoevarianza",
+   "slide_k": 0,
+   "chunk": "04-momenti"
+  },
+  {
+   "id": "varianza-della-somma-di-indipendenti",
+   "deck": "04",
+   "section": "04.2",
+   "label": "Varianza della somma di variabili indipendenti",
+   "short": "Var della somma",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "varianza-di-variabile-casuale",
+    "eventi-indipendenti"
+   ],
+   "slide": "Binomiale: Valore atteso e varianza",
+   "slide_norm": "binomialevaloreattesoevarianza",
+   "slide_k": 0,
+   "chunk": "04-momenti"
+  },
+  {
+   "id": "valore-atteso-e-varianza-della-binomiale",
+   "deck": "04",
+   "section": "04.2",
+   "label": "Valore atteso e varianza della binomiale (np, npq)",
+   "short": "E e Var della binomiale",
+   "kind": "formula",
+   "optional": false,
+   "requires": [
+    "distribuzione-binomiale",
+    "valore-atteso",
+    "varianza-di-variabile-casuale",
+    "linearita-del-valore-atteso",
+    "varianza-della-somma-di-indipendenti"
+   ],
+   "slide": "Binomiale: Valore atteso e varianza",
+   "slide_norm": "binomialevaloreattesoevarianza",
+   "slide_k": 0,
+   "chunk": "04-binomiale"
+  },
+  {
+   "id": "distribuzione-di-bernoulli",
+   "deck": "04",
+   "section": "04.2",
+   "label": "Distribuzione di Bernoulli (binomiale con n=1)",
+   "short": "Bernoulli",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "distribuzione-binomiale",
+    "variabile-dicotomica"
+   ],
+   "slide": "Singolo esperimento: grafico",
+   "slide_norm": "singoloesperimentografico",
+   "slide_k": 0,
+   "chunk": "04-binomiale"
+  },
+  {
+   "id": "forma-della-binomiale",
+   "deck": "04",
+   "section": "04.2",
+   "label": "Forma della binomiale al variare di p",
+   "short": "Forma della binomiale",
+   "kind": "rappresentazione",
+   "optional": false,
+   "requires": [
+    "distribuzione-binomiale"
+   ],
+   "slide": "10 esperimenti: grafico",
+   "slide_norm": "10esperimentigrafico",
+   "slide_k": 0,
+   "chunk": "04-binomiale"
+  },
+  {
+   "id": "tasso-di-evento",
+   "deck": "04",
+   "section": "04.3",
+   "label": "Tasso di evento lambda",
+   "short": "Tasso λ",
+   "kind": "notazione",
+   "optional": false,
+   "requires": [
+    "probabilita"
+   ],
+   "slide": "Poisson: struttura",
+   "slide_norm": "poissonstruttura",
+   "slide_k": 0,
+   "chunk": "04-poisson"
+  },
+  {
+   "id": "processo-di-poisson",
+   "deck": "04",
+   "section": "04.3",
+   "label": "Processo di Poisson (assunzioni)",
+   "short": "Processo di Poisson",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "eventi-indipendenti",
+    "evento-complementare",
+    "probabilita",
+    "variabile-cardinale"
+   ],
+   "slide": "Poisson: struttura",
+   "slide_norm": "poissonstruttura",
+   "slide_k": 0,
+   "chunk": "04-poisson"
+  },
+  {
+   "id": "costante-di-nepero",
+   "deck": "04",
+   "section": "04.3",
+   "label": "Costante di Nepero e",
+   "short": "Costante e",
+   "kind": "notazione",
+   "optional": false,
+   "requires": [],
+   "slide": "Distribuzione di Poisson: probabilità",
+   "slide_norm": "distribuzionedipoissonprobabilità",
+   "slide_k": 0,
+   "chunk": "04-poisson"
+  },
+  {
+   "id": "distribuzione-di-poisson",
+   "deck": "04",
+   "section": "04.3",
+   "label": "Distribuzione di Poisson",
+   "short": "Poisson",
+   "kind": "formula",
+   "optional": false,
+   "requires": [
+    "processo-di-poisson",
+    "tasso-di-evento",
+    "fattoriale",
+    "costante-di-nepero",
+    "funzione-di-massa",
+    "variabile-cardinale"
+   ],
+   "slide": "Distribuzione di Poisson: probabilità",
+   "slide_norm": "distribuzionedipoissonprobabilità",
+   "slide_k": 0,
+   "chunk": "04-poisson"
+  },
+  {
+   "id": "probabilita-di-almeno-k",
+   "deck": "04",
+   "section": "04.3",
+   "label": "Probabilita di 'almeno k' per complementare",
+   "short": "P(almeno k)",
+   "kind": "procedura",
+   "optional": false,
+   "requires": [
+    "evento-complementare",
+    "distribuzione-di-poisson",
+    "sommatoria"
+   ],
+   "slide": "Distribuzione di [Poisson]",
+   "slide_norm": "distribuzionedipoisson",
+   "slide_k": 1,
+   "chunk": "04-poisson"
+  },
+  {
+   "id": "valore-atteso-e-varianza-della-poisson",
+   "deck": "04",
+   "section": "04.3",
+   "label": "Valore atteso e varianza della Poisson (entrambi mu)",
+   "short": "E e Var della Poisson",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "distribuzione-di-poisson",
+    "valore-atteso",
+    "varianza-di-variabile-casuale"
+   ],
+   "slide": "Poisson: valore atteso e varianza",
+   "slide_norm": "poissonvaloreattesoevarianza",
+   "slide_k": 0,
+   "chunk": "04-poisson"
+  },
+  {
+   "id": "sovradispersione",
+   "deck": "04",
+   "section": "04.3",
+   "label": "Sovradispersione (varianza maggiore della media)",
+   "short": "Sovradispersione",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "valore-atteso-e-varianza-della-poisson",
+    "media-aritmetica",
+    "varianza"
+   ],
+   "slide": "Poisson: Polio",
+   "slide_norm": "poissonpolio",
+   "slide_k": 0,
+   "chunk": "04-poisson"
+  },
+  {
+   "id": "probabilita-di-coda",
+   "deck": "04",
+   "section": "04.3",
+   "label": "Probabilita di coda come confronto osservato/atteso",
+   "short": "Probabilità di coda",
+   "kind": "procedura",
+   "optional": false,
+   "requires": [
+    "probabilita-di-almeno-k",
+    "distribuzione-di-poisson"
+   ],
+   "slide": "Poisson: cibo cancerogeno",
+   "slide_norm": "poissoncibocancerogeno",
+   "slide_k": 0,
+   "chunk": "04-poisson"
+  },
+  {
+   "id": "approssimazione-poisson-della-binomiale",
+   "deck": "04",
+   "section": "04.3",
+   "label": "Approssimazione di Poisson alla binomiale (mu=np)",
+   "short": "Poisson per la binomiale",
+   "kind": "procedura",
+   "optional": false,
+   "requires": [
+    "distribuzione-binomiale",
+    "distribuzione-di-poisson",
+    "valore-atteso-e-varianza-della-binomiale"
+   ],
+   "slide": "Poisson: Approssimazione",
+   "slide_norm": "poissonapprossimazione",
+   "slide_k": 0,
+   "chunk": "04-poisson"
+  },
+  {
+   "id": "funzione-di-densita",
+   "deck": "04",
+   "section": "04.4",
+   "label": "Funzione di densita di probabilita",
+   "short": "Densità",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "variabile-casuale-continua",
+    "probabilita",
+    "funzione-matematica",
+    "distribuzione-di-probabilita",
+    "proprieta-della-funzione-di-massa"
+   ],
+   "slide": "[Modelli continui ]",
+   "slide_norm": "modellicontinui",
+   "slide_k": 0,
+   "chunk": "04-densita"
+  },
+  {
+   "id": "integrale",
+   "deck": "04",
+   "section": "04.4",
+   "label": "Integrale (notazione)",
+   "short": "Integrale",
+   "kind": "notazione",
+   "optional": false,
+   "requires": [],
+   "slide": "Valore atteso e [varianza]",
+   "slide_norm": "valoreattesoevarianza",
+   "slide_k": 0,
+   "chunk": "04-densita"
+  },
+  {
+   "id": "valore-atteso-e-varianza-continui",
+   "deck": "04",
+   "section": "04.4",
+   "label": "Valore atteso, varianza e deviazione standard nel continuo",
+   "short": "E e Var (continue)",
+   "kind": "formula",
+   "optional": false,
+   "requires": [
+    "valore-atteso",
+    "varianza-di-variabile-casuale",
+    "funzione-di-densita",
+    "integrale",
+    "deviazione-standard"
+   ],
+   "slide": "Valore atteso e [varianza]",
+   "slide_norm": "valoreattesoevarianza",
+   "slide_k": 0,
+   "chunk": "04-densita"
+  },
+  {
+   "id": "moda-di-distribuzione",
+   "deck": "04",
+   "section": "04.4",
+   "label": "Moda di una distribuzione",
+   "short": "Moda di distribuzione",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "moda",
+    "funzione-di-densita"
+   ],
+   "slide": "Valore atteso e [varianza]",
+   "slide_norm": "valoreattesoevarianza",
+   "slide_k": 0,
+   "chunk": "04-densita"
+  },
+  {
+   "id": "mediana-di-distribuzione",
+   "deck": "04",
+   "section": "04.4",
+   "label": "Mediana di una distribuzione",
+   "short": "Mediana di distribuzione",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "mediana",
+    "distribuzione-cumulativa",
+    "funzione-di-densita"
+   ],
+   "slide": "Valore atteso e [varianza]",
+   "slide_norm": "valoreattesoevarianza",
+   "slide_k": 0,
+   "chunk": "04-densita"
+  },
+  {
+   "id": "percentile-di-distribuzione",
+   "deck": "04",
+   "section": "04.4",
+   "label": "Percentile di una distribuzione",
+   "short": "Percentile di distribuzione",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "percentile",
+    "mediana-di-distribuzione",
+    "distribuzione-cumulativa"
+   ],
+   "slide": "Valore atteso e [varianza]",
+   "slide_norm": "valoreattesoevarianza",
+   "slide_k": 0,
+   "chunk": "04-densita"
+  },
+  {
+   "id": "posizione-di-media-mediana-moda",
+   "deck": "04",
+   "section": "04.4",
+   "label": "Posizione di media, mediana e moda (simmetria e asimmetria)",
+   "short": "Media, mediana, moda",
+   "kind": "rappresentazione",
+   "optional": false,
+   "requires": [
+    "media-aritmetica",
+    "mediana",
+    "moda",
+    "asimmetria",
+    "funzione-di-densita"
+   ],
+   "slide": "Valore atteso e [varianza]",
+   "slide_norm": "valoreattesoevarianza",
+   "slide_k": 0,
+   "chunk": "04-densita"
+  },
+  {
+   "id": "parametro",
+   "deck": "04",
+   "section": "04.4",
+   "label": "Parametro (grandezza della popolazione)",
+   "short": "Parametro",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "popolazione",
+    "valore-atteso",
+    "varianza-di-variabile-casuale",
+    "deviazione-standard"
+   ],
+   "slide": "Parametri vs [Statistiche]",
+   "slide_norm": "parametrivsstatistiche",
+   "slide_k": 0,
+   "chunk": "04-parametri"
+  },
+  {
+   "id": "statistica-campionaria",
+   "deck": "04",
+   "section": "04.4",
+   "label": "Statistica campionaria (stima dai dati)",
+   "short": "Statistica campionaria",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "campione",
+    "media-aritmetica",
+    "varianza",
+    "deviazione-standard"
+   ],
+   "slide": "Parametri vs [Statistiche]",
+   "slide_norm": "parametrivsstatistiche",
+   "slide_k": 0,
+   "chunk": "04-parametri"
+  },
+  {
+   "id": "distribuzione-normale",
+   "deck": "04",
+   "section": "04.5",
+   "label": "Distribuzione normale (densita)",
+   "short": "Normale",
+   "kind": "formula",
+   "optional": false,
+   "requires": [
+    "funzione-di-densita",
+    "valore-atteso-e-varianza-continui",
+    "costante-di-nepero",
+    "potenze-e-radici",
+    "radice-quadrata"
+   ],
+   "slide": "Distribuzione Normale: definizione",
+   "slide_norm": "distribuzionenormaledefinizione",
+   "slide_k": 0,
+   "chunk": "04-normale"
+  },
+  {
+   "id": "parametri-della-normale",
+   "deck": "04",
+   "section": "04.5",
+   "label": "Parametri della normale e notazione N(mu, sigma^2)",
+   "short": "Parametri μ e σ",
+   "kind": "notazione",
+   "optional": false,
+   "requires": [
+    "distribuzione-normale",
+    "parametro"
+   ],
+   "slide": "Distribuzione Normale: [parametri]",
+   "slide_norm": "distribuzionenormaleparametri",
+   "slide_k": 0,
+   "chunk": "04-normale"
+  },
+  {
+   "id": "localizzazione-della-normale",
+   "deck": "04",
+   "section": "04.5",
+   "label": "Localizzazione: effetto di mu",
+   "short": "Effetto di μ",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "parametri-della-normale"
+   ],
+   "slide": "Distribuzione Normale: [localizzazione]",
+   "slide_norm": "distribuzionenormalelocalizzazione",
+   "slide_k": 0,
+   "chunk": "04-normale"
+  },
+  {
+   "id": "forma-della-normale",
+   "deck": "04",
+   "section": "04.5",
+   "label": "Forma: effetto di sigma",
+   "short": "Effetto di σ",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "parametri-della-normale"
+   ],
+   "slide": "Distribuzione Normale: [forma]",
+   "slide_norm": "distribuzionenormaleforma",
+   "slide_k": 0,
+   "chunk": "04-normale"
+  },
+  {
+   "id": "normale-standardizzata",
+   "deck": "04",
+   "section": "04.5",
+   "label": "Normale standard N(0,1)",
+   "short": "Normale standard",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "distribuzione-normale"
+   ],
+   "slide": "Distribuzione Normale [Standard]",
+   "slide_norm": "distribuzionenormalestandard",
+   "slide_k": 0,
+   "chunk": "04-normale"
+  },
+  {
+   "id": "simmetria-della-normale",
+   "deck": "04",
+   "section": "04.5",
+   "label": "Simmetria della normale (f(x)=f(-x))",
+   "short": "Simmetria della normale",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "normale-standardizzata",
+    "funzione-di-densita"
+   ],
+   "slide": "Distribuzione Standard: [simmetria]",
+   "slide_norm": "distribuzionestandardsimmetria",
+   "slide_k": 0,
+   "chunk": "04-normale"
+  },
+  {
+   "id": "regola-empirica-68-95-99",
+   "deck": "04",
+   "section": "04.5",
+   "label": "Aree notevoli (68%, 95%, 99%)",
+   "short": "68-95-99%",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "normale-standardizzata",
+    "funzione-di-densita"
+   ],
+   "slide": "Distribuzione Standard: valori notevoli",
+   "slide_norm": "distribuzionestandardvalorinotevoli",
+   "slide_k": 0,
+   "chunk": "04-normale"
+  },
+  {
+   "id": "cumulata-normale-standard",
+   "deck": "04",
+   "section": "04.5",
+   "label": "Cumulata della normale standard Phi(x)",
+   "short": "Cumulata Φ",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "distribuzione-cumulativa",
+    "normale-standardizzata"
+   ],
+   "slide": "Distribuzione Standard: cumulativa",
+   "slide_norm": "distribuzionestandardcumulativa",
+   "slide_k": 0,
+   "chunk": "04-tavole"
+  },
+  {
+   "id": "tavole-della-normale",
+   "deck": "04",
+   "section": "04.5",
+   "label": "Tavole della normale standard",
+   "short": "Tavole della normale",
+   "kind": "procedura",
+   "optional": false,
+   "requires": [
+    "cumulata-normale-standard"
+   ],
+   "slide": "Distribuzione cumulativa Standard: applicazione",
+   "slide_norm": "distribuzionecumulativastandardapplicazione",
+   "slide_k": 0,
+   "chunk": "04-tavole"
+  },
+  {
+   "id": "simmetria-della-cumulata",
+   "deck": "04",
+   "section": "04.5",
+   "label": "Phi(-x)=1-Phi(x)",
+   "short": "Φ(−x) = 1 − Φ(x)",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "simmetria-della-normale",
+    "evento-complementare",
+    "cumulata-normale-standard",
+    "tavole-della-normale"
+   ],
+   "slide": "Distribuzione Standard: strategia simmetrica",
+   "slide_norm": "distribuzionestandardstrategiasimmetrica",
+   "slide_k": 0,
+   "chunk": "04-tavole"
+  },
+  {
+   "id": "percentile-della-normale-standard",
+   "deck": "04",
+   "section": "04.5",
+   "label": "Percentile della normale standard z_p",
+   "short": "Percentili di Z",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "percentile-di-distribuzione",
+    "cumulata-normale-standard"
+   ],
+   "slide": "Distribuzione Normale: [percentili]",
+   "slide_norm": "distribuzionenormalepercentili",
+   "slide_k": 0,
+   "chunk": "04-tavole"
+  },
+  {
+   "id": "calcolo-dei-percentili-della-normale",
+   "deck": "04",
+   "section": "04.5",
+   "label": "Calcolo dei percentili della normale (z_p=-z_(1-p))",
+   "short": "Calcolo dei percentili",
+   "kind": "procedura",
+   "optional": false,
+   "requires": [
+    "percentile-della-normale-standard",
+    "simmetria-della-normale",
+    "tavole-della-normale",
+    "regola-empirica-68-95-99"
+   ],
+   "slide": "Percentili Standard: [calcolo]",
+   "slide_norm": "percentilistandardcalcolo",
+   "slide_k": 0,
+   "chunk": "04-tavole"
+  },
+  {
+   "id": "standardizzazione",
+   "deck": "04",
+   "section": "04.5",
+   "label": "Standardizzazione Z=(X-mu)/sigma",
+   "short": "Standardizzazione",
+   "kind": "procedura",
+   "optional": false,
+   "requires": [
+    "distribuzione-normale",
+    "normale-standardizzata",
+    "funzione-di-variabile-casuale",
+    "parametri-della-normale",
+    "cumulata-normale-standard",
+    "regola-della-somma"
+   ],
+   "slide": "Normale Standard: [trasformazioni]",
+   "slide_norm": "normalestandardtrasformazioni",
+   "slide_k": 0,
+   "chunk": "04-tavole"
+  },
+  {
+   "id": "correzione-di-continuita",
+   "deck": "04",
+   "section": "04.6",
+   "label": "Correzione di continuita (+-1/2)",
+   "short": "Correzione di continuità",
+   "kind": "procedura",
+   "optional": true,
+   "requires": [
+    "distribuzione-binomiale",
+    "funzione-di-densita"
+   ],
+   "slide": "Approssimazione alla Normale: Binomiale",
+   "slide_norm": "approssimazioneallanormalebinomiale",
+   "slide_k": 0,
+   "chunk": "04-approssimazioni"
+  },
+  {
+   "id": "approssimazione-normale-della-binomiale",
+   "deck": "04",
+   "section": "04.6",
+   "label": "Approssimazione normale della binomiale N(np, npq)",
+   "short": "Normale per la binomiale",
+   "kind": "procedura",
+   "optional": true,
+   "requires": [
+    "distribuzione-binomiale",
+    "distribuzione-normale",
+    "valore-atteso-e-varianza-della-binomiale",
+    "standardizzazione",
+    "correzione-di-continuita"
+   ],
+   "slide": "Approssimazione alla Normale: Binomiale",
+   "slide_norm": "approssimazioneallanormalebinomiale",
+   "slide_k": 0,
+   "chunk": "04-approssimazioni"
+  },
+  {
+   "id": "inferenza-statistica",
+   "deck": "05",
+   "section": "05.1",
+   "label": "Inferenza statistica",
+   "short": "Inferenza",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "campione",
+    "popolazione",
+    "distribuzione-di-probabilita"
+   ],
+   "slide": "Inferenza: di cosa si tratta",
+   "slide_norm": "inferenzadicosasitratta",
+   "slide_k": 0,
+   "chunk": "05-campioni"
+  },
+  {
+   "id": "campione-casuale",
+   "deck": "05",
+   "section": "05.1",
+   "label": "Campione casuale",
+   "short": "Campione casuale",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "campione",
+    "popolazione",
+    "eventi-indipendenti",
+    "probabilita"
+   ],
+   "slide": "Inferenza: campioni e [popolazioni]",
+   "slide_norm": "inferenzacampioniepopolazioni",
+   "slide_k": 0,
+   "chunk": "05-campioni"
+  },
+  {
+   "id": "campione-casuale-semplice",
+   "deck": "05",
+   "section": "05.1",
+   "label": "Campione casuale semplice",
+   "short": "Campione casuale semplice",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "campione-casuale"
+   ],
+   "slide": "Inferenza: campioni e [popolazioni]",
+   "slide_norm": "inferenzacampioniepopolazioni",
+   "slide_k": 0,
+   "chunk": "05-campioni"
+  },
+  {
+   "id": "popolazione-target",
+   "deck": "05",
+   "section": "05.1",
+   "label": "Popolazione target",
+   "short": "Popolazione target",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "popolazione"
+   ],
+   "slide": "Inferenza: campioni e [popolazioni]",
+   "slide_norm": "inferenzacampioniepopolazioni",
+   "slide_k": 0,
+   "chunk": "05-campioni"
+  },
+  {
+   "id": "stima-puntuale",
+   "deck": "05",
+   "section": "05.2",
+   "label": "Stima puntuale",
+   "short": "Stima puntuale",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "campione",
+    "parametro"
+   ],
+   "slide": "Stima puntuale: [media]",
+   "slide_norm": "stimapuntualemedia",
+   "slide_k": 0,
+   "chunk": "05-stima"
+  },
+  {
+   "id": "stimatore",
+   "deck": "05",
+   "section": "05.2",
+   "label": "Stimatore puntuale della media (media campionaria X̄)",
+   "short": "Stimatore",
+   "kind": "formula",
+   "optional": false,
+   "requires": [
+    "stima-puntuale",
+    "media-aritmetica",
+    "sommatoria",
+    "variabile-casuale"
+   ],
+   "slide": "Stima puntuale: [media]",
+   "slide_norm": "stimapuntualemedia",
+   "slide_k": 0,
+   "chunk": "05-stima"
+  },
+  {
+   "id": "numerosita-campionaria",
+   "deck": "05",
+   "section": "05.2",
+   "label": "Ampiezza campionaria n",
+   "short": "Numerosità n",
+   "kind": "notazione",
+   "optional": false,
+   "requires": [
+    "campione"
+   ],
+   "slide": "Stima puntuale: [media]",
+   "slide_norm": "stimapuntualemedia",
+   "slide_k": 0,
+   "chunk": "05-stima"
+  },
+  {
+   "id": "distribuzione-campionaria",
+   "deck": "05",
+   "section": "05.2",
+   "label": "Distribuzione campionaria",
+   "short": "Distribuzione campionaria",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "campione",
+    "distribuzione-di-probabilita",
+    "variabile-casuale",
+    "popolazione-target",
+    "numerosita-campionaria"
+   ],
+   "slide": "Stima puntuale: [media]",
+   "slide_norm": "stimapuntualemedia",
+   "slide_k": 0,
+   "chunk": "05-media-campionaria"
+  },
+  {
+   "id": "stimatore-non-distorto",
+   "deck": "05",
+   "section": "05.2",
+   "label": "Stimatore non distorto",
+   "short": "Stimatore non distorto",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "stimatore",
+    "valore-atteso",
+    "parametro"
+   ],
+   "slide": "Stima puntuale: [media]",
+   "slide_norm": "stimapuntualemedia",
+   "slide_k": 0,
+   "chunk": "05-stima"
+  },
+  {
+   "id": "varianza-di-trasformazione-lineare",
+   "deck": "05",
+   "section": "05.2",
+   "label": "Varianza di aX",
+   "short": "Var(aX)",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "varianza-di-variabile-casuale"
+   ],
+   "slide": "Stima puntuale: [errore standard]",
+   "slide_norm": "stimapuntualeerrorestandard",
+   "slide_k": 0,
+   "chunk": "05-media-campionaria"
+  },
+  {
+   "id": "varianza-della-media-campionaria",
+   "deck": "05",
+   "section": "05.2",
+   "label": "Varianza della media campionaria σ²/n",
+   "short": "Varianza della media",
+   "kind": "formula",
+   "optional": false,
+   "requires": [
+    "stimatore",
+    "varianza-di-variabile-casuale",
+    "numerosita-campionaria",
+    "varianza-della-somma-di-indipendenti",
+    "varianza-di-trasformazione-lineare"
+   ],
+   "slide": "Stima puntuale: [errore standard]",
+   "slide_norm": "stimapuntualeerrorestandard",
+   "slide_k": 0,
+   "chunk": "05-media-campionaria"
+  },
+  {
+   "id": "errore-standard",
+   "deck": "05",
+   "section": "05.2",
+   "label": "Errore standard della media",
+   "short": "Errore standard",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "varianza-della-media-campionaria",
+    "deviazione-standard"
+   ],
+   "slide": "Stima puntuale: [errore standard]",
+   "slide_norm": "stimapuntualeerrorestandard",
+   "slide_k": 0,
+   "chunk": "05-media-campionaria"
+  },
+  {
+   "id": "teorema-del-limite-centrale",
+   "deck": "05",
+   "section": "05.2",
+   "label": "Teorema del limite centrale",
+   "short": "Limite centrale",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "distribuzione-normale",
+    "campione-casuale-semplice",
+    "parametro",
+    "varianza-della-media-campionaria",
+    "distribuzione-campionaria",
+    "numerosita-campionaria"
+   ],
+   "slide": "[Teorema del Limite Centrale]",
+   "slide_norm": "teoremadellimitecentrale",
+   "slide_k": 0,
+   "chunk": "05-media-campionaria"
+  },
+  {
+   "id": "intervallo-di-confidenza",
+   "deck": "05",
+   "section": "05.3",
+   "label": "Intervallo di confidenza",
+   "short": "Intervallo di confidenza",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "stima-puntuale",
+    "probabilita"
+   ],
+   "slide": "Intervalli di Confidenza: Obiettivo",
+   "slide_norm": "intervallidiconfidenzaobiettivo",
+   "slide_k": 0,
+   "chunk": "05-ic"
+  },
+  {
+   "id": "derivazione-ic-con-z",
+   "deck": "05",
+   "section": "05.3",
+   "label": "Derivazione dell'IC (passaggio a Z e inversione)",
+   "short": "Derivazione dell'IC",
+   "kind": "procedura",
+   "optional": false,
+   "requires": [
+    "standardizzazione",
+    "normale-standardizzata",
+    "tavole-della-normale",
+    "teorema-del-limite-centrale",
+    "errore-standard",
+    "probabilita",
+    "manipolazione-di-disuguaglianze"
+   ],
+   "slide": "I.C.: Derivazione",
+   "slide_norm": "icderivazione",
+   "slide_k": 0,
+   "chunk": "05-ic"
+  },
+  {
+   "id": "ic-media-varianza-nota",
+   "deck": "05",
+   "section": "05.3",
+   "label": "IC per la media con varianza nota",
+   "short": "IC, σ nota",
+   "kind": "formula",
+   "optional": false,
+   "requires": [
+    "intervallo-di-confidenza",
+    "stimatore",
+    "errore-standard",
+    "tavole-della-normale",
+    "derivazione-ic-con-z"
+   ],
+   "slide": "Definizione I.C. per la media (varianza nota)",
+   "slide_norm": "definizioneicperlamediavarianzanota",
+   "slide_k": 0,
+   "chunk": "05-ic"
+  },
+  {
+   "id": "livello-di-confidenza",
+   "deck": "05",
+   "section": "05.4",
+   "label": "Livello di confidenza",
+   "short": "Livello di confidenza",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "intervallo-di-confidenza",
+    "distribuzione-campionaria"
+   ],
+   "slide": "IC osservazioni: \"confidenza\"",
+   "slide_norm": "icosservazioniconfidenza",
+   "slide_k": 0,
+   "chunk": "05-ic"
+  },
+  {
+   "id": "interpretazione-dell-intervallo-di-confidenza",
+   "deck": "05",
+   "section": "05.4",
+   "label": "Interpretazione dell'IC (prima e dopo il campionamento)",
+   "short": "Interpretazione dell'IC",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "intervallo-di-confidenza",
+    "livello-di-confidenza",
+    "variabile-casuale",
+    "parametro",
+    "probabilita"
+   ],
+   "slide": "IC osservazioni: \"confidenza\"",
+   "slide_norm": "icosservazioniconfidenza",
+   "slide_k": 0,
+   "chunk": "05-ic"
+  },
+  {
+   "id": "campione-rappresentativo",
+   "deck": "05",
+   "section": "05.4",
+   "label": "Campione rappresentativo",
+   "short": "Campione rappresentativo",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "campione",
+    "popolazione"
+   ],
+   "slide": "IC osservazioni: \"confidenza\"",
+   "slide_norm": "icosservazioniconfidenza",
+   "slide_k": 0,
+   "chunk": "05-campioni"
+  },
+  {
+   "id": "ic-a-livello-generico",
+   "deck": "05",
+   "section": "05.4",
+   "label": "IC a livello 1-α",
+   "short": "IC a livello 1−α",
+   "kind": "formula",
+   "optional": false,
+   "requires": [
+    "ic-media-varianza-nota",
+    "percentile-della-normale-standard",
+    "livello-di-confidenza"
+   ],
+   "slide": "IC osservazioni: [unicità]",
+   "slide_norm": "icosservazioniunicità",
+   "slide_k": 0,
+   "chunk": "05-ic"
+  },
+  {
+   "id": "ampiezza-dell-intervallo-di-confidenza",
+   "deck": "05",
+   "section": "05.4",
+   "label": "Ampiezza dell'IC e sue dipendenze (n, σ, livello)",
+   "short": "Ampiezza dell'IC",
+   "kind": "formula",
+   "optional": false,
+   "requires": [
+    "ic-a-livello-generico",
+    "errore-standard"
+   ],
+   "slide": "IC osservazioni: [ampiezza]",
+   "slide_norm": "icosservazioniampiezza",
+   "slide_k": 0,
+   "chunk": "05-ic"
+  },
+  {
+   "id": "controllo-della-variabilita-di-misura",
+   "deck": "05",
+   "section": "05.4",
+   "label": "Controllo della precisione (misure accurate, timing, mediazione)",
+   "short": "Precisione delle misure",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "ampiezza-dell-intervallo-di-confidenza"
+   ],
+   "slide": "IC osservazioni: [sotto controllo]",
+   "slide_norm": "icosservazionisottocontrollo",
+   "slide_k": 0,
+   "chunk": "05-ic"
+  },
+  {
+   "id": "distribuzione-t-di-student",
+   "deck": "05",
+   "section": "05.5",
+   "label": "Distribuzione t di Student",
+   "short": "t di Student",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "distribuzione-normale",
+    "stimatore",
+    "deviazione-standard",
+    "gradi-di-liberta",
+    "eventi-indipendenti"
+   ],
+   "slide": "Distribuzione [t di Student]",
+   "slide_norm": "distribuzionetdistudent",
+   "slide_k": 1,
+   "chunk": "05-t"
+  },
+  {
+   "id": "gradi-di-liberta",
+   "deck": "05",
+   "section": "05.5",
+   "label": "Gradi di libertà",
+   "short": "Gradi di libertà",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "numerosita-campionaria"
+   ],
+   "slide": "Distribuzione [t di Student]",
+   "slide_norm": "distribuzionetdistudent",
+   "slide_k": 1,
+   "chunk": "05-t"
+  },
+  {
+   "id": "percentile-della-t-di-student",
+   "deck": "05",
+   "section": "05.5",
+   "label": "Percentile della t di Student t_{d,p}",
+   "short": "Percentili di t",
+   "kind": "notazione",
+   "optional": false,
+   "requires": [
+    "percentile",
+    "distribuzione-t-di-student",
+    "gradi-di-liberta"
+   ],
+   "slide": "Distribuzione [t di Student]",
+   "slide_norm": "distribuzionetdistudent",
+   "slide_k": 1,
+   "chunk": "05-t"
+  },
+  {
+   "id": "ic-media-varianza-ignota",
+   "deck": "05",
+   "section": "05.5",
+   "label": "IC per la media con varianza ignota",
+   "short": "IC, σ ignota",
+   "kind": "formula",
+   "optional": false,
+   "requires": [
+    "ic-media-varianza-nota",
+    "percentile-della-t-di-student",
+    "gradi-di-liberta",
+    "deviazione-standard"
+   ],
+   "slide": "IC per la media: [varianza non nota]",
+   "slide_norm": "icperlamediavarianzanonnota",
+   "slide_k": 0,
+   "chunk": "05-t"
+  },
+  {
+   "id": "confronto-tra-ic-e-valore-di-riferimento",
+   "deck": "05",
+   "section": "05.5",
+   "label": "Uso dell'IC per confrontare con un valore di riferimento",
+   "short": "IC e valore di riferimento",
+   "kind": "procedura",
+   "optional": false,
+   "requires": [
+    "ic-media-varianza-nota",
+    "interpretazione-dell-intervallo-di-confidenza",
+    "probabilita"
+   ],
+   "slide": "IC: [Esempio]",
+   "slide_norm": "icesempio",
+   "slide_k": 0,
+   "chunk": "05-t"
+  },
+  {
+   "id": "ipotesi-nulla",
+   "deck": "05",
+   "section": "05.6",
+   "label": "Ipotesi nulla H0",
+   "short": "Ipotesi nulla H₀",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "parametro"
+   ],
+   "slide": "Ipotesi: definizioni",
+   "slide_norm": "ipotesidefinizioni",
+   "slide_k": 0,
+   "chunk": "05-ipotesi"
+  },
+  {
+   "id": "ipotesi-alternativa",
+   "deck": "05",
+   "section": "05.6",
+   "label": "Ipotesi alternativa H1",
+   "short": "Ipotesi alternativa H₁",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "ipotesi-nulla"
+   ],
+   "slide": "Ipotesi: definizioni",
+   "slide_norm": "ipotesidefinizioni",
+   "slide_k": 0,
+   "chunk": "05-ipotesi"
+  },
+  {
+   "id": "test-d-ipotesi",
+   "deck": "05",
+   "section": "05.6",
+   "label": "Test d'ipotesi",
+   "short": "Test d'ipotesi",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "ipotesi-nulla",
+    "ipotesi-alternativa",
+    "parametro"
+   ],
+   "slide": "Ipotesi: definizioni",
+   "slide_norm": "ipotesidefinizioni",
+   "slide_k": 0,
+   "chunk": "05-ipotesi"
+  },
+  {
+   "id": "rifiuto-e-non-rifiuto-di-h0",
+   "deck": "05",
+   "section": "05.6",
+   "label": "Rifiutare / non rifiutare H0 (decisione del test)",
+   "short": "Rifiutare H₀ o no",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "ipotesi-nulla"
+   ],
+   "slide": "Ipotesi: [decisioni]",
+   "slide_norm": "ipotesidecisioni",
+   "slide_k": 0,
+   "chunk": "05-ipotesi"
+  },
+  {
+   "id": "errore-di-primo-tipo",
+   "deck": "05",
+   "section": "05.6",
+   "label": "Errore di I tipo (α)",
+   "short": "Errore di I tipo",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "ipotesi-nulla",
+    "probabilita-condizionata",
+    "rifiuto-e-non-rifiuto-di-h0"
+   ],
+   "slide": "Ipotesi: [decisioni]",
+   "slide_norm": "ipotesidecisioni",
+   "slide_k": 0,
+   "chunk": "05-ipotesi"
+  },
+  {
+   "id": "errore-di-secondo-tipo",
+   "deck": "05",
+   "section": "05.6",
+   "label": "Errore di II tipo (β)",
+   "short": "Errore di II tipo",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "ipotesi-nulla",
+    "probabilita-condizionata",
+    "rifiuto-e-non-rifiuto-di-h0"
+   ],
+   "slide": "Ipotesi: [decisioni]",
+   "slide_norm": "ipotesidecisioni",
+   "slide_k": 0,
+   "chunk": "05-ipotesi"
+  },
+  {
+   "id": "significativita-statistica",
+   "deck": "05",
+   "section": "05.6",
+   "label": "Livello di significatività (α)",
+   "short": "Significatività α",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "errore-di-primo-tipo"
+   ],
+   "slide": "Ipotesi: [decisioni]",
+   "slide_norm": "ipotesidecisioni",
+   "slide_k": 0,
+   "chunk": "05-ipotesi"
+  },
+  {
+   "id": "potenza",
+   "deck": "05",
+   "section": "05.6",
+   "label": "Potenza (1-β)",
+   "short": "Potenza 1−β",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "errore-di-secondo-tipo"
+   ],
+   "slide": "Ipotesi: [decisioni]",
+   "slide_norm": "ipotesidecisioni",
+   "slide_k": 0,
+   "chunk": "05-ipotesi"
+  },
+  {
+   "id": "criterio-di-costruzione-del-test",
+   "deck": "05",
+   "section": "05.6",
+   "label": "Criterio di costruzione del test (α fissato, β minimo)",
+   "short": "Costruzione del test",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "significativita-statistica",
+    "potenza"
+   ],
+   "slide": "Ipotesi: [decisioni]",
+   "slide_norm": "ipotesidecisioni",
+   "slide_k": 0,
+   "chunk": "05-ipotesi"
+  },
+  {
+   "id": "statistica-test",
+   "deck": "05",
+   "section": "05.6",
+   "label": "Statistica test",
+   "short": "Statistica test",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "stimatore",
+    "distribuzione-campionaria"
+   ],
+   "slide": "Test: [media di una Normale]",
+   "slide_norm": "testmediadiunanormale",
+   "slide_k": 0,
+   "chunk": "05-test-z"
+  },
+  {
+   "id": "valore-critico",
+   "deck": "05",
+   "section": "05.6",
+   "label": "Valore critico c",
+   "short": "Valore critico",
+   "kind": "procedura",
+   "optional": false,
+   "requires": [
+    "statistica-test",
+    "ipotesi-nulla",
+    "errore-standard",
+    "standardizzazione",
+    "percentile-della-normale-standard",
+    "significativita-statistica",
+    "distribuzione-cumulativa",
+    "probabilita-condizionata"
+   ],
+   "slide": "Test: [media di una Normale]",
+   "slide_norm": "testmediadiunanormale",
+   "slide_k": 0,
+   "chunk": "05-test-z"
+  },
+  {
+   "id": "regione-di-rifiuto",
+   "deck": "05",
+   "section": "05.6",
+   "label": "Regione di rifiuto (e di accettazione)",
+   "short": "Regione di rifiuto",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "valore-critico",
+    "statistica-test"
+   ],
+   "slide": "Test: [media di una Normale]",
+   "slide_norm": "testmediadiunanormale",
+   "slide_k": 0,
+   "chunk": "05-test-z"
+  },
+  {
+   "id": "test-sulla-media-varianza-nota",
+   "deck": "05",
+   "section": "05.6",
+   "label": "Test sulla media con varianza nota (H1: μ<μ0)",
+   "short": "Test sulla media, σ nota",
+   "kind": "procedura",
+   "optional": false,
+   "requires": [
+    "regione-di-rifiuto",
+    "valore-critico",
+    "ipotesi-alternativa",
+    "errore-standard"
+   ],
+   "slide": "Test: [media di una Normale]",
+   "slide_norm": "testmediadiunanormale",
+   "slide_k": 0,
+   "chunk": "05-test-z"
+  },
+  {
+   "id": "statistica-z-del-test",
+   "deck": "05",
+   "section": "05.6",
+   "label": "Statistica z del test",
+   "short": "Statistica z",
+   "kind": "formula",
+   "optional": false,
+   "requires": [
+    "test-sulla-media-varianza-nota",
+    "standardizzazione"
+   ],
+   "slide": "Test: esempio",
+   "slide_norm": "testesempio",
+   "slide_k": 0,
+   "chunk": "05-test-z"
+  },
+  {
+   "id": "p-value",
+   "deck": "05",
+   "section": "05.6",
+   "label": "P-value",
+   "short": "p-value",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "statistica-z-del-test",
+    "ipotesi-nulla",
+    "regione-di-rifiuto",
+    "significativita-statistica",
+    "probabilita"
+   ],
+   "slide": "[P-value]",
+   "slide_norm": "pvalue",
+   "slide_k": 0,
+   "chunk": "05-p-value"
+  },
+  {
+   "id": "calcolo-del-p-value",
+   "deck": "05",
+   "section": "05.6",
+   "label": "Calcolo del p-value (una coda)",
+   "short": "Calcolo del p-value",
+   "kind": "procedura",
+   "optional": false,
+   "requires": [
+    "p-value",
+    "statistica-z-del-test",
+    "distribuzione-cumulativa",
+    "tavole-della-normale"
+   ],
+   "slide": "[P-value]",
+   "slide_norm": "pvalue",
+   "slide_k": 0,
+   "chunk": "05-p-value"
+  },
+  {
+   "id": "test-a-una-coda",
+   "deck": "05",
+   "section": "05.6",
+   "label": "Test a una coda (alternativa minore e maggiore)",
+   "short": "Test a una coda",
+   "kind": "procedura",
+   "optional": false,
+   "requires": [
+    "ipotesi-alternativa",
+    "statistica-z-del-test",
+    "percentile-della-normale-standard"
+   ],
+   "slide": "[P-value]",
+   "slide_norm": "pvalue",
+   "slide_k": 0,
+   "chunk": "05-test-z"
+  },
+  {
+   "id": "test-a-due-code",
+   "deck": "05",
+   "section": "05.6",
+   "label": "Test a due code",
+   "short": "Test a due code",
+   "kind": "procedura",
+   "optional": false,
+   "requires": [
+    "test-a-una-coda",
+    "ipotesi-alternativa",
+    "unione-di-eventi",
+    "eventi-incompatibili",
+    "regola-della-somma",
+    "percentile-della-normale-standard"
+   ],
+   "slide": "Test: due code",
+   "slide_norm": "testduecode",
+   "slide_k": 0,
+   "chunk": "05-test-z"
+  },
+  {
+   "id": "p-value-a-due-code",
+   "deck": "05",
+   "section": "05.6",
+   "label": "P-value a due code",
+   "short": "p-value a due code",
+   "kind": "formula",
+   "optional": false,
+   "requires": [
+    "calcolo-del-p-value",
+    "test-a-due-code"
+   ],
+   "slide": "Test a due code: p-value",
+   "slide_norm": "testaduecodepvalue",
+   "slide_k": 0,
+   "chunk": "05-p-value"
+  },
+  {
+   "id": "test-t-per-la-media",
+   "deck": "05",
+   "section": "05.6",
+   "label": "Test t sulla media (varianza non nota)",
+   "short": "Test t sulla media",
+   "kind": "procedura",
+   "optional": false,
+   "requires": [
+    "distribuzione-t-di-student",
+    "gradi-di-liberta",
+    "percentile-della-t-di-student",
+    "test-a-due-code",
+    "p-value"
+   ],
+   "slide": "Test: varianza non nota",
+   "slide_norm": "testvarianzanonnota",
+   "slide_k": 0,
+   "chunk": "05-p-value"
+  },
+  {
+   "id": "dualita-test-intervallo-di-confidenza",
+   "deck": "05",
+   "section": "05.6",
+   "label": "Dualità fra test a due code e IC",
+   "short": "Test e IC",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "test-a-due-code",
+    "ic-a-livello-generico",
+    "significativita-statistica",
+    "ipotesi-nulla"
+   ],
+   "slide": "P-value e [CI]",
+   "slide_norm": "pvalueeci",
+   "slide_k": 0,
+   "chunk": "05-p-value"
+  }
+ ]
+}

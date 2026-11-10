@@ -30,7 +30,8 @@ async () => {
         if (r.height && r.width) bottom = Math.max(bottom, r.bottom - top);
       });
       if (bottom > ph - 50) out.push(label + ": tagliato, contenuto " + Math.round(bottom) + "px su " + Math.round(ph) + " (" + n + " pag.)");
-      s.querySelectorAll(".panel-tabset").forEach((ts) => {
+      // nelle slide delle mappe l'indice si nasconde apposta (statmed.scss)
+      if (!s.classList.contains("mappa")) s.querySelectorAll(".panel-tabset").forEach((ts) => {
         const panes = [...ts.querySelectorAll(":scope > .tab-content > div")];
         const hidden = panes.filter((d) => getComputedStyle(d).display === "none").length;
         const titled = panes.filter((d) => d.querySelector(":scope > .tab-print-title")).length;

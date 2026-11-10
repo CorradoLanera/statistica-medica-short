@@ -1,0 +1,41 @@
+## Mappa: tutte le sezioni {.mappa}
+
+::: {.panel-tabset}
+
+### Mappa
+
+```{mermaid}
+%%| echo: false
+%%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
+flowchart TB
+  k_n_01_r_rstudio["R e RStudio (12)"]:::opt
+  k_n_01_r_oggetti["Oggetti e operazioni (6)"]:::opt
+  k_n_01_r_logica["Confronti e logica (3)"]:::opt
+  k_n_01_r_dati["Dati e pacchetti (3)"]:::opt
+  k_n_01_r_logica --> k_n_01_r_oggetti
+  k_n_01_r_oggetti --> k_n_01_r_dati
+  k_n_01_r_oggetti --> k_n_01_r_logica
+  k_n_01_r_rstudio --> k_n_01_r_oggetti
+  classDef cur fill:#e6f0fa,stroke:#035AA6,color:#000000
+  classDef prev fill:#f4f4f4,stroke:#9a9a9a,color:#555555,stroke-dasharray:4 3
+  classDef opt fill:#ffffff,stroke:#035AA6,color:#555555,stroke-dasharray:2 2
+```
+
+::: {.mappa-legenda}
+
+Ogni freccia va da un concetto a quelli che lo usano. Ogni riquadro è un blocco di concetti che si usano insieme; fra parentesi quanti sono.
+
+:::
+
+### Blocchi
+
+::: {.mappa-indice .mappa-blocchi}
+
+- **R e RStudio**: [R](#/panoramica), [Analisi, grafici, report](#/panoramica), [Codice R](#/panoramica), [Pacchetto](#/panoramica), [RStudio](#/panoramica), [Editor](#/panoramica), [Console](#/panoramica), [Viewer](#/panoramica), [Navigatore file](#/panoramica), [Posit Cloud](#/cosa-faremo), [Installare R](#/installazione), [Installare RStudio](#/installazione-1)
+- **Oggetti e operazioni**: [Aritmetica](#/algebra-elementare), [Tipi di dato](#/vettori), [Vettore](#/vettori), [Assegnamento](#/assegnamento-memorizzazione), [Vettorizzazione](#/logica-booleana-vettoriale), [which()](#/logica-booleana-vettoriale)
+- **Confronti e logica**: [Confronti](#/confronti-booleani), [Operatori logici](#/logica-booleana), [NA](#/logica-booleana-vettoriale)
+- **Dati e pacchetti**: [Dataframe](#/dataframe), [Fattore](#/dataframe), [Caricare pacchetti](#/pacchetti)
+
+:::
+
+:::

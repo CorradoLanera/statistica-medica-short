@@ -349,6 +349,8 @@ $$0^2(0.129)+\ldots+6^2(0.017)-2.038^2=`r round(var_otiti,3)`$$
 
 :::
 
+{{< include _mappe/04-1.qmd >}}
+
 ## Distribuzione **[binomiale]{.orange}** {.text-center .inverse .center background-color="#03A696"}
 
 - Struttura e **[distribuzione]{.orange}**
@@ -512,6 +514,8 @@ ggplot(db, aes(x = k, y = `P(S=k)`,fill = p)) +
   ggtitle("Distribuzioni Binomiali con n = 10 e diversi valori di p")
 
 ```
+
+{{< include _mappe/04-2.qmd >}}
 
 ## Distribuzione di **[Poisson]{.orange}** {.text-center .inverse .center background-color="#03A696"}
 
@@ -691,6 +695,8 @@ Per me: [Discrete](https://app.wooclap.com/events/STATMEDDISCRETE/0)
 
 Per voi: <img src="img/bit.ly_statmed-sondaggio-discrete.png" width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-discrete](https://bit.ly/statmed-sondaggio-discrete)
 
+{{< include _mappe/04-3.qmd >}}
+
 ## [Break]{.orange} {.text-center .center .inverse background-color="#03A696"}
 
 Consigli: 
@@ -839,6 +845,8 @@ I **percentili** generalizzano quest’idea, ovvero $P(X\leq p_k)=\frac{k}{100}$
 Per me: [Continue](https://app.wooclap.com/events/STATMEDCONTINUE/0)
 
 Per voi: <img src="img/bit.ly_statmed-sondaggio-continue.png" width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-continue](https://bit.ly/statmed-sondaggio-continue)
+
+{{< include _mappe/04-4.qmd >}}
 
 ## Distribuzione **[normale]{.orange}** {.text-center .inverse .center background-color="#03A696"}
 
@@ -1367,6 +1375,8 @@ Per me: [Normale](https://app.wooclap.com/events/STATMEDNORMALE/0)
 
 Per voi: <img src="img/bit.ly_statmed-sondaggio-normale.png" width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-normale](https://bit.ly/statmed-sondaggio-normale)
 
+{{< include _mappe/04-5.qmd >}}
+
 ## **[Approssimazioni]{.orange}** alla distribuzione normale<br><br>(OPZIONALE - no esame) {.text-center .inverse .center background-color="#03A696"}
 
 
@@ -1591,6 +1601,8 @@ polygon(cord.x,cord.y,col="grey90")
 countdown(minutes = 3, warn_when = 30, play_sound = TRUE,
           left = "65%", bottom = "4%")
 ```
+
+{{< include _mappe/04-deck.qmd >}}
 
 ## [link al _vostro_ cloud:]{.orange} {.center .text-center .inverse background-color="#03A696"}
 

@@ -1,0 +1,90 @@
+## Mappa: Normale {.mappa}
+
+::: {.panel-tabset}
+
+### Mappa
+
+```{mermaid}
+%%| echo: false
+%%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
+flowchart LR
+  n_funzione_di_variabile_casuale["Funzione di v.c."]:::prev
+  n_distribuzione_cumulativa["Cumulata F(x)"]:::prev
+  n_costante_di_nepero["Costante e"]:::prev
+  n_valore_atteso_e_varianza_continui["E e Var (continue)"]:::prev
+  n_percentile_di_distribuzione["Percentile di distribuzione"]:::prev
+  n_funzione_di_densita["Densità"]:::prev
+  n_parametro["Parametro"]:::prev
+  k_n_03_operazioni["Operazioni fra eventi · 03"]:::prev
+  k_n_03_somma_prodotto["Somma, prodotto, indipendenza · 03"]:::prev
+  n_distribuzione_normale["Normale"]:::cur
+  n_parametri_della_normale["Parametri μ e σ"]:::cur
+  n_localizzazione_della_normale["Effetto di μ"]:::cur
+  n_forma_della_normale["Effetto di σ"]:::cur
+  n_normale_standardizzata["Normale standard"]:::cur
+  n_simmetria_della_normale["Simmetria della normale"]:::cur
+  n_regola_empirica_68_95_99["68-95-99%"]:::cur
+  n_cumulata_normale_standard["Cumulata Φ"]:::cur
+  n_tavole_della_normale["Tavole della normale"]:::cur
+  n_simmetria_della_cumulata["Φ(−x) = 1 − Φ(x)"]:::cur
+  n_percentile_della_normale_standard["Percentili di Z"]:::cur
+  n_calcolo_dei_percentili_della_normale["Calcolo dei percentili"]:::cur
+  n_standardizzazione["Standardizzazione"]:::cur
+  k_n_03_operazioni --> n_simmetria_della_cumulata
+  k_n_03_somma_prodotto --> n_standardizzazione
+  n_costante_di_nepero --> n_distribuzione_normale
+  n_cumulata_normale_standard --> n_percentile_della_normale_standard
+  n_cumulata_normale_standard --> n_standardizzazione
+  n_cumulata_normale_standard --> n_tavole_della_normale
+  n_distribuzione_cumulativa --> n_cumulata_normale_standard
+  n_distribuzione_normale --> n_normale_standardizzata
+  n_distribuzione_normale --> n_parametri_della_normale
+  n_funzione_di_densita --> n_distribuzione_normale
+  n_funzione_di_variabile_casuale --> n_standardizzazione
+  n_normale_standardizzata --> n_cumulata_normale_standard
+  n_normale_standardizzata --> n_regola_empirica_68_95_99
+  n_normale_standardizzata --> n_simmetria_della_normale
+  n_parametri_della_normale --> n_forma_della_normale
+  n_parametri_della_normale --> n_localizzazione_della_normale
+  n_parametri_della_normale --> n_standardizzazione
+  n_parametro --> n_parametri_della_normale
+  n_percentile_della_normale_standard --> n_calcolo_dei_percentili_della_normale
+  n_percentile_di_distribuzione --> n_percentile_della_normale_standard
+  n_regola_empirica_68_95_99 --> n_calcolo_dei_percentili_della_normale
+  n_simmetria_della_normale --> n_calcolo_dei_percentili_della_normale
+  n_simmetria_della_normale --> n_simmetria_della_cumulata
+  n_tavole_della_normale --> n_calcolo_dei_percentili_della_normale
+  n_tavole_della_normale --> n_simmetria_della_cumulata
+  n_valore_atteso_e_varianza_continui --> n_distribuzione_normale
+  classDef cur fill:#e6f0fa,stroke:#035AA6,color:#000000
+  classDef prev fill:#f4f4f4,stroke:#9a9a9a,color:#555555,stroke-dasharray:4 3
+  classDef opt fill:#ffffff,stroke:#035AA6,color:#555555,stroke-dasharray:2 2
+```
+
+::: {.mappa-legenda}
+
+Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle sezioni o dei deck precedenti (con il numero del deck).
+
+:::
+
+### Indice
+
+::: {.mappa-indice}
+
+- [Normale](#/distribuzione-normale-definizione)
+- [Parametri μ e σ](#/distribuzione-normale-parametri)
+- [Effetto di μ](#/distribuzione-normale-localizzazione)
+- [Effetto di σ](#/distribuzione-normale-forma)
+- [Normale standard](#/distribuzione-normale-standard)
+- [Simmetria della normale](#/distribuzione-standard-simmetria)
+- [68-95-99%](#/distribuzione-standard-valori-notevoli)
+- [Cumulata Φ](#/distribuzione-standard-cumulativa)
+- [Tavole della normale](#/distribuzione-cumulativa-standard-applicazione)
+- [Φ(−x) = 1 − Φ(x)](#/distribuzione-standard-strategia-simmetrica)
+- [Percentili di Z](#/distribuzione-normale-percentili)
+- [Calcolo dei percentili](#/percentili-standard-calcolo)
+- [Standardizzazione](#/normale-standard-trasformazioni)
+
+:::
+
+:::

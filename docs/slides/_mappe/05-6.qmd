@@ -1,0 +1,124 @@
+## Mappa: Test d'ipotesi {.mappa}
+
+::: {.panel-tabset}
+
+### Mappa
+
+```{mermaid}
+%%| echo: false
+%%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
+flowchart LR
+  n_distribuzione_campionaria["Distribuzione campionaria"]:::prev
+  n_stimatore["Stimatore"]:::prev
+  n_errore_standard["Errore standard"]:::prev
+  n_ic_a_livello_generico["IC a livello 1−α"]:::prev
+  n_distribuzione_t_di_student["t di Student"]:::prev
+  n_percentile_della_t_di_student["Percentili di t"]:::prev
+  n_gradi_di_liberta["Gradi di libertà"]:::prev
+  k_n_03_condizionata["Probabilità condizionata · 03"]:::prev
+  k_n_03_operazioni["Operazioni fra eventi · 03"]:::prev
+  k_n_03_probabilita["Probabilità · 03"]:::prev
+  k_n_03_somma_prodotto["Somma, prodotto, indipendenza · 03"]:::prev
+  k_n_04_massa["Massa e cumulata · 04"]:::prev
+  k_n_04_parametri["Parametri e statistiche · 04"]:::prev
+  k_n_04_tavole["Tavole e standardizzazione · 04"]:::prev
+  n_ipotesi_nulla["Ipotesi nulla H₀"]:::cur
+  n_ipotesi_alternativa["Ipotesi alternativa H₁"]:::cur
+  n_test_d_ipotesi["Test d'ipotesi"]:::cur
+  n_rifiuto_e_non_rifiuto_di_h0["Rifiutare H₀ o no"]:::cur
+  n_errore_di_primo_tipo["Errore di I tipo"]:::cur
+  n_errore_di_secondo_tipo["Errore di II tipo"]:::cur
+  n_significativita_statistica["Significatività α"]:::cur
+  n_potenza["Potenza 1−β"]:::cur
+  n_criterio_di_costruzione_del_test["Costruzione del test"]:::cur
+  n_statistica_test["Statistica test"]:::cur
+  n_valore_critico["Valore critico"]:::cur
+  n_regione_di_rifiuto["Regione di rifiuto"]:::cur
+  n_test_sulla_media_varianza_nota["Test sulla media, σ nota"]:::cur
+  n_statistica_z_del_test["Statistica z"]:::cur
+  n_p_value["p-value"]:::cur
+  n_calcolo_del_p_value["Calcolo del p-value"]:::cur
+  n_test_a_una_coda["Test a una coda"]:::cur
+  n_test_a_due_code["Test a due code"]:::cur
+  n_p_value_a_due_code["p-value a due code"]:::cur
+  n_test_t_per_la_media["Test t sulla media"]:::cur
+  n_dualita_test_intervallo_di_confidenza["Test e IC"]:::cur
+  k_n_03_condizionata --> n_errore_di_primo_tipo
+  k_n_03_condizionata --> n_errore_di_secondo_tipo
+  k_n_03_operazioni --> n_test_a_due_code
+  k_n_03_probabilita --> n_p_value
+  k_n_03_somma_prodotto --> n_test_a_due_code
+  k_n_04_massa --> n_valore_critico
+  k_n_04_parametri --> n_ipotesi_nulla
+  k_n_04_tavole --> n_valore_critico
+  n_calcolo_del_p_value --> n_p_value_a_due_code
+  n_distribuzione_campionaria --> n_statistica_test
+  n_distribuzione_t_di_student --> n_test_t_per_la_media
+  n_errore_di_primo_tipo --> n_significativita_statistica
+  n_errore_di_secondo_tipo --> n_potenza
+  n_errore_standard --> n_valore_critico
+  n_gradi_di_liberta --> n_test_t_per_la_media
+  n_ic_a_livello_generico --> n_dualita_test_intervallo_di_confidenza
+  n_ipotesi_alternativa --> n_test_d_ipotesi
+  n_ipotesi_alternativa --> n_test_sulla_media_varianza_nota
+  n_ipotesi_nulla --> n_ipotesi_alternativa
+  n_ipotesi_nulla --> n_rifiuto_e_non_rifiuto_di_h0
+  n_p_value --> n_calcolo_del_p_value
+  n_p_value --> n_test_t_per_la_media
+  n_percentile_della_t_di_student --> n_test_t_per_la_media
+  n_potenza --> n_criterio_di_costruzione_del_test
+  n_regione_di_rifiuto --> n_test_sulla_media_varianza_nota
+  n_rifiuto_e_non_rifiuto_di_h0 --> n_errore_di_primo_tipo
+  n_rifiuto_e_non_rifiuto_di_h0 --> n_errore_di_secondo_tipo
+  n_significativita_statistica --> n_criterio_di_costruzione_del_test
+  n_significativita_statistica --> n_valore_critico
+  n_statistica_test --> n_valore_critico
+  n_statistica_z_del_test --> n_p_value
+  n_statistica_z_del_test --> n_test_a_una_coda
+  n_stimatore --> n_statistica_test
+  n_test_a_due_code --> n_dualita_test_intervallo_di_confidenza
+  n_test_a_due_code --> n_p_value_a_due_code
+  n_test_a_due_code --> n_test_t_per_la_media
+  n_test_a_una_coda --> n_test_a_due_code
+  n_test_sulla_media_varianza_nota --> n_statistica_z_del_test
+  n_valore_critico --> n_regione_di_rifiuto
+  classDef cur fill:#e6f0fa,stroke:#035AA6,color:#000000
+  classDef prev fill:#f4f4f4,stroke:#9a9a9a,color:#555555,stroke-dasharray:4 3
+  classDef opt fill:#ffffff,stroke:#035AA6,color:#555555,stroke-dasharray:2 2
+```
+
+::: {.mappa-legenda}
+
+Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle sezioni o dei deck precedenti (con il numero del deck).
+
+:::
+
+### Indice
+
+::: {.mappa-indice}
+
+- [Ipotesi nulla H₀](#/ipotesi-definizioni)
+- [Ipotesi alternativa H₁](#/ipotesi-definizioni)
+- [Test d'ipotesi](#/ipotesi-definizioni)
+- [Rifiutare H₀ o no](#/ipotesi-decisioni)
+- [Errore di I tipo](#/ipotesi-decisioni)
+- [Errore di II tipo](#/ipotesi-decisioni)
+- [Significatività α](#/ipotesi-decisioni)
+- [Potenza 1−β](#/ipotesi-decisioni)
+- [Costruzione del test](#/ipotesi-decisioni)
+- [Statistica test](#/test-media-di-una-normale)
+- [Valore critico](#/test-media-di-una-normale)
+- [Regione di rifiuto](#/test-media-di-una-normale)
+- [Test sulla media, σ nota](#/test-media-di-una-normale)
+- [Statistica z](#/test-esempio)
+- [p-value](#/p-value)
+- [Calcolo del p-value](#/p-value)
+- [Test a una coda](#/p-value)
+- [Test a due code](#/test-due-code)
+- [p-value a due code](#/test-a-due-code-p-value)
+- [Test t sulla media](#/test-varianza-non-nota)
+- [Test e IC](#/p-value-e-ci)
+
+:::
+
+:::

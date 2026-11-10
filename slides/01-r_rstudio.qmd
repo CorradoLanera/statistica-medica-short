@@ -144,6 +144,8 @@ Inoltre, ho messo a disposizione (**gratuitamente**) un ambiente di lavoro Posit
 
 ![](img/concept-map-10.PNG)
 
+{{< include _mappe/01-1.qmd >}}
+
 ## {.inverse .center .text-center background-color="#03A696"}
 
 ```{r, echo=FALSE, out.width = "20%"}
@@ -300,6 +302,8 @@ ggplot(
 ```{r pkgs, echo=FALSE, eval=TRUE, out.width = "80%"}
 ```
 
+{{< include _mappe/01-2.qmd >}}
+
 ## {.inverse .center .text-center background-color="#03A696"}
 
 ```{r, echo=FALSE, out.width = "30%"}
@@ -313,6 +317,8 @@ knitr::include_graphics(c("img/RStudio-Logo-Flat.png"))
 ## [Vediamolo...<br>...sul _vostro_ cloud!]{.orange} {.center .text-center .inverse background-color="#03A696"}
 
 [https://bit.ly/statmed-cl-rstudio](https://bit.ly/statmed-cl-rstudio)
+
+{{< include _mappe/01-deck.qmd >}}
 
 ## Risorse utili {.inverse background-color="#03A696"}
 

@@ -148,3 +148,39 @@ html.reveal-print .reveal .panel-tabset .tab-content > div {
 .reveal math[display="block"] {
   margin: 0.35em 0;
 }
+
+// slide delle mappe dei concetti (generate da dev/mappe_concetti.py)
+.reveal section.mappa .cell-output-display svg,
+.reveal section.mappa pre.mermaid svg {
+  max-height: 470px;
+  max-width: 100%;
+}
+// carattere di sistema: Mermaid misura le etichette prima che il carattere web
+// delle slide sia caricato, e con quello le taglierebbe
+.reveal section.mappa svg .nodeLabel,
+.reveal section.mappa svg .nodeLabel *,
+.reveal section.mappa svg text {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+// in stampa la mappa basta: l'indice serve per i link, che sulla carta non ci
+// sono, e la farebbe uscire dalla pagina
+html.reveal-print .reveal section.mappa .tab-content > div:not(:first-child) {
+  display: none !important;
+}
+.reveal .mappa-legenda {
+  font-size: 0.55em;
+  color: #555555;
+  margin-top: 0.2em;
+}
+.reveal .mappa-indice ul {
+  columns: 2;
+  column-gap: 2em;
+  font-size: 0.7em;
+}
+.reveal .mappa-indice li {
+  break-inside: avoid;
+}
+.reveal .mappa-blocchi ul {
+  columns: 1;
+  font-size: 0.6em;
+}

@@ -1,0 +1,79 @@
+## Mappa: Modelli discreti {.mappa}
+
+::: {.panel-tabset}
+
+### Mappa
+
+```{mermaid}
+%%| echo: false
+%%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
+flowchart LR
+  k_n_02_classi["Classi e medie ponderate · 02"]:::prev
+  k_n_02_notazioni["Indici e sommatoria · 02"]:::prev
+  k_n_02_tipi["Tipi di variabile · 02"]:::prev
+  k_n_02_variabilita["Variabilità · 02"]:::prev
+  k_n_03_operazioni["Operazioni fra eventi · 03"]:::prev
+  k_n_03_probabilita["Probabilità · 03"]:::prev
+  k_n_03_somma_prodotto["Somma, prodotto, indipendenza · 03"]:::prev
+  n_variabile_casuale["Variabile casuale"]:::cur
+  n_variabile_casuale_discreta["V.c. discreta"]:::cur
+  n_variabile_casuale_continua["V.c. continua"]:::cur
+  n_funzione_matematica["Funzione"]:::cur
+  n_funzione_di_variabile_casuale["Funzione di v.c."]:::cur
+  n_distribuzione_di_probabilita["Distribuzione di probabilità"]:::cur
+  n_funzione_di_massa["Funzione di massa"]:::cur
+  n_proprieta_della_funzione_di_massa["Proprietà della massa"]:::cur
+  n_distribuzione_cumulativa["Cumulata F(x)"]:::cur
+  n_valore_atteso["Valore atteso E(X)"]:::cur
+  n_varianza_di_variabile_casuale["Varianza Var(X)"]:::cur
+  k_n_02_classi --> n_valore_atteso
+  k_n_02_notazioni --> n_distribuzione_cumulativa
+  k_n_02_notazioni --> n_proprieta_della_funzione_di_massa
+  k_n_02_notazioni --> n_valore_atteso
+  k_n_02_tipi --> n_variabile_casuale
+  k_n_02_variabilita --> n_varianza_di_variabile_casuale
+  k_n_03_operazioni --> n_proprieta_della_funzione_di_massa
+  k_n_03_probabilita --> n_variabile_casuale
+  k_n_03_somma_prodotto --> n_proprieta_della_funzione_di_massa
+  n_distribuzione_di_probabilita --> n_funzione_di_massa
+  n_funzione_di_massa --> n_distribuzione_cumulativa
+  n_funzione_di_massa --> n_proprieta_della_funzione_di_massa
+  n_funzione_di_massa --> n_valore_atteso
+  n_funzione_matematica --> n_funzione_di_massa
+  n_funzione_matematica --> n_funzione_di_variabile_casuale
+  n_valore_atteso --> n_varianza_di_variabile_casuale
+  n_variabile_casuale --> n_distribuzione_di_probabilita
+  n_variabile_casuale --> n_funzione_di_variabile_casuale
+  n_variabile_casuale --> n_variabile_casuale_continua
+  n_variabile_casuale --> n_variabile_casuale_discreta
+  n_variabile_casuale_discreta --> n_funzione_di_massa
+  classDef cur fill:#e6f0fa,stroke:#035AA6,color:#000000
+  classDef prev fill:#f4f4f4,stroke:#9a9a9a,color:#555555,stroke-dasharray:4 3
+  classDef opt fill:#ffffff,stroke:#035AA6,color:#555555,stroke-dasharray:2 2
+```
+
+::: {.mappa-legenda}
+
+Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle sezioni o dei deck precedenti (con il numero del deck).
+
+:::
+
+### Indice
+
+::: {.mappa-indice}
+
+- [Variabile casuale](#/richiamo-variabile-casuale)
+- [V.c. discreta](#/richiamo-variabile-casuale)
+- [V.c. continua](#/richiamo-variabile-casuale)
+- [Funzione](#/richiamo-variabile-casuale)
+- [Funzione di v.c.](#/richiamo-variabile-casuale)
+- [Distribuzione di probabilità](#/modelli-discreti)
+- [Funzione di massa](#/modelli-discreti-massa)
+- [Proprietà della massa](#/modelli-discreti-massa)
+- [Cumulata F(x)](#/modelli-discreti-massa)
+- [Valore atteso E(X)](#/modelli-discreti-valore-atteso)
+- [Varianza Var(X)](#/modelli-discreti-varianza)
+
+:::
+
+:::

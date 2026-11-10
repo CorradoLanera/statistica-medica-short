@@ -1,0 +1,120 @@
+```{mermaid}
+%%| echo: false
+%%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
+flowchart TB
+  subgraph d01 ["01 · R e RStudio"]
+    direction LR
+    k_n_01_r_rstudio["R e RStudio"]:::opt
+    k_n_01_r_oggetti["Oggetti e operazioni"]:::opt
+    k_n_01_r_logica["Confronti e logica"]:::opt
+    k_n_01_r_dati["Dati e pacchetti"]:::opt
+  end
+  subgraph d02 ["02 · Statistiche descrittive"]
+    direction LR
+    k_n_02_notazioni["Indici e sommatoria"]:::cur
+    k_n_02_unita["Unità, variabili, tabelle"]:::cur
+    k_n_02_tipi["Tipi di variabile"]:::cur
+    k_n_02_centralita["Centralità"]:::cur
+    k_n_02_variabilita["Variabilità"]:::cur
+    k_n_02_percentili["Percentili e quartili"]:::cur
+    k_n_02_classi["Classi e medie ponderate"]:::cur
+    k_n_02_istogramma["Istogramma"]:::cur
+    k_n_02_boxplot["Box-plot"]:::cur
+    k_n_02_barre["Barre e scelta del grafico"]:::cur
+  end
+  subgraph d03 ["03 · Probabilità"]
+    direction LR
+    k_n_03_eventi["Esperimenti ed eventi"]:::cur
+    k_n_03_probabilita["Probabilità"]:::cur
+    k_n_03_operazioni["Operazioni fra eventi"]:::cur
+    k_n_03_somma_prodotto["Somma, prodotto, indipendenza"]:::cur
+    k_n_03_condizionata["Probabilità condizionata"]:::cur
+    k_n_03_rischio["Rischio e prevalenza"]:::cur
+    k_n_03_test["Test diagnostici"]:::cur
+    k_n_03_bayes["Teorema di Bayes"]:::cur
+  end
+  subgraph d04 ["04 · Distribuzioni"]
+    direction LR
+    k_n_04_vc["Variabili casuali"]:::cur
+    k_n_04_massa["Massa e cumulata"]:::cur
+    k_n_04_momenti["Valore atteso e varianza"]:::cur
+    k_n_04_binomiale["Binomiale"]:::cur
+    k_n_04_poisson["Poisson"]:::cur
+    k_n_04_densita["Densità"]:::cur
+    k_n_04_parametri["Parametri e statistiche"]:::cur
+    k_n_04_normale["Normale"]:::cur
+    k_n_04_tavole["Tavole e standardizzazione"]:::cur
+    k_n_04_approssimazioni["Approssimazioni (facoltativo)"]:::opt
+  end
+  subgraph d05 ["05 · Stime, intervalli e test"]
+    direction LR
+    k_n_05_campioni["Inferenza e campioni"]:::cur
+    k_n_05_stima["Stima puntuale"]:::cur
+    k_n_05_media_campionaria["Distribuzione della media"]:::cur
+    k_n_05_ic["Intervallo di confidenza"]:::cur
+    k_n_05_t["t di Student"]:::cur
+    k_n_05_ipotesi["Ipotesi ed errori"]:::cur
+    k_n_05_test_z["Test z"]:::cur
+    k_n_05_p_value["P-value e test t"]:::cur
+  end
+  k_n_01_r_logica --> k_n_01_r_oggetti
+  k_n_01_r_oggetti --> k_n_01_r_dati
+  k_n_01_r_oggetti --> k_n_01_r_logica
+  k_n_01_r_rstudio --> k_n_01_r_oggetti
+  k_n_02_barre --> k_n_02_boxplot
+  k_n_02_centralita --> k_n_02_percentili
+  k_n_02_centralita --> k_n_02_variabilita
+  k_n_02_classi --> k_n_02_istogramma
+  k_n_02_classi --> k_n_04_momenti
+  k_n_02_istogramma --> k_n_02_barre
+  k_n_02_notazioni --> k_n_02_centralita
+  k_n_02_notazioni --> k_n_03_condizionata
+  k_n_02_notazioni --> k_n_04_massa
+  k_n_02_percentili --> k_n_02_boxplot
+  k_n_02_percentili --> k_n_04_densita
+  k_n_02_tipi --> k_n_02_centralita
+  k_n_02_tipi --> k_n_04_vc
+  k_n_02_unita --> k_n_01_r_dati
+  k_n_02_unita --> k_n_02_tipi
+  k_n_02_unita --> k_n_03_probabilita
+  k_n_02_variabilita --> k_n_02_classi
+  k_n_03_condizionata --> k_n_03_rischio
+  k_n_03_condizionata --> k_n_03_test
+  k_n_03_condizionata --> k_n_05_ipotesi
+  k_n_03_eventi --> k_n_03_probabilita
+  k_n_03_operazioni --> k_n_03_somma_prodotto
+  k_n_03_probabilita --> k_n_03_operazioni
+  k_n_03_probabilita --> k_n_04_vc
+  k_n_03_rischio --> k_n_03_bayes
+  k_n_03_somma_prodotto --> k_n_03_condizionata
+  k_n_03_somma_prodotto --> k_n_04_massa
+  k_n_03_test --> k_n_03_bayes
+  k_n_04_binomiale --> k_n_04_poisson
+  k_n_04_densita --> k_n_04_normale
+  k_n_04_massa --> k_n_04_momenti
+  k_n_04_massa --> k_n_05_campioni
+  k_n_04_momenti --> k_n_04_binomiale
+  k_n_04_momenti --> k_n_04_densita
+  k_n_04_momenti --> k_n_04_parametri
+  k_n_04_normale --> k_n_04_tavole
+  k_n_04_normale --> k_n_05_media_campionaria
+  k_n_04_parametri --> k_n_04_normale
+  k_n_04_parametri --> k_n_05_ipotesi
+  k_n_04_parametri --> k_n_05_stima
+  k_n_04_poisson --> k_n_04_normale
+  k_n_04_tavole --> k_n_04_approssimazioni
+  k_n_04_tavole --> k_n_05_ic
+  k_n_04_tavole --> k_n_05_test_z
+  k_n_04_vc --> k_n_04_massa
+  k_n_05_campioni --> k_n_05_media_campionaria
+  k_n_05_ic --> k_n_05_t
+  k_n_05_ipotesi --> k_n_05_test_z
+  k_n_05_media_campionaria --> k_n_05_ic
+  k_n_05_media_campionaria --> k_n_05_test_z
+  k_n_05_stima --> k_n_05_media_campionaria
+  k_n_05_t --> k_n_05_p_value
+  k_n_05_test_z --> k_n_05_p_value
+  classDef cur fill:#e6f0fa,stroke:#035AA6,color:#000000
+  classDef prev fill:#f4f4f4,stroke:#9a9a9a,color:#555555,stroke-dasharray:4 3
+  classDef opt fill:#ffffff,stroke:#035AA6,color:#555555,stroke-dasharray:2 2
+```

@@ -1,0 +1,81 @@
+## Mappa: Stime puntuali {.mappa}
+
+::: {.panel-tabset}
+
+### Mappa
+
+```{mermaid}
+%%| echo: false
+%%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
+flowchart LR
+  n_popolazione_target["Popolazione target"]:::prev
+  n_campione_casuale_semplice["Campione casuale semplice"]:::prev
+  k_n_02_centralita["Centralità · 02"]:::prev
+  k_n_02_notazioni["Indici e sommatoria · 02"]:::prev
+  k_n_02_unita["Unità, variabili, tabelle · 02"]:::prev
+  k_n_02_variabilita["Variabilità · 02"]:::prev
+  k_n_04_massa["Massa e cumulata · 04"]:::prev
+  k_n_04_momenti["Valore atteso e varianza · 04"]:::prev
+  k_n_04_normale["Normale · 04"]:::prev
+  k_n_04_parametri["Parametri e statistiche · 04"]:::prev
+  k_n_04_vc["Variabili casuali · 04"]:::prev
+  n_stima_puntuale["Stima puntuale"]:::cur
+  n_stimatore["Stimatore"]:::cur
+  n_numerosita_campionaria["Numerosità n"]:::cur
+  n_distribuzione_campionaria["Distribuzione campionaria"]:::cur
+  n_stimatore_non_distorto["Stimatore non distorto"]:::cur
+  n_varianza_di_trasformazione_lineare["Var(aX)"]:::cur
+  n_varianza_della_media_campionaria["Varianza della media"]:::cur
+  n_errore_standard["Errore standard"]:::cur
+  n_teorema_del_limite_centrale["Limite centrale"]:::cur
+  k_n_02_centralita --> n_stimatore
+  k_n_02_notazioni --> n_stimatore
+  k_n_02_unita --> n_numerosita_campionaria
+  k_n_02_unita --> n_stima_puntuale
+  k_n_02_variabilita --> n_errore_standard
+  k_n_04_massa --> n_distribuzione_campionaria
+  k_n_04_momenti --> n_stimatore_non_distorto
+  k_n_04_momenti --> n_varianza_di_trasformazione_lineare
+  k_n_04_normale --> n_teorema_del_limite_centrale
+  k_n_04_parametri --> n_stima_puntuale
+  k_n_04_vc --> n_distribuzione_campionaria
+  k_n_04_vc --> n_stimatore
+  n_campione_casuale_semplice --> n_teorema_del_limite_centrale
+  n_distribuzione_campionaria --> n_teorema_del_limite_centrale
+  n_numerosita_campionaria --> n_distribuzione_campionaria
+  n_numerosita_campionaria --> n_varianza_della_media_campionaria
+  n_popolazione_target --> n_distribuzione_campionaria
+  n_stima_puntuale --> n_stimatore
+  n_stimatore --> n_stimatore_non_distorto
+  n_stimatore --> n_varianza_della_media_campionaria
+  n_varianza_della_media_campionaria --> n_errore_standard
+  n_varianza_della_media_campionaria --> n_teorema_del_limite_centrale
+  n_varianza_di_trasformazione_lineare --> n_varianza_della_media_campionaria
+  classDef cur fill:#e6f0fa,stroke:#035AA6,color:#000000
+  classDef prev fill:#f4f4f4,stroke:#9a9a9a,color:#555555,stroke-dasharray:4 3
+  classDef opt fill:#ffffff,stroke:#035AA6,color:#555555,stroke-dasharray:2 2
+```
+
+::: {.mappa-legenda}
+
+Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle sezioni o dei deck precedenti (con il numero del deck).
+
+:::
+
+### Indice
+
+::: {.mappa-indice}
+
+- [Stima puntuale](#/stima-puntuale-media)
+- [Stimatore](#/stima-puntuale-media)
+- [Numerosità n](#/stima-puntuale-media)
+- [Distribuzione campionaria](#/stima-puntuale-media)
+- [Stimatore non distorto](#/stima-puntuale-media)
+- [Var(aX)](#/stima-puntuale-errore-standard)
+- [Varianza della media](#/stima-puntuale-errore-standard)
+- [Errore standard](#/stima-puntuale-errore-standard)
+- [Limite centrale](#/teorema-del-limite-centrale)
+
+:::
+
+:::

@@ -1,0 +1,52 @@
+## Mappa: Precisione delle stime {.mappa}
+
+::: {.panel-tabset}
+
+### Mappa
+
+```{mermaid}
+%%| echo: false
+%%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
+flowchart LR
+  n_stimatore["Stimatore"]:::prev
+  n_stima_puntuale["Stima puntuale"]:::prev
+  n_errore_standard["Errore standard"]:::prev
+  n_teorema_del_limite_centrale["Limite centrale"]:::prev
+  k_n_03_probabilita["Probabilità · 03"]:::prev
+  k_n_04_normale["Normale · 04"]:::prev
+  k_n_04_tavole["Tavole e standardizzazione · 04"]:::prev
+  n_intervallo_di_confidenza["Intervallo di confidenza"]:::cur
+  n_derivazione_ic_con_z["Derivazione dell'IC"]:::cur
+  n_ic_media_varianza_nota["IC, σ nota"]:::cur
+  k_n_03_probabilita --> n_derivazione_ic_con_z
+  k_n_03_probabilita --> n_intervallo_di_confidenza
+  k_n_04_normale --> n_derivazione_ic_con_z
+  k_n_04_tavole --> n_derivazione_ic_con_z
+  n_derivazione_ic_con_z --> n_ic_media_varianza_nota
+  n_errore_standard --> n_derivazione_ic_con_z
+  n_intervallo_di_confidenza --> n_ic_media_varianza_nota
+  n_stima_puntuale --> n_intervallo_di_confidenza
+  n_stimatore --> n_ic_media_varianza_nota
+  n_teorema_del_limite_centrale --> n_derivazione_ic_con_z
+  classDef cur fill:#e6f0fa,stroke:#035AA6,color:#000000
+  classDef prev fill:#f4f4f4,stroke:#9a9a9a,color:#555555,stroke-dasharray:4 3
+  classDef opt fill:#ffffff,stroke:#035AA6,color:#555555,stroke-dasharray:2 2
+```
+
+::: {.mappa-legenda}
+
+Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle sezioni o dei deck precedenti (con il numero del deck).
+
+:::
+
+### Indice
+
+::: {.mappa-indice}
+
+- [Intervallo di confidenza](#/intervalli-di-confidenza-obiettivo)
+- [Derivazione dell'IC](#/i.c.-derivazione)
+- [IC, σ nota](#/definizione-i.c.-per-la-media-varianza-nota)
+
+:::
+
+:::

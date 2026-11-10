@@ -251,6 +251,8 @@ $$P(C) = P(\bar{A}) = 1-0.7 = 0.3$$
 include_graphics("img/venn3.png")
 ```
 
+{{< include _mappe/03-1.qmd >}}
+
 ## **[Operazioni]{.orange} di base** {.text-center .inverse .center background-color="#03A696"}
 
 - **Prodotto** (e **indipendenza**)
@@ -363,6 +365,8 @@ $$\begin{split} P(\{\mbox{famiglia ipertesa}\})& = P(A \cup B)\\&= P(A) + P(B\ca
 Per me: [Probabilità](https://app.wooclap.com/events/STATMEDPROB/0)
 
 Per voi: <img src="img/bit.ly_statmed-sondaggio-prob.png" width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-prob](https://bit.ly/statmed-sondaggio-prob)
+
+{{< include _mappe/03-2.qmd >}}
 
 ## [Break]{.orange} {.text-center .inverse .text-center .center background-color="#03A696"}
 
@@ -727,6 +731,8 @@ Si ipotizzi che:
 
 ::::
 
+{{< include _mappe/03-3.qmd >}}
+
 ## Teorema di **Bayes** {.text-center .inverse .center background-color="#03A696"}
 
 - **Enunciato** base con traccia di **derivazione** ed **esempi**
@@ -921,6 +927,10 @@ $$P(M_2|T) = \frac{0.9(0.015)}{0.001(0.98)+0.9(0.015)+0.9(0.005)}=0.711$$
 $$P(M_3|T) = \frac{0.9(0.005)}{0.001(0.98)+0.9(0.015)+0.9(0.005)}=0.237$$
 
 :::
+
+{{< include _mappe/03-4.qmd >}}
+
+{{< include _mappe/03-deck.qmd >}}
 
 ## Risorse utili {.inverse background-color="#03A696"}
 

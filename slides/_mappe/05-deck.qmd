@@ -1,0 +1,86 @@
+## Mappa: tutte le sezioni {.mappa}
+
+::: {.panel-tabset}
+
+### Mappa
+
+```{mermaid}
+%%| echo: false
+%%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
+flowchart LR
+  k_n_02_centralita["Centralità · 02"]:::prev
+  k_n_02_notazioni["Indici e sommatoria · 02"]:::prev
+  k_n_02_percentili["Percentili e quartili · 02"]:::prev
+  k_n_02_unita["Unità, variabili, tabelle · 02"]:::prev
+  k_n_02_variabilita["Variabilità · 02"]:::prev
+  k_n_03_condizionata["Probabilità condizionata · 03"]:::prev
+  k_n_03_operazioni["Operazioni fra eventi · 03"]:::prev
+  k_n_03_probabilita["Probabilità · 03"]:::prev
+  k_n_03_somma_prodotto["Somma, prodotto, indipendenza · 03"]:::prev
+  k_n_04_massa["Massa e cumulata · 04"]:::prev
+  k_n_04_momenti["Valore atteso e varianza · 04"]:::prev
+  k_n_04_normale["Normale · 04"]:::prev
+  k_n_04_parametri["Parametri e statistiche · 04"]:::prev
+  k_n_04_tavole["Tavole e standardizzazione · 04"]:::prev
+  k_n_04_vc["Variabili casuali · 04"]:::prev
+  k_n_05_campioni["Inferenza e campioni (5)"]:::cur
+  k_n_05_stima["Stima puntuale (4)"]:::cur
+  k_n_05_media_campionaria["Distribuzione della media (5)"]:::cur
+  k_n_05_ic["Intervallo di confidenza (8)"]:::cur
+  k_n_05_t["t di Student (5)"]:::cur
+  k_n_05_ipotesi["Ipotesi ed errori (9)"]:::cur
+  k_n_05_test_z["Test z (7)"]:::cur
+  k_n_05_p_value["P-value e test t (5)"]:::cur
+  k_n_02_centralita --> k_n_05_stima
+  k_n_02_notazioni --> k_n_05_stima
+  k_n_02_percentili --> k_n_05_t
+  k_n_02_unita --> k_n_05_campioni
+  k_n_02_unita --> k_n_05_stima
+  k_n_02_variabilita --> k_n_05_media_campionaria
+  k_n_03_condizionata --> k_n_05_ipotesi
+  k_n_03_operazioni --> k_n_05_test_z
+  k_n_03_probabilita --> k_n_05_campioni
+  k_n_03_somma_prodotto --> k_n_05_campioni
+  k_n_04_massa --> k_n_05_campioni
+  k_n_04_momenti --> k_n_05_stima
+  k_n_04_normale --> k_n_05_media_campionaria
+  k_n_04_parametri --> k_n_05_ipotesi
+  k_n_04_parametri --> k_n_05_stima
+  k_n_04_tavole --> k_n_05_ic
+  k_n_04_tavole --> k_n_05_test_z
+  k_n_04_vc --> k_n_05_stima
+  k_n_05_campioni --> k_n_05_media_campionaria
+  k_n_05_ic --> k_n_05_t
+  k_n_05_ipotesi --> k_n_05_test_z
+  k_n_05_media_campionaria --> k_n_05_ic
+  k_n_05_media_campionaria --> k_n_05_test_z
+  k_n_05_stima --> k_n_05_media_campionaria
+  k_n_05_t --> k_n_05_p_value
+  k_n_05_test_z --> k_n_05_p_value
+  classDef cur fill:#e6f0fa,stroke:#035AA6,color:#000000
+  classDef prev fill:#f4f4f4,stroke:#9a9a9a,color:#555555,stroke-dasharray:4 3
+  classDef opt fill:#ffffff,stroke:#035AA6,color:#555555,stroke-dasharray:2 2
+```
+
+::: {.mappa-legenda}
+
+Ogni freccia va da un concetto a quelli che lo usano. Ogni riquadro è un blocco di concetti che si usano insieme; fra parentesi quanti sono.
+
+:::
+
+### Blocchi
+
+::: {.mappa-indice .mappa-blocchi}
+
+- **Inferenza e campioni**: [Inferenza](#/inferenza-di-cosa-si-tratta), [Campione casuale](#/inferenza-campioni-e-popolazioni), [Campione casuale semplice](#/inferenza-campioni-e-popolazioni), [Popolazione target](#/inferenza-campioni-e-popolazioni), [Campione rappresentativo](#/ic-osservazioni-confidenza)
+- **Stima puntuale**: [Stima puntuale](#/stima-puntuale-media), [Stimatore](#/stima-puntuale-media), [Stimatore non distorto](#/stima-puntuale-media), [Numerosità n](#/stima-puntuale-media)
+- **Distribuzione della media**: [Distribuzione campionaria](#/stima-puntuale-media), [Var(aX)](#/stima-puntuale-errore-standard), [Varianza della media](#/stima-puntuale-errore-standard), [Errore standard](#/stima-puntuale-errore-standard), [Limite centrale](#/teorema-del-limite-centrale)
+- **Intervallo di confidenza**: [Intervallo di confidenza](#/intervalli-di-confidenza-obiettivo), [Derivazione dell'IC](#/i.c.-derivazione), [IC, σ nota](#/definizione-i.c.-per-la-media-varianza-nota), [Livello di confidenza](#/ic-osservazioni-confidenza), [Interpretazione dell'IC](#/ic-osservazioni-confidenza), [IC a livello 1−α](#/ic-osservazioni-unicità), [Ampiezza dell'IC](#/ic-osservazioni-ampiezza), [Precisione delle misure](#/ic-osservazioni-sotto-controllo)
+- **t di Student**: [t di Student](#/distribuzione-t-di-student-1), [Gradi di libertà](#/distribuzione-t-di-student-1), [Percentili di t](#/distribuzione-t-di-student-1), [IC, σ ignota](#/ic-per-la-media-varianza-non-nota), [IC e valore di riferimento](#/ic-esempio)
+- **Ipotesi ed errori**: [Ipotesi nulla H₀](#/ipotesi-definizioni), [Ipotesi alternativa H₁](#/ipotesi-definizioni), [Test d'ipotesi](#/ipotesi-definizioni), [Rifiutare H₀ o no](#/ipotesi-decisioni), [Errore di I tipo](#/ipotesi-decisioni), [Errore di II tipo](#/ipotesi-decisioni), [Significatività α](#/ipotesi-decisioni), [Potenza 1−β](#/ipotesi-decisioni), [Costruzione del test](#/ipotesi-decisioni)
+- **Test z**: [Statistica test](#/test-media-di-una-normale), [Valore critico](#/test-media-di-una-normale), [Regione di rifiuto](#/test-media-di-una-normale), [Test sulla media, σ nota](#/test-media-di-una-normale), [Statistica z](#/test-esempio), [Test a una coda](#/p-value), [Test a due code](#/test-due-code)
+- **P-value e test t**: [p-value](#/p-value), [Calcolo del p-value](#/p-value), [p-value a due code](#/test-a-due-code-p-value), [Test t sulla media](#/test-varianza-non-nota), [Test e IC](#/p-value-e-ci)
+
+:::
+
+:::

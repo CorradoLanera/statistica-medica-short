@@ -1,0 +1,3 @@
+# opzioni comuni alle pagine di slides/ (slide e pagina dell'elenco)
+mermaid:
+  theme: neutral

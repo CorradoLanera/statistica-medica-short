@@ -1,0 +1,76 @@
+## Mappa: R {.mappa}
+
+::: {.panel-tabset}
+
+### Mappa
+
+```{mermaid}
+%%| echo: false
+%%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
+flowchart TB
+  n_pacchetto_r["Pacchetto"]:::prev
+  n_r_motore_di_calcolo["R"]:::prev
+  n_codice_r["Codice R"]:::prev
+  k_n_02_unita["Unità, variabili, tabelle · 02"]:::prev
+  n_installazione_di_r["Installare R"]:::opt
+  n_aritmetica_in_r["Aritmetica"]:::opt
+  n_tipo_di_dato_r["Tipi di dato"]:::opt
+  n_vettore_r["Vettore"]:::opt
+  n_assegnamento["Assegnamento"]:::opt
+  n_operatori_di_confronto["Confronti"]:::opt
+  n_operatori_booleani["Operatori logici"]:::opt
+  n_vettorizzazione["Vettorizzazione"]:::opt
+  n_funzione_which["which()"]:::opt
+  n_valore_mancante_na["NA"]:::opt
+  n_dataframe["Dataframe"]:::opt
+  n_fattore_r["Fattore"]:::opt
+  n_caricamento_di_pacchetti["Caricare pacchetti"]:::opt
+  k_n_02_unita --> n_dataframe
+  n_aritmetica_in_r --> n_operatori_di_confronto
+  n_aritmetica_in_r --> n_vettore_r
+  n_assegnamento --> n_dataframe
+  n_codice_r --> n_aritmetica_in_r
+  n_codice_r --> n_tipo_di_dato_r
+  n_dataframe --> n_fattore_r
+  n_operatori_booleani --> n_valore_mancante_na
+  n_operatori_booleani --> n_vettorizzazione
+  n_operatori_di_confronto --> n_operatori_booleani
+  n_pacchetto_r --> n_caricamento_di_pacchetti
+  n_r_motore_di_calcolo --> n_installazione_di_r
+  n_tipo_di_dato_r --> n_operatori_di_confronto
+  n_tipo_di_dato_r --> n_vettore_r
+  n_vettore_r --> n_assegnamento
+  n_vettore_r --> n_vettorizzazione
+  n_vettorizzazione --> n_funzione_which
+  classDef cur fill:#e6f0fa,stroke:#035AA6,color:#000000
+  classDef prev fill:#f4f4f4,stroke:#9a9a9a,color:#555555,stroke-dasharray:4 3
+  classDef opt fill:#ffffff,stroke:#035AA6,color:#555555,stroke-dasharray:2 2
+```
+
+::: {.mappa-legenda}
+
+Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle sezioni o dei deck precedenti (con il numero del deck).
+
+:::
+
+### Indice
+
+::: {.mappa-indice}
+
+- [Installare R](#/installazione) (facoltativo)
+- [Aritmetica](#/algebra-elementare) (facoltativo)
+- [Tipi di dato](#/vettori) (facoltativo)
+- [Vettore](#/vettori) (facoltativo)
+- [Assegnamento](#/assegnamento-memorizzazione) (facoltativo)
+- [Confronti](#/confronti-booleani) (facoltativo)
+- [Operatori logici](#/logica-booleana) (facoltativo)
+- [Vettorizzazione](#/logica-booleana-vettoriale) (facoltativo)
+- [which()](#/logica-booleana-vettoriale) (facoltativo)
+- [NA](#/logica-booleana-vettoriale) (facoltativo)
+- [Dataframe](#/dataframe) (facoltativo)
+- [Fattore](#/dataframe) (facoltativo)
+- [Caricare pacchetti](#/pacchetti) (facoltativo)
+
+:::
+
+:::

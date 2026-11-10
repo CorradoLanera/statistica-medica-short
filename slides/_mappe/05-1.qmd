@@ -1,0 +1,48 @@
+## Mappa: Inferenza {.mappa}
+
+::: {.panel-tabset}
+
+### Mappa
+
+```{mermaid}
+%%| echo: false
+%%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
+flowchart LR
+  k_n_02_unita["Unità, variabili, tabelle · 02"]:::prev
+  k_n_03_probabilita["Probabilità · 03"]:::prev
+  k_n_03_somma_prodotto["Somma, prodotto, indipendenza · 03"]:::prev
+  k_n_04_massa["Massa e cumulata · 04"]:::prev
+  n_inferenza_statistica["Inferenza"]:::cur
+  n_campione_casuale["Campione casuale"]:::cur
+  n_campione_casuale_semplice["Campione casuale semplice"]:::cur
+  n_popolazione_target["Popolazione target"]:::cur
+  k_n_02_unita --> n_campione_casuale
+  k_n_02_unita --> n_inferenza_statistica
+  k_n_02_unita --> n_popolazione_target
+  k_n_03_probabilita --> n_campione_casuale
+  k_n_03_somma_prodotto --> n_campione_casuale
+  k_n_04_massa --> n_inferenza_statistica
+  n_campione_casuale --> n_campione_casuale_semplice
+  classDef cur fill:#e6f0fa,stroke:#035AA6,color:#000000
+  classDef prev fill:#f4f4f4,stroke:#9a9a9a,color:#555555,stroke-dasharray:4 3
+  classDef opt fill:#ffffff,stroke:#035AA6,color:#555555,stroke-dasharray:2 2
+```
+
+::: {.mappa-legenda}
+
+Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle sezioni o dei deck precedenti (con il numero del deck).
+
+:::
+
+### Indice
+
+::: {.mappa-indice}
+
+- [Inferenza](#/inferenza-di-cosa-si-tratta)
+- [Campione casuale](#/inferenza-campioni-e-popolazioni)
+- [Campione casuale semplice](#/inferenza-campioni-e-popolazioni)
+- [Popolazione target](#/inferenza-campioni-e-popolazioni)
+
+:::
+
+:::

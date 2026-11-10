@@ -1,0 +1,77 @@
+## Mappa: Oggetti in gioco {.mappa}
+
+::: {.panel-tabset}
+
+### Mappa
+
+```{mermaid}
+%%| echo: false
+%%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
+flowchart TB
+  n_notazione_con_indici["Indici (x_i)"]:::cur
+  n_sommatoria["Sommatoria Σ"]:::cur
+  n_appartenenza_insiemistica["Appartenenza (∈)"]:::cur
+  n_proprieta_della_sommatoria["Proprietà di Σ"]:::cur
+  n_unita_statistica["Unità statistica"]:::cur
+  n_popolazione["Popolazione"]:::cur
+  n_variabile["Variabile"]:::cur
+  n_dati_tidy["Dati tidy"]:::cur
+  n_tipo_di_variabile["Tipo di variabile"]:::cur
+  n_variabile_continua["Continua"]:::cur
+  n_variabile_discreta["Discreta"]:::cur
+  n_variabile_cardinale["Cardinale"]:::cur
+  n_codifica_numerica_non_implica_tipo["Un numero non basta"]:::cur
+  n_variabile_nominale["Nominale"]:::cur
+  n_variabile_ordinale["Ordinale"]:::cur
+  n_variabile_dicotomica["Dicotomica"]:::cur
+  n_notazione_con_indici --> n_sommatoria
+  n_sommatoria --> n_proprieta_della_sommatoria
+  n_tipo_di_variabile --> n_variabile_continua
+  n_tipo_di_variabile --> n_variabile_discreta
+  n_unita_statistica --> n_popolazione
+  n_unita_statistica --> n_variabile
+  n_variabile --> n_dati_tidy
+  n_variabile --> n_tipo_di_variabile
+  n_variabile_cardinale --> n_codifica_numerica_non_implica_tipo
+  n_variabile_continua --> n_variabile_cardinale
+  n_variabile_dicotomica --> n_codifica_numerica_non_implica_tipo
+  n_variabile_discreta --> n_variabile_cardinale
+  n_variabile_discreta --> n_variabile_dicotomica
+  n_variabile_discreta --> n_variabile_nominale
+  n_variabile_discreta --> n_variabile_ordinale
+  n_variabile_nominale --> n_codifica_numerica_non_implica_tipo
+  classDef cur fill:#e6f0fa,stroke:#035AA6,color:#000000
+  classDef prev fill:#f4f4f4,stroke:#9a9a9a,color:#555555,stroke-dasharray:4 3
+  classDef opt fill:#ffffff,stroke:#035AA6,color:#555555,stroke-dasharray:2 2
+```
+
+::: {.mappa-legenda}
+
+Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle sezioni o dei deck precedenti (con il numero del deck).
+
+:::
+
+### Indice
+
+::: {.mappa-indice}
+
+- [Indici (x_i)](#/notazioni-sommatoria-fino-a-n)
+- [Sommatoria Σ](#/notazioni-sommatoria-fino-a-n)
+- [Appartenenza (∈)](#/notazioni-sommatoria-su-i)
+- [Proprietà di Σ](#/proprietà-della-sommatoria)
+- [Unità statistica](#/unità-statistica)
+- [Popolazione](#/unità-statistica)
+- [Variabile](#/unità-statistica)
+- [Dati tidy](#/dati-tidy-ordinati)
+- [Tipo di variabile](#/tipologie-di-dati)
+- [Continua](#/tipologie-di-dati)
+- [Discreta](#/tipologie-di-dati)
+- [Cardinale](#/tipologie-di-dati-in-sintesi)
+- [Un numero non basta](#/tipologie-di-dati-in-sintesi)
+- [Nominale](#/tipologie-di-dati-1)
+- [Ordinale](#/tipologie-di-dati-1)
+- [Dicotomica](#/tipologie-di-dati-1)
+
+:::
+
+:::
