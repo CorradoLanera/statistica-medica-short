@@ -1042,9 +1042,6 @@ rispetto a **centralità e variabilità**. Per un campione di ampiezza $n$
   e mezza l'IQR, cioè
 $$x > H + 1.5 \times (H-h)  \quad o \quad x < h - 1.5 \times (H-h)$$
 
-- un **outlier estremo** è: un valore che si allontana dai bordi della scatola più di tre volte l'IQR, cioè
-$$x > H + 3 \times (H-h)  \quad o \quad x < h - 3 \times (H-h)$$
-
 ## Box-plot (calcolo)
 
 Un'assunzione giornaliera di 43 mg/die di magnesio rappresenta un outlier
@@ -1065,11 +1062,6 @@ sort(epic$mag[101:200])
 - i limiti per gli outlier sono quindi:
 $$x > 323.95 + 1.5 * (323.95 - 215.35) = 486.85$$
 $$x < 215.35 - 1.5 * (323.95 - 215.35) = 52.45$$
-
-- gli outlier estremi sarebbero: 
-$$x > 323.95 + 3 * (323.95 - 215.35) = 649.75$$
-$$x < 215.35 - 3 * (323.95 - 215.35) = -110.45$$
-(valore negativo: un'assunzione non può essere negativa, quindi nessun outlier estremo inferiore)
 
 :::
 
