@@ -11,9 +11,7 @@ flowchart TB
   n_notazione_con_indici["Indici (x_i)"]:::cur
   n_sommatoria["Sommatoria Σ"]:::cur
   n_appartenenza_insiemistica["Appartenenza (∈)"]:::cur
-  n_proprieta_della_sommatoria["Proprietà di Σ"]:::cur
   n_unita_statistica["Unità statistica"]:::cur
-  n_popolazione["Popolazione"]:::cur
   n_variabile["Variabile"]:::cur
   n_dati_tidy["Dati tidy"]:::cur
   n_tipo_di_variabile["Tipo di variabile"]:::cur
@@ -25,10 +23,8 @@ flowchart TB
   n_variabile_ordinale["Ordinale"]:::cur
   n_variabile_dicotomica["Dicotomica"]:::cur
   n_notazione_con_indici --> n_sommatoria
-  n_sommatoria --> n_proprieta_della_sommatoria
   n_tipo_di_variabile --> n_variabile_continua
   n_tipo_di_variabile --> n_variabile_discreta
-  n_unita_statistica --> n_popolazione
   n_unita_statistica --> n_variabile
   n_variabile --> n_dati_tidy
   n_variabile --> n_tipo_di_variabile
@@ -55,13 +51,11 @@ Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle
 
 ::: {.mappa-indice}
 
-- [Indici (x_i)](#/notazioni-sommatoria-fino-a-n)
-- [Sommatoria Σ](#/notazioni-sommatoria-fino-a-n)
-- [Appartenenza (∈)](#/notazioni-sommatoria-su-i)
-- [Proprietà di Σ](#/proprietà-della-sommatoria)
-- [Unità statistica](#/unità-statistica)
-- [Popolazione](#/unità-statistica)
-- [Variabile](#/unità-statistica)
+- [Indici (x_i)](#/notazioni-sommatoria)
+- [Sommatoria Σ](#/notazioni-sommatoria)
+- [Appartenenza (∈)](#/notazioni-sommatoria)
+- [Unità statistica](#/la-stessa-tabella-tidy)
+- [Variabile](#/una-tabella-disordinata)
 - [Dati tidy](#/dati-tidy-ordinati)
 - [Tipo di variabile](#/tipologie-di-dati)
 - [Continua](#/tipologie-di-dati)

@@ -43,7 +43,6 @@ SECTION_TITLE = {
     "04.3": "Poisson",
     "04.4": "Variabili continue",
     "04.5": "Normale",
-    "04.6": "Approssimazioni",
     "05.1": "Inferenza",
     "05.2": "Stime puntuali",
     "05.3": "Precisione delle stime",

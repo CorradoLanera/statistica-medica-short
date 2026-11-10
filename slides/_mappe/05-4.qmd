@@ -8,8 +8,8 @@
 %%| echo: false
 %%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart LR
-  n_distribuzione_campionaria["Distribuzione campionaria"]:::prev
   n_errore_standard["Errore standard"]:::prev
+  n_distribuzione_campionaria["Distribuzione campionaria"]:::prev
   n_ic_media_varianza_nota["IC, σ nota"]:::prev
   n_intervallo_di_confidenza["Intervallo di confidenza"]:::prev
   k_n_02_unita["Unità, variabili, tabelle · 02"]:::prev

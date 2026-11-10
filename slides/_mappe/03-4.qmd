@@ -8,39 +8,36 @@
 %%| echo: false
 %%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart LR
-  n_eventi_incompatibili["Eventi incompatibili"]:::prev
-  n_valore_predittivo_negativo["VPN"]:::prev
-  n_teorema_delle_probabilita_totali["Probabilità totali"]:::prev
-  n_valore_predittivo_positivo["VPP"]:::prev
+  n_eventi_indipendenti["Eventi indipendenti"]:::prev
+  n_regola_del_prodotto_generale["Regola del prodotto"]:::prev
   n_probabilita_condizionata["Probabilità condizionata"]:::prev
   n_specificita["Specificità"]:::prev
-  n_falso_positivo["Falso positivo"]:::prev
-  n_sensibilita["Sensibilità"]:::prev
-  n_prevalenza["Prevalenza"]:::prev
-  n_eventi_esaustivi["Eventi esaustivi"]:::prev
   n_probabilita_totali_due_eventi["Probabilità totali (2 eventi)"]:::prev
-  n_regola_del_prodotto_generale["Regola del prodotto"]:::prev
-  k_n_02_notazioni["Indici e sommatoria · 02"]:::prev
+  n_valore_predittivo_negativo["VPN"]:::prev
+  n_falso_positivo["Falso positivo"]:::prev
+  n_prevalenza["Prevalenza"]:::prev
+  n_sensibilita["Sensibilità"]:::prev
+  n_valore_predittivo_positivo["VPP"]:::prev
   n_teorema_di_bayes["Teorema di Bayes"]:::cur
   n_calcolo_dei_valori_predittivi["Calcolo di VPP e VPN"]:::cur
   n_vpp_da_conteggi["VPP dai conteggi"]:::opt
-  n_teorema_di_bayes_generalizzato["Bayes generalizzato"]:::cur
-  k_n_02_notazioni --> n_teorema_di_bayes_generalizzato
-  n_eventi_esaustivi --> n_teorema_di_bayes_generalizzato
-  n_eventi_incompatibili --> n_teorema_di_bayes_generalizzato
+  n_indipendenza_condizionata["Indipendenza condizionata"]:::cur
+  n_bayes_test_in_sequenza["Due test in sequenza"]:::cur
+  n_calcolo_dei_valori_predittivi --> n_bayes_test_in_sequenza
+  n_calcolo_dei_valori_predittivi --> n_vpp_da_conteggi
+  n_eventi_indipendenti --> n_indipendenza_condizionata
   n_falso_positivo --> n_vpp_da_conteggi
+  n_indipendenza_condizionata --> n_bayes_test_in_sequenza
   n_prevalenza --> n_teorema_di_bayes
+  n_probabilita_condizionata --> n_indipendenza_condizionata
   n_probabilita_condizionata --> n_teorema_di_bayes
   n_probabilita_totali_due_eventi --> n_teorema_di_bayes
   n_regola_del_prodotto_generale --> n_teorema_di_bayes
   n_sensibilita --> n_teorema_di_bayes
   n_specificita --> n_teorema_di_bayes
-  n_teorema_delle_probabilita_totali --> n_teorema_di_bayes_generalizzato
   n_teorema_di_bayes --> n_calcolo_dei_valori_predittivi
-  n_teorema_di_bayes --> n_teorema_di_bayes_generalizzato
   n_valore_predittivo_negativo --> n_calcolo_dei_valori_predittivi
   n_valore_predittivo_positivo --> n_teorema_di_bayes
-  n_valore_predittivo_positivo --> n_vpp_da_conteggi
   classDef cur fill:#e6f0fa,stroke:#035AA6,color:#000000
   classDef prev fill:#f4f4f4,stroke:#9a9a9a,color:#555555,stroke-dasharray:4 3
   classDef opt fill:#ffffff,stroke:#035AA6,color:#555555,stroke-dasharray:2 2
@@ -58,8 +55,9 @@ Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle
 
 - [Teorema di Bayes](#/teorema-di-bayes-base)
 - [Calcolo di VPP e VPN](#/teorema-di-bayes-base)
-- [VPP dai conteggi](#/approfondimento) (facoltativo)
-- [Bayes generalizzato](#/teorema-di-bayes-generalizzazione)
+- [VPP dai conteggi](#/teorema-di-bayes-esempio) (facoltativo)
+- [Indipendenza condizionata](#/teorema-di-bayes-due-test-in-sequenza)
+- [Due test in sequenza](#/teorema-di-bayes-due-test-in-sequenza)
 
 :::
 

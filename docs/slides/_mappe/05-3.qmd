@@ -8,9 +8,9 @@
 %%| echo: false
 %%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart LR
-  n_stimatore["Stimatore"]:::prev
-  n_stima_puntuale["Stima puntuale"]:::prev
   n_errore_standard["Errore standard"]:::prev
+  n_stima_puntuale["Stima puntuale"]:::prev
+  n_stimatore["Stimatore"]:::prev
   n_teorema_del_limite_centrale["Limite centrale"]:::prev
   k_n_03_probabilita["Probabilità · 03"]:::prev
   k_n_04_normale["Normale · 04"]:::prev

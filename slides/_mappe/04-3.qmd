@@ -11,13 +11,11 @@ flowchart LR
   n_varianza_di_variabile_casuale["Varianza Var(X)"]:::prev
   n_funzione_di_massa["Funzione di massa"]:::prev
   n_valore_atteso["Valore atteso E(X)"]:::prev
+  n_fattoriale["Fattoriale n!"]:::prev
   n_distribuzione_binomiale["Binomiale"]:::prev
   n_valore_atteso_e_varianza_della_binomiale["E e Var della binomiale"]:::prev
-  n_fattoriale["Fattoriale n!"]:::prev
-  k_n_02_centralita["Centralità · 02"]:::prev
   k_n_02_notazioni["Indici e sommatoria · 02"]:::prev
   k_n_02_tipi["Tipi di variabile · 02"]:::prev
-  k_n_02_variabilita["Variabilità · 02"]:::prev
   k_n_03_operazioni["Operazioni fra eventi · 03"]:::prev
   k_n_03_probabilita["Probabilità · 03"]:::prev
   k_n_03_somma_prodotto["Somma, prodotto, indipendenza · 03"]:::prev
@@ -26,14 +24,11 @@ flowchart LR
   n_costante_di_nepero["Costante e"]:::cur
   n_distribuzione_di_poisson["Poisson"]:::cur
   n_valore_atteso_e_varianza_della_poisson["E e Var della Poisson"]:::cur
-  n_sovradispersione["Sovradispersione"]:::cur
   n_probabilita_di_coda["Probabilità di coda"]:::cur
   n_approssimazione_poisson_della_binomiale["Poisson per la binomiale"]:::cur
   n_probabilita_di_almeno_k["P(almeno k)"]:::cur
-  k_n_02_centralita --> n_sovradispersione
   k_n_02_notazioni --> n_probabilita_di_almeno_k
   k_n_02_tipi --> n_processo_di_poisson
-  k_n_02_variabilita --> n_sovradispersione
   k_n_03_operazioni --> n_processo_di_poisson
   k_n_03_probabilita --> n_processo_di_poisson
   k_n_03_probabilita --> n_tasso_di_evento
@@ -50,7 +45,6 @@ flowchart LR
   n_tasso_di_evento --> n_distribuzione_di_poisson
   n_valore_atteso --> n_valore_atteso_e_varianza_della_poisson
   n_valore_atteso_e_varianza_della_binomiale --> n_approssimazione_poisson_della_binomiale
-  n_valore_atteso_e_varianza_della_poisson --> n_sovradispersione
   n_varianza_di_variabile_casuale --> n_valore_atteso_e_varianza_della_poisson
   classDef cur fill:#e6f0fa,stroke:#035AA6,color:#000000
   classDef prev fill:#f4f4f4,stroke:#9a9a9a,color:#555555,stroke-dasharray:4 3
@@ -72,7 +66,6 @@ Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle
 - [Costante e](#/distribuzione-di-poisson-probabilità)
 - [Poisson](#/distribuzione-di-poisson-probabilità)
 - [E e Var della Poisson](#/poisson-valore-atteso-e-varianza)
-- [Sovradispersione](#/poisson-polio)
 - [Probabilità di coda](#/poisson-cibo-cancerogeno)
 - [Poisson per la binomiale](#/poisson-approssimazione)
 - [P(almeno k)](#/distribuzione-di-poisson-1)

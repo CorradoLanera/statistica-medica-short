@@ -8,13 +8,13 @@
 %%| echo: false
 %%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart LR
-  n_funzione_matematica["Funzione"]:::prev
-  n_distribuzione_di_probabilita["Distribuzione di probabilità"]:::prev
-  n_varianza_di_variabile_casuale["Varianza Var(X)"]:::prev
-  n_distribuzione_cumulativa["Cumulata F(x)"]:::prev
+  n_variabile_casuale_continua["V.c. continua"]:::prev
   n_valore_atteso["Valore atteso E(X)"]:::prev
   n_proprieta_della_funzione_di_massa["Proprietà della massa"]:::prev
-  n_variabile_casuale_continua["V.c. continua"]:::prev
+  n_varianza_di_variabile_casuale["Varianza Var(X)"]:::prev
+  n_funzione_matematica["Funzione"]:::prev
+  n_distribuzione_cumulativa["Cumulata F(x)"]:::prev
+  n_distribuzione_di_probabilita["Distribuzione di probabilità"]:::prev
   k_n_02_centralita["Centralità · 02"]:::prev
   k_n_02_percentili["Percentili e quartili · 02"]:::prev
   k_n_02_unita["Unità, variabili, tabelle · 02"]:::prev
@@ -23,18 +23,13 @@ flowchart LR
   n_funzione_di_densita["Densità"]:::cur
   n_integrale["Integrale"]:::cur
   n_valore_atteso_e_varianza_continui["E e Var (continue)"]:::cur
-  n_moda_di_distribuzione["Moda di distribuzione"]:::cur
   n_mediana_di_distribuzione["Mediana di distribuzione"]:::cur
   n_percentile_di_distribuzione["Percentile di distribuzione"]:::cur
-  n_posizione_di_media_mediana_moda["Media, mediana, moda"]:::cur
   n_parametro["Parametro"]:::cur
   n_statistica_campionaria["Statistica campionaria"]:::cur
   k_n_02_centralita --> n_mediana_di_distribuzione
-  k_n_02_centralita --> n_moda_di_distribuzione
-  k_n_02_centralita --> n_posizione_di_media_mediana_moda
   k_n_02_centralita --> n_statistica_campionaria
   k_n_02_percentili --> n_percentile_di_distribuzione
-  k_n_02_unita --> n_parametro
   k_n_02_unita --> n_statistica_campionaria
   k_n_02_variabilita --> n_parametro
   k_n_02_variabilita --> n_statistica_campionaria
@@ -43,8 +38,6 @@ flowchart LR
   n_distribuzione_cumulativa --> n_mediana_di_distribuzione
   n_distribuzione_di_probabilita --> n_funzione_di_densita
   n_funzione_di_densita --> n_mediana_di_distribuzione
-  n_funzione_di_densita --> n_moda_di_distribuzione
-  n_funzione_di_densita --> n_posizione_di_media_mediana_moda
   n_funzione_di_densita --> n_valore_atteso_e_varianza_continui
   n_funzione_matematica --> n_funzione_di_densita
   n_integrale --> n_valore_atteso_e_varianza_continui
@@ -73,10 +66,8 @@ Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle
 - [Densità](#/modelli-continui)
 - [Integrale](#/valore-atteso-e-varianza)
 - [E e Var (continue)](#/valore-atteso-e-varianza)
-- [Moda di distribuzione](#/valore-atteso-e-varianza)
 - [Mediana di distribuzione](#/valore-atteso-e-varianza)
 - [Percentile di distribuzione](#/valore-atteso-e-varianza)
-- [Media, mediana, moda](#/valore-atteso-e-varianza)
 - [Parametro](#/parametri-vs-statistiche)
 - [Statistica campionaria](#/parametri-vs-statistiche)
 

@@ -8,15 +8,14 @@
 %%| echo: false
 %%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart LR
-  n_eventi_incompatibili["Eventi incompatibili"]:::prev
-  n_intersezione_di_eventi["Intersezione (∩)"]:::prev
-  n_evento_complementare["Complementare"]:::prev
   n_evento["Evento"]:::prev
-  n_additivita_eventi_incompatibili["Somma per incompatibili"]:::prev
   n_probabilita["Probabilità"]:::prev
+  n_intersezione_di_eventi["Intersezione (∩)"]:::prev
+  n_eventi_incompatibili["Eventi incompatibili"]:::prev
+  n_evento_complementare["Complementare"]:::prev
+  n_additivita_eventi_incompatibili["Somma per incompatibili"]:::prev
   n_eventi_indipendenti["Eventi indipendenti"]:::prev
   k_n_02_notazioni["Indici e sommatoria · 02"]:::prev
-  k_n_02_unita["Unità, variabili, tabelle · 02"]:::prev
   n_probabilita_condizionata["Probabilità condizionata"]:::cur
   n_regola_del_prodotto_generale["Regola del prodotto"]:::cur
   n_probabilita_totali_due_eventi["Probabilità totali (2 eventi)"]:::cur
@@ -24,7 +23,7 @@ flowchart LR
   n_eventi_esaustivi["Eventi esaustivi"]:::cur
   n_teorema_delle_probabilita_totali["Probabilità totali"]:::cur
   n_rischio_relativo["Rischio relativo"]:::cur
-  n_rischio_assoluto["Rischio assoluto"]:::cur
+  n_rischio_relativo_gonfiaggio["RR e gonfiaggio"]:::cur
   n_test_di_screening["Test di screening"]:::cur
   n_valore_predittivo_positivo["VPP"]:::cur
   n_valore_predittivo_negativo["VPN"]:::cur
@@ -33,7 +32,6 @@ flowchart LR
   n_falso_positivo["Falso positivo"]:::cur
   n_falso_negativo["Falso negativo"]:::cur
   k_n_02_notazioni --> n_teorema_delle_probabilita_totali
-  k_n_02_unita --> n_prevalenza
   n_additivita_eventi_incompatibili --> n_probabilita_totali_due_eventi
   n_eventi_esaustivi --> n_teorema_delle_probabilita_totali
   n_eventi_incompatibili --> n_eventi_esaustivi
@@ -43,12 +41,12 @@ flowchart LR
   n_intersezione_di_eventi --> n_probabilita_condizionata
   n_probabilita --> n_prevalenza
   n_probabilita --> n_probabilita_condizionata
-  n_probabilita --> n_rischio_assoluto
   n_probabilita_condizionata --> n_regola_del_prodotto_generale
   n_probabilita_condizionata --> n_rischio_relativo
   n_probabilita_condizionata --> n_test_di_screening
   n_probabilita_totali_due_eventi --> n_teorema_delle_probabilita_totali
   n_regola_del_prodotto_generale --> n_probabilita_totali_due_eventi
+  n_rischio_relativo --> n_rischio_relativo_gonfiaggio
   n_test_di_screening --> n_falso_negativo
   n_test_di_screening --> n_falso_positivo
   n_test_di_screening --> n_sensibilita
@@ -77,7 +75,7 @@ Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle
 - [Eventi esaustivi](#/teorema-delle-probabilità-totali)
 - [Probabilità totali](#/teorema-delle-probabilità-totali)
 - [Rischio relativo](#/rischio-relativo)
-- [Rischio assoluto](#/rischio-relativo)
+- [RR e gonfiaggio](#/rischio-relativo-attenzione-al-gonfiaggio)
 - [Test di screening](#/test-di-screening-valori-predittivi)
 - [VPP](#/test-di-screening-valori-predittivi)
 - [VPN](#/test-di-screening-valori-predittivi)

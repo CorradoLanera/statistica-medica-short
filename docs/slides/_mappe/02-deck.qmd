@@ -8,17 +8,18 @@
 %%| echo: false
 %%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart TB
-  k_n_02_notazioni["Indici e sommatoria (4)"]:::cur
-  k_n_02_unita["Unità, variabili, tabelle (5)"]:::cur
+  k_n_02_notazioni["Indici e sommatoria (3)"]:::cur
+  k_n_02_unita["Unità, variabili, tabelle (4)"]:::cur
   k_n_02_tipi["Tipi di variabile (8)"]:::cur
   k_n_02_centralita["Centralità (8)"]:::cur
   k_n_02_variabilita["Variabilità (8)"]:::cur
   k_n_02_percentili["Percentili e quartili (2)"]:::cur
-  k_n_02_classi["Classi e medie ponderate (3)"]:::cur
+  k_n_02_classi["Classi e medie ponderate (2)"]:::cur
   k_n_02_istogramma["Istogramma (2)"]:::cur
-  k_n_02_boxplot["Box-plot (6)"]:::cur
+  k_n_02_boxplot["Box-plot (5)"]:::cur
   k_n_02_barre["Barre e scelta del grafico (5)"]:::cur
   k_n_02_barre --> k_n_02_boxplot
+  k_n_02_centralita --> k_n_02_classi
   k_n_02_centralita --> k_n_02_percentili
   k_n_02_centralita --> k_n_02_variabilita
   k_n_02_classi --> k_n_02_istogramma
@@ -27,7 +28,6 @@ flowchart TB
   k_n_02_percentili --> k_n_02_boxplot
   k_n_02_tipi --> k_n_02_centralita
   k_n_02_unita --> k_n_02_tipi
-  k_n_02_variabilita --> k_n_02_classi
   classDef cur fill:#e6f0fa,stroke:#035AA6,color:#000000
   classDef prev fill:#f4f4f4,stroke:#9a9a9a,color:#555555,stroke-dasharray:4 3
   classDef opt fill:#ffffff,stroke:#035AA6,color:#555555,stroke-dasharray:2 2
@@ -43,16 +43,16 @@ Ogni freccia va da un concetto a quelli che lo usano. Ogni riquadro è un blocco
 
 ::: {.mappa-indice .mappa-blocchi}
 
-- **Indici e sommatoria**: [Indici (x_i)](#/notazioni-sommatoria-fino-a-n), [Sommatoria Σ](#/notazioni-sommatoria-fino-a-n), [Appartenenza (∈)](#/notazioni-sommatoria-su-i), [Proprietà di Σ](#/proprietà-della-sommatoria)
-- **Unità, variabili, tabelle**: [Unità statistica](#/unità-statistica), [Popolazione](#/unità-statistica), [Campione](#/misure-di-centralità-media), [Variabile](#/unità-statistica), [Dati tidy](#/dati-tidy-ordinati)
+- **Indici e sommatoria**: [Indici (x_i)](#/notazioni-sommatoria), [Sommatoria Σ](#/notazioni-sommatoria), [Appartenenza (∈)](#/notazioni-sommatoria)
+- **Unità, variabili, tabelle**: [Unità statistica](#/la-stessa-tabella-tidy), [Campione](#/misure-di-centralità-media), [Variabile](#/una-tabella-disordinata), [Dati tidy](#/dati-tidy-ordinati)
 - **Tipi di variabile**: [Tipo di variabile](#/tipologie-di-dati), [Continua](#/tipologie-di-dati), [Discreta](#/tipologie-di-dati), [Nominale](#/tipologie-di-dati-1), [Ordinale](#/tipologie-di-dati-1), [Dicotomica](#/tipologie-di-dati-1), [Cardinale](#/tipologie-di-dati-in-sintesi), [Un numero non basta](#/tipologie-di-dati-in-sintesi)
-- **Centralità**: [Misura di centralità](#/misure-di-centralità-media), [Media](#/misure-di-centralità-media), [Media e valori estremi](#/misure-di-centralità-media), [Mediana](#/misure-di-centralità-mediana), [Mediana e valori estremi](#/mediana-n-pari), [Asimmetria](#/confronto-media-e-mediana), [Frequenza](#/misure-di-centralità-moda), [Moda](#/misure-di-centralità-moda)
+- **Centralità**: [Misura di centralità](#/misure-di-centralità-media), [Media](#/misure-di-centralità-media), [Media e valori estremi](#/misure-di-centralità-media), [Mediana](#/misure-di-centralità-mediana), [Mediana e valori estremi](#/mediana-n-pari), [Media o mediana?](#/media-o-mediana), [Frequenza](#/misure-di-centralità-moda), [Moda](#/misure-di-centralità-moda)
 - **Variabilità**: [Misura di variabilità](#/misure-di-variabilità), [Range](#/misure-di-variabilità-range-massimale), [Varianza](#/misure-di-variabilità-varianza-campionaria), [Deviazione standard](#/misure-di-variabilità-varianza-campionaria), [Scarti a somma zero](#/misure-di-variabilità-varianza-campionaria), [Varianza: formula alternativa](#/varianza-formula-alternativa), [Coefficiente di variazione](#/misure-di-variabilità-coefficiente-di-variazione), [CV e unità di misura](#/cv-non-effetto-scala)
 - **Percentili e quartili**: [Percentile](#/percentili), [Quartile](#/percentili)
-- **Classi e medie ponderate**: [Classi](#/accorpamenti), [Media ponderata](#/misure-ponderate-media-aritmetica-ponderata), [Varianza ponderata](#/misure-ponderate-varianza-ponderata)
+- **Classi e medie ponderate**: [Classi](#/accorpamenti), [Media ponderata](#/misure-ponderate-media-aritmetica-ponderata)
 - **Istogramma**: [Istogramma](#/istogramma), [Densità di frequenza](#/dati-continui-istogramma)
-- **Box-plot**: [Box-plot](#/boxplot-general), [Distanza interquartile](#/dati-continui-box-plot), [Baffi](#/dati-continui-box-plot), [Outlier](#/dati-continui-box-plot), [Outlier estremo](#/dati-continui-box-plot), [Box-plot a confronto](#/prima)
-- **Barre e scelta del grafico**: [Grafico a barre](#/dati-categorici-barre), [Istogramma ≠ barre](#/dati-categorici-barre), [Barre da zero](#/dati-categorici-barre), [Scelta del grafico](#/dati-categorici-barre), [Distorsioni grafiche](#/dati-categorici-barre)
+- **Box-plot**: [Box-plot](#/boxplot-general), [Distanza interquartile](#/dati-continui-box-plot), [Baffi](#/dati-continui-box-plot), [Outlier](#/dati-continui-box-plot), [Box-plot a confronto](#/prima)
+- **Barre e scelta del grafico**: [Grafico a barre](#/dati-discreti-barre), [Istogramma ≠ barre](#/dati-discreti-barre), [Barre da zero](#/dati-discreti-barre), [Scelta del grafico](#/dati-discreti-barre), [Distorsioni grafiche](#/dati-discreti-barre)
 
 :::
 

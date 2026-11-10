@@ -8,20 +8,19 @@
 %%| echo: false
 %%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart LR
-  n_variabile_continua["Continua"]:::prev
   n_variabile_discreta["Discreta"]:::prev
   n_tipo_di_variabile["Tipo di variabile"]:::prev
-  n_mediana["Mediana"]:::prev
-  n_frequenza_assoluta["Frequenza"]:::prev
-  n_accorpamento_in_classi["Classi"]:::prev
+  n_variabile_continua["Continua"]:::prev
   n_quartile["Quartile"]:::prev
+  n_mediana["Mediana"]:::prev
+  n_accorpamento_in_classi["Classi"]:::prev
+  n_frequenza_assoluta["Frequenza"]:::prev
   n_istogramma["Istogramma"]:::cur
   n_densita_di_frequenza["Densità di frequenza"]:::cur
   n_boxplot["Box-plot"]:::cur
   n_distanza_interquartile["Distanza interquartile"]:::cur
   n_baffi_del_boxplot["Baffi"]:::cur
   n_outlier["Outlier"]:::cur
-  n_outlier_estremo["Outlier estremo"]:::cur
   n_grafico_a_barre["Grafico a barre"]:::cur
   n_istogramma_vs_grafico_a_barre["Istogramma ≠ barre"]:::cur
   n_base_delle_barre_da_zero["Barre da zero"]:::cur
@@ -45,7 +44,6 @@ flowchart LR
   n_istogramma --> n_scelta_del_grafico
   n_mediana --> n_boxplot
   n_outlier --> n_boxplot_per_confronto_di_distribuzioni
-  n_outlier --> n_outlier_estremo
   n_quartile --> n_distanza_interquartile
   n_tipo_di_variabile --> n_scelta_del_grafico
   n_variabile_continua --> n_istogramma
@@ -71,12 +69,11 @@ Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle
 - [Distanza interquartile](#/dati-continui-box-plot)
 - [Baffi](#/dati-continui-box-plot)
 - [Outlier](#/dati-continui-box-plot)
-- [Outlier estremo](#/dati-continui-box-plot)
-- [Grafico a barre](#/dati-categorici-barre)
-- [Istogramma ≠ barre](#/dati-categorici-barre)
-- [Barre da zero](#/dati-categorici-barre)
-- [Scelta del grafico](#/dati-categorici-barre)
-- [Distorsioni grafiche](#/dati-categorici-barre)
+- [Grafico a barre](#/dati-discreti-barre)
+- [Istogramma ≠ barre](#/dati-discreti-barre)
+- [Barre da zero](#/dati-discreti-barre)
+- [Scelta del grafico](#/dati-discreti-barre)
+- [Distorsioni grafiche](#/dati-discreti-barre)
 - [Box-plot a confronto](#/prima)
 
 :::

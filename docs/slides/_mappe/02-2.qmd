@@ -8,7 +8,6 @@
 %%| echo: false
 %%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart TB
-  n_popolazione["Popolazione"]:::prev
   n_variabile_continua["Continua"]:::prev
   n_variabile_discreta["Discreta"]:::prev
   n_sommatoria["Sommatoria Σ"]:::prev
@@ -18,7 +17,7 @@ flowchart TB
   n_media_sensibile_ai_valori_estremi["Media e valori estremi"]:::cur
   n_mediana["Mediana"]:::cur
   n_mediana_robusta_ai_valori_estremi["Mediana e valori estremi"]:::cur
-  n_asimmetria["Asimmetria"]:::cur
+  n_media_o_mediana["Media o mediana?"]:::cur
   n_frequenza_assoluta["Frequenza"]:::cur
   n_moda["Moda"]:::cur
   n_misura_di_variabilita["Misura di variabilità"]:::cur
@@ -33,12 +32,10 @@ flowchart TB
   n_quartile["Quartile"]:::cur
   n_accorpamento_in_classi["Classi"]:::cur
   n_media_ponderata["Media ponderata"]:::cur
-  n_varianza_ponderata["Varianza ponderata"]:::cur
   n_accorpamento_in_classi --> n_media_ponderata
   n_campione --> n_media_aritmetica
   n_coefficiente_di_variazione --> n_cv_invariante_per_scala
   n_deviazione_standard --> n_coefficiente_di_variazione
-  n_formula_computazionale_della_varianza --> n_varianza_ponderata
   n_frequenza_assoluta --> n_accorpamento_in_classi
   n_frequenza_assoluta --> n_moda
   n_media_aritmetica --> n_media_ponderata
@@ -46,15 +43,13 @@ flowchart TB
   n_media_aritmetica --> n_mediana
   n_media_aritmetica --> n_misura_di_variabilita
   n_media_aritmetica --> n_somma_degli_scarti_nulla
-  n_media_ponderata --> n_varianza_ponderata
   n_media_sensibile_ai_valori_estremi --> n_mediana_robusta_ai_valori_estremi
-  n_mediana --> n_asimmetria
+  n_mediana --> n_media_o_mediana
   n_mediana --> n_mediana_robusta_ai_valori_estremi
   n_mediana --> n_percentile
   n_misura_di_variabilita --> n_range
   n_misura_di_variabilita --> n_varianza
   n_percentile --> n_quartile
-  n_popolazione --> n_campione
   n_sommatoria --> n_media_aritmetica
   n_variabile_continua --> n_accorpamento_in_classi
   n_variabile_continua --> n_media_aritmetica
@@ -83,7 +78,7 @@ Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle
 - [Media e valori estremi](#/misure-di-centralità-media)
 - [Mediana](#/misure-di-centralità-mediana)
 - [Mediana e valori estremi](#/mediana-n-pari)
-- [Asimmetria](#/confronto-media-e-mediana)
+- [Media o mediana?](#/media-o-mediana)
 - [Frequenza](#/misure-di-centralità-moda)
 - [Moda](#/misure-di-centralità-moda)
 - [Misura di variabilità](#/misure-di-variabilità)
@@ -98,7 +93,6 @@ Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle
 - [Quartile](#/percentili)
 - [Classi](#/accorpamenti)
 - [Media ponderata](#/misure-ponderate-media-aritmetica-ponderata)
-- [Varianza ponderata](#/misure-ponderate-varianza-ponderata)
 
 :::
 

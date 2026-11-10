@@ -118,11 +118,6 @@
   },
   {
    "deck": "04",
-   "id": "04.6",
-   "title": "Approssimazioni alla distribuzione normale (OPZIONALE - no esame)"
-  },
-  {
-   "deck": "04",
    "id": "04.9",
    "title": "Chiusura"
   },
@@ -227,8 +222,7 @@
    "concepts": [
     "notazione-con-indici",
     "sommatoria",
-    "appartenenza-insiemistica",
-    "proprieta-della-sommatoria"
+    "appartenenza-insiemistica"
    ]
   },
   {
@@ -237,7 +231,6 @@
    "label": "Unità, variabili, tabelle",
    "concepts": [
     "unita-statistica",
-    "popolazione",
     "campione",
     "variabile",
     "dati-tidy"
@@ -268,7 +261,7 @@
     "media-sensibile-ai-valori-estremi",
     "mediana",
     "mediana-robusta-ai-valori-estremi",
-    "asimmetria",
+    "media-o-mediana",
     "frequenza-assoluta",
     "moda"
    ]
@@ -303,8 +296,7 @@
    "label": "Classi e medie ponderate",
    "concepts": [
     "accorpamento-in-classi",
-    "media-ponderata",
-    "varianza-ponderata"
+    "media-ponderata"
    ]
   },
   {
@@ -325,7 +317,6 @@
     "distanza-interquartile",
     "baffi-del-boxplot",
     "outlier",
-    "outlier-estremo",
     "boxplot-per-confronto-di-distribuzioni"
    ]
   },
@@ -383,6 +374,7 @@
     "regola-del-prodotto",
     "regola-della-somma",
     "indipendenza-del-complementare",
+    "unione-come-somma-disgiunta",
     "somma-di-eventi-indipendenti",
     "notazione-esito-positivo-negativo"
    ]
@@ -405,7 +397,7 @@
    "label": "Rischio e prevalenza",
    "concepts": [
     "rischio-relativo",
-    "rischio-assoluto",
+    "rischio-relativo-gonfiaggio",
     "prevalenza"
    ]
   },
@@ -431,7 +423,8 @@
     "teorema-di-bayes",
     "calcolo-dei-valori-predittivi",
     "vpp-da-conteggi",
-    "teorema-di-bayes-generalizzato"
+    "indipendenza-condizionata",
+    "bayes-test-in-sequenza"
    ]
   },
   {
@@ -477,10 +470,7 @@
     "fattoriale",
     "coefficiente-binomiale",
     "distribuzione-binomiale",
-    "simmetria-della-binomiale",
-    "triangolo-di-tartaglia",
     "valore-atteso-e-varianza-della-binomiale",
-    "distribuzione-di-bernoulli",
     "forma-della-binomiale"
    ]
   },
@@ -495,7 +485,6 @@
     "distribuzione-di-poisson",
     "probabilita-di-almeno-k",
     "valore-atteso-e-varianza-della-poisson",
-    "sovradispersione",
     "probabilita-di-coda",
     "approssimazione-poisson-della-binomiale"
    ]
@@ -508,10 +497,8 @@
     "funzione-di-densita",
     "integrale",
     "valore-atteso-e-varianza-continui",
-    "moda-di-distribuzione",
     "mediana-di-distribuzione",
-    "percentile-di-distribuzione",
-    "posizione-di-media-mediana-moda"
+    "percentile-di-distribuzione"
    ]
   },
   {
@@ -548,15 +535,6 @@
     "percentile-della-normale-standard",
     "calcolo-dei-percentili-della-normale",
     "standardizzazione"
-   ]
-  },
-  {
-   "id": "04-approssimazioni",
-   "deck": "04",
-   "label": "Approssimazioni (facoltativo)",
-   "concepts": [
-    "correzione-di-continuita",
-    "approssimazione-normale-della-binomiale"
    ]
   },
   {
@@ -617,8 +595,7 @@
     "distribuzione-t-di-student",
     "gradi-di-liberta",
     "percentile-della-t-di-student",
-    "ic-media-varianza-ignota",
-    "confronto-tra-ic-e-valore-di-riferimento"
+    "ic-media-varianza-ignota"
    ]
   },
   {
@@ -626,6 +603,7 @@
    "deck": "05",
    "label": "Ipotesi ed errori",
    "concepts": [
+    "confronto-tra-ic-e-valore-di-riferimento",
     "ipotesi-nulla",
     "ipotesi-alternativa",
     "test-d-ipotesi",
@@ -633,14 +611,13 @@
     "errore-di-primo-tipo",
     "errore-di-secondo-tipo",
     "significativita-statistica",
-    "potenza",
-    "criterio-di-costruzione-del-test"
+    "potenza"
    ]
   },
   {
    "id": "05-test-z",
    "deck": "05",
-   "label": "Test z",
+   "label": "Test z e test t",
    "concepts": [
     "statistica-test",
     "valore-critico",
@@ -648,19 +625,22 @@
     "test-sulla-media-varianza-nota",
     "statistica-z-del-test",
     "test-a-una-coda",
-    "test-a-due-code"
+    "test-a-due-code",
+    "test-t-per-la-media"
    ]
   },
   {
    "id": "05-p-value",
    "deck": "05",
-   "label": "P-value e test t",
+   "label": "P-value",
    "concepts": [
     "p-value",
     "calcolo-del-p-value",
     "p-value-a-due-code",
-    "test-t-per-la-media",
-    "dualita-test-intervallo-di-confidenza"
+    "dualita-test-intervallo-di-confidenza",
+    "p-value-non-e-probabilita-di-h0",
+    "assenza-di-prove-non-e-prova-di-assenza",
+    "significativita-non-e-rilevanza"
    ]
   }
  ],
@@ -1072,8 +1052,8 @@
    "kind": "notazione",
    "optional": false,
    "requires": [],
-   "slide": "Notazioni: Sommatoria fino a N",
-   "slide_norm": "notazionisommatoriafinoan",
+   "slide": "[Notazioni]: Sommatoria",
+   "slide_norm": "notazionisommatoria",
    "slide_k": 0,
    "chunk": "02-notazioni"
   },
@@ -1088,8 +1068,8 @@
    "requires": [
     "notazione-con-indici"
    ],
-   "slide": "Notazioni: Sommatoria fino a N",
-   "slide_norm": "notazionisommatoriafinoan",
+   "slide": "[Notazioni]: Sommatoria",
+   "slide_norm": "notazionisommatoria",
    "slide_k": 0,
    "chunk": "02-notazioni"
   },
@@ -1102,24 +1082,8 @@
    "kind": "notazione",
    "optional": false,
    "requires": [],
-   "slide": "Notazioni: Sommatoria su I",
-   "slide_norm": "notazionisommatoriasui",
-   "slide_k": 0,
-   "chunk": "02-notazioni"
-  },
-  {
-   "id": "proprieta-della-sommatoria",
-   "deck": "02",
-   "section": "02.1",
-   "label": "Proprietà della sommatoria",
-   "short": "Proprietà di Σ",
-   "kind": "proprieta",
-   "optional": false,
-   "requires": [
-    "sommatoria"
-   ],
-   "slide": "Proprietà della sommatoria",
-   "slide_norm": "proprietàdellasommatoria",
+   "slide": "[Notazioni]: Sommatoria",
+   "slide_norm": "notazionisommatoria",
    "slide_k": 0,
    "chunk": "02-notazioni"
   },
@@ -1132,24 +1096,8 @@
    "kind": "definizione",
    "optional": false,
    "requires": [],
-   "slide": "Unità statistica",
-   "slide_norm": "unitàstatistica",
-   "slide_k": 0,
-   "chunk": "02-unita"
-  },
-  {
-   "id": "popolazione",
-   "deck": "02",
-   "section": "02.1",
-   "label": "Popolazione statistica",
-   "short": "Popolazione",
-   "kind": "definizione",
-   "optional": false,
-   "requires": [
-    "unita-statistica"
-   ],
-   "slide": "Unità statistica",
-   "slide_norm": "unitàstatistica",
+   "slide": "La stessa tabella, [tidy]",
+   "slide_norm": "lastessatabellatidy",
    "slide_k": 0,
    "chunk": "02-unita"
   },
@@ -1164,8 +1112,8 @@
    "requires": [
     "unita-statistica"
    ],
-   "slide": "Unità statistica",
-   "slide_norm": "unitàstatistica",
+   "slide": "Una tabella [disordinata]",
+   "slide_norm": "unatabelladisordinata",
    "slide_k": 0,
    "chunk": "02-unita"
   },
@@ -1342,9 +1290,7 @@
    "short": "Campione",
    "kind": "definizione",
    "optional": false,
-   "requires": [
-    "popolazione"
-   ],
+   "requires": [],
    "slide": "Misure di centralità: media",
    "slide_norm": "misuredicentralitàmedia",
    "slide_k": 0,
@@ -1419,19 +1365,19 @@
    "chunk": "02-centralita"
   },
   {
-   "id": "asimmetria",
+   "id": "media-o-mediana",
    "deck": "02",
    "section": "02.2",
-   "label": "Asimmetria (media − mediana)",
-   "short": "Asimmetria",
+   "label": "Media o mediana (coda lunga)",
+   "short": "Media o mediana?",
    "kind": "formula",
    "optional": false,
    "requires": [
     "media-aritmetica",
     "mediana"
    ],
-   "slide": "Confronto media e mediana",
-   "slide_norm": "confrontomediaemediana",
+   "slide": "[Media] o mediana?",
+   "slide_norm": "mediaomediana",
    "slide_k": 0,
    "chunk": "02-centralita"
   },
@@ -1675,24 +1621,6 @@
    "chunk": "02-classi"
   },
   {
-   "id": "varianza-ponderata",
-   "deck": "02",
-   "section": "02.2",
-   "label": "Varianza ponderata",
-   "short": "Varianza ponderata",
-   "kind": "formula",
-   "optional": false,
-   "requires": [
-    "varianza",
-    "media-ponderata",
-    "formula-computazionale-della-varianza"
-   ],
-   "slide": "misure ponderate: varianza ponderata",
-   "slide_norm": "misureponderatevarianzaponderata",
-   "slide_k": 0,
-   "chunk": "02-classi"
-  },
-  {
    "id": "istogramma",
    "deck": "02",
    "section": "02.3",
@@ -1797,22 +1725,6 @@
    "chunk": "02-boxplot"
   },
   {
-   "id": "outlier-estremo",
-   "deck": "02",
-   "section": "02.3",
-   "label": "Outlier estremo",
-   "short": "Outlier estremo",
-   "kind": "definizione",
-   "optional": false,
-   "requires": [
-    "outlier"
-   ],
-   "slide": "Dati continui: box-plot",
-   "slide_norm": "daticontinuiboxplot",
-   "slide_k": 0,
-   "chunk": "02-boxplot"
-  },
-  {
    "id": "grafico-a-barre",
    "deck": "02",
    "section": "02.3",
@@ -1824,8 +1736,8 @@
     "frequenza-assoluta",
     "variabile-discreta"
    ],
-   "slide": "Dati categorici: barre",
-   "slide_norm": "daticategoricibarre",
+   "slide": "Dati discreti: barre",
+   "slide_norm": "datidiscretibarre",
    "slide_k": 0,
    "chunk": "02-barre"
   },
@@ -1841,8 +1753,8 @@
     "istogramma",
     "grafico-a-barre"
    ],
-   "slide": "Dati categorici: barre",
-   "slide_norm": "daticategoricibarre",
+   "slide": "Dati discreti: barre",
+   "slide_norm": "datidiscretibarre",
    "slide_k": 0,
    "chunk": "02-barre"
   },
@@ -1857,8 +1769,8 @@
    "requires": [
     "grafico-a-barre"
    ],
-   "slide": "Dati categorici: barre",
-   "slide_norm": "daticategoricibarre",
+   "slide": "Dati discreti: barre",
+   "slide_norm": "datidiscretibarre",
    "slide_k": 0,
    "chunk": "02-barre"
   },
@@ -1875,8 +1787,8 @@
     "grafico-a-barre",
     "istogramma"
    ],
-   "slide": "Dati categorici: barre",
-   "slide_norm": "daticategoricibarre",
+   "slide": "Dati discreti: barre",
+   "slide_norm": "datidiscretibarre",
    "slide_k": 0,
    "chunk": "02-barre"
   },
@@ -1892,8 +1804,8 @@
     "grafico-a-barre",
     "base-delle-barre-da-zero"
    ],
-   "slide": "Dati categorici: barre",
-   "slide_norm": "daticategoricibarre",
+   "slide": "Dati discreti: barre",
+   "slide_norm": "datidiscretibarre",
    "slide_k": 0,
    "chunk": "02-barre"
   },
@@ -1976,7 +1888,6 @@
     "evento",
     "esperimento-casuale",
     "frequenza-relativa",
-    "popolazione",
     "frazioni-percentuali-decimali"
    ],
    "slide": "Definizione: evento e probabilità",
@@ -2206,6 +2117,25 @@
    "chunk": "03-somma-prodotto"
   },
   {
+   "id": "unione-come-somma-disgiunta",
+   "deck": "03",
+   "section": "03.2",
+   "label": "P(A∪B) = P(A) + P(B∩Ā), sempre",
+   "short": "Unione come somma disgiunta",
+   "kind": "regola",
+   "optional": false,
+   "requires": [
+    "additivita-eventi-incompatibili",
+    "unione-di-eventi",
+    "intersezione-di-eventi",
+    "evento-complementare"
+   ],
+   "slide": "[Somma]: indipendenza",
+   "slide_norm": "sommaindipendenza",
+   "slide_k": 0,
+   "chunk": "03-somma-prodotto"
+  },
+  {
    "id": "somma-di-eventi-indipendenti",
    "deck": "03",
    "section": "03.2",
@@ -2218,7 +2148,8 @@
     "eventi-indipendenti",
     "evento-complementare",
     "indipendenza-del-complementare",
-    "regola-del-prodotto"
+    "regola-del-prodotto",
+    "unione-come-somma-disgiunta"
    ],
    "slide": "Somma: indipendenza",
    "slide_norm": "sommaindipendenza",
@@ -2289,7 +2220,6 @@
    "optional": false,
    "requires": [
     "probabilita",
-    "popolazione",
     "frazioni-percentuali-decimali"
    ],
    "slide": "Condizionamento: esempio",
@@ -2354,18 +2284,18 @@
    "chunk": "03-rischio"
   },
   {
-   "id": "rischio-assoluto",
+   "id": "rischio-relativo-gonfiaggio",
    "deck": "03",
    "section": "03.3",
-   "label": "Rischio assoluto",
-   "short": "Rischio assoluto",
-   "kind": "definizione",
+   "label": "Il RR dice quante volte, non quanti casi in più",
+   "short": "RR e gonfiaggio",
+   "kind": "proprieta",
    "optional": false,
    "requires": [
-    "probabilita"
+    "rischio-relativo"
    ],
-   "slide": "[Rischio relativo]",
-   "slide_norm": "rischiorelativo",
+   "slide": "[Rischio relativo]: attenzione al gonfiaggio",
+   "slide_norm": "rischiorelativoattenzionealgonfiaggio",
    "slide_k": 0,
    "chunk": "03-rischio"
   },
@@ -2535,37 +2465,57 @@
    "id": "vpp-da-conteggi",
    "deck": "03",
    "section": "03.4",
-   "label": "VPP = VP/(VP+FP) (formula frequentista con veri e falsi positivi)",
+   "label": "VP/(VP+FP) da una tabella: giusto solo con la prevalenza della popolazione",
    "short": "VPP dai conteggi",
    "kind": "formula",
    "optional": true,
    "requires": [
     "valore-predittivo-positivo",
-    "falso-positivo"
+    "falso-positivo",
+    "prevalenza",
+    "calcolo-dei-valori-predittivi"
    ],
-   "slide": "Approfondimento",
-   "slide_norm": "approfondimento",
+   "slide": "[Teorema di Bayes]: esempio",
+   "slide_norm": "teoremadibayesesempio",
    "slide_k": 0,
    "chunk": "03-bayes"
   },
   {
-   "id": "teorema-di-bayes-generalizzato",
+   "id": "indipendenza-condizionata",
    "deck": "03",
    "section": "03.4",
-   "label": "Teorema di Bayes generalizzato (k stati di malattia)",
-   "short": "Bayes generalizzato",
-   "kind": "regola",
+   "label": "Indipendenza condizionata (a parità di malattia i test sbagliano indipendentemente)",
+   "short": "Indipendenza condizionata",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "eventi-indipendenti",
+    "probabilita-condizionata"
+   ],
+   "slide": "[Teorema di Bayes]: due test in sequenza",
+   "slide_norm": "teoremadibayesduetestinsequenza",
+   "slide_k": 0,
+   "chunk": "03-bayes"
+  },
+  {
+   "id": "bayes-test-in-sequenza",
+   "deck": "03",
+   "section": "03.4",
+   "label": "Due test in sequenza: il PV+ del primo è la prevalenza del secondo",
+   "short": "Due test in sequenza",
+   "kind": "procedura",
    "optional": false,
    "requires": [
     "teorema-di-bayes",
-    "eventi-esaustivi",
-    "eventi-incompatibili",
-    "teorema-delle-probabilita-totali",
-    "sommatoria",
-    "appartenenza-insiemistica"
+    "calcolo-dei-valori-predittivi",
+    "valore-predittivo-positivo",
+    "prevalenza",
+    "sensibilita",
+    "specificita",
+    "indipendenza-condizionata"
    ],
-   "slide": "Teorema di Bayes: generalizzazione",
-   "slide_norm": "teoremadibayesgeneralizzazione",
+   "slide": "[Teorema di Bayes]: due test in sequenza",
+   "slide_norm": "teoremadibayesduetestinsequenza",
    "slide_k": 0,
    "chunk": "03-bayes"
   },
@@ -2834,39 +2784,6 @@
    "chunk": "04-binomiale"
   },
   {
-   "id": "simmetria-della-binomiale",
-   "deck": "04",
-   "section": "04.2",
-   "label": "Simmetria P(X=k)=P(X=n-k)",
-   "short": "Simmetria della binomiale",
-   "kind": "proprieta",
-   "optional": false,
-   "requires": [
-    "distribuzione-binomiale",
-    "coefficiente-binomiale"
-   ],
-   "slide": "Distribuzione [Binomiale]",
-   "slide_norm": "distribuzionebinomiale",
-   "slide_k": 1,
-   "chunk": "04-binomiale"
-  },
-  {
-   "id": "triangolo-di-tartaglia",
-   "deck": "04",
-   "section": "04.2",
-   "label": "Triangolo di Tartaglia",
-   "short": "Triangolo di Tartaglia",
-   "kind": "rappresentazione",
-   "optional": false,
-   "requires": [
-    "coefficiente-binomiale"
-   ],
-   "slide": "Coefficiente binomiale: [Triangolo di Tartaglia]",
-   "slide_norm": "coefficientebinomialetriangoloditartaglia",
-   "slide_k": 0,
-   "chunk": "04-binomiale"
-  },
-  {
    "id": "linearita-del-valore-atteso",
    "deck": "04",
    "section": "04.2",
@@ -2917,23 +2834,6 @@
    ],
    "slide": "Binomiale: Valore atteso e varianza",
    "slide_norm": "binomialevaloreattesoevarianza",
-   "slide_k": 0,
-   "chunk": "04-binomiale"
-  },
-  {
-   "id": "distribuzione-di-bernoulli",
-   "deck": "04",
-   "section": "04.2",
-   "label": "Distribuzione di Bernoulli (binomiale con n=1)",
-   "short": "Bernoulli",
-   "kind": "definizione",
-   "optional": false,
-   "requires": [
-    "distribuzione-binomiale",
-    "variabile-dicotomica"
-   ],
-   "slide": "Singolo esperimento: grafico",
-   "slide_norm": "singoloesperimentografico",
    "slide_k": 0,
    "chunk": "04-binomiale"
   },
@@ -3060,24 +2960,6 @@
    "chunk": "04-poisson"
   },
   {
-   "id": "sovradispersione",
-   "deck": "04",
-   "section": "04.3",
-   "label": "Sovradispersione (varianza maggiore della media)",
-   "short": "Sovradispersione",
-   "kind": "proprieta",
-   "optional": false,
-   "requires": [
-    "valore-atteso-e-varianza-della-poisson",
-    "media-aritmetica",
-    "varianza"
-   ],
-   "slide": "Poisson: Polio",
-   "slide_norm": "poissonpolio",
-   "slide_k": 0,
-   "chunk": "04-poisson"
-  },
-  {
    "id": "probabilita-di-coda",
    "deck": "04",
    "section": "04.3",
@@ -3167,23 +3049,6 @@
    "chunk": "04-densita"
   },
   {
-   "id": "moda-di-distribuzione",
-   "deck": "04",
-   "section": "04.4",
-   "label": "Moda di una distribuzione",
-   "short": "Moda di distribuzione",
-   "kind": "definizione",
-   "optional": false,
-   "requires": [
-    "moda",
-    "funzione-di-densita"
-   ],
-   "slide": "Valore atteso e [varianza]",
-   "slide_norm": "valoreattesoevarianza",
-   "slide_k": 0,
-   "chunk": "04-densita"
-  },
-  {
    "id": "mediana-di-distribuzione",
    "deck": "04",
    "section": "04.4",
@@ -3220,26 +3085,6 @@
    "chunk": "04-densita"
   },
   {
-   "id": "posizione-di-media-mediana-moda",
-   "deck": "04",
-   "section": "04.4",
-   "label": "Posizione di media, mediana e moda (simmetria e asimmetria)",
-   "short": "Media, mediana, moda",
-   "kind": "rappresentazione",
-   "optional": false,
-   "requires": [
-    "media-aritmetica",
-    "mediana",
-    "moda",
-    "asimmetria",
-    "funzione-di-densita"
-   ],
-   "slide": "Valore atteso e [varianza]",
-   "slide_norm": "valoreattesoevarianza",
-   "slide_k": 0,
-   "chunk": "04-densita"
-  },
-  {
    "id": "parametro",
    "deck": "04",
    "section": "04.4",
@@ -3248,7 +3093,6 @@
    "kind": "definizione",
    "optional": false,
    "requires": [
-    "popolazione",
     "valore-atteso",
     "varianza-di-variabile-casuale",
     "deviazione-standard"
@@ -3506,43 +3350,6 @@
    "chunk": "04-tavole"
   },
   {
-   "id": "correzione-di-continuita",
-   "deck": "04",
-   "section": "04.6",
-   "label": "Correzione di continuita (+-1/2)",
-   "short": "Correzione di continuità",
-   "kind": "procedura",
-   "optional": true,
-   "requires": [
-    "distribuzione-binomiale",
-    "funzione-di-densita"
-   ],
-   "slide": "Approssimazione alla Normale: Binomiale",
-   "slide_norm": "approssimazioneallanormalebinomiale",
-   "slide_k": 0,
-   "chunk": "04-approssimazioni"
-  },
-  {
-   "id": "approssimazione-normale-della-binomiale",
-   "deck": "04",
-   "section": "04.6",
-   "label": "Approssimazione normale della binomiale N(np, npq)",
-   "short": "Normale per la binomiale",
-   "kind": "procedura",
-   "optional": true,
-   "requires": [
-    "distribuzione-binomiale",
-    "distribuzione-normale",
-    "valore-atteso-e-varianza-della-binomiale",
-    "standardizzazione",
-    "correzione-di-continuita"
-   ],
-   "slide": "Approssimazione alla Normale: Binomiale",
-   "slide_norm": "approssimazioneallanormalebinomiale",
-   "slide_k": 0,
-   "chunk": "04-approssimazioni"
-  },
-  {
    "id": "inferenza-statistica",
    "deck": "05",
    "section": "05.1",
@@ -3552,7 +3359,6 @@
    "optional": false,
    "requires": [
     "campione",
-    "popolazione",
     "distribuzione-di-probabilita"
    ],
    "slide": "Inferenza: di cosa si tratta",
@@ -3570,7 +3376,6 @@
    "optional": false,
    "requires": [
     "campione",
-    "popolazione",
     "eventi-indipendenti",
     "probabilita"
    ],
@@ -3603,9 +3408,7 @@
    "short": "Popolazione target",
    "kind": "definizione",
    "optional": false,
-   "requires": [
-    "popolazione"
-   ],
+   "requires": [],
    "slide": "Inferenza: campioni e [popolazioni]",
    "slide_norm": "inferenzacampioniepopolazioni",
    "slide_k": 0,
@@ -3880,8 +3683,7 @@
    "kind": "proprieta",
    "optional": false,
    "requires": [
-    "campione",
-    "popolazione"
+    "campione"
    ],
    "slide": "IC osservazioni: \"confidenza\"",
    "slide_norm": "icosservazioniconfidenza",
@@ -4015,7 +3817,7 @@
   {
    "id": "confronto-tra-ic-e-valore-di-riferimento",
    "deck": "05",
-   "section": "05.5",
+   "section": "05.6",
    "label": "Uso dell'IC per confrontare con un valore di riferimento",
    "short": "IC e valore di riferimento",
    "kind": "procedura",
@@ -4025,10 +3827,10 @@
     "interpretazione-dell-intervallo-di-confidenza",
     "probabilita"
    ],
-   "slide": "IC: [Esempio]",
-   "slide_norm": "icesempio",
+   "slide": "[Un problema]: colesterolo e familiarità",
+   "slide_norm": "unproblemacolesteroloefamiliarità",
    "slide_k": 0,
-   "chunk": "05-t"
+   "chunk": "05-ipotesi"
   },
   {
    "id": "ipotesi-nulla",
@@ -4141,7 +3943,8 @@
    "kind": "definizione",
    "optional": false,
    "requires": [
-    "errore-di-primo-tipo"
+    "errore-di-primo-tipo",
+    "ic-a-livello-generico"
    ],
    "slide": "Ipotesi: [decisioni]",
    "slide_norm": "ipotesidecisioni",
@@ -4158,23 +3961,6 @@
    "optional": false,
    "requires": [
     "errore-di-secondo-tipo"
-   ],
-   "slide": "Ipotesi: [decisioni]",
-   "slide_norm": "ipotesidecisioni",
-   "slide_k": 0,
-   "chunk": "05-ipotesi"
-  },
-  {
-   "id": "criterio-di-costruzione-del-test",
-   "deck": "05",
-   "section": "05.6",
-   "label": "Criterio di costruzione del test (α fissato, β minimo)",
-   "short": "Costruzione del test",
-   "kind": "proprieta",
-   "optional": false,
-   "requires": [
-    "significativita-statistica",
-    "potenza"
    ],
    "slide": "Ipotesi: [decisioni]",
    "slide_norm": "ipotesidecisioni",
@@ -4287,7 +4073,8 @@
     "ipotesi-nulla",
     "regione-di-rifiuto",
     "significativita-statistica",
-    "probabilita"
+    "probabilita",
+    "distribuzione-di-poisson"
    ],
    "slide": "[P-value]",
    "slide_norm": "pvalue",
@@ -4326,8 +4113,8 @@
     "statistica-z-del-test",
     "percentile-della-normale-standard"
    ],
-   "slide": "[P-value]",
-   "slide_norm": "pvalue",
+   "slide": "Test: [una o due code]",
+   "slide_norm": "testunaoduecode",
    "slide_k": 0,
    "chunk": "05-test-z"
   },
@@ -4347,8 +4134,8 @@
     "regola-della-somma",
     "percentile-della-normale-standard"
    ],
-   "slide": "Test: due code",
-   "slide_norm": "testduecode",
+   "slide": "Test: [una o due code]",
+   "slide_norm": "testunaoduecode",
    "slide_k": 0,
    "chunk": "05-test-z"
   },
@@ -4362,7 +4149,8 @@
    "optional": false,
    "requires": [
     "calcolo-del-p-value",
-    "test-a-due-code"
+    "test-a-due-code",
+    "test-t-per-la-media"
    ],
    "slide": "Test a due code: p-value",
    "slide_norm": "testaduecodepvalue",
@@ -4381,13 +4169,12 @@
     "distribuzione-t-di-student",
     "gradi-di-liberta",
     "percentile-della-t-di-student",
-    "test-a-due-code",
-    "p-value"
+    "test-a-due-code"
    ],
    "slide": "Test: varianza non nota",
    "slide_norm": "testvarianzanonnota",
    "slide_k": 0,
-   "chunk": "05-p-value"
+   "chunk": "05-test-z"
   },
   {
    "id": "dualita-test-intervallo-di-confidenza",
@@ -4401,10 +4188,66 @@
     "test-a-due-code",
     "ic-a-livello-generico",
     "significativita-statistica",
-    "ipotesi-nulla"
+    "ipotesi-nulla",
+    "p-value-a-due-code",
+    "confronto-tra-ic-e-valore-di-riferimento"
    ],
-   "slide": "P-value e [CI]",
-   "slide_norm": "pvalueeci",
+   "slide": "[P-value] e [IC]",
+   "slide_norm": "pvalueeic",
+   "slide_k": 0,
+   "chunk": "05-p-value"
+  },
+  {
+   "id": "p-value-non-e-probabilita-di-h0",
+   "deck": "05",
+   "section": "05.6",
+   "label": "Il p-value non è P(H0 | dati)",
+   "short": "p-value non è P(H₀)",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "p-value",
+    "probabilita-condizionata",
+    "sensibilita",
+    "valore-predittivo-positivo"
+   ],
+   "slide": "[Leggere un p-value]: che cosa misura",
+   "slide_norm": "leggereunpvaluechecosamisura",
+   "slide_k": 0,
+   "chunk": "05-p-value"
+  },
+  {
+   "id": "assenza-di-prove-non-e-prova-di-assenza",
+   "deck": "05",
+   "section": "05.6",
+   "label": "p > 0.05 non vuol dire nessun effetto",
+   "short": "Non significativo ≠ nessun effetto",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "p-value",
+    "dualita-test-intervallo-di-confidenza"
+   ],
+   "slide": "[Leggere un p-value]: se non è significativo",
+   "slide_norm": "leggereunpvaluesenonèsignificativo",
+   "slide_k": 0,
+   "chunk": "05-p-value"
+  },
+  {
+   "id": "significativita-non-e-rilevanza",
+   "deck": "05",
+   "section": "05.6",
+   "label": "p < 0.05 non vuol dire effetto importante",
+   "short": "Significativo ≠ importante",
+   "kind": "proprieta",
+   "optional": false,
+   "requires": [
+    "p-value",
+    "ampiezza-dell-intervallo-di-confidenza",
+    "dualita-test-intervallo-di-confidenza"
+   ],
+   "slide": "[Leggere un p-value]: se è significativo",
+   "slide_norm": "leggereunpvalueseèsignificativo",
    "slide_k": 0,
    "chunk": "05-p-value"
   }

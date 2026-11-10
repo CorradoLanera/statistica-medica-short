@@ -8,29 +8,36 @@
 %%| echo: false
 %%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart LR
+  n_evento["Evento"]:::prev
+  n_probabilita["Probabilità"]:::prev
   n_intersezione_di_eventi["Intersezione (∩)"]:::prev
   n_evento_complementare["Complementare"]:::prev
-  n_evento["Evento"]:::prev
   n_unione_di_eventi["Unione (∪)"]:::prev
-  n_probabilita["Probabilità"]:::prev
+  n_additivita_eventi_incompatibili["Somma per incompatibili"]:::prev
   n_eventi_indipendenti["Eventi indipendenti"]:::cur
   n_regola_del_prodotto["Prodotto (indipendenti)"]:::cur
   n_notazione_esito_positivo_negativo["Notazione + e −"]:::cur
   n_regola_della_somma["Regola della somma"]:::cur
   n_indipendenza_del_complementare["Indipendenza e complementare"]:::cur
+  n_unione_come_somma_disgiunta["Unione come somma disgiunta"]:::cur
   n_somma_di_eventi_indipendenti["Somma per indipendenti"]:::cur
+  n_additivita_eventi_incompatibili --> n_unione_come_somma_disgiunta
   n_eventi_indipendenti --> n_indipendenza_del_complementare
   n_eventi_indipendenti --> n_regola_del_prodotto
   n_evento --> n_notazione_esito_positivo_negativo
   n_evento_complementare --> n_indipendenza_del_complementare
+  n_evento_complementare --> n_unione_come_somma_disgiunta
   n_indipendenza_del_complementare --> n_somma_di_eventi_indipendenti
   n_intersezione_di_eventi --> n_eventi_indipendenti
   n_intersezione_di_eventi --> n_regola_della_somma
+  n_intersezione_di_eventi --> n_unione_come_somma_disgiunta
   n_probabilita --> n_eventi_indipendenti
   n_probabilita --> n_regola_della_somma
   n_regola_del_prodotto --> n_somma_di_eventi_indipendenti
   n_regola_della_somma --> n_somma_di_eventi_indipendenti
+  n_unione_come_somma_disgiunta --> n_somma_di_eventi_indipendenti
   n_unione_di_eventi --> n_regola_della_somma
+  n_unione_di_eventi --> n_unione_come_somma_disgiunta
   classDef cur fill:#e6f0fa,stroke:#035AA6,color:#000000
   classDef prev fill:#f4f4f4,stroke:#9a9a9a,color:#555555,stroke-dasharray:4 3
   classDef opt fill:#ffffff,stroke:#035AA6,color:#555555,stroke-dasharray:2 2
@@ -51,6 +58,7 @@ Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle
 - [Notazione + e −](#/teorema-della-somma-es.)
 - [Regola della somma](#/teorema-della-somma)
 - [Indipendenza e complementare](#/somma-indipendenza)
+- [Unione come somma disgiunta](#/somma-indipendenza)
 - [Somma per indipendenti](#/somma-indipendenza)
 
 :::

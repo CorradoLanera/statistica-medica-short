@@ -18,7 +18,6 @@ flowchart LR
   n_popolazione_target["Popolazione target"]:::cur
   k_n_02_unita --> n_campione_casuale
   k_n_02_unita --> n_inferenza_statistica
-  k_n_02_unita --> n_popolazione_target
   k_n_03_probabilita --> n_campione_casuale
   k_n_03_somma_prodotto --> n_campione_casuale
   k_n_04_massa --> n_inferenza_statistica

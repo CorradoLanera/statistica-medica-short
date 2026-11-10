@@ -21,16 +21,14 @@ flowchart LR
   k_n_04_vc["Variabili casuali (5)"]:::cur
   k_n_04_massa["Massa e cumulata (4)"]:::cur
   k_n_04_momenti["Valore atteso e varianza (4)"]:::cur
-  k_n_04_binomiale["Binomiale (9)"]:::cur
-  k_n_04_poisson["Poisson (9)"]:::cur
-  k_n_04_densita["Densità (7)"]:::cur
+  k_n_04_binomiale["Binomiale (6)"]:::cur
+  k_n_04_poisson["Poisson (8)"]:::cur
+  k_n_04_densita["Densità (5)"]:::cur
   k_n_04_parametri["Parametri e statistiche (2)"]:::cur
   k_n_04_normale["Normale (7)"]:::cur
   k_n_04_tavole["Tavole e standardizzazione (6)"]:::cur
-  k_n_04_approssimazioni["Approssimazioni (facoltativo) (2)"]:::opt
   k_n_02_centralita --> k_n_04_densita
   k_n_02_centralita --> k_n_04_parametri
-  k_n_02_centralita --> k_n_04_poisson
   k_n_02_classi --> k_n_04_momenti
   k_n_02_notazioni --> k_n_04_massa
   k_n_02_percentili --> k_n_04_densita
@@ -49,7 +47,6 @@ flowchart LR
   k_n_04_normale --> k_n_04_tavole
   k_n_04_parametri --> k_n_04_normale
   k_n_04_poisson --> k_n_04_normale
-  k_n_04_tavole --> k_n_04_approssimazioni
   k_n_04_vc --> k_n_04_massa
   classDef cur fill:#e6f0fa,stroke:#035AA6,color:#000000
   classDef prev fill:#f4f4f4,stroke:#9a9a9a,color:#555555,stroke-dasharray:4 3
@@ -69,13 +66,12 @@ Ogni freccia va da un concetto a quelli che lo usano. Ogni riquadro è un blocco
 - **Variabili casuali**: [Variabile casuale](#/richiamo-variabile-casuale), [V.c. discreta](#/richiamo-variabile-casuale), [V.c. continua](#/richiamo-variabile-casuale), [Funzione](#/richiamo-variabile-casuale), [Funzione di v.c.](#/richiamo-variabile-casuale)
 - **Massa e cumulata**: [Distribuzione di probabilità](#/modelli-discreti), [Funzione di massa](#/modelli-discreti-massa), [Proprietà della massa](#/modelli-discreti-massa), [Cumulata F(x)](#/modelli-discreti-massa)
 - **Valore atteso e varianza**: [Valore atteso E(X)](#/modelli-discreti-valore-atteso), [Varianza Var(X)](#/modelli-discreti-varianza), [Linearità di E(X)](#/binomiale-valore-atteso-e-varianza), [Var della somma](#/binomiale-valore-atteso-e-varianza)
-- **Binomiale**: [Schema binomiale](#/binomiale-struttura), [Fattoriale n!](#/coefficiente-binomiale), [Coefficiente binomiale](#/coefficiente-binomiale), [Binomiale](#/distribuzione-binomiale-probabilità), [Simmetria della binomiale](#/distribuzione-binomiale-1), [Triangolo di Tartaglia](#/coefficiente-binomiale-triangolo-di-tartaglia), [E e Var della binomiale](#/binomiale-valore-atteso-e-varianza), [Bernoulli](#/singolo-esperimento-grafico), [Forma della binomiale](#/esperimenti-grafico)
-- **Poisson**: [Tasso λ](#/poisson-struttura), [Processo di Poisson](#/poisson-struttura), [Costante e](#/distribuzione-di-poisson-probabilità), [Poisson](#/distribuzione-di-poisson-probabilità), [P(almeno k)](#/distribuzione-di-poisson-1), [E e Var della Poisson](#/poisson-valore-atteso-e-varianza), [Sovradispersione](#/poisson-polio), [Probabilità di coda](#/poisson-cibo-cancerogeno), [Poisson per la binomiale](#/poisson-approssimazione)
-- **Densità**: [Densità](#/modelli-continui), [Integrale](#/valore-atteso-e-varianza), [E e Var (continue)](#/valore-atteso-e-varianza), [Moda di distribuzione](#/valore-atteso-e-varianza), [Mediana di distribuzione](#/valore-atteso-e-varianza), [Percentile di distribuzione](#/valore-atteso-e-varianza), [Media, mediana, moda](#/valore-atteso-e-varianza)
+- **Binomiale**: [Schema binomiale](#/binomiale-struttura), [Fattoriale n!](#/coefficiente-binomiale), [Coefficiente binomiale](#/coefficiente-binomiale), [Binomiale](#/distribuzione-binomiale-probabilità), [E e Var della binomiale](#/binomiale-valore-atteso-e-varianza), [Forma della binomiale](#/esperimenti-grafico)
+- **Poisson**: [Tasso λ](#/poisson-struttura), [Processo di Poisson](#/poisson-struttura), [Costante e](#/distribuzione-di-poisson-probabilità), [Poisson](#/distribuzione-di-poisson-probabilità), [P(almeno k)](#/distribuzione-di-poisson-1), [E e Var della Poisson](#/poisson-valore-atteso-e-varianza), [Probabilità di coda](#/poisson-cibo-cancerogeno), [Poisson per la binomiale](#/poisson-approssimazione)
+- **Densità**: [Densità](#/modelli-continui), [Integrale](#/valore-atteso-e-varianza), [E e Var (continue)](#/valore-atteso-e-varianza), [Mediana di distribuzione](#/valore-atteso-e-varianza), [Percentile di distribuzione](#/valore-atteso-e-varianza)
 - **Parametri e statistiche**: [Parametro](#/parametri-vs-statistiche), [Statistica campionaria](#/parametri-vs-statistiche)
 - **Normale**: [Normale](#/distribuzione-normale-definizione), [Parametri μ e σ](#/distribuzione-normale-parametri), [Effetto di μ](#/distribuzione-normale-localizzazione), [Effetto di σ](#/distribuzione-normale-forma), [Normale standard](#/distribuzione-normale-standard), [Simmetria della normale](#/distribuzione-standard-simmetria), [68-95-99%](#/distribuzione-standard-valori-notevoli)
 - **Tavole e standardizzazione**: [Cumulata Φ](#/distribuzione-standard-cumulativa), [Tavole della normale](#/distribuzione-cumulativa-standard-applicazione), [Φ(−x) = 1 − Φ(x)](#/distribuzione-standard-strategia-simmetrica), [Percentili di Z](#/distribuzione-normale-percentili), [Calcolo dei percentili](#/percentili-standard-calcolo), [Standardizzazione](#/normale-standard-trasformazioni)
-- **Approssimazioni (facoltativo)**: [Correzione di continuità](#/approssimazione-alla-normale-binomiale), [Normale per la binomiale](#/approssimazione-alla-normale-binomiale)
 
 :::
 

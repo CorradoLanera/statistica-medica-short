@@ -8,30 +8,24 @@
 %%| echo: false
 %%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart LR
-  n_stimatore["Stimatore"]:::prev
   n_numerosita_campionaria["Numerosità n"]:::prev
+  n_stimatore["Stimatore"]:::prev
   n_ic_media_varianza_nota["IC, σ nota"]:::prev
-  n_interpretazione_dell_intervallo_di_confidenza["Interpretazione dell'IC"]:::prev
   k_n_02_percentili["Percentili e quartili · 02"]:::prev
   k_n_02_variabilita["Variabilità · 02"]:::prev
-  k_n_03_probabilita["Probabilità · 03"]:::prev
   k_n_03_somma_prodotto["Somma, prodotto, indipendenza · 03"]:::prev
   k_n_04_normale["Normale · 04"]:::prev
   n_ic_media_varianza_ignota["IC, σ ignota"]:::cur
-  n_confronto_tra_ic_e_valore_di_riferimento["IC e valore di riferimento"]:::cur
   n_distribuzione_t_di_student["t di Student"]:::cur
   n_gradi_di_liberta["Gradi di libertà"]:::cur
   n_percentile_della_t_di_student["Percentili di t"]:::cur
   k_n_02_percentili --> n_percentile_della_t_di_student
   k_n_02_variabilita --> n_distribuzione_t_di_student
-  k_n_03_probabilita --> n_confronto_tra_ic_e_valore_di_riferimento
   k_n_03_somma_prodotto --> n_distribuzione_t_di_student
   k_n_04_normale --> n_distribuzione_t_di_student
   n_distribuzione_t_di_student --> n_percentile_della_t_di_student
   n_gradi_di_liberta --> n_distribuzione_t_di_student
-  n_ic_media_varianza_nota --> n_confronto_tra_ic_e_valore_di_riferimento
   n_ic_media_varianza_nota --> n_ic_media_varianza_ignota
-  n_interpretazione_dell_intervallo_di_confidenza --> n_confronto_tra_ic_e_valore_di_riferimento
   n_numerosita_campionaria --> n_gradi_di_liberta
   n_percentile_della_t_di_student --> n_ic_media_varianza_ignota
   n_stimatore --> n_distribuzione_t_di_student
@@ -51,7 +45,6 @@ Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle
 ::: {.mappa-indice}
 
 - [IC, σ ignota](#/ic-per-la-media-varianza-non-nota)
-- [IC e valore di riferimento](#/ic-esempio)
 - [t di Student](#/distribuzione-t-di-student-1)
 - [Gradi di libertà](#/distribuzione-t-di-student-1)
 - [Percentili di t](#/distribuzione-t-di-student-1)

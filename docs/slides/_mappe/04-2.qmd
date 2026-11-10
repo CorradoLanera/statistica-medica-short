@@ -8,9 +8,9 @@
 %%| echo: false
 %%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart LR
+  n_funzione_di_massa["Funzione di massa"]:::prev
   n_varianza_di_variabile_casuale["Varianza Var(X)"]:::prev
   n_valore_atteso["Valore atteso E(X)"]:::prev
-  n_funzione_di_massa["Funzione di massa"]:::prev
   k_n_02_notazioni["Indici e sommatoria · 02"]:::prev
   k_n_02_tipi["Tipi di variabile · 02"]:::prev
   k_n_03_operazioni["Operazioni fra eventi · 03"]:::prev
@@ -20,13 +20,10 @@ flowchart LR
   n_fattoriale["Fattoriale n!"]:::cur
   n_coefficiente_binomiale["Coefficiente binomiale"]:::cur
   n_distribuzione_binomiale["Binomiale"]:::cur
-  n_triangolo_di_tartaglia["Triangolo di Tartaglia"]:::cur
   n_linearita_del_valore_atteso["Linearità di E(X)"]:::cur
   n_varianza_della_somma_di_indipendenti["Var della somma"]:::cur
   n_valore_atteso_e_varianza_della_binomiale["E e Var della binomiale"]:::cur
-  n_distribuzione_di_bernoulli["Bernoulli"]:::cur
   n_forma_della_binomiale["Forma della binomiale"]:::cur
-  n_simmetria_della_binomiale["Simmetria della binomiale"]:::cur
   k_n_02_notazioni --> n_linearita_del_valore_atteso
   k_n_02_tipi --> n_schema_binomiale
   k_n_03_operazioni --> n_schema_binomiale
@@ -34,10 +31,7 @@ flowchart LR
   k_n_03_somma_prodotto --> n_schema_binomiale
   k_n_03_somma_prodotto --> n_varianza_della_somma_di_indipendenti
   n_coefficiente_binomiale --> n_distribuzione_binomiale
-  n_coefficiente_binomiale --> n_triangolo_di_tartaglia
-  n_distribuzione_binomiale --> n_distribuzione_di_bernoulli
   n_distribuzione_binomiale --> n_forma_della_binomiale
-  n_distribuzione_binomiale --> n_simmetria_della_binomiale
   n_distribuzione_binomiale --> n_valore_atteso_e_varianza_della_binomiale
   n_fattoriale --> n_coefficiente_binomiale
   n_funzione_di_massa --> n_distribuzione_binomiale
@@ -65,13 +59,10 @@ Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle
 - [Fattoriale n!](#/coefficiente-binomiale)
 - [Coefficiente binomiale](#/coefficiente-binomiale)
 - [Binomiale](#/distribuzione-binomiale-probabilità)
-- [Triangolo di Tartaglia](#/coefficiente-binomiale-triangolo-di-tartaglia)
 - [Linearità di E(X)](#/binomiale-valore-atteso-e-varianza)
 - [Var della somma](#/binomiale-valore-atteso-e-varianza)
 - [E e Var della binomiale](#/binomiale-valore-atteso-e-varianza)
-- [Bernoulli](#/singolo-esperimento-grafico)
 - [Forma della binomiale](#/esperimenti-grafico)
-- [Simmetria della binomiale](#/distribuzione-binomiale-1)
 
 :::
 

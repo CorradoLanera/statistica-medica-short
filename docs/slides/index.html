@@ -523,7 +523,6 @@ flowchart TB
     k_n_04_parametri["Parametri e statistiche"]:::cur
     k_n_04_normale["Normale"]:::cur
     k_n_04_tavole["Tavole e standardizzazione"]:::cur
-    k_n_04_approssimazioni["Approssimazioni (facoltativo)"]:::opt
   end
   subgraph d05 ["05 · Stime, intervalli e test"]
     direction LR
@@ -533,14 +532,15 @@ flowchart TB
     k_n_05_ic["Intervallo di confidenza"]:::cur
     k_n_05_t["t di Student"]:::cur
     k_n_05_ipotesi["Ipotesi ed errori"]:::cur
-    k_n_05_test_z["Test z"]:::cur
-    k_n_05_p_value["P-value e test t"]:::cur
+    k_n_05_test_z["Test z e test t"]:::cur
+    k_n_05_p_value["P-value"]:::cur
   end
   k_n_01_r_logica --&gt; k_n_01_r_oggetti
   k_n_01_r_oggetti --&gt; k_n_01_r_dati
   k_n_01_r_oggetti --&gt; k_n_01_r_logica
   k_n_01_r_rstudio --&gt; k_n_01_r_oggetti
   k_n_02_barre --&gt; k_n_02_boxplot
+  k_n_02_centralita --&gt; k_n_02_classi
   k_n_02_centralita --&gt; k_n_02_percentili
   k_n_02_centralita --&gt; k_n_02_variabilita
   k_n_02_classi --&gt; k_n_02_istogramma
@@ -555,8 +555,7 @@ flowchart TB
   k_n_02_tipi --&gt; k_n_04_vc
   k_n_02_unita --&gt; k_n_01_r_dati
   k_n_02_unita --&gt; k_n_02_tipi
-  k_n_02_unita --&gt; k_n_03_probabilita
-  k_n_02_variabilita --&gt; k_n_02_classi
+  k_n_02_variabilita --&gt; k_n_04_momenti
   k_n_03_condizionata --&gt; k_n_03_rischio
   k_n_03_condizionata --&gt; k_n_03_test
   k_n_03_condizionata --&gt; k_n_05_ipotesi
@@ -568,6 +567,7 @@ flowchart TB
   k_n_03_somma_prodotto --&gt; k_n_03_condizionata
   k_n_03_somma_prodotto --&gt; k_n_04_massa
   k_n_03_test --&gt; k_n_03_bayes
+  k_n_03_test --&gt; k_n_05_p_value
   k_n_04_binomiale --&gt; k_n_04_poisson
   k_n_04_densita --&gt; k_n_04_normale
   k_n_04_massa --&gt; k_n_04_momenti
@@ -578,20 +578,17 @@ flowchart TB
   k_n_04_normale --&gt; k_n_04_tavole
   k_n_04_normale --&gt; k_n_05_media_campionaria
   k_n_04_parametri --&gt; k_n_04_normale
-  k_n_04_parametri --&gt; k_n_05_ipotesi
   k_n_04_parametri --&gt; k_n_05_stima
   k_n_04_poisson --&gt; k_n_04_normale
-  k_n_04_tavole --&gt; k_n_04_approssimazioni
   k_n_04_tavole --&gt; k_n_05_ic
-  k_n_04_tavole --&gt; k_n_05_test_z
   k_n_04_vc --&gt; k_n_04_massa
   k_n_05_campioni --&gt; k_n_05_media_campionaria
+  k_n_05_ic --&gt; k_n_05_ipotesi
   k_n_05_ic --&gt; k_n_05_t
   k_n_05_ipotesi --&gt; k_n_05_test_z
   k_n_05_media_campionaria --&gt; k_n_05_ic
-  k_n_05_media_campionaria --&gt; k_n_05_test_z
   k_n_05_stima --&gt; k_n_05_media_campionaria
-  k_n_05_t --&gt; k_n_05_p_value
+  k_n_05_t --&gt; k_n_05_test_z
   k_n_05_test_z --&gt; k_n_05_p_value
   classDef cur fill:#e6f0fa,stroke:#035AA6,color:#000000
   classDef prev fill:#f4f4f4,stroke:#9a9a9a,color:#555555,stroke-dasharray:4 3
