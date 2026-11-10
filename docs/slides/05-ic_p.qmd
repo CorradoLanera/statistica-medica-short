@@ -678,49 +678,47 @@ Un **test d'ipotesi** è una regola che, a partire dai dati del campione, decide
 
 ## Test: [media di una Normale]{.orange}
 
-##### (varianza nota)
-
+$H_0: \mu = \mu_0$, $H_1: \mu < \mu_0$, con $\sigma$ nota.
 
 ::: {.panel-tabset}
 
-### Analiticamente
+### Idea
 
-Obiettivo è un set di ipotesi del tipo:
+La **statistica test** è $\bar{X}$: se $H_0$ è vera, $\bar{X} \sim N\left(\mu_0, \frac{\sigma^2}{n}\right)$.
 
-- $H_0: \mu=\mu_0$; $\sigma=\sigma_0$
-- $H_1: \mu=\mu_1<\mu_0$; $\sigma=\sigma_0$
+Una $\bar{x}$ molto più piccola di $\mu_0$ è poco probabile se $H_0$ è vera, e va nella direzione di $H_1$.
 
-Il primo passo è individuare la statistica test, che nel caso specifico è $\bar{X}$
-
-
-$$\alpha = P (Errore\ I\ specie|H_0)= P \left [ \bar{X}<c|\bar{X}\sim N\left ( \mu_0,\frac{\sigma^2}{n} \right ) \right ]= \Phi \left ( \frac{c-\mu_0}{\frac{\sigma}{\sqrt{n}}} \right )$$
+Si rifiuta quindi $H_0$ se $\bar{x}$ cade sotto un **valore critico** $c$, scelto in modo che, se $H_0$ è vera, la probabilità di rifiutarla sia $\alpha$.
 
 
-$$z_{\alpha}=\frac{c-\mu_0}{\frac{\sigma}{\sqrt{n}}}$$
+### Valore critico
 
-$$c=\mu_0+z_{\alpha}\frac{\sigma}{\sqrt{n}}$$
+Si cerca il $c$ per cui la probabilità di un errore di I tipo è $\alpha$; standardizzando $\bar{X}$:
+
+$$\alpha = P\left(\bar{X}<c \mid H_0\right) = \Phi \left( \frac{c-\mu_0}{\frac{\sigma}{\sqrt{n}}} \right)$$
+
+Il valore che nella $N(0,1)$ lascia a sinistra un'area $\alpha$ è il percentile $z_{\alpha}$, quindi
+
+$$\frac{c-\mu_0}{\frac{\sigma}{\sqrt{n}}} = z_{\alpha} \qquad\Longrightarrow\qquad c=\mu_0+z_{\alpha}\frac{\sigma}{\sqrt{n}}$$
+
+Con $\alpha < 0.5$, $z_{\alpha}$ è negativo: $c$ sta sotto $\mu_0$.
 
 
-### Graficamente
+### Regioni
 
 ```{r echo=FALSE, fig.align = 'center', out.width="70%"}
 knitr::include_graphics("img/img.jpg")
 ```
 
+- **regione di rifiuto**: i valori di $\bar{x}$ per cui si rifiuta $H_0$ ( $\bar{x} < c$ )
+- **regione di accettazione**: i valori di $\bar{x}$ per cui non si rifiuta $H_0$ ( $\bar{x} \geq c$ )
 
-- La regione di accettazione è l'insieme dei valori di $\bar{x}$ per cui non si rifiuta $H_0$
-- La regione di rifiuto è l'insieme dei valori di $\bar{x}$ per cui si rifiuta $H_0$ 
 
+### Regola
 
-### Procedura
+Se $\bar{x}<\mu_0+z_{\alpha}\frac{\sigma}{\sqrt{n}}$ si rifiuta $H_0$;
 
-Per testare l'ipotesi:
-
-- $H_0:\mu=\mu_0$; $\sigma=\sigma_0$
-- $H_1:\mu<\mu_0$; $\sigma=\sigma_0$
-
-- se $\bar{x}<\mu_0+z_{\alpha}\frac{\sigma}{\sqrt{n}}$ si rifiuta 
-- se $\bar{x}\geq\mu_0+z_{\alpha}\frac{\sigma}{\sqrt{n}}$ non si rifiuta $H_0$
+altrimenti non si rifiuta.
 
 :::
 
