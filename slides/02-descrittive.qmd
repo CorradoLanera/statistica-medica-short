@@ -188,24 +188,6 @@ come $\sum_{i\in I} age_i =$ `r sum(ages)`.
 
 ::::
 
-## [Unità]{.orange} statistica
-
-**Elemento di base** su cui si compie l’osservazione o la rilevazione dei dati.
-In altre parole, è ciò che si osserva, misura o registra in una ricerca statistica.
-
-📌 Caratteristiche principali:
-
-- È l’oggetto elementare dell’indagine (può essere una persona, una famiglia, un’impresa, un animale, un prodotto, un evento, ecc.).
-- È ben definita e distinguibile da altre unità della popolazione.
-- Su ciascuna unità si rilevano variabili (caratteristiche qualitative o quantitative).
-- L’insieme di tutte le unità statistiche considerate forma la popolazione statistica.
-
-👉 Esempi:
-
-- In un censimento della popolazione: l’unità statistica è l’individuo.
-- In un’indagine sui redditi familiari: l’unità statistica è la famiglia.
-- In uno studio clinico: l’unità statistica è il paziente arruolato.
-
 ## Una tabella [disordinata]{.orange}
 
 Quattro pazienti, con la pressione misurata in due giorni, registrati in un
@@ -256,7 +238,6 @@ La tabella di prima le viola tutte e tre:
 ::: {.text-right}
 
 Wickham H. (2014). Tidy Data. _Journal of Statistical Software_, 59(10).
-[R for Data Science, cap. «Data tidying»](https://r4ds.hadley.nz/data-tidy.html).
 
 :::
 
@@ -281,8 +262,9 @@ PAS e PAD: pressione arteriosa sistolica e diastolica.
 
 :::
 
-- **8 righe**, una per misurazione: qui l'**unità statistica** è la
-  **misurazione** (un paziente in un giorno), non il paziente.
+- **8 righe**, una per misurazione. Ogni riga è un'**unità statistica**,
+  ciò su cui si misura: qui la misurazione (un paziente in un giorno), non
+  il paziente.
 - **Sesso** ed **età** si ripetono: sono caratteristiche del paziente,
   uguali in tutte le sue misurazioni.
 
@@ -1182,6 +1164,8 @@ Per voi: <img src="img/bit.ly_statmed-sondaggio-grafici.png" width="300px" style
 - [**R 4 Data Science**](https://r4ds.hadley.nz/): libro gratuito (on-line) di [**Hadley Wickham**](http://hadley.nz/), **Mine Çetinkaya-Rundel** e **Garrett Grolemund**
 
 - [**GGplot2 cheatsheet**](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-visualization.pdf) schema dei possibili grafici di base rappresentabili in R con il pacchetto `{ggplot2}`, molto utile anche per conoscere le tipologie di grafico, e il loro utilizzo.
+
+- Broman KW, Woo KH. [Data Organization in Spreadsheets](https://doi.org/10.1080/00031305.2017.1375989). _The American Statistician_ 2018;72(1):2-10. Come organizzare i dati in un foglio di calcolo (dati tidy).
 
 - [Statistica medica](https://www.maggiolieditore.it/statistica-medica.html) di [**Martin Bland**](https://www.york.ac.uk/healthsciences/our-staff/honoraryemeritus/martin-bland/), suggeriti capitoli 1, 4 e 5.
 - _Fundamentals of Biostatistics_ (8ª ed., Cengage, 2016) di **Bernard Rosner**, suggerito il capitolo 2.

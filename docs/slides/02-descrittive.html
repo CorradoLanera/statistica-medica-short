@@ -4232,23 +4232,6 @@ z-index: 1000;
 <p>come <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∑</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></msub><mi>a</mi><mi>g</mi><msub><mi>e</mi><mi>i</mi></msub><mo>=</mo></mrow><annotation encoding="application/x-tex">\sum_{i\in I} age_i =</annotation></semantics></math> 364.9.</p>
 </div></div>
 </section>
-<section id="unità-statistica" class="slide level2">
-<h2><span class="orange">Unità</span> statistica</h2>
-<p><strong>Elemento di base</strong> su cui si compie l’osservazione o la rilevazione dei dati. In altre parole, è ciò che si osserva, misura o registra in una ricerca statistica.</p>
-<p>📌 Caratteristiche principali:</p>
-<ul>
-<li>È l’oggetto elementare dell’indagine (può essere una persona, una famiglia, un’impresa, un animale, un prodotto, un evento, ecc.).</li>
-<li>È ben definita e distinguibile da altre unità della popolazione.</li>
-<li>Su ciascuna unità si rilevano variabili (caratteristiche qualitative o quantitative).</li>
-<li>L’insieme di tutte le unità statistiche considerate forma la popolazione statistica.</li>
-</ul>
-<p>👉 Esempi:</p>
-<ul>
-<li>In un censimento della popolazione: l’unità statistica è l’individuo.</li>
-<li>In un’indagine sui redditi familiari: l’unità statistica è la famiglia.</li>
-<li>In uno studio clinico: l’unità statistica è il paziente arruolato.</li>
-</ul>
-</section>
 <section id="una-tabella-disordinata" class="slide level2">
 <h2>Una tabella <span class="orange">disordinata</span></h2>
 <p>Quattro pazienti, con la pressione misurata in due giorni, registrati in un foglio di calcolo come capita spesso:</p>
@@ -4325,7 +4308,7 @@ z-index: 1000;
 </ol>
 <div class="small">
 <div class="text-right">
-<p>Wickham H. (2014). Tidy Data. <em>Journal of Statistical Software</em>, 59(10). <a href="https://r4ds.hadley.nz/data-tidy.html">R for Data Science, cap. «Data tidying»</a>.</p>
+<p>Wickham H. (2014). Tidy Data. <em>Journal of Statistical Software</em>, 59(10).</p>
 </div>
 </div>
 </section>
@@ -4413,7 +4396,7 @@ z-index: 1000;
 <p>PAS e PAD: pressione arteriosa sistolica e diastolica.</p>
 </div>
 <ul>
-<li><strong>8 righe</strong>, una per misurazione: qui l’<strong>unità statistica</strong> è la <strong>misurazione</strong> (un paziente in un giorno), non il paziente.</li>
+<li><strong>8 righe</strong>, una per misurazione. Ogni riga è un’<strong>unità statistica</strong>, ciò su cui si misura: qui la misurazione (un paziente in un giorno), non il paziente.</li>
 <li><strong>Sesso</strong> ed <strong>età</strong> si ripetono: sono caratteristiche del paziente, uguali in tutte le sue misurazioni.</li>
 </ul>
 </section>
@@ -6034,6 +6017,7 @@ flowchart TB
 <li><p><a href="https://posit.cloud/learn/primers"><strong>RStudio primers</strong></a> ambiente gratuito dentro Posit Cloud per l’apprendimento delle basi di analisi di dati con R tramite tutorial interattivi. Una volta registrati, oltre all’accesso al <em>nostro</em> spazio di lavoro, avete accesso libero anche ai <em>Primers</em>.</p></li>
 <li><p><a href="https://r4ds.hadley.nz/"><strong>R 4 Data Science</strong></a>: libro gratuito (on-line) di <a href="http://hadley.nz/"><strong>Hadley Wickham</strong></a>, <strong>Mine Çetinkaya-Rundel</strong> e <strong>Garrett Grolemund</strong></p></li>
 <li><p><a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-visualization.pdf"><strong>GGplot2 cheatsheet</strong></a> schema dei possibili grafici di base rappresentabili in R con il pacchetto <code>{ggplot2}</code>, molto utile anche per conoscere le tipologie di grafico, e il loro utilizzo.</p></li>
+<li><p>Broman KW, Woo KH. <a href="https://doi.org/10.1080/00031305.2017.1375989">Data Organization in Spreadsheets</a>. <em>The American Statistician</em> 2018;72(1):2-10. Come organizzare i dati in un foglio di calcolo (dati tidy).</p></li>
 <li><p><a href="https://www.maggiolieditore.it/statistica-medica.html">Statistica medica</a> di <a href="https://www.york.ac.uk/healthsciences/our-staff/honoraryemeritus/martin-bland/"><strong>Martin Bland</strong></a>, suggeriti capitoli 1, 4 e 5.</p></li>
 <li><p><em>Fundamentals of Biostatistics</em> (8ª ed., Cengage, 2016) di <strong>Bernard Rosner</strong>, suggerito il capitolo 2.</p></li>
 <li><p><a href="http://rdossena.altervista.org/Articoli/Book-Perch%E9%20n-1.pdf">Perché n − 1 nella formula della deviazione standard campionaria?</a> di <a href="http://rdossena.altervista.org">Riccardo Dossena</a> Traduzione dell’articolo <strong>Book, S.A.</strong>: <em>Why n − 1 in the formula for the sample standard deviation?</em>, The Two-Year College Mathematics Journal 10(5), 330–333 (1979)</p></li>
