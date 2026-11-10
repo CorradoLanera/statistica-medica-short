@@ -416,6 +416,8 @@ $$\left ( \bar{x} - z_{1-\frac{\alpha}{2}} \frac{\sigma}{\sqrt{n}};
 dove $z_{1-\frac{\alpha}{2}}$ è il $100(1-\frac{\alpha}{2})$-esimo
 percentile di una distribuzione $N(0,1)$.
 
+$\alpha$ è la probabilità, prima di estrarre il campione, che l'intervallo non contenga $\mu$.
+
 $(1-\alpha)$ | $z_{1-\frac{\alpha}{2}}$ 
 ------------:|:-----------------------
         0.90 |                    1.645
@@ -667,7 +669,7 @@ Per voi: <img src="img/bit.ly_statmed-sondaggio-tstudent.png" width="300px" styl
 **Non rifiuto**                       | Decisione corretta <br> P = $1-\alpha$ | Errore di II tipo  <br> P = $\beta$
 **Rifiuto**                           | Errore di I tipo <br> P = $\alpha$     | Decisione corretta <br> P = $1-\beta$ 
 
-- $\alpha$ è definito livello di **significatività**
+- $\alpha$ è definito livello di **significatività**: è lo stesso $\alpha$ dell'IC al livello $1-\alpha$, e il legame si vede nella slide «P-value e IC»
 - $1-\beta$ è definito **potenza**
 
 - La probabilità di un errore di I specie ( $\alpha$, la _significatività_ ) è la probabilità di **rifiutare** l'ipotesi nulla $H_0$ quando è **vera**, si chiama [livello di significatività]{.orange} del test
