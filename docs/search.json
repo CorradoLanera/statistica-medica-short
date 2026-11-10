@@ -364,7 +364,7 @@
     "href": "slides/04-distribuzioni.html#esempi",
     "title": "Statistica Medica",
     "section": "Esempi",
-    "text": "Esempi\n\nIpertensioneTrigliceridi\n\n\n\nDensità di probabilità per la DBP in un uomo di età 35-44. A (90-95), B (95-100), C (&gt; 100) sono rispettivamente Borderline, Moderatamente iperteso e Iperteso.\n\n\n\n\n\n\n\n\n\n\n\n\nLa distribuzione dei trigliceridi è asimmetrica, con skewness positivo"
+    "text": "Esempi\n\nIpertensioneTrigliceridi\n\n\n\nDensità di probabilità per la DBP in un uomo di età 35-44. A (90-95), B (95-100), C (&gt; 100) sono rispettivamente Borderline, Moderatamente iperteso e Iperteso.\n\n\n\n\n\n\n\n\n\n\n\n\nLa distribuzione dei trigliceridi non è simmetrica: ha una coda lunga a destra"
   },
   {
     "objectID": "slides/04-distribuzioni.html#probabilità-cumulativa",
@@ -378,7 +378,7 @@
     "href": "slides/04-distribuzioni.html#valore-atteso-e-varianza",
     "title": "Statistica Medica",
     "section": "Valore atteso e varianza",
-    "text": "Valore atteso e varianza\nL’atteso E(X)E(X) (o μ\\mu) è la media dei valori di XX: somma pesata nel discreto, integrale nel continuo\nE(X)=∫−∞∞xf(x)dx.E(X)=\\int_{-\\infty}^{\\infty} x f(x)\\,dx.\nLa varianza Var(X)\\text{Var}(X) (o σ2\\sigma^2) è la media dello scarto quadratico dall’atteso:\nVar(X)=∫−∞∞(x−E[X])2f(x)dx.\\text{Var}(X)=\\int_{-\\infty}^{\\infty} (x-E[X])^2 f(x)\\,dx.\nLa deviazione standard è Var(X)\\sqrt{\\text{Var}(X)}.\nLa moda è il punto di densità massima\nLa mediana divide in due la distribuzione, ovvero P(X≤m)=50100=12P(X\\leq m)=\\frac{50}{100}=\\frac{1}{2}.\nI percentili generalizzano quest’idea, ovvero P(X≤pk)=k100P(X\\leq p_k)=\\frac{k}{100}."
+    "text": "Valore atteso e varianza\nL’atteso E(X)E(X) (o μ\\mu) è la media dei valori di XX: somma pesata nel discreto, integrale nel continuo\nE(X)=∫−∞∞xf(x)dx.E(X)=\\int_{-\\infty}^{\\infty} x f(x)\\,dx.\nLa varianza Var(X)\\text{Var}(X) (o σ2\\sigma^2) è la media dello scarto quadratico dall’atteso:\nVar(X)=∫−∞∞(x−E[X])2f(x)dx.\\text{Var}(X)=\\int_{-\\infty}^{\\infty} (x-E[X])^2 f(x)\\,dx.\nLa deviazione standard è Var(X)\\sqrt{\\text{Var}(X)}.\nLa mediana divide in due la distribuzione, ovvero P(X≤m)=50100=12P(X\\leq m)=\\frac{50}{100}=\\frac{1}{2}.\nI percentili generalizzano quest’idea, ovvero P(X≤pk)=k100P(X\\leq p_k)=\\frac{k}{100}."
   },
   {
     "objectID": "slides/04-distribuzioni.html#parametri-vs-statistiche",

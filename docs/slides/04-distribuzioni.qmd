@@ -691,7 +691,7 @@ text(103,0.0015,"C",cex=2)
 
 ### Trigliceridi
 
-La distribuzione dei trigliceridi è asimmetrica, con skewness positivo
+La distribuzione dei trigliceridi non è simmetrica: ha una coda lunga a destra
 
 ```{r, echo=FALSE, fig.height=6, fig.width=12, fig.align='center', message=FALSE, warning=FALSE}
 
@@ -751,15 +751,9 @@ $$\text{Var}(X)=\int_{-\infty}^{\infty} (x-E[X])^2 f(x)\,dx.$$
 
 La **deviazione standard** è $\sqrt{\text{Var}(X)}$.
 
-La **moda** è il punto di densità massima
-
 La **mediana** divide in due la distribuzione, ovvero $P(X\leq m)=\frac{50}{100}=\frac{1}{2}$.
 
 I **percentili** generalizzano quest’idea, ovvero $P(X\leq p_k)=\frac{k}{100}$.
-
----
-
-<img src="img/mode-med-mean-normal-dist.png"/>
 
 ## [Parametri]{.orange} vs [Statistiche]{.orange}
 
