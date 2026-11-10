@@ -454,24 +454,6 @@ $$var(S) = var\left(\sum_{i=1}^n X_i\right) = \sum_{i=1}^nvar(X_i) =^*  \sum_{i=
 
 :::
 
-## [Singolo esperimento]{.orange}: grafico
-
-```{r, echo=FALSE, out.width="60%"}
-
-db <- tibble(
-  p = seq(0, 1, by = 0.001),
-  q = 1 - p,
-  pq = p*q
-)
-
-ggplot(db, aes(x = p, y = pq)) +
-  geom_point() +
-  theme_bw() +
-  ggtitle("Varianza per distribuzione Binomiale con n = 1",
-        subtitle = "(Nota anche come distribuzione Bernoulli)")
-
-```
-
 ## [10 esperimenti]{.orange}: grafico
 
 ```{r, echo=FALSE, out.width="60%"}
