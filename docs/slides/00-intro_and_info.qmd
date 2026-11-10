@@ -74,6 +74,8 @@ Alla fine del corso saprete:
 - calcolare un **intervallo di confidenza** per una media e dire come
   cambia con la numerosità, la variabilità e il livello di confidenza;
 
+- impostare un **test d'ipotesi** su una media (test z e test t, a una e a due code) e trarne la conclusione;
+
 - leggere un **p-value** in un articolo: che cosa significa e che cosa no.
 
 ## [Requisiti]{.orange}

@@ -987,7 +987,7 @@
     "href": "slides/00-intro_and_info.html#obiettivi",
     "title": "Statistica Medica",
     "section": "Obiettivi",
-    "text": "Obiettivi\nAlla fine del corso saprete:\n\nscegliere e calcolare le misure di centralità e di variabilità adatte ai dati, e dire quando la media inganna;\nriconoscere un grafico che distorce i dati e scegliere il grafico adatto al tipo di variabile;\ncalcolare sensibilità, specificità e valori predittivi di un test diagnostico, anche dopo un secondo test;\ncalcolare probabilità con le distribuzioni binomiale, di Poisson e normale;\ncalcolare un intervallo di confidenza per una media e dire come cambia con la numerosità, la variabilità e il livello di confidenza;\nleggere un p-value in un articolo: che cosa significa e che cosa no."
+    "text": "Obiettivi\nAlla fine del corso saprete:\n\nscegliere e calcolare le misure di centralità e di variabilità adatte ai dati, e dire quando la media inganna;\nriconoscere un grafico che distorce i dati e scegliere il grafico adatto al tipo di variabile;\ncalcolare sensibilità, specificità e valori predittivi di un test diagnostico, anche dopo un secondo test;\ncalcolare probabilità con le distribuzioni binomiale, di Poisson e normale;\ncalcolare un intervallo di confidenza per una media e dire come cambia con la numerosità, la variabilità e il livello di confidenza;\nimpostare un test d’ipotesi su una media (test z e test t, a una e a due code) e trarne la conclusione;\nleggere un p-value in un articolo: che cosa significa e che cosa no."
   },
   {
     "objectID": "slides/00-intro_and_info.html#requisiti",
