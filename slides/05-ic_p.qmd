@@ -607,9 +607,11 @@ Per voi: <img src="img/bit.ly_statmed-sondaggio-tstudent.png" width="300px" styl
 
 ## **[Test d'ipotesi]{.orange}** {.text-center .inverse .center background-color="#03A696"}
 
-- **Definizioni**: ipotesi, rifiuto e non rifiuto, errori
+- **Ipotesi ed errori**: $H_0$ e $H_1$, rifiuto e non rifiuto, errori di I e II tipo
 
-- **Test** (con varianza nota)
+- **Test z e test t**: valore critico, regione di rifiuto, una e due code
+
+- **P-value** e relazione con l'IC
 
 ## [Un problema]{.orange}: colesterolo e familiarità
 
@@ -675,6 +677,30 @@ Un **test d'ipotesi** è una regola che, a partire dai dati del campione, decide
 - $\beta = P(\mbox{non rifiuto}\ H_0 \mid H_0\ \mbox{falsa})$, errore di II tipo; $1-\beta$ è la [potenza]{.orange} del test.
 
 > Non rifiutare $H_0$ non dimostra che sia vera: i dati non bastano a escluderla.
+
+## [Verifica]{.orange}: ipotesi ed errori
+
+::: {.panel-tabset}
+
+### Domande
+
+1. Un test su un nuovo farmaco non rifiuta $H_0$ («il farmaco non ha effetto»). Possiamo dire che il farmaco non funziona?
+
+2. Un altro test rifiuta $H_0$. Quale errore possiamo aver commesso: di I o di II tipo?
+
+
+### Risposte
+
+1. No. Non rifiutare $H_0$ non dimostra che sia vera: i dati non bastano a escluderla. Il farmaco potrebbe funzionare senza che il test se ne accorga (errore di II tipo), per esempio se il campione è piccolo.
+
+2. Solo di I tipo: rifiutare $H_0$ quando è vera, con probabilità $\alpha$. L'errore di II tipo si può commettere solo quando non si rifiuta $H_0$.
+
+:::
+
+```{r, echo = FALSE}
+countdown(minutes = 2, warn_when = 30, play_sound = TRUE,
+          left = "65%", bottom = "5%")
+```
 
 ## Test: [media di una Normale]{.orange}
 
@@ -772,6 +798,138 @@ Con $\alpha = 0.05$: $-2.00 < -1.645$, si rifiuta. Con $\alpha = 0.01$: $-2.00 \
 
 :::
 
+## Test: [una o due code]{.orange}
+
+$H_0: \mu = \mu_0$, con $\sigma$ nota e $z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}$.
+
+::: {.panel-tabset}
+
+### Tre alternative
+
+La regione di rifiuto sta dalla parte verso cui punta $H_1$:
+
+$H_1$            | si rifiuta $H_0$ se                                            | test
+-----------------|----------------------------------------------------------------|---------------------
+$\mu < \mu_0$    | $z < z_{\alpha}$                                               | una coda (sinistra)
+$\mu > \mu_0$    | $z > z_{1-\alpha}$                                             | una coda (destra)
+$\mu \neq \mu_0$ | $z < z_{\frac{\alpha}{2}}$ oppure $z > z_{1-\frac{\alpha}{2}}$ | due code
+
+Altrimenti non si rifiuta $H_0$.
+
+
+### Due code
+
+Con $H_1: \mu \neq \mu_0$ si rifiuta $H_0$ se $z$ è **troppo piccolo o troppo grande**, cioè fuori da due valori critici $c_1 < c_2$. I due eventi sono incompatibili, quindi
+
+$$P(\mbox{rifiuto}\ H_0 \mid H_0)=P(Z< c_1 \cup Z> c_2)=P(Z< c_1)+P(Z> c_2)=\alpha$$
+
+Si divide $\alpha$ a metà fra le due code:
+
+$$P(Z< c_1 \mid H_0)=P(Z> c_2 \mid H_0)=\frac{\alpha}{2}$$
+
+quindi $c_1 = z_{\frac{\alpha}{2}} = -z_{1-\frac{\alpha}{2}}$ e $c_2 = z_{1-\frac{\alpha}{2}}$ (con $\alpha = 0.05$: $\pm 1.96$).
+
+
+### Graficamente
+
+```{r echo=FALSE, fig.align = 'center', out.width="100%"}
+knitr::include_graphics("img/img4.png")
+```
+
+:::
+
+## Test a due code: esempio
+
+##### Colesterolo negli immigrati asiatici
+
+Nelle donne americane fra i 20 e i 40 anni il colesterolo è distribuito normalmente con media $190\ mg/dL$ e deviazione standard $40\ mg/dL$. Le donne asiatiche immigrate della stessa età hanno lo stesso livello medio?
+
+- campione: 100 donne asiatiche, colesterolo medio $\bar{x} = 181.52\ mg/dL$; $\sigma = 40$ nota
+- $H_0:\mu=190$, $H_1:\mu\neq 190$ (una differenza in un verso o nell'altro)
+
+$$z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}=\frac{181.52-190}{\frac{40}{\sqrt{100}}}=-2.12$$
+
+Al livello 0.05 i valori critici sono $z_{0.025}=-1.96$ e $z_{0.975}=1.96$: $z=-2.12<-1.96$, si rifiuta $H_0$.
+
+## Test: varianza non nota
+
+$\sigma$ non è nota: la si stima con $s$, e al posto di $z$ si usa $t$.
+
+::: {.panel-tabset}
+
+### t di Student
+
+Se $X_1,\ldots,X_n$ sono indipendenti e $N(\mu,\sigma^2)$, quando $H_0: \mu = \mu_0$ è vera
+
+$$t=\frac{\bar{X}-\mu_0}{\frac{s}{\sqrt{n}}} \sim t_{n-1}$$
+
+I valori critici si leggono quindi sulla $t$ di Student con $n-1$ gradi di libertà, invece che sulla $N(0,1)$. A due code:
+
+$$P\left(t<t_{n-1,\frac{\alpha}{2}}\right)=P\left(t>t_{n-1,1-\frac{\alpha}{2}}\right)=\frac{\alpha}{2}, \qquad t_{n-1,\frac{\alpha}{2}}=-t_{n-1,1-\frac{\alpha}{2}}$$
+
+
+### Regola
+
+$H_0:\mu=\mu_0$, $H_1:\mu\neq\mu_0$
+
+$$t=\frac{\bar{x}-\mu_0}{\frac{s}{\sqrt{n}}}$$
+
+Se $t<t_{n-1,\frac{\alpha}{2}}$ oppure $t>t_{n-1,1-\frac{\alpha}{2}}$ si rifiuta $H_0$;
+
+altrimenti non si rifiuta.
+
+
+### Graficamente
+
+```{r echo=FALSE, fig.align = 'center', out.width="100%"}
+knitr::include_graphics("img/img6.png")
+```
+
+
+### Esempio
+
+L'esposizione ai fumi cambia il declino della funzione respiratoria nei pompieri?
+
+- campione: 26 pompieri fra 25 e 34 anni; declino del FEV (volume di espirazione forzata) in 5 anni: $\bar{x} = 0.27\ L/sec$, $s = 0.32\ L/sec$
+- nella popolazione generale di pari età il declino medio è $0.10\ L/sec$
+- il declino del FEV è distribuito normalmente; $H_0:\mu=0.10$, $H_1:\mu\neq 0.10$
+
+$$t=\frac{\bar{x}-\mu_0}{\frac{s}{\sqrt{n}}}=\frac{0.27-0.10}{\frac{0.32}{\sqrt{26}}}=2.71$$
+
+Al livello 0.05, con $n-1=25$ gradi di libertà, i valori critici sono $\pm t_{25,0.975}=\pm 2.060$: $t=2.71>2.060$, si rifiuta $H_0$.
+
+:::
+
+## [Verifica]{.orange}: test z e test t
+
+::: {.panel-tabset}
+
+### Domande
+
+Frequenza cardiaca a riposo: nella popolazione la media è $\mu_0 = 72$ battiti/min, con $\sigma = 12$ nota. In un campione di $n = 36$ pazienti, $\bar{x} = 75.6$.
+
+1. Con $H_1: \mu > 72$, si rifiuta $H_0$ al livello 0.05?
+
+2. E con $H_1: \mu \neq 72$?
+
+
+### Risposte
+
+$$z = \frac{75.6 - 72}{\frac{12}{\sqrt{36}}} = \frac{3.6}{2} = 1.80$$
+
+1. Sì: a una coda il valore critico è $z_{0.95} = 1.645$, e $1.80 > 1.645$.
+
+2. No: a due code i valori critici sono $\pm 1.96$, e $-1.96 < 1.80 < 1.96$.
+
+Con gli stessi dati le conclusioni cambiano: $H_1$ si sceglie prima di guardare i dati.
+
+:::
+
+```{r, echo = FALSE}
+countdown(minutes = 2, warn_when = 30, play_sound = TRUE,
+          left = "65%", bottom = "5%")
+```
+
 ## [P-value]{.orange}
 
 ::: {.panel-tabset}
@@ -850,59 +1008,6 @@ $$p=1-\Phi(1.58)=1-0.9429=0.057$$
 
 $p = 0.057 > 0.05$: non si rifiuta $H_0$. È la stessa conclusione del confronto con il valore critico: $z = 1.58 < z_{0.95} = 1.645$.
 
-## Test: [una o due code]{.orange}
-
-$H_0: \mu = \mu_0$, con $\sigma$ nota e $z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}$.
-
-::: {.panel-tabset}
-
-### Tre alternative
-
-La regione di rifiuto sta dalla parte verso cui punta $H_1$:
-
-$H_1$            | si rifiuta $H_0$ se                                            | test
------------------|----------------------------------------------------------------|---------------------
-$\mu < \mu_0$    | $z < z_{\alpha}$                                               | una coda (sinistra)
-$\mu > \mu_0$    | $z > z_{1-\alpha}$                                             | una coda (destra)
-$\mu \neq \mu_0$ | $z < z_{\frac{\alpha}{2}}$ oppure $z > z_{1-\frac{\alpha}{2}}$ | due code
-
-Altrimenti non si rifiuta $H_0$.
-
-
-### Due code
-
-Con $H_1: \mu \neq \mu_0$ si rifiuta $H_0$ se $z$ è **troppo piccolo o troppo grande**, cioè fuori da due valori critici $c_1 < c_2$. I due eventi sono incompatibili, quindi
-
-$$P(\mbox{rifiuto}\ H_0 \mid H_0)=P(Z< c_1 \cup Z> c_2)=P(Z< c_1)+P(Z> c_2)=\alpha$$
-
-Si divide $\alpha$ a metà fra le due code:
-
-$$P(Z< c_1 \mid H_0)=P(Z> c_2 \mid H_0)=\frac{\alpha}{2}$$
-
-quindi $c_1 = z_{\frac{\alpha}{2}} = -z_{1-\frac{\alpha}{2}}$ e $c_2 = z_{1-\frac{\alpha}{2}}$ (con $\alpha = 0.05$: $\pm 1.96$).
-
-
-### Graficamente
-
-```{r echo=FALSE, fig.align = 'center', out.width="100%"}
-knitr::include_graphics("img/img4.png")
-```
-
-:::
-
-## Test a due code: esempio
-
-##### Colesterolo negli immigrati asiatici
-
-Nelle donne americane fra i 20 e i 40 anni il colesterolo è distribuito normalmente con media $190\ mg/dL$ e deviazione standard $40\ mg/dL$. Le donne asiatiche immigrate della stessa età hanno lo stesso livello medio?
-
-- campione: 100 donne asiatiche, colesterolo medio $\bar{x} = 181.52\ mg/dL$; $\sigma = 40$ nota
-- $H_0:\mu=190$, $H_1:\mu\neq 190$ (una differenza in un verso o nell'altro)
-
-$$z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}=\frac{181.52-190}{\frac{40}{\sqrt{100}}}=-2.12$$
-
-Al livello 0.05 i valori critici sono $z_{0.025}=-1.96$ e $z_{0.975}=1.96$: $z=-2.12<-1.96$, si rifiuta $H_0$.
-
 ## Test a due code: p-value
 
 ::: {.panel-tabset}
@@ -931,54 +1036,16 @@ $$p=2\Phi(-2.12)=2[1-\Phi(2.12)]=2[1-0.983]=0.034$$
 
 $p = 0.034 < 0.05$: si rifiuta $H_0$, come con i valori critici.
 
-:::
 
-## Test: varianza non nota
+### Con la t
 
-$\sigma$ non è nota: la si stima con $s$, e al posto di $z$ si usa $t$.
+###### Pompieri e FEV (test t)
 
-::: {.panel-tabset}
+$t = 2.71$ con 25 gradi di libertà: le aree si leggono sulla $t_{25}$ invece che sulla $N(0,1)$.
 
-### t di Student
+$$p = 2P(t_{25}>2.71) = 2 \times 0.0060 = 0.012$$
 
-Se $X_1,\ldots,X_n$ sono indipendenti e $N(\mu,\sigma^2)$, quando $H_0: \mu = \mu_0$ è vera
-
-$$t=\frac{\bar{X}-\mu_0}{\frac{s}{\sqrt{n}}} \sim t_{n-1}$$
-
-I valori critici si leggono quindi sulla $t$ di Student con $n-1$ gradi di libertà, invece che sulla $N(0,1)$. A due code:
-
-$$P\left(t<t_{n-1,\frac{\alpha}{2}}\right)=P\left(t>t_{n-1,1-\frac{\alpha}{2}}\right)=\frac{\alpha}{2}, \qquad t_{n-1,\frac{\alpha}{2}}=-t_{n-1,1-\frac{\alpha}{2}}$$
-
-
-### Regola
-
-$H_0:\mu=\mu_0$, $H_1:\mu\neq\mu_0$
-
-$$t=\frac{\bar{x}-\mu_0}{\frac{s}{\sqrt{n}}}$$
-
-Se $t<t_{n-1,\frac{\alpha}{2}}$ oppure $t>t_{n-1,1-\frac{\alpha}{2}}$ si rifiuta $H_0$;
-
-altrimenti non si rifiuta.
-
-
-### Graficamente
-
-```{r echo=FALSE, fig.align = 'center', out.width="100%"}
-knitr::include_graphics("img/img6.png")
-```
-
-
-### Esempio
-
-L'esposizione ai fumi cambia il declino della funzione respiratoria nei pompieri?
-
-- campione: 26 pompieri fra 25 e 34 anni; declino del FEV (volume di espirazione forzata) in 5 anni: $\bar{x} = 0.27\ L/sec$, $s = 0.32\ L/sec$
-- nella popolazione generale di pari età il declino medio è $0.10\ L/sec$
-- il declino del FEV è distribuito normalmente; $H_0:\mu=0.10$, $H_1:\mu\neq 0.10$
-
-$$t=\frac{\bar{x}-\mu_0}{\frac{s}{\sqrt{n}}}=\frac{0.27-0.10}{\frac{0.32}{\sqrt{26}}}=2.71$$
-
-Sotto ipotesi nulla, si ha che $P(t_{25}>2.71)=0.0060$, per cui il p-value è $2 \times 0.0060 = 0.012$
+$p = 0.012 < 0.05$: si rifiuta $H_0$, come con i valori critici $\pm 2.060$.
 
 :::
 
