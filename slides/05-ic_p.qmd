@@ -782,11 +782,13 @@ $$z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}$$
 
 ### Definizione
 
-Il $p-value$ è quel valore di $\alpha$ per cui il valore della statistica test è al confine tra regione di accettazione e zona di rifiuto (qui nel caso $H_1:\mu<\mu_0$)
+Il p-value è la probabilità, **se $H_0$ è vera**, di ottenere un risultato **uguale o più estremo** di quello osservato.
 
-$$p=\Phi(z_p)=\Phi\left( \frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}\right)$$
+Con $H_1: \mu < \mu_0$, «più estremo» vuol dire «più piccolo»:
 
-Il $p-value$ è quindi la probabilità di ottenere un risultato **eguale o più estremo** di quello ottenuto **quando l'ipotesi nulla è vera**. 
+$$p = \Phi(z), \qquad z = \frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}$$
+
+Di conseguenza si rifiuta $H_0$ al livello $\alpha$ se e solo se $p < \alpha$ ($z < z_\alpha$ equivale a $\Phi(z) < \alpha$).
 
 
 ### Alternativa minore
@@ -806,7 +808,7 @@ $$z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}$$
 - se $z<z_{\alpha}$ si rifiuta $H_0$
 - se $z\geq z_{\alpha}$ non si rifiuta $H_0$
 
-ovvero si ha un $p-value$ pari a $p=\Phi(z)$
+ovvero si ha un p-value pari a $p=\Phi(z)$
 
 :::
 
@@ -837,7 +839,7 @@ $$z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}$$
 - se $z>z_{1-\alpha}$ si rifiuta $H_0$
 - se $z\leq z_{1-\alpha}$ non si rifiuta $H_0$
 
-ovvero si ha un $p-value$ pari a $p=1-\Phi(z)$
+ovvero si ha un p-value pari a $p=1-\Phi(z)$
 
 :::
 
@@ -862,7 +864,7 @@ Si supponga che in un campione di 10 bambini il livello di colesterolo sia pari 
 
 si ha che $z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}=\frac{200-175}{\frac{50}{\sqrt{10}}}=1.58$
 
-Visto che $1.58=z<z_{1-\alpha}=z_{.95}=1.645$ non si rifiuta $H_0$, con un $p-value$ pari a
+Visto che $1.58=z<z_{1-\alpha}=z_{.95}=1.645$ non si rifiuta $H_0$, con un p-value pari a
 
 $$p=1-\Phi(z)=1-\Phi(1.58)=1-0.9429=0.057$$
 
@@ -1008,11 +1010,11 @@ si calcola
 
 $$t=\frac{\bar{x}-\mu_0}{\frac{s}{\sqrt{n}}}=\frac{0.27-0.10}{\frac{0.32}{\sqrt{26}}}=2.71$$
 
-Sotto ipotesi nulla, si ha che $p(t_{25}>2.71)=0.0060$, per cui $p-value=0.012$
+Sotto ipotesi nulla, si ha che $P(t_{25}>2.71)=0.0060$, per cui il p-value è $2 \times 0.0060 = 0.012$
 
 :::
 
-## [P-value]{.orange} e [CI]{.orange}
+## [P-value]{.orange} e [IC]{.orange}
 
 ::: {.panel-tabset}
 
