@@ -2262,5 +2262,12 @@
     "title": "Statistica Medica",
     "section": "Verifica: test z e test t",
     "text": "Verifica: test z e test t\n\nDomandeRisposte\n\n\nFrequenza cardiaca a riposo: nella popolazione la media è μ0=72\\mu_0 = 72 battiti/min, con σ=12\\sigma = 12 nota. In un campione di n=36n = 36 pazienti, x‾=75.6\\bar{x} = 75.6.\n\nCon H1:μ&gt;72H_1: \\mu &gt; 72, si rifiuta H0H_0 al livello 0.05?\nE con H1:μ≠72H_1: \\mu \\neq 72?\n\n\n\nz=75.6−721236=3.62=1.80z = \\frac{75.6 - 72}{\\frac{12}{\\sqrt{36}}} = \\frac{3.6}{2} = 1.80\n\nSì: a una coda il valore critico è z0.95=1.645z_{0.95} = 1.645, e 1.80&gt;1.6451.80 &gt; 1.645.\nNo: a due code i valori critici sono ±1.96\\pm 1.96, e −1.96&lt;1.80&lt;1.96-1.96 &lt; 1.80 &lt; 1.96.\n\nCon gli stessi dati le conclusioni cambiano: H1H_1 si sceglie prima di guardare i dati."
+  },
+  {
+    "objectID": "slides/05-ic_p.html#richiamo-due-p-value-già-visti",
+    "href": "slides/05-ic_p.html#richiamo-due-p-value-già-visti",
+    "title": "Statistica Medica",
+    "section": "Richiamo: due p-value già visti",
+    "text": "Richiamo: due p-value già visti\nNella lezione sulle distribuzioni, con la Poisson, si è calcolata la probabilità di osservare almeno i casi osservati, se il numero atteso fosse quello della popolazione generale:\n\n\n\n\n\n\n\n\n\n\nEsempio\nOsservati\nAttesi\nProbabilità\nLettura\n\n\n\n\nCibo cancerogeno\n7 morti\n5.8\nP(X≥7)=0.36P(X \\geq 7) = 0.36\nnessun eccesso\n\n\nTumore al seno\n4 casi su 1000\n1\nP(X≥4)=0.019P(X \\geq 4) = 0.019\nsospetto\n\n\n\n\nErano p-value: quanto è raro un risultato almeno così estremo, se non succede niente di speciale ( H0H_0 )."
   }
 ]

@@ -930,6 +930,19 @@ countdown(minutes = 2, warn_when = 30, play_sound = TRUE,
           left = "65%", bottom = "5%")
 ```
 
+## [Richiamo]{.orange}: due p-value già visti
+
+Nella lezione sulle distribuzioni, con la Poisson, si è calcolata la probabilità di osservare **almeno** i casi osservati, se il numero atteso fosse quello della popolazione generale:
+
+Esempio          | Osservati      | Attesi | Probabilità             | Lettura
+-----------------|----------------|--------|-------------------------|----------------
+Cibo cancerogeno | 7 morti        | 5.8    | $P(X \geq 7) = 0.36$    | nessun eccesso
+Tumore al seno   | 4 casi su 1000 | 1      | $P(X \geq 4) = 0.019$   | sospetto
+
+<br>
+
+Erano **p-value**: quanto è raro un risultato almeno così estremo, se non succede niente di speciale ( $H_0$ ).
+
 ## [P-value]{.orange}
 
 ::: {.panel-tabset}
