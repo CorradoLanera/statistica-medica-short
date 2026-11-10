@@ -896,38 +896,6 @@ sum(dt$m * dt$Freq) / sum(dt$Freq)
 weighted.mean(x = dt$m, w = dt$Freq)
 ```
 
-## misure [ponderate]{.orange}: varianza ponderata
-
-La varianza campionaria ponderata, con $n = \sum_{i=1}^k f_i$, è pari a
-$$s_g^2 = \frac{\sum_{i=1}^k f_i(m_i-\bar{x}_g)^2}{(\sum_{i=1}^k f_i)-1} \quad\mathrm{ovvero}\quad s_g^2 = \frac{(\sum_{i=1}^k f_im_i^2)-n\bar{x}_g^2}{n-1}$$
-
-
-Per il caso del magnesio è pari a
-
-$$\begin{align*}s_g^2& = \frac{13(105.95 - 263.8755)^2+\ldots+12(352.05 - 263.8755)^2}{13 + \cdots + 12 - 1}\\& = 611233.5/99 = 6174.075\end{align*}$$
-$$\begin{align*}s_g^2& = \frac{[13(105.95)^2+\ldots+12(352.05)^2]-100(263.8755^2)}{100-1}\\& = 611233.5/99 = 6174.075\end{align*}$$
-```{r, include=FALSE}
-w_mean <- weighted.mean(
-  x = dt$m,
-  w = dt$Freq
-)
-n <- sum(dt$Freq)
-
-sum(
-  dt$Freq * (dt$m - w_mean)^2
-) / (n - 1)
-#
-#
-#
-#
-#
-#
-(
-  sum(dt$Freq * dt$m^2) -
-  n * w_mean^2
-) / (n - 1)
-```
-
 {{< include _mappe/02-2.qmd >}}
 
 ## **[Rappresentazione]{.orange}** {.text-center .inverse .center background-color="#03A696"}
