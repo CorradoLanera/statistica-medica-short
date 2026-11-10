@@ -438,17 +438,11 @@ pbinom(q = 2, size = 5, prob = 0.51) -
 
 ## [Binomiale]{.orange}: Valore atteso e varianza
 
-Per definizione si ha che: $E(S) = \sum_{k} k\,P(S=k)$
-
-Da cui: $E(S) =\sum_{k=0}^n k\binom{n}{k}p^kq^{n-k}$
-
-Del resto, se $S$ è la somma degli esiti delle singole prove (che possiamo indicare come variabili casuali $X_1,\ldots,X_n$), allora per linearità
+Sia $S$ la somma degli esiti delle singole prove, che indichiamo come variabili casuali $X_1,\ldots,X_n$. Per linearità
 
 $$E(S) = E\left(\sum_{i=1}^n X_i\right) = \sum_{i=1}^nE(X_i) = \sum_{i=1}^np=np$$
 
-Sempre per definizione, la varianza sarà: $\mbox{var}(S)=\sum_{k=0}^n (k-np)^2 \binom{n}{k}p^kq^{n-k}$
-
-Che, essendo le prove indipendenti, possiamo calcolare più semplicemente come
+Essendo le prove indipendenti, la **varianza di una somma di variabili indipendenti è la somma delle varianze**:
 
 $$var(S) = var\left(\sum_{i=1}^n X_i\right) = \sum_{i=1}^nvar(X_i) =^*  \sum_{i=1}^npq=npq$$
 <br>

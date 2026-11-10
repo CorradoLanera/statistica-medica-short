@@ -5288,7 +5288,7 @@ if (!window.customElements.get('countdown-timer')) {
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_6127d8ed" minutes="1" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:15%;left:70%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_a8e859a6" minutes="1" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:15%;left:70%;"></countdown-timer>
 </div>
 </div>
 </section>
@@ -5458,12 +5458,9 @@ flowchart LR
 </section>
 <section id="binomiale-valore-atteso-e-varianza" class="slide level2">
 <h2><span class="orange">Binomiale</span>: Valore atteso e varianza</h2>
-<p>Per definizione si ha che: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo stretchy="false" form="prefix">(</mo><mi>S</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mo>∑</mo><mi>k</mi></msub><mi>k</mi><mspace width="0.167em"></mspace><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>S</mi><mo>=</mo><mi>k</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">E(S) = \sum_{k} k\,P(S=k)</annotation></semantics></math></p>
-<p>Da cui: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo stretchy="false" form="prefix">(</mo><mi>S</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msubsup><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></msubsup><mi>k</mi><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mi>n</mi><mi>k</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><msup><mi>p</mi><mi>k</mi></msup><msup><mi>q</mi><mrow><mi>n</mi><mo>−</mo><mi>k</mi></mrow></msup></mrow><annotation encoding="application/x-tex">E(S) =\sum_{k=0}^n k\binom{n}{k}p^kq^{n-k}</annotation></semantics></math></p>
-<p>Del resto, se <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math> è la somma degli esiti delle singole prove (che possiamo indicare come variabili casuali <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">X_1,\ldots,X_n</annotation></semantics></math>), allora per linearità</p>
+<p>Sia <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math> la somma degli esiti delle singole prove, che indichiamo come variabili casuali <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">X_1,\ldots,X_n</annotation></semantics></math>. Per linearità</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo stretchy="false" form="prefix">(</mo><mi>S</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>E</mi><mrow><mo stretchy="true" form="prefix">(</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>X</mi><mi>i</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>E</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>X</mi><mi>i</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>p</mi><mo>=</mo><mi>n</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">E(S) = E\left(\sum_{i=1}^n X_i\right) = \sum_{i=1}^nE(X_i) = \sum_{i=1}^np=np</annotation></semantics></math></p>
-<p>Sempre per definizione, la varianza sarà: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">var</mtext><mo stretchy="false" form="prefix">(</mo><mi>S</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msubsup><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></msubsup><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo>−</mo><mi>n</mi><mi>p</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mi>n</mi><mi>k</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><msup><mi>p</mi><mi>k</mi></msup><msup><mi>q</mi><mrow><mi>n</mi><mo>−</mo><mi>k</mi></mrow></msup></mrow><annotation encoding="application/x-tex">\mbox{var}(S)=\sum_{k=0}^n (k-np)^2 \binom{n}{k}p^kq^{n-k}</annotation></semantics></math></p>
-<p>Che, essendo le prove indipendenti, possiamo calcolare più semplicemente come</p>
+<p>Essendo le prove indipendenti, la <strong>varianza di una somma di variabili indipendenti è la somma delle varianze</strong>:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mi>a</mi><mi>r</mi><mo stretchy="false" form="prefix">(</mo><mi>S</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>v</mi><mi>a</mi><mi>r</mi><mrow><mo stretchy="true" form="prefix">(</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>X</mi><mi>i</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>v</mi><mi>a</mi><mi>r</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>X</mi><mi>i</mi></msub><mo stretchy="false" form="postfix">)</mo><msup><mo>=</mo><mo>*</mo></msup><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>p</mi><mi>q</mi><mo>=</mo><mi>n</mi><mi>p</mi><mi>q</mi></mrow><annotation encoding="application/x-tex">var(S) = var\left(\sum_{i=1}^n X_i\right) = \sum_{i=1}^nvar(X_i) =^*  \sum_{i=1}^npq=npq</annotation></semantics></math> <br></p>
 <div class="text-right">
 <p>*= Se interessa, dimostrarlo per esercizio.</p>
@@ -5875,7 +5872,7 @@ flowchart LR
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_81d898ba" minutes="15" seconds="0" warn-when="3" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_c6bb5b51" minutes="15" seconds="0" warn-when="3" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
 </div>
 </div>
 </section>
@@ -6276,7 +6273,7 @@ flowchart LR
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_756b4066" minutes="2" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_879a71e0" minutes="2" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
 </div>
 </div>
 <div class="small">
@@ -6348,7 +6345,7 @@ flowchart LR
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_2dbc3734" minutes="2" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_05ae95b9" minutes="2" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
 </div>
 </div>
 </section>
@@ -6369,7 +6366,7 @@ flowchart LR
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_a0eb9a75" minutes="2" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_6e4f7da8" minutes="2" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
 </div>
 </div>
 </section>
@@ -6389,7 +6386,7 @@ flowchart LR
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_db765e51" minutes="2" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_2ef48db9" minutes="2" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
 </div>
 </div>
 </section>
@@ -6420,7 +6417,7 @@ flowchart LR
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_eb745b68" minutes="2" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_8a9ea5dc" minutes="2" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
 </div>
 </div>
 </section>
@@ -6598,7 +6595,7 @@ flowchart LR
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_6b1e4abb" minutes="3" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_4592715f" minutes="3" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
 </div>
 </div>
 </section>
@@ -6621,7 +6618,7 @@ flowchart LR
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_9166fefd" minutes="3" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:32%;left:65%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_d9fc7b42" minutes="3" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:32%;left:65%;"></countdown-timer>
 </div>
 </div>
 </section>
@@ -6653,7 +6650,7 @@ flowchart LR
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_2bb61bf4" minutes="3" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:4%;left:65%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_4f664316" minutes="3" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:4%;left:65%;"></countdown-timer>
 </div>
 </div>
 </section>
