@@ -944,7 +944,7 @@ sum(
 - Istogrammi
 - Box-plot
 
-#### **Dati [categorici]{.orange}**
+#### **Dati [discreti]{.orange}**
 - Grafici a barre
 
 <!-- ### **.orange[Coppie] di dati** -->
@@ -1083,14 +1083,15 @@ $$x < 215.35 - 3 * (323.95 - 215.35) = -110.45$$
 
 :::
 
-## Dati categorici: barre
+## Dati discreti: barre
 
 Volendo rappresentare confronti tra conteggi, possiamo usare grafici a
-barre.
+barre: ciascuna barra è il conteggio di un valore di una variabile
+discreta (nominale, ordinale, dicotomica, o un conteggio con pochi valori).
 
-> ATTENZIONE 1: istogramma rappresenta una distribuzione per i valori 
-  di una variabile continua; un grafico a barre rappresenta i valori
-  (conteggi) dei livelli di una variabile categorica!
+> ATTENZIONE 1: per una variabile continua si usa l'istogramma, che ne
+  rappresenta la distribuzione; per una variabile discreta si usa il
+  grafico a barre, che rappresenta i conteggi dei suoi valori!
 
 > ATTENZIONE 2: in un grafico a barre, la base delle barre DEVE essere 
   sempre (ben!!) definita, ovvero deve SEMPRE iniziare dall'opportuno

@@ -16,7 +16,7 @@ I dati riportati nella tabella qui sotto sono un campione di un insieme più amp
 
 3.  I tempi riportati sono in giorni, supponiamo di volerli esprimere in ore, ovvero moltiplicandoli tutti per 24; che effetto avrebbe questa modifica nei valori di media, moda, mediana, varianza, deviazione standard, coefficiente di variazione, range massimale e range interquartile? Verificare la risposta eseguendo i conti.
 
-4.  Quali delle variabili riportate possono essere considerate continue, quali categoriche? Tra le categoriche, come sarebbe opportuno considerare Sex e Service (binarie, nominali o ordinali)? Motivare le risposte.
+4.  Quali delle variabili riportate possono essere considerate continue, quali discrete? Tra le discrete, come sarebbe opportuno considerare Sex e Service (nominali, ordinali, dicotomiche o cardinali)? Motivare le risposte.
 
 5.  Possiamo dire che una riga della tabella rappresenta una unità statistica? Sì, no, perché?
 
