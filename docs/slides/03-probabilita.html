@@ -4987,7 +4987,7 @@ if (!window.customElements.get('countdown-timer')) {
   <p class="subtitle">Basi di probabilità</p>
   <p class="author">Corrado Lanera</p>
   <p class="institute"><a href="https://www.unipd-ubep.it/">Unità di Biostatistica, Epidemiologia e Salute Pubblica</a>, Università di Padova</p>
-  <p class="date">10 novembre 2026</p>
+  <p class="date">11 novembre 2026</p>
 </section>
 <section id="cosa-faremo" class="slide level2 inverse" data-background-color="#03A696">
 <h2>Cosa faremo</h2>
@@ -5181,7 +5181,6 @@ if (!window.customElements.get('countdown-timer')) {
 <div>
 <pre class="mermaid mermaid-js">%%{init: {&quot;flowchart&quot;: {&quot;padding&quot;: 12, &quot;wrappingWidth&quot;: 320}, &quot;themeVariables&quot;: {&quot;fontFamily&quot;: &quot;Arial, Helvetica, sans-serif&quot;}}}%%
 flowchart LR
-  k_n_02_unita[&quot;Unità, variabili, tabelle · 02&quot;]:::prev
   n_esperimento_casuale[&quot;Esperimento casuale&quot;]:::cur
   n_spazio_campionario[&quot;Spazio degli eventi Ω&quot;]:::cur
   n_evento[&quot;Evento&quot;]:::cur
@@ -5194,7 +5193,6 @@ flowchart LR
   n_intersezione_di_eventi[&quot;Intersezione (∩)&quot;]:::cur
   n_evento_complementare[&quot;Complementare&quot;]:::cur
   n_eventi_incompatibili[&quot;Eventi incompatibili&quot;]:::cur
-  k_n_02_unita --&gt; n_probabilita
   n_esperimento_casuale --&gt; n_spazio_campionario
   n_eventi_incompatibili --&gt; n_additivita_eventi_incompatibili
   n_evento --&gt; n_diagramma_di_venn
@@ -5375,29 +5373,36 @@ flowchart LR
 <div>
 <pre class="mermaid mermaid-js">%%{init: {&quot;flowchart&quot;: {&quot;padding&quot;: 12, &quot;wrappingWidth&quot;: 320}, &quot;themeVariables&quot;: {&quot;fontFamily&quot;: &quot;Arial, Helvetica, sans-serif&quot;}}}%%
 flowchart LR
+  n_evento[&quot;Evento&quot;]:::prev
+  n_probabilita[&quot;Probabilità&quot;]:::prev
   n_intersezione_di_eventi[&quot;Intersezione (∩)&quot;]:::prev
   n_evento_complementare[&quot;Complementare&quot;]:::prev
-  n_evento[&quot;Evento&quot;]:::prev
   n_unione_di_eventi[&quot;Unione (∪)&quot;]:::prev
-  n_probabilita[&quot;Probabilità&quot;]:::prev
+  n_additivita_eventi_incompatibili[&quot;Somma per incompatibili&quot;]:::prev
   n_eventi_indipendenti[&quot;Eventi indipendenti&quot;]:::cur
   n_regola_del_prodotto[&quot;Prodotto (indipendenti)&quot;]:::cur
   n_notazione_esito_positivo_negativo[&quot;Notazione + e −&quot;]:::cur
   n_regola_della_somma[&quot;Regola della somma&quot;]:::cur
   n_indipendenza_del_complementare[&quot;Indipendenza e complementare&quot;]:::cur
+  n_unione_come_somma_disgiunta[&quot;Unione come somma disgiunta&quot;]:::cur
   n_somma_di_eventi_indipendenti[&quot;Somma per indipendenti&quot;]:::cur
+  n_additivita_eventi_incompatibili --&gt; n_unione_come_somma_disgiunta
   n_eventi_indipendenti --&gt; n_indipendenza_del_complementare
   n_eventi_indipendenti --&gt; n_regola_del_prodotto
   n_evento --&gt; n_notazione_esito_positivo_negativo
   n_evento_complementare --&gt; n_indipendenza_del_complementare
+  n_evento_complementare --&gt; n_unione_come_somma_disgiunta
   n_indipendenza_del_complementare --&gt; n_somma_di_eventi_indipendenti
   n_intersezione_di_eventi --&gt; n_eventi_indipendenti
   n_intersezione_di_eventi --&gt; n_regola_della_somma
+  n_intersezione_di_eventi --&gt; n_unione_come_somma_disgiunta
   n_probabilita --&gt; n_eventi_indipendenti
   n_probabilita --&gt; n_regola_della_somma
   n_regola_del_prodotto --&gt; n_somma_di_eventi_indipendenti
   n_regola_della_somma --&gt; n_somma_di_eventi_indipendenti
+  n_unione_come_somma_disgiunta --&gt; n_somma_di_eventi_indipendenti
   n_unione_di_eventi --&gt; n_regola_della_somma
+  n_unione_di_eventi --&gt; n_unione_come_somma_disgiunta
   classDef cur fill:#e6f0fa,stroke:#035AA6,color:#000000
   classDef prev fill:#f4f4f4,stroke:#9a9a9a,color:#555555,stroke-dasharray:4 3
   classDef opt fill:#ffffff,stroke:#035AA6,color:#555555,stroke-dasharray:2 2
@@ -5419,6 +5424,7 @@ flowchart LR
 <li><a href="#//teorema-della-somma-es.">Notazione + e −</a></li>
 <li><a href="#//teorema-della-somma">Regola della somma</a></li>
 <li><a href="#//somma-indipendenza">Indipendenza e complementare</a></li>
+<li><a href="#//somma-indipendenza">Unione come somma disgiunta</a></li>
 <li><a href="#//somma-indipendenza">Somma per indipendenti</a></li>
 </ul>
 </div>
@@ -5438,7 +5444,7 @@ flowchart LR
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_1b651efc" minutes="15" seconds="0" warn-when="3" update-every="1" play-sound="true" tabindex="0" style="bottom:20%;left:70%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_e9b580a8" minutes="15" seconds="0" warn-when="3" update-every="1" play-sound="true" tabindex="0" style="bottom:20%;left:70%;"></countdown-timer>
 </div>
 </div>
 </section>
@@ -5490,7 +5496,7 @@ flowchart LR
 <h2><span class="orange">Probabilità totali</span>: esempio problema</h2>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_3a4e764d" minutes="3" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:10%;left:70%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_36a54176" minutes="3" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:10%;left:70%;"></countdown-timer>
 </div>
 </div>
 <div class="panel-tabset">
@@ -5627,7 +5633,7 @@ flowchart LR
 <h2><span class="orange">Rischio relativo</span>: esempio problema</h2>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_05d1b76b" minutes="3" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:70%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_a2042854" minutes="3" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:70%;"></countdown-timer>
 </div>
 </div>
 <div class="panel-tabset">
@@ -5755,15 +5761,14 @@ flowchart LR
 <div>
 <pre class="mermaid mermaid-js">%%{init: {&quot;flowchart&quot;: {&quot;padding&quot;: 12, &quot;wrappingWidth&quot;: 320}, &quot;themeVariables&quot;: {&quot;fontFamily&quot;: &quot;Arial, Helvetica, sans-serif&quot;}}}%%
 flowchart LR
-  n_eventi_incompatibili[&quot;Eventi incompatibili&quot;]:::prev
-  n_intersezione_di_eventi[&quot;Intersezione (∩)&quot;]:::prev
-  n_evento_complementare[&quot;Complementare&quot;]:::prev
   n_evento[&quot;Evento&quot;]:::prev
-  n_additivita_eventi_incompatibili[&quot;Somma per incompatibili&quot;]:::prev
   n_probabilita[&quot;Probabilità&quot;]:::prev
+  n_intersezione_di_eventi[&quot;Intersezione (∩)&quot;]:::prev
+  n_eventi_incompatibili[&quot;Eventi incompatibili&quot;]:::prev
+  n_evento_complementare[&quot;Complementare&quot;]:::prev
+  n_additivita_eventi_incompatibili[&quot;Somma per incompatibili&quot;]:::prev
   n_eventi_indipendenti[&quot;Eventi indipendenti&quot;]:::prev
   k_n_02_notazioni[&quot;Indici e sommatoria · 02&quot;]:::prev
-  k_n_02_unita[&quot;Unità, variabili, tabelle · 02&quot;]:::prev
   n_probabilita_condizionata[&quot;Probabilità condizionata&quot;]:::cur
   n_regola_del_prodotto_generale[&quot;Regola del prodotto&quot;]:::cur
   n_probabilita_totali_due_eventi[&quot;Probabilità totali (2 eventi)&quot;]:::cur
@@ -5771,7 +5776,7 @@ flowchart LR
   n_eventi_esaustivi[&quot;Eventi esaustivi&quot;]:::cur
   n_teorema_delle_probabilita_totali[&quot;Probabilità totali&quot;]:::cur
   n_rischio_relativo[&quot;Rischio relativo&quot;]:::cur
-  n_rischio_assoluto[&quot;Rischio assoluto&quot;]:::cur
+  n_rischio_relativo_gonfiaggio[&quot;RR e gonfiaggio&quot;]:::cur
   n_test_di_screening[&quot;Test di screening&quot;]:::cur
   n_valore_predittivo_positivo[&quot;VPP&quot;]:::cur
   n_valore_predittivo_negativo[&quot;VPN&quot;]:::cur
@@ -5780,7 +5785,6 @@ flowchart LR
   n_falso_positivo[&quot;Falso positivo&quot;]:::cur
   n_falso_negativo[&quot;Falso negativo&quot;]:::cur
   k_n_02_notazioni --&gt; n_teorema_delle_probabilita_totali
-  k_n_02_unita --&gt; n_prevalenza
   n_additivita_eventi_incompatibili --&gt; n_probabilita_totali_due_eventi
   n_eventi_esaustivi --&gt; n_teorema_delle_probabilita_totali
   n_eventi_incompatibili --&gt; n_eventi_esaustivi
@@ -5790,12 +5794,12 @@ flowchart LR
   n_intersezione_di_eventi --&gt; n_probabilita_condizionata
   n_probabilita --&gt; n_prevalenza
   n_probabilita --&gt; n_probabilita_condizionata
-  n_probabilita --&gt; n_rischio_assoluto
   n_probabilita_condizionata --&gt; n_regola_del_prodotto_generale
   n_probabilita_condizionata --&gt; n_rischio_relativo
   n_probabilita_condizionata --&gt; n_test_di_screening
   n_probabilita_totali_due_eventi --&gt; n_teorema_delle_probabilita_totali
   n_regola_del_prodotto_generale --&gt; n_probabilita_totali_due_eventi
+  n_rischio_relativo --&gt; n_rischio_relativo_gonfiaggio
   n_test_di_screening --&gt; n_falso_negativo
   n_test_di_screening --&gt; n_falso_positivo
   n_test_di_screening --&gt; n_sensibilita
@@ -5825,7 +5829,7 @@ flowchart LR
 <li><a href="#//teorema-delle-probabilità-totali">Eventi esaustivi</a></li>
 <li><a href="#//teorema-delle-probabilità-totali">Probabilità totali</a></li>
 <li><a href="#//rischio-relativo">Rischio relativo</a></li>
-<li><a href="#//rischio-relativo">Rischio assoluto</a></li>
+<li><a href="#//rischio-relativo-attenzione-al-gonfiaggio">RR e gonfiaggio</a></li>
 <li><a href="#//test-di-screening-valori-predittivi">Test di screening</a></li>
 <li><a href="#//test-di-screening-valori-predittivi">VPP</a></li>
 <li><a href="#//test-di-screening-valori-predittivi">VPN</a></li>
@@ -5870,7 +5874,7 @@ flowchart LR
 <h2><span class="orange">Teorema di Bayes</span>: esempio</h2>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_0e0c16fd" minutes="5" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:70%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_1c1a02a7" minutes="5" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:70%;"></countdown-timer>
 </div>
 </div>
 <div class="panel-tabset">
@@ -5906,9 +5910,9 @@ flowchart LR
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>P</mi><msup><mi>V</mi><mo>−</mo></msup></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mfrac><mrow><mi>S</mi><mi>P</mi><mi>E</mi><mi>C</mi><mo>⋅</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>p</mi><mi>r</mi><mi>e</mi><mi>v</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mi>S</mi><mi>P</mi><mi>E</mi><mi>C</mi><mo>⋅</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>p</mi><mi>r</mi><mi>e</mi><mi>v</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>S</mi><mi>E</mi><mi>N</mi><mi>S</mi><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><mi>p</mi><mi>r</mi><mi>e</mi><mi>v</mi></mrow></mfrac></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mn>0.77</mn><mo stretchy="false" form="postfix">)</mo><mn>0.8</mn></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mn>0.77</mn><mo stretchy="false" form="postfix">)</mo><mn>0.8</mn><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>0.16</mn><mo stretchy="false" form="postfix">)</mo><mn>0.2</mn></mrow></mfrac></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mfrac><mn>0.616</mn><mn>0.648</mn></mfrac></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>0.95</mn></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{split}PV^-&amp; = \frac{SPEC\cdot(1 - prev)}{SPEC\cdot(1 - prev) + (1- SENS)\cdot prev}\\&amp; = \frac{(0.77)0.8}{(0.77)0.8 + (0.16)0.2}\\&amp; = \frac{0.616}{0.648}\\&amp; = 0.95\end{split}</annotation></semantics></math></p>
 </div>
 <div id="tabset-6-4">
-<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mi>P</mi><mi>/</mi><mo stretchy="false" form="prefix">(</mo><mi>V</mi><mi>P</mi><mo>+</mo><mi>F</mi><mi>P</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">VP/(VP+FP)</annotation></semantics></math> (veri positivi su tutti i positivi) calcolato su una tabella dà il VPP giusto <strong>solo se</strong> la prevalenza della tabella è quella della popolazione su cui usate il test.</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mi>P</mi><mi>/</mi><mo stretchy="false" form="prefix">(</mo><mi>V</mi><mi>P</mi><mo>+</mo><mi>F</mi><mi>P</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">VP/(VP+FP)</annotation></semantics></math> (veri positivi su tutti i positivi) calcolato su una tabella dà il <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msup><mi>V</mi><mo>+</mo></msup></mrow><annotation encoding="application/x-tex">PV^+</annotation></semantics></math> giusto <strong>solo se</strong> la prevalenza della tabella è quella della popolazione su cui usate il test.</p>
 <p>Per esempio, provando la macchina su 100 ipertesi e 100 normotesi (prevalenza 0.5 nella tabella): <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mi>P</mi><mo>=</mo><mn>84</mn></mrow><annotation encoding="application/x-tex">VP = 84</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mi>P</mi><mo>=</mo><mn>23</mn></mrow><annotation encoding="application/x-tex">FP = 23</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mi>P</mi><mi>/</mi><mo stretchy="false" form="prefix">(</mo><mi>V</mi><mi>P</mi><mo>+</mo><mi>F</mi><mi>P</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>84</mn><mi>/</mi><mn>107</mn><mo>=</mo><mn>0.79</mn></mrow><annotation encoding="application/x-tex">VP/(VP+FP) = 84/107 = 0.79</annotation></semantics></math>. Nella popolazione, con prevalenza 0.2, il <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msup><mi>V</mi><mo>+</mo></msup></mrow><annotation encoding="application/x-tex">PV^+</annotation></semantics></math> è 0.48.</p>
-<p>Con Bayes la prevalenza la scegliete voi.</p>
+<p>Con Bayes si usa la prevalenza della popolazione su cui si usa il test.</p>
 </div>
 </div>
 </div>
@@ -5930,7 +5934,7 @@ flowchart LR
 <h2><span class="orange">Due test in sequenza</span>: esempio</h2>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_c7ecb1c4" minutes="5" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:70%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_c8e27161" minutes="5" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:70%;"></countdown-timer>
 </div>
 </div>
 <div class="panel-tabset">
@@ -5980,39 +5984,36 @@ flowchart LR
 <div>
 <pre class="mermaid mermaid-js">%%{init: {&quot;flowchart&quot;: {&quot;padding&quot;: 12, &quot;wrappingWidth&quot;: 320}, &quot;themeVariables&quot;: {&quot;fontFamily&quot;: &quot;Arial, Helvetica, sans-serif&quot;}}}%%
 flowchart LR
-  n_eventi_incompatibili[&quot;Eventi incompatibili&quot;]:::prev
-  n_valore_predittivo_negativo[&quot;VPN&quot;]:::prev
-  n_teorema_delle_probabilita_totali[&quot;Probabilità totali&quot;]:::prev
-  n_valore_predittivo_positivo[&quot;VPP&quot;]:::prev
+  n_eventi_indipendenti[&quot;Eventi indipendenti&quot;]:::prev
+  n_regola_del_prodotto_generale[&quot;Regola del prodotto&quot;]:::prev
   n_probabilita_condizionata[&quot;Probabilità condizionata&quot;]:::prev
   n_specificita[&quot;Specificità&quot;]:::prev
-  n_falso_positivo[&quot;Falso positivo&quot;]:::prev
-  n_sensibilita[&quot;Sensibilità&quot;]:::prev
-  n_prevalenza[&quot;Prevalenza&quot;]:::prev
-  n_eventi_esaustivi[&quot;Eventi esaustivi&quot;]:::prev
   n_probabilita_totali_due_eventi[&quot;Probabilità totali (2 eventi)&quot;]:::prev
-  n_regola_del_prodotto_generale[&quot;Regola del prodotto&quot;]:::prev
-  k_n_02_notazioni[&quot;Indici e sommatoria · 02&quot;]:::prev
+  n_valore_predittivo_negativo[&quot;VPN&quot;]:::prev
+  n_falso_positivo[&quot;Falso positivo&quot;]:::prev
+  n_prevalenza[&quot;Prevalenza&quot;]:::prev
+  n_sensibilita[&quot;Sensibilità&quot;]:::prev
+  n_valore_predittivo_positivo[&quot;VPP&quot;]:::prev
   n_teorema_di_bayes[&quot;Teorema di Bayes&quot;]:::cur
   n_calcolo_dei_valori_predittivi[&quot;Calcolo di VPP e VPN&quot;]:::cur
   n_vpp_da_conteggi[&quot;VPP dai conteggi&quot;]:::opt
-  n_teorema_di_bayes_generalizzato[&quot;Bayes generalizzato&quot;]:::cur
-  k_n_02_notazioni --&gt; n_teorema_di_bayes_generalizzato
-  n_eventi_esaustivi --&gt; n_teorema_di_bayes_generalizzato
-  n_eventi_incompatibili --&gt; n_teorema_di_bayes_generalizzato
+  n_indipendenza_condizionata[&quot;Indipendenza condizionata&quot;]:::cur
+  n_bayes_test_in_sequenza[&quot;Due test in sequenza&quot;]:::cur
+  n_calcolo_dei_valori_predittivi --&gt; n_bayes_test_in_sequenza
+  n_calcolo_dei_valori_predittivi --&gt; n_vpp_da_conteggi
+  n_eventi_indipendenti --&gt; n_indipendenza_condizionata
   n_falso_positivo --&gt; n_vpp_da_conteggi
+  n_indipendenza_condizionata --&gt; n_bayes_test_in_sequenza
   n_prevalenza --&gt; n_teorema_di_bayes
+  n_probabilita_condizionata --&gt; n_indipendenza_condizionata
   n_probabilita_condizionata --&gt; n_teorema_di_bayes
   n_probabilita_totali_due_eventi --&gt; n_teorema_di_bayes
   n_regola_del_prodotto_generale --&gt; n_teorema_di_bayes
   n_sensibilita --&gt; n_teorema_di_bayes
   n_specificita --&gt; n_teorema_di_bayes
-  n_teorema_delle_probabilita_totali --&gt; n_teorema_di_bayes_generalizzato
   n_teorema_di_bayes --&gt; n_calcolo_dei_valori_predittivi
-  n_teorema_di_bayes --&gt; n_teorema_di_bayes_generalizzato
   n_valore_predittivo_negativo --&gt; n_calcolo_dei_valori_predittivi
   n_valore_predittivo_positivo --&gt; n_teorema_di_bayes
-  n_valore_predittivo_positivo --&gt; n_vpp_da_conteggi
   classDef cur fill:#e6f0fa,stroke:#035AA6,color:#000000
   classDef prev fill:#f4f4f4,stroke:#9a9a9a,color:#555555,stroke-dasharray:4 3
   classDef opt fill:#ffffff,stroke:#035AA6,color:#555555,stroke-dasharray:2 2
@@ -6031,8 +6032,9 @@ flowchart LR
 <ul>
 <li><a href="#//teorema-di-bayes-base">Teorema di Bayes</a></li>
 <li><a href="#//teorema-di-bayes-base">Calcolo di VPP e VPN</a></li>
-<li><a href="#//approfondimento">VPP dai conteggi</a> (facoltativo)</li>
-<li><a href="#//teorema-di-bayes-generalizzazione">Bayes generalizzato</a></li>
+<li><a href="#//teorema-di-bayes-esempio">VPP dai conteggi</a> (facoltativo)</li>
+<li><a href="#//teorema-di-bayes-due-test-in-sequenza">Indipendenza condizionata</a></li>
+<li><a href="#//teorema-di-bayes-due-test-in-sequenza">Due test in sequenza</a></li>
 </ul>
 </div>
 </div>
@@ -6053,17 +6055,15 @@ flowchart LR
 <pre class="mermaid mermaid-js">%%{init: {&quot;flowchart&quot;: {&quot;padding&quot;: 12, &quot;wrappingWidth&quot;: 320}, &quot;themeVariables&quot;: {&quot;fontFamily&quot;: &quot;Arial, Helvetica, sans-serif&quot;}}}%%
 flowchart TB
   k_n_02_notazioni[&quot;Indici e sommatoria · 02&quot;]:::prev
-  k_n_02_unita[&quot;Unità, variabili, tabelle · 02&quot;]:::prev
   k_n_03_eventi[&quot;Esperimenti ed eventi (5)&quot;]:::cur
   k_n_03_probabilita[&quot;Probabilità (2)&quot;]:::cur
   k_n_03_operazioni[&quot;Operazioni fra eventi (5)&quot;]:::cur
-  k_n_03_somma_prodotto[&quot;Somma, prodotto, indipendenza (6)&quot;]:::cur
+  k_n_03_somma_prodotto[&quot;Somma, prodotto, indipendenza (7)&quot;]:::cur
   k_n_03_condizionata[&quot;Probabilità condizionata (5)&quot;]:::cur
   k_n_03_rischio[&quot;Rischio e prevalenza (3)&quot;]:::cur
   k_n_03_test[&quot;Test diagnostici (7)&quot;]:::cur
-  k_n_03_bayes[&quot;Teorema di Bayes (4)&quot;]:::cur
+  k_n_03_bayes[&quot;Teorema di Bayes (5)&quot;]:::cur
   k_n_02_notazioni --&gt; k_n_03_condizionata
-  k_n_02_unita --&gt; k_n_03_probabilita
   k_n_03_condizionata --&gt; k_n_03_rischio
   k_n_03_condizionata --&gt; k_n_03_test
   k_n_03_eventi --&gt; k_n_03_probabilita
@@ -6091,11 +6091,11 @@ flowchart TB
 <li><strong>Esperimenti ed eventi</strong>: <a href="#//definizione-evento-e-probabilità">Esperimento casuale</a>, <a href="#//definizione-evento-e-probabilità">Spazio degli eventi Ω</a>, <a href="#//definizione-evento-e-probabilità">Evento</a>, <a href="#//notazione-unione">Notazione {…}</a>, <a href="#//eventi-e-spazio-omega">Diagramma di Venn</a></li>
 <li><strong>Probabilità</strong>: <a href="#//definizione-evento-e-probabilità">Probabilità</a>, <a href="#//proprietà-eventi-mutuamente-esclusivi">0 ≤ P(E) ≤ 1</a></li>
 <li><strong>Operazioni fra eventi</strong>: <a href="#//notazione-unione">Unione (∪)</a>, <a href="#//notazione-intersezione">Intersezione (∩)</a>, <a href="#//notazione-complemento">Complementare</a>, <a href="#//proprietà-eventi-mutuamente-esclusivi-1">Eventi incompatibili</a>, <a href="#//proprietà-eventi-mutuamente-esclusivi">Somma per incompatibili</a></li>
-<li><strong>Somma, prodotto, indipendenza</strong>: <a href="#//prodotto-indipendenza">Eventi indipendenti</a>, <a href="#//prodotto-indipendenza">Prodotto (indipendenti)</a>, <a href="#//teorema-della-somma">Regola della somma</a>, <a href="#//somma-indipendenza">Indipendenza e complementare</a>, <a href="#//somma-indipendenza">Somma per indipendenti</a>, <a href="#//teorema-della-somma-es.">Notazione + e −</a></li>
+<li><strong>Somma, prodotto, indipendenza</strong>: <a href="#//prodotto-indipendenza">Eventi indipendenti</a>, <a href="#//prodotto-indipendenza">Prodotto (indipendenti)</a>, <a href="#//teorema-della-somma">Regola della somma</a>, <a href="#//somma-indipendenza">Indipendenza e complementare</a>, <a href="#//somma-indipendenza">Unione come somma disgiunta</a>, <a href="#//somma-indipendenza">Somma per indipendenti</a>, <a href="#//teorema-della-somma-es.">Notazione + e −</a></li>
 <li><strong>Probabilità condizionata</strong>: <a href="#//condizionamento-definizione">Probabilità condizionata</a>, <a href="#//condizionamento-proprietà">Regola del prodotto</a>, <a href="#//condizionamento-proprietà">Probabilità totali (2 eventi)</a>, <a href="#//teorema-delle-probabilità-totali">Eventi esaustivi</a>, <a href="#//teorema-delle-probabilità-totali">Probabilità totali</a></li>
-<li><strong>Rischio e prevalenza</strong>: <a href="#//rischio-relativo">Rischio relativo</a>, <a href="#//rischio-relativo">Rischio assoluto</a>, <a href="#//condizionamento-esempio">Prevalenza</a></li>
+<li><strong>Rischio e prevalenza</strong>: <a href="#//rischio-relativo">Rischio relativo</a>, <a href="#//rischio-relativo-attenzione-al-gonfiaggio">RR e gonfiaggio</a>, <a href="#//condizionamento-esempio">Prevalenza</a></li>
 <li><strong>Test diagnostici</strong>: <a href="#//test-di-screening-valori-predittivi">Test di screening</a>, <a href="#//test-di-screening-sensibilità-e-specificità">Sensibilità</a>, <a href="#//test-di-screening-sensibilità-e-specificità">Specificità</a>, <a href="#//test-di-screening-valori-predittivi">VPP</a>, <a href="#//test-di-screening-valori-predittivi">VPN</a>, <a href="#//test-di-screening-sensibilità-e-specificità">Falso positivo</a>, <a href="#//test-di-screening-sensibilità-e-specificità">Falso negativo</a></li>
-<li><strong>Teorema di Bayes</strong>: <a href="#//teorema-di-bayes-base">Teorema di Bayes</a>, <a href="#//teorema-di-bayes-base">Calcolo di VPP e VPN</a>, <a href="#//approfondimento">VPP dai conteggi</a>, <a href="#//teorema-di-bayes-generalizzazione">Bayes generalizzato</a></li>
+<li><strong>Teorema di Bayes</strong>: <a href="#//teorema-di-bayes-base">Teorema di Bayes</a>, <a href="#//teorema-di-bayes-base">Calcolo di VPP e VPN</a>, <a href="#//teorema-di-bayes-esempio">VPP dai conteggi</a>, <a href="#//teorema-di-bayes-due-test-in-sequenza">Indipendenza condizionata</a>, <a href="#//teorema-di-bayes-due-test-in-sequenza">Due test in sequenza</a></li>
 </ul>
 </div>
 </div>
