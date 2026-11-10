@@ -402,14 +402,6 @@ $$P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}$$
 
 che è la distribuzione di probabilità binomiale
 
-## Coefficiente binomiale: [Triangolo di Tartaglia]{.orange}
-
-```{r, echo=FALSE, out.width="80%", fig.cap="http://matematicamente.it/6981-algebra-1-manuale-completo-per-il-primo-anno-della-secondaria-di-secondo-grado"}
-
-knitr::include_graphics("img/Algebra1_12_fig003.svg.png")
-
-```
-
 ## Distribuzione [Binomiale]{.orange}
 
 ::: {.panel-tabset}
