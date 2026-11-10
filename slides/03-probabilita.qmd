@@ -63,7 +63,7 @@ Vedremo come questi elementi si combinano tra loro con le operazioni di base qua
 
 A questo punto saremo pronti per introdurre la parte interessante della probabilità, ovvero come la conoscenza del verificarsi di un dato evento **[condizioni]{.orange}** la nostra conoscenza sulla probabilità del verificarsi di un altro. Ne vedremo una prima applicazione al caso dei **[rischi relativi]{.orange}** e alle misure di valutazione per i **[test di screening]{.orange}**.
 
-Quest'ultime ci daranno il pretesto per apprezzare la differenza fondamentale, quando siamo di fronte a due eventi, tra quello eventualmente noto e quello ignoto, e come poter _girare_ i condizionamenti tramite il **[teorema di Bayes]{.orange}** in modo da poter calcolare le misure che ci interessano (e non possiamo conoscere a priori) a partire da quelle che conosciamo (o possiamo conoscere a priori).
+Quest'ultime ci daranno il pretesto per apprezzare la differenza fondamentale, quando siamo di fronte a due eventi, tra quello eventualmente noto e quello ignoto, e come poter _girare_ i condizionamenti tramite il **[teorema di Bayes]{.orange}** in modo da poter calcolare le misure che ci interessano (e non possiamo conoscere a priori) a partire da quelle che conosciamo (o possiamo conoscere a priori), anche quando i test sono due, fatti uno dopo l'altro.
 
 ## [Riconoscimenti]{.orange}
 
@@ -751,7 +751,7 @@ Si ipotizzi che:
 
 - **Enunciato** base con traccia di **derivazione** ed **esempi**
 
-- Enunciato **generalizzato** ed esempi
+- **Due test in sequenza**: il $PV^+$ del primo diventa la probabilità a priori del secondo
 
 ## [Teorema di Bayes]{.orange}: base
 
@@ -849,22 +849,23 @@ Per me: [Bayes](https://app.wooclap.com/events/STATMEDBAYES/0)
 
 Per voi: <img src="img/bit.ly_statmed-sondaggio-bayes.png" width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-bayes](https://bit.ly/statmed-sondaggio-bayes)
 
-## [Teorema di Bayes]{.orange}: generalizzazione
+## [Teorema di Bayes]{.orange}: due test in sequenza
 
-**Siano**
+Dopo un primo test positivo, la probabilità di malattia non è più la prevalenza: è il $PV^+$ del primo test.
 
-- $M_1, \ldots, M_k$ un insieme [esaustivo]{.orange} (almeno uno deve verificarsi) di stati di malattia [mutuamente esclusivi]{.orange} (non possono verificarsi due stati allo stesso tempo)
-- $T$ la presenza di un insieme di sintomi _test_
+Per un **secondo test** si usa di nuovo Bayes, con il $PV^+$ del primo al posto della prevalenza (la probabilità **a priori**). Con $T_1$ e $T_2$ primo e secondo test positivi:
 
-**Allora**, per ciascun $i \in \{1, \dots, k\}$:
+$$P(M \mid T_1 \cap T_2) = \frac{SENS_2 \cdot PV^+_1}{SENS_2 \cdot PV^+_1 + (1 - SPEC_2)\cdot(1 - PV^+_1)}$$
 
-$$P(M_i|T) =\frac{P(T|M_i)P(M_i)}{\sum_{j=1}^k P(T|M_j)P(M_j)}$$
+**Ipotesi**: a parità di stato di malattia, i due test sbagliano [indipendentemente]{.orange} l'uno dall'altro (**indipendenza condizionata**). Per esempio, fra i malati: $P(T_2 \mid M \cap T_1) = P(T_2 \mid M)$.
 
-## [Bayes generalizzato]{.orange}: esempio
+Con lo **stesso strumento ripetuto** di solito l'ipotesi non vale: chi è classificato male la prima volta tende a esserlo anche la seconda.
+
+## [Due test in sequenza]{.orange}: esempio
 
 ```{r, echo = FALSE}
-countdown(minutes = 3, warn_when = 1, play_sound = TRUE,
-          left = "70%", bottom = "0%")
+countdown(minutes = 5, warn_when = 1, play_sound = TRUE,
+          left = "70%", bottom = "5%")
 ```
 
 
@@ -872,64 +873,39 @@ countdown(minutes = 3, warn_when = 1, play_sound = TRUE,
 
 ### Problema
 
-::: {.small}
+Riprendiamo la macchina per la misurazione automatica della pressione: sensibilità 0.84, specificità 0.77, prevalenza 0.2, da cui $PV^+ = 0.48$.
 
-Si supponga che un uomo di età pari a 60 anni, **non fumatore**, presenti dei sintomi come **tosse cronica** e **affanno occasionale**.
+A chi risulta positivo si fa un **secondo esame, diverso** (per esempio il monitoraggio della pressione nelle 24 ore). **Si ipotizzi** che:
 
-Il medico prescrive una biopsia polmonare, il cui risultato è consistente con vari stati, quali:
+- il secondo esame abbia sensibilità 0.95 e specificità 0.90
+- a parità di stato (iperteso o normoteso) i due esami sbaglino indipendentemente
 
-1. nessuna malattia ([normale]{.orange})
-2. il [tumore polmonare]{.orange},
-3. la [sarcoidosi]{.orange} (malattia polmonare di solito non fatale)
+**Si calcoli** la probabilità di ipertensione:
 
-$$\mbox{sintomi}=T=\{\mbox{tosse cronica},\mbox{affanno occasionale}, \mbox{biopsia}\}$$
-
-$$\mbox{stati patologici} = M = \{M_1 = \mbox{normale},M_2 = \mbox{cancro},M_3 = \mbox{sarcoidosi}\}$$
-
-sia inoltre
-
-$$ P(T|M_1)=0.001 \:\:\: P(T|M_2)=0.9 \:\:\: P(T|M_3)=0.9$$
-$$P(M_1)=0.99 \:\:\: P(M_2)=0.001 \:\:\: P(M_3)=0.009$$
-Si vogliono conoscere le probabilità degli stati patologici dati i sintomi
-
-:::
+- dopo due esiti positivi
+- dopo un primo esito positivo e un secondo negativo
 
 
-### Soluzione
+### Due positivi
 
-$$\begin{split}P(M_1|T)&=\frac{P(T|M_1)P(M_1)}{\sum_{j=1}^3 P(T|M_j)P(M_j)}\\&=\frac{0.001(0.99)}{0.001(0.99)+0.9(0.001)+0.9(0.009)} = 0.099\end{split}$$
+Dai dati:
 
+- **probabilità a priori** = $PV^+$ del primo esame = 0.48
+- **sensibilità** del secondo = 0.95
+- **specificità** del secondo = 0.90
 
-$$P(M_2|T)= \frac{0.9(0.001)}{0.001(0.99)+0.9(0.001)+0.9(0.009)}=0.090$$
+$$\begin{split}P(M \mid T_1 \cap T_2)& = \frac{SENS_2\cdot PV^+_1}{SENS_2\cdot PV^+_1 + (1- SPEC_2)\cdot(1 - PV^+_1)}\\& = \frac{(0.95)0.48}{(0.95)0.48 + (0.10)0.52}\\& = \frac{0.456}{0.508}\\& = 0.90\end{split}$$
 
-$$P(M_3|T)=
-\frac{0.9(0.009)}{0.001(0.99)+0.9(0.001)+0.9(0.009)}=0.811$$
-
-
-### Problema _fumatore_
-
-Si supponga ora che lo stesso paziente sia fumatore di due pacchetti di 
-sigarette al giorno per 40 anni. Si abbia quindi che in questo gruppo di persone
-
-$$P(M_1)=0.98 \:\:\: P(M_2)=0.015 \:\:\: P(M_3)=0.005$$
-Sempre considerando le stesse probabilità di avere i sintomi in evidenza se soggetti ai vari stati patologici in esame:
-
-$$P(T|M_1) = 0.001 \:\:\: P(T|M_2)=0.9 \:\:\: P(T|M_3)=0.9$$
-La probabilità degli stati patologici è?
+Da 0.2 (prevalenza) a 0.48 dopo il primo positivo, a 0.90 dopo il secondo.
 
 
-### Soluzione _fumatore_
+### Positivo poi negativo
 
-**Dati**: 
+Il secondo esame è negativo ($\bar{T}_2$): al posto della sensibilità si usa $1 - SENS_2 = P(\bar{T}_2 \mid M)$, al posto di $1 - SPEC_2$ si usa $SPEC_2 = P(\bar{T}_2 \mid \bar{M})$.
 
-- $P(M_1) = 0.98 \:\:\: P(M_2)=0.015 \:\:\: P(M_3)=0.005$
-- $P(T|M_1) = 0.001 \:\:\: P(T|M_2)=0.9 \:\:\: P(T|M_3)=0.9$
+$$\begin{split}P(M \mid T_1 \cap \bar{T}_2)& = \frac{(1 - SENS_2)\cdot PV^+_1}{(1 - SENS_2)\cdot PV^+_1 + SPEC_2\cdot(1 - PV^+_1)}\\& = \frac{(0.05)0.48}{(0.05)0.48 + (0.90)0.52}\\& = \frac{0.024}{0.492}\\& \simeq 0.05\end{split}$$
 
-$$P(M_1|T) = \frac{0.001(0.98)}{0.001(0.98)+0.9(0.015)+0.9(0.005)}=0.052$$
-
-$$P(M_2|T) = \frac{0.9(0.015)}{0.001(0.98)+0.9(0.015)+0.9(0.005)}=0.711$$
-
-$$P(M_3|T) = \frac{0.9(0.005)}{0.001(0.98)+0.9(0.015)+0.9(0.005)}=0.237$$
+Il secondo esame negativo porta la probabilità a 0.05, sotto la prevalenza di partenza (0.2).
 
 :::
 

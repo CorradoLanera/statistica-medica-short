@@ -1225,7 +1225,7 @@
     "href": "slides/03-probabilita.html#cosa-faremo",
     "title": "Statistica Medica",
     "section": "Cosa faremo",
-    "text": "Cosa faremo\nInizieremo richiamando alcune definizioni e proprietà base della probabilità come il concetto di evento e probabilità stessa.\nVedremo come questi elementi si combinano tra loro con le operazioni di base quali somma, prodotto, e complemento (corrispondenti agli analoghi insiemistici di unione, intersezione, e complementare). In particolare introdurremo il concetto di indipendenza e vedremo come questo interagisce con le operazioni base.\nA questo punto saremo pronti per introdurre la parte interessante della probabilità, ovvero come la conoscenza del verificarsi di un dato evento condizioni la nostra conoscenza sulla probabilità del verificarsi di un altro. Ne vedremo una prima applicazione al caso dei rischi relativi e alle misure di valutazione per i test di screening.\nQuest’ultime ci daranno il pretesto per apprezzare la differenza fondamentale, quando siamo di fronte a due eventi, tra quello eventualmente noto e quello ignoto, e come poter girare i condizionamenti tramite il teorema di Bayes in modo da poter calcolare le misure che ci interessano (e non possiamo conoscere a priori) a partire da quelle che conosciamo (o possiamo conoscere a priori)."
+    "text": "Cosa faremo\nInizieremo richiamando alcune definizioni e proprietà base della probabilità come il concetto di evento e probabilità stessa.\nVedremo come questi elementi si combinano tra loro con le operazioni di base quali somma, prodotto, e complemento (corrispondenti agli analoghi insiemistici di unione, intersezione, e complementare). In particolare introdurremo il concetto di indipendenza e vedremo come questo interagisce con le operazioni base.\nA questo punto saremo pronti per introdurre la parte interessante della probabilità, ovvero come la conoscenza del verificarsi di un dato evento condizioni la nostra conoscenza sulla probabilità del verificarsi di un altro. Ne vedremo una prima applicazione al caso dei rischi relativi e alle misure di valutazione per i test di screening.\nQuest’ultime ci daranno il pretesto per apprezzare la differenza fondamentale, quando siamo di fronte a due eventi, tra quello eventualmente noto e quello ignoto, e come poter girare i condizionamenti tramite il teorema di Bayes in modo da poter calcolare le misure che ci interessano (e non possiamo conoscere a priori) a partire da quelle che conosciamo (o possiamo conoscere a priori), anche quando i test sono due, fatti uno dopo l’altro."
   },
   {
     "objectID": "slides/03-probabilita.html#riconoscimenti",
@@ -1484,7 +1484,7 @@
     "href": "slides/03-probabilita.html#teorema-di-bayes",
     "title": "Statistica Medica",
     "section": "Teorema di Bayes",
-    "text": "Teorema di Bayes\n\nEnunciato base con traccia di derivazione ed esempi\nEnunciato generalizzato ed esempi"
+    "text": "Teorema di Bayes\n\nEnunciato base con traccia di derivazione ed esempi\nDue test in sequenza: il PV+PV^+ del primo diventa la probabilità a priori del secondo"
   },
   {
     "objectID": "slides/03-probabilita.html#teorema-di-bayes-base",
@@ -2206,5 +2206,19 @@
     "title": "Statistica Medica",
     "section": "Rischio relativo: attenzione al gonfiaggio",
     "text": "Rischio relativo: attenzione al gonfiaggio\nIl RR dice quante volte è più probabile l’evento, non quanti casi in più ci sono. Va letto insieme al rischio di partenza, P(B∣A‾)P(B \\mid \\bar{A}).\n\nEsempio della TB: RR=100RR = 100, eppure fra i positivi allo skin test solo 1 su 100 ha la TB (P(TB∣SKT+)=0.01P(TB \\mid SKT^+) = 0.01); gli altri 99 no.\nIl caso tipico degli articoli: il rischio passa da 1 su 10000 a 2 su 10000.\nRR=2/100001/10000=2RR = \\frac{2/10000}{1/10000} = 2\n«Il rischio raddoppia!», ma è 1 caso in più ogni 10000 persone."
+  },
+  {
+    "objectID": "slides/03-probabilita.html#teorema-di-bayes-due-test-in-sequenza",
+    "href": "slides/03-probabilita.html#teorema-di-bayes-due-test-in-sequenza",
+    "title": "Statistica Medica",
+    "section": "Teorema di Bayes: due test in sequenza",
+    "text": "Teorema di Bayes: due test in sequenza\nDopo un primo test positivo, la probabilità di malattia non è più la prevalenza: è il PV+PV^+ del primo test.\nPer un secondo test si usa di nuovo Bayes, con il PV+PV^+ del primo al posto della prevalenza (la probabilità a priori). Con T1T_1 e T2T_2 primo e secondo test positivi:\nP(M∣T1∩T2)=SENS2⋅PV1+SENS2⋅PV1++(1−SPEC2)⋅(1−PV1+)P(M \\mid T_1 \\cap T_2) = \\frac{SENS_2 \\cdot PV^+_1}{SENS_2 \\cdot PV^+_1 + (1 - SPEC_2)\\cdot(1 - PV^+_1)}\nIpotesi: a parità di stato di malattia, i due test sbagliano indipendentemente l’uno dall’altro (indipendenza condizionata). Per esempio, fra i malati: P(T2∣M∩T1)=P(T2∣M)P(T_2 \\mid M \\cap T_1) = P(T_2 \\mid M).\nCon lo stesso strumento ripetuto di solito l’ipotesi non vale: chi è classificato male la prima volta tende a esserlo anche la seconda."
+  },
+  {
+    "objectID": "slides/03-probabilita.html#due-test-in-sequenza-esempio",
+    "href": "slides/03-probabilita.html#due-test-in-sequenza-esempio",
+    "title": "Statistica Medica",
+    "section": "Due test in sequenza: esempio",
+    "text": "Due test in sequenza: esempio\n\n\n\n\n\n\nProblemaDue positiviPositivo poi negativo\n\n\nRiprendiamo la macchina per la misurazione automatica della pressione: sensibilità 0.84, specificità 0.77, prevalenza 0.2, da cui PV+=0.48PV^+ = 0.48.\nA chi risulta positivo si fa un secondo esame, diverso (per esempio il monitoraggio della pressione nelle 24 ore). Si ipotizzi che:\n\nil secondo esame abbia sensibilità 0.95 e specificità 0.90\na parità di stato (iperteso o normoteso) i due esami sbaglino indipendentemente\n\nSi calcoli la probabilità di ipertensione:\n\ndopo due esiti positivi\ndopo un primo esito positivo e un secondo negativo\n\n\n\nDai dati:\n\nprobabilità a priori = PV+PV^+ del primo esame = 0.48\nsensibilità del secondo = 0.95\nspecificità del secondo = 0.90\n\nP(M∣T1∩T2)=SENS2⋅PV1+SENS2⋅PV1++(1−SPEC2)⋅(1−PV1+)=(0.95)0.48(0.95)0.48+(0.10)0.52=0.4560.508=0.90\\begin{split}P(M \\mid T_1 \\cap T_2)& = \\frac{SENS_2\\cdot PV^+_1}{SENS_2\\cdot PV^+_1 + (1- SPEC_2)\\cdot(1 - PV^+_1)}\\\\& = \\frac{(0.95)0.48}{(0.95)0.48 + (0.10)0.52}\\\\& = \\frac{0.456}{0.508}\\\\& = 0.90\\end{split}\nDa 0.2 (prevalenza) a 0.48 dopo il primo positivo, a 0.90 dopo il secondo.\n\n\nIl secondo esame è negativo (T‾2\\bar{T}_2): al posto della sensibilità si usa 1−SENS2=P(T‾2∣M)1 - SENS_2 = P(\\bar{T}_2 \\mid M), al posto di 1−SPEC21 - SPEC_2 si usa SPEC2=P(T‾2∣M‾)SPEC_2 = P(\\bar{T}_2 \\mid \\bar{M}).\nP(M∣T1∩T‾2)=(1−SENS2)⋅PV1+(1−SENS2)⋅PV1++SPEC2⋅(1−PV1+)=(0.05)0.48(0.05)0.48+(0.90)0.52=0.0240.492≃0.05\\begin{split}P(M \\mid T_1 \\cap \\bar{T}_2)& = \\frac{(1 - SENS_2)\\cdot PV^+_1}{(1 - SENS_2)\\cdot PV^+_1 + SPEC_2\\cdot(1 - PV^+_1)}\\\\& = \\frac{(0.05)0.48}{(0.05)0.48 + (0.90)0.52}\\\\& = \\frac{0.024}{0.492}\\\\& \\simeq 0.05\\end{split}\nIl secondo esame negativo porta la probabilità a 0.05, sotto la prevalenza di partenza (0.2)."
   }
 ]
