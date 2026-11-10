@@ -127,42 +127,26 @@ l'aiuto e il supporto logistico e amministrativo che mi è stato offerto.
 
 **[tipologie]{.orange} di dati**
 
-## [Notazioni]{.orange}: Sommatoria fino a N
+## [Notazioni]{.orange}: Sommatoria
 
-Sia $I$ un insieme di indici $i$ con $N$ elementi, utile a identificare
-(in modo univoco) ciascun elemento $x$ di un insieme $X$ composto da $N$
-numeri. Allora, indichiamo in modo generico con $x_i$ l'i-esimo elemento
-di $X$.
+Sia $X$ un insieme di $N$ numeri: indichiamo con $x_i$ l'i-esimo elemento
+di $X$ (per $i = 1$, $x_1$ è il primo).
 
-Per esempio, quando consideriamo $i = 1$, allora $x_i$ è $x_1$, ovvero
-il primo elemento di $X$.
-
-Con tale notazione, utilizzando il simbolo $\Sigma$ (Sigma, maiuscola:
-la "S" greca), indichiamo brevemente con 
+Con il simbolo $\Sigma$ (Sigma maiuscola, la "S" greca) scriviamo
 
 $$\sum_{i = 1}^N x_i = x_1 + x_2 + \cdots + x_{N-1} + x_{N}$$
 
-la somma di tutti gli $x_i$, e lo leggiamo "Sommatoria per i che va da 1
+la somma di tutti gli $x_i$, che leggiamo "Sommatoria per i che va da 1
 a N degli x-con-i".
 
-## [Notazioni]{.orange}: Sommatoria su I
-
-In modo analogo, se $I$ non fosse numerico ma, per esempio, l'insieme
-dei codici identificativi dei pazienti in uno studio, e $X$ fosse 
-l'insieme dei pesi di tali pazienti, ipotizzando che $R43$ sia l'id di 
-un paziente, allora quando $i = R43$ abbiamo che $x_i = x_{R43}$ è il
-peso del paziente identificato dal codice $R43$.
-
-Ricordando inoltre che indichiamo con $x\in X$ la relazione di
-[appartenenza insiemistica]{.orange} per l'elemento $x$ nell'insieme $X$,
-possiamo scrivere
+Gli indici possono essere anche codici, per esempio gli id dei pazienti
+in un insieme $I$ (con $R43$ id di un paziente, $x_{R43}$ è il suo peso).
+Allora scriviamo
 
 $$\sum_{i\in I} x_i$$
 
-Con il medesimo significato di prima, ovvero la somma di tutti i pesi di
-tutti i pazienti i cui indici (ovvero ID) stanno nell'insieme
-considerato $I$, e lo leggiamo "Sommatoria per gli i in I degli
-x-con-i".
+e leggiamo "Sommatoria per gli i in I degli x-con-i": la somma dei pesi di
+tutti i pazienti con id in $I$.
 
 ## Esempio sommatoria
 
