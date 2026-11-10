@@ -563,35 +563,6 @@ ggplot(db, aes(n, `P(X=n)`, fill = mu)) +
 
 Per una distribuzione di Poisson con parametro $\mu$, la media e la varianza sono entrambe pari a $\mu$
 
-## [Poisson]{.orange}: Polio
-
-Si consideri numero di morti per polio negli anni 1968-76
-
-
-:::: {.columns}
-
-::: {.column width="48%"}
-
-```{r,echo=FALSE}
-tibble(
-Anno = c(68, 69, 70, 71, 72, 73, 74, 75 , 76),
-Morti = c(24, 13, 7, 18, 2, 10, 3, 9, 16)
-) |> 
-  knitr::kable()
-```
-
-:::
-
-::: {.column width="48%"}
-
-La media è pari a $11.3$ e la varianza a $51.5$.
-
-Probabilmente vi è un effetto di clustering rispetto a certi periodi temporali e a certe aree geografiche.
-
-:::
-
-::::
-
 ## [Poisson]{.orange}: cibo cancerogeno
 
 In uno studio sul possibile effetto cancerogeno di EDB (etilene dibromide), osservando la mortalità di 161 operai bianchi, occupati presso due fabbriche, Texas e Michigan, 1940-1975 [Ott _et al._, B J Ind Med, 1980:37, 163-8]
