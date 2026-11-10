@@ -665,19 +665,16 @@ Un **test d'ipotesi** è una regola che, a partire dai dati del campione, decide
 
 ## Ipotesi: [decisioni]{.orange}
 
-[Decisioni sull'ipotesi nulla]{.orange} | Ipotesi nulla **vera**                 | Ipotesi nulla **falsa**
---------------------------------------|----------------------------------------|------------------------
-**Non rifiuto**                       | Decisione corretta <br> P = $1-\alpha$ | Errore di II tipo  <br> P = $\beta$
-**Rifiuto**                           | Errore di I tipo <br> P = $\alpha$     | Decisione corretta <br> P = $1-\beta$ 
+[Decisione]{.orange}   | $H_0$ **vera**                         | $H_0$ **falsa**
+----------------------|----------------------------------------|------------------------
+**Non rifiuto** $H_0$ | Decisione corretta <br> P = $1-\alpha$ | Errore di II tipo <br> P = $\beta$
+**Rifiuto** $H_0$     | Errore di I tipo <br> P = $\alpha$     | Decisione corretta <br> P = $1-\beta$
 
-- $\alpha$ è definito livello di **significatività**: è lo stesso $\alpha$ dell'IC al livello $1-\alpha$, e il legame si vede nella slide «P-value e IC»
-- $1-\beta$ è definito **potenza**
+- $\alpha = P(\mbox{rifiuto}\ H_0 \mid H_0\ \mbox{vera})$, errore di I tipo: è il [livello di significatività]{.orange} del test. È lo stesso $\alpha$ dell'IC al livello $1-\alpha$: il legame si vede nella slide «P-value e IC».
 
-- La probabilità di un errore di I specie ( $\alpha$, la _significatività_ ) è la probabilità di **rifiutare** l'ipotesi nulla $H_0$ quando è **vera**, si chiama [livello di significatività]{.orange} del test
+- $\beta = P(\mbox{non rifiuto}\ H_0 \mid H_0\ \mbox{falsa})$, errore di II tipo; $1-\beta$ è la [potenza]{.orange} del test.
 
-- La probabilità di un errore di II specie ( $\beta$ ) è la probabilità di **non rifiutare** l'ipotesi nulla $H_0$ dato che è **falsa**
-
-- Non rifiutare $H_0$ non dimostra che sia vera: i dati non bastano a escluderla.
+> Non rifiutare $H_0$ non dimostra che sia vera: i dati non bastano a escluderla.
 
 ## Test: [media di una Normale]{.orange}
 
