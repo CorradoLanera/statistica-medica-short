@@ -1029,7 +1029,7 @@ $$x < 215.35 - 1.5 * (323.95 - 215.35) = 52.45$$
 
 Volendo rappresentare confronti tra conteggi, possiamo usare grafici a
 barre: ciascuna barra è il conteggio di un valore di una variabile
-discreta (nominale, ordinale, dicotomica, o un conteggio con pochi valori).
+discreta (nominale, ordinale, dicotomica, o cardinale con pochi valori).
 
 > ATTENZIONE 1: per una variabile continua si usa l'istogramma, che ne
   rappresenta la distribuzione; per una variabile discreta si usa il
