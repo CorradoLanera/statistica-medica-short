@@ -751,15 +751,17 @@ $$c=120-1.645\frac{25}{10}=115.89$$
 quindi, poiché $\bar{X}=115<115.89=c$ si rifiuta $H_0$ ad un livello di significatività di 0.05
 
 
-### Maggiore significatività
+### Con $\alpha = 0.01$
 
-Usando un livello di significatività pari a 0.01, si avrebbe che 
+Usando un livello di significatività pari a 0.01, si avrebbe che
 
 $z_{\alpha}=-2.326$ e che
 
 $$c=120-2.326\frac{25}{10}=114.18$$
 
 e quindi **non si rifiuterebbe** l'ipotesi nulla dal momento che $\bar{x}=115\geq 114.18=c$
+
+Un $\alpha$ più piccolo è un criterio più severo: per rifiutare $H_0$ serve una media più lontana da 120.
 
 
 ### Usando Z
