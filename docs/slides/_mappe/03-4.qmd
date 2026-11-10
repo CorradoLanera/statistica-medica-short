@@ -9,15 +9,15 @@
 %%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart LR
   n_eventi_indipendenti["Eventi indipendenti"]:::prev
-  n_specificita["Specificità"]:::prev
-  n_falso_positivo["Falso positivo"]:::prev
-  n_sensibilita["Sensibilità"]:::prev
-  n_probabilita_condizionata["Probabilità condizionata"]:::prev
   n_regola_del_prodotto_generale["Regola del prodotto"]:::prev
-  n_valore_predittivo_positivo["VPP"]:::prev
-  n_valore_predittivo_negativo["VPN"]:::prev
-  n_prevalenza["Prevalenza"]:::prev
+  n_probabilita_condizionata["Probabilità condizionata"]:::prev
+  n_specificita["Specificità"]:::prev
   n_probabilita_totali_due_eventi["Probabilità totali (2 eventi)"]:::prev
+  n_valore_predittivo_negativo["VPN"]:::prev
+  n_falso_positivo["Falso positivo"]:::prev
+  n_prevalenza["Prevalenza"]:::prev
+  n_sensibilita["Sensibilità"]:::prev
+  n_valore_predittivo_positivo["VPP"]:::prev
   n_teorema_di_bayes["Teorema di Bayes"]:::cur
   n_calcolo_dei_valori_predittivi["Calcolo di VPP e VPN"]:::cur
   n_vpp_da_conteggi["VPP dai conteggi"]:::opt

@@ -936,7 +936,7 @@ Nella lezione sulle distribuzioni, con la Poisson, si è calcolata la probabilit
 
 Esempio          | Osservati      | Attesi | Probabilità             | Lettura
 -----------------|----------------|--------|-------------------------|----------------
-Cibo cancerogeno | 7 morti        | 5.8    | $P(X \geq 7) = 0.36$    | nessun eccesso
+Cibo cancerogeno | 7 morti        | 5.8    | $P(X \geq 7) = 0.36$    | nessuna prova di eccesso
 Tumore al seno   | 4 casi su 1000 | 1      | $P(X \geq 4) = 0.019$   | sospetto
 
 <br>
@@ -949,13 +949,9 @@ Erano **p-value**: quanto è raro un risultato almeno così estremo, se non succ
 
 ### Definizione
 
-Il p-value è la probabilità, **se $H_0$ è vera**, di ottenere un risultato **uguale o più estremo** di quello osservato.
+Il p-value è la probabilità, **se $H_0$ è vera** (e valgono le altre ipotesi del modello: campione casuale, normalità o $n$ grande, $\sigma$ nota), di ottenere un risultato **uguale o più estremo** di quello osservato.
 
-Con $H_1: \mu < \mu_0$, «più estremo» vuol dire «più piccolo»:
-
-$$p = \Phi(z), \qquad z = \frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}$$
-
-Di conseguenza si rifiuta $H_0$ al livello $\alpha$ se e solo se $p < \alpha$ ($z < z_\alpha$ equivale a $\Phi(z) < \alpha$).
+Si rifiuta $H_0$ al livello $\alpha$ se e solo se $p < \alpha$. In questo caso il risultato si dice **statisticamente significativo** al livello $\alpha$.
 
 
 ### Alternativa minore
@@ -1112,9 +1108,9 @@ $$p = P(\mbox{dati almeno così estremi} \mid H_0)$$
 
 **Non** è la probabilità che $H_0$ sia vera, dati i risultati: $p \neq P(H_0 \mid \mbox{dati})$.
 
-È la stessa inversione dei test di screening, dove la sensibilità non è il valore predittivo positivo:
+È la stessa inversione dei test di screening: la probabilità di un test positivo in un sano non è la probabilità di essere sano dato un test positivo.
 
-$$P(\mbox{test}^+ \mid \mbox{malattia}) \neq P(\mbox{malattia} \mid \mbox{test}^+)$$
+$$P(\mbox{test}^+ \mid \mbox{sano}) \neq P(\mbox{sano} \mid \mbox{test}^+)$$
 
 > $p = 0.03$ non vuol dire «3% di probabilità che $H_0$ sia vera».
 

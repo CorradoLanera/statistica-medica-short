@@ -5073,7 +5073,6 @@ flowchart LR
   n_popolazione_target[&quot;Popolazione target&quot;]:::cur
   k_n_02_unita --&gt; n_campione_casuale
   k_n_02_unita --&gt; n_inferenza_statistica
-  k_n_02_unita --&gt; n_popolazione_target
   k_n_03_probabilita --&gt; n_campione_casuale
   k_n_03_somma_prodotto --&gt; n_campione_casuale
   k_n_04_massa --&gt; n_inferenza_statistica
@@ -5310,10 +5309,10 @@ flowchart LR
 <div>
 <pre class="mermaid mermaid-js">%%{init: {&quot;flowchart&quot;: {&quot;padding&quot;: 12, &quot;wrappingWidth&quot;: 320}, &quot;themeVariables&quot;: {&quot;fontFamily&quot;: &quot;Arial, Helvetica, sans-serif&quot;}}}%%
 flowchart LR
-  n_stimatore[&quot;Stimatore&quot;]:::prev
-  n_stima_puntuale[&quot;Stima puntuale&quot;]:::prev
   n_errore_standard[&quot;Errore standard&quot;]:::prev
   n_teorema_del_limite_centrale[&quot;Limite centrale&quot;]:::prev
+  n_stimatore[&quot;Stimatore&quot;]:::prev
+  n_stima_puntuale[&quot;Stima puntuale&quot;]:::prev
   k_n_03_probabilita[&quot;Probabilità · 03&quot;]:::prev
   k_n_04_normale[&quot;Normale · 04&quot;]:::prev
   k_n_04_tavole[&quot;Tavole e standardizzazione · 04&quot;]:::prev
@@ -5367,7 +5366,7 @@ flowchart LR
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_5c149e4f" minutes="15" seconds="0" warn-when="3" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_640e93f1" minutes="15" seconds="0" warn-when="3" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
 </div>
 </div>
 </section>
@@ -5743,8 +5742,8 @@ flowchart LR
 <div>
 <pre class="mermaid mermaid-js">%%{init: {&quot;flowchart&quot;: {&quot;padding&quot;: 12, &quot;wrappingWidth&quot;: 320}, &quot;themeVariables&quot;: {&quot;fontFamily&quot;: &quot;Arial, Helvetica, sans-serif&quot;}}}%%
 flowchart LR
-  n_distribuzione_campionaria[&quot;Distribuzione campionaria&quot;]:::prev
   n_errore_standard[&quot;Errore standard&quot;]:::prev
+  n_distribuzione_campionaria[&quot;Distribuzione campionaria&quot;]:::prev
   n_ic_media_varianza_nota[&quot;IC, σ nota&quot;]:::prev
   n_intervallo_di_confidenza[&quot;Intervallo di confidenza&quot;]:::prev
   k_n_02_unita[&quot;Unità, variabili, tabelle · 02&quot;]:::prev
@@ -5898,30 +5897,24 @@ flowchart LR
 <div>
 <pre class="mermaid mermaid-js">%%{init: {&quot;flowchart&quot;: {&quot;padding&quot;: 12, &quot;wrappingWidth&quot;: 320}, &quot;themeVariables&quot;: {&quot;fontFamily&quot;: &quot;Arial, Helvetica, sans-serif&quot;}}}%%
 flowchart LR
-  n_stimatore[&quot;Stimatore&quot;]:::prev
   n_numerosita_campionaria[&quot;Numerosità n&quot;]:::prev
+  n_stimatore[&quot;Stimatore&quot;]:::prev
   n_ic_media_varianza_nota[&quot;IC, σ nota&quot;]:::prev
-  n_interpretazione_dell_intervallo_di_confidenza[&quot;Interpretazione dell&#39;IC&quot;]:::prev
   k_n_02_percentili[&quot;Percentili e quartili · 02&quot;]:::prev
   k_n_02_variabilita[&quot;Variabilità · 02&quot;]:::prev
-  k_n_03_probabilita[&quot;Probabilità · 03&quot;]:::prev
   k_n_03_somma_prodotto[&quot;Somma, prodotto, indipendenza · 03&quot;]:::prev
   k_n_04_normale[&quot;Normale · 04&quot;]:::prev
   n_ic_media_varianza_ignota[&quot;IC, σ ignota&quot;]:::cur
-  n_confronto_tra_ic_e_valore_di_riferimento[&quot;IC e valore di riferimento&quot;]:::cur
   n_distribuzione_t_di_student[&quot;t di Student&quot;]:::cur
   n_gradi_di_liberta[&quot;Gradi di libertà&quot;]:::cur
   n_percentile_della_t_di_student[&quot;Percentili di t&quot;]:::cur
   k_n_02_percentili --&gt; n_percentile_della_t_di_student
   k_n_02_variabilita --&gt; n_distribuzione_t_di_student
-  k_n_03_probabilita --&gt; n_confronto_tra_ic_e_valore_di_riferimento
   k_n_03_somma_prodotto --&gt; n_distribuzione_t_di_student
   k_n_04_normale --&gt; n_distribuzione_t_di_student
   n_distribuzione_t_di_student --&gt; n_percentile_della_t_di_student
   n_gradi_di_liberta --&gt; n_distribuzione_t_di_student
-  n_ic_media_varianza_nota --&gt; n_confronto_tra_ic_e_valore_di_riferimento
   n_ic_media_varianza_nota --&gt; n_ic_media_varianza_ignota
-  n_interpretazione_dell_intervallo_di_confidenza --&gt; n_confronto_tra_ic_e_valore_di_riferimento
   n_numerosita_campionaria --&gt; n_gradi_di_liberta
   n_percentile_della_t_di_student --&gt; n_ic_media_varianza_ignota
   n_stimatore --&gt; n_distribuzione_t_di_student
@@ -5942,7 +5935,6 @@ flowchart LR
 <div class="mappa-indice">
 <ul>
 <li><a href="#//ic-per-la-media-varianza-non-nota">IC, σ ignota</a></li>
-<li><a href="#//ic-esempio">IC e valore di riferimento</a></li>
 <li><a href="#//distribuzione-t-di-student-1">t di Student</a></li>
 <li><a href="#//distribuzione-t-di-student-1">Gradi di libertà</a></li>
 <li><a href="#//distribuzione-t-di-student-1">Percentili di t</a></li>
@@ -6061,7 +6053,7 @@ flowchart LR
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_316d22b0" minutes="2" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_e79832ee" minutes="2" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
 </div>
 </div>
 </section>
@@ -6279,7 +6271,7 @@ flowchart LR
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_2dab76ad" minutes="2" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_60932b88" minutes="2" seconds="0" warn-when="30" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:65%;"></countdown-timer>
 </div>
 </div>
 </section>
@@ -6309,7 +6301,7 @@ flowchart LR
 <td>7 morti</td>
 <td>5.8</td>
 <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>≥</mo><mn>7</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.36</mn></mrow><annotation encoding="application/x-tex">P(X \geq 7) = 0.36</annotation></semantics></math></td>
-<td>nessun eccesso</td>
+<td>nessuna prova di eccesso</td>
 </tr>
 <tr class="even">
 <td>Tumore al seno</td>
@@ -6329,10 +6321,8 @@ flowchart LR
 <ul id="tabset-19" class="panel-tabset-tabby"><li><a data-tabby-default href="#tabset-19-1">Definizione</a></li><li><a href="#tabset-19-2">Alternativa minore</a></li><li><a href="#tabset-19-3">Alternativa maggiore</a></li></ul>
 <div class="tab-content">
 <div id="tabset-19-1">
-<p>Il p-value è la probabilità, <strong>se <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math> è vera</strong>, di ottenere un risultato <strong>uguale o più estremo</strong> di quello osservato.</p>
-<p>Con <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>1</mn></msub><mo>:</mo><mi>μ</mi><mo>&lt;</mo><msub><mi>μ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">H_1: \mu &lt; \mu_0</annotation></semantics></math>, «più estremo» vuol dire «più piccolo»:</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mi mathvariant="normal">Φ</mi><mo stretchy="false" form="prefix">(</mo><mi>z</mi><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="2.0em"></mspace><mi>z</mi><mo>=</mo><mfrac><mrow><mover accent="true"><mi>x</mi><mo>‾</mo></mover><mo>−</mo><msub><mi>μ</mi><mn>0</mn></msub></mrow><mfrac><mi>σ</mi><msqrt><mi>n</mi></msqrt></mfrac></mfrac></mrow><annotation encoding="application/x-tex">p = \Phi(z), \qquad z = \frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}</annotation></semantics></math></p>
-<p>Di conseguenza si rifiuta <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math> al livello <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math> se e solo se <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>&lt;</mo><mi>α</mi></mrow><annotation encoding="application/x-tex">p &lt; \alpha</annotation></semantics></math> (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>&lt;</mo><msub><mi>z</mi><mi>α</mi></msub></mrow><annotation encoding="application/x-tex">z &lt; z_\alpha</annotation></semantics></math> equivale a <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Φ</mi><mo stretchy="false" form="prefix">(</mo><mi>z</mi><mo stretchy="false" form="postfix">)</mo><mo>&lt;</mo><mi>α</mi></mrow><annotation encoding="application/x-tex">\Phi(z) &lt; \alpha</annotation></semantics></math>).</p>
+<p>Il p-value è la probabilità, <strong>se <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math> è vera</strong> (e valgono le altre ipotesi del modello: campione casuale, normalità o <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> grande, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>σ</mi><annotation encoding="application/x-tex">\sigma</annotation></semantics></math> nota), di ottenere un risultato <strong>uguale o più estremo</strong> di quello osservato.</p>
+<p>Si rifiuta <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math> al livello <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math> se e solo se <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>&lt;</mo><mi>α</mi></mrow><annotation encoding="application/x-tex">p &lt; \alpha</annotation></semantics></math>. In questo caso il risultato si dice <strong>statisticamente significativo</strong> al livello <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>.</p>
 </div>
 <div id="tabset-19-2">
 <div class="columns">
@@ -6449,8 +6439,8 @@ flowchart LR
 <p>Il p-value è una probabilità <strong>dei dati, se <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math> è vera</strong>:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">dati almeno così estremi</mtext><mo>∣</mo><msub><mi>H</mi><mn>0</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">p = P(\mbox{dati almeno così estremi} \mid H_0)</annotation></semantics></math></p>
 <p><strong>Non</strong> è la probabilità che <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math> sia vera, dati i risultati: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>≠</mo><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>H</mi><mn>0</mn></msub><mo>∣</mo><mtext mathvariant="normal">dati</mtext><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">p \neq P(H_0 \mid \mbox{dati})</annotation></semantics></math>.</p>
-<p>È la stessa inversione dei test di screening, dove la sensibilità non è il valore predittivo positivo:</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msup><mtext mathvariant="normal">test</mtext><mo>+</mo></msup><mo>∣</mo><mtext mathvariant="normal">malattia</mtext><mo stretchy="false" form="postfix">)</mo><mo>≠</mo><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">malattia</mtext><mo>∣</mo><msup><mtext mathvariant="normal">test</mtext><mo>+</mo></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P(\mbox{test}^+ \mid \mbox{malattia}) \neq P(\mbox{malattia} \mid \mbox{test}^+)</annotation></semantics></math></p>
+<p>È la stessa inversione dei test di screening: la probabilità di un test positivo in un sano non è la probabilità di essere sano dato un test positivo.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msup><mtext mathvariant="normal">test</mtext><mo>+</mo></msup><mo>∣</mo><mtext mathvariant="normal">sano</mtext><mo stretchy="false" form="postfix">)</mo><mo>≠</mo><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">sano</mtext><mo>∣</mo><msup><mtext mathvariant="normal">test</mtext><mo>+</mo></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P(\mbox{test}^+ \mid \mbox{sano}) \neq P(\mbox{sano} \mid \mbox{test}^+)</annotation></semantics></math></p>
 <blockquote>
 <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mn>0.03</mn></mrow><annotation encoding="application/x-tex">p = 0.03</annotation></semantics></math> non vuol dire «3% di probabilità che <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math> sia vera».</p>
 </blockquote>
@@ -6491,20 +6481,26 @@ flowchart LR
 <div>
 <pre class="mermaid mermaid-js">%%{init: {&quot;flowchart&quot;: {&quot;padding&quot;: 12, &quot;wrappingWidth&quot;: 320}, &quot;themeVariables&quot;: {&quot;fontFamily&quot;: &quot;Arial, Helvetica, sans-serif&quot;}}}%%
 flowchart LR
-  n_distribuzione_campionaria[&quot;Distribuzione campionaria&quot;]:::prev
-  n_stimatore[&quot;Stimatore&quot;]:::prev
   n_errore_standard[&quot;Errore standard&quot;]:::prev
+  n_stimatore[&quot;Stimatore&quot;]:::prev
+  n_distribuzione_campionaria[&quot;Distribuzione campionaria&quot;]:::prev
+  n_ic_media_varianza_nota[&quot;IC, σ nota&quot;]:::prev
   n_ic_a_livello_generico[&quot;IC a livello 1−α&quot;]:::prev
+  n_ampiezza_dell_intervallo_di_confidenza[&quot;Ampiezza dell&#39;IC&quot;]:::prev
+  n_interpretazione_dell_intervallo_di_confidenza[&quot;Interpretazione dell&#39;IC&quot;]:::prev
   n_distribuzione_t_di_student[&quot;t di Student&quot;]:::prev
-  n_percentile_della_t_di_student[&quot;Percentili di t&quot;]:::prev
   n_gradi_di_liberta[&quot;Gradi di libertà&quot;]:::prev
+  n_percentile_della_t_di_student[&quot;Percentili di t&quot;]:::prev
   k_n_03_condizionata[&quot;Probabilità condizionata · 03&quot;]:::prev
   k_n_03_operazioni[&quot;Operazioni fra eventi · 03&quot;]:::prev
   k_n_03_probabilita[&quot;Probabilità · 03&quot;]:::prev
   k_n_03_somma_prodotto[&quot;Somma, prodotto, indipendenza · 03&quot;]:::prev
+  k_n_03_test[&quot;Test diagnostici · 03&quot;]:::prev
   k_n_04_massa[&quot;Massa e cumulata · 04&quot;]:::prev
   k_n_04_parametri[&quot;Parametri e statistiche · 04&quot;]:::prev
+  k_n_04_poisson[&quot;Poisson · 04&quot;]:::prev
   k_n_04_tavole[&quot;Tavole e standardizzazione · 04&quot;]:::prev
+  n_confronto_tra_ic_e_valore_di_riferimento[&quot;IC e valore di riferimento&quot;]:::cur
   n_ipotesi_nulla[&quot;Ipotesi nulla H₀&quot;]:::cur
   n_ipotesi_alternativa[&quot;Ipotesi alternativa H₁&quot;]:::cur
   n_test_d_ipotesi[&quot;Test d&#39;ipotesi&quot;]:::cur
@@ -6513,7 +6509,6 @@ flowchart LR
   n_errore_di_secondo_tipo[&quot;Errore di II tipo&quot;]:::cur
   n_significativita_statistica[&quot;Significatività α&quot;]:::cur
   n_potenza[&quot;Potenza 1−β&quot;]:::cur
-  n_criterio_di_costruzione_del_test[&quot;Costruzione del test&quot;]:::cur
   n_statistica_test[&quot;Statistica test&quot;]:::cur
   n_valore_critico[&quot;Valore critico&quot;]:::cur
   n_regione_di_rifiuto[&quot;Regione di rifiuto&quot;]:::cur
@@ -6526,44 +6521,54 @@ flowchart LR
   n_p_value_a_due_code[&quot;p-value a due code&quot;]:::cur
   n_test_t_per_la_media[&quot;Test t sulla media&quot;]:::cur
   n_dualita_test_intervallo_di_confidenza[&quot;Test e IC&quot;]:::cur
+  n_p_value_non_e_probabilita_di_h0[&quot;p-value non è P(H₀)&quot;]:::cur
+  n_assenza_di_prove_non_e_prova_di_assenza[&quot;Non significativo ≠ nessun effetto&quot;]:::cur
+  n_significativita_non_e_rilevanza[&quot;Significativo ≠ importante&quot;]:::cur
   k_n_03_condizionata --&gt; n_errore_di_primo_tipo
   k_n_03_condizionata --&gt; n_errore_di_secondo_tipo
   k_n_03_operazioni --&gt; n_test_a_due_code
+  k_n_03_probabilita --&gt; n_confronto_tra_ic_e_valore_di_riferimento
   k_n_03_probabilita --&gt; n_p_value
   k_n_03_somma_prodotto --&gt; n_test_a_due_code
+  k_n_03_test --&gt; n_p_value_non_e_probabilita_di_h0
   k_n_04_massa --&gt; n_valore_critico
   k_n_04_parametri --&gt; n_ipotesi_nulla
+  k_n_04_poisson --&gt; n_p_value
   k_n_04_tavole --&gt; n_valore_critico
+  n_ampiezza_dell_intervallo_di_confidenza --&gt; n_significativita_non_e_rilevanza
   n_calcolo_del_p_value --&gt; n_p_value_a_due_code
+  n_confronto_tra_ic_e_valore_di_riferimento --&gt; n_dualita_test_intervallo_di_confidenza
   n_distribuzione_campionaria --&gt; n_statistica_test
   n_distribuzione_t_di_student --&gt; n_test_t_per_la_media
+  n_dualita_test_intervallo_di_confidenza --&gt; n_assenza_di_prove_non_e_prova_di_assenza
+  n_dualita_test_intervallo_di_confidenza --&gt; n_significativita_non_e_rilevanza
   n_errore_di_primo_tipo --&gt; n_significativita_statistica
   n_errore_di_secondo_tipo --&gt; n_potenza
   n_errore_standard --&gt; n_valore_critico
   n_gradi_di_liberta --&gt; n_test_t_per_la_media
-  n_ic_a_livello_generico --&gt; n_dualita_test_intervallo_di_confidenza
+  n_ic_a_livello_generico --&gt; n_significativita_statistica
+  n_ic_media_varianza_nota --&gt; n_confronto_tra_ic_e_valore_di_riferimento
+  n_interpretazione_dell_intervallo_di_confidenza --&gt; n_confronto_tra_ic_e_valore_di_riferimento
   n_ipotesi_alternativa --&gt; n_test_d_ipotesi
   n_ipotesi_alternativa --&gt; n_test_sulla_media_varianza_nota
   n_ipotesi_nulla --&gt; n_ipotesi_alternativa
   n_ipotesi_nulla --&gt; n_rifiuto_e_non_rifiuto_di_h0
   n_p_value --&gt; n_calcolo_del_p_value
-  n_p_value --&gt; n_test_t_per_la_media
+  n_p_value --&gt; n_p_value_non_e_probabilita_di_h0
+  n_p_value_a_due_code --&gt; n_dualita_test_intervallo_di_confidenza
   n_percentile_della_t_di_student --&gt; n_test_t_per_la_media
-  n_potenza --&gt; n_criterio_di_costruzione_del_test
   n_regione_di_rifiuto --&gt; n_test_sulla_media_varianza_nota
   n_rifiuto_e_non_rifiuto_di_h0 --&gt; n_errore_di_primo_tipo
   n_rifiuto_e_non_rifiuto_di_h0 --&gt; n_errore_di_secondo_tipo
-  n_significativita_statistica --&gt; n_criterio_di_costruzione_del_test
   n_significativita_statistica --&gt; n_valore_critico
   n_statistica_test --&gt; n_valore_critico
   n_statistica_z_del_test --&gt; n_p_value
   n_statistica_z_del_test --&gt; n_test_a_una_coda
   n_stimatore --&gt; n_statistica_test
-  n_test_a_due_code --&gt; n_dualita_test_intervallo_di_confidenza
-  n_test_a_due_code --&gt; n_p_value_a_due_code
   n_test_a_due_code --&gt; n_test_t_per_la_media
   n_test_a_una_coda --&gt; n_test_a_due_code
   n_test_sulla_media_varianza_nota --&gt; n_statistica_z_del_test
+  n_test_t_per_la_media --&gt; n_p_value_a_due_code
   n_valore_critico --&gt; n_regione_di_rifiuto
   classDef cur fill:#e6f0fa,stroke:#035AA6,color:#000000
   classDef prev fill:#f4f4f4,stroke:#9a9a9a,color:#555555,stroke-dasharray:4 3
@@ -6581,6 +6586,7 @@ flowchart LR
 <div id="tabset-22-2">
 <div class="mappa-indice">
 <ul>
+<li><a href="#//un-problema-colesterolo-e-familiarità">IC e valore di riferimento</a></li>
 <li><a href="#//ipotesi-definizioni">Ipotesi nulla H₀</a></li>
 <li><a href="#//ipotesi-definizioni">Ipotesi alternativa H₁</a></li>
 <li><a href="#//ipotesi-definizioni">Test d’ipotesi</a></li>
@@ -6589,7 +6595,6 @@ flowchart LR
 <li><a href="#//ipotesi-decisioni">Errore di II tipo</a></li>
 <li><a href="#//ipotesi-decisioni">Significatività α</a></li>
 <li><a href="#//ipotesi-decisioni">Potenza 1−β</a></li>
-<li><a href="#//ipotesi-decisioni">Costruzione del test</a></li>
 <li><a href="#//test-media-di-una-normale">Statistica test</a></li>
 <li><a href="#//test-media-di-una-normale">Valore critico</a></li>
 <li><a href="#//test-media-di-una-normale">Regione di rifiuto</a></li>
@@ -6597,11 +6602,14 @@ flowchart LR
 <li><a href="#//test-esempio">Statistica z</a></li>
 <li><a href="#//p-value">p-value</a></li>
 <li><a href="#//p-value">Calcolo del p-value</a></li>
-<li><a href="#//p-value">Test a una coda</a></li>
-<li><a href="#//test-due-code">Test a due code</a></li>
+<li><a href="#//test-una-o-due-code">Test a una coda</a></li>
+<li><a href="#//test-una-o-due-code">Test a due code</a></li>
 <li><a href="#//test-a-due-code-p-value">p-value a due code</a></li>
 <li><a href="#//test-varianza-non-nota">Test t sulla media</a></li>
-<li><a href="#//p-value-e-ci">Test e IC</a></li>
+<li><a href="#//p-value-e-ic">Test e IC</a></li>
+<li><a href="#//leggere-un-p-value-che-cosa-misura">p-value non è P(H₀)</a></li>
+<li><a href="#//leggere-un-p-value-se-non-è-significativo">Non significativo ≠ nessun effetto</a></li>
+<li><a href="#//leggere-un-p-value-se-è-significativo">Significativo ≠ importante</a></li>
 </ul>
 </div>
 </div>
@@ -6630,20 +6638,22 @@ flowchart LR
   k_n_03_operazioni[&quot;Operazioni fra eventi · 03&quot;]:::prev
   k_n_03_probabilita[&quot;Probabilità · 03&quot;]:::prev
   k_n_03_somma_prodotto[&quot;Somma, prodotto, indipendenza · 03&quot;]:::prev
+  k_n_03_test[&quot;Test diagnostici · 03&quot;]:::prev
   k_n_04_massa[&quot;Massa e cumulata · 04&quot;]:::prev
   k_n_04_momenti[&quot;Valore atteso e varianza · 04&quot;]:::prev
   k_n_04_normale[&quot;Normale · 04&quot;]:::prev
   k_n_04_parametri[&quot;Parametri e statistiche · 04&quot;]:::prev
+  k_n_04_poisson[&quot;Poisson · 04&quot;]:::prev
   k_n_04_tavole[&quot;Tavole e standardizzazione · 04&quot;]:::prev
   k_n_04_vc[&quot;Variabili casuali · 04&quot;]:::prev
   k_n_05_campioni[&quot;Inferenza e campioni (5)&quot;]:::cur
   k_n_05_stima[&quot;Stima puntuale (4)&quot;]:::cur
   k_n_05_media_campionaria[&quot;Distribuzione della media (5)&quot;]:::cur
   k_n_05_ic[&quot;Intervallo di confidenza (8)&quot;]:::cur
-  k_n_05_t[&quot;t di Student (5)&quot;]:::cur
+  k_n_05_t[&quot;t di Student (4)&quot;]:::cur
   k_n_05_ipotesi[&quot;Ipotesi ed errori (9)&quot;]:::cur
-  k_n_05_test_z[&quot;Test z (7)&quot;]:::cur
-  k_n_05_p_value[&quot;P-value e test t (5)&quot;]:::cur
+  k_n_05_test_z[&quot;Test z e test t (8)&quot;]:::cur
+  k_n_05_p_value[&quot;P-value (7)&quot;]:::cur
   k_n_02_centralita --&gt; k_n_05_stima
   k_n_02_notazioni --&gt; k_n_05_stima
   k_n_02_percentili --&gt; k_n_05_t
@@ -6654,21 +6664,21 @@ flowchart LR
   k_n_03_operazioni --&gt; k_n_05_test_z
   k_n_03_probabilita --&gt; k_n_05_campioni
   k_n_03_somma_prodotto --&gt; k_n_05_campioni
+  k_n_03_test --&gt; k_n_05_p_value
   k_n_04_massa --&gt; k_n_05_campioni
   k_n_04_momenti --&gt; k_n_05_stima
   k_n_04_normale --&gt; k_n_05_media_campionaria
-  k_n_04_parametri --&gt; k_n_05_ipotesi
   k_n_04_parametri --&gt; k_n_05_stima
+  k_n_04_poisson --&gt; k_n_05_p_value
   k_n_04_tavole --&gt; k_n_05_ic
-  k_n_04_tavole --&gt; k_n_05_test_z
   k_n_04_vc --&gt; k_n_05_stima
   k_n_05_campioni --&gt; k_n_05_media_campionaria
+  k_n_05_ic --&gt; k_n_05_ipotesi
   k_n_05_ic --&gt; k_n_05_t
   k_n_05_ipotesi --&gt; k_n_05_test_z
   k_n_05_media_campionaria --&gt; k_n_05_ic
-  k_n_05_media_campionaria --&gt; k_n_05_test_z
   k_n_05_stima --&gt; k_n_05_media_campionaria
-  k_n_05_t --&gt; k_n_05_p_value
+  k_n_05_t --&gt; k_n_05_test_z
   k_n_05_test_z --&gt; k_n_05_p_value
   classDef cur fill:#e6f0fa,stroke:#035AA6,color:#000000
   classDef prev fill:#f4f4f4,stroke:#9a9a9a,color:#555555,stroke-dasharray:4 3
@@ -6690,10 +6700,10 @@ flowchart LR
 <li><strong>Stima puntuale</strong>: <a href="#//stima-puntuale-media">Stima puntuale</a>, <a href="#//stima-puntuale-media">Stimatore</a>, <a href="#//stima-puntuale-media">Stimatore non distorto</a>, <a href="#//stima-puntuale-media">Numerosità n</a></li>
 <li><strong>Distribuzione della media</strong>: <a href="#//stima-puntuale-media">Distribuzione campionaria</a>, <a href="#//stima-puntuale-errore-standard">Var(aX)</a>, <a href="#//stima-puntuale-errore-standard">Varianza della media</a>, <a href="#//stima-puntuale-errore-standard">Errore standard</a>, <a href="#//teorema-del-limite-centrale">Limite centrale</a></li>
 <li><strong>Intervallo di confidenza</strong>: <a href="#//intervalli-di-confidenza-obiettivo">Intervallo di confidenza</a>, <a href="#//i.c.-derivazione">Derivazione dell’IC</a>, <a href="#//definizione-i.c.-per-la-media-varianza-nota">IC, σ nota</a>, <a href="#//ic-osservazioni-confidenza">Livello di confidenza</a>, <a href="#//ic-osservazioni-confidenza">Interpretazione dell’IC</a>, <a href="#//ic-osservazioni-unicità">IC a livello 1−α</a>, <a href="#//ic-osservazioni-ampiezza">Ampiezza dell’IC</a>, <a href="#//ic-osservazioni-sotto-controllo">Precisione delle misure</a></li>
-<li><strong>t di Student</strong>: <a href="#//distribuzione-t-di-student-1">t di Student</a>, <a href="#//distribuzione-t-di-student-1">Gradi di libertà</a>, <a href="#//distribuzione-t-di-student-1">Percentili di t</a>, <a href="#//ic-per-la-media-varianza-non-nota">IC, σ ignota</a>, <a href="#//ic-esempio">IC e valore di riferimento</a></li>
-<li><strong>Ipotesi ed errori</strong>: <a href="#//ipotesi-definizioni">Ipotesi nulla H₀</a>, <a href="#//ipotesi-definizioni">Ipotesi alternativa H₁</a>, <a href="#//ipotesi-definizioni">Test d’ipotesi</a>, <a href="#//ipotesi-decisioni">Rifiutare H₀ o no</a>, <a href="#//ipotesi-decisioni">Errore di I tipo</a>, <a href="#//ipotesi-decisioni">Errore di II tipo</a>, <a href="#//ipotesi-decisioni">Significatività α</a>, <a href="#//ipotesi-decisioni">Potenza 1−β</a>, <a href="#//ipotesi-decisioni">Costruzione del test</a></li>
-<li><strong>Test z</strong>: <a href="#//test-media-di-una-normale">Statistica test</a>, <a href="#//test-media-di-una-normale">Valore critico</a>, <a href="#//test-media-di-una-normale">Regione di rifiuto</a>, <a href="#//test-media-di-una-normale">Test sulla media, σ nota</a>, <a href="#//test-esempio">Statistica z</a>, <a href="#//p-value">Test a una coda</a>, <a href="#//test-due-code">Test a due code</a></li>
-<li><strong>P-value e test t</strong>: <a href="#//p-value">p-value</a>, <a href="#//p-value">Calcolo del p-value</a>, <a href="#//test-a-due-code-p-value">p-value a due code</a>, <a href="#//test-varianza-non-nota">Test t sulla media</a>, <a href="#//p-value-e-ci">Test e IC</a></li>
+<li><strong>t di Student</strong>: <a href="#//distribuzione-t-di-student-1">t di Student</a>, <a href="#//distribuzione-t-di-student-1">Gradi di libertà</a>, <a href="#//distribuzione-t-di-student-1">Percentili di t</a>, <a href="#//ic-per-la-media-varianza-non-nota">IC, σ ignota</a></li>
+<li><strong>Ipotesi ed errori</strong>: <a href="#//un-problema-colesterolo-e-familiarità">IC e valore di riferimento</a>, <a href="#//ipotesi-definizioni">Ipotesi nulla H₀</a>, <a href="#//ipotesi-definizioni">Ipotesi alternativa H₁</a>, <a href="#//ipotesi-definizioni">Test d’ipotesi</a>, <a href="#//ipotesi-decisioni">Rifiutare H₀ o no</a>, <a href="#//ipotesi-decisioni">Errore di I tipo</a>, <a href="#//ipotesi-decisioni">Errore di II tipo</a>, <a href="#//ipotesi-decisioni">Significatività α</a>, <a href="#//ipotesi-decisioni">Potenza 1−β</a></li>
+<li><strong>Test z e test t</strong>: <a href="#//test-media-di-una-normale">Statistica test</a>, <a href="#//test-media-di-una-normale">Valore critico</a>, <a href="#//test-media-di-una-normale">Regione di rifiuto</a>, <a href="#//test-media-di-una-normale">Test sulla media, σ nota</a>, <a href="#//test-esempio">Statistica z</a>, <a href="#//test-una-o-due-code">Test a una coda</a>, <a href="#//test-una-o-due-code">Test a due code</a>, <a href="#//test-varianza-non-nota">Test t sulla media</a></li>
+<li><strong>P-value</strong>: <a href="#//p-value">p-value</a>, <a href="#//p-value">Calcolo del p-value</a>, <a href="#//test-a-due-code-p-value">p-value a due code</a>, <a href="#//p-value-e-ic">Test e IC</a>, <a href="#//leggere-un-p-value-che-cosa-misura">p-value non è P(H₀)</a>, <a href="#//leggere-un-p-value-se-non-è-significativo">Non significativo ≠ nessun effetto</a>, <a href="#//leggere-un-p-value-se-è-significativo">Significativo ≠ importante</a></li>
 </ul>
 </div>
 </div>
