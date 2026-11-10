@@ -894,15 +894,14 @@ knitr::include_graphics("img/img4.png")
 
 ##### Colesterolo negli immigrati asiatici
 
-Si sa che i livelli di colesterolo nelle donne americane di età tra i 20 ed i 40 anni sono distribuiti normalmente con media $190\ mg/dL$ e deviazione standard di $40\ mg/dL$. Si vuole testare l'ipotesi che i livelli di colesterolo nelle donne asiatiche di pari età siano eguali a quelli delle donne americane.
-Si considera quindi un campione di 100 donne con le caratteristiche specificate e si osserva un livello di colesterolo medio pari a $181.52\ mg/dL$. Si testa quindi l'ipotesi 
+Nelle donne americane fra i 20 e i 40 anni il colesterolo è distribuito normalmente con media $190\ mg/dL$ e deviazione standard $40\ mg/dL$. Le donne asiatiche immigrate della stessa età hanno lo stesso livello medio?
 
-- $H_0:\mu=190$; $\sigma=40$
-- $H_1:\mu\neq 190$; $\sigma=40$ 
+- campione: 100 donne asiatiche, colesterolo medio $\bar{x} = 181.52\ mg/dL$; $\sigma = 40$ nota
+- $H_0:\mu=190$, $H_1:\mu\neq 190$ (una differenza in un verso o nell'altro)
 
 $$z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}=\frac{181.52-190}{\frac{40}{\sqrt{100}}}=-2.12$$
 
-Per un test a livello di significatività dello 0.05 i valori critici sono $Z_{0.975}=1.96$ e $Z_{0.025}=-1.96$, per cui, visto che $Z=-2.12<-1.96$ rifiuto $H_0$.
+Al livello 0.05 i valori critici sono $z_{0.025}=-1.96$ e $z_{0.975}=1.96$: $z=-2.12<-1.96$, si rifiuta $H_0$.
 
 ## Test a due code: p-value
 
@@ -910,11 +909,7 @@ Per un test a livello di significatività dello 0.05 i valori critici sono $Z_{0
 
 ### Derivazione
 
-Avendo
-
-$$z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}$$
-
-si ha che
+Con $H_1: \mu \neq \mu_0$ sono «più estremi» i valori di $z$ lontani da 0 da entrambe le parti: il p-value è il doppio dell'area oltre $z$, dalla parte in cui cade $z$.
 
 $$p=\left\{\begin{matrix}2\Phi(z) & se & z\leq 0\\ 2[1-\Phi(z)] & se & z>0\end{matrix}\right.$$
 
@@ -929,13 +924,12 @@ knitr::include_graphics("img/img5.png")
 ### Esempio
 
 ###### Colesterolo negli immigrati asiatici
-Si calcola
 
-$$z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}=-2.12$$
-
-da cui
+$z=-2.12 \leq 0$, quindi
 
 $$p=2\Phi(-2.12)=2[1-\Phi(2.12)]=2[1-0.983]=0.034$$
+
+$p = 0.034 < 0.05$: si rifiuta $H_0$, come con i valori critici.
 
 :::
 
