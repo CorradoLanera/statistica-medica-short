@@ -120,7 +120,7 @@ licenza, e senza ulteriori restrizioni.
   
 + fondamenti di probabilità
 
-+ rischi, test di screening: sensibilità e specificità, valori predittivi positivo e negativo, teorema di Bayes (base e generalizzato)
++ rischi, test di screening: sensibilità e specificità, valori predittivi positivo e negativo, teorema di Bayes (anche per due test in sequenza)
 
 :::
 

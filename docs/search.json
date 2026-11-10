@@ -1008,7 +1008,7 @@
     "href": "slides/00-intro_and_info.html#agenda",
     "title": "Statistica Medica",
     "section": "Agenda",
-    "text": "Agenda\n\n\n\nintro al corso\nstatistica descrittiva - prerequisiti, definizioni, localizzazione, dispersione / distribuzione, grafici\nfondamenti di probabilità\nrischi, test di screening: sensibilità e specificità, valori predittivi positivo e negativo, teorema di Bayes (base e generalizzato)\n\n\n\ndistribuzioni: modelli discreti\ndistribuzioni: modelli continui\nintervalli di confidenza e p-value\nrevisione e simulazione completa d’esame"
+    "text": "Agenda\n\n\n\nintro al corso\nstatistica descrittiva - prerequisiti, definizioni, localizzazione, dispersione / distribuzione, grafici\nfondamenti di probabilità\nrischi, test di screening: sensibilità e specificità, valori predittivi positivo e negativo, teorema di Bayes (anche per due test in sequenza)\n\n\n\ndistribuzioni: modelli discreti\ndistribuzioni: modelli continui\nintervalli di confidenza e p-value\nrevisione e simulazione completa d’esame"
   },
   {
     "objectID": "slides/00-intro_and_info.html#supporto",
