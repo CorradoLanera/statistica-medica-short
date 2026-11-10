@@ -1,17 +1,21 @@
 ---
-tbl-colwidths: [15, 70, 15]
+tbl-colwidths: [14, 10, 7, 54, 15]
 ---
 
 ## CdL Ortottica, I anno, I semestre, a.a. 2026-27 - Padova
 
-| **Giorno** | **Tema** | **Diapositive** |
-|-----------------------:|:-----------------------|:-----------------------|
-| 2026-11-10 | Intro e info | [Intro e info](../slides/00-intro_and_info.html) |
-| 2026-11-10 | R e RStudio (opzionale) | [R e RStudio](../slides/01-r_rstudio.html) |
-| 2026-11-10 | Descrittive | [Descrittive](../slides/02-descrittive.html) |
-| 2026-11-13 | Descrittive/Probabilità | [Probabilità](../slides/03-probabilita.html) |
-| 2026-11-17 | Probabilità |  |
-| 2026-11-24 | Distribuzioni | [Distribuzioni](../slides/04-distribuzioni.html) |
-| 2026-12-01 | Inferenza (IC e p-value) | [Inferenza](../slides/05-ic_p.html) |
+::: table-responsive
+| **Giorno** | **Inizio** | **Ore** | **Tema** | **Diapositive** |
+|--------------:|--------------:|--------------:|:--------------|:--------------|
+| 2026-11-10 | 13:30 | 4 | Intro e info | [Intro e info](../slides/00-intro_and_info.html) |
+| 2026-11-10 |  |  | R e RStudio (opzionale) | [R e RStudio](../slides/01-r_rstudio.html) |
+| 2026-11-10 |  |  | Descrittive | [Descrittive](../slides/02-descrittive.html) |
+| 2026-11-13 | (9:30) | \(4\) | Descrittive/Probabilità | [Probabilità](../slides/03-probabilita.html) |
+| 2026-11-17 | (13:00) | \(4\) | Probabilità |  |
+| 2026-11-24 | (13:00) | \(4\) | Distribuzioni | [Distribuzioni](../slides/04-distribuzioni.html) |
+| 2026-12-01 | (13:00) | \(4\) | Inferenza (IC e p-value) | [Inferenza](../slides/05-ic_p.html) |
+:::
+
+Fra parentesi l'ora di inizio e le ore previste, da confermare.
 
 Moodle: [bit.ly/ortottica-26-moodle](https://bit.ly/ortottica-26-moodle)
