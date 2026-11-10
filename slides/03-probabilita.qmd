@@ -349,7 +349,7 @@ $$P(B \cap \bar{A}) = P(B)P(\bar{A})$$
 
 $$P(A \cup B) = P(A) + P(B)[1 - P(A)]$$
 
-## Somma [indipendente]{.orange}
+## [Somma]{.orange}: $A$ e $B \cap \bar{A}$
 
 ```{r, echo=FALSE, out.width="80%"}
 include_graphics("img/venn6.png")

@@ -2227,5 +2227,12 @@
     "title": "Statistica Medica",
     "section": "P-value e IC",
     "text": "P-value e IC\n\nRelazioneEsempio\n\n\nPer un test del tipo\n\nH0:μ=μ0H_0:\\mu=\\mu_0; σ=σ0\\sigma=\\sigma_0\nH1:μ≠μ0H_1:\\mu\\neq\\mu_0; σ=σ0\\sigma=\\sigma_0\n\nAl livello α\\alpha, H0H_0 è rifiutata se e solo se l’IC al livello (1−α)(1-\\alpha) per μ\\mu non contiene μ0\\mu_0 (test a due code)\n\n\nColesterolo nei bambini\nUn intervallo di confidenza a livello 0.95 per la media μ\\mu è pari a\nx‾−z1−α2σn;x‾+z1−α2σn\\bar{x}-z_{1-\\frac{\\alpha}{2}}\\frac{\\sigma}{\\sqrt{n}};  \\bar{x}+z_{1-\\frac{\\alpha}{2}}\\frac{\\sigma}{\\sqrt{n}}\novvero\n200−z0.9755010;200+z0.9755010=[169.01;230.99]200-z_{0.975}\\frac{50}{\\sqrt{10}};  200+z_{0.975}\\frac{50}{\\sqrt{10}}=[169.01;230.99]\nche contiene il valore μ0=175\\mu_0=175 usato precedentemente nei test di ipotesi, per cui non rifiuto H0H_0 (anche con il test a due code: z=1.58&lt;1.96z=1.58&lt;1.96, p=0.114p=0.114)"
+  },
+  {
+    "objectID": "slides/03-probabilita.html#somma-a-e-b-cap-bara",
+    "href": "slides/03-probabilita.html#somma-a-e-b-cap-bara",
+    "title": "Statistica Medica",
+    "section": "Somma: AA e B∩A‾B \\cap \\bar{A}",
+    "text": "Somma: AA e B∩A‾B \\cap \\bar{A}"
   }
 ]
