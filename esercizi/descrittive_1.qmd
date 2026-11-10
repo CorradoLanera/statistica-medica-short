@@ -12,7 +12,7 @@ I dati riportati nella tabella qui sotto sono un campione di un insieme più amp
 
 1.  Calcolare media, moda e mediana della durata di ospedalizzazione.
 
-2.  Calcolare il varianza, deviazione standard, coefficiente di variazione, range massimale e range interquartile (differenza tra il III e il IV quartile) della durata di ospedalizzazione. Descrivere a parole in linguaggio naturale tali dati sulla abse delle informazioni appena ricavate (un paragrafo).
+2.  Calcolare il varianza, deviazione standard, coefficiente di variazione, range massimale e range interquartile (differenza tra il III e il I quartile) della durata di ospedalizzazione. Descrivere a parole in linguaggio naturale tali dati sulla abse delle informazioni appena ricavate (un paragrafo).
 
 3.  I tempi riportati sono in giorni, supponiamo di volerli esprimere in ore, ovvero moltiplicandoli tutti per 24; che effetto avrebbe questa modifica nei valori di media, moda, mediana, varianza, deviazione standard, coefficiente di variazione, range massimale e range interquartile? Verificare la risposta eseguendo i conti.
 
