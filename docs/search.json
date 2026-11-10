@@ -1792,7 +1792,7 @@
     "href": "slides/05-ic_p.html#p-value-esempio",
     "title": "Statistica Medica",
     "section": "p-value: esempio",
-    "text": "p-value: esempio\nSi supponga che in un campione di 10 bambini il livello di colesterolo sia pari a 200mg/dL200\\ mg/dL con una deviazione standard nota nella popolazione pari a 50mg/dL50\\ mg/dL. Lo studio intende verificare se il livello del colesterolo in questi bambini è più elevato del normale ( 175mg/dL175\\ mg/dL ), con un livello di significatività statistica α=0.05\\alpha = 0.05. Si testa quindi l’ipotesi\n\nH0:μ=175H_0:\\mu=175; σ=50\\sigma=50\nH1:μ&gt;175H_1:\\mu&gt;175; σ=50\\sigma=50\n\nsi ha che z=x‾−μ0σn=200−1755010=1.58z=\\frac{\\bar{x}-\\mu_0}{\\frac{\\sigma}{\\sqrt{n}}}=\\frac{200-175}{\\frac{50}{\\sqrt{10}}}=1.58\nVisto che 1.58=z&lt;z1−α=z.95=1.6451.58=z&lt;z_{1-\\alpha}=z_{.95}=1.645 non si rifiuta H0H_0, con un p-value pari a\np=1−Φ(z)=1−Φ(1.58)=1−0.9429=0.057p=1-\\Phi(z)=1-\\Phi(1.58)=1-0.9429=0.057"
+    "text": "p-value: esempio\nIn un campione di 10 bambini il colesterolo medio è 200mg/dL200\\ mg/dL, con deviazione standard nota nella popolazione σ=50mg/dL\\sigma = 50\\ mg/dL. Il colesterolo di questi bambini è più alto del normale ( 175mg/dL175\\ mg/dL )? Si usa α=0.05\\alpha = 0.05.\nH0:μ=175H_0:\\mu=175, H1:μ&gt;175H_1:\\mu&gt;175\nz=x‾−μ0σn=200−1755010=1.58z=\\frac{\\bar{x}-\\mu_0}{\\frac{\\sigma}{\\sqrt{n}}}=\\frac{200-175}{\\frac{50}{\\sqrt{10}}}=1.58\np=1−Φ(1.58)=1−0.9429=0.057p=1-\\Phi(1.58)=1-0.9429=0.057\np=0.057&gt;0.05p = 0.057 &gt; 0.05: non si rifiuta H0H_0. È la stessa conclusione del confronto con il valore critico: z=1.58&lt;z0.95=1.645z = 1.58 &lt; z_{0.95} = 1.645."
   },
   {
     "objectID": "slides/05-ic_p.html#test-due-code",
