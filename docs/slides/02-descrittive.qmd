@@ -476,25 +476,17 @@ median(age, type = 2) # default is `type = 7` (for continuity)
 
 ::::
 
-## [Confronto]{.orange} media e mediana
-
-Come indicatore semplice di [asimmetria]{.orange} (_skewness_) usiamo la
-differenza
-
-    Asimmetria = Media - Mediana
-
+## [Media]{.orange} o mediana?
 
 :::: {.columns}
 
 ::: {.column width="48%"}
 
-La distribuzione dei dati sarà considerata:
+Con dati a **coda lunga** (degenze, trigliceridi, redditi) pochi valori molto
+grandi **tirano la media** verso la coda; la mediana no.
 
-- **simmetrica** se $Asimmetria \simeq 0$ (rispetto alla scala dei dati)
-
-- **asimmetrica** (sbilanciata) a destra se $Asimmetria > 0$ (la media è più grande, [distorta in eccesso]{.orange})
-
-- **asimmetrica** (sbilanciata) a sinistra se $Asimmetria < 0$ (la media è più piccola, [distorta in difetto]{.orange})
+In questi casi la **media** non descrive il valore tipico, e si descrivono i
+dati con la **mediana** (e con i quartili, che vedremo più avanti).
 
 :::
 

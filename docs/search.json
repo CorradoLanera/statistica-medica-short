@@ -2192,5 +2192,12 @@
     "title": "Statistica Medica",
     "section": "Dati discreti: barre",
     "text": "Dati discreti: barre\nVolendo rappresentare confronti tra conteggi, possiamo usare grafici a barre: ciascuna barra è il conteggio di un valore di una variabile discreta (nominale, ordinale, dicotomica, o un conteggio con pochi valori).\n\nATTENZIONE 1: per una variabile continua si usa l’istogramma, che ne rappresenta la distribuzione; per una variabile discreta si usa il grafico a barre, che rappresenta i conteggi dei suoi valori!\n\n\nATTENZIONE 2: in un grafico a barre, la base delle barre DEVE essere sempre (ben!!) definita, ovvero deve SEMPRE iniziare dall’opportuno “zero” (per esempio da 1 per scale logaritmiche, da 0 per i conteggi classici)"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#media-o-mediana",
+    "href": "slides/02-descrittive.html#media-o-mediana",
+    "title": "Statistica Medica",
+    "section": "Media o mediana?",
+    "text": "Media o mediana?\n\n\nCon dati a coda lunga (degenze, trigliceridi, redditi) pochi valori molto grandi tirano la media verso la coda; la mediana no.\nIn questi casi la media non descrive il valore tipico, e si descrivono i dati con la mediana (e con i quartili, che vedremo più avanti).\n\n\n\n\n\n\n‘EPIC-Norfolk cohort’ (Bain et al. 2015)"
   }
 ]

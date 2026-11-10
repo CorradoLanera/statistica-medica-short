@@ -4897,18 +4897,12 @@ flowchart TB
 <p>Nel caso in cui <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> sia dispari (prendiamo per esempio <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">n = 7</annotation></semantics></math> ), prendiamo direttamente il valore centrale (in posizione <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>7</mn><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">4 = (7+1)/2</annotation></semantics></math> ), ovvero <strong>62.9</strong>.</p>
 </div></div>
 </section>
-<section id="confronto-media-e-mediana" class="slide level2">
-<h2><span class="orange">Confronto</span> media e mediana</h2>
-<p>Come indicatore semplice di <span class="orange">asimmetria</span> (<em>skewness</em>) usiamo la differenza</p>
-<pre><code>Asimmetria = Media - Mediana</code></pre>
+<section id="media-o-mediana" class="slide level2">
+<h2><span class="orange">Media</span> o mediana?</h2>
 <div class="columns">
 <div class="column" style="width:48%;">
-<p>La distribuzione dei dati sarà considerata:</p>
-<ul>
-<li><p><strong>simmetrica</strong> se <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>s</mi><mi>i</mi><mi>m</mi><mi>m</mi><mi>e</mi><mi>t</mi><mi>r</mi><mi>i</mi><mi>a</mi><mo>≃</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">Asimmetria \simeq 0</annotation></semantics></math> (rispetto alla scala dei dati)</p></li>
-<li><p><strong>asimmetrica</strong> (sbilanciata) a destra se <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>s</mi><mi>i</mi><mi>m</mi><mi>m</mi><mi>e</mi><mi>t</mi><mi>r</mi><mi>i</mi><mi>a</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">Asimmetria &gt; 0</annotation></semantics></math> (la media è più grande, <span class="orange">distorta in eccesso</span>)</p></li>
-<li><p><strong>asimmetrica</strong> (sbilanciata) a sinistra se <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>s</mi><mi>i</mi><mi>m</mi><mi>m</mi><mi>e</mi><mi>t</mi><mi>r</mi><mi>i</mi><mi>a</mi><mo>&lt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">Asimmetria &lt; 0</annotation></semantics></math> (la media è più piccola, <span class="orange">distorta in difetto</span>)</p></li>
-</ul>
+<p>Con dati a <strong>coda lunga</strong> (degenze, trigliceridi, redditi) pochi valori molto grandi <strong>tirano la media</strong> verso la coda; la mediana no.</p>
+<p>In questi casi la <strong>media</strong> non descrive il valore tipico, e si descrivono i dati con la <strong>mediana</strong> (e con i quartili, che vedremo più avanti).</p>
 </div><div class="column" style="width:48%;">
 <div class="cell">
 <div class="cell-output-display">
