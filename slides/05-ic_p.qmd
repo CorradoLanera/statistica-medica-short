@@ -597,7 +597,21 @@ $$\left (\bar{x} - t_{n-1,1-\frac{\alpha}{2}} \frac{s}{\sqrt{n}} \leq \mu \leq \
 
 :::
 
-## IC: [Esempio]{.orange}
+## [Sondaggio]{.orange} {.inverse .center background-color="#03A696"}
+
+Per me: [Distribuzione t-Student](https://app.wooclap.com/events/STATMEDTSTUDENT/0)
+
+Per voi: <img src="img/bit.ly_statmed-sondaggio-tstudent.png" width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-tstudent](https://bit.ly/statmed-sondaggio-tstudent)
+
+{{< include _mappe/05-5.qmd >}}
+
+## **[Test d'ipotesi]{.orange}** {.text-center .inverse .center background-color="#03A696"}
+
+- **Definizioni**: ipotesi, rifiuto e non rifiuto, errori
+
+- **Test** (con varianza nota)
+
+## [Un problema]{.orange}: colesterolo e familiarità
 
 ::: {.panel-tabset}
 
@@ -627,27 +641,15 @@ Questo valore ( $207.2\ mg/dL$ ) è **sufficientemente lontano** da quello di $1
 
 ### Risposta
 
-Un intervallo di confidenza (bilaterale) al 95% può aiutare a trovare la risposta.
+Un intervallo di confidenza (bilaterale) al 95% per la media dei figli:
 
 $$\left(207.2 - 1.96 \frac{30}{\sqrt{100}}; 207.2+1.96 \frac{30}{\sqrt{100}}\right) = (201.32; 213.08)$$
 
-**Ni**: la media attesa non è inclusa nell'intervallo di confidenza al 95% (e sta sotto). Questo vuol dire che se i bambini considerati provenissero dalla stessa distribuzione dei bambini nella popolazione generale (ovvero non vi fosse un'aggregazione familiare dei livelli di colesterolo per loro), allora un campione con una media così lontana dal valore atteso sarebbe più raro del 5%. Se come naturalmente si ipotizza che questo sia un valore "troppo" raro, allora possiamo rifiutare l'ipotesi che le due distribuzioni di bambini (popolazione generale e quelli considerati) siano la stessa distribuzione, e che quella dei valori dei bambini in studio sia spostata verso destra su valori più elevati del normale.
+175 è fuori dall'IC al 95% (201.32; 213.08): tutti i valori di $\mu$ compatibili con i dati stanno sopra 200.
+
+Quanto sarebbe raro un campione con media 207.2, se la media vera fosse 175? È la domanda a cui risponde il test d'ipotesi.
 
 :::
-
-## [Sondaggio]{.orange} {.inverse .center background-color="#03A696"}
-
-Per me: [Distribuzione t-Student](https://app.wooclap.com/events/STATMEDTSTUDENT/0)
-
-Per voi: <img src="img/bit.ly_statmed-sondaggio-tstudent.png" width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-tstudent](https://bit.ly/statmed-sondaggio-tstudent)
-
-{{< include _mappe/05-5.qmd >}}
-
-## **[Test d'ipotesi]{.orange}** {.text-center .inverse .center background-color="#03A696"}
-
-- **Definizioni**: ipotesi, rifiuto e non rifiuto, errori
-
-- **Test** (con varianza nota)
 
 ## [Ipotesi]{.orange}: definizioni
 
@@ -1041,6 +1043,17 @@ ovvero
 $$200-z_{0.975}\frac{50}{\sqrt{10}};  200+z_{0.975}\frac{50}{\sqrt{10}}=[169.01;230.99]$$
 
 che contiene il valore $\mu_0=175$ usato precedentemente nei test di ipotesi, per cui non rifiuto $H_0$ (anche con il test a due code: $z=1.58<1.96$, $p=0.114$)
+
+
+### Colesterolo e familiarità
+
+Si torna al problema d'apertura: $n = 100$ figli, $\bar{x} = 207.2$, $\sigma = 30$ nota; $H_0: \mu = 175$, $H_1: \mu \neq 175$.
+
+$$z = \frac{207.2 - 175}{\frac{30}{\sqrt{100}}} = 10.73$$
+
+p-value $= 2\left[1-\Phi(10.73)\right] < 0.0001$ (anche a una coda, con $H_1: \mu > 175$).
+
+Se la media vera fosse 175, un campione con media 207.2 sarebbe quasi impossibile: si rifiuta $H_0$, come diceva l'IC al 95% (201.32; 213.08), che non contiene 175.
 
 :::
 
