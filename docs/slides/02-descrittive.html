@@ -5519,10 +5519,10 @@ flowchart TB
 <p></p><figure class><p></p>
 <div>
 <pre class="mermaid mermaid-js">%%{init: {&quot;flowchart&quot;: {&quot;padding&quot;: 12, &quot;wrappingWidth&quot;: 320}, &quot;themeVariables&quot;: {&quot;fontFamily&quot;: &quot;Arial, Helvetica, sans-serif&quot;}}}%%
-flowchart TB
-  n_sommatoria[&quot;Sommatoria Σ&quot;]:::prev
+flowchart LR
   n_variabile_discreta[&quot;Discreta&quot;]:::prev
   n_variabile_continua[&quot;Continua&quot;]:::prev
+  n_sommatoria[&quot;Sommatoria Σ&quot;]:::prev
   n_misura_di_centralita[&quot;Misura di centralità&quot;]:::cur
   n_campione[&quot;Campione&quot;]:::cur
   n_media_aritmetica[&quot;Media&quot;]:::cur
@@ -5543,12 +5543,14 @@ flowchart TB
   n_percentile[&quot;Percentile&quot;]:::cur
   n_quartile[&quot;Quartile&quot;]:::cur
   n_accorpamento_in_classi[&quot;Classi&quot;]:::cur
+  n_frequenza_relativa[&quot;Frequenza relativa&quot;]:::cur
   n_media_ponderata[&quot;Media ponderata&quot;]:::cur
   n_accorpamento_in_classi --&gt; n_media_ponderata
   n_campione --&gt; n_media_aritmetica
   n_coefficiente_di_variazione --&gt; n_cv_invariante_per_scala
   n_deviazione_standard --&gt; n_coefficiente_di_variazione
   n_frequenza_assoluta --&gt; n_accorpamento_in_classi
+  n_frequenza_assoluta --&gt; n_frequenza_relativa
   n_frequenza_assoluta --&gt; n_moda
   n_media_aritmetica --&gt; n_media_ponderata
   n_media_aritmetica --&gt; n_media_sensibile_ai_valori_estremi
@@ -5605,6 +5607,7 @@ flowchart TB
 <li><a href="#//percentili">Percentile</a></li>
 <li><a href="#//percentili">Quartile</a></li>
 <li><a href="#//accorpamenti">Classi</a></li>
+<li><a href="#//accorpamenti">Frequenza relativa</a></li>
 <li><a href="#//misure-ponderate-media-aritmetica-ponderata">Media ponderata</a></li>
 </ul>
 </div>
@@ -5854,12 +5857,13 @@ flowchart TB
 <pre class="mermaid mermaid-js">%%{init: {&quot;flowchart&quot;: {&quot;padding&quot;: 12, &quot;wrappingWidth&quot;: 320}, &quot;themeVariables&quot;: {&quot;fontFamily&quot;: &quot;Arial, Helvetica, sans-serif&quot;}}}%%
 flowchart LR
   n_variabile_discreta[&quot;Discreta&quot;]:::prev
-  n_tipo_di_variabile[&quot;Tipo di variabile&quot;]:::prev
   n_variabile_continua[&quot;Continua&quot;]:::prev
-  n_quartile[&quot;Quartile&quot;]:::prev
-  n_mediana[&quot;Mediana&quot;]:::prev
-  n_accorpamento_in_classi[&quot;Classi&quot;]:::prev
+  n_tipo_di_variabile[&quot;Tipo di variabile&quot;]:::prev
+  n_frequenza_relativa[&quot;Frequenza relativa&quot;]:::prev
   n_frequenza_assoluta[&quot;Frequenza&quot;]:::prev
+  n_quartile[&quot;Quartile&quot;]:::prev
+  n_accorpamento_in_classi[&quot;Classi&quot;]:::prev
+  n_mediana[&quot;Mediana&quot;]:::prev
   n_istogramma[&quot;Istogramma&quot;]:::cur
   n_densita_di_frequenza[&quot;Densità di frequenza&quot;]:::cur
   n_boxplot[&quot;Box-plot&quot;]:::cur
@@ -5880,6 +5884,7 @@ flowchart LR
   n_distanza_interquartile --&gt; n_boxplot
   n_frequenza_assoluta --&gt; n_grafico_a_barre
   n_frequenza_assoluta --&gt; n_istogramma
+  n_frequenza_relativa --&gt; n_densita_di_frequenza
   n_grafico_a_barre --&gt; n_base_delle_barre_da_zero
   n_grafico_a_barre --&gt; n_boxplot_per_confronto_di_distribuzioni
   n_grafico_a_barre --&gt; n_istogramma_vs_grafico_a_barre
@@ -5946,7 +5951,7 @@ flowchart TB
   k_n_02_centralita[&quot;Centralità (8)&quot;]:::cur
   k_n_02_variabilita[&quot;Variabilità (8)&quot;]:::cur
   k_n_02_percentili[&quot;Percentili e quartili (2)&quot;]:::cur
-  k_n_02_classi[&quot;Classi e medie ponderate (2)&quot;]:::cur
+  k_n_02_classi[&quot;Classi e medie ponderate (3)&quot;]:::cur
   k_n_02_istogramma[&quot;Istogramma (2)&quot;]:::cur
   k_n_02_boxplot[&quot;Box-plot (5)&quot;]:::cur
   k_n_02_barre[&quot;Barre e scelta del grafico (5)&quot;]:::cur
@@ -5982,7 +5987,7 @@ flowchart TB
 <li><strong>Centralità</strong>: <a href="#//misure-di-centralità-media">Misura di centralità</a>, <a href="#//misure-di-centralità-media">Media</a>, <a href="#//misure-di-centralità-media">Media e valori estremi</a>, <a href="#//misure-di-centralità-mediana">Mediana</a>, <a href="#//mediana-n-pari">Mediana e valori estremi</a>, <a href="#//media-o-mediana">Media o mediana?</a>, <a href="#//misure-di-centralità-moda">Frequenza</a>, <a href="#//misure-di-centralità-moda">Moda</a></li>
 <li><strong>Variabilità</strong>: <a href="#//misure-di-variabilità">Misura di variabilità</a>, <a href="#//misure-di-variabilità-range-massimale">Range</a>, <a href="#//misure-di-variabilità-varianza-campionaria">Varianza</a>, <a href="#//misure-di-variabilità-varianza-campionaria">Deviazione standard</a>, <a href="#//misure-di-variabilità-varianza-campionaria">Scarti a somma zero</a>, <a href="#//varianza-formula-alternativa">Varianza: formula alternativa</a>, <a href="#//misure-di-variabilità-coefficiente-di-variazione">Coefficiente di variazione</a>, <a href="#//cv-non-effetto-scala">CV e unità di misura</a></li>
 <li><strong>Percentili e quartili</strong>: <a href="#//percentili">Percentile</a>, <a href="#//percentili">Quartile</a></li>
-<li><strong>Classi e medie ponderate</strong>: <a href="#//accorpamenti">Classi</a>, <a href="#//misure-ponderate-media-aritmetica-ponderata">Media ponderata</a></li>
+<li><strong>Classi e medie ponderate</strong>: <a href="#//accorpamenti">Classi</a>, <a href="#//accorpamenti">Frequenza relativa</a>, <a href="#//misure-ponderate-media-aritmetica-ponderata">Media ponderata</a></li>
 <li><strong>Istogramma</strong>: <a href="#//istogramma">Istogramma</a>, <a href="#//dati-continui-istogramma">Densità di frequenza</a></li>
 <li><strong>Box-plot</strong>: <a href="#//boxplot-general">Box-plot</a>, <a href="#//dati-continui-box-plot">Distanza interquartile</a>, <a href="#//dati-continui-box-plot">Baffi</a>, <a href="#//dati-continui-box-plot">Outlier</a>, <a href="#//prima">Box-plot a confronto</a></li>
 <li><strong>Barre e scelta del grafico</strong>: <a href="#//dati-discreti-barre">Grafico a barre</a>, <a href="#//dati-discreti-barre">Istogramma ≠ barre</a>, <a href="#//dati-discreti-barre">Barre da zero</a>, <a href="#//dati-discreti-barre">Scelta del grafico</a>, <a href="#//dati-discreti-barre">Distorsioni grafiche</a></li>

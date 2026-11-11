@@ -5181,6 +5181,7 @@ if (!window.customElements.get('countdown-timer')) {
 <div>
 <pre class="mermaid mermaid-js">%%{init: {&quot;flowchart&quot;: {&quot;padding&quot;: 12, &quot;wrappingWidth&quot;: 320}, &quot;themeVariables&quot;: {&quot;fontFamily&quot;: &quot;Arial, Helvetica, sans-serif&quot;}}}%%
 flowchart LR
+  k_n_02_classi[&quot;Classi e medie ponderate · 02&quot;]:::prev
   n_esperimento_casuale[&quot;Esperimento casuale&quot;]:::cur
   n_spazio_campionario[&quot;Spazio degli eventi Ω&quot;]:::cur
   n_evento[&quot;Evento&quot;]:::cur
@@ -5193,6 +5194,7 @@ flowchart LR
   n_intersezione_di_eventi[&quot;Intersezione (∩)&quot;]:::cur
   n_evento_complementare[&quot;Complementare&quot;]:::cur
   n_eventi_incompatibili[&quot;Eventi incompatibili&quot;]:::cur
+  k_n_02_classi --&gt; n_probabilita
   n_esperimento_casuale --&gt; n_spazio_campionario
   n_eventi_incompatibili --&gt; n_additivita_eventi_incompatibili
   n_evento --&gt; n_diagramma_di_venn
@@ -5373,12 +5375,12 @@ flowchart LR
 <div>
 <pre class="mermaid mermaid-js">%%{init: {&quot;flowchart&quot;: {&quot;padding&quot;: 12, &quot;wrappingWidth&quot;: 320}, &quot;themeVariables&quot;: {&quot;fontFamily&quot;: &quot;Arial, Helvetica, sans-serif&quot;}}}%%
 flowchart LR
+  n_evento_complementare[&quot;Complementare&quot;]:::prev
   n_evento[&quot;Evento&quot;]:::prev
   n_probabilita[&quot;Probabilità&quot;]:::prev
   n_intersezione_di_eventi[&quot;Intersezione (∩)&quot;]:::prev
-  n_evento_complementare[&quot;Complementare&quot;]:::prev
-  n_unione_di_eventi[&quot;Unione (∪)&quot;]:::prev
   n_additivita_eventi_incompatibili[&quot;Somma per incompatibili&quot;]:::prev
+  n_unione_di_eventi[&quot;Unione (∪)&quot;]:::prev
   n_eventi_indipendenti[&quot;Eventi indipendenti&quot;]:::cur
   n_regola_del_prodotto[&quot;Prodotto (indipendenti)&quot;]:::cur
   n_notazione_esito_positivo_negativo[&quot;Notazione + e −&quot;]:::cur
@@ -5444,7 +5446,7 @@ flowchart LR
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_0612fcc5" minutes="15" seconds="0" warn-when="3" update-every="1" play-sound="true" tabindex="0" style="bottom:20%;left:70%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_92743f20" minutes="15" seconds="0" warn-when="3" update-every="1" play-sound="true" tabindex="0" style="bottom:20%;left:70%;"></countdown-timer>
 </div>
 </div>
 </section>
@@ -5496,7 +5498,7 @@ flowchart LR
 <h2><span class="orange">Probabilità totali</span>: esempio problema</h2>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_ad88ff0a" minutes="3" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:10%;left:70%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_94a9d9b6" minutes="3" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:10%;left:70%;"></countdown-timer>
 </div>
 </div>
 <div class="panel-tabset">
@@ -5633,7 +5635,7 @@ flowchart LR
 <h2><span class="orange">Rischio relativo</span>: esempio problema</h2>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_45f0756b" minutes="3" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:70%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_c793f561" minutes="3" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:70%;"></countdown-timer>
 </div>
 </div>
 <div class="panel-tabset">
@@ -5761,12 +5763,12 @@ flowchart LR
 <div>
 <pre class="mermaid mermaid-js">%%{init: {&quot;flowchart&quot;: {&quot;padding&quot;: 12, &quot;wrappingWidth&quot;: 320}, &quot;themeVariables&quot;: {&quot;fontFamily&quot;: &quot;Arial, Helvetica, sans-serif&quot;}}}%%
 flowchart LR
-  n_evento[&quot;Evento&quot;]:::prev
-  n_probabilita[&quot;Probabilità&quot;]:::prev
-  n_intersezione_di_eventi[&quot;Intersezione (∩)&quot;]:::prev
-  n_eventi_incompatibili[&quot;Eventi incompatibili&quot;]:::prev
   n_evento_complementare[&quot;Complementare&quot;]:::prev
+  n_probabilita[&quot;Probabilità&quot;]:::prev
+  n_evento[&quot;Evento&quot;]:::prev
+  n_intersezione_di_eventi[&quot;Intersezione (∩)&quot;]:::prev
   n_additivita_eventi_incompatibili[&quot;Somma per incompatibili&quot;]:::prev
+  n_eventi_incompatibili[&quot;Eventi incompatibili&quot;]:::prev
   n_eventi_indipendenti[&quot;Eventi indipendenti&quot;]:::prev
   k_n_02_notazioni[&quot;Indici e sommatoria · 02&quot;]:::prev
   n_probabilita_condizionata[&quot;Probabilità condizionata&quot;]:::cur
@@ -5874,7 +5876,7 @@ flowchart LR
 <h2><span class="orange">Teorema di Bayes</span>: esempio</h2>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_fa87fa2f" minutes="5" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:70%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_21098dd7" minutes="5" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:70%;"></countdown-timer>
 </div>
 </div>
 <div class="panel-tabset">
@@ -5933,7 +5935,7 @@ flowchart LR
 <h2><span class="orange">Due test in sequenza</span>: esempio</h2>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_b98d9458" minutes="5" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:70%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_b818c93a" minutes="5" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:70%;"></countdown-timer>
 </div>
 </div>
 <div class="panel-tabset">
@@ -5984,15 +5986,15 @@ flowchart LR
 <pre class="mermaid mermaid-js">%%{init: {&quot;flowchart&quot;: {&quot;padding&quot;: 12, &quot;wrappingWidth&quot;: 320}, &quot;themeVariables&quot;: {&quot;fontFamily&quot;: &quot;Arial, Helvetica, sans-serif&quot;}}}%%
 flowchart LR
   n_eventi_indipendenti[&quot;Eventi indipendenti&quot;]:::prev
-  n_regola_del_prodotto_generale[&quot;Regola del prodotto&quot;]:::prev
-  n_probabilita_condizionata[&quot;Probabilità condizionata&quot;]:::prev
-  n_specificita[&quot;Specificità&quot;]:::prev
-  n_probabilita_totali_due_eventi[&quot;Probabilità totali (2 eventi)&quot;]:::prev
-  n_valore_predittivo_negativo[&quot;VPN&quot;]:::prev
-  n_falso_positivo[&quot;Falso positivo&quot;]:::prev
+  n_valore_predittivo_positivo[&quot;VPP&quot;]:::prev
   n_prevalenza[&quot;Prevalenza&quot;]:::prev
   n_sensibilita[&quot;Sensibilità&quot;]:::prev
-  n_valore_predittivo_positivo[&quot;VPP&quot;]:::prev
+  n_specificita[&quot;Specificità&quot;]:::prev
+  n_probabilita_condizionata[&quot;Probabilità condizionata&quot;]:::prev
+  n_valore_predittivo_negativo[&quot;VPN&quot;]:::prev
+  n_regola_del_prodotto_generale[&quot;Regola del prodotto&quot;]:::prev
+  n_probabilita_totali_due_eventi[&quot;Probabilità totali (2 eventi)&quot;]:::prev
+  n_falso_positivo[&quot;Falso positivo&quot;]:::prev
   n_teorema_di_bayes[&quot;Teorema di Bayes&quot;]:::cur
   n_calcolo_dei_valori_predittivi[&quot;Calcolo di VPP e VPN&quot;]:::cur
   n_vpp_da_conteggi[&quot;VPP dai conteggi&quot;]:::opt
@@ -6053,6 +6055,7 @@ flowchart LR
 <div>
 <pre class="mermaid mermaid-js">%%{init: {&quot;flowchart&quot;: {&quot;padding&quot;: 12, &quot;wrappingWidth&quot;: 320}, &quot;themeVariables&quot;: {&quot;fontFamily&quot;: &quot;Arial, Helvetica, sans-serif&quot;}}}%%
 flowchart TB
+  k_n_02_classi[&quot;Classi e medie ponderate · 02&quot;]:::prev
   k_n_02_notazioni[&quot;Indici e sommatoria · 02&quot;]:::prev
   k_n_03_eventi[&quot;Esperimenti ed eventi (5)&quot;]:::cur
   k_n_03_probabilita[&quot;Probabilità (2)&quot;]:::cur
@@ -6062,6 +6065,7 @@ flowchart TB
   k_n_03_rischio[&quot;Rischio e prevalenza (3)&quot;]:::cur
   k_n_03_test[&quot;Test diagnostici (7)&quot;]:::cur
   k_n_03_bayes[&quot;Teorema di Bayes (5)&quot;]:::cur
+  k_n_02_classi --&gt; k_n_03_probabilita
   k_n_02_notazioni --&gt; k_n_03_condizionata
   k_n_03_condizionata --&gt; k_n_03_rischio
   k_n_03_condizionata --&gt; k_n_03_test
