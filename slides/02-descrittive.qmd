@@ -1080,19 +1080,19 @@ discreta (nominale, ordinale, dicotomica, o cardinale con pochi valori).
 
 ## Prima
 
-<img src="img/rmsle-plot.jpg" style="height:55vh; width:auto;" />
+<img src="img/rmsle-plot.jpg" style="height:500px; width:auto;" />
 
 ## Prima
 
-<img src="img/smape-plot.jpg" style="height:55vh; width:auto;" />
+<img src="img/smape-plot.jpg" style="height:500px; width:auto;" />
 
 ## Prima
 
-<img src="img/mae-plot.jpg" style="height:55vh; width:auto;" />
+<img src="img/mae-plot.jpg" style="height:500px; width:auto;" />
 
 ## Dopo
 
-<img src="img/error_boxplots_highlight_with_iqr.png" style="height:55vh; width:auto;" />
+<img src="img/error_boxplots_highlight_with_iqr.png" style="height:500px; width:auto;" />
 
 ## [Sondaggio]{.orange} {.inverse .center background-color="#03A696"}
 
