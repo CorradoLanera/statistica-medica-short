@@ -305,9 +305,6 @@ niente: è una misura, quindi continua. Una cardinale conta qualcosa: 3
 ricoveri sono uno in più di 2, mentre fra «mai» e «1-2 volte» (ordinale)
 c'è solo un ordine.
 
-**Un numero non basta**: il codice di un paziente, o 0/1 per no/sì,
-restano nominali o dicotomiche.
-
 :::
 
 ## [Sondaggio]{.orange} {.inverse .center background-color="#03A696"}

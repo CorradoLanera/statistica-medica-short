@@ -4604,7 +4604,6 @@ z-index: 1000;
 </ul>
 <div class="small">
 <p><strong>Cardinale non vuol dire numerica</strong>: 130 mmHg è un numero, ma non conta niente: è una misura, quindi continua. Una cardinale conta qualcosa: 3 ricoveri sono uno in più di 2, mentre fra «mai» e «1-2 volte» (ordinale) c’è solo un ordine.</p>
-<p><strong>Un numero non basta</strong>: il codice di un paziente, o 0/1 per no/sì, restano nominali o dicotomiche.</p>
 </div>
 </section>
 <section id="sondaggio" class="slide level2 inverse center" data-background-color="#03A696">
@@ -4635,7 +4634,6 @@ flowchart TB
   n_variabile_continua[&quot;Continua&quot;]:::cur
   n_variabile_discreta[&quot;Discreta&quot;]:::cur
   n_variabile_cardinale[&quot;Cardinale&quot;]:::cur
-  n_codifica_numerica_non_implica_tipo[&quot;Un numero non basta&quot;]:::cur
   n_variabile_nominale[&quot;Nominale&quot;]:::cur
   n_variabile_ordinale[&quot;Ordinale&quot;]:::cur
   n_variabile_dicotomica[&quot;Dicotomica&quot;]:::cur
@@ -4645,14 +4643,11 @@ flowchart TB
   n_unita_statistica --&gt; n_variabile
   n_variabile --&gt; n_dati_ordinati
   n_variabile --&gt; n_tipo_di_variabile
-  n_variabile_cardinale --&gt; n_codifica_numerica_non_implica_tipo
   n_variabile_continua --&gt; n_variabile_cardinale
-  n_variabile_dicotomica --&gt; n_codifica_numerica_non_implica_tipo
   n_variabile_discreta --&gt; n_variabile_cardinale
   n_variabile_discreta --&gt; n_variabile_dicotomica
   n_variabile_discreta --&gt; n_variabile_nominale
   n_variabile_discreta --&gt; n_variabile_ordinale
-  n_variabile_nominale --&gt; n_codifica_numerica_non_implica_tipo
   classDef cur fill:#e6f0fa,stroke:#035AA6,color:#000000
   classDef prev fill:#f4f4f4,stroke:#9a9a9a,color:#555555,stroke-dasharray:4 3
   classDef opt fill:#ffffff,stroke:#035AA6,color:#555555,stroke-dasharray:2 2
@@ -4679,7 +4674,6 @@ flowchart TB
 <li><a href="#/tipologie-di-dati">Continua</a></li>
 <li><a href="#/tipologie-di-dati">Discreta</a></li>
 <li><a href="#/tipologie-di-dati-in-sintesi">Cardinale</a></li>
-<li><a href="#/tipologie-di-dati-in-sintesi">Un numero non basta</a></li>
 <li><a href="#/tipologie-di-dati-1">Nominale</a></li>
 <li><a href="#/tipologie-di-dati-1">Ordinale</a></li>
 <li><a href="#/tipologie-di-dati-1">Dicotomica</a></li>
@@ -5947,7 +5941,7 @@ flowchart LR
 flowchart TB
   k_n_02_notazioni[&quot;Indici e sommatoria (3)&quot;]:::cur
   k_n_02_unita[&quot;Unità, variabili, tabelle (4)&quot;]:::cur
-  k_n_02_tipi[&quot;Tipi di variabile (8)&quot;]:::cur
+  k_n_02_tipi[&quot;Tipi di variabile (7)&quot;]:::cur
   k_n_02_centralita[&quot;Centralità (8)&quot;]:::cur
   k_n_02_variabilita[&quot;Variabilità (8)&quot;]:::cur
   k_n_02_percentili[&quot;Percentili e quartili (2)&quot;]:::cur
@@ -5983,7 +5977,7 @@ flowchart TB
 <ul>
 <li><strong>Indici e sommatoria</strong>: <a href="#/notazioni-sommatoria">Indici (x_i)</a>, <a href="#/notazioni-sommatoria">Sommatoria Σ</a>, <a href="#/notazioni-sommatoria">Appartenenza (∈)</a></li>
 <li><strong>Unità, variabili, tabelle</strong>: <a href="#/la-stessa-tabella-ordinata">Unità statistica</a>, <a href="#/misure-di-centralità-media">Campione</a>, <a href="#/una-tabella-disordinata">Variabile</a>, <a href="#/dati-ordinati">Dati ordinati</a></li>
-<li><strong>Tipi di variabile</strong>: <a href="#/tipologie-di-dati">Tipo di variabile</a>, <a href="#/tipologie-di-dati">Continua</a>, <a href="#/tipologie-di-dati">Discreta</a>, <a href="#/tipologie-di-dati-1">Nominale</a>, <a href="#/tipologie-di-dati-1">Ordinale</a>, <a href="#/tipologie-di-dati-1">Dicotomica</a>, <a href="#/tipologie-di-dati-in-sintesi">Cardinale</a>, <a href="#/tipologie-di-dati-in-sintesi">Un numero non basta</a></li>
+<li><strong>Tipi di variabile</strong>: <a href="#/tipologie-di-dati">Tipo di variabile</a>, <a href="#/tipologie-di-dati">Continua</a>, <a href="#/tipologie-di-dati">Discreta</a>, <a href="#/tipologie-di-dati-1">Nominale</a>, <a href="#/tipologie-di-dati-1">Ordinale</a>, <a href="#/tipologie-di-dati-1">Dicotomica</a>, <a href="#/tipologie-di-dati-in-sintesi">Cardinale</a></li>
 <li><strong>Centralità</strong>: <a href="#/misure-di-centralità-media">Misura di centralità</a>, <a href="#/misure-di-centralità-media">Media</a>, <a href="#/misure-di-centralità-media">Media e valori estremi</a>, <a href="#/misure-di-centralità-mediana">Mediana</a>, <a href="#/mediana-n-pari">Mediana e valori estremi</a>, <a href="#/media-o-mediana">Media o mediana?</a>, <a href="#/misure-di-centralità-moda">Frequenza</a>, <a href="#/misure-di-centralità-moda">Moda</a></li>
 <li><strong>Variabilità</strong>: <a href="#/misure-di-variabilità">Misura di variabilità</a>, <a href="#/misure-di-variabilità-range-massimale">Range</a>, <a href="#/misure-di-variabilità-varianza-campionaria">Varianza</a>, <a href="#/misure-di-variabilità-varianza-campionaria">Deviazione standard</a>, <a href="#/misure-di-variabilità-varianza-campionaria">Scarti a somma zero</a>, <a href="#/varianza-formula-alternativa">Varianza: formula alternativa</a>, <a href="#/misure-di-variabilità-coefficiente-di-variazione">Coefficiente di variazione</a>, <a href="#/cv-non-effetto-scala">CV e unità di misura</a></li>
 <li><strong>Percentili e quartili</strong>: <a href="#/percentili">Percentile</a>, <a href="#/percentili">Quartile</a></li>

@@ -247,8 +247,7 @@
     "variabile-nominale",
     "variabile-ordinale",
     "variabile-dicotomica",
-    "variabile-cardinale",
-    "codifica-numerica-non-implica-tipo"
+    "variabile-cardinale"
    ]
   },
   {
@@ -1241,25 +1240,6 @@
    "optional": false,
    "requires": [
     "variabile-discreta",
-    "variabile-continua"
-   ],
-   "slide": "Tipologie di dati: in sintesi",
-   "slide_norm": "tipologiedidatiinsintesi",
-   "slide_k": 0,
-   "chunk": "02-tipi"
-  },
-  {
-   "id": "codifica-numerica-non-implica-tipo",
-   "deck": "02",
-   "section": "02.1",
-   "label": "Un numero non basta a fare una variabile numerica",
-   "short": "Un numero non basta",
-   "kind": "proprieta",
-   "optional": false,
-   "requires": [
-    "variabile-nominale",
-    "variabile-dicotomica",
-    "variabile-cardinale",
     "variabile-continua"
    ],
    "slide": "Tipologie di dati: in sintesi",
