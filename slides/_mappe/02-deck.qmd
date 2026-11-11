@@ -14,7 +14,7 @@ flowchart TB
   k_n_02_centralita["Centralità (8)"]:::cur
   k_n_02_variabilita["Variabilità (8)"]:::cur
   k_n_02_percentili["Percentili e quartili (2)"]:::cur
-  k_n_02_classi["Classi e medie ponderate (2)"]:::cur
+  k_n_02_classi["Classi e medie ponderate (3)"]:::cur
   k_n_02_istogramma["Istogramma (2)"]:::cur
   k_n_02_boxplot["Box-plot (5)"]:::cur
   k_n_02_barre["Barre e scelta del grafico (5)"]:::cur
@@ -49,7 +49,7 @@ Ogni freccia va da un concetto a quelli che lo usano. Ogni riquadro è un blocco
 - **Centralità**: [Misura di centralità](#/misure-di-centralità-media), [Media](#/misure-di-centralità-media), [Media e valori estremi](#/misure-di-centralità-media), [Mediana](#/misure-di-centralità-mediana), [Mediana e valori estremi](#/mediana-n-pari), [Media o mediana?](#/media-o-mediana), [Frequenza](#/misure-di-centralità-moda), [Moda](#/misure-di-centralità-moda)
 - **Variabilità**: [Misura di variabilità](#/misure-di-variabilità), [Range](#/misure-di-variabilità-range-massimale), [Varianza](#/misure-di-variabilità-varianza-campionaria), [Deviazione standard](#/misure-di-variabilità-varianza-campionaria), [Scarti a somma zero](#/misure-di-variabilità-varianza-campionaria), [Varianza: formula alternativa](#/varianza-formula-alternativa), [Coefficiente di variazione](#/misure-di-variabilità-coefficiente-di-variazione), [CV e unità di misura](#/cv-non-effetto-scala)
 - **Percentili e quartili**: [Percentile](#/percentili), [Quartile](#/percentili)
-- **Classi e medie ponderate**: [Classi](#/accorpamenti), [Media ponderata](#/misure-ponderate-media-aritmetica-ponderata)
+- **Classi e medie ponderate**: [Classi](#/accorpamenti), [Frequenza relativa](#/accorpamenti), [Media ponderata](#/misure-ponderate-media-aritmetica-ponderata)
 - **Istogramma**: [Istogramma](#/istogramma), [Densità di frequenza](#/dati-continui-istogramma)
 - **Box-plot**: [Box-plot](#/boxplot-general), [Distanza interquartile](#/dati-continui-box-plot), [Baffi](#/dati-continui-box-plot), [Outlier](#/dati-continui-box-plot), [Box-plot a confronto](#/prima)
 - **Barre e scelta del grafico**: [Grafico a barre](#/dati-discreti-barre), [Istogramma ≠ barre](#/dati-discreti-barre), [Barre da zero](#/dati-discreti-barre), [Scelta del grafico](#/dati-discreti-barre), [Distorsioni grafiche](#/dati-discreti-barre)

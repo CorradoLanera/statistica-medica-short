@@ -7,10 +7,10 @@
 ```{mermaid}
 %%| echo: false
 %%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
-flowchart TB
-  n_sommatoria["Sommatoria Σ"]:::prev
+flowchart LR
   n_variabile_discreta["Discreta"]:::prev
   n_variabile_continua["Continua"]:::prev
+  n_sommatoria["Sommatoria Σ"]:::prev
   n_misura_di_centralita["Misura di centralità"]:::cur
   n_campione["Campione"]:::cur
   n_media_aritmetica["Media"]:::cur
@@ -31,12 +31,14 @@ flowchart TB
   n_percentile["Percentile"]:::cur
   n_quartile["Quartile"]:::cur
   n_accorpamento_in_classi["Classi"]:::cur
+  n_frequenza_relativa["Frequenza relativa"]:::cur
   n_media_ponderata["Media ponderata"]:::cur
   n_accorpamento_in_classi --> n_media_ponderata
   n_campione --> n_media_aritmetica
   n_coefficiente_di_variazione --> n_cv_invariante_per_scala
   n_deviazione_standard --> n_coefficiente_di_variazione
   n_frequenza_assoluta --> n_accorpamento_in_classi
+  n_frequenza_assoluta --> n_frequenza_relativa
   n_frequenza_assoluta --> n_moda
   n_media_aritmetica --> n_media_ponderata
   n_media_aritmetica --> n_media_sensibile_ai_valori_estremi
@@ -92,6 +94,7 @@ Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle
 - [Percentile](#/percentili)
 - [Quartile](#/percentili)
 - [Classi](#/accorpamenti)
+- [Frequenza relativa](#/accorpamenti)
 - [Media ponderata](#/misure-ponderate-media-aritmetica-ponderata)
 
 :::

@@ -8,9 +8,9 @@
 %%| echo: false
 %%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart LR
-  n_varianza_di_variabile_casuale["Varianza Var(X)"]:::prev
-  n_funzione_di_massa["Funzione di massa"]:::prev
   n_valore_atteso["Valore atteso E(X)"]:::prev
+  n_funzione_di_massa["Funzione di massa"]:::prev
+  n_varianza_di_variabile_casuale["Varianza Var(X)"]:::prev
   n_fattoriale["Fattoriale n!"]:::prev
   n_distribuzione_binomiale["Binomiale"]:::prev
   n_valore_atteso_e_varianza_della_binomiale["E e Var della binomiale"]:::prev

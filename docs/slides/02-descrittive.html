@@ -5376,11 +5376,18 @@ flowchart TB
 <h2><span class="orange">Accorpamenti</span></h2>
 <p>La struttura generale dei dati raggruppati è simile a</p>
 <table class="caption-top">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 37%">
+<col style="width: 14%">
+<col style="width: 24%">
+</colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: center;">Gruppi</th>
 <th style="text-align: center;">Punto medio <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>m</mi><mi>i</mi></msub><annotation encoding="application/x-tex">m_i</annotation></semantics></math></th>
 <th style="text-align: center;">Frequenza</th>
+<th style="text-align: center;">Frequenza relativa</th>
 </tr>
 </thead>
 <tbody>
@@ -5388,8 +5395,10 @@ flowchart TB
 <td style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><msub><mi>y</mi><mn>1</mn></msub><mo>,</mo><msub><mi>y</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">[y_1, y_2)</annotation></semantics></math></td>
 <td style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><msub><mi>y</mi><mn>1</mn></msub><mo>+</mo><msub><mi>y</mi><mn>2</mn></msub></mrow><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{y_1+y_2}{2}</annotation></semantics></math></td>
 <td style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>1</mn></msub><annotation encoding="application/x-tex">f_1</annotation></semantics></math></td>
+<td style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>1</mn></msub><mi>/</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">f_1/n</annotation></semantics></math></td>
 </tr>
 <tr class="even">
+<td style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>⋮</mi><annotation encoding="application/x-tex">\vdots</annotation></semantics></math></td>
 <td style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>⋮</mi><annotation encoding="application/x-tex">\vdots</annotation></semantics></math></td>
 <td style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>⋮</mi><annotation encoding="application/x-tex">\vdots</annotation></semantics></math></td>
 <td style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>⋮</mi><annotation encoding="application/x-tex">\vdots</annotation></semantics></math></td>
@@ -5398,9 +5407,14 @@ flowchart TB
 <td style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><msub><mi>y</mi><mi>k</mi></msub><mo>,</mo><msub><mi>y</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">[y_k, y_{k+1})</annotation></semantics></math></td>
 <td style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><msub><mi>y</mi><mi>k</mi></msub><mo>+</mo><msub><mi>y</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{y_k+y_{k+1}}{2}</annotation></semantics></math></td>
 <td style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mi>k</mi></msub><annotation encoding="application/x-tex">f_k</annotation></semantics></math></td>
+<td style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>k</mi></msub><mi>/</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">f_k/n</annotation></semantics></math></td>
 </tr>
 </tbody>
 </table>
+<ul>
+<li><strong>frequenza</strong> (assoluta) <span class="mnw" style="white-space:nowrap"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mi>i</mi></msub><annotation encoding="application/x-tex">f_i</annotation></semantics></math>:</span> quante osservazioni cadono nel gruppo <span class="mnw" style="white-space:nowrap"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>;</span></li>
+<li><strong><span class="orange">frequenza relativa</span></strong> <span class="mnw" style="white-space:nowrap"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>i</mi></msub><mi>/</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">f_i/n</annotation></semantics></math>:</span> la loro proporzione sul totale <span class="mnw" style="white-space:nowrap"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>.</span> Le frequenze relative sommano a 1.</li>
+</ul>
 </section>
 <section id="accorpamenti-epic---magnesio" class="slide level2">
 <h2><span class="orange">Accorpamenti</span>: Epic - magnesio</h2>
@@ -5431,6 +5445,7 @@ flowchart TB
 <th style="text-align: left;">Gruppi</th>
 <th style="text-align: right;">m</th>
 <th style="text-align: right;">Freq</th>
+<th style="text-align: right;">Freq. relativa</th>
 </tr>
 </thead>
 <tbody>
@@ -5438,41 +5453,49 @@ flowchart TB
 <td style="text-align: left;">[ 43.0,168.9)</td>
 <td style="text-align: right;">105.95</td>
 <td style="text-align: right;">13</td>
+<td style="text-align: right;">0.13</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">[168.9,215.4)</td>
 <td style="text-align: right;">192.15</td>
 <td style="text-align: right;">12</td>
+<td style="text-align: right;">0.12</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">[215.4,255.8)</td>
 <td style="text-align: right;">235.60</td>
 <td style="text-align: right;">13</td>
+<td style="text-align: right;">0.13</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">[255.8,295.5)</td>
 <td style="text-align: right;">275.65</td>
 <td style="text-align: right;">12</td>
+<td style="text-align: right;">0.12</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">[295.5,312.3)</td>
 <td style="text-align: right;">303.90</td>
 <td style="text-align: right;">13</td>
+<td style="text-align: right;">0.13</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">[312.3,324.0)</td>
 <td style="text-align: right;">318.15</td>
 <td style="text-align: right;">12</td>
+<td style="text-align: right;">0.12</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">[324.0,343.8)</td>
 <td style="text-align: right;">333.90</td>
 <td style="text-align: right;">13</td>
+<td style="text-align: right;">0.13</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">[343.8,360.3]</td>
 <td style="text-align: right;">352.05</td>
 <td style="text-align: right;">12</td>
+<td style="text-align: right;">0.12</td>
 </tr>
 </tbody>
 </table>
@@ -5664,6 +5687,7 @@ flowchart TB
 </tr>
 </tbody>
 </table>
+<p>La densità è la frequenza relativa divisa per l’ampiezza: l’area di ogni barra è la frequenza relativa del suo gruppo, e l’area totale dell’istogramma è 1.</p>
 </section>
 <section id="istogramma-autocalcolato" class="slide level2">
 <h2>Istogramma: autocalcolato</h2>

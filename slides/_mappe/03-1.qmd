@@ -8,6 +8,7 @@
 %%| echo: false
 %%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart LR
+  k_n_02_classi["Classi e medie ponderate · 02"]:::prev
   n_esperimento_casuale["Esperimento casuale"]:::cur
   n_spazio_campionario["Spazio degli eventi Ω"]:::cur
   n_evento["Evento"]:::cur
@@ -20,6 +21,7 @@ flowchart LR
   n_intersezione_di_eventi["Intersezione (∩)"]:::cur
   n_evento_complementare["Complementare"]:::cur
   n_eventi_incompatibili["Eventi incompatibili"]:::cur
+  k_n_02_classi --> n_probabilita
   n_esperimento_casuale --> n_spazio_campionario
   n_eventi_incompatibili --> n_additivita_eventi_incompatibili
   n_evento --> n_diagramma_di_venn

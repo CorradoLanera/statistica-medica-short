@@ -296,6 +296,7 @@
    "label": "Classi e medie ponderate",
    "concepts": [
     "accorpamento-in-classi",
+    "frequenza-relativa",
     "media-ponderata"
    ]
   },
@@ -1603,6 +1604,22 @@
    "chunk": "02-classi"
   },
   {
+   "id": "frequenza-relativa",
+   "deck": "02",
+   "section": "02.2",
+   "label": "Frequenza relativa (proporzione sul totale)",
+   "short": "Frequenza relativa",
+   "kind": "definizione",
+   "optional": false,
+   "requires": [
+    "frequenza-assoluta"
+   ],
+   "slide": "[Accorpamenti]",
+   "slide_norm": "accorpamenti",
+   "slide_k": 0,
+   "chunk": "02-classi"
+  },
+  {
    "id": "media-ponderata",
    "deck": "02",
    "section": "02.2",
@@ -1650,7 +1667,8 @@
     "istogramma",
     "accorpamento-in-classi",
     "frequenza-assoluta",
-    "frazione"
+    "frazione",
+    "frequenza-relativa"
    ],
    "slide": "Dati continui: istogramma",
    "slide_norm": "daticontinuiistogramma",

@@ -8,6 +8,7 @@
 %%| echo: false
 %%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart TB
+  k_n_02_classi["Classi e medie ponderate · 02"]:::prev
   k_n_02_notazioni["Indici e sommatoria · 02"]:::prev
   k_n_03_eventi["Esperimenti ed eventi (5)"]:::cur
   k_n_03_probabilita["Probabilità (2)"]:::cur
@@ -17,6 +18,7 @@ flowchart TB
   k_n_03_rischio["Rischio e prevalenza (3)"]:::cur
   k_n_03_test["Test diagnostici (7)"]:::cur
   k_n_03_bayes["Teorema di Bayes (5)"]:::cur
+  k_n_02_classi --> k_n_03_probabilita
   k_n_02_notazioni --> k_n_03_condizionata
   k_n_03_condizionata --> k_n_03_rischio
   k_n_03_condizionata --> k_n_03_test

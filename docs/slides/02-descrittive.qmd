@@ -835,11 +835,14 @@ Per voi: <img src="img/bit.ly_statmed-sondaggio-percentili.png" width="300px" st
 La struttura generale dei dati raggruppati è simile a
 
 
-|Gruppi            | Punto medio $m_i$           | Frequenza
-|:----------------:|:---------------------------:|:---------:
-| $[y_1, y_2)$     | $\frac{y_1+y_2}{2}$         | $f_1$ 
-| $\vdots$         | $\vdots$                    | $\vdots$
-| $[y_k, y_{k+1})$ | $\frac{y_k+y_{k+1}}{2}$ | $f_k$
+|Gruppi            | Punto medio $m_i$           | Frequenza | Frequenza relativa
+|:----------------:|:---------------------------:|:---------:|:-----------------:
+| $[y_1, y_2)$     | $\frac{y_1+y_2}{2}$         | $f_1$     | $f_1/n$
+| $\vdots$         | $\vdots$                    | $\vdots$  | $\vdots$
+| $[y_k, y_{k+1})$ | $\frac{y_k+y_{k+1}}{2}$     | $f_k$     | $f_k/n$
+
+- **frequenza** (assoluta) $f_i$: quante osservazioni cadono nel gruppo $i$;
+- **[frequenza relativa]{.orange}** $f_i/n$: la loro proporzione sul totale $n$. Le frequenze relative sommano a 1.
 
 ## [Accorpamenti]{.orange}: Epic - magnesio
 
@@ -871,7 +874,8 @@ dt <- data.frame(
 dt <- dt[, -3]
 colnames(dt)[[3]] <- "Freq"
 
-kable(dt, row.names = FALSE)
+kable(transform(dt, `Freq. relativa` = Freq / sum(Freq), check.names = FALSE),
+      row.names = FALSE)
 ```
 
 ## misure [ponderate]{.orange}: media aritmetica ponderata
@@ -935,6 +939,8 @@ estesa
 | $[y_1, y_2)$     | $\frac{y_1+y_2}{2}$         | $f_1$    | $a_1 = y_2-y_1$     | $\frac{f_1}{n*a_1}$
 | $\vdots$         | $\vdots$                    | $\vdots$ | $\vdots$            | $\vdots$
 | $[y_k, y_{k+1})$ | $\frac{y_k+y_{k+1}}{2}$     | $f_k$    | $a_k = y_{k+1}-y_k$ | $\frac{f_k}{n*a_k}$
+
+La densità è la frequenza relativa divisa per l'ampiezza: l'area di ogni barra è la frequenza relativa del suo gruppo, e l'area totale dell'istogramma è 1.
 
 ## Istogramma: autocalcolato
 

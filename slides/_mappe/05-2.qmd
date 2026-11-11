@@ -8,8 +8,8 @@
 %%| echo: false
 %%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart LR
-  n_popolazione_target["Popolazione target"]:::prev
   n_campione_casuale_semplice["Campione casuale semplice"]:::prev
+  n_popolazione_target["Popolazione target"]:::prev
   k_n_02_centralita["Centralità · 02"]:::prev
   k_n_02_notazioni["Indici e sommatoria · 02"]:::prev
   k_n_02_unita["Unità, variabili, tabelle · 02"]:::prev

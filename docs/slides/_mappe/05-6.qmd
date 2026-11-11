@@ -8,13 +8,13 @@
 %%| echo: false
 %%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart LR
+  n_distribuzione_campionaria["Distribuzione campionaria"]:::prev
   n_errore_standard["Errore standard"]:::prev
   n_stimatore["Stimatore"]:::prev
-  n_distribuzione_campionaria["Distribuzione campionaria"]:::prev
   n_ic_media_varianza_nota["IC, σ nota"]:::prev
-  n_ic_a_livello_generico["IC a livello 1−α"]:::prev
-  n_ampiezza_dell_intervallo_di_confidenza["Ampiezza dell'IC"]:::prev
   n_interpretazione_dell_intervallo_di_confidenza["Interpretazione dell'IC"]:::prev
+  n_ampiezza_dell_intervallo_di_confidenza["Ampiezza dell'IC"]:::prev
+  n_ic_a_livello_generico["IC a livello 1−α"]:::prev
   n_distribuzione_t_di_student["t di Student"]:::prev
   n_gradi_di_liberta["Gradi di libertà"]:::prev
   n_percentile_della_t_di_student["Percentili di t"]:::prev
