@@ -616,7 +616,7 @@
     "href": "slides/02-descrittive.html#esempio-sommatoria",
     "title": "Statistica Medica",
     "section": "Esempio sommatoria",
-    "text": "Esempio sommatoria\nPer esempio considerando\n\n\n\n\n\nPortion of ‘EPIC-Norfolk cohort’ (Bain et al. 2015)\n\n\nI\nage\n\n\n\n\n1\n55.1\n\n\n2\n62.9\n\n\n3\n53.1\n\n\n4\n76.3\n\n\n5\n64.2\n\n\n6\n53.3\n\n\n\n\n\n\nPossiamo scrivere la somma di tutte le età\n\n\n55.1 + 62.9 + 53.1 + 76.3 + 64.2 + 53.3\n\n\ncome ∑i∈Iagei=\\sum_{i\\in I} age_i = 364.9."
+    "text": "Esempio sommatoria\nPer esempio considerando\n\n\n\n\n\n\n\nI\nage\n\n\n\n\n1\n55.1\n\n\n2\n62.9\n\n\n3\n53.1\n\n\n4\n76.3\n\n\n5\n64.2\n\n\n6\n53.3\n\n\n\n\n\n\nPossiamo scrivere la somma di tutte le età\n\n\n55.1 + 62.9 + 53.1 + 76.3 + 64.2 + 53.3\n\n\ncome ∑i∈Iagei=\\sum_{i\\in I} age_i = 364.9."
   },
   {
     "objectID": "slides/02-descrittive.html#una-tabella-disordinata",
@@ -644,7 +644,7 @@
     "href": "slides/02-descrittive.html#un-esempio-reale",
     "title": "Statistica Medica",
     "section": "Un esempio reale",
-    "text": "Un esempio reale\nLe prime 10 delle 200 righe della coorte EPIC-Norfolk, che useremo negli esempi che seguono: ogni riga è un partecipante (l’unità statistica), ogni colonna una variabile.\n\n\n\n\nPortion of “EPIC-Norfolk cohort” (Bain et al. 2015)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nid\ngender\nage\natt.fisica\nsigarette\nbmi\nsbp\ndbp\ncole.tot\nmag\nfarmaci\n\n\n\n\n1\nM\n55.1\nMai\n1\n30.4\n151.0\n108.0\n5.2\n425.5\nNo\n\n\n2\nM\n62.9\n1-2 volte a sett.\n2\n42.6\n140.1\n103.9\n4.6\n312.6\nStatine\n\n\n3\nM\n53.1\n3 Volte a sett.\n2\n41.6\n145.2\n120.6\n4.8\n426.8\nStatine\n\n\n4\nM\n76.3\nMai\n2\n23.3\n126.9\n114.0\n8.4\n422.7\nfibrati\n\n\n5\nM\n64.2\n3 Volte a sett.\n1\n32.9\n151.6\n116.0\n7.7\n281.1\nNo\n\n\n6\nM\n53.3\nMai\n1\n31.7\n167.4\n100.7\n6.6\n318.2\nNo\n\n\n7\nM\n65.7\n3 Volte a sett.\n1\n26.4\n160.0\n101.5\n6.0\n424.5\nNo\n\n\n8\nM\n68.1\n3 Volte a sett.\n0\n31.4\n125.0\n101.0\n5.3\n327.3\nStatine\n\n\n9\nM\n66.6\n3 Volte a sett.\n0\n24.9\n110.1\n109.3\n5.1\n203.7\nNo\n\n\n10\nM\n58.2\n1-2 volte a sett.\n2\n30.5\n138.0\n106.4\n6.7\n412.4\nNo"
+    "text": "Un esempio reale\nLe prime 10 delle 200 righe della coorte EPIC-Norfolk, che useremo negli esempi che seguono: ogni riga è un partecipante (l’unità statistica), ogni colonna una variabile.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nid\ngender\nage\natt.fisica\nsigarette\nbmi\nsbp\ndbp\ncole.tot\nmag\nfarmaci\n\n\n\n\n1\nM\n55.1\nMai\n1\n30.4\n151.0\n108.0\n5.2\n425.5\nNo\n\n\n2\nM\n62.9\n1-2 volte a sett.\n2\n42.6\n140.1\n103.9\n4.6\n312.6\nStatine\n\n\n3\nM\n53.1\n3 Volte a sett.\n2\n41.6\n145.2\n120.6\n4.8\n426.8\nStatine\n\n\n4\nM\n76.3\nMai\n2\n23.3\n126.9\n114.0\n8.4\n422.7\nfibrati\n\n\n5\nM\n64.2\n3 Volte a sett.\n1\n32.9\n151.6\n116.0\n7.7\n281.1\nNo\n\n\n6\nM\n53.3\nMai\n1\n31.7\n167.4\n100.7\n6.6\n318.2\nNo\n\n\n7\nM\n65.7\n3 Volte a sett.\n1\n26.4\n160.0\n101.5\n6.0\n424.5\nNo\n\n\n8\nM\n68.1\n3 Volte a sett.\n0\n31.4\n125.0\n101.0\n5.3\n327.3\nStatine\n\n\n9\nM\n66.6\n3 Volte a sett.\n0\n24.9\n110.1\n109.3\n5.1\n203.7\nNo\n\n\n10\nM\n58.2\n1-2 volte a sett.\n2\n30.5\n138.0\n106.4\n6.7\n412.4\nNo"
   },
   {
     "objectID": "slides/02-descrittive.html#tipologie-di-dati",
@@ -700,7 +700,7 @@
     "href": "slides/02-descrittive.html#media-estremamente-sensibile",
     "title": "Statistica Medica",
     "section": "Media (estremamente sensibile)",
-    "text": "Media (estremamente sensibile)\nRiprendendo le età del nostro sotto-campione di soggetti, la loro media è\n\n\n\n\n\nPortion of ‘EPIC-Norfolk cohort’ (Bain et al. 2015)\n\n\nI\nage\n\n\n\n\n1\n55.1\n\n\n2\n62.9\n\n\n3\n53.1\n\n\n4\n76.3\n\n\n5\n64.2\n\n\n6\n53.3\n\n\n\n\n\n\n16∑i=16agei=\\frac{1}{6}\\sum_{i=1}^6 age_i = 60.82\n La media è molto sensibile ai dati estremi: sostituendo, per esempio, anche solamente il primo valore (55.1) con 5.51 (ipotizzando un errore di inserimento), la media cambia sensibilmente e diviene 52.55."
+    "text": "Media (estremamente sensibile)\nRiprendendo le età del nostro sotto-campione di soggetti, la loro media è\n\n\n\n\n\n\n\nI\nage\n\n\n\n\n1\n55.1\n\n\n2\n62.9\n\n\n3\n53.1\n\n\n4\n76.3\n\n\n5\n64.2\n\n\n6\n53.3\n\n\n\n\n\n\n16∑i=16agei=\\frac{1}{6}\\sum_{i=1}^6 age_i = 60.82\n La media è molto sensibile ai dati estremi: sostituendo, per esempio, anche solamente il primo valore (55.1) con 5.51 (ipotizzando un errore di inserimento), la media cambia sensibilmente e diviene 52.55."
   },
   {
     "objectID": "slides/02-descrittive.html#misure-di-centralità-mediana",
@@ -714,28 +714,28 @@
     "href": "slides/02-descrittive.html#mediana-n-pari",
     "title": "Statistica Medica",
     "section": "Mediana (n pari)",
-    "text": "Mediana (n pari)\nNel nostro esempio\n\n\n\n\n\nPortion of ‘EPIC-Norfolk cohort’ (Bain et al. 2015)\n\n\n\nI\nage\n\n\n\n\n1\n3\n53.1\n\n\n2\n6\n53.3\n\n\n3\n1\n55.1\n\n\n4\n2\n62.9\n\n\n5\n5\n64.2\n\n\n6\n4\n76.3\n\n\n\n\n\n\nSiccome nn è pari (è 6), la mediana è la media tra la 3a e 4a osservazione (ordinate!) Mediana=55.1+62.92=59\\mbox{Mediana} = \\frac{55.1 + 62.9}{2} = 59 E anche modificando il primo valore (55.1) con 5.51, la mediana cambia molto poco, diventando 58.1 (invece di 59)."
+    "text": "Mediana (n pari)\nNel nostro esempio\n\n\n\n\n\n\n\n\nI\nage\n\n\n\n\n1\n3\n53.1\n\n\n2\n6\n53.3\n\n\n3\n1\n55.1\n\n\n4\n2\n62.9\n\n\n5\n5\n64.2\n\n\n6\n4\n76.3\n\n\n\n\n\n\nSiccome nn è pari (è 6), la mediana è la media tra la 3a e 4a osservazione (ordinate!) Mediana=55.1+62.92=59\\mbox{Mediana} = \\frac{55.1 + 62.9}{2} = 59 E anche modificando il primo valore (55.1) con 5.51, la mediana cambia molto poco, diventando 58.1 (invece di 59)."
   },
   {
     "objectID": "slides/02-descrittive.html#mediana-n-dispari",
     "href": "slides/02-descrittive.html#mediana-n-dispari",
     "title": "Statistica Medica",
     "section": "Mediana (n dispari)",
-    "text": "Mediana (n dispari)\n\n\n\n\n\nPortion of ‘EPIC-Norfolk cohort’ (Bain et al. 2015)\n\n\n\nI\nage\n\n\n\n\n1\n3\n53.1\n\n\n2\n6\n53.3\n\n\n3\n1\n55.1\n\n\n4\n2\n62.9\n\n\n5\n5\n64.2\n\n\n6\n7\n65.7\n\n\n7\n4\n76.3\n\n\n\n\n\n\nNel caso in cui nn sia dispari (prendiamo per esempio n=7n = 7), prendiamo direttamente il valore centrale (in posizione 4=(7+1)/24 = (7+1)/2), ovvero 62.9."
+    "text": "Mediana (n dispari)\n\n\n\n\n\n\n\n\nI\nage\n\n\n\n\n1\n3\n53.1\n\n\n2\n6\n53.3\n\n\n3\n1\n55.1\n\n\n4\n2\n62.9\n\n\n5\n5\n64.2\n\n\n6\n7\n65.7\n\n\n7\n4\n76.3\n\n\n\n\n\n\nNel caso in cui nn sia dispari (prendiamo per esempio n=7n = 7), prendiamo direttamente il valore centrale (in posizione 4=(7+1)/24 = (7+1)/2), ovvero 62.9."
   },
   {
     "objectID": "slides/02-descrittive.html#media-o-mediana",
     "href": "slides/02-descrittive.html#media-o-mediana",
     "title": "Statistica Medica",
     "section": "Media o mediana?",
-    "text": "Media o mediana?\n\n\nCon dati a coda lunga (degenze, trigliceridi, redditi) pochi valori molto grandi tirano la media verso la coda; la mediana no.\nIn questi casi la media non descrive il valore tipico, e si descrivono i dati con la mediana (e con i quartili, che vedremo più avanti).\n\n\n\n\n\n\n‘EPIC-Norfolk cohort’ (Bain et al. 2015)"
+    "text": "Media o mediana?\n\n\nCon dati a coda lunga (degenze, trigliceridi, redditi) pochi valori molto grandi tirano la media verso la coda; la mediana no.\nIn questi casi la media non descrive il valore tipico, e si descrivono i dati con la mediana (e con i quartili, che vedremo più avanti)."
   },
   {
     "objectID": "slides/02-descrittive.html#misure-di-centralità-moda",
     "href": "slides/02-descrittive.html#misure-di-centralità-moda",
     "title": "Statistica Medica",
     "section": "Misure di centralità: Moda",
-    "text": "Misure di centralità: Moda\nle mode sono ciascuno dei valori che si osservano con massima frequenza.\n\n\n\nSigarette al giorno\n\n\n\nPortion of ‘EPIC-Norfolk cohort’ (Bain et al. 2015)\n\n\nsigarette\nn\n\n\n\n\n0\n51\n\n\n1\n62\n\n\n2\n46\n\n\n3\n14\n\n\n4\n17\n\n\n5\n7\n\n\n6\n2\n\n\n7\n1\n\n\n\n\n\n\nModa di sigarette fumate al giorno\n\n\n\n\n\nsigarette\nn\n\n\n\n\n1\n62\n\n\n\n\n\n\nNOTA: una distribuzione può essere unimodale, bimodale, trimodale, …"
+    "text": "Misure di centralità: Moda\nle mode sono ciascuno dei valori che si osservano con massima frequenza.\n\n\n\nSigarette al giorno\n\n\n\n\n\nsigarette\nn\n\n\n\n\n0\n51\n\n\n1\n62\n\n\n2\n46\n\n\n3\n14\n\n\n4\n17\n\n\n5\n7\n\n\n6\n2\n\n\n7\n1\n\n\n\n\n\n\nModa di sigarette fumate al giorno\n\n\n\n\n\nsigarette\nn\n\n\n\n\n1\n62\n\n\n\n\n\n\nNOTA: una distribuzione può essere unimodale, bimodale, trimodale, …"
   },
   {
     "objectID": "slides/02-descrittive.html#misure-di-variabilità",
@@ -847,7 +847,7 @@
     "href": "slides/02-descrittive.html#accorpamenti-epic---magnesio-1",
     "title": "Statistica Medica",
     "section": "Accorpamenti: Epic - magnesio",
-    "text": "Accorpamenti: Epic - magnesio\nAccorpati in 8 gruppi con approssimativamente la stessa quantità di soggetti in ciascun gruppo:\n\n\n\n‘EPIC-Norfolk cohort’ (Bain et al. 2015)\n\n\nGruppi\nm\nFreq\n\n\n\n\n[ 43.0,168.9)\n105.95\n13\n\n\n[168.9,215.4)\n192.15\n12\n\n\n[215.4,255.8)\n235.60\n13\n\n\n[255.8,295.5)\n275.65\n12\n\n\n[295.5,312.3)\n303.90\n13\n\n\n[312.3,324.0)\n318.15\n12\n\n\n[324.0,343.8)\n333.90\n13\n\n\n[343.8,360.3]\n352.05\n12"
+    "text": "Accorpamenti: Epic - magnesio\nAccorpati in 8 gruppi con approssimativamente la stessa quantità di soggetti in ciascun gruppo:\n\n\n\n\n\nGruppi\nm\nFreq\n\n\n\n\n[ 43.0,168.9)\n105.95\n13\n\n\n[168.9,215.4)\n192.15\n12\n\n\n[215.4,255.8)\n235.60\n13\n\n\n[255.8,295.5)\n275.65\n12\n\n\n[295.5,312.3)\n303.90\n13\n\n\n[312.3,324.0)\n318.15\n12\n\n\n[324.0,343.8)\n333.90\n13\n\n\n[343.8,360.3]\n352.05\n12"
   },
   {
     "objectID": "slides/02-descrittive.html#misure-ponderate-media-aritmetica-ponderata",
@@ -2101,5 +2101,12 @@
     "title": "Statistica Medica — Corrado Lanera",
     "section": "",
     "text": "Corrado Lanera\nE-mail: Corrado.Lanera@ubep.unipd.it\nRicevimento: bit.ly/statmed-cl-ricevimento\nPosit Cloud (RStudio online): bit.ly/statmed-cl-rstudio"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#fonti",
+    "href": "slides/02-descrittive.html#fonti",
+    "title": "Statistica Medica",
+    "section": "Fonti",
+    "text": "Fonti\n\nDati degli esempi della coorte EPIC-Norfolk: Bain LKM, Myint PK, Jennings A, Lentjes MAH, Luben RN, Khaw KT, Wareham NJ, Welch AA. The relationship between dietary magnesium intake, stroke and its major risk factors, blood pressure and cholesterol, in the EPIC-Norfolk cohort. International Journal of Cardiology 2015;196:108-114.\nIllustrazioni dei tipi di dati: Allison Horst."
   }
 ]

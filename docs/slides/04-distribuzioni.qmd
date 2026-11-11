@@ -557,7 +557,7 @@ Per una distribuzione di Poisson con parametro $\mu$, la media e la varianza son
 
 ## [Poisson]{.orange}: cibo cancerogeno
 
-In uno studio sul possibile effetto cancerogeno di EDB (etilene dibromide), osservando la mortalità di 161 operai bianchi, occupati presso due fabbriche, Texas e Michigan, 1940-1975 [Ott _et al._, B J Ind Med, 1980:37, 163-8]
+In uno studio sul possibile effetto cancerogeno di EDB (etilene dibromide), osservando la mortalità di 161 operai bianchi, occupati presso due fabbriche, Texas e Michigan, 1940-1975
 
 Si sono osservate 7 morti per cancro. In base ai dati di mortalità degli USA, si sarebbero attese in quel periodo 5.8 morti per cancro.
 
@@ -784,7 +784,6 @@ Per voi: <img src="img/bit.ly_statmed-sondaggio-continue.png" width="300px" styl
 ::: {.column width="48%"}
 
 <img src="img/not-normal.png"/>
-[Artwork by \@allison_horst](https://twitter.com/allison_horst)
 
 :::
 
@@ -1305,6 +1304,15 @@ Per voi: <img src="img/bit.ly_statmed-sondaggio-normale.png" width="300px" style
 
 - [Perché n − 1 nella formula della deviazione standard
 campionaria?](http://rdossena.altervista.org/Articoli/Book-Perch%E9%20n-1.pdf) di [Riccardo Dossena](http://rdossena.altervista.org) Traduzione dell'articolo **Book, S.A.**: _Why n − 1 in the formula for the sample standard deviation?_, The Two-Year College Mathematics Journal 10(5), 330–333 (1979
+
+## Fonti {.inverse background-color="#03A696"}
+
+- «Poisson: cibo cancerogeno»: Ott MG, Scharnweber HC, Langner RR.
+  [Mortality experience of 161 employees exposed to ethylene dibromide in
+  two production units](https://doi.org/10.1136/oem.37.2.163). _British
+  Journal of Industrial Medicine_ 1980;37(2):163-168.
+
+- Illustrazione «not normal»: [Allison Horst](https://allisonhorst.com).
 
 ## {.inverse .text-center .center background-color="#03A696"}
 

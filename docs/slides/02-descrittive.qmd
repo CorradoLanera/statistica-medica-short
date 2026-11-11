@@ -168,7 +168,7 @@ ages_db <- epic |>
   slice_head(n = 6) 
 
 ages_db |> 
-  kable(row.names = FALSE, caption = "Portion of \'EPIC-Norfolk cohort\' (Bain et al. 2015)")
+  kable(row.names = FALSE)
 ```
 
 :::
@@ -267,7 +267,7 @@ colonna una variabile.
 ::: {.small}
 
 ```{r, echo=FALSE, include=TRUE}
-kable(epic |> slice_head(n = 10), row.names = FALSE, caption = 'Portion of "EPIC-Norfolk cohort" (Bain et al. 2015)')
+kable(epic |> slice_head(n = 10), row.names = FALSE)
 ```
 
 :::
@@ -353,7 +353,7 @@ Riprendendo le età del nostro sotto-campione di soggetti, la loro media è
 
 ```{r smean_ages, echo = FALSE}
 ages_db |> 
-  kable(row.names = FALSE, caption = "Portion of \'EPIC-Norfolk cohort\' (Bain et al. 2015)")
+  kable(row.names = FALSE)
 ```
 
 :::
@@ -403,7 +403,7 @@ Nel nostro esempio
 ```{r median_ages, echo = FALSE}
 ages_db |> 
   arrange(age) |> 
-  kable(row.names = TRUE, caption = "Portion of \'EPIC-Norfolk cohort\' (Bain et al. 2015)")
+  kable(row.names = TRUE)
 ```
 
 :::
@@ -443,7 +443,7 @@ ages_db_dispari <- epic |>
   arrange(age)
 
 ages_db_dispari |> 
-  kable(row.names = TRUE, caption = "Portion of \'EPIC-Norfolk cohort\' (Bain et al. 2015)")
+  kable(row.names = TRUE)
 ```
 
 :::
@@ -482,7 +482,7 @@ dati con la **mediana** (e con i quartili, che vedremo più avanti).
 
 ::: {.column width="48%"}
 
-```{r, echo=FALSE, out.width="100%", fig.cap = "\'EPIC-Norfolk cohort\' (Bain et al. 2015)"}
+```{r, echo=FALSE, out.width="100%"}
 include_graphics("img/img2.png")
 ```
 
@@ -509,7 +509,7 @@ epic_sigarette <- epic |>
   count(sigarette)
 
 epic_sigarette |> 
-  kable(caption = "Portion of \'EPIC-Norfolk cohort\' (Bain et al. 2015)")
+  kable()
 ```
 
 :::
@@ -747,7 +747,7 @@ Si calcoli il $10$° e il $90$° percentile del campione del BMI su 10 soggetti.
 
 ::: {.column width="22%"}
 
-```{r, echo=FALSE, caption = "Portion of \'EPIC-Norfolk cohort\' (Bain et al. 2015)"}
+```{r, echo=FALSE}
 epic_10 <- epic |> 
   slice_head(n = 10) |> 
   select(id, bmi) |> 
@@ -793,7 +793,7 @@ Si calcoli il $20$° percentile del campione del BMI su 9 soggetti.
 
 ::: {.column width="22%"}
 
-```{r, echo=FALSE, caption = "Portion of \'EPIC-Norfolk cohort\' (Bain et al. 2015)"}
+```{r, echo=FALSE}
 epic_bmi_p2 <- epic |> 
   slice_head(n = 9) |> 
   select(id, bmi) |> 
@@ -871,7 +871,7 @@ dt <- data.frame(
 dt <- dt[, -3]
 colnames(dt)[[3]] <- "Freq"
 
-kable(dt, row.names = FALSE, caption = "\'EPIC-Norfolk cohort\' (Bain et al. 2015)")
+kable(dt, row.names = FALSE)
 ```
 
 ## misure [ponderate]{.orange}: media aritmetica ponderata
@@ -1109,6 +1109,17 @@ Per voi: <img src="img/bit.ly_statmed-sondaggio-grafici.png" width="300px" style
 
 - [Perché n − 1 nella formula della deviazione standard
 campionaria?](http://rdossena.altervista.org/Articoli/Book-Perch%E9%20n-1.pdf) di [Riccardo Dossena](http://rdossena.altervista.org) Traduzione dell'articolo **Book, S.A.**: _Why n − 1 in the formula for the sample standard deviation?_, The Two-Year College Mathematics Journal 10(5), 330–333 (1979)
+
+## Fonti {.inverse background-color="#03A696"}
+
+- Dati degli esempi della coorte EPIC-Norfolk: Bain LKM, Myint PK, Jennings A,
+  Lentjes MAH, Luben RN, Khaw KT, Wareham NJ, Welch AA. [The relationship
+  between dietary magnesium intake, stroke and its major risk factors,
+  blood pressure and cholesterol, in the EPIC-Norfolk
+  cohort](https://doi.org/10.1016/j.ijcard.2015.05.166). _International
+  Journal of Cardiology_ 2015;196:108-114.
+
+- Illustrazioni dei tipi di dati: [Allison Horst](https://allisonhorst.com).
 
 ## {.inverse .text-center .center background-color="#03A696"}
 
