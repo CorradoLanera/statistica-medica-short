@@ -1,7 +1,9 @@
 project:
   type: website
   output-dir: docs
-  post-render: dev/fix_mathml_accents.py
+  post-render:
+    - dev/fix_mathml_accents.py
+    - dev/fix_math_wrap.py
   render:
     - index.qmd
     - intro.qmd

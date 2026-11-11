@@ -570,6 +570,13 @@
     "text": "Risorse utili\n\nFundamentals of Biostatistics (8ª ed., Cengage, 2016) di Bernard Rosner, suggeriti i capitoli 4 e 5.\nPerché n − 1 nella formula della deviazione standard campionaria? di Riccardo Dossena Traduzione dell’articolo Book, S.A.: Why n − 1 in the formula for the sample standard deviation?, The Two-Year College Mathematics Journal 10(5), 330–333 (1979"
   },
   {
+    "objectID": "slides/04-distribuzioni.html#fonti",
+    "href": "slides/04-distribuzioni.html#fonti",
+    "title": "Statistica Medica",
+    "section": "Fonti",
+    "text": "Fonti\n\n«Poisson: cibo cancerogeno»: Ott MG, Scharnweber HC, Langner RR. Mortality experience of 161 employees exposed to ethylene dibromide in two production units. British Journal of Industrial Medicine 1980;37(2):163-168.\nIllustrazione «not normal»: Allison Horst."
+  },
+  {
     "objectID": "slides/04-distribuzioni.html#section",
     "href": "slides/04-distribuzioni.html#section",
     "title": "Statistica Medica",
@@ -974,6 +981,13 @@
     "title": "Statistica Medica",
     "section": "Risorse utili",
     "text": "Risorse utili\n\nBroman KW, Woo KH. Data Organization in Spreadsheets. The American Statistician 2018;72(1):2-10. Come organizzare i dati in un foglio di calcolo (dati tidy).\nWickham H. Tidy Data. Journal of Statistical Software 2014;59(10). L’articolo che ha dato il nome ai dati tidy.\nStatistica medica di Martin Bland, suggeriti capitoli 1, 4 e 5.\nFundamentals of Biostatistics (8ª ed., Cengage, 2016) di Bernard Rosner, suggerito il capitolo 2.\nPerché n − 1 nella formula della deviazione standard campionaria? di Riccardo Dossena Traduzione dell’articolo Book, S.A.: Why n − 1 in the formula for the sample standard deviation?, The Two-Year College Mathematics Journal 10(5), 330–333 (1979)"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#fonti",
+    "href": "slides/02-descrittive.html#fonti",
+    "title": "Statistica Medica",
+    "section": "Fonti",
+    "text": "Fonti\n\nDati degli esempi della coorte EPIC-Norfolk: Bain LKM, Myint PK, Jennings A, Lentjes MAH, Luben RN, Khaw KT, Wareham NJ, Welch AA. The relationship between dietary magnesium intake, stroke and its major risk factors, blood pressure and cholesterol, in the EPIC-Norfolk cohort. International Journal of Cardiology 2015;196:108-114.\nIllustrazioni dei tipi di dati: Allison Horst."
   },
   {
     "objectID": "slides/02-descrittive.html#section",
@@ -2101,19 +2115,5 @@
     "title": "Statistica Medica — Corrado Lanera",
     "section": "",
     "text": "Corrado Lanera\nE-mail: Corrado.Lanera@ubep.unipd.it\nRicevimento: bit.ly/statmed-cl-ricevimento\nPosit Cloud (RStudio online): bit.ly/statmed-cl-rstudio"
-  },
-  {
-    "objectID": "slides/02-descrittive.html#fonti",
-    "href": "slides/02-descrittive.html#fonti",
-    "title": "Statistica Medica",
-    "section": "Fonti",
-    "text": "Fonti\n\nDati degli esempi della coorte EPIC-Norfolk: Bain LKM, Myint PK, Jennings A, Lentjes MAH, Luben RN, Khaw KT, Wareham NJ, Welch AA. The relationship between dietary magnesium intake, stroke and its major risk factors, blood pressure and cholesterol, in the EPIC-Norfolk cohort. International Journal of Cardiology 2015;196:108-114.\nIllustrazioni dei tipi di dati: Allison Horst."
-  },
-  {
-    "objectID": "slides/04-distribuzioni.html#fonti",
-    "href": "slides/04-distribuzioni.html#fonti",
-    "title": "Statistica Medica",
-    "section": "Fonti",
-    "text": "Fonti\n\n«Poisson: cibo cancerogeno»: Ott MG, Scharnweber HC, Langner RR. Mortality experience of 161 employees exposed to ethylene dibromide in two production units. British Journal of Industrial Medicine 1980;37(2):163-168.\nIllustrazione «not normal»: Allison Horst."
   }
 ]
