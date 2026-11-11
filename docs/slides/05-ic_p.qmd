@@ -732,8 +732,35 @@ Con $\alpha < 0.5$, $z_{\alpha}$ è negativo: $c$ sta sotto $\mu_0$.
 
 ### Regioni
 
-```{r echo=FALSE, fig.align = 'center', out.width="70%"}
-knitr::include_graphics("img/img.jpg")
+```{r test-regioni, echo=FALSE, fig.align='center', out.width="75%", fig.width=8, fig.height=4.2}
+# stessi numeri di «Test: esempio»: mu0 = 120, sigma / sqrt(n) = 25 / 10, alpha = 0.05
+mu0 <- 120; mu1 <- 112; se <- 2.5
+cc <- mu0 + qnorm(0.05) * se
+x <- seq(103, 128, length.out = 500)
+op <- par(mar = c(5.5, 1, 1, 1))
+plot(x, dnorm(x, mu0, se), type = "l", lwd = 2, axes = FALSE, xlab = "", ylab = "",
+     ylim = c(0, 0.235), xlim = range(x))
+lines(x, dnorm(x, mu1, se), lwd = 2, col = "grey45")
+top <- dnorm(0) / se
+text(mu0, 0.205, expression("distribuzione di " * bar(x) * " sotto " * H[0]), cex = 1)
+text(mu0, 0.185, expression(N(mu[0], sigma^2 / n)), cex = 1)
+text(mu1, 0.205, expression("distribuzione di " * bar(x) * " sotto " * H[1]),
+     cex = 1, col = "grey30")
+text(mu1, 0.185, expression(N(mu[1], sigma^2 / n)), cex = 1, col = "grey30")
+arrows(c(mu1, mu0), 0.176, c(mu1, mu0), top + 0.004, length = 0.08,
+       col = c("grey30", "black"))
+segments(c(mu1, mu0), 0, c(mu1, mu0), top, lty = 3, col = c("grey45", "black"))
+segments(cc, 0, cc, 0.13, lwd = 2, col = "#E8702A")
+axis(1, at = c(mu1, cc, mu0), labels = expression(mu[1], c, mu[0]), cex.axis = 1.2,
+     col = NA, col.ticks = "black", pos = 0)
+abline(h = 0)
+text(cc, 0.142, expression(c == mu[0] + z[alpha] * sigma / sqrt(n)), col = "#E8702A")
+arrows(cc - 0.3, -0.05, min(x) + 0.5, -0.05, length = 0.08, xpd = TRUE)
+arrows(cc + 0.3, -0.05, max(x) - 0.5, -0.05, length = 0.08, xpd = TRUE)
+segments(cc, -0.043, cc, -0.057, xpd = TRUE)
+text((min(x) + cc) / 2, -0.066, "regione di rifiuto", xpd = TRUE)
+text((cc + max(x)) / 2, -0.066, "regione di non rifiuto", xpd = TRUE)
+par(op)
 ```
 
 - **regione di rifiuto**: i valori di $\bar{x}$ per cui si rifiuta $H_0$ ($\bar{x} < c$)
