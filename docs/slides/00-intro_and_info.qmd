@@ -112,33 +112,14 @@ licenza, e senza ulteriori restrizioni.
 
 ## [Agenda]{.orange}
 
-:::: {.columns}
-
-::: {.column width="48%"}
-
 + intro al corso
-
-+ statistica descrittiva - prerequisiti, definizioni, localizzazione, dispersione / distribuzione, grafici
-  
++ statistica descrittiva: prerequisiti, definizioni, localizzazione, dispersione / distribuzione, grafici
 + fondamenti di probabilità
-
 + rischi, test di screening: sensibilità e specificità, valori predittivi positivo e negativo, teorema di Bayes (anche per due test in sequenza)
-
-:::
-
-::: {.column width="48%"}
-
 + distribuzioni: modelli discreti
-
 + distribuzioni: modelli continui
-
 + intervalli di confidenza e p-value
-  
 + revisione e simulazione completa d'esame
-
-:::
-
-::::
 
 ## [Supporto]{.orange}
 
