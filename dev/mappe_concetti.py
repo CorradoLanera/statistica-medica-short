@@ -199,7 +199,7 @@ def main():
             edges = reduce(edges)
             nodes = [node(i) for i in S] + [node(i) for i in ext_same] + ["k_" + node(k) for k in ext_other]
             g = ["flowchart " + direction(nodes, edges)]
-            for r in sorted(ext_same, key=lambda r: C[r]["section"]):
+            for r in sorted(ext_same, key=lambda r: (C[r]["section"], r)):
                 g.append(f"  {node(r)}[{q(C[r]['short'])}]:::prev")
             for k in sorted(ext_other):
                 g.append(f"  k_{node(k)}[{q(chunk[k]['label'] + ' · ' + chunk[k]['deck'])}]:::prev")

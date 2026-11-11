@@ -8,14 +8,14 @@
 %%| echo: false
 %%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart LR
-  n_variabile_discreta["Discreta"]:::prev
-  n_variabile_continua["Continua"]:::prev
   n_tipo_di_variabile["Tipo di variabile"]:::prev
-  n_frequenza_relativa["Frequenza relativa"]:::prev
-  n_frequenza_assoluta["Frequenza"]:::prev
-  n_quartile["Quartile"]:::prev
+  n_variabile_continua["Continua"]:::prev
+  n_variabile_discreta["Discreta"]:::prev
   n_accorpamento_in_classi["Classi"]:::prev
+  n_frequenza_assoluta["Frequenza"]:::prev
+  n_frequenza_relativa["Frequenza relativa"]:::prev
   n_mediana["Mediana"]:::prev
+  n_quartile["Quartile"]:::prev
   n_istogramma["Istogramma"]:::cur
   n_densita_di_frequenza["Densità di frequenza"]:::cur
   n_boxplot["Box-plot"]:::cur

@@ -8,9 +8,9 @@
 %%| echo: false
 %%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart LR
-  n_variabile_discreta["Discreta"]:::prev
-  n_variabile_continua["Continua"]:::prev
   n_sommatoria["Sommatoria Σ"]:::prev
+  n_variabile_continua["Continua"]:::prev
+  n_variabile_discreta["Discreta"]:::prev
   n_misura_di_centralita["Misura di centralità"]:::cur
   n_campione["Campione"]:::cur
   n_media_aritmetica["Media"]:::cur

@@ -8,9 +8,9 @@
 %%| echo: false
 %%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart TB
-  n_r_motore_di_calcolo["R"]:::prev
-  n_pacchetto_r["Pacchetto"]:::prev
   n_codice_r["Codice R"]:::prev
+  n_pacchetto_r["Pacchetto"]:::prev
+  n_r_motore_di_calcolo["R"]:::prev
   k_n_02_unita["Unità, variabili, tabelle · 02"]:::prev
   n_installazione_di_r["Installare R"]:::opt
   n_aritmetica_in_r["Aritmetica"]:::opt

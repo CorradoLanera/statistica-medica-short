@@ -8,13 +8,13 @@
 %%| echo: false
 %%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart LR
-  n_valore_atteso["Valore atteso E(X)"]:::prev
   n_distribuzione_cumulativa["Cumulata F(x)"]:::prev
-  n_proprieta_della_funzione_di_massa["Proprietà della massa"]:::prev
+  n_distribuzione_di_probabilita["Distribuzione di probabilità"]:::prev
   n_funzione_matematica["Funzione"]:::prev
+  n_proprieta_della_funzione_di_massa["Proprietà della massa"]:::prev
+  n_valore_atteso["Valore atteso E(X)"]:::prev
   n_variabile_casuale_continua["V.c. continua"]:::prev
   n_varianza_di_variabile_casuale["Varianza Var(X)"]:::prev
-  n_distribuzione_di_probabilita["Distribuzione di probabilità"]:::prev
   k_n_02_centralita["Centralità · 02"]:::prev
   k_n_02_percentili["Percentili e quartili · 02"]:::prev
   k_n_02_unita["Unità, variabili, tabelle · 02"]:::prev

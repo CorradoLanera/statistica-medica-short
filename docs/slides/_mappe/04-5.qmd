@@ -12,9 +12,9 @@ flowchart LR
   n_funzione_di_variabile_casuale["Funzione di v.c."]:::prev
   n_costante_di_nepero["Costante e"]:::prev
   n_funzione_di_densita["Densità"]:::prev
+  n_parametro["Parametro"]:::prev
   n_percentile_di_distribuzione["Percentile di distribuzione"]:::prev
   n_valore_atteso_e_varianza_continui["E e Var (continue)"]:::prev
-  n_parametro["Parametro"]:::prev
   k_n_03_operazioni["Operazioni fra eventi · 03"]:::prev
   k_n_03_somma_prodotto["Somma, prodotto, indipendenza · 03"]:::prev
   n_distribuzione_normale["Normale"]:::cur
