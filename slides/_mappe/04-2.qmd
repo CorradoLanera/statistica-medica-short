@@ -6,7 +6,7 @@
 
 ```{mermaid}
 %%| echo: false
-%%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
+%%{init: {"htmlLabels": false, "flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart LR
   n_funzione_di_massa["Funzione di massa"]:::prev
   n_valore_atteso["Valore atteso E(X)"]:::prev
@@ -55,14 +55,14 @@ Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle
 
 ::: {.mappa-indice}
 
-- [Schema binomiale](#/binomiale-struttura)
-- [Fattoriale n!](#/coefficiente-binomiale)
-- [Coefficiente binomiale](#/coefficiente-binomiale)
-- [Binomiale](#/distribuzione-binomiale-probabilità)
-- [Linearità di E(X)](#/binomiale-valore-atteso-e-varianza)
-- [Var della somma](#/binomiale-valore-atteso-e-varianza)
-- [E e Var della binomiale](#/binomiale-valore-atteso-e-varianza)
-- [Forma della binomiale](#/esperimenti-grafico)
+- [Schema binomiale](#binomiale-struttura)
+- [Fattoriale n!](#coefficiente-binomiale)
+- [Coefficiente binomiale](#coefficiente-binomiale)
+- [Binomiale](#distribuzione-binomiale-probabilità)
+- [Linearità di E(X)](#binomiale-valore-atteso-e-varianza)
+- [Var della somma](#binomiale-valore-atteso-e-varianza)
+- [E e Var della binomiale](#binomiale-valore-atteso-e-varianza)
+- [Forma della binomiale](#esperimenti-grafico)
 
 :::
 

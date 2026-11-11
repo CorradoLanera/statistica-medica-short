@@ -54,8 +54,12 @@ MIN_SECTION = 3  # sotto questa soglia i concetti stanno solo nella mappa del de
 # carattere di sistema per le etichette (lo stesso che impone statmed.scss):
 # con il carattere web delle slide Mermaid le misura prima che sia caricato e
 # poi le taglia
+# htmlLabels false: con le etichette HTML Mermaid misura i riquadri con
+# getBoundingClientRect, che sente la scala di reveal.js; al telefono le slide
+# sono rimpicciolite e i riquadri uscivano stretti, con il testo tagliato.
+# Le etichette SVG si misurano in coordinate proprie, a ogni scala.
 INIT = (
-    '%%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, '
+    '%%{init: {"htmlLabels": false, "flowchart": {"padding": 12, "wrappingWidth": 320}, '
     '"themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%\n'
 )
 
@@ -138,8 +142,8 @@ def direction(nodes, edges):
     return "LR" if lr >= tb else "TB"
 
 
-def mermaid(lines):
-    return "```{mermaid}\n%%| echo: false\n" + INIT + "\n".join(lines) + "\n```\n"
+def mermaid(lines, init=INIT):
+    return "```{mermaid}\n%%| echo: false\n" + init + "\n".join(lines) + "\n```\n"
 
 
 def legend(extra=""):
@@ -170,7 +174,7 @@ def main():
             if key not in ids:
                 missing.append(f"{d} {c['id']}: slide «{c['slide']}» non trovata")
                 return c["short"]
-            return f"[{c['short']}](#/{ids[key]})"
+            return f"[{c['short']}](#{ids[key]})"  # reveal.js aggiunge da sé la barra di #/
 
         by_sec = defaultdict(list)
         for c in mine:
@@ -279,7 +283,10 @@ def main():
         g.append("  end")
     g += [f"  {u} --> {v}" for u, v in edges]
     g += ["  " + s for s in STYLE]
-    (OUT / "corso.qmd").write_text(mermaid(g), encoding="utf-8")
+    # la mappa del corso sta in una pagina, non in una slide: niente scala di
+    # reveal.js, e con le etichette SVG i sottografi si sovrappongono
+    init = INIT.replace('"htmlLabels": false, ', "")
+    (OUT / "corso.qmd").write_text(mermaid(g, init), encoding="utf-8")
 
     for d, files in deck_files.items():
         print(d, " ".join(files))

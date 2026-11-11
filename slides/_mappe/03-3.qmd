@@ -6,7 +6,7 @@
 
 ```{mermaid}
 %%| echo: false
-%%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
+%%{init: {"htmlLabels": false, "flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart LR
   n_additivita_eventi_incompatibili["Somma per incompatibili"]:::prev
   n_eventi_incompatibili["Eventi incompatibili"]:::prev
@@ -68,21 +68,21 @@ Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle
 
 ::: {.mappa-indice}
 
-- [Probabilità condizionata](#/condizionamento-definizione)
-- [Regola del prodotto](#/condizionamento-proprietà)
-- [Probabilità totali (2 eventi)](#/condizionamento-proprietà)
-- [Prevalenza](#/condizionamento-esempio)
-- [Eventi esaustivi](#/teorema-delle-probabilità-totali)
-- [Probabilità totali](#/teorema-delle-probabilità-totali)
-- [Rischio relativo](#/rischio-relativo)
-- [RR e gonfiaggio](#/rischio-relativo-attenzione-al-gonfiaggio)
-- [Test di screening](#/test-di-screening-valori-predittivi)
-- [VPP](#/test-di-screening-valori-predittivi)
-- [VPN](#/test-di-screening-valori-predittivi)
-- [Sensibilità](#/test-di-screening-sensibilità-e-specificità)
-- [Specificità](#/test-di-screening-sensibilità-e-specificità)
-- [Falso positivo](#/test-di-screening-sensibilità-e-specificità)
-- [Falso negativo](#/test-di-screening-sensibilità-e-specificità)
+- [Probabilità condizionata](#condizionamento-definizione)
+- [Regola del prodotto](#condizionamento-proprietà)
+- [Probabilità totali (2 eventi)](#condizionamento-proprietà)
+- [Prevalenza](#condizionamento-esempio)
+- [Eventi esaustivi](#teorema-delle-probabilità-totali)
+- [Probabilità totali](#teorema-delle-probabilità-totali)
+- [Rischio relativo](#rischio-relativo)
+- [RR e gonfiaggio](#rischio-relativo-attenzione-al-gonfiaggio)
+- [Test di screening](#test-di-screening-valori-predittivi)
+- [VPP](#test-di-screening-valori-predittivi)
+- [VPN](#test-di-screening-valori-predittivi)
+- [Sensibilità](#test-di-screening-sensibilità-e-specificità)
+- [Specificità](#test-di-screening-sensibilità-e-specificità)
+- [Falso positivo](#test-di-screening-sensibilità-e-specificità)
+- [Falso negativo](#test-di-screening-sensibilità-e-specificità)
 
 :::
 

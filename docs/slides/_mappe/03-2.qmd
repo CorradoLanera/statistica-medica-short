@@ -6,7 +6,7 @@
 
 ```{mermaid}
 %%| echo: false
-%%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
+%%{init: {"htmlLabels": false, "flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart LR
   n_additivita_eventi_incompatibili["Somma per incompatibili"]:::prev
   n_evento["Evento"]:::prev
@@ -53,13 +53,13 @@ Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle
 
 ::: {.mappa-indice}
 
-- [Eventi indipendenti](#/prodotto-indipendenza)
-- [Prodotto (indipendenti)](#/prodotto-indipendenza)
-- [Notazione + e −](#/teorema-della-somma-es.)
-- [Regola della somma](#/teorema-della-somma)
-- [Indipendenza e complementare](#/somma-indipendenza)
-- [Unione come somma disgiunta](#/somma-indipendenza)
-- [Somma per indipendenti](#/somma-indipendenza)
+- [Eventi indipendenti](#prodotto-indipendenza)
+- [Prodotto (indipendenti)](#prodotto-indipendenza)
+- [Notazione + e −](#teorema-della-somma-es.)
+- [Regola della somma](#teorema-della-somma)
+- [Indipendenza e complementare](#somma-indipendenza)
+- [Unione come somma disgiunta](#somma-indipendenza)
+- [Somma per indipendenti](#somma-indipendenza)
 
 :::
 

@@ -6,7 +6,7 @@
 
 ```{mermaid}
 %%| echo: false
-%%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
+%%{init: {"htmlLabels": false, "flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart TB
   n_codice_r["Codice R"]:::prev
   n_pacchetto_r["Pacchetto"]:::prev
@@ -57,19 +57,19 @@ Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle
 
 ::: {.mappa-indice}
 
-- [Installare R](#/installazione) (facoltativo)
-- [Aritmetica](#/algebra-elementare) (facoltativo)
-- [Tipi di dato](#/vettori) (facoltativo)
-- [Vettore](#/vettori) (facoltativo)
-- [Assegnamento](#/assegnamento-memorizzazione) (facoltativo)
-- [Confronti](#/confronti-booleani) (facoltativo)
-- [Operatori logici](#/logica-booleana) (facoltativo)
-- [Vettorizzazione](#/logica-booleana-vettoriale) (facoltativo)
-- [which()](#/logica-booleana-vettoriale) (facoltativo)
-- [NA](#/logica-booleana-vettoriale) (facoltativo)
-- [Dataframe](#/dataframe) (facoltativo)
-- [Fattore](#/dataframe) (facoltativo)
-- [Caricare pacchetti](#/pacchetti) (facoltativo)
+- [Installare R](#installazione) (facoltativo)
+- [Aritmetica](#algebra-elementare) (facoltativo)
+- [Tipi di dato](#vettori) (facoltativo)
+- [Vettore](#vettori) (facoltativo)
+- [Assegnamento](#assegnamento-memorizzazione) (facoltativo)
+- [Confronti](#confronti-booleani) (facoltativo)
+- [Operatori logici](#logica-booleana) (facoltativo)
+- [Vettorizzazione](#logica-booleana-vettoriale) (facoltativo)
+- [which()](#logica-booleana-vettoriale) (facoltativo)
+- [NA](#logica-booleana-vettoriale) (facoltativo)
+- [Dataframe](#dataframe) (facoltativo)
+- [Fattore](#dataframe) (facoltativo)
+- [Caricare pacchetti](#pacchetti) (facoltativo)
 
 :::
 

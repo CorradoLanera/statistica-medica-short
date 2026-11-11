@@ -6,7 +6,7 @@
 
 ```{mermaid}
 %%| echo: false
-%%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
+%%{init: {"htmlLabels": false, "flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart LR
   n_distribuzione_campionaria["Distribuzione campionaria"]:::prev
   n_errore_standard["Errore standard"]:::prev
@@ -51,12 +51,12 @@ Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle
 
 ::: {.mappa-indice}
 
-- [Livello di confidenza](#/ic-osservazioni-confidenza)
-- [Interpretazione dell'IC](#/ic-osservazioni-confidenza)
-- [Campione rappresentativo](#/ic-osservazioni-confidenza)
-- [IC a livello 1−α](#/ic-osservazioni-unicità)
-- [Ampiezza dell'IC](#/ic-osservazioni-ampiezza)
-- [Precisione delle misure](#/ic-osservazioni-sotto-controllo)
+- [Livello di confidenza](#ic-osservazioni-confidenza)
+- [Interpretazione dell'IC](#ic-osservazioni-confidenza)
+- [Campione rappresentativo](#ic-osservazioni-confidenza)
+- [IC a livello 1−α](#ic-osservazioni-unicità)
+- [Ampiezza dell'IC](#ic-osservazioni-ampiezza)
+- [Precisione delle misure](#ic-osservazioni-sotto-controllo)
 
 :::
 

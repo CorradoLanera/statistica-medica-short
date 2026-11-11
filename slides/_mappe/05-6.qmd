@@ -6,7 +6,7 @@
 
 ```{mermaid}
 %%| echo: false
-%%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
+%%{init: {"htmlLabels": false, "flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart LR
   n_distribuzione_campionaria["Distribuzione campionaria"]:::prev
   n_errore_standard["Errore standard"]:::prev
@@ -112,30 +112,30 @@ Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle
 
 ::: {.mappa-indice}
 
-- [IC e valore di riferimento](#/un-problema-colesterolo-e-familiarità)
-- [Ipotesi nulla H₀](#/ipotesi-definizioni)
-- [Ipotesi alternativa H₁](#/ipotesi-definizioni)
-- [Test d'ipotesi](#/ipotesi-definizioni)
-- [Rifiutare H₀ o no](#/ipotesi-decisioni)
-- [Errore di I tipo](#/ipotesi-decisioni)
-- [Errore di II tipo](#/ipotesi-decisioni)
-- [Significatività α](#/ipotesi-decisioni)
-- [Potenza 1−β](#/ipotesi-decisioni)
-- [Statistica test](#/test-media-di-una-normale)
-- [Valore critico](#/test-media-di-una-normale)
-- [Regione di rifiuto](#/test-media-di-una-normale)
-- [Test sulla media, σ nota](#/test-media-di-una-normale)
-- [Statistica z](#/test-esempio)
-- [p-value](#/p-value)
-- [Calcolo del p-value](#/p-value)
-- [Test a una coda](#/test-una-o-due-code)
-- [Test a due code](#/test-una-o-due-code)
-- [p-value a due code](#/test-a-due-code-p-value)
-- [Test t sulla media](#/test-varianza-non-nota)
-- [Test e IC](#/p-value-e-ic)
-- [p-value non è P(H₀)](#/leggere-un-p-value-che-cosa-misura)
-- [Non significativo ≠ nessun effetto](#/leggere-un-p-value-se-non-è-significativo)
-- [Significativo ≠ importante](#/leggere-un-p-value-se-è-significativo)
+- [IC e valore di riferimento](#un-problema-colesterolo-e-familiarità)
+- [Ipotesi nulla H₀](#ipotesi-definizioni)
+- [Ipotesi alternativa H₁](#ipotesi-definizioni)
+- [Test d'ipotesi](#ipotesi-definizioni)
+- [Rifiutare H₀ o no](#ipotesi-decisioni)
+- [Errore di I tipo](#ipotesi-decisioni)
+- [Errore di II tipo](#ipotesi-decisioni)
+- [Significatività α](#ipotesi-decisioni)
+- [Potenza 1−β](#ipotesi-decisioni)
+- [Statistica test](#test-media-di-una-normale)
+- [Valore critico](#test-media-di-una-normale)
+- [Regione di rifiuto](#test-media-di-una-normale)
+- [Test sulla media, σ nota](#test-media-di-una-normale)
+- [Statistica z](#test-esempio)
+- [p-value](#p-value)
+- [Calcolo del p-value](#p-value)
+- [Test a una coda](#test-una-o-due-code)
+- [Test a due code](#test-una-o-due-code)
+- [p-value a due code](#test-a-due-code-p-value)
+- [Test t sulla media](#test-varianza-non-nota)
+- [Test e IC](#p-value-e-ic)
+- [p-value non è P(H₀)](#leggere-un-p-value-che-cosa-misura)
+- [Non significativo ≠ nessun effetto](#leggere-un-p-value-se-non-è-significativo)
+- [Significativo ≠ importante](#leggere-un-p-value-se-è-significativo)
 
 :::
 

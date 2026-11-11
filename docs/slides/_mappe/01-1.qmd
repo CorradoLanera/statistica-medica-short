@@ -6,7 +6,7 @@
 
 ```{mermaid}
 %%| echo: false
-%%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
+%%{init: {"htmlLabels": false, "flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart LR
   n_r_motore_di_calcolo["R"]:::opt
   n_analisi_grafici_report["Analisi, grafici, report"]:::opt
@@ -42,15 +42,15 @@ Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle
 
 ::: {.mappa-indice}
 
-- [R](#/panoramica) (facoltativo)
-- [Analisi, grafici, report](#/panoramica) (facoltativo)
-- [Codice R](#/panoramica) (facoltativo)
-- [Pacchetto](#/panoramica) (facoltativo)
-- [RStudio](#/panoramica) (facoltativo)
-- [Editor](#/panoramica) (facoltativo)
-- [Console](#/panoramica) (facoltativo)
-- [Viewer](#/panoramica) (facoltativo)
-- [Navigatore file](#/panoramica) (facoltativo)
+- [R](#panoramica) (facoltativo)
+- [Analisi, grafici, report](#panoramica) (facoltativo)
+- [Codice R](#panoramica) (facoltativo)
+- [Pacchetto](#panoramica) (facoltativo)
+- [RStudio](#panoramica) (facoltativo)
+- [Editor](#panoramica) (facoltativo)
+- [Console](#panoramica) (facoltativo)
+- [Viewer](#panoramica) (facoltativo)
+- [Navigatore file](#panoramica) (facoltativo)
 
 :::
 

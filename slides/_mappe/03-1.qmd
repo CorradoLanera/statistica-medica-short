@@ -6,7 +6,7 @@
 
 ```{mermaid}
 %%| echo: false
-%%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
+%%{init: {"htmlLabels": false, "flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart LR
   k_n_02_classi["Classi e medie ponderate · 02"]:::prev
   n_esperimento_casuale["Esperimento casuale"]:::cur
@@ -49,18 +49,18 @@ Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle
 
 ::: {.mappa-indice}
 
-- [Esperimento casuale](#/definizione-evento-e-probabilità)
-- [Spazio degli eventi Ω](#/definizione-evento-e-probabilità)
-- [Evento](#/definizione-evento-e-probabilità)
-- [Probabilità](#/definizione-evento-e-probabilità)
-- [0 ≤ P(E) ≤ 1](#/proprietà-eventi-mutuamente-esclusivi)
-- [Somma per incompatibili](#/proprietà-eventi-mutuamente-esclusivi)
-- [Notazione {…}](#/notazione-unione)
-- [Unione (∪)](#/notazione-unione)
-- [Diagramma di Venn](#/eventi-e-spazio-omega)
-- [Intersezione (∩)](#/notazione-intersezione)
-- [Complementare](#/notazione-complemento)
-- [Eventi incompatibili](#/proprietà-eventi-mutuamente-esclusivi-1)
+- [Esperimento casuale](#definizione-evento-e-probabilità)
+- [Spazio degli eventi Ω](#definizione-evento-e-probabilità)
+- [Evento](#definizione-evento-e-probabilità)
+- [Probabilità](#definizione-evento-e-probabilità)
+- [0 ≤ P(E) ≤ 1](#proprietà-eventi-mutuamente-esclusivi)
+- [Somma per incompatibili](#proprietà-eventi-mutuamente-esclusivi)
+- [Notazione {…}](#notazione-unione)
+- [Unione (∪)](#notazione-unione)
+- [Diagramma di Venn](#eventi-e-spazio-omega)
+- [Intersezione (∩)](#notazione-intersezione)
+- [Complementare](#notazione-complemento)
+- [Eventi incompatibili](#proprietà-eventi-mutuamente-esclusivi-1)
 
 :::
 

@@ -6,7 +6,7 @@
 
 ```{mermaid}
 %%| echo: false
-%%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
+%%{init: {"htmlLabels": false, "flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart LR
   k_n_02_classi["Classi e medie ponderate · 02"]:::prev
   k_n_02_notazioni["Indici e sommatoria · 02"]:::prev
@@ -62,17 +62,17 @@ Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle
 
 ::: {.mappa-indice}
 
-- [Variabile casuale](#/richiamo-variabile-casuale)
-- [V.c. discreta](#/richiamo-variabile-casuale)
-- [V.c. continua](#/richiamo-variabile-casuale)
-- [Funzione](#/richiamo-variabile-casuale)
-- [Funzione di v.c.](#/richiamo-variabile-casuale)
-- [Distribuzione di probabilità](#/modelli-discreti)
-- [Funzione di massa](#/modelli-discreti-massa)
-- [Proprietà della massa](#/modelli-discreti-massa)
-- [Cumulata F(x)](#/modelli-discreti-massa)
-- [Valore atteso E(X)](#/modelli-discreti-valore-atteso)
-- [Varianza Var(X)](#/modelli-discreti-varianza)
+- [Variabile casuale](#richiamo-variabile-casuale)
+- [V.c. discreta](#richiamo-variabile-casuale)
+- [V.c. continua](#richiamo-variabile-casuale)
+- [Funzione](#richiamo-variabile-casuale)
+- [Funzione di v.c.](#richiamo-variabile-casuale)
+- [Distribuzione di probabilità](#modelli-discreti)
+- [Funzione di massa](#modelli-discreti-massa)
+- [Proprietà della massa](#modelli-discreti-massa)
+- [Cumulata F(x)](#modelli-discreti-massa)
+- [Valore atteso E(X)](#modelli-discreti-valore-atteso)
+- [Varianza Var(X)](#modelli-discreti-varianza)
 
 :::
 

@@ -6,7 +6,7 @@
 
 ```{mermaid}
 %%| echo: false
-%%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
+%%{init: {"htmlLabels": false, "flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart LR
   n_campione_casuale_semplice["Campione casuale semplice"]:::prev
   n_popolazione_target["Popolazione target"]:::prev
@@ -66,15 +66,15 @@ Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle
 
 ::: {.mappa-indice}
 
-- [Stima puntuale](#/stima-puntuale-media)
-- [Stimatore](#/stima-puntuale-media)
-- [Numerosità n](#/stima-puntuale-media)
-- [Distribuzione campionaria](#/stima-puntuale-media)
-- [Stimatore non distorto](#/stima-puntuale-media)
-- [Var(aX)](#/stima-puntuale-errore-standard)
-- [Varianza della media](#/stima-puntuale-errore-standard)
-- [Errore standard](#/stima-puntuale-errore-standard)
-- [Limite centrale](#/teorema-del-limite-centrale)
+- [Stima puntuale](#stima-puntuale-media)
+- [Stimatore](#stima-puntuale-media)
+- [Numerosità n](#stima-puntuale-media)
+- [Distribuzione campionaria](#stima-puntuale-media)
+- [Stimatore non distorto](#stima-puntuale-media)
+- [Var(aX)](#stima-puntuale-errore-standard)
+- [Varianza della media](#stima-puntuale-errore-standard)
+- [Errore standard](#stima-puntuale-errore-standard)
+- [Limite centrale](#teorema-del-limite-centrale)
 
 :::
 

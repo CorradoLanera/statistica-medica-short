@@ -6,7 +6,7 @@
 
 ```{mermaid}
 %%| echo: false
-%%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
+%%{init: {"htmlLabels": false, "flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart LR
   n_sommatoria["Sommatoria Σ"]:::prev
   n_variabile_continua["Continua"]:::prev
@@ -74,28 +74,28 @@ Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle
 
 ::: {.mappa-indice}
 
-- [Misura di centralità](#/misure-di-centralità-media)
-- [Campione](#/misure-di-centralità-media)
-- [Media](#/misure-di-centralità-media)
-- [Media e valori estremi](#/misure-di-centralità-media)
-- [Mediana](#/misure-di-centralità-mediana)
-- [Mediana e valori estremi](#/mediana-n-pari)
-- [Media o mediana?](#/media-o-mediana)
-- [Frequenza](#/misure-di-centralità-moda)
-- [Moda](#/misure-di-centralità-moda)
-- [Misura di variabilità](#/misure-di-variabilità)
-- [Range](#/misure-di-variabilità-range-massimale)
-- [Varianza](#/misure-di-variabilità-varianza-campionaria)
-- [Deviazione standard](#/misure-di-variabilità-varianza-campionaria)
-- [Scarti a somma zero](#/misure-di-variabilità-varianza-campionaria)
-- [Varianza: formula alternativa](#/varianza-formula-alternativa)
-- [Coefficiente di variazione](#/misure-di-variabilità-coefficiente-di-variazione)
-- [CV e unità di misura](#/cv-non-effetto-scala)
-- [Percentile](#/percentili)
-- [Quartile](#/percentili)
-- [Classi](#/accorpamenti)
-- [Frequenza relativa](#/accorpamenti)
-- [Media ponderata](#/misure-ponderate-media-aritmetica-ponderata)
+- [Misura di centralità](#misure-di-centralità-media)
+- [Campione](#misure-di-centralità-media)
+- [Media](#misure-di-centralità-media)
+- [Media e valori estremi](#misure-di-centralità-media)
+- [Mediana](#misure-di-centralità-mediana)
+- [Mediana e valori estremi](#mediana-n-pari)
+- [Media o mediana?](#media-o-mediana)
+- [Frequenza](#misure-di-centralità-moda)
+- [Moda](#misure-di-centralità-moda)
+- [Misura di variabilità](#misure-di-variabilità)
+- [Range](#misure-di-variabilità-range-massimale)
+- [Varianza](#misure-di-variabilità-varianza-campionaria)
+- [Deviazione standard](#misure-di-variabilità-varianza-campionaria)
+- [Scarti a somma zero](#misure-di-variabilità-varianza-campionaria)
+- [Varianza: formula alternativa](#varianza-formula-alternativa)
+- [Coefficiente di variazione](#misure-di-variabilità-coefficiente-di-variazione)
+- [CV e unità di misura](#cv-non-effetto-scala)
+- [Percentile](#percentili)
+- [Quartile](#percentili)
+- [Classi](#accorpamenti)
+- [Frequenza relativa](#accorpamenti)
+- [Media ponderata](#misure-ponderate-media-aritmetica-ponderata)
 
 :::
 

@@ -6,7 +6,7 @@
 
 ```{mermaid}
 %%| echo: false
-%%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
+%%{init: {"htmlLabels": false, "flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart TB
   k_n_01_r_rstudio["R e RStudio (12)"]:::opt
   k_n_01_r_oggetti["Oggetti e operazioni (6)"]:::opt
@@ -31,10 +31,10 @@ Ogni freccia va da un concetto a quelli che lo usano. Ogni riquadro è un blocco
 
 ::: {.mappa-indice .mappa-blocchi}
 
-- **R e RStudio**: [R](#/panoramica), [Analisi, grafici, report](#/panoramica), [Codice R](#/panoramica), [Pacchetto](#/panoramica), [RStudio](#/panoramica), [Editor](#/panoramica), [Console](#/panoramica), [Viewer](#/panoramica), [Navigatore file](#/panoramica), [Posit Cloud](#/cosa-faremo), [Installare R](#/installazione), [Installare RStudio](#/installazione-1)
-- **Oggetti e operazioni**: [Aritmetica](#/algebra-elementare), [Tipi di dato](#/vettori), [Vettore](#/vettori), [Assegnamento](#/assegnamento-memorizzazione), [Vettorizzazione](#/logica-booleana-vettoriale), [which()](#/logica-booleana-vettoriale)
-- **Confronti e logica**: [Confronti](#/confronti-booleani), [Operatori logici](#/logica-booleana), [NA](#/logica-booleana-vettoriale)
-- **Dati e pacchetti**: [Dataframe](#/dataframe), [Fattore](#/dataframe), [Caricare pacchetti](#/pacchetti)
+- **R e RStudio**: [R](#panoramica), [Analisi, grafici, report](#panoramica), [Codice R](#panoramica), [Pacchetto](#panoramica), [RStudio](#panoramica), [Editor](#panoramica), [Console](#panoramica), [Viewer](#panoramica), [Navigatore file](#panoramica), [Posit Cloud](#cosa-faremo), [Installare R](#installazione), [Installare RStudio](#installazione-1)
+- **Oggetti e operazioni**: [Aritmetica](#algebra-elementare), [Tipi di dato](#vettori), [Vettore](#vettori), [Assegnamento](#assegnamento-memorizzazione), [Vettorizzazione](#logica-booleana-vettoriale), [which()](#logica-booleana-vettoriale)
+- **Confronti e logica**: [Confronti](#confronti-booleani), [Operatori logici](#logica-booleana), [NA](#logica-booleana-vettoriale)
+- **Dati e pacchetti**: [Dataframe](#dataframe), [Fattore](#dataframe), [Caricare pacchetti](#pacchetti)
 
 :::
 

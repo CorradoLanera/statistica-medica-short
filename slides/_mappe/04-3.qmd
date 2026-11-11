@@ -6,7 +6,7 @@
 
 ```{mermaid}
 %%| echo: false
-%%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
+%%{init: {"htmlLabels": false, "flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart LR
   n_funzione_di_massa["Funzione di massa"]:::prev
   n_valore_atteso["Valore atteso E(X)"]:::prev
@@ -61,14 +61,14 @@ Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle
 
 ::: {.mappa-indice}
 
-- [Tasso λ](#/poisson-struttura)
-- [Processo di Poisson](#/poisson-struttura)
-- [Costante e](#/distribuzione-di-poisson-probabilità)
-- [Poisson](#/distribuzione-di-poisson-probabilità)
-- [E e Var della Poisson](#/poisson-valore-atteso-e-varianza)
-- [Probabilità di coda](#/poisson-cibo-cancerogeno)
-- [Poisson per la binomiale](#/poisson-approssimazione)
-- [P(almeno k)](#/distribuzione-di-poisson-1)
+- [Tasso λ](#poisson-struttura)
+- [Processo di Poisson](#poisson-struttura)
+- [Costante e](#distribuzione-di-poisson-probabilità)
+- [Poisson](#distribuzione-di-poisson-probabilità)
+- [E e Var della Poisson](#poisson-valore-atteso-e-varianza)
+- [Probabilità di coda](#poisson-cibo-cancerogeno)
+- [Poisson per la binomiale](#poisson-approssimazione)
+- [P(almeno k)](#distribuzione-di-poisson-1)
 
 :::
 

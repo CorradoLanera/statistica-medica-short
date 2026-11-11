@@ -6,7 +6,7 @@
 
 ```{mermaid}
 %%| echo: false
-%%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
+%%{init: {"htmlLabels": false, "flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart TB
   n_notazione_con_indici["Indici (x_i)"]:::cur
   n_sommatoria["Sommatoria Σ"]:::cur
@@ -51,20 +51,20 @@ Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle
 
 ::: {.mappa-indice}
 
-- [Indici (x_i)](#/notazioni-sommatoria)
-- [Sommatoria Σ](#/notazioni-sommatoria)
-- [Appartenenza (∈)](#/notazioni-sommatoria)
-- [Unità statistica](#/la-stessa-tabella-tidy)
-- [Variabile](#/una-tabella-disordinata)
-- [Dati tidy](#/dati-tidy-ordinati)
-- [Tipo di variabile](#/tipologie-di-dati)
-- [Continua](#/tipologie-di-dati)
-- [Discreta](#/tipologie-di-dati)
-- [Cardinale](#/tipologie-di-dati-in-sintesi)
-- [Un numero non basta](#/tipologie-di-dati-in-sintesi)
-- [Nominale](#/tipologie-di-dati-1)
-- [Ordinale](#/tipologie-di-dati-1)
-- [Dicotomica](#/tipologie-di-dati-1)
+- [Indici (x_i)](#notazioni-sommatoria)
+- [Sommatoria Σ](#notazioni-sommatoria)
+- [Appartenenza (∈)](#notazioni-sommatoria)
+- [Unità statistica](#la-stessa-tabella-tidy)
+- [Variabile](#una-tabella-disordinata)
+- [Dati tidy](#dati-tidy-ordinati)
+- [Tipo di variabile](#tipologie-di-dati)
+- [Continua](#tipologie-di-dati)
+- [Discreta](#tipologie-di-dati)
+- [Cardinale](#tipologie-di-dati-in-sintesi)
+- [Un numero non basta](#tipologie-di-dati-in-sintesi)
+- [Nominale](#tipologie-di-dati-1)
+- [Ordinale](#tipologie-di-dati-1)
+- [Dicotomica](#tipologie-di-dati-1)
 
 :::
 

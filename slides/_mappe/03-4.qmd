@@ -6,7 +6,7 @@
 
 ```{mermaid}
 %%| echo: false
-%%{init: {"flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
+%%{init: {"htmlLabels": false, "flowchart": {"padding": 12, "wrappingWidth": 320}, "themeVariables": {"fontFamily": "Arial, Helvetica, sans-serif"}}}%%
 flowchart LR
   n_eventi_indipendenti["Eventi indipendenti"]:::prev
   n_falso_positivo["Falso positivo"]:::prev
@@ -53,11 +53,11 @@ Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle
 
 ::: {.mappa-indice}
 
-- [Teorema di Bayes](#/teorema-di-bayes-base)
-- [Calcolo di VPP e VPN](#/teorema-di-bayes-base)
-- [VPP dai conteggi](#/teorema-di-bayes-esempio) (facoltativo)
-- [Indipendenza condizionata](#/teorema-di-bayes-due-test-in-sequenza)
-- [Due test in sequenza](#/teorema-di-bayes-due-test-in-sequenza)
+- [Teorema di Bayes](#teorema-di-bayes-base)
+- [Calcolo di VPP e VPN](#teorema-di-bayes-base)
+- [VPP dai conteggi](#teorema-di-bayes-esempio) (facoltativo)
+- [Indipendenza condizionata](#teorema-di-bayes-due-test-in-sequenza)
+- [Due test in sequenza](#teorema-di-bayes-due-test-in-sequenza)
 
 :::
 
