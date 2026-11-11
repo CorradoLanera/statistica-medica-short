@@ -835,11 +835,9 @@ $$\begin{split}PV^-& = \frac{SPEC\cdot(1 - prev)}{SPEC\cdot(1 - prev) + (1- SENS
 
 ### Nota sui conteggi
 
-$VP/(VP+FP)$ (veri positivi su tutti i positivi) calcolato su una tabella dà il $PV^+$ giusto **solo se** la prevalenza della tabella è quella della popolazione su cui usate il test.
+$VP/(VP+FP)$ (veri positivi su tutti i positivi) calcolato su una tabella dà il $PV^+$ giusto **solo se** la prevalenza della tabella è quella della popolazione su cui usate il test; con Bayes si usa la prevalenza della popolazione.
 
-Per esempio, provando la macchina su 100 ipertesi e 100 normotesi (prevalenza 0.5 nella tabella): $VP = 84$, $FP = 23$, $VP/(VP+FP) = 84/107 = 0.79$. Nella popolazione, con prevalenza 0.2, il $PV^+$ è 0.48.
-
-Con Bayes si usa la prevalenza della popolazione su cui si usa il test.
+Per esempio, con 100 ipertesi e 100 normotesi (prevalenza 0.5): $VP/(VP+FP) = 84/107 = 0.79$; nella popolazione, con prevalenza 0.2, $PV^+ = 0.48$.
 
 :::
 
