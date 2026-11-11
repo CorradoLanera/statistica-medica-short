@@ -233,7 +233,7 @@
     "unita-statistica",
     "campione",
     "variabile",
-    "dati-tidy"
+    "dati-ordinati"
    ]
   },
   {
@@ -1097,8 +1097,8 @@
    "kind": "definizione",
    "optional": false,
    "requires": [],
-   "slide": "La stessa tabella, [tidy]",
-   "slide_norm": "lastessatabellatidy",
+   "slide": "La stessa tabella, [ordinata]",
+   "slide_norm": "lastessatabellaordinata",
    "slide_k": 0,
    "chunk": "02-unita"
   },
@@ -1119,19 +1119,19 @@
    "chunk": "02-unita"
   },
   {
-   "id": "dati-tidy",
+   "id": "dati-ordinati",
    "deck": "02",
    "section": "02.1",
-   "label": "Dati tidy (tabella ordinata)",
-   "short": "Dati tidy",
+   "label": "Dati ordinati",
+   "short": "Dati ordinati",
    "kind": "definizione",
    "optional": false,
    "requires": [
     "variabile",
     "unita-statistica"
    ],
-   "slide": "Dati tidy (ordinati)",
-   "slide_norm": "datitidyordinati",
+   "slide": "Dati [ordinati]",
+   "slide_norm": "datiordinati",
    "slide_k": 0,
    "chunk": "02-unita"
   },

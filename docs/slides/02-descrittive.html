@@ -4165,7 +4165,7 @@ z-index: 1000;
 <section id="oggetti-in-gioco" class="slide level2 text-center inverse center" data-background-color="#03A696">
 <h2><strong><span class="orange">Oggetti</span> in gioco</strong></h2>
 <p><strong>Notazioni di base</strong></p>
-<p><strong><span class="orange">unità</span> statistiche e tabelle <em>tidy</em></strong></p>
+<p><strong><span class="orange">unità</span> statistiche e tabelle ordinate</strong></p>
 <p><strong><span class="orange">tipologie</span> di dati</strong></p>
 </section>
 <section id="notazioni-sommatoria" class="slide level2">
@@ -4290,9 +4290,9 @@ z-index: 1000;
 <li>Quante e quali sono le <strong><span class="orange">variabili</span></strong>?</li>
 </ul>
 </section>
-<section id="dati-tidy-ordinati" class="slide level2">
-<h2>Dati <span class="orange">tidy</span> (ordinati)</h2>
-<p>Una tabella è <em>tidy</em> quando rispetta tre regole:</p>
+<section id="dati-ordinati" class="slide level2">
+<h2>Dati <span class="orange">ordinati</span></h2>
+<p>Una tabella è <strong>ordinata</strong> (in inglese <em>tidy</em>) quando rispetta tre regole:</p>
 <ol type="1">
 <li>Ogni <strong>variabile</strong> è una <strong>colonna</strong>, e ogni colonna è una variabile.</li>
 <li>Ogni <strong>osservazione</strong> (l’unità statistica) è una <strong>riga</strong>, e ogni riga è un’osservazione.</li>
@@ -4306,8 +4306,8 @@ z-index: 1000;
 <li><strong>«130/85»</strong> sono due valori in una cella: pressione sistolica e diastolica.</li>
 </ol>
 </section>
-<section id="la-stessa-tabella-tidy" class="slide level2">
-<h2>La stessa tabella, <span class="orange">tidy</span></h2>
+<section id="la-stessa-tabella-ordinata" class="slide level2">
+<h2>La stessa tabella, <span class="orange">ordinata</span></h2>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -4630,7 +4630,7 @@ flowchart TB
   n_appartenenza_insiemistica[&quot;Appartenenza (∈)&quot;]:::cur
   n_unita_statistica[&quot;Unità statistica&quot;]:::cur
   n_variabile[&quot;Variabile&quot;]:::cur
-  n_dati_tidy[&quot;Dati tidy&quot;]:::cur
+  n_dati_ordinati[&quot;Dati ordinati&quot;]:::cur
   n_tipo_di_variabile[&quot;Tipo di variabile&quot;]:::cur
   n_variabile_continua[&quot;Continua&quot;]:::cur
   n_variabile_discreta[&quot;Discreta&quot;]:::cur
@@ -4643,7 +4643,7 @@ flowchart TB
   n_tipo_di_variabile --&gt; n_variabile_continua
   n_tipo_di_variabile --&gt; n_variabile_discreta
   n_unita_statistica --&gt; n_variabile
-  n_variabile --&gt; n_dati_tidy
+  n_variabile --&gt; n_dati_ordinati
   n_variabile --&gt; n_tipo_di_variabile
   n_variabile_cardinale --&gt; n_codifica_numerica_non_implica_tipo
   n_variabile_continua --&gt; n_variabile_cardinale
@@ -4672,9 +4672,9 @@ flowchart TB
 <li><a href="#/notazioni-sommatoria">Indici (x_i)</a></li>
 <li><a href="#/notazioni-sommatoria">Sommatoria Σ</a></li>
 <li><a href="#/notazioni-sommatoria">Appartenenza (∈)</a></li>
-<li><a href="#/la-stessa-tabella-tidy">Unità statistica</a></li>
+<li><a href="#/la-stessa-tabella-ordinata">Unità statistica</a></li>
 <li><a href="#/una-tabella-disordinata">Variabile</a></li>
-<li><a href="#/dati-tidy-ordinati">Dati tidy</a></li>
+<li><a href="#/dati-ordinati">Dati ordinati</a></li>
 <li><a href="#/tipologie-di-dati">Tipo di variabile</a></li>
 <li><a href="#/tipologie-di-dati">Continua</a></li>
 <li><a href="#/tipologie-di-dati">Discreta</a></li>
@@ -5982,7 +5982,7 @@ flowchart TB
 <div class="mappa-indice mappa-blocchi">
 <ul>
 <li><strong>Indici e sommatoria</strong>: <a href="#/notazioni-sommatoria">Indici (x_i)</a>, <a href="#/notazioni-sommatoria">Sommatoria Σ</a>, <a href="#/notazioni-sommatoria">Appartenenza (∈)</a></li>
-<li><strong>Unità, variabili, tabelle</strong>: <a href="#/la-stessa-tabella-tidy">Unità statistica</a>, <a href="#/misure-di-centralità-media">Campione</a>, <a href="#/una-tabella-disordinata">Variabile</a>, <a href="#/dati-tidy-ordinati">Dati tidy</a></li>
+<li><strong>Unità, variabili, tabelle</strong>: <a href="#/la-stessa-tabella-ordinata">Unità statistica</a>, <a href="#/misure-di-centralità-media">Campione</a>, <a href="#/una-tabella-disordinata">Variabile</a>, <a href="#/dati-ordinati">Dati ordinati</a></li>
 <li><strong>Tipi di variabile</strong>: <a href="#/tipologie-di-dati">Tipo di variabile</a>, <a href="#/tipologie-di-dati">Continua</a>, <a href="#/tipologie-di-dati">Discreta</a>, <a href="#/tipologie-di-dati-1">Nominale</a>, <a href="#/tipologie-di-dati-1">Ordinale</a>, <a href="#/tipologie-di-dati-1">Dicotomica</a>, <a href="#/tipologie-di-dati-in-sintesi">Cardinale</a>, <a href="#/tipologie-di-dati-in-sintesi">Un numero non basta</a></li>
 <li><strong>Centralità</strong>: <a href="#/misure-di-centralità-media">Misura di centralità</a>, <a href="#/misure-di-centralità-media">Media</a>, <a href="#/misure-di-centralità-media">Media e valori estremi</a>, <a href="#/misure-di-centralità-mediana">Mediana</a>, <a href="#/mediana-n-pari">Mediana e valori estremi</a>, <a href="#/media-o-mediana">Media o mediana?</a>, <a href="#/misure-di-centralità-moda">Frequenza</a>, <a href="#/misure-di-centralità-moda">Moda</a></li>
 <li><strong>Variabilità</strong>: <a href="#/misure-di-variabilità">Misura di variabilità</a>, <a href="#/misure-di-variabilità-range-massimale">Range</a>, <a href="#/misure-di-variabilità-varianza-campionaria">Varianza</a>, <a href="#/misure-di-variabilità-varianza-campionaria">Deviazione standard</a>, <a href="#/misure-di-variabilità-varianza-campionaria">Scarti a somma zero</a>, <a href="#/varianza-formula-alternativa">Varianza: formula alternativa</a>, <a href="#/misure-di-variabilità-coefficiente-di-variazione">Coefficiente di variazione</a>, <a href="#/cv-non-effetto-scala">CV e unità di misura</a></li>
@@ -6000,8 +6000,8 @@ flowchart TB
 <section id="risorse-utili" class="slide level2 inverse" data-background-color="#03A696">
 <h2>Risorse utili</h2>
 <ul>
-<li><p>Broman KW, Woo KH. <a href="https://doi.org/10.1080/00031305.2017.1375989">Data Organization in Spreadsheets</a>. <em>The American Statistician</em> 2018;72(1):2-10. Come organizzare i dati in un foglio di calcolo (dati tidy).</p></li>
-<li><p>Wickham H. <a href="https://doi.org/10.18637/jss.v059.i10">Tidy Data</a>. <em>Journal of Statistical Software</em> 2014;59(10). L’articolo che ha dato il nome ai dati tidy.</p></li>
+<li><p>Broman KW, Woo KH. <a href="https://doi.org/10.1080/00031305.2017.1375989">Data Organization in Spreadsheets</a>. <em>The American Statistician</em> 2018;72(1):2-10. Come organizzare i dati in un foglio di calcolo (dati ordinati).</p></li>
+<li><p>Wickham H. <a href="https://doi.org/10.18637/jss.v059.i10">Tidy Data</a>. <em>Journal of Statistical Software</em> 2014;59(10). L’articolo che ha dato il nome ai dati ordinati (<em>tidy data</em>).</p></li>
 <li><p><a href="https://www.maggiolieditore.it/statistica-medica.html">Statistica medica</a> di <a href="https://www.york.ac.uk/healthsciences/our-staff/honoraryemeritus/martin-bland/"><strong>Martin Bland</strong></a>, suggeriti capitoli 1, 4 e 5.</p></li>
 <li><p><em>Fundamentals of Biostatistics</em> (8ª ed., Cengage, 2016) di <strong>Bernard Rosner</strong>, suggerito il capitolo 2.</p></li>
 <li><p><a href="http://rdossena.altervista.org/Articoli/Book-Perch%E9%20n-1.pdf">Perché n − 1 nella formula della deviazione standard campionaria?</a> di <a href="http://rdossena.altervista.org">Riccardo Dossena</a> Traduzione dell’articolo <strong>Book, S.A.</strong>: <em>Why n − 1 in the formula for the sample standard deviation?</em>, The Two-Year College Mathematics Journal 10(5), 330–333 (1979)</p></li>

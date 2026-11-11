@@ -13,7 +13,7 @@ flowchart TB
   n_appartenenza_insiemistica["Appartenenza (∈)"]:::cur
   n_unita_statistica["Unità statistica"]:::cur
   n_variabile["Variabile"]:::cur
-  n_dati_tidy["Dati tidy"]:::cur
+  n_dati_ordinati["Dati ordinati"]:::cur
   n_tipo_di_variabile["Tipo di variabile"]:::cur
   n_variabile_continua["Continua"]:::cur
   n_variabile_discreta["Discreta"]:::cur
@@ -26,7 +26,7 @@ flowchart TB
   n_tipo_di_variabile --> n_variabile_continua
   n_tipo_di_variabile --> n_variabile_discreta
   n_unita_statistica --> n_variabile
-  n_variabile --> n_dati_tidy
+  n_variabile --> n_dati_ordinati
   n_variabile --> n_tipo_di_variabile
   n_variabile_cardinale --> n_codifica_numerica_non_implica_tipo
   n_variabile_continua --> n_variabile_cardinale
@@ -54,9 +54,9 @@ Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle
 - [Indici (x_i)](#notazioni-sommatoria)
 - [Sommatoria Σ](#notazioni-sommatoria)
 - [Appartenenza (∈)](#notazioni-sommatoria)
-- [Unità statistica](#la-stessa-tabella-tidy)
+- [Unità statistica](#la-stessa-tabella-ordinata)
 - [Variabile](#una-tabella-disordinata)
-- [Dati tidy](#dati-tidy-ordinati)
+- [Dati ordinati](#dati-ordinati)
 - [Tipo di variabile](#tipologie-di-dati)
 - [Continua](#tipologie-di-dati)
 - [Discreta](#tipologie-di-dati)

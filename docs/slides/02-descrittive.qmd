@@ -123,7 +123,7 @@ l'aiuto e il supporto logistico e amministrativo che mi è stato offerto.
 
 **Notazioni di base**
 
-**[unità]{.orange} statistiche e tabelle _tidy_**
+**[unità]{.orange} statistiche e tabelle ordinate**
 
 **[tipologie]{.orange} di dati**
 
@@ -212,9 +212,9 @@ Pressione in mmHg; `_g1` e `_g2`: primo e secondo giorno di rilevazione.
 - Qual è l'**[unità statistica]{.orange}**?
 - Quante e quali sono le **[variabili]{.orange}**?
 
-## Dati [tidy]{.orange} (ordinati)
+## Dati [ordinati]{.orange}
 
-Una tabella è _tidy_ quando rispetta tre regole:
+Una tabella è **ordinata** (in inglese _tidy_) quando rispetta tre regole:
 
 1. Ogni **variabile** è una **colonna**, e ogni colonna è una variabile.
 2. Ogni **osservazione** (l'unità statistica) è una **riga**, e ogni riga
@@ -233,7 +233,7 @@ La tabella di prima le viola tutte e tre:
 3. **«130/85»** sono due valori in una cella: pressione sistolica e
    diastolica.
 
-## La stessa tabella, [tidy]{.orange}
+## La stessa tabella, [ordinata]{.orange}
 
 | Paziente | Sesso | Età (anni) | Giorno | PAS (mmHg) | PAD (mmHg) |
 |:---------|:-----:|-----------:|:------:|-----------:|-----------:|
@@ -1106,9 +1106,9 @@ Per voi: <img src="img/bit.ly_statmed-sondaggio-grafici.png" width="300px" style
 
 ## Risorse utili {.inverse background-color="#03A696"}
 
-- Broman KW, Woo KH. [Data Organization in Spreadsheets](https://doi.org/10.1080/00031305.2017.1375989). _The American Statistician_ 2018;72(1):2-10. Come organizzare i dati in un foglio di calcolo (dati tidy).
+- Broman KW, Woo KH. [Data Organization in Spreadsheets](https://doi.org/10.1080/00031305.2017.1375989). _The American Statistician_ 2018;72(1):2-10. Come organizzare i dati in un foglio di calcolo (dati ordinati).
 
-- Wickham H. [Tidy Data](https://doi.org/10.18637/jss.v059.i10). _Journal of Statistical Software_ 2014;59(10). L'articolo che ha dato il nome ai dati tidy.
+- Wickham H. [Tidy Data](https://doi.org/10.18637/jss.v059.i10). _Journal of Statistical Software_ 2014;59(10). L'articolo che ha dato il nome ai dati ordinati (_tidy data_).
 
 - [Statistica medica](https://www.maggiolieditore.it/statistica-medica.html) di [**Martin Bland**](https://www.york.ac.uk/healthsciences/our-staff/honoraryemeritus/martin-bland/), suggeriti capitoli 1, 4 e 5.
 - _Fundamentals of Biostatistics_ (8ª ed., Cengage, 2016) di **Bernard Rosner**, suggerito il capitolo 2.
