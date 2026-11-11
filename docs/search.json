@@ -308,7 +308,7 @@
     "href": "slides/04-distribuzioni.html#poisson-cibo-cancerogeno",
     "title": "Statistica Medica",
     "section": "Poisson: cibo cancerogeno",
-    "text": "Poisson: cibo cancerogeno\nIn uno studio sul possibile effetto cancerogeno di EDB (etilene dibromide), osservando la mortalità di 161 operai bianchi, occupati presso due fabbriche, Texas e Michigan, 1940-1975 [Ott et al., B J Ind Med, 1980:37, 163-8]\nSi sono osservate 7 morti per cancro. In base ai dati di mortalità degli USA, si sarebbero attese in quel periodo 5.8 morti per cancro.\nSi cerca quindi la probabilità di osservare almeno 7 morti secondo una Poisson di parametro μ=5.8\\mu=5.8.\nP(X≥7)=1−P(X≤6)=1−[(e−5.85.80/0!)+…+(e−5.85.86/6!)]=0.362\\begin{align}P(X \\geq 7) &= 1 - P(X\\leq 6)\\\\& = 1-\\left[(e^{-5.8}5.8^0/0!)+ \\ldots + (e^{-5.8}5.8^6/6!)\\right]\\\\& = 0.362\\end{align}\nper cui le morti non sembrano in eccesso in questo gruppo di lavoratori."
+    "text": "Poisson: cibo cancerogeno\nIn uno studio sul possibile effetto cancerogeno di EDB (etilene dibromide), osservando la mortalità di 161 operai bianchi, occupati presso due fabbriche, Texas e Michigan, 1940-1975\nSi sono osservate 7 morti per cancro. In base ai dati di mortalità degli USA, si sarebbero attese in quel periodo 5.8 morti per cancro.\nSi cerca quindi la probabilità di osservare almeno 7 morti secondo una Poisson di parametro μ=5.8\\mu=5.8.\nP(X≥7)=1−P(X≤6)=1−[(e−5.85.80/0!)+…+(e−5.85.86/6!)]=0.362\\begin{align}P(X \\geq 7) &= 1 - P(X\\leq 6)\\\\& = 1-\\left[(e^{-5.8}5.8^0/0!)+ \\ldots + (e^{-5.8}5.8^6/6!)\\right]\\\\& = 0.362\\end{align}\nper cui le morti non sembrano in eccesso in questo gruppo di lavoratori."
   },
   {
     "objectID": "slides/04-distribuzioni.html#poisson-approssimazione",
@@ -406,7 +406,7 @@
     "href": "slides/04-distribuzioni.html#distribuzione-normale",
     "title": "Statistica Medica",
     "section": "Distribuzione normale",
-    "text": "Distribuzione normale\n\n\n\nlocalizzazione\nforma\nsimmetria\npercentili\ntrasformazioni\n\n\n Artwork by @allison_horst"
+    "text": "Distribuzione normale\n\n\n\nlocalizzazione\nforma\nsimmetria\npercentili\ntrasformazioni"
   },
   {
     "objectID": "slides/04-distribuzioni.html#distribuzione-normale-definizione",
@@ -2108,5 +2108,12 @@
     "title": "Statistica Medica",
     "section": "Fonti",
     "text": "Fonti\n\nDati degli esempi della coorte EPIC-Norfolk: Bain LKM, Myint PK, Jennings A, Lentjes MAH, Luben RN, Khaw KT, Wareham NJ, Welch AA. The relationship between dietary magnesium intake, stroke and its major risk factors, blood pressure and cholesterol, in the EPIC-Norfolk cohort. International Journal of Cardiology 2015;196:108-114.\nIllustrazioni dei tipi di dati: Allison Horst."
+  },
+  {
+    "objectID": "slides/04-distribuzioni.html#fonti",
+    "href": "slides/04-distribuzioni.html#fonti",
+    "title": "Statistica Medica",
+    "section": "Fonti",
+    "text": "Fonti\n\n«Poisson: cibo cancerogeno»: Ott MG, Scharnweber HC, Langner RR. Mortality experience of 161 employees exposed to ethylene dibromide in two production units. British Journal of Industrial Medicine 1980;37(2):163-168.\nIllustrazione «not normal»: Allison Horst."
   }
 ]
