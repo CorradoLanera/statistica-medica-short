@@ -917,9 +917,9 @@ knitr::include_graphics("img/img6.png")
 
 L'esposizione ai fumi cambia il declino della funzione respiratoria nei pompieri?
 
-- campione: 26 pompieri fra 25 e 34 anni; declino del FEV (volume di espirazione forzata) in 5 anni: $\bar{x} = 0.27\ L/sec$, $s = 0.32\ L/sec$
-- nella popolazione generale di pari età il declino medio è $0.10\ L/sec$
-- il declino del FEV è distribuito normalmente; $H_0:\mu=0.10$, $H_1:\mu\neq 0.10$
+- campione: 26 pompieri fra 25 e 34 anni; declino in 5 anni del FEV~1~ (volume espirato nel primo secondo, letto come litri al secondo): $\bar{x} = 0.27$ L/s, $s = 0.32$ L/s
+- nella popolazione generale di pari età il declino medio è 0.10 L/s
+- il declino del FEV~1~ è distribuito normalmente; $H_0:\mu=0.10$, $H_1:\mu\neq 0.10$
 
 $$t=\frac{\bar{x}-\mu_0}{\frac{s}{\sqrt{n}}}=\frac{0.27-0.10}{\frac{0.32}{\sqrt{26}}}=2.71$$
 
@@ -1079,7 +1079,7 @@ $p = 0.034 < 0.05$: si rifiuta $H_0$, come con i valori critici.
 
 ### Con la t
 
-###### Pompieri e FEV (test t)
+###### Pompieri e FEV~1~ (test t)
 
 $t = 2.71$ con 25 gradi di libertà: le aree si leggono sulla $t_{25}$ invece che sulla $N(0,1)$.
 
