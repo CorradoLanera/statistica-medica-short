@@ -427,14 +427,14 @@
     "href": "slides/04-distribuzioni.html#distribuzione-normale-localizzazione",
     "title": "Statistica Medica",
     "section": "Distribuzione Normale: localizzazione",
-    "text": "Distribuzione Normale: localizzazione\nf(x)=1σ2πe−12σ2(x−μ)2−∞&lt;x&lt;∞f(x) = \\frac{1}{\\sigma\\sqrt{2\\pi}}e^{-\\frac{1}{2\\sigma^2}(x-\\mu)^2} \\:\\:\\:\\: -\\infty&lt;x&lt;\\infty"
+    "text": "Distribuzione Normale: localizzazione\nf(x)=1σ2πe−12σ2(x−μ)2−∞&lt;x&lt;∞f(x) = \\frac{1}{\\sigma\\sqrt{2\\pi}}e^{-\\frac{1}{2\\sigma^2}(x-\\mu)^2} \\:\\:\\:\\: -\\infty&lt;x&lt;\\infty\n\n\n\n\n\n\n\n\n\nCambiando μ\\mu, a parità di σ\\sigma, la curva si sposta lungo l’asse: la forma resta la stessa."
   },
   {
     "objectID": "slides/04-distribuzioni.html#distribuzione-normale-forma",
     "href": "slides/04-distribuzioni.html#distribuzione-normale-forma",
     "title": "Statistica Medica",
     "section": "Distribuzione Normale:forma",
-    "text": "Distribuzione Normale:forma\nf(x)=1σ2πe−12σ2(x−μ)2−∞&lt;x&lt;∞f(x) = \\frac{1}{\\sigma\\sqrt{2\\pi}}e^{-\\frac{1}{2\\sigma^2}(x-\\mu)^2} \\:\\:\\:\\: -\\infty&lt;x&lt;\\infty"
+    "text": "Distribuzione Normale:forma\nf(x)=1σ2πe−12σ2(x−μ)2−∞&lt;x&lt;∞f(x) = \\frac{1}{\\sigma\\sqrt{2\\pi}}e^{-\\frac{1}{2\\sigma^2}(x-\\mu)^2} \\:\\:\\:\\: -\\infty&lt;x&lt;\\infty\n\n\n\n\n\n\n\n\n\nAumentando σ\\sigma, a parità di μ\\mu, la curva resta centrata in μ\\mu e diventa più larga e più bassa: l’area sotto la curva vale sempre 1."
   },
   {
     "objectID": "slides/04-distribuzioni.html#distribuzione-normale-standard",
