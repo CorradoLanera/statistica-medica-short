@@ -761,7 +761,7 @@ I **percentili** generalizzano quest’idea, ovvero $P(X\leq p_k)=\frac{k}{100}$
 
 ## [Sondaggio]{.orange} {.inverse .center background-color="#03A696"}
 
-Per me: [Continue](https://app.wooclap.com/events/STATMEDCONTINUE/0)
+Per me: [Continue](https://app.wooclap.com/events/STAMEDCONTINUE/0)
 
 Per voi: <img src="img/bit.ly_statmed-sondaggio-continue.png" width="300px" style="vertical-align: middle"/> [bit.ly/statmed-sondaggio-continue](https://bit.ly/statmed-sondaggio-continue)
 
