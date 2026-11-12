@@ -1709,8 +1709,8 @@
    "id": "outlier",
    "deck": "02",
    "section": "02.3",
-   "label": "Outlier",
-   "short": "Outlier",
+   "label": "Valori estremi e anomali",
+   "short": "Estremi e anomali",
    "kind": "definizione",
    "optional": false,
    "requires": [

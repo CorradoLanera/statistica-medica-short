@@ -999,13 +999,16 @@ rispetto a **centralità e variabilità**. Per un campione di ampiezza $n$
 
 - i **baffi** arrivano fino al valore più lontano dalla scatola ma entro una volta e mezza l'IQR dai suoi bordi; i limiti $h - 1.5 \times (H-h)$ e $H + 1.5 \times (H-h)$ sono il baffo inferiore e superiore dello schema
 
-- un **outlier** è: un valore oltre i baffi, cioè che si allontana dai bordi della scatola più di una volta
+- un **valore estremo** è: un valore oltre i baffi, cioè che si allontana dai bordi della scatola più di una volta
   e mezza l'IQR, cioè
 $$x > H + 1.5 \times (H-h)  \quad o \quad x < h - 1.5 \times (H-h)$$
 
+- un **valore anomalo** è: un valore che si allontana dai bordi della scatola più di tre volte l'IQR, cioè
+$$x > H + 3 \times (H-h)  \quad o \quad x < h - 3 \times (H-h)$$
+
 ## Box-plot (calcolo)
 
-Un'assunzione giornaliera di 43 mg/die di magnesio rappresenta un outlier
+Un'assunzione giornaliera di 43 mg/die di magnesio rappresenta un valore estremo
 
 ::: {.small}
 
@@ -1020,9 +1023,14 @@ sort(epic$mag[101:200])
   $(215.3+215.4) / 2 = 215.35$
 - $H$ è la media dell'osservazione $(100 * 3/4)$ª e la $((100 * 3/4) + 1)$ª, ovvero
   $(323.9+324) / 2 = 323.95$
-- i limiti per gli outlier sono quindi:
+- i limiti per i valori estremi sono quindi:
 $$x > 323.95 + 1.5 * (323.95 - 215.35) = 486.85$$
 $$x < 215.35 - 1.5 * (323.95 - 215.35) = 52.45$$
+
+- i valori anomali sarebbero:
+$$x > 323.95 + 3 * (323.95 - 215.35) = 649.75$$
+$$x < 215.35 - 3 * (323.95 - 215.35) = -110.45$$
+(valore negativo: un'assunzione non può essere negativa, quindi nessun valore anomalo inferiore)
 
 :::
 

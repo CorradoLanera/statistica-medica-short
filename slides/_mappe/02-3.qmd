@@ -21,7 +21,7 @@ flowchart LR
   n_boxplot["Box-plot"]:::cur
   n_distanza_interquartile["Distanza interquartile"]:::cur
   n_baffi_del_boxplot["Baffi"]:::cur
-  n_outlier["Outlier"]:::cur
+  n_outlier["Estremi e anomali"]:::cur
   n_grafico_a_barre["Grafico a barre"]:::cur
   n_istogramma_vs_grafico_a_barre["Istogramma ≠ barre"]:::cur
   n_base_delle_barre_da_zero["Barre da zero"]:::cur
@@ -70,7 +70,7 @@ Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle
 - [Box-plot](#boxplot-general)
 - [Distanza interquartile](#dati-continui-box-plot)
 - [Baffi](#dati-continui-box-plot)
-- [Outlier](#dati-continui-box-plot)
+- [Estremi e anomali](#dati-continui-box-plot)
 - [Grafico a barre](#dati-discreti-barre)
 - [Istogramma ≠ barre](#dati-discreti-barre)
 - [Barre da zero](#dati-discreti-barre)

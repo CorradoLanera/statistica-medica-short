@@ -51,7 +51,7 @@ Ogni freccia va da un concetto a quelli che lo usano. Ogni riquadro è un blocco
 - **Percentili e quartili**: [Percentile](#percentili), [Quartile](#percentili)
 - **Classi e medie ponderate**: [Classi](#accorpamenti), [Frequenza relativa](#accorpamenti), [Media ponderata](#misure-ponderate-media-aritmetica-ponderata)
 - **Istogramma**: [Istogramma](#istogramma), [Densità di frequenza](#dati-continui-istogramma)
-- **Box-plot**: [Box-plot](#boxplot-general), [Distanza interquartile](#dati-continui-box-plot), [Baffi](#dati-continui-box-plot), [Outlier](#dati-continui-box-plot), [Box-plot a confronto](#prima)
+- **Box-plot**: [Box-plot](#boxplot-general), [Distanza interquartile](#dati-continui-box-plot), [Baffi](#dati-continui-box-plot), [Estremi e anomali](#dati-continui-box-plot), [Box-plot a confronto](#prima)
 - **Barre e scelta del grafico**: [Grafico a barre](#dati-discreti-barre), [Istogramma ≠ barre](#dati-discreti-barre), [Barre da zero](#dati-discreti-barre), [Scelta del grafico](#dati-discreti-barre), [Distorsioni grafiche](#dati-discreti-barre)
 
 :::
