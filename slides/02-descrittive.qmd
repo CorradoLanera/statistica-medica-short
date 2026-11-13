@@ -1036,6 +1036,56 @@ $$x < 215.35 - 3 * (323.95 - 215.35) = -110.45$$
 
 :::
 
+## Box-plot (il grafico)
+
+Il box-plot dei 100 valori di magnesio, con quartili e limiti calcolati come sopra (la regola dei percentili vista a lezione)
+
+```{r mag-boxplot, echo=FALSE, fig.width=9, fig.height=4.2}
+mag <- epic$mag[101:200]
+mag_q <- quantile(mag, c(0.25, 0.5, 0.75), type = 2) # la regola vista a lezione
+mag_iqr <- mag_q[[3]] - mag_q[[1]]
+mag_lim <- c(mag_q[[1]] - 1.5 * mag_iqr, mag_q[[3]] + 1.5 * mag_iqr)
+mag_in <- mag[mag >= mag_lim[[1]] & mag <= mag_lim[[2]]]
+mag_baffi <- range(mag_in)
+mag_fuori <- mag[mag < mag_lim[[1]] | mag > mag_lim[[2]]]
+
+ggplot() +
+  geom_vline(xintercept = mag_lim, linetype = "dashed", colour = "grey50") +
+  annotate("text", x = mag_lim, y = 1.62, hjust = c(-0.05, 1.05), size = 3.5,
+           colour = "grey35",
+           label = c("h - 1.5 × IQR = 52.45", "H + 1.5 × IQR = 486.85")) +
+  geom_boxplot(
+    aes(xmin = mag_baffi[[1]], xlower = mag_q[[1]], xmiddle = mag_q[[2]],
+        xupper = mag_q[[3]], xmax = mag_baffi[[2]], y = 1),
+    stat = "identity", orientation = "y", width = 0.4,
+    fill = "#9FC4E7", colour = "royalblue4"
+  ) +
+  geom_point(aes(x = mean(mag), y = 1), shape = 3, size = 3,
+             colour = "royalblue4") +
+  geom_point(aes(x = mag_fuori, y = 1), colour = "#F28705", size = 3) +
+  annotate("text", size = 3.5,
+           x = c(mag_baffi[[1]], mag_q[[1]], mag_q[[2]], mag_q[[3]],
+                 mag_baffi[[2]], mag_fuori),
+           y = c(0.72, 1.27, 0.72, 1.27, 0.72, 1.13),
+           hjust = c(rep(0.5, 5), rep(0.2, length(mag_fuori))),
+           label = c(
+             paste0("min. nei limiti\n", mag_baffi[[1]]),
+             paste0("h = ", mag_q[[1]]),
+             paste0("mediana\n", mag_q[[2]]),
+             paste0("H = ", mag_q[[3]]),
+             paste0("max. nei limiti\n", mag_baffi[[2]]),
+             paste0("valore estremo: ", mag_fuori)
+           )) +
+  scale_y_continuous(limits = c(0.55, 1.7), breaks = NULL) +
+  scale_x_continuous(breaks = seq(0, 500, by = 50)) +
+  labs(x = "Mag [mg/day]", y = NULL) +
+  theme_minimal(base_size = 14)
+```
+
+::: {.small}
+La croce è la media (`r round(mean(epic$mag[101:200]), 2)`). I limiti per i valori anomali ($-110.45$ e $649.75$) sono fuori dal grafico: nessun valore anomalo.
+:::
+
 ## Dati discreti: barre
 
 Volendo rappresentare confronti tra conteggi, possiamo usare grafici a
