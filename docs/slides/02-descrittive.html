@@ -5142,7 +5142,7 @@ flowchart TB
 </section>
 <section id="varianza-formula-alternativa" class="slide level2">
 <h2><span class="orange">Varianza</span> (formula alternativa)</h2>
-<p>Se la media è già calcolata, allora può essere utile usare <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>s</mi><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>x</mi><mi>i</mi><mn>2</mn></msubsup><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mi>n</mi><msup><mover accent="true"><mi>x</mi><mo>‾</mo></mover><mn>2</mn></msup></mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">s^2=\frac{(\sum_{i=1}^n x_i^2) - n\bar{x}^2}{n-1}</annotation></semantics></math></p>
+<p>Sui libri, o da chi vi ha insegnato statistica prima, potreste trovare anche questa formula <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>s</mi><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>x</mi><mi>i</mi><mn>2</mn></msubsup><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mi>n</mi><msup><mover accent="true"><mi>x</mi><mo>‾</mo></mover><mn>2</mn></msup></mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">s^2=\frac{(\sum_{i=1}^n x_i^2) - n\bar{x}^2}{n-1}</annotation></semantics></math></p>
 <p>Per la tecnica autoanalitica si ha <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mn>5</mn></munderover><msubsup><mi>x</mi><mi>i</mi><mn>2</mn></msubsup><mo>=</mo><msup><mn>177</mn><mn>2</mn></msup><mo>+</mo><mi>…</mi><mo>+</mo><msup><mn>226</mn><mn>2</mn></msup><mo>=</mo><mn>201360</mn></mrow><annotation encoding="application/x-tex">\sum_{i=1}^5 x_i^2 = 177^2+\ldots+226^2=201360</annotation></semantics></math> <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>s</mi><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mn>201360</mn><mo>−</mo><mn>5</mn><mo>×</mo><msup><mn>200</mn><mn>2</mn></msup></mrow><mn>4</mn></mfrac><mo>=</mo><mn>1360</mn><mi>/</mi><mn>4</mn><mo>=</mo><mn>340</mn></mrow><annotation encoding="application/x-tex">s^2 = \frac{201360 - 5 \times 200^2}{4}= 1360/4=340</annotation></semantics></math></p>
 <div class="small">
 <p>Il risultato è lo stesso; cambia il lavoro alla calcolatrice. Sui 5 valori dell’autoanalitica:</p>
@@ -5172,7 +5172,43 @@ flowchart TB
 </tr>
 </tbody>
 </table>
-<p>Meno tasti e meno numeri da ricopiare vuol dire meno occasioni di errore, tanto più quando la media ha decimali e quindi anche gli scarti.</p>
+<p>Sembra conveniente: meno tasti e meno numeri da annotare. Ma…</p>
+</div>
+</section>
+<section id="formula-alternativa-non-usatela" class="slide level2">
+<h2><span class="orange">Formula alternativa</span>: non usatela</h2>
+<p>Se l’ultimo valore fosse 228 invece di 226, la media sarebbe <strong>200.4</strong>, e la varianza vera <strong>366.8</strong>. Arrotondando la media a 200:</p>
+<div class="small">
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Calcolo con la media arrotondata</th>
+<th style="text-align: right;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>s</mi><mn>2</mn></msup><annotation encoding="application/x-tex">s^2</annotation></semantics></math></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Definizione</td>
+<td style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle displaystyle="true"><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>23</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>7</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>5</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><msup><mn>9</mn><mn>2</mn></msup><mo>+</mo><msup><mn>28</mn><mn>2</mn></msup></mrow><mn>4</mn></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>1468</mn><mn>4</mn></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\dfrac{(-23)^2 + (-7)^2 + (-5)^2 + 9^2 + 28^2}{4} = \dfrac{1468}{4}</annotation></semantics></math></td>
+<td style="text-align: right;"><strong>367</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Formula alternativa</td>
+<td style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle displaystyle="true"><mfrac><mrow><mn>202268</mn><mo>−</mo><mn>5</mn><mo>×</mo><msup><mn>200</mn><mn>2</mn></msup></mrow><mn>4</mn></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>2268</mn><mn>4</mn></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\dfrac{202268 - 5 \times 200^2}{4} = \dfrac{2268}{4}</annotation></semantics></math></td>
+<td style="text-align: right;"><strong>567</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Con la definizione, arrotondare la media sposta di poco il risultato; con la formula alternativa lo stravolge, perché sottrae due numeri grandi e quasi uguali.</p>
+<div class="text-center">
+<p><strong>Se trovate questa formula, o vi suggeriscono di usarla, <span class="orange">NON usatela</span>: usate sempre la definizione.</strong></p>
 </div>
 </section>
 <section id="misure-di-variabilità-coefficiente-di-variazione" class="slide level2">

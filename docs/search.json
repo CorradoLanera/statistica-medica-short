@@ -777,7 +777,7 @@
     "href": "slides/02-descrittive.html#varianza-formula-alternativa",
     "title": "Statistica Medica",
     "section": "Varianza (formula alternativa)",
-    "text": "Varianza (formula alternativa)\nSe la media è già calcolata, allora può essere utile usare s2=(∑i=1nxi2)−nx‾2n−1s^2=\\frac{(\\sum_{i=1}^n x_i^2) - n\\bar{x}^2}{n-1}\nPer la tecnica autoanalitica si ha ∑i=15xi2=1772+…+2262=201360\\sum_{i=1}^5 x_i^2 = 177^2+\\ldots+226^2=201360 s2=201360−5×20024=1360/4=340s^2 = \\frac{201360 - 5 \\times 200^2}{4}= 1360/4=340\n\nIl risultato è lo stesso; cambia il lavoro alla calcolatrice. Sui 5 valori dell’autoanalitica:\n\n\n\n\n\n\n\n\n\nDefinizione\nFormula alternativa\n\n\n\n\nRisultati intermedi da annotare\n10 (5 scarti e 5 quadrati)\n5 (i quadrati dei dati)\n\n\nTasti, tutto in una riga\n58: (177−200)x² + … + (226−200)x² = ÷ 4 =\n35: 177x² + … + 226x² − 5 × 200x² = ÷ 4 =\n\n\n\nMeno tasti e meno numeri da ricopiare vuol dire meno occasioni di errore, tanto più quando la media ha decimali e quindi anche gli scarti."
+    "text": "Varianza (formula alternativa)\nSui libri, o da chi vi ha insegnato statistica prima, potreste trovare anche questa formula s2=(∑i=1nxi2)−nx‾2n−1s^2=\\frac{(\\sum_{i=1}^n x_i^2) - n\\bar{x}^2}{n-1}\nPer la tecnica autoanalitica si ha ∑i=15xi2=1772+…+2262=201360\\sum_{i=1}^5 x_i^2 = 177^2+\\ldots+226^2=201360 s2=201360−5×20024=1360/4=340s^2 = \\frac{201360 - 5 \\times 200^2}{4}= 1360/4=340\n\nIl risultato è lo stesso; cambia il lavoro alla calcolatrice. Sui 5 valori dell’autoanalitica:\n\n\n\n\n\n\n\n\n\nDefinizione\nFormula alternativa\n\n\n\n\nRisultati intermedi da annotare\n10 (5 scarti e 5 quadrati)\n5 (i quadrati dei dati)\n\n\nTasti, tutto in una riga\n58: (177−200)x² + … + (226−200)x² = ÷ 4 =\n35: 177x² + … + 226x² − 5 × 200x² = ÷ 4 =\n\n\n\nSembra conveniente: meno tasti e meno numeri da annotare. Ma…"
   },
   {
     "objectID": "slides/02-descrittive.html#misure-di-variabilità-coefficiente-di-variazione",
@@ -2171,5 +2171,12 @@
     "title": "Statistica Medica",
     "section": "Prima: i tre grafici affiancati",
     "text": "Prima: i tre grafici affiancati"
+  },
+  {
+    "objectID": "slides/02-descrittive.html#formula-alternativa-non-usatela",
+    "href": "slides/02-descrittive.html#formula-alternativa-non-usatela",
+    "title": "Statistica Medica",
+    "section": "Formula alternativa: non usatela",
+    "text": "Formula alternativa: non usatela\nSe l’ultimo valore fosse 228 invece di 226, la media sarebbe 200.4, e la varianza vera 366.8. Arrotondando la media a 200:\n\n\n\n\n\n\n\n\n\n\nCalcolo con la media arrotondata\ns2s^2\n\n\n\n\nDefinizione\n(−23)2+(−7)2+(−5)2+92+2824=14684\\dfrac{(-23)^2 + (-7)^2 + (-5)^2 + 9^2 + 28^2}{4} = \\dfrac{1468}{4}\n367\n\n\nFormula alternativa\n202268−5×20024=22684\\dfrac{202268 - 5 \\times 200^2}{4} = \\dfrac{2268}{4}\n567\n\n\n\n\nCon la definizione, arrotondare la media sposta di poco il risultato; con la formula alternativa lo stravolge, perché sottrae due numeri grandi e quasi uguali.\n\nSe trovate questa formula, o vi suggeriscono di usarla, NON usatela: usate sempre la definizione."
   }
 ]
