@@ -993,7 +993,7 @@ estesa
 
 La densità è la frequenza relativa divisa per l'ampiezza: l'area di ogni barra è la frequenza relativa del suo gruppo, e l'area totale dell'istogramma è 1.
 
-## Istogramma: dalla tabella al grafico
+## Istogramma: tabella e grafico
 
 ::: {.small}
 
@@ -1278,7 +1278,7 @@ H + 3 × IQR
 La croce è la media (`r round(mean(epic$mag[101:200]), 2)`). Tratteggiati i limiti per i valori estremi, punteggiati quelli per i valori anomali. Il magnesio assunto è una quantità e non può essere negativo: il limite inferiore per gli anomali ($-110.45$) si ferma a 0, quindi sotto non ci sono anomali possibili; sopra, nessun valore supera 649.75.
 :::
 
-## Box-plot e istogramma: la stessa distribuzione
+## Box-plot e istogramma
 
 ```{r mag-hist-box, echo=FALSE, fig.width=9, fig.height=5.4}
 mag_vq <- tibble(
@@ -1411,7 +1411,7 @@ discreta (nominale, ordinale, dicotomica, o cardinale con pochi valori).
 
 <img src="img/mae-plot.jpg" style="height:500px; width:auto;" />
 
-## Prima: tutti e tre insieme
+## Prima: i tre grafici affiancati
 
 :::: {.columns}
 
