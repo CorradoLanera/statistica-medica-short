@@ -286,7 +286,8 @@
    "label": "Percentili e quartili",
    "concepts": [
     "percentile",
-    "quartile"
+    "quartile",
+    "distanza-interquartile"
    ]
   },
   {
@@ -314,7 +315,6 @@
    "label": "Box-plot",
    "concepts": [
     "boxplot",
-    "distanza-interquartile",
     "baffi-del-boxplot",
     "outlier",
     "boxplot-per-confronto-di-distribuzioni"
@@ -1676,18 +1676,19 @@
   {
    "id": "distanza-interquartile",
    "deck": "02",
-   "section": "02.3",
+   "section": "02.2",
    "label": "Range inter-quartile (IQR)",
    "short": "Distanza interquartile",
    "kind": "formula",
    "optional": false,
    "requires": [
-    "quartile"
+    "quartile",
+    "range"
    ],
-   "slide": "Dati continui: box-plot",
-   "slide_norm": "daticontinuiboxplot",
+   "slide": "[Range interquartile] (IQR)",
+   "slide_norm": "rangeinterquartileiqr",
    "slide_k": 0,
-   "chunk": "02-boxplot"
+   "chunk": "02-percentili"
   },
   {
    "id": "baffi-del-boxplot",

@@ -62,7 +62,6 @@ flowchart TB
   k_n_01_r_rstudio --> k_n_01_r_oggetti
   k_n_02_barre --> k_n_02_boxplot
   k_n_02_centralita --> k_n_02_classi
-  k_n_02_centralita --> k_n_02_percentili
   k_n_02_centralita --> k_n_02_variabilita
   k_n_02_classi --> k_n_02_istogramma
   k_n_02_classi --> k_n_03_probabilita
@@ -73,6 +72,7 @@ flowchart TB
   k_n_02_tipi --> k_n_02_centralita
   k_n_02_unita --> k_n_01_r_dati
   k_n_02_unita --> k_n_02_tipi
+  k_n_02_variabilita --> k_n_02_percentili
   k_n_02_variabilita --> k_n_04_momenti
   k_n_03_condizionata --> k_n_03_rischio
   k_n_03_condizionata --> k_n_03_test

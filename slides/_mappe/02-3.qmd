@@ -12,6 +12,7 @@ flowchart LR
   n_variabile_continua["Continua"]:::prev
   n_variabile_discreta["Discreta"]:::prev
   n_accorpamento_in_classi["Classi"]:::prev
+  n_distanza_interquartile["Distanza interquartile"]:::prev
   n_frequenza_assoluta["Frequenza"]:::prev
   n_frequenza_relativa["Frequenza relativa"]:::prev
   n_mediana["Mediana"]:::prev
@@ -19,7 +20,6 @@ flowchart LR
   n_istogramma["Istogramma"]:::cur
   n_densita_di_frequenza["Densità di frequenza"]:::cur
   n_boxplot["Box-plot"]:::cur
-  n_distanza_interquartile["Distanza interquartile"]:::cur
   n_baffi_del_boxplot["Baffi"]:::cur
   n_outlier["Estremi e anomali"]:::cur
   n_grafico_a_barre["Grafico a barre"]:::cur
@@ -46,7 +46,7 @@ flowchart LR
   n_istogramma --> n_scelta_del_grafico
   n_mediana --> n_boxplot
   n_outlier --> n_boxplot_per_confronto_di_distribuzioni
-  n_quartile --> n_distanza_interquartile
+  n_quartile --> n_boxplot
   n_tipo_di_variabile --> n_scelta_del_grafico
   n_variabile_continua --> n_istogramma
   n_variabile_discreta --> n_grafico_a_barre
@@ -68,7 +68,6 @@ Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle
 - [Istogramma](#istogramma)
 - [Densità di frequenza](#dati-continui-istogramma)
 - [Box-plot](#boxplot-general)
-- [Distanza interquartile](#dati-continui-box-plot)
 - [Baffi](#dati-continui-box-plot)
 - [Estremi e anomali](#dati-continui-box-plot)
 - [Grafico a barre](#dati-discreti-barre)

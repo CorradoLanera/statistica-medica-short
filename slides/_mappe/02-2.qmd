@@ -33,6 +33,7 @@ flowchart LR
   n_accorpamento_in_classi["Classi"]:::cur
   n_frequenza_relativa["Frequenza relativa"]:::cur
   n_media_ponderata["Media ponderata"]:::cur
+  n_distanza_interquartile["Distanza interquartile"]:::cur
   n_accorpamento_in_classi --> n_media_ponderata
   n_campione --> n_media_aritmetica
   n_coefficiente_di_variazione --> n_cv_invariante_per_scala
@@ -52,6 +53,8 @@ flowchart LR
   n_misura_di_variabilita --> n_range
   n_misura_di_variabilita --> n_varianza
   n_percentile --> n_quartile
+  n_quartile --> n_distanza_interquartile
+  n_range --> n_distanza_interquartile
   n_sommatoria --> n_media_aritmetica
   n_variabile_continua --> n_accorpamento_in_classi
   n_variabile_continua --> n_media_aritmetica
@@ -96,6 +99,7 @@ Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle
 - [Classi](#accorpamenti)
 - [Frequenza relativa](#accorpamenti)
 - [Media ponderata](#misure-ponderate-media-aritmetica-ponderata)
+- [Distanza interquartile](#range-interquartile-iqr)
 
 :::
 

@@ -821,6 +821,49 @@ quantile(epic_bmi_p2$bmi, probs = 0.2, type = 2)
 
 ::::
 
+## [Range interquartile]{.orange} (IQR)
+
+```{r iqr-mag, include=FALSE}
+iqr_x <- epic$mag[101:200]
+iqr_q <- quantile(iqr_x, c(0.25, 0.75), type = 2) # regola vista a lezione
+iqr_v <- iqr_q[[2]] - iqr_q[[1]]
+iqr_r <- range(iqr_x)
+iqr_err <- c(4.3, iqr_x[iqr_x != min(iqr_x)]) # il 43 scritto 4.3 per errore
+iqr_q_err <- quantile(iqr_err, c(0.25, 0.75), type = 2)
+```
+
+$$\text{IQR} = Q_3 - Q_1$$
+
+::: {.small}
+
+|                          | Range massimale      | IQR                   |
+|:-------------------------|:---------------------|:----------------------|
+| Definizione              | massimo − minimo     | $Q_3 - Q_1$           |
+| Che cosa contiene        | **tutte** le osservazioni (100%) | il **50% centrale** delle osservazioni, fra $Q_1$ e $Q_3$ |
+| Magnesio ($n = 100$)     | `r iqr_r[[2]]` − `r iqr_r[[1]]` = **`r iqr_r[[2]] - iqr_r[[1]]`** | `r iqr_q[[2]]` − `r iqr_q[[1]]` = **`r iqr_v`** |
+| Se il `r iqr_r[[1]]` fosse scritto 4.3 | `r iqr_r[[2]]` − 4.3 = **`r max(iqr_err) - min(iqr_err)`** | `r iqr_q_err[[2]]` − `r iqr_q_err[[1]]` = **`r iqr_q_err[[2]] - iqr_q_err[[1]]`** (non cambia) |
+| Valori estremi           | molto sensibile      | non sensibile         |
+
+:::
+
+```{r iqr-plot, echo=FALSE, fig.width=9, fig.height=2.3}
+tibble(x = iqr_x) |>
+  ggplot(aes(x = x, y = 1)) +
+  geom_point(position = position_jitter(height = 0.06, seed = 1),
+             alpha = 0.6, colour = "royalblue") +
+  annotate("errorbarh", y = 1.32, xmin = iqr_r[[1]], xmax = iqr_r[[2]],
+           height = 0.08, colour = "grey30") +
+  annotate("text", y = 1.45, x = mean(iqr_r), size = 4,
+           label = "range massimale: 100% dei valori") +
+  annotate("errorbarh", y = 0.68, xmin = iqr_q[[1]], xmax = iqr_q[[2]],
+           height = 0.08, colour = "#F28705", linewidth = 1) +
+  annotate("text", y = 0.55, x = mean(iqr_q), size = 4, colour = "#C25E00",
+           label = "IQR: 50% centrale") +
+  scale_y_continuous(limits = c(0.48, 1.52), breaks = NULL) +
+  labs(x = "Mag [mg/day]", y = NULL) +
+  theme_minimal(base_size = 13)
+```
+
 ## [Sondaggio]{.orange} {.inverse .center background-color="#03A696"}
 
 Per me: [Percentili](https://app.wooclap.com/events/STATMEDPERCENTILI/0)
@@ -1095,6 +1138,16 @@ mag_tab_eq |>
 
 :::
 
+## Boxplot (general)
+
+::: {.text-center}
+
+```{r, echo=FALSE, out.width="70%"}
+include_graphics("img/bxp.png")
+```
+
+:::
+
 ## Dati continui: box-plot
 
 Il [box-plot]{.orange} è un modo per rappresentare graficamente una distribuzione
@@ -1116,16 +1169,6 @@ $$x > H + 1.5 \times (H-h)  \quad o \quad x < h - 1.5 \times (H-h)$$
 
 - un **valore anomalo** è: un valore che si allontana dai bordi della scatola più di tre volte l'IQR, cioè
 $$x > H + 3 \times (H-h)  \quad o \quad x < h - 3 \times (H-h)$$
-
-## Boxplot (general)
-
-::: {.text-center}
-
-```{r, echo=FALSE, out.width="70%"}
-include_graphics("img/bxp.png")
-```
-
-:::
 
 ## Box-plot (calcolo)
 
