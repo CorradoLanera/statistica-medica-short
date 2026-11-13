@@ -939,6 +939,84 @@ estesa
 
 La densità è la frequenza relativa divisa per l'ampiezza: l'area di ogni barra è la frequenza relativa del suo gruppo, e l'area totale dell'istogramma è 1.
 
+## Istogramma: dalla tabella al grafico
+
+::: {.small}
+
+:::: {.columns}
+
+::: {.column width="48%"}
+
+```{r mag-tab-ist, echo=FALSE}
+mag_br <- as.numeric(unique(unlist(matches)))
+mag_tab <- tibble(
+  Gruppo = names(table(discr)),
+  `$m_i$` = dt$m,
+  `$f_i$` = dt$Freq,
+  `$f_i/n$` = dt$Freq / sum(dt$Freq),
+  `$a_i$` = diff(mag_br),
+  `Densità` = dt$Freq / (sum(dt$Freq) * diff(mag_br))
+)
+mag_tab |>
+  kable(digits = c(0, 2, 0, 2, 1, 4), align = "lcrrrr")
+```
+
+:::
+
+::: {.column width="52%"}
+
+::: {.panel-tabset}
+
+### Frequenze
+
+```{r, echo=FALSE, fig.width=5.5, fig.height=4.6}
+epic |>
+  slice(101:200) |>
+  ggplot(aes(x = mag)) +
+  geom_histogram(
+    fill = "royalblue", colour = "white",
+    breaks = mag_br, closed = "left"
+  ) +
+  geom_text(
+    data = mag_tab,
+    aes(x = `$m_i$`, y = `$f_i$`, label = `$f_i$`),
+    vjust = -0.4, size = 4
+  ) +
+  labs(x = "Mag [mg/day]", y = "Frequenza") +
+  theme_minimal(base_size = 13)
+```
+
+Altezza = frequenza: i gruppi larghi sembrano pesare di più.
+
+### Densità
+
+```{r, echo=FALSE, fig.width=5.5, fig.height=4.6}
+epic |>
+  slice(101:200) |>
+  ggplot(aes(x = mag, y = after_stat(density))) +
+  geom_histogram(
+    fill = "royalblue", colour = "white",
+    breaks = mag_br, closed = "left"
+  ) +
+  geom_text(
+    data = mag_tab,
+    aes(x = `$m_i$`, y = `Densità`, label = round(`Densità`, 4)),
+    vjust = -0.4, size = 3.2
+  ) +
+  labs(x = "Mag [mg/day]", y = "Densità") +
+  theme_minimal(base_size = 13)
+```
+
+Altezza = densità: l'area di ogni barra è la frequenza relativa.
+
+:::
+
+:::
+
+::::
+
+:::
+
 ## Istogramma: autocalcolato
 
 ::: {.small}
