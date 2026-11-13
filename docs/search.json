@@ -2128,7 +2128,7 @@
     "href": "slides/02-descrittive.html#box-plot-il-grafico",
     "title": "Statistica Medica",
     "section": "Box-plot (il grafico)",
-    "text": "Box-plot (il grafico)\nIl box-plot dei 100 valori di magnesio, con quartili e limiti calcolati come sopra (la regola dei percentili vista a lezione)\n\n\n\n\n\n\n\n\n\n\nLa croce è la media (265.53). Tratteggiati i limiti per i valori estremi, punteggiati quelli per i valori anomali: nessun valore oltre questi ultimi, quindi nessun valore anomalo."
+    "text": "Box-plot (il grafico)\nIl box-plot dei 100 valori di magnesio, con quartili e limiti calcolati come sopra (la regola dei percentili vista a lezione)\n\n\n\n\n\n\n\n\n\n\nLa croce è la media (265.53). Tratteggiati i limiti per i valori estremi, punteggiati quelli per i valori anomali. Il magnesio assunto è una quantità e non può essere negativo: il limite inferiore per gli anomali (−110.45-110.45) si ferma a 0, quindi sotto non ci sono anomali possibili; sopra, nessun valore supera 649.75."
   },
   {
     "objectID": "slides/02-descrittive.html#prima-tutti-e-tre-insieme",
