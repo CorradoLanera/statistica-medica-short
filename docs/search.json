@@ -2149,6 +2149,6 @@
     "href": "slides/02-descrittive.html#box-plot-e-istogramma-la-stessa-distribuzione",
     "title": "Statistica Medica",
     "section": "Box-plot e istogramma: la stessa distribuzione",
-    "text": "Box-plot e istogramma: la stessa distribuzione\n\n\n\n\n\n\n\n\n\n\nOgni pezzo del box-plot contiene un quarto dei dati. Dove i dati sono fitti (istogramma alto, fra mediana e HH) il pezzo è stretto; dove sono radi (istogramma basso, fra hh e mediana) è largo. Il baffo sinistro lungo e il valore estremo (43) sono la coda bassa e piatta dell’istogramma a sinistra."
+    "text": "Box-plot e istogramma: la stessa distribuzione\n\n\n\n\n\n\n\n\n\n\nOgni pezzo del box-plot contiene un quarto dei dati: stretto dove i dati sono fitti (istogramma alto), largo dove sono radi. Il baffo sinistro e il 43 sono la coda bassa a sinistra. Sotto la scatola i 100 valori, la croce è la media; tratteggiate grigie le soglie per gli estremi, punteggiate arancio quelle per gli anomali."
   }
 ]

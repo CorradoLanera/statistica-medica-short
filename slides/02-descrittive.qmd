@@ -1269,15 +1269,27 @@ La croce è la media (`r round(mean(epic$mag[101:200]), 2)`). Tratteggiati i lim
 
 ## Box-plot e istogramma: la stessa distribuzione
 
-```{r mag-hist-box, echo=FALSE, fig.width=9, fig.height=5.2}
+```{r mag-hist-box, echo=FALSE, fig.width=9, fig.height=5.4}
 mag_vq <- tibble(
   x = mag_q,
   nome = c("h", "mediana", "H")
 )
-mag_xlim <- c(30, 375)
+mag_soglie <- tibble(
+  x = c(mag_lim, mag_lim3_graf),
+  tipo = rep(c("estremi", "anomali"), each = 2)
+)
+mag_xlim <- c(-80, 665)
+
+soglie_layer <- list(
+  geom_vline(data = filter(mag_soglie, tipo == "estremi"), aes(xintercept = x),
+             linetype = "dashed", colour = "grey50"),
+  geom_vline(data = filter(mag_soglie, tipo == "anomali"), aes(xintercept = x),
+             linetype = "dotted", colour = "#F28705", linewidth = 0.8)
+)
 
 p_hist <- tibble(mag = mag) |>
   ggplot(aes(x = mag, y = after_stat(density))) +
+  soglie_layer +
   geom_histogram(
     fill = "royalblue", colour = "white", alpha = 0.8,
     breaks = mag_br, closed = "left"
@@ -1287,22 +1299,32 @@ p_hist <- tibble(mag = mag) |>
   geom_text(data = mag_vq, aes(x = x, y = Inf, label = nome),
             vjust = 1.3, hjust = c(1.1, 1.1, -0.1), colour = "#C25E00",
             size = 4) +
+  geom_text(data = mag_soglie, aes(x = x, y = Inf, label = tipo),
+            vjust = 1.3, hjust = c(-0.1, 1.1, 1.1, 1.1),
+            colour = c("grey35", "grey35", "#C25E00", "#C25E00"), size = 3.5) +
   coord_cartesian(xlim = mag_xlim) +
   labs(x = NULL, y = "Densità") +
   theme_minimal(base_size = 14) +
   theme(axis.text.x = element_blank())
 
 p_box <- ggplot() +
+  soglie_layer +
   geom_vline(data = mag_vq, aes(xintercept = x),
              linetype = "dashed", colour = "#C25E00") +
+  geom_point(aes(x = mag, y = 0.45),
+             position = position_jitter(height = 0.12, width = 0, seed = 1),
+             alpha = 0.5, colour = "royalblue", size = 1.6) +
   geom_boxplot(
     aes(xmin = mag_baffi[[1]], xlower = mag_q[[1]], xmiddle = mag_q[[2]],
         xupper = mag_q[[3]], xmax = mag_baffi[[2]], y = 1),
-    stat = "identity", orientation = "y", width = 0.5,
+    stat = "identity", orientation = "y", width = 0.4,
     fill = "#9FC4E7", colour = "royalblue4"
   ) +
+  geom_point(aes(x = mean(mag), y = 1), shape = 3, size = 3,
+             colour = "royalblue4") +
   geom_point(aes(x = mag_fuori, y = 1), colour = "#F28705", size = 3) +
-  scale_y_continuous(breaks = NULL) +
+  scale_y_continuous(breaks = NULL, limits = c(0.25, 1.25)) +
+  scale_x_continuous(breaks = seq(0, 650, by = 50)) +
   coord_cartesian(xlim = mag_xlim) +
   labs(x = "Mag [mg/day]", y = " ") +
   theme_minimal(base_size = 14)
@@ -1312,11 +1334,11 @@ g_box <- ggplotGrob(p_box)
 mag_w <- grid::unit.pmax(g_hist$widths, g_box$widths)
 g_hist$widths <- mag_w
 g_box$widths <- mag_w
-grid.arrange(g_hist, g_box, ncol = 1, heights = c(3, 1.3))
+grid.arrange(g_hist, g_box, ncol = 1, heights = c(2.6, 1.7))
 ```
 
 ::: {.small}
-Ogni pezzo del box-plot contiene un quarto dei dati. Dove i dati sono fitti (istogramma alto, fra mediana e $H$) il pezzo è stretto; dove sono radi (istogramma basso, fra $h$ e mediana) è largo. Il baffo sinistro lungo e il valore estremo (43) sono la coda bassa e piatta dell'istogramma a sinistra.
+Ogni pezzo del box-plot contiene un quarto dei dati: stretto dove i dati sono fitti (istogramma alto), largo dove sono radi. Il baffo sinistro e il 43 sono la coda bassa a sinistra. Sotto la scatola i 100 valori, la croce è la media; tratteggiate grigie le soglie per gli estremi, punteggiate arancio quelle per gli anomali.
 :::
 
 ## Dati discreti: barre
