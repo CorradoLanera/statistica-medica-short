@@ -4121,7 +4121,7 @@ z-index: 1000;
   <p class="subtitle">Analisi esplorativa e statistiche descrittive</p>
   <p class="author">Corrado Lanera</p>
   <p class="institute"><a href="https://www.unipd-ubep.it/">Unità di Biostatistica, Epidemiologia e Salute Pubblica</a>, Università di Padova</p>
-  <p class="date">12 novembre 2026</p>
+  <p class="date">13 novembre 2026</p>
 </section>
 <section id="cosa-faremo" class="slide level2 inverse" data-background-color="#03A696">
 <h2>Cosa faremo</h2>
@@ -5719,6 +5719,19 @@ flowchart LR
 </div>
 </div>
 </section>
+<section id="dati-continui-box-plot" class="slide level2">
+<h2>Dati continui: box-plot</h2>
+<p>Il <span class="orange">box-plot</span> è un modo per rappresentare graficamente una distribuzione rispetto a <strong>centralità e variabilità</strong>. Per un campione di ampiezza <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math></p>
+<ul>
+<li><p>Il segmento all’interno del box è la mediana.</p></li>
+<li><p>il <strong>primo quartile</strong> (h, o 25º percentile) è il bordo inferiore della scatola (box)</p></li>
+<li><p>il <strong>terzo quartile</strong> (H, o 75º percentile) è il bordo superiore della scatola</p></li>
+<li><p>l’ampiezza della scatola (box) è il <strong><span class="orange">Range Inter-Quartile</span> (IQR)</strong>, ovvero la differenza tra il III e il I quartile <span class="mnw" style="white-space:nowrap">(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo>−</mo><mi>h</mi></mrow><annotation encoding="application/x-tex">H - h</annotation></semantics></math>).</span></p></li>
+<li><p>i <strong>baffi</strong> arrivano fino al valore più lontano dalla scatola ma entro una volta e mezza l’IQR dai suoi bordi; i limiti <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>−</mo><mn>1.5</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mi>H</mi><mo>−</mo><mi>h</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">h - 1.5 \times (H-h)</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo>+</mo><mn>1.5</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mi>H</mi><mo>−</mo><mi>h</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">H + 1.5 \times (H-h)</annotation></semantics></math> sono il baffo inferiore e superiore dello schema</p></li>
+<li><p>un <strong>valore estremo</strong> è: un valore oltre i baffi, cioè che si allontana dai bordi della scatola più di una volta e mezza l’IQR, cioè <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>&gt;</mo><mi>H</mi><mo>+</mo><mn>1.5</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mi>H</mi><mo>−</mo><mi>h</mi><mo stretchy="false" form="postfix">)</mo><mspace width="1.0em"></mspace><mi>o</mi><mspace width="1.0em"></mspace><mi>x</mi><mo>&lt;</mo><mi>h</mi><mo>−</mo><mn>1.5</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mi>H</mi><mo>−</mo><mi>h</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x &gt; H + 1.5 \times (H-h)  \quad o \quad x &lt; h - 1.5 \times (H-h)</annotation></semantics></math></p></li>
+<li><p>un <strong>valore anomalo</strong> è: un valore che si allontana dai bordi della scatola più di tre volte l’IQR, cioè <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>&gt;</mo><mi>H</mi><mo>+</mo><mn>3</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mi>H</mi><mo>−</mo><mi>h</mi><mo stretchy="false" form="postfix">)</mo><mspace width="1.0em"></mspace><mi>o</mi><mspace width="1.0em"></mspace><mi>x</mi><mo>&lt;</mo><mi>h</mi><mo>−</mo><mn>3</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mi>H</mi><mo>−</mo><mi>h</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x &gt; H + 3 \times (H-h)  \quad o \quad x &lt; h - 3 \times (H-h)</annotation></semantics></math></p></li>
+</ul>
+</section>
 <section id="boxplot-general" class="slide level2">
 <h2>Boxplot (general)</h2>
 <div class="text-center">
@@ -5732,19 +5745,6 @@ flowchart LR
 </div>
 </div>
 </div>
-</section>
-<section id="dati-continui-box-plot" class="slide level2">
-<h2>Dati continui: box-plot</h2>
-<p>Il <span class="orange">box-plot</span> è un modo per rappresentare graficamente una distribuzione rispetto a <strong>centralità e variabilità</strong>. Per un campione di ampiezza <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math></p>
-<ul>
-<li><p>Il segmento all’interno del box è la mediana.</p></li>
-<li><p>il <strong>primo quartile</strong> (h, o 25º percentile) è il bordo inferiore della scatola (box)</p></li>
-<li><p>il <strong>terzo quartile</strong> (H, o 75º percentile) è il bordo superiore della scatola</p></li>
-<li><p>l’ampiezza della scatola (box) è il <strong><span class="orange">Range Inter-Quartile</span> (IQR)</strong>, ovvero la differenza tra il III e il I quartile <span class="mnw" style="white-space:nowrap">(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo>−</mo><mi>h</mi></mrow><annotation encoding="application/x-tex">H - h</annotation></semantics></math>).</span></p></li>
-<li><p>i <strong>baffi</strong> arrivano fino al valore più lontano dalla scatola ma entro una volta e mezza l’IQR dai suoi bordi; i limiti <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>−</mo><mn>1.5</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mi>H</mi><mo>−</mo><mi>h</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">h - 1.5 \times (H-h)</annotation></semantics></math> e <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo>+</mo><mn>1.5</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mi>H</mi><mo>−</mo><mi>h</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">H + 1.5 \times (H-h)</annotation></semantics></math> sono il baffo inferiore e superiore dello schema</p></li>
-<li><p>un <strong>valore estremo</strong> è: un valore oltre i baffi, cioè che si allontana dai bordi della scatola più di una volta e mezza l’IQR, cioè <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>&gt;</mo><mi>H</mi><mo>+</mo><mn>1.5</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mi>H</mi><mo>−</mo><mi>h</mi><mo stretchy="false" form="postfix">)</mo><mspace width="1.0em"></mspace><mi>o</mi><mspace width="1.0em"></mspace><mi>x</mi><mo>&lt;</mo><mi>h</mi><mo>−</mo><mn>1.5</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mi>H</mi><mo>−</mo><mi>h</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x &gt; H + 1.5 \times (H-h)  \quad o \quad x &lt; h - 1.5 \times (H-h)</annotation></semantics></math></p></li>
-<li><p>un <strong>valore anomalo</strong> è: un valore che si allontana dai bordi della scatola più di tre volte l’IQR, cioè <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>&gt;</mo><mi>H</mi><mo>+</mo><mn>3</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mi>H</mi><mo>−</mo><mi>h</mi><mo stretchy="false" form="postfix">)</mo><mspace width="1.0em"></mspace><mi>o</mi><mspace width="1.0em"></mspace><mi>x</mi><mo>&lt;</mo><mi>h</mi><mo>−</mo><mn>3</mn><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mi>H</mi><mo>−</mo><mi>h</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x &gt; H + 3 \times (H-h)  \quad o \quad x &lt; h - 3 \times (H-h)</annotation></semantics></math></p></li>
-</ul>
 </section>
 <section id="box-plot-calcolo" class="slide level2">
 <h2>Box-plot (calcolo)</h2>
@@ -5865,7 +5865,7 @@ flowchart LR
   n_boxplot[&quot;Box-plot&quot;]:::cur
   n_distanza_interquartile[&quot;Distanza interquartile&quot;]:::cur
   n_baffi_del_boxplot[&quot;Baffi&quot;]:::cur
-  n_outlier[&quot;Outlier&quot;]:::cur
+  n_outlier[&quot;Estremi e anomali&quot;]:::cur
   n_grafico_a_barre[&quot;Grafico a barre&quot;]:::cur
   n_istogramma_vs_grafico_a_barre[&quot;Istogramma ≠ barre&quot;]:::cur
   n_base_delle_barre_da_zero[&quot;Barre da zero&quot;]:::cur
@@ -5915,7 +5915,7 @@ flowchart LR
 <li><a href="#/boxplot-general">Box-plot</a></li>
 <li><a href="#/dati-continui-box-plot">Distanza interquartile</a></li>
 <li><a href="#/dati-continui-box-plot">Baffi</a></li>
-<li><a href="#/dati-continui-box-plot">Outlier</a></li>
+<li><a href="#/dati-continui-box-plot">Estremi e anomali</a></li>
 <li><a href="#/dati-discreti-barre">Grafico a barre</a></li>
 <li><a href="#/dati-discreti-barre">Istogramma ≠ barre</a></li>
 <li><a href="#/dati-discreti-barre">Barre da zero</a></li>
@@ -5985,7 +5985,7 @@ flowchart TB
 <li><strong>Percentili e quartili</strong>: <a href="#/percentili">Percentile</a>, <a href="#/percentili">Quartile</a></li>
 <li><strong>Classi e medie ponderate</strong>: <a href="#/accorpamenti">Classi</a>, <a href="#/accorpamenti">Frequenza relativa</a>, <a href="#/misure-ponderate-media-aritmetica-ponderata">Media ponderata</a></li>
 <li><strong>Istogramma</strong>: <a href="#/istogramma">Istogramma</a>, <a href="#/dati-continui-istogramma">Densità di frequenza</a></li>
-<li><strong>Box-plot</strong>: <a href="#/boxplot-general">Box-plot</a>, <a href="#/dati-continui-box-plot">Distanza interquartile</a>, <a href="#/dati-continui-box-plot">Baffi</a>, <a href="#/dati-continui-box-plot">Outlier</a>, <a href="#/prima">Box-plot a confronto</a></li>
+<li><strong>Box-plot</strong>: <a href="#/boxplot-general">Box-plot</a>, <a href="#/dati-continui-box-plot">Distanza interquartile</a>, <a href="#/dati-continui-box-plot">Baffi</a>, <a href="#/dati-continui-box-plot">Estremi e anomali</a>, <a href="#/prima">Box-plot a confronto</a></li>
 <li><strong>Barre e scelta del grafico</strong>: <a href="#/dati-discreti-barre">Grafico a barre</a>, <a href="#/dati-discreti-barre">Istogramma ≠ barre</a>, <a href="#/dati-discreti-barre">Barre da zero</a>, <a href="#/dati-discreti-barre">Scelta del grafico</a>, <a href="#/dati-discreti-barre">Distorsioni grafiche</a></li>
 </ul>
 </div>

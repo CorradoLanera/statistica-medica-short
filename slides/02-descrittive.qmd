@@ -974,16 +974,6 @@ epic |>
 
 :::
 
-## Boxplot (general)
-
-::: {.text-center}
-
-```{r, echo=FALSE, out.width="70%"}
-include_graphics("img/bxp.png")
-```
-
-:::
-
 ## Dati continui: box-plot
 
 Il [box-plot]{.orange} è un modo per rappresentare graficamente una distribuzione
@@ -1005,6 +995,16 @@ $$x > H + 1.5 \times (H-h)  \quad o \quad x < h - 1.5 \times (H-h)$$
 
 - un **valore anomalo** è: un valore che si allontana dai bordi della scatola più di tre volte l'IQR, cioè
 $$x > H + 3 \times (H-h)  \quad o \quad x < h - 3 \times (H-h)$$
+
+## Boxplot (general)
+
+::: {.text-center}
+
+```{r, echo=FALSE, out.width="70%"}
+include_graphics("img/bxp.png")
+```
+
+:::
 
 ## Box-plot (calcolo)
 
