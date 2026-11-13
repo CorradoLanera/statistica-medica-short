@@ -1024,31 +1024,74 @@ Altezza = densità: l'area di ogni barra è la frequenza relativa.
 Se ampiezze tutte uguali, la _forma_ standardizzata ad area unitaria è
 proporzionale a quella con barre di altezza le frequenze
 
+:::: {.columns}
+
+::: {.column width="52%"}
 
 ::: {.panel-tabset}
 
 ### Count
 
-```{r, out.width = "50%", echo = FALSE}
+```{r, echo=FALSE, fig.width=5.5, fig.height=4.4}
+mag_br_eq <- seq(40, 370, by = 30) # gruppi tutti ampi 30
+mag_tab_eq <- tibble(
+  da = head(mag_br_eq, -1),
+  a = tail(mag_br_eq, -1),
+  m = (da + a) / 2,
+  f = as.vector(table(cut(epic$mag[101:200], mag_br_eq, right = FALSE)))
+)
 epic |> 
   slice(101:200) |> 
   ggplot(aes(x = mag)) +
-  geom_histogram(fill = "royalblue") + 
-  xlab("Mag [mg/day]")
+  geom_histogram(
+    fill = "royalblue", colour = "white",
+    breaks = mag_br_eq, closed = "left"
+  ) +
+  geom_text(data = mag_tab_eq, aes(x = m, y = f, label = f),
+            vjust = -0.4, size = 4) +
+  labs(x = "Mag [mg/day]", y = "Frequenza") +
+  theme_minimal(base_size = 13)
 ```
-
 
 ### Hist
 
-```{r, out.width = "50%", echo=FALSE}
+```{r, echo=FALSE, fig.width=5.5, fig.height=4.4}
 epic |> 
   slice(101:200) |> 
-  ggplot(aes(x = mag, y = ..density..)) +
-  geom_histogram(fill = "royalblue") + 
-  xlab("Mag [mg/day]")
+  ggplot(aes(x = mag, y = after_stat(density))) +
+  geom_histogram(
+    fill = "royalblue", colour = "white",
+    breaks = mag_br_eq, closed = "left"
+  ) +
+  geom_text(data = mag_tab_eq,
+            aes(x = m, y = f / (100 * 30), label = round(f / (100 * 30), 4)),
+            vjust = -0.4, size = 3) +
+  labs(x = "Mag [mg/day]", y = "Densità") +
+  theme_minimal(base_size = 13)
 ```
 
 :::
+
+:::
+
+::: {.column width="48%"}
+
+```{r, echo=FALSE}
+mag_tab_eq |>
+  transmute(
+    Gruppo = paste0("[", da, ", ", a, ")"),
+    `$m_i$` = m,
+    `$f_i$` = f,
+    `$f_i/n$` = f / 100,
+    `$a_i$` = a - da,
+    `Densità` = f / (100 * (a - da))
+  ) |>
+  kable(digits = c(0, 0, 0, 2, 0, 4), align = "lrrrrr")
+```
+
+:::
+
+::::
 
 :::
 

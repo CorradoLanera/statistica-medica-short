@@ -896,7 +896,7 @@
     "href": "slides/02-descrittive.html#istogramma-autocalcolato",
     "title": "Statistica Medica",
     "section": "Istogramma: autocalcolato",
-    "text": "Istogramma: autocalcolato\n\nSe ampiezze tutte uguali, la forma standardizzata ad area unitaria è proporzionale a quella con barre di altezza le frequenze\n\nCountHist"
+    "text": "Istogramma: autocalcolato\n\nSe ampiezze tutte uguali, la forma standardizzata ad area unitaria è proporzionale a quella con barre di altezza le frequenze\n\n\n\nCountHist\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGruppo\nmim_i\nfif_i\nfi/nf_i/n\naia_i\nDensità\n\n\n\n\n[40, 70)\n55\n1\n0.01\n30\n0.0003\n\n\n[70, 100)\n85\n1\n0.01\n30\n0.0003\n\n\n[100, 130)\n115\n6\n0.06\n30\n0.0020\n\n\n[130, 160)\n145\n4\n0.04\n30\n0.0013\n\n\n[160, 190)\n175\n5\n0.05\n30\n0.0017\n\n\n[190, 220)\n205\n10\n0.10\n30\n0.0033\n\n\n[220, 250)\n235\n9\n0.09\n30\n0.0030\n\n\n[250, 280)\n265\n10\n0.10\n30\n0.0033\n\n\n[280, 310)\n295\n17\n0.17\n30\n0.0057\n\n\n[310, 340)\n325\n22\n0.22\n30\n0.0073\n\n\n[340, 370)\n355\n15\n0.15\n30\n0.0050"
   },
   {
     "objectID": "slides/02-descrittive.html#boxplot-general",
