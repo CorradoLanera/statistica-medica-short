@@ -668,6 +668,17 @@ $$s^2=\frac{(\sum_{i=1}^n x_i^2) - n\bar{x}^2}{n-1}$$
 Per la tecnica autoanalitica si ha
 $$\sum_{i=1}^5 x_i^2 = 177^2+\ldots+226^2=201360$$
 $$s^2 = \frac{201360 - 5 \times 200^2}{4}= 1360/4=340$$
+
+::: {.small}
+Il risultato è lo stesso; cambia il lavoro alla calcolatrice. Sui 5 valori dell'autoanalitica:
+
+| | Definizione | Formula alternativa |
+|:--|:--|:--|
+| Risultati intermedi da annotare | 10 (5 scarti e 5 quadrati) | 5 (i quadrati dei dati) |
+| Tasti, tutto in una riga | 58: `(177−200)x² + … + (226−200)x² = ÷ 4 =` | 35: `177x² + … + 226x² − 5 × 200x² = ÷ 4 =` |
+
+Meno tasti e meno numeri da ricopiare vuol dire meno occasioni di errore, tanto più quando la media ha decimali e quindi anche gli scarti.
+:::
 ```{r, include = FALSE}
 n <- length(auto)
 mean_auto <- mean(auto)

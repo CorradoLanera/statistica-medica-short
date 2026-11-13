@@ -5144,6 +5144,36 @@ flowchart TB
 <h2><span class="orange">Varianza</span> (formula alternativa)</h2>
 <p>Se la media è già calcolata, allora può essere utile usare <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>s</mi><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>x</mi><mi>i</mi><mn>2</mn></msubsup><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mi>n</mi><msup><mover accent="true"><mi>x</mi><mo>‾</mo></mover><mn>2</mn></msup></mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">s^2=\frac{(\sum_{i=1}^n x_i^2) - n\bar{x}^2}{n-1}</annotation></semantics></math></p>
 <p>Per la tecnica autoanalitica si ha <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mn>5</mn></munderover><msubsup><mi>x</mi><mi>i</mi><mn>2</mn></msubsup><mo>=</mo><msup><mn>177</mn><mn>2</mn></msup><mo>+</mo><mi>…</mi><mo>+</mo><msup><mn>226</mn><mn>2</mn></msup><mo>=</mo><mn>201360</mn></mrow><annotation encoding="application/x-tex">\sum_{i=1}^5 x_i^2 = 177^2+\ldots+226^2=201360</annotation></semantics></math> <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>s</mi><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mn>201360</mn><mo>−</mo><mn>5</mn><mo>×</mo><msup><mn>200</mn><mn>2</mn></msup></mrow><mn>4</mn></mfrac><mo>=</mo><mn>1360</mn><mi>/</mi><mn>4</mn><mo>=</mo><mn>340</mn></mrow><annotation encoding="application/x-tex">s^2 = \frac{201360 - 5 \times 200^2}{4}= 1360/4=340</annotation></semantics></math></p>
+<div class="small">
+<p>Il risultato è lo stesso; cambia il lavoro alla calcolatrice. Sui 5 valori dell’autoanalitica:</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Definizione</th>
+<th style="text-align: left;">Formula alternativa</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Risultati intermedi da annotare</td>
+<td style="text-align: left;">10 (5 scarti e 5 quadrati)</td>
+<td style="text-align: left;">5 (i quadrati dei dati)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Tasti, tutto in una riga</td>
+<td style="text-align: left;">58: <code>(177−200)x² + … + (226−200)x² = ÷ 4 =</code></td>
+<td style="text-align: left;">35: <code>177x² + … + 226x² − 5 × 200x² = ÷ 4 =</code></td>
+</tr>
+</tbody>
+</table>
+<p>Meno tasti e meno numeri da ricopiare vuol dire meno occasioni di errore, tanto più quando la media ha decimali e quindi anche gli scarti.</p>
+</div>
 </section>
 <section id="misure-di-variabilità-coefficiente-di-variazione" class="slide level2">
 <h2>Misure di <span class="orange">variabilità</span>: coefficiente di variazione</h2>
