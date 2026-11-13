@@ -627,7 +627,7 @@ summarise(colesterolo, across(everything(), mean)) |>
 
 ### Autoanalitica
 
-  $\begin{split}s^2& = \frac{(177-200)^2 + \ldots + (226-200)^2}{4}\\& = \frac{1360}{4} = 340\end{split}$
+  $\begin{split}s^2& = \frac{1}{5-1}[(177-200)^2 + (193-200)^2 + (195-200)^2\\&\qquad + (209-200)^2 + (226-200)^2]\\& = \frac{(-23)^2 + (-7)^2 + (-5)^2 + 9^2 + 26^2}{4}\\& = \frac{529 + 49 + 25 + 81 + 676}{4}\\& = \frac{1360}{4} = 340\ (\text{mg/dl})^2\end{split}$
   
 ```{r, include = FALSE}
 auto <- colesterolo[["autoanalitica"]]
@@ -636,19 +636,19 @@ sum(
 ) / (length(auto) - 1)
 ```
   
-  $s = \sqrt{340} = 18.4$
+  $s = \sqrt{340\ (\text{mg/dl})^2} = 18.4\ \text{mg/dl}$
   
 
 
 ### Microenzimatica
 
-  $\begin{split}s^2& = \frac{(192-200)^2 + \ldots + (209-200)^2}{4}\\& = \frac{158}{4} = 39.5\end{split}$
+  $\begin{split}s^2& = \frac{(192-200)^2 + \ldots + (209-200)^2}{4}\\& = \frac{158}{4} = 39.5\ (\text{mg/dl})^2\end{split}$
   
 ```{r, include = FALSE}
 micro <- colesterolo[["microenzimatica"]]
 var(micro)
 ```
-  $s = \sqrt{39.5} = 6.3$
+  $s = \sqrt{39.5\ (\text{mg/dl})^2} = 6.3\ \text{mg/dl}$
 
 ```{r, include = FALSE}
 sd(micro)

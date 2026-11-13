@@ -770,7 +770,7 @@
     "href": "slides/02-descrittive.html#varianza-campionaria-esempio",
     "title": "Statistica Medica",
     "section": "Varianza campionaria: esempio",
-    "text": "Varianza campionaria: esempio\n\n\n\n\n\n\n\nautoanalitica\nmicroenzimatica\n\n\n\n\n177\n192\n\n\n193\n197\n\n\n195\n200\n\n\n209\n202\n\n\n226\n209\n\n\n\n\n\nMedie:\n\n\n\n\n\nautoanalitica\nmicroenzimatica\n\n\n\n\n200\n200\n\n\n\n\n\n\n\nAutoanaliticaMicroenzimatica\n\n\ns2=(177−200)2+…+(226−200)24=13604=340\\begin{split}s^2& = \\frac{(177-200)^2 + \\ldots + (226-200)^2}{4}\\\\& = \\frac{1360}{4} = 340\\end{split}\ns=340=18.4s = \\sqrt{340} = 18.4\n\n\ns2=(192−200)2+…+(209−200)24=1584=39.5\\begin{split}s^2& = \\frac{(192-200)^2 + \\ldots + (209-200)^2}{4}\\\\& = \\frac{158}{4} = 39.5\\end{split}\ns=39.5=6.3s = \\sqrt{39.5} = 6.3"
+    "text": "Varianza campionaria: esempio\n\n\n\n\n\n\n\nautoanalitica\nmicroenzimatica\n\n\n\n\n177\n192\n\n\n193\n197\n\n\n195\n200\n\n\n209\n202\n\n\n226\n209\n\n\n\n\n\nMedie:\n\n\n\n\n\nautoanalitica\nmicroenzimatica\n\n\n\n\n200\n200\n\n\n\n\n\n\n\nAutoanaliticaMicroenzimatica\n\n\ns2=15−1[(177−200)2+(193−200)2+(195−200)2+(209−200)2+(226−200)2]=(−23)2+(−7)2+(−5)2+92+2624=529+49+25+81+6764=13604=340(mg/dl)2\\begin{split}s^2& = \\frac{1}{5-1}[(177-200)^2 + (193-200)^2 + (195-200)^2\\\\&\\qquad + (209-200)^2 + (226-200)^2]\\\\& = \\frac{(-23)^2 + (-7)^2 + (-5)^2 + 9^2 + 26^2}{4}\\\\& = \\frac{529 + 49 + 25 + 81 + 676}{4}\\\\& = \\frac{1360}{4} = 340\\ (\\text{mg/dl})^2\\end{split}\ns=340(mg/dl)2=18.4mg/dls = \\sqrt{340\\ (\\text{mg/dl})^2} = 18.4\\ \\text{mg/dl}\n\n\ns2=(192−200)2+…+(209−200)24=1584=39.5(mg/dl)2\\begin{split}s^2& = \\frac{(192-200)^2 + \\ldots + (209-200)^2}{4}\\\\& = \\frac{158}{4} = 39.5\\ (\\text{mg/dl})^2\\end{split}\ns=39.5(mg/dl)2=6.3mg/dls = \\sqrt{39.5\\ (\\text{mg/dl})^2} = 6.3\\ \\text{mg/dl}"
   },
   {
     "objectID": "slides/02-descrittive.html#varianza-formula-alternativa",
@@ -2150,5 +2150,26 @@
     "title": "Statistica Medica",
     "section": "Box-plot e istogramma: la stessa distribuzione",
     "text": "Box-plot e istogramma: la stessa distribuzione\n\n\n\n\n\n\n\n\n\n\nOgni pezzo del box-plot contiene un quarto dei dati: stretto dove i dati sono fitti (istogramma alto), largo dove sono radi. Il baffo sinistro e il 43 sono la coda bassa a sinistra. Sotto la scatola i 100 valori, la croce è la media; tratteggiate grigie le soglie per gli estremi, punteggiate arancio quelle per gli anomali."
+  },
+  {
+    "objectID": "slides/02-descrittive.html#istogramma-tabella-e-grafico",
+    "href": "slides/02-descrittive.html#istogramma-tabella-e-grafico",
+    "title": "Statistica Medica",
+    "section": "Istogramma: tabella e grafico",
+    "text": "Istogramma: tabella e grafico\n\n\n\n\n\n\n\n\nGruppo\nmim_i\nfif_i\nfi/nf_i/n\naia_i\nDensità\n\n\n\n\n[ 43.0,168.9)\n105.95\n13\n0.13\n125.9\n0.0010\n\n\n[168.9,215.4)\n192.15\n12\n0.12\n46.5\n0.0026\n\n\n[215.4,255.8)\n235.60\n13\n0.13\n40.4\n0.0032\n\n\n[255.8,295.5)\n275.65\n12\n0.12\n39.7\n0.0030\n\n\n[295.5,312.3)\n303.90\n13\n0.13\n16.8\n0.0077\n\n\n[312.3,324.0)\n318.15\n12\n0.12\n11.7\n0.0103\n\n\n[324.0,343.8)\n333.90\n13\n0.13\n19.8\n0.0066\n\n\n[343.8,360.3]\n352.05\n12\n0.12\n16.5\n0.0073\n\n\n\n\n\n\n\nFrequenzeDensità\n\n\n\n\n\n\n\n\n\n\n\nAltezza = frequenza: i gruppi larghi sembrano pesare di più.\n\n\n\n\n\n\n\n\n\n\n\nAltezza = densità: l’area di ogni barra è la frequenza relativa."
+  },
+  {
+    "objectID": "slides/02-descrittive.html#box-plot-e-istogramma",
+    "href": "slides/02-descrittive.html#box-plot-e-istogramma",
+    "title": "Statistica Medica",
+    "section": "Box-plot e istogramma",
+    "text": "Box-plot e istogramma\n\n\n\n\n\n\n\n\n\n\nOgni pezzo del box-plot contiene un quarto dei dati: stretto dove i dati sono fitti (istogramma alto), largo dove sono radi. Il baffo sinistro e il 43 sono la coda bassa a sinistra. Sotto la scatola i 100 valori, la croce è la media; tratteggiate grigie le soglie per gli estremi, punteggiate arancio quelle per gli anomali."
+  },
+  {
+    "objectID": "slides/02-descrittive.html#prima-i-tre-grafici-affiancati",
+    "href": "slides/02-descrittive.html#prima-i-tre-grafici-affiancati",
+    "title": "Statistica Medica",
+    "section": "Prima: i tre grafici affiancati",
+    "text": "Prima: i tre grafici affiancati"
   }
 ]
