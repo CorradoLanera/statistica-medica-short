@@ -1486,6 +1486,8 @@ Per voi: <img src="img/bit.ly_statmed-sondaggio-grafici.png" width="300px" style
 - [Perché n − 1 nella formula della deviazione standard
 campionaria?](http://rdossena.altervista.org/Articoli/Book-Perch%E9%20n-1.pdf) di [Riccardo Dossena](http://rdossena.altervista.org) Traduzione dell'articolo **Book, S.A.**: _Why n − 1 in the formula for the sample standard deviation?_, The Two-Year College Mathematics Journal 10(5), 330–333 (1979)
 
+- [Varianza e arrotondamenti: la formula alternativa a mano e al computer](https://rpubs.com/CorradoLanera/varianza-arrotondamenti-ita) di [**Corrado Lanera**](https://www.corradolanera.it/)
+
 ## Fonti {.inverse background-color="#03A696"}
 
 - Dati degli esempi della coorte EPIC-Norfolk: Bain LKM, Myint PK, Jennings A,
