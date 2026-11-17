@@ -15,12 +15,12 @@ flowchart LR
   n_probabilita["Probabilità"]:::cur
   n_limiti_della_probabilita["0 ≤ P(E) ≤ 1"]:::cur
   n_additivita_eventi_incompatibili["Somma per incompatibili"]:::cur
+  n_eventi_incompatibili["Eventi incompatibili"]:::cur
   n_notazione_evento_graffe["Notazione {…}"]:::cur
   n_unione_di_eventi["Unione (∪)"]:::cur
   n_diagramma_di_venn["Diagramma di Venn"]:::cur
   n_intersezione_di_eventi["Intersezione (∩)"]:::cur
   n_evento_complementare["Complementare"]:::cur
-  n_eventi_incompatibili["Eventi incompatibili"]:::cur
   k_n_02_classi --> n_probabilita
   n_esperimento_casuale --> n_spazio_campionario
   n_eventi_incompatibili --> n_additivita_eventi_incompatibili
@@ -53,14 +53,14 @@ Ogni freccia va da un concetto a quelli che lo usano. In grigio i concetti delle
 - [Spazio degli eventi Ω](#definizione-evento-e-probabilità)
 - [Evento](#definizione-evento-e-probabilità)
 - [Probabilità](#definizione-evento-e-probabilità)
-- [0 ≤ P(E) ≤ 1](#proprietà-eventi-mutuamente-esclusivi)
-- [Somma per incompatibili](#proprietà-eventi-mutuamente-esclusivi)
+- [0 ≤ P(E) ≤ 1](#proprietà-della-probabilità)
+- [Somma per incompatibili](#proprietà-della-probabilità)
+- [Eventi incompatibili](#proprietà-eventi-mutuamente-esclusivi)
 - [Notazione {…}](#notazione-unione)
 - [Unione (∪)](#notazione-unione)
 - [Diagramma di Venn](#eventi-e-spazio-omega)
 - [Intersezione (∩)](#notazione-intersezione)
 - [Complementare](#notazione-complemento)
-- [Eventi incompatibili](#proprietà-eventi-mutuamente-esclusivi-1)
 
 :::
 

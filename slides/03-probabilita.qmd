@@ -125,53 +125,13 @@ Un **risultato** di un esperimento probabilistico _verifica_ un evento se ne fa 
 
 La **probabilità** di un evento è la [frequenza relativa]{.orange} dei risultati che lo definiscono, valutata su **infinite ripetizioni** dell'esperimento probabilistico.
 
-> Es.: 
+##### Esempio
 
 - Esperimento: misura della pressione diastolica (DBP) di una persona presa a caso, in un determinato momento, nella popolazione.
 - Spazio degli eventi $\Omega$: ogni possibile misura di DBP.
 - Evento $A$ : DBP $\geq 95$ mmHg.
 - Risultato (mio, ora): DBP $= 70$ mmHg. (Non fa parte dell'evento, quindi non lo verifica)
 - Probabilità di $A$ : misurando la DBP, ora, a tutta la popolazione, la porzione di persone con DBP $\geq 95$ mmHg.
-
-## [Proprietà]{.orange}: eventi mutuamente esclusivi
-
-La probabilità di un evento $E$, indicata come $P(E)$, soddisfa [sempre]{.orange} la condizione
-
-$$0 \leq P(E) \leq 1$$
-
-Se $A$ e $B$ sono due eventi che [non possono]{.orange} verificarsi [contemporaneamente]{.orange}, allora si ha che
-
-$$P(\textrm{si verifichi } A \textrm{ o che si verifichi } B) = P(A) + P(B)$$
-
-##### Esempio:
-
-- $A$ l'evento DBP normale ($\mbox{DBP} < 90$)
-- $B$ l'evento DBP borderline ($90\leq \mbox{DBP} < 95$)
-- $C$ l'evento DBP $< 95$.
-
-**Se**:
-
-- $P(A)=0.7$
-- $P(B)=0.1$
-
-**Allora**: $P(C) = P(A) + P(B) = 0.7 + 0.1 = 0.8$.
-
-## [Proprietà]{.orange}: eventi mutuamente esclusivi
-
-Due eventi $A$ e $B$ si dicono **mutuamente esclusivi** se [non possono]{.orange} verificarsi [contemporaneamente]{.orange}.
-
-##### Esempio
-
-**Siano**:
-
-- $x$ la DBP.
-- $C$ l'evento ($x \geq 90$)
-- $D$ l'evento ($75\leq x\leq 100$).
-
-**Allora** in questo caso:
-
-$C$ e $D$ **non** sono mutuamente esclusivi, in quanto entrambi si
-verificano quando $90 \leq x \leq 100$.
 
 ## [Notazione]{.orange}: unione
 
@@ -180,7 +140,7 @@ verificano quando $90 \leq x \leq 100$.
 
 ##### Esempio
 
-**Sia** ($x$ la DBP): 
+**Sia** ($x$ la DBP):
 
 - $A = \{x < 90 \}$
 - $B = \{90 \leq x < 95 \}$
@@ -198,6 +158,47 @@ $$C \cup D = \{ x \geq 75 \}$$
 ```{r, echo=FALSE, out.width="100%"}
 include_graphics("img/venn1.png")
 ```
+
+## [Proprietà]{.orange} della probabilità
+
+La probabilità di un evento $E$, indicata come $P(E)$, soddisfa [sempre]{.orange} la condizione
+
+$$0 \leq P(E) \leq 1$$
+
+Se $A$ e $B$ sono due eventi che [non possono]{.orange} verificarsi [contemporaneamente]{.orange}, la probabilità che si verifichi $A$ o $B$ è la somma delle loro probabilità:
+
+$$P(A \cup B) = P(A) + P(B)$$
+
+##### Esempio
+
+**Siano** ($x$ la DBP):
+
+- $A = \{x < 90 \}$, DBP normale
+- $B = \{90 \leq x < 95 \}$, DBP borderline
+- $C = A \cup B = \{x < 95 \}$
+
+**Se**:
+
+- $P(A)=0.7$
+- $P(B)=0.1$
+
+**Allora**: $P(C) = P(A \cup B) = P(A) + P(B) = 0.7 + 0.1 = 0.8$.
+
+## [Proprietà]{.orange}: eventi mutuamente esclusivi
+
+Due eventi $A$ e $B$ si dicono **mutuamente esclusivi** se [non possono]{.orange} verificarsi [contemporaneamente]{.orange}.
+
+##### Esempio
+
+**Siano** ($x$ la DBP):
+
+- $C = \{x \geq 90 \}$
+- $D = \{75 \leq x \leq 100 \}$
+
+**Allora** in questo caso:
+
+$C$ e $D$ **non** sono mutuamente esclusivi, in quanto entrambi si
+verificano quando $90 \leq x \leq 100$.
 
 ## [Notazione]{.orange}: intersezione
 

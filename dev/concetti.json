@@ -1905,8 +1905,8 @@
    "requires": [
     "probabilita"
    ],
-   "slide": "Proprietà: eventi mutuamente esclusivi",
-   "slide_norm": "proprietàeventimutuamenteesclusivi",
+   "slide": "Proprietà della probabilità",
+   "slide_norm": "proprietàdellaprobabilità",
    "slide_k": 0,
    "chunk": "03-probabilita"
   },
@@ -1922,8 +1922,8 @@
     "probabilita",
     "eventi-incompatibili"
    ],
-   "slide": "Proprietà: eventi mutuamente esclusivi",
-   "slide_norm": "proprietàeventimutuamenteesclusivi",
+   "slide": "Proprietà della probabilità",
+   "slide_norm": "proprietàdellaprobabilità",
    "slide_k": 0,
    "chunk": "03-operazioni"
   },
@@ -1940,7 +1940,7 @@
    ],
    "slide": "Proprietà: eventi mutuamente esclusivi",
    "slide_norm": "proprietàeventimutuamenteesclusivi",
-   "slide_k": 1,
+   "slide_k": 0,
    "chunk": "03-operazioni"
   },
   {
