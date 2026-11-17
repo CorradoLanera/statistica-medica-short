@@ -44,8 +44,8 @@ Ogni freccia va da un concetto a quelli che lo usano. Ogni riquadro è un blocco
 ::: {.mappa-indice .mappa-blocchi}
 
 - **Esperimenti ed eventi**: [Esperimento casuale](#definizione-evento-e-probabilità), [Spazio degli eventi Ω](#definizione-evento-e-probabilità), [Evento](#definizione-evento-e-probabilità), [Notazione {…}](#notazione-unione), [Diagramma di Venn](#eventi-e-spazio-omega)
-- **Probabilità**: [Probabilità](#definizione-evento-e-probabilità), [0 ≤ P(E) ≤ 1](#proprietà-eventi-mutuamente-esclusivi)
-- **Operazioni fra eventi**: [Unione (∪)](#notazione-unione), [Intersezione (∩)](#notazione-intersezione), [Complementare](#notazione-complemento), [Eventi incompatibili](#proprietà-eventi-mutuamente-esclusivi-1), [Somma per incompatibili](#proprietà-eventi-mutuamente-esclusivi)
+- **Probabilità**: [Probabilità](#definizione-evento-e-probabilità), [0 ≤ P(E) ≤ 1](#proprietà-della-probabilità)
+- **Operazioni fra eventi**: [Unione (∪)](#notazione-unione), [Intersezione (∩)](#notazione-intersezione), [Complementare](#notazione-complemento), [Eventi incompatibili](#proprietà-eventi-mutuamente-esclusivi), [Somma per incompatibili](#proprietà-della-probabilità)
 - **Somma, prodotto, indipendenza**: [Eventi indipendenti](#prodotto-indipendenza), [Prodotto (indipendenti)](#prodotto-indipendenza), [Regola della somma](#teorema-della-somma), [Indipendenza e complementare](#somma-indipendenza), [Unione come somma disgiunta](#somma-indipendenza), [Somma per indipendenti](#somma-indipendenza), [Notazione + e −](#teorema-della-somma-es.)
 - **Probabilità condizionata**: [Probabilità condizionata](#condizionamento-definizione), [Regola del prodotto](#condizionamento-proprietà), [Probabilità totali (2 eventi)](#condizionamento-proprietà), [Eventi esaustivi](#teorema-delle-probabilità-totali), [Probabilità totali](#teorema-delle-probabilità-totali)
 - **Rischio e prevalenza**: [Rischio relativo](#rischio-relativo), [RR e gonfiaggio](#rischio-relativo-attenzione-al-gonfiaggio), [Prevalenza](#condizionamento-esempio)

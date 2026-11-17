@@ -274,10 +274,10 @@ $$P(A \cap B) = P(A)P(B)$$
 
 ## [Prodotto]{.orange}: esempio
 
-Si considerino gli eventi
+A una persona presa a caso si misura la DBP oggi e di nuovo a un anno di distanza. Si considerino gli eventi
 
-- $A=\{\mbox{DBP madre}\geq 95\}$ 
-- $B=\{\mbox{DBP padre}\geq 95\}$
+- $A=\{\mbox{DBP oggi}\geq 95\}$
+- $B=\{\mbox{DBP fra un anno}\geq 95\}$
 
 con probabilità
 
@@ -289,12 +289,48 @@ con probabilità
 
 $$P(A \cap B) = 0.05 > 0.02 = P(A)P(B)$$
 
-Per cui gli eventi **non sono indipendenti**, ovvero sono [dipendenti]{.orange}.
+Per cui gli eventi **non sono indipendenti**, ovvero sono [dipendenti]{.orange}: chi ha la pressione alta oggi tende ad averla alta anche fra un anno.
 
 ## [indipendenza]{.orange}
 
-```{r, echo=FALSE, out.width="60%"}
-include_graphics("img/venn4.png")
+```{r, echo=FALSE, fig.width=6.4, fig.height=5.8, out.width="72%"}
+quadranti <- tibble(
+  xmin = c(60, 95, 60, 95), xmax = c(95, 130, 95, 130),
+  ymin = c(60, 60, 95, 95), ymax = c(95, 95, 130, 130),
+  regione = factor(
+    c("nessuno dei due", "solo A", "solo B", "A ∩ B"),
+    levels = c("nessuno dei due", "solo A", "solo B", "A ∩ B")
+  ),
+  etichetta = c(
+    "né A né B\nDBP < 95\nentrambe le volte",
+    "solo A\nDBP ≥ 95 oggi,\n< 95 fra un anno",
+    "solo B\nDBP < 95 oggi,\n≥ 95 fra un anno",
+    "A ∩ B\nDBP ≥ 95\nentrambe le volte"
+  )
+)
+
+ggplot(quadranti) +
+  geom_rect(
+    aes(xmin = xmin, xmax = xmax, ymin = ymin, ymax = ymax, fill = regione),
+    colour = "black"
+  ) +
+  geom_text(
+    aes(x = (xmin + xmax) / 2, y = (ymin + ymax) / 2, label = etichetta),
+    size = 5.6, lineheight = 0.95
+  ) +
+  scale_fill_manual(
+    values = c(
+      "nessuno dei due" = "#F4F4F4", "solo A" = "#BFD9F2",
+      "solo B" = "#FFD9B3", "A ∩ B" = "#C9B3D9"
+    ),
+    guide = "none"
+  ) +
+  scale_x_continuous(breaks = 95, expand = c(0, 0)) +
+  scale_y_continuous(breaks = 95, expand = c(0, 0)) +
+  coord_equal() +
+  labs(x = "DBP oggi (mmHg)", y = "DBP fra un anno (mmHg)") +
+  theme_minimal(base_size = 18) +
+  theme(panel.grid = element_blank())
 ```
 
 ## Teorema della [somma]{.orange}
@@ -360,14 +396,14 @@ include_graphics("img/venn6.png")
 
 Si considerino gli eventi
 
-- $P(A)=P(\{\mbox{DBP madre}\geq 95 \})=0.1$ 
-- $P(B)=P(\{\mbox{DBP padre}\geq 95 \})=0.2$
+- $P(A)=P(\{\mbox{DBP oggi}\geq 95 \})=0.1$
+- $P(B)=P(\{\mbox{DBP fra un anno}\geq 95 \})=0.2$
 
-Si definisca come **famiglia ipertesa** quella in cui [almeno uno]{.orange} dei genitori è iperteso.
+Si definisca **da seguire** una persona con DBP $\geq 95$ in [almeno una]{.orange} delle due misure.
 
-**Allora** (ipotizzando $A$ e $B$ indipendenti):
+**Allora** (ipotizzando per semplicità $A$ e $B$ indipendenti, anche se abbiamo visto che non lo sono):
 
-$$\begin{split} P(\{\mbox{famiglia ipertesa}\})& = P(A \cup B)\\&= P(A) + P(B\cap\bar{A}) \quad \mbox{(sempre)}\\&= P(A) + P(B)P(\bar{A}) \quad \mbox{(indipendenza)}\\& = P(A) +  P(B)[1-P(A)]\\& = 0.1 + (0.2)[1-0.1]\\& = 0.28\end{split}$$
+$$\begin{split} P(\{\mbox{da seguire}\})& = P(A \cup B)\\&= P(A) + P(B\cap\bar{A}) \quad \mbox{(sempre)}\\&= P(A) + P(B)P(\bar{A}) \quad \mbox{(indipendenza)}\\& = P(A) +  P(B)[1-P(A)]\\& = 0.1 + (0.2)[1-0.1]\\& = 0.28\end{split}$$
 
 ## [Sondaggio]{.orange} {.inverse .center background-color="#03A696"}
 

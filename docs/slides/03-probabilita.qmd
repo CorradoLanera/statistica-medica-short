@@ -125,53 +125,13 @@ Un **risultato** di un esperimento probabilistico _verifica_ un evento se ne fa 
 
 La **probabilità** di un evento è la [frequenza relativa]{.orange} dei risultati che lo definiscono, valutata su **infinite ripetizioni** dell'esperimento probabilistico.
 
-> Es.: 
+##### Esempio
 
 - Esperimento: misura della pressione diastolica (DBP) di una persona presa a caso, in un determinato momento, nella popolazione.
 - Spazio degli eventi $\Omega$: ogni possibile misura di DBP.
 - Evento $A$ : DBP $\geq 95$ mmHg.
 - Risultato (mio, ora): DBP $= 70$ mmHg. (Non fa parte dell'evento, quindi non lo verifica)
 - Probabilità di $A$ : misurando la DBP, ora, a tutta la popolazione, la porzione di persone con DBP $\geq 95$ mmHg.
-
-## [Proprietà]{.orange}: eventi mutuamente esclusivi
-
-La probabilità di un evento $E$, indicata come $P(E)$, soddisfa [sempre]{.orange} la condizione
-
-$$0 \leq P(E) \leq 1$$
-
-Se $A$ e $B$ sono due eventi che [non possono]{.orange} verificarsi [contemporaneamente]{.orange}, allora si ha che
-
-$$P(\textrm{si verifichi } A \textrm{ o che si verifichi } B) = P(A) + P(B)$$
-
-##### Esempio:
-
-- $A$ l'evento DBP normale ($\mbox{DBP} < 90$)
-- $B$ l'evento DBP borderline ($90\leq \mbox{DBP} < 95$)
-- $C$ l'evento DBP $< 95$.
-
-**Se**:
-
-- $P(A)=0.7$
-- $P(B)=0.1$
-
-**Allora**: $P(C) = P(A) + P(B) = 0.7 + 0.1 = 0.8$.
-
-## [Proprietà]{.orange}: eventi mutuamente esclusivi
-
-Due eventi $A$ e $B$ si dicono **mutuamente esclusivi** se [non possono]{.orange} verificarsi [contemporaneamente]{.orange}.
-
-##### Esempio
-
-**Siano**:
-
-- $x$ la DBP.
-- $C$ l'evento ($x \geq 90$)
-- $D$ l'evento ($75\leq x\leq 100$).
-
-**Allora** in questo caso:
-
-$C$ e $D$ **non** sono mutuamente esclusivi, in quanto entrambi si
-verificano quando $90 \leq x \leq 100$.
 
 ## [Notazione]{.orange}: unione
 
@@ -180,7 +140,7 @@ verificano quando $90 \leq x \leq 100$.
 
 ##### Esempio
 
-**Sia** ($x$ la DBP): 
+**Sia** ($x$ la DBP):
 
 - $A = \{x < 90 \}$
 - $B = \{90 \leq x < 95 \}$
@@ -198,6 +158,47 @@ $$C \cup D = \{ x \geq 75 \}$$
 ```{r, echo=FALSE, out.width="100%"}
 include_graphics("img/venn1.png")
 ```
+
+## [Proprietà]{.orange} della probabilità
+
+La probabilità di un evento $E$, indicata come $P(E)$, soddisfa [sempre]{.orange} la condizione
+
+$$0 \leq P(E) \leq 1$$
+
+Se $A$ e $B$ sono due eventi che [non possono]{.orange} verificarsi [contemporaneamente]{.orange}, la probabilità che si verifichi $A$ o $B$ è la somma delle loro probabilità:
+
+$$P(A \cup B) = P(A) + P(B)$$
+
+##### Esempio
+
+**Siano** ($x$ la DBP):
+
+- $A = \{x < 90 \}$, DBP normale
+- $B = \{90 \leq x < 95 \}$, DBP borderline
+- $C = A \cup B = \{x < 95 \}$
+
+**Se**:
+
+- $P(A)=0.7$
+- $P(B)=0.1$
+
+**Allora**: $P(C) = P(A \cup B) = P(A) + P(B) = 0.7 + 0.1 = 0.8$.
+
+## [Proprietà]{.orange}: eventi mutuamente esclusivi
+
+Due eventi $A$ e $B$ si dicono **mutuamente esclusivi** se [non possono]{.orange} verificarsi [contemporaneamente]{.orange}.
+
+##### Esempio
+
+**Siano** ($x$ la DBP):
+
+- $C = \{x \geq 90 \}$
+- $D = \{75 \leq x \leq 100 \}$
+
+**Allora** in questo caso:
+
+$C$ e $D$ **non** sono mutuamente esclusivi, in quanto entrambi si
+verificano quando $90 \leq x \leq 100$.
 
 ## [Notazione]{.orange}: intersezione
 
@@ -273,10 +274,10 @@ $$P(A \cap B) = P(A)P(B)$$
 
 ## [Prodotto]{.orange}: esempio
 
-Si considerino gli eventi
+A una persona presa a caso si misura la DBP oggi e di nuovo a un anno di distanza. Si considerino gli eventi
 
-- $A=\{\mbox{DBP madre}\geq 95\}$ 
-- $B=\{\mbox{DBP padre}\geq 95\}$
+- $A=\{\mbox{DBP oggi}\geq 95\}$
+- $B=\{\mbox{DBP fra un anno}\geq 95\}$
 
 con probabilità
 
@@ -288,12 +289,48 @@ con probabilità
 
 $$P(A \cap B) = 0.05 > 0.02 = P(A)P(B)$$
 
-Per cui gli eventi **non sono indipendenti**, ovvero sono [dipendenti]{.orange}.
+Per cui gli eventi **non sono indipendenti**, ovvero sono [dipendenti]{.orange}: chi ha la pressione alta oggi tende ad averla alta anche fra un anno.
 
 ## [indipendenza]{.orange}
 
-```{r, echo=FALSE, out.width="60%"}
-include_graphics("img/venn4.png")
+```{r, echo=FALSE, fig.width=6.4, fig.height=5.8, out.width="72%"}
+quadranti <- tibble(
+  xmin = c(60, 95, 60, 95), xmax = c(95, 130, 95, 130),
+  ymin = c(60, 60, 95, 95), ymax = c(95, 95, 130, 130),
+  regione = factor(
+    c("nessuno dei due", "solo A", "solo B", "A ∩ B"),
+    levels = c("nessuno dei due", "solo A", "solo B", "A ∩ B")
+  ),
+  etichetta = c(
+    "né A né B\nDBP < 95\nentrambe le volte",
+    "solo A\nDBP ≥ 95 oggi,\n< 95 fra un anno",
+    "solo B\nDBP < 95 oggi,\n≥ 95 fra un anno",
+    "A ∩ B\nDBP ≥ 95\nentrambe le volte"
+  )
+)
+
+ggplot(quadranti) +
+  geom_rect(
+    aes(xmin = xmin, xmax = xmax, ymin = ymin, ymax = ymax, fill = regione),
+    colour = "black"
+  ) +
+  geom_text(
+    aes(x = (xmin + xmax) / 2, y = (ymin + ymax) / 2, label = etichetta),
+    size = 5.6, lineheight = 0.95
+  ) +
+  scale_fill_manual(
+    values = c(
+      "nessuno dei due" = "#F4F4F4", "solo A" = "#BFD9F2",
+      "solo B" = "#FFD9B3", "A ∩ B" = "#C9B3D9"
+    ),
+    guide = "none"
+  ) +
+  scale_x_continuous(breaks = 95, expand = c(0, 0)) +
+  scale_y_continuous(breaks = 95, expand = c(0, 0)) +
+  coord_equal() +
+  labs(x = "DBP oggi (mmHg)", y = "DBP fra un anno (mmHg)") +
+  theme_minimal(base_size = 18) +
+  theme(panel.grid = element_blank())
 ```
 
 ## Teorema della [somma]{.orange}
@@ -359,14 +396,14 @@ include_graphics("img/venn6.png")
 
 Si considerino gli eventi
 
-- $P(A)=P(\{\mbox{DBP madre}\geq 95 \})=0.1$ 
-- $P(B)=P(\{\mbox{DBP padre}\geq 95 \})=0.2$
+- $P(A)=P(\{\mbox{DBP oggi}\geq 95 \})=0.1$
+- $P(B)=P(\{\mbox{DBP fra un anno}\geq 95 \})=0.2$
 
-Si definisca come **famiglia ipertesa** quella in cui [almeno uno]{.orange} dei genitori è iperteso.
+Si definisca **da seguire** una persona con DBP $\geq 95$ in [almeno una]{.orange} delle due misure.
 
-**Allora** (ipotizzando $A$ e $B$ indipendenti):
+**Allora** (ipotizzando per semplicità $A$ e $B$ indipendenti, anche se abbiamo visto che non lo sono):
 
-$$\begin{split} P(\{\mbox{famiglia ipertesa}\})& = P(A \cup B)\\&= P(A) + P(B\cap\bar{A}) \quad \mbox{(sempre)}\\&= P(A) + P(B)P(\bar{A}) \quad \mbox{(indipendenza)}\\& = P(A) +  P(B)[1-P(A)]\\& = 0.1 + (0.2)[1-0.1]\\& = 0.28\end{split}$$
+$$\begin{split} P(\{\mbox{da seguire}\})& = P(A \cup B)\\&= P(A) + P(B\cap\bar{A}) \quad \mbox{(sempre)}\\&= P(A) + P(B)P(\bar{A}) \quad \mbox{(indipendenza)}\\& = P(A) +  P(B)[1-P(A)]\\& = 0.1 + (0.2)[1-0.1]\\& = 0.28\end{split}$$
 
 ## [Sondaggio]{.orange} {.inverse .center background-color="#03A696"}
 
