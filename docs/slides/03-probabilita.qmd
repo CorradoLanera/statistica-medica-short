@@ -281,15 +281,15 @@ Si considerino gli eventi
 
 con probabilità
 
-- $P(A \cap B) = 0.05$
+- $P(A \cap B) = 0.02$
 - $P(A) = 0.1$
 - $P(B) = 0.2$
 
 **Allora**:
 
-$$P(A \cap B) = 0.05 > 0.02 = P(A)P(B)$$
+$$P(A \cap B) = 0.02 = 0.1 \cdot 0.2 = P(A)P(B)$$
 
-Per cui gli eventi **non sono indipendenti**, ovvero sono [dipendenti]{.orange}.
+Per cui gli eventi sono [indipendenti]{.orange}: la pressione della madre non dice nulla su quella del padre.
 
 ## [indipendenza]{.orange}
 
@@ -365,7 +365,7 @@ Si considerino gli eventi
 
 Si definisca come **famiglia ipertesa** quella in cui [almeno uno]{.orange} dei genitori è iperteso.
 
-**Allora** (ipotizzando $A$ e $B$ indipendenti):
+**Allora** (essendo $A$ e $B$ indipendenti):
 
 $$\begin{split} P(\{\mbox{famiglia ipertesa}\})& = P(A \cup B)\\&= P(A) + P(B\cap\bar{A}) \quad \mbox{(sempre)}\\&= P(A) + P(B)P(\bar{A}) \quad \mbox{(indipendenza)}\\& = P(A) +  P(B)[1-P(A)]\\& = 0.1 + (0.2)[1-0.1]\\& = 0.28\end{split}$$
 
