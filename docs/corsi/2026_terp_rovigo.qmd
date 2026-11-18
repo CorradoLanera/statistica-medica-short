@@ -10,7 +10,7 @@ tbl-colwidths: [14, 10, 7, 54, 15]
 | 2026-11-11 | 13:30 | 4 | Intro e info | [Intro e info](../slides/00-intro_and_info.html) |
 | 2026-11-11 |  |  | ~~R e RStudio (opzionale)~~ | [R e RStudio](../slides/01-r_rstudio.html) |
 | 2026-11-11 |  |  | Descrittive (sommatoria, unità statistica, tabelle ordinate, media, moda, mediana, range massimale, varianza e deviazione standard campionarie) | [Descrittive](../slides/02-descrittive.html) |
-| 2026-11-18 | (13:15) | \(4\) | Descrittive/Probabilità | [Probabilità](../slides/03-probabilita.html) |
+| 2026-11-18 | 13:30 | 4 | Descrittive (coefficiente di variazione, percentili, quartili, accorpamenti, media ponderata, istogramma, box-plot, grafici a barre, grafici distorti) | [Descrittive](../slides/02-descrittive.html) |
 | 2026-12-02 | (13:15) | \(4\) | Probabilità |  |
 | 2026-12-09 | (13:15) | \(4\) | Distribuzioni | [Distribuzioni](../slides/04-distribuzioni.html) |
 | 2026-12-16 | (13:15) | \(4\) | Inferenza (IC e p-value) | [Inferenza](../slides/05-ic_p.html) |
