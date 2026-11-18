@@ -274,22 +274,43 @@ $$P(A \cap B) = P(A)P(B)$$
 
 ## [Prodotto]{.orange}: esempio
 
-Si considerino gli eventi
+Uno screening dell'ipertensione a domicilio misura la pressione diastolica (DBP) di madre, padre e primo figlio, per capire se l'ipertensione si concentra nelle famiglie.
 
-- $A=\{\mbox{DBP madre}\geq 95\}$ 
-- $B=\{\mbox{DBP padre}\geq 95\}$
+:::: {.columns}
 
-con probabilità
+::: {.column width="50%"}
 
+##### Madre e padre
+
+- $A=\{\mbox{DBP madre}\geq 95\}$, $P(A) = 0.1$
+- $B=\{\mbox{DBP padre}\geq 95\}$, $P(B) = 0.2$
 - $P(A \cap B) = 0.02$
-- $P(A) = 0.1$
-- $P(B) = 0.2$
 
 **Allora**:
 
-$$P(A \cap B) = 0.02 = 0.1 \cdot 0.2 = P(A)P(B)$$
+$$P(A \cap B) = 0.02 = P(A)P(B)$$
 
-Per cui gli eventi sono [indipendenti]{.orange}: la pressione della madre non dice nulla su quella del padre.
+Gli eventi sono [indipendenti]{.orange}: madre e padre non sono parenti di sangue.
+
+:::
+
+::: {.column width="50%"}
+
+##### Madre e primo figlio
+
+- $A=\{\mbox{DBP madre}\geq 95\}$, $P(A) = 0.1$
+- $C=\{\mbox{DBP figlio}\geq 80\}$, $P(C) = 0.2$
+- $P(A \cap C) = 0.05$
+
+**Allora**:
+
+$$P(A \cap C) = 0.05 > 0.02 = P(A)P(C)$$
+
+Gli eventi sono [dipendenti]{.orange}: madre e figlio condividono geni e ambiente.
+
+:::
+
+::::
 
 ## [indipendenza]{.orange}
 

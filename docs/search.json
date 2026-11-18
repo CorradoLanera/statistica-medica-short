@@ -1372,7 +1372,7 @@
     "href": "slides/03-probabilita.html#prodotto-esempio",
     "title": "Statistica Medica",
     "section": "Prodotto: esempio",
-    "text": "Prodotto: esempio\nSi considerino gli eventi\n\nA={DBP madre≥95}A=\\{\\mbox{DBP madre}\\geq 95\\}\nB={DBP padre≥95}B=\\{\\mbox{DBP padre}\\geq 95\\}\n\ncon probabilità\n\nP(A∩B)=0.02P(A \\cap B) = 0.02\nP(A)=0.1P(A) = 0.1\nP(B)=0.2P(B) = 0.2\n\nAllora:\nP(A∩B)=0.02=0.1⋅0.2=P(A)P(B)P(A \\cap B) = 0.02 = 0.1 \\cdot 0.2 = P(A)P(B)\nPer cui gli eventi sono indipendenti: la pressione della madre non dice nulla su quella del padre."
+    "text": "Prodotto: esempio\nUno screening dell’ipertensione a domicilio misura la pressione diastolica (DBP) di madre, padre e primo figlio, per capire se l’ipertensione si concentra nelle famiglie.\n\n\nMadre e padre\n\nA={DBP madre≥95}A=\\{\\mbox{DBP madre}\\geq 95\\}, P(A)=0.1P(A) = 0.1\nB={DBP padre≥95}B=\\{\\mbox{DBP padre}\\geq 95\\}, P(B)=0.2P(B) = 0.2\nP(A∩B)=0.02P(A \\cap B) = 0.02\n\nAllora:\nP(A∩B)=0.02=P(A)P(B)P(A \\cap B) = 0.02 = P(A)P(B)\nGli eventi sono indipendenti: madre e padre non sono parenti di sangue.\n\nMadre e primo figlio\n\nA={DBP madre≥95}A=\\{\\mbox{DBP madre}\\geq 95\\}, P(A)=0.1P(A) = 0.1\nC={DBP figlio≥80}C=\\{\\mbox{DBP figlio}\\geq 80\\}, P(C)=0.2P(C) = 0.2\nP(A∩C)=0.05P(A \\cap C) = 0.05\n\nAllora:\nP(A∩C)=0.05&gt;0.02=P(A)P(C)P(A \\cap C) = 0.05 &gt; 0.02 = P(A)P(C)\nGli eventi sono dipendenti: madre e figlio condividono geni e ambiente."
   },
   {
     "objectID": "slides/03-probabilita.html#indipendenza",

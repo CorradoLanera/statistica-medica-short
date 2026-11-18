@@ -5256,20 +5256,29 @@ flowchart LR
 </section>
 <section id="prodotto-esempio" class="slide level2">
 <h2><span class="orange">Prodotto</span>: esempio</h2>
-<p>Si considerino gli eventi</p>
+<p>Uno screening dell’ipertensione a domicilio misura la pressione diastolica (DBP) di madre, padre e primo figlio, per capire se l’ipertensione si concentra nelle famiglie.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h5 id="madre-e-padre">Madre e padre</h5>
 <ul>
-<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mtext mathvariant="normal">DBP madre</mtext><mo>≥</mo><mn>95</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">A=\{\mbox{DBP madre}\geq 95\}</annotation></semantics></math></li>
-<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mtext mathvariant="normal">DBP padre</mtext><mo>≥</mo><mn>95</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">B=\{\mbox{DBP padre}\geq 95\}</annotation></semantics></math></li>
-</ul>
-<p>con probabilità</p>
-<ul>
+<li><span class="mnw" style="white-space:nowrap"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mtext mathvariant="normal">DBP madre</mtext><mo>≥</mo><mn>95</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">A=\{\mbox{DBP madre}\geq 95\}</annotation></semantics></math>,</span> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.1</mn></mrow><annotation encoding="application/x-tex">P(A) = 0.1</annotation></semantics></math></li>
+<li><span class="mnw" style="white-space:nowrap"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mtext mathvariant="normal">DBP padre</mtext><mo>≥</mo><mn>95</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">B=\{\mbox{DBP padre}\geq 95\}</annotation></semantics></math>,</span> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.2</mn></mrow><annotation encoding="application/x-tex">P(B) = 0.2</annotation></semantics></math></li>
 <li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>∩</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.02</mn></mrow><annotation encoding="application/x-tex">P(A \cap B) = 0.02</annotation></semantics></math></li>
-<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.1</mn></mrow><annotation encoding="application/x-tex">P(A) = 0.1</annotation></semantics></math></li>
-<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.2</mn></mrow><annotation encoding="application/x-tex">P(B) = 0.2</annotation></semantics></math></li>
 </ul>
 <p><strong>Allora</strong>:</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>∩</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.02</mn><mo>=</mo><mn>0.1</mn><mo>⋅</mo><mn>0.2</mn><mo>=</mo><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P(A \cap B) = 0.02 = 0.1 \cdot 0.2 = P(A)P(B)</annotation></semantics></math></p>
-<p>Per cui gli eventi sono <span class="orange">indipendenti</span>: la pressione della madre non dice nulla su quella del padre.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>∩</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.02</mn><mo>=</mo><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P(A \cap B) = 0.02 = P(A)P(B)</annotation></semantics></math></p>
+<p>Gli eventi sono <span class="orange">indipendenti</span>: madre e padre non sono parenti di sangue.</p>
+</div><div class="column" style="width:50%;">
+<h5 id="madre-e-primo-figlio">Madre e primo figlio</h5>
+<ul>
+<li><span class="mnw" style="white-space:nowrap"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mtext mathvariant="normal">DBP madre</mtext><mo>≥</mo><mn>95</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">A=\{\mbox{DBP madre}\geq 95\}</annotation></semantics></math>,</span> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.1</mn></mrow><annotation encoding="application/x-tex">P(A) = 0.1</annotation></semantics></math></li>
+<li><span class="mnw" style="white-space:nowrap"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mtext mathvariant="normal">DBP figlio</mtext><mo>≥</mo><mn>80</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">C=\{\mbox{DBP figlio}\geq 80\}</annotation></semantics></math>,</span> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>C</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.2</mn></mrow><annotation encoding="application/x-tex">P(C) = 0.2</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>∩</mo><mi>C</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.05</mn></mrow><annotation encoding="application/x-tex">P(A \cap C) = 0.05</annotation></semantics></math></li>
+</ul>
+<p><strong>Allora</strong>:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>∩</mo><mi>C</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.05</mn><mo>&gt;</mo><mn>0.02</mn><mo>=</mo><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>C</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P(A \cap C) = 0.05 &gt; 0.02 = P(A)P(C)</annotation></semantics></math></p>
+<p>Gli eventi sono <span class="orange">dipendenti</span>: madre e figlio condividono geni e ambiente.</p>
+</div></div>
 </section>
 <section id="indipendenza" class="slide level2">
 <h2><span class="orange">indipendenza</span></h2>
@@ -5444,7 +5453,7 @@ flowchart LR
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_ee69310e" minutes="15" seconds="0" warn-when="3" update-every="1" play-sound="true" tabindex="0" style="bottom:20%;left:70%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_87d1bd75" minutes="15" seconds="0" warn-when="3" update-every="1" play-sound="true" tabindex="0" style="bottom:20%;left:70%;"></countdown-timer>
 </div>
 </div>
 </section>
@@ -5496,7 +5505,7 @@ flowchart LR
 <h2><span class="orange">Probabilità totali</span>: esempio problema</h2>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_e86d2dc1" minutes="3" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:10%;left:70%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_a8f04d6a" minutes="3" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:10%;left:70%;"></countdown-timer>
 </div>
 </div>
 <div class="panel-tabset">
@@ -5633,7 +5642,7 @@ flowchart LR
 <h2><span class="orange">Rischio relativo</span>: esempio problema</h2>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_114c85b0" minutes="3" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:70%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_4b0b47e0" minutes="3" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:70%;"></countdown-timer>
 </div>
 </div>
 <div class="panel-tabset">
@@ -5874,7 +5883,7 @@ flowchart LR
 <h2><span class="orange">Teorema di Bayes</span>: esempio</h2>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_67ad746c" minutes="5" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:70%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_d5fec863" minutes="5" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:70%;"></countdown-timer>
 </div>
 </div>
 <div class="panel-tabset">
@@ -5933,7 +5942,7 @@ flowchart LR
 <h2><span class="orange">Due test in sequenza</span>: esempio</h2>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_fc98098c" minutes="5" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:70%;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_68dfcadf" minutes="5" seconds="0" warn-when="1" update-every="1" play-sound="true" tabindex="0" style="bottom:5%;left:70%;"></countdown-timer>
 </div>
 </div>
 <div class="panel-tabset">
